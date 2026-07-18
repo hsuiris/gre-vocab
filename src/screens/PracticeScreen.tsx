@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/RootNavigator';
@@ -6,7 +6,8 @@ import { words, WordEntry } from '../data/words';
 import { getAllProgress, saveWordProgress, incrementHeatmapToday } from '../lib/storage';
 import { initialProgress, isDue, reviewWord } from '../lib/leitner';
 import { todayStr } from '../lib/date';
-import { FlashCard } from '../components/FlashCard';
+import { buildChoices } from '../lib/quiz';
+import { MultipleChoiceCard } from '../components/MultipleChoiceCard';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Practice'>;
 
@@ -16,6 +17,11 @@ export function PracticeScreen({ route }: Props) {
   const [index, setIndex] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const processingRef = useRef(false);
+
+  const choices = useMemo(
+    () => (loaded && index < queue.length ? buildChoices(queue[index], direction, words) : []),
+    [loaded, index, queue, direction]
+  );
 
   useEffect(() => {
     (async () => {
@@ -67,7 +73,7 @@ export function PracticeScreen({ route }: Props) {
   return (
     <View style={styles.container}>
       <Text style={styles.progress}>{index + 1} / {queue.length}</Text>
-      <FlashCard entry={queue[index]} direction={direction} onResult={handleResult} />
+      <MultipleChoiceCard entry={queue[index]} direction={direction} choices={choices} onResult={handleResult} />
     </View>
   );
 }
