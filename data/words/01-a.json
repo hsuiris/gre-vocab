@@ -1,0 +1,1934 @@
+[
+  {
+    "word": "abandon",
+    "pos": "v.",
+    "meaning": "拋棄、遺棄",
+    "example": "Fearing the ship would sink, the crew was ordered to abandon it immediately.",
+    "roots": "a- (加強/離開) + bandon (源自古法文 bandon，控制權) → 放棄控制、棄之不顧"
+  },
+  {
+    "word": "abase",
+    "pos": "v.",
+    "meaning": "貶低、降低(尊嚴、地位)",
+    "example": "He refused to abase himself by begging for forgiveness.",
+    "roots": "a- (使...) + base (低下的，源自拉丁文 bassus) → 使降到卑下的地位"
+  },
+  {
+    "word": "abash",
+    "pos": "v.",
+    "meaning": "使侷促不安、使尷尬",
+    "example": "She felt abashed when her mistake was pointed out in front of the class.",
+    "roots": "a- (使...) + bash (源自古法文 esbahir，驚訝) → 使人驚訝而侷促不安"
+  },
+  {
+    "word": "abate",
+    "pos": "v.",
+    "meaning": "減輕、緩和",
+    "example": "The storm began to abate as the night wore on.",
+    "roots": "a- (加強) + bate (打擊，源自拉丁文 batre) → 打到力道減弱"
+  },
+  {
+    "word": "abdicate",
+    "pos": "v.",
+    "meaning": "退位、放棄(職責、權利)",
+    "example": "The king chose to abdicate the throne rather than face a prolonged political crisis.",
+    "roots": "ab- (離開) + dic (說，源自拉丁文 dicare 宣布) → 宣布離開職位"
+  },
+  {
+    "word": "aberrant",
+    "pos": "adj.",
+    "meaning": "異常的、脫離常軌的",
+    "example": "The scientist noted several aberrant readings that didn't fit the expected pattern.",
+    "roots": "ab- (離開) + err (漫遊、犯錯，拉丁文 errare) + -ant (形容詞後綴) → 偏離正常路徑的"
+  },
+  {
+    "word": "aberration",
+    "pos": "n.",
+    "meaning": "脫離常態、異常現象",
+    "example": "The election of such an extreme candidate was widely seen as a temporary aberration.",
+    "roots": "同 aberrant 字源 + -ion (名詞後綴) → 偏離常軌的現象"
+  },
+  {
+    "word": "abet",
+    "pos": "v.",
+    "meaning": "教唆、慫恿(尤指犯罪)",
+    "example": "He was charged with aiding and abetting the robbery.",
+    "roots": "a- (加強) + bet (源自古法文 beter，驅使獵犬攻擊) → 慫恿他人採取行動"
+  },
+  {
+    "word": "abeyance",
+    "pos": "n.",
+    "meaning": "(法律、規則等)暫時中止、擱置",
+    "example": "The project was held in abeyance until additional funding could be secured.",
+    "roots": "a- (使成為) + bey (源自古法文 bayer，張口等待) + -ance (名詞後綴) → 處於等待、懸而未決的狀態"
+  },
+  {
+    "word": "abhor",
+    "pos": "v.",
+    "meaning": "憎惡、痛恨",
+    "example": "Most civilized societies abhor the use of torture.",
+    "roots": "ab- (離開) + hor (源自拉丁文 horrere 顫抖、恐懼) → 因恐懼厭惡而遠離"
+  },
+  {
+    "word": "abide",
+    "pos": "v.",
+    "meaning": "忍受；遵守(規則)",
+    "example": "All employees must abide by the safety regulations.",
+    "roots": "a- (加強) + bide (源自古英文 bidan，等待、留下) → 停留忍受"
+  },
+  {
+    "word": "abject",
+    "pos": "adj.",
+    "meaning": "淒慘的、卑微的、可憐的",
+    "example": "The refugees were living in abject poverty, without clean water or shelter.",
+    "roots": "ab- (離開、向下) + ject (投擲，源自拉丁文 jacere) → 被拋到最底層，形容悲慘至極"
+  },
+  {
+    "word": "abjure",
+    "pos": "v.",
+    "meaning": "發誓放棄、公開放棄(信仰、主張)",
+    "example": "Under pressure, the scientist was forced to abjure his controversial theory.",
+    "roots": "ab- (離開) + jure (發誓，源自拉丁文 jurare) → 發誓脫離、公開否認"
+  },
+  {
+    "word": "ablution",
+    "pos": "n.",
+    "meaning": "(常用複數)沐浴、淨身儀式",
+    "example": "Before entering the temple, worshippers perform a ritual ablution.",
+    "roots": "ab- (離開) + lu (洗，源自拉丁文 luere) + -tion (名詞後綴) → 把污垢洗掉的淨身動作"
+  },
+  {
+    "word": "abnegate",
+    "pos": "v.",
+    "meaning": "放棄、克制(權利、慾望)",
+    "example": "The monk chose to abnegate all worldly pleasures in pursuit of spiritual purity.",
+    "roots": "ab- (離開) + neg (否定，源自拉丁文 negare) → 自我否定、主動放棄"
+  },
+  {
+    "word": "abnegation",
+    "pos": "n.",
+    "meaning": "(尤指自我)克制、放棄",
+    "example": "Her self-abnegation extended to giving up nearly all her savings to charity.",
+    "roots": "ab- (離開) + neg (否定，拉丁文 negare) + -ation (名詞後綴) → 自我否定、犧牲的行為"
+  },
+  {
+    "word": "abominate",
+    "pos": "v.",
+    "meaning": "痛恨、憎惡",
+    "example": "Reasonable people abominate cruelty to animals.",
+    "roots": "ab- (離開) + omin (預兆，源自拉丁文 omen) → 視為不祥之兆而厭惡"
+  },
+  {
+    "word": "abomination",
+    "pos": "n.",
+    "meaning": "令人憎惡的事物",
+    "example": "To the traditionalists, the modern glass extension was an abomination next to the historic facade.",
+    "roots": "ab- (離開) + omin (預兆，拉丁文 omen) + -ation (名詞後綴) → 令人厭惡至極的東西"
+  },
+  {
+    "word": "abortive",
+    "pos": "adj.",
+    "meaning": "失敗的、未能成功的",
+    "example": "Their abortive attempt to unionize the factory ended after just two weeks.",
+    "roots": "ab- (偏離) + ort (生、升起，拉丁文 oriri) + -ive (形容詞後綴) → 尚未成形便終止，引申為失敗的"
+  },
+  {
+    "word": "aboveboard",
+    "pos": "adj.",
+    "meaning": "光明正大的、坦率不隱瞞的",
+    "example": "Their business dealings have always been aboveboard and transparent.",
+    "roots": "above (在...之上) + board (桌面) → 把牌放在桌面上不藏牌作弊，引申為光明正大"
+  },
+  {
+    "word": "abrade",
+    "pos": "v.",
+    "meaning": "磨損、擦傷",
+    "example": "Constant friction from the rope had abraded the skin on his hands.",
+    "roots": "ab- (離開) + rade (刮，源自拉丁文 radere) → 刮除表面，造成磨損"
+  },
+  {
+    "word": "abrasive",
+    "pos": "adj.",
+    "meaning": "粗糙的；(性格、言語)刺耳無禮的",
+    "example": "Her abrasive manner in meetings often alienated her colleagues.",
+    "roots": "同 abrade 字源，ab- + ras (刮) + -ive (形容詞後綴) → 具有磨損、刺激性質的"
+  },
+  {
+    "word": "abridge",
+    "pos": "v.",
+    "meaning": "刪減、縮短(書籍、權利等)",
+    "example": "The publisher decided to abridge the 900-page novel for a younger audience.",
+    "roots": "a- (加強) + bridge (源自拉丁文 brevis 簡短，經古法文演變) → 使變短"
+  },
+  {
+    "word": "abrogate",
+    "pos": "v.",
+    "meaning": "廢除、撤銷(法律、協議)",
+    "example": "The new government moved quickly to abrogate the unpopular treaty.",
+    "roots": "ab- (離開) + rogate (問、提議，源自拉丁文 rogare) → 提議取消"
+  },
+  {
+    "word": "abscond",
+    "pos": "v.",
+    "meaning": "潛逃、逃匿",
+    "example": "The treasurer absconded with nearly a million dollars in company funds.",
+    "roots": "abs- (離開) + cond (藏，源自拉丁文 condere) → 偷偷躲藏後逃離"
+  },
+  {
+    "word": "absolve",
+    "pos": "v.",
+    "meaning": "赦免、免除(罪責、義務)",
+    "example": "The court absolved him of all responsibility for the accident.",
+    "roots": "ab- (離開) + solve (鬆開，源自拉丁文 solvere) → 把罪責鬆開、解除"
+  },
+  {
+    "word": "abstain",
+    "pos": "v.",
+    "meaning": "戒絕；(投票)棄權",
+    "example": "Two members of the committee abstained from the final vote.",
+    "roots": "abs- (離開) + tain (拿，源自拉丁文 tenere) → 把自己抽離，不參與"
+  },
+  {
+    "word": "abstemious",
+    "pos": "adj.",
+    "meaning": "有節制的、節儉的(尤指飲食)",
+    "example": "Despite the lavish banquet, the monk remained abstemious, eating only bread and water.",
+    "roots": "abs- (離開) + tem (酒，源自拉丁文 temetum) → 遠離美酒佳餚，生活節制"
+  },
+  {
+    "word": "abstinence",
+    "pos": "n.",
+    "meaning": "節制、戒絕",
+    "example": "The doctor recommended total abstinence from alcohol during treatment.",
+    "roots": "abs- (離開) + tin (拿，拉丁文 tenere) + -ence (名詞後綴) → 讓自己遠離某事物的自制狀態"
+  },
+  {
+    "word": "abstruse",
+    "pos": "adj.",
+    "meaning": "深奧難懂的",
+    "example": "The professor's lecture on quantum mechanics was too abstruse for most freshmen to follow.",
+    "roots": "ab- (離開) + trus (推，源自拉丁文 trudere) → 推到看不見的深處，引申為難以理解"
+  },
+  {
+    "word": "abut",
+    "pos": "v.",
+    "meaning": "毗鄰、緊靠",
+    "example": "The new apartment building abuts the old railway line.",
+    "roots": "a- (向...) + but (邊界，源自古法文 bout 末端) → 邊界相接"
+  },
+  {
+    "word": "abysmal",
+    "pos": "adj.",
+    "meaning": "極糟的、深不見底的",
+    "example": "The team's abysmal performance this season has disappointed every fan.",
+    "roots": "a- + byss (深淵，源自希臘文 abyssos 無底) + -mal (形容詞後綴) → 如深淵般糟糕"
+  },
+  {
+    "word": "accede",
+    "pos": "v.",
+    "meaning": "同意、答應(要求)；就任(職位)",
+    "example": "After months of protest, management finally acceded to the workers' demands.",
+    "roots": "ac- (向...) + cede (走，源自拉丁文 cedere) → 走向對方立場，表示同意"
+  },
+  {
+    "word": "accentuate",
+    "pos": "v.",
+    "meaning": "強調、使突出",
+    "example": "The tight-fitting dress accentuated her tall figure.",
+    "roots": "ac- (向...) + centu (重音，拉丁文 accentus) + -ate (動詞後綴) → 加重語氣或視覺上的重點"
+  },
+  {
+    "word": "acclaim",
+    "pos": "v.",
+    "meaning": "稱讚、喝采",
+    "example": "The novel was widely acclaimed by critics for its bold narrative style.",
+    "roots": "ac- (加強) + claim (喊叫，源自拉丁文 clamare) → 大聲讚揚"
+  },
+  {
+    "word": "acclamation",
+    "pos": "n.",
+    "meaning": "歡呼、熱烈贊同",
+    "example": "The proposal was passed by acclamation without a single dissenting vote.",
+    "roots": "同 acclaim 字源 + -ation (名詞後綴) → 大聲讚揚的行為"
+  },
+  {
+    "word": "acclimate",
+    "pos": "v.",
+    "meaning": "使適應(新環境、氣候)",
+    "example": "It took the climbers several days to acclimate to the thin mountain air.",
+    "roots": "ac- (向...) + climate (氣候) → 逐漸適應某種氣候環境"
+  },
+  {
+    "word": "accolade",
+    "pos": "n.",
+    "meaning": "讚譽、榮譽",
+    "example": "Winning the Nobel Prize was the ultimate accolade for her decades of research.",
+    "roots": "源自法文 accoler (擁抱，ac- + col 脖子) → 古時授勳時擁抱受勳者的動作，引申為榮譽"
+  },
+  {
+    "word": "accomplice",
+    "pos": "n.",
+    "meaning": "共犯、幫凶",
+    "example": "The getaway driver was charged as an accomplice to the robbery.",
+    "roots": "ac- (加強) + complice (夥伴，源自拉丁文 complicare 糾纏在一起) → 與人牽扯在一起犯罪"
+  },
+  {
+    "word": "accord",
+    "pos": "n.",
+    "meaning": "(國家、團體間的)協議、一致",
+    "example": "The two nations finally reached an accord after years of negotiation.",
+    "roots": "ac- (向...) + cord (心，源自拉丁文 cor) → 兩顆心趨於一致"
+  },
+  {
+    "word": "accost",
+    "pos": "v.",
+    "meaning": "(尤指陌生人)上前搭訕、攔住",
+    "example": "A stranger accosted her on the street, demanding money.",
+    "roots": "ac- (向...) + cost (肋、側邊，源自拉丁文 costa) → 走到旁邊搭話"
+  },
+  {
+    "word": "accrete",
+    "pos": "v.",
+    "meaning": "逐漸增長、聚積",
+    "example": "Over centuries, sediment accreted along the riverbank to form new land.",
+    "roots": "ac- (向...) + crete (成長，源自拉丁文 crescere) → 逐漸增生附著"
+  },
+  {
+    "word": "accretion",
+    "pos": "n.",
+    "meaning": "逐漸增積(物)",
+    "example": "Centuries of accretion had turned the small chapel into a sprawling cathedral complex.",
+    "roots": "同 accrete 字源 + -ion (名詞後綴) → 逐漸累積而成之物"
+  },
+  {
+    "word": "accrue",
+    "pos": "v.",
+    "meaning": "(利息、利益等)逐漸累積",
+    "example": "Interest accrues on the account balance every month.",
+    "roots": "ac- (向...) + crue (成長，源自拉丁文 crescere) → 逐漸增加累積"
+  },
+  {
+    "word": "acerbic",
+    "pos": "adj.",
+    "meaning": "(言語)尖酸刻薄的",
+    "example": "His acerbic wit made him both feared and admired in the newsroom.",
+    "roots": "acer (酸、尖銳，拉丁文) + -bic (形容詞後綴) → 形容如酸味般刺人的言詞"
+  },
+  {
+    "word": "acme",
+    "pos": "n.",
+    "meaning": "頂點、極致",
+    "example": "The gymnast's performance represented the acme of athletic precision.",
+    "roots": "源自希臘文 akme (尖端、頂點) → 事物發展的最高點"
+  },
+  {
+    "word": "acolyte",
+    "pos": "n.",
+    "meaning": "助手、追隨者",
+    "example": "He worked for years as an acolyte to the famous chef before opening his own restaurant.",
+    "roots": "源自希臘文 akolouthos (跟隨者，a- 一起 + keleuthos 道路) → 跟隨在旁的助手"
+  },
+  {
+    "word": "acquiesce",
+    "pos": "v.",
+    "meaning": "默許、勉強同意",
+    "example": "Rather than argue further, she acquiesced to her boss's decision.",
+    "roots": "ac- (向...) + quiesce (安靜，源自拉丁文 quiescere) → 安靜下來不再反對，默默接受"
+  },
+  {
+    "word": "acquisitive",
+    "pos": "adj.",
+    "meaning": "貪得無厭的、渴望獲取的",
+    "example": "The acquisitive collector spent his entire fortune buying rare manuscripts.",
+    "roots": "ac- (向...) + quis (尋求，源自拉丁文 quaerere) + -itive (形容詞後綴) → 一直想獲取更多的"
+  },
+  {
+    "word": "acquit",
+    "pos": "v.",
+    "meaning": "宣告無罪；(acquit oneself)表現",
+    "example": "The jury acquitted the defendant after just two hours of deliberation.",
+    "roots": "ac- (加強) + quit (釋放，源自拉丁文 quietare) → 使脫離罪責，釋放"
+  },
+  {
+    "word": "acrid",
+    "pos": "adj.",
+    "meaning": "刺鼻的、辛辣的；(言語)尖刻的",
+    "example": "Acrid smoke from the factory filled the entire neighborhood.",
+    "roots": "acr- (尖銳、刺激，源自拉丁文 acer) + -id (形容詞後綴) → 帶有刺激性的氣味或言詞"
+  },
+  {
+    "word": "acrimonious",
+    "pos": "adj.",
+    "meaning": "(言辭、爭論)刻薄的、激烈的",
+    "example": "The couple went through an acrimonious divorce that lasted three years.",
+    "roots": "acri- (尖銳，源自拉丁文 acer) + -monious (形容詞後綴) → 語氣尖銳帶有敵意"
+  },
+  {
+    "word": "acrimony",
+    "pos": "n.",
+    "meaning": "尖刻、激烈的敵意",
+    "example": "Despite years of acrimony between the two families, the wedding brought them together peacefully.",
+    "roots": "acri- (尖銳) + -mony (名詞後綴，表狀態) → 尖銳敵對的狀態"
+  },
+  {
+    "word": "acuity",
+    "pos": "n.",
+    "meaning": "(感官、思維的)敏銳度",
+    "example": "Even at ninety, her mental acuity remained as sharp as ever.",
+    "roots": "acu- (尖銳，源自拉丁文 acus 針) + -ity (名詞後綴) → 像針尖般敏銳的程度"
+  },
+  {
+    "word": "acumen",
+    "pos": "n.",
+    "meaning": "敏銳的洞察力、精明",
+    "example": "Her business acumen helped the small startup grow into a major company within five years.",
+    "roots": "acu- (尖銳) + -men (名詞後綴) → 頭腦尖銳，判斷精準"
+  },
+  {
+    "word": "adage",
+    "pos": "n.",
+    "meaning": "諺語、格言",
+    "example": "As the old adage goes, a stitch in time saves nine.",
+    "roots": "源自古法文 adage，來自拉丁文 adagium (ad- 向 + aio 我說) → 世代相傳的說法"
+  },
+  {
+    "word": "adamant",
+    "pos": "adj.",
+    "meaning": "堅決的、不肯讓步的",
+    "example": "Despite the criticism, she remained adamant that her decision was correct.",
+    "roots": "源自希臘文 adamas (不可征服的金剛石，a- 不 + daman 征服) → 像鑽石一樣堅硬不屈"
+  },
+  {
+    "word": "addendum",
+    "pos": "n.",
+    "meaning": "附錄、補遺",
+    "example": "The contract included an addendum outlining the new payment schedule.",
+    "roots": "ad- (向...增加) + dendum (應被給予的，源自拉丁文 addere) → 附加上去的內容"
+  },
+  {
+    "word": "adept",
+    "pos": "adj.",
+    "meaning": "熟練的、擅長的",
+    "example": "She is remarkably adept at solving complex mathematical problems.",
+    "roots": "ad- (向...) + ept (獲得，源自拉丁文 apisci 抓住) → 已經掌握到手，形容熟練"
+  },
+  {
+    "word": "adhere",
+    "pos": "v.",
+    "meaning": "黏著；堅持、遵守",
+    "example": "The new policy requires all staff to adhere strictly to safety procedures.",
+    "roots": "ad- (向...) + here (黏著，源自拉丁文 haerere) → 緊緊黏在一起"
+  },
+  {
+    "word": "adherent",
+    "pos": "n.",
+    "meaning": "支持者、信徒",
+    "example": "The political movement gained thousands of adherents within a single year.",
+    "roots": "同 adhere 字源 → 緊緊依附於某主張的人"
+  },
+  {
+    "word": "adjourn",
+    "pos": "v.",
+    "meaning": "(會議等)休會、延期",
+    "example": "The judge decided to adjourn the hearing until the following Monday.",
+    "roots": "ad- (向...) + journ (日子，源自拉丁文 diurnus) → 延到另一天"
+  },
+  {
+    "word": "adjunct",
+    "pos": "n.",
+    "meaning": "附屬品、附加物",
+    "example": "The new gymnasium was built as an adjunct to the main school building.",
+    "roots": "ad- (向...) + junct (連接，源自拉丁文 jungere) → 連接在主體旁邊的附屬部分"
+  },
+  {
+    "word": "admonish",
+    "pos": "v.",
+    "meaning": "告誡、警告(尤指帶責備意味)",
+    "example": "The teacher admonished the students for talking during the exam.",
+    "roots": "ad- (向...) + monish (警告，源自拉丁文 monere) → 向對方發出警告"
+  },
+  {
+    "word": "admonition",
+    "pos": "n.",
+    "meaning": "告誡、警告",
+    "example": "She ignored her mentor's admonition and invested in the risky venture anyway.",
+    "roots": "同 admonish 字源 + -ion (名詞後綴) → 提出警告的言語"
+  },
+  {
+    "word": "adorn",
+    "pos": "v.",
+    "meaning": "裝飾、點綴",
+    "example": "Colorful murals adorned every wall of the ancient palace.",
+    "roots": "ad- (向...) + orn (裝飾，源自拉丁文 ornare) → 加上裝飾"
+  },
+  {
+    "word": "adroit",
+    "pos": "adj.",
+    "meaning": "靈巧的、機敏的",
+    "example": "The negotiator was adroit at finding compromises that satisfied both sides.",
+    "roots": "源自法文 à droit (向右、正確地) → 引申為手法正確靈巧"
+  },
+  {
+    "word": "adulate",
+    "pos": "v.",
+    "meaning": "過分奉承、諂媚",
+    "example": "The tabloids tend to adulate celebrities while ignoring their flaws.",
+    "roots": "adul (諂媚，源自拉丁文 adulari) + -ate (動詞後綴) → 過度討好"
+  },
+  {
+    "word": "adulation",
+    "pos": "n.",
+    "meaning": "過分的奉承、諂媚",
+    "example": "The young singer was unprepared for the sudden adulation of millions of fans.",
+    "roots": "同 adulate 字源 + -ion (名詞後綴) → 過度奉承的行為或狀態"
+  },
+  {
+    "word": "adulterate",
+    "pos": "v.",
+    "meaning": "掺假、使不純",
+    "example": "The company was fined for adulterating its olive oil with cheaper vegetable oil.",
+    "roots": "ad- (向...) + alter (其他的，拉丁文) → 加入其他成分使不純"
+  },
+  {
+    "word": "adumbrate",
+    "pos": "v.",
+    "meaning": "預示、隱約顯示",
+    "example": "The opening scene subtly adumbrates the tragedy that will unfold later in the play.",
+    "roots": "ad- (向...) + umbra (陰影，拉丁文) → 投下陰影般地暗示"
+  },
+  {
+    "word": "advent",
+    "pos": "n.",
+    "meaning": "(重要事物的)來臨、出現",
+    "example": "The advent of the internet transformed how people access information.",
+    "roots": "ad- (向...) + vent (來，拉丁文 venire) → 即將到來"
+  },
+  {
+    "word": "adventitious",
+    "pos": "adj.",
+    "meaning": "偶然的、外來的(非固有的)",
+    "example": "His success was largely the result of adventitious circumstances rather than careful planning.",
+    "roots": "ad- (向...) + vent (來，源自拉丁文 venire) + -itious (形容詞後綴) → 從外部偶然到來的"
+  },
+  {
+    "word": "adverse",
+    "pos": "adj.",
+    "meaning": "不利的、有害的",
+    "example": "The medication can cause several adverse side effects, including nausea and dizziness.",
+    "roots": "ad- (向...) + verse (轉，源自拉丁文 vertere) → 轉向相反、對立的方向"
+  },
+  {
+    "word": "advocacy",
+    "pos": "n.",
+    "meaning": "提倡、擁護",
+    "example": "Her tireless advocacy for disability rights led to major policy reforms.",
+    "roots": "同 advocate 字源 + -acy (名詞後綴) → 為某事發聲支持的行動"
+  },
+  {
+    "word": "advocate",
+    "pos": "v.",
+    "meaning": "提倡、擁護",
+    "example": "The organization advocates for stronger environmental protection laws.",
+    "roots": "ad- (向...) + voc (聲音，源自拉丁文 vocare 呼喚) → 為某事發聲支持"
+  },
+  {
+    "word": "aegis",
+    "pos": "n.",
+    "meaning": "保護、贊助(under the aegis of)",
+    "example": "The research was conducted under the aegis of the national science foundation.",
+    "roots": "源自希臘文 aigis (宙斯之盾) → 引申為受到強力保護、庇護"
+  },
+  {
+    "word": "aerie",
+    "pos": "n.",
+    "meaning": "(猛禽築在懸崖高處的)巢；居高臨下的居所",
+    "example": "The eagle built its aerie on a ledge high above the canyon.",
+    "roots": "源自古法文 aire (窩、巢) → 高處的鳥巢"
+  },
+  {
+    "word": "aesthete",
+    "pos": "n.",
+    "meaning": "審美家、唯美主義者",
+    "example": "As a devoted aesthete, he refused to buy any furniture that wasn't visually pleasing.",
+    "roots": "aesthet- (感知、美，源自希臘文 aisthesis) → 特別注重美感的人"
+  },
+  {
+    "word": "aesthetic",
+    "pos": "adj.",
+    "meaning": "美學的、審美的",
+    "example": "The museum's stark, minimalist design reflects a distinctly modern aesthetic sensibility.",
+    "roots": "aesthet- (感知、美，源自希臘文 aisthesis) + -ic (形容詞後綴) → 與美感、審美有關的"
+  },
+  {
+    "word": "affable",
+    "pos": "adj.",
+    "meaning": "和藹可親的、易於交談的",
+    "example": "The new manager is known for being affable and approachable to every employee.",
+    "roots": "af- (向...) + fable (說話，源自拉丁文 fari) → 容易對其說話的，形容和藹"
+  },
+  {
+    "word": "affectation",
+    "pos": "n.",
+    "meaning": "做作、矯揉造作",
+    "example": "His affectation of a British accent fooled no one who knew he grew up in Ohio.",
+    "roots": "af- (向...) + fect (做，源自拉丁文 facere) + -ation (名詞後綴) → 刻意做出來的姿態"
+  },
+  {
+    "word": "affected",
+    "pos": "adj.",
+    "meaning": "做作的、不自然的",
+    "example": "Her affected laughter made it obvious she wasn't really amused.",
+    "roots": "同 affectation 字源 → 刻意裝出來的"
+  },
+  {
+    "word": "affidavit",
+    "pos": "n.",
+    "meaning": "宣誓書、切結書",
+    "example": "The witness signed an affidavit confirming the accuracy of her statement.",
+    "roots": "源自拉丁文 affidare (宣誓效忠，af- 向 + fide 信任) → 宣誓後簽署的書面文件"
+  },
+  {
+    "word": "affinity",
+    "pos": "n.",
+    "meaning": "密切關係、喜好、親近感",
+    "example": "She has always felt a strong affinity for the ocean, having grown up near the coast.",
+    "roots": "af- (向...) + fin (邊界、範圍，拉丁文) + -ity (名詞後綴) → 彼此邊界相連，關係密切"
+  },
+  {
+    "word": "afflict",
+    "pos": "v.",
+    "meaning": "使痛苦、折磨",
+    "example": "The region has long been afflicted by drought and famine.",
+    "roots": "af- (向...) + flict (打擊，源自拉丁文 fligere) → 不斷打擊使受苦"
+  },
+  {
+    "word": "affliction",
+    "pos": "n.",
+    "meaning": "苦難、疾病",
+    "example": "Chronic back pain has been a lifelong affliction for the retired athlete.",
+    "roots": "同 afflict 字源 + -ion (名詞後綴) → 造成痛苦的事物"
+  },
+  {
+    "word": "affluence",
+    "pos": "n.",
+    "meaning": "富裕、豐富",
+    "example": "The suburb's sudden affluence was evident in its rows of newly built mansions.",
+    "roots": "af- (向...) + flu (流動，拉丁文 fluere) + -ence (名詞後綴) → 財富如流水般湧入"
+  },
+  {
+    "word": "affluent",
+    "pos": "adj.",
+    "meaning": "富裕的",
+    "example": "Only the most affluent families could afford private tutors in that era.",
+    "roots": "同 affluence 字源 → 財富充裕的"
+  },
+  {
+    "word": "affront",
+    "pos": "n.",
+    "meaning": "侮辱、冒犯(的言行)",
+    "example": "She took his blunt comment as a personal affront.",
+    "roots": "af- (向...) + front (額頭、正面，拉丁文) → 當面冒犯"
+  },
+  {
+    "word": "agglomerate",
+    "pos": "v.",
+    "meaning": "聚集、凝結成團",
+    "example": "Dust particles agglomerate over time to form the visible grime on the windowsill.",
+    "roots": "ag- (向...) + glomer (球狀，拉丁文 glomus 線團) → 聚集成一團"
+  },
+  {
+    "word": "aggrandize",
+    "pos": "v.",
+    "meaning": "使擴大、誇大(權力、名聲)",
+    "example": "The dictator used state media to aggrandize his own achievements.",
+    "roots": "ag- (向...) + grand (大的，拉丁文) + -ize (動詞後綴) → 使變得更大更誇張"
+  },
+  {
+    "word": "aggravate",
+    "pos": "v.",
+    "meaning": "使惡化、加重",
+    "example": "Scratching the rash will only aggravate the irritation.",
+    "roots": "ag- (向...) + grav (重，拉丁文 gravis) + -ate (動詞後綴) → 使變得更沉重、嚴重"
+  },
+  {
+    "word": "aggregate",
+    "pos": "n.",
+    "meaning": "總數、合計",
+    "example": "The aggregate score of all five judges determined the final winner.",
+    "roots": "ag- (向...) + greg (羊群，源自拉丁文 grex) → 像羊群般聚集，引申為總和"
+  },
+  {
+    "word": "aggrieve",
+    "pos": "v.",
+    "meaning": "使委屈、使受到不公對待",
+    "example": "The aggrieved employees filed a formal complaint against their supervisor.",
+    "roots": "ag- (加強) + grieve (悲傷，源自拉丁文 gravare 加重負擔) → 使人承受不公平的負擔"
+  },
+  {
+    "word": "agitate",
+    "pos": "v.",
+    "meaning": "使不安；煽動(政治訴求)",
+    "example": "Activists have long agitated for reform of the outdated voting system.",
+    "roots": "agit (源自拉丁文 agitare，反覆搖動) → 反覆推動、造成騷動"
+  },
+  {
+    "word": "agnostic",
+    "pos": "n.",
+    "meaning": "不可知論者",
+    "example": "As a committed agnostic, she neither affirms nor denies the existence of a god.",
+    "roots": "a- (無、不) + gnostic (知道，源自希臘文 gnosis 知識) → 對超自然事物抱持不可知態度的人"
+  },
+  {
+    "word": "agog",
+    "pos": "adj.",
+    "meaning": "熱切期待的、興奮的",
+    "example": "The children were all agog with excitement waiting for the fireworks to begin.",
+    "roots": "源自古法文 en gogues (興高采烈地) → 引申為熱切期待"
+  },
+  {
+    "word": "agrarian",
+    "pos": "adj.",
+    "meaning": "農業的、土地的",
+    "example": "The country's economy was largely agrarian before rapid industrialization began.",
+    "roots": "agr- (田地，源自拉丁文 ager) + -arian (形容詞後綴) → 與農地、農業相關的"
+  },
+  {
+    "word": "alacrity",
+    "pos": "n.",
+    "meaning": "敏捷、欣然、樂意",
+    "example": "She accepted the challenging assignment with surprising alacrity.",
+    "roots": "源自拉丁文 alacer (活潑敏捷的) + -ity (名詞後綴) → 積極迅速的態度"
+  },
+  {
+    "word": "albeit",
+    "pos": "conj.",
+    "meaning": "雖然、儘管",
+    "example": "The plan succeeded, albeit with several unexpected delays along the way.",
+    "roots": "源自中古英文片語 al be it，意為 although it be → 縮合成表讓步的連接詞"
+  },
+  {
+    "word": "alchemy",
+    "pos": "n.",
+    "meaning": "煉金術；(引申)奇妙的轉化力量",
+    "example": "The chef performed a kind of alchemy, turning humble leftovers into a gourmet dish.",
+    "roots": "源自阿拉伯文 al-kimiya (源自希臘文 khemeia，冶金術) → 試圖將賤金屬轉化為黃金的古老技藝"
+  },
+  {
+    "word": "alienate",
+    "pos": "v.",
+    "meaning": "使疏遠、使孤立",
+    "example": "His constant criticism gradually alienated even his closest friends.",
+    "roots": "alien (外來的、陌生的，拉丁文) + -ate (動詞後綴) → 使變得像陌生人一樣疏遠"
+  },
+  {
+    "word": "alienation",
+    "pos": "n.",
+    "meaning": "疏離感、隔閡",
+    "example": "Many factory workers reported a deep sense of alienation after the automation upgrade.",
+    "roots": "同 alienate 字源 + -ion (名詞後綴) → 感覺自己如外人般的狀態"
+  },
+  {
+    "word": "allay",
+    "pos": "v.",
+    "meaning": "減輕、緩和(恐懼、疑慮)",
+    "example": "The doctor's calm explanation helped allay the patient's fears about the surgery.",
+    "roots": "源自古英文 alecgan (放下、減輕，a- 加強 + lecgan 放置) → 把負擔放下、減輕"
+  },
+  {
+    "word": "allege",
+    "pos": "v.",
+    "meaning": "宣稱、指控(尚未證實)",
+    "example": "The former employee alleges that she was fired for reporting safety violations.",
+    "roots": "al- (向...) + lege (法律、宣稱，源自拉丁文 litigare 訴訟) → 在法律上提出未經證實的說法"
+  },
+  {
+    "word": "allegory",
+    "pos": "n.",
+    "meaning": "寓言、寄託之作",
+    "example": "Animal Farm is widely read as an allegory for the Russian Revolution.",
+    "roots": "allo- (其他，希臘文) + agor (公開演說，希臘文 agoreuein) → 用其他事物表達的言外之意"
+  },
+  {
+    "word": "alleviate",
+    "pos": "v.",
+    "meaning": "減輕(痛苦、負擔)",
+    "example": "The new medication helps alleviate chronic pain without causing drowsiness.",
+    "roots": "al- (向...) + levi (輕，拉丁文 levis) + -ate (動詞後綴) → 使變輕"
+  },
+  {
+    "word": "allocate",
+    "pos": "v.",
+    "meaning": "分配、撥給",
+    "example": "The government allocated additional funds to rebuild the damaged highway.",
+    "roots": "al- (向...) + loc (地方，拉丁文 locus) + -ate (動詞後綴) → 分配到特定位置"
+  },
+  {
+    "word": "alloy",
+    "pos": "n.",
+    "meaning": "合金；(引申)摻雜物、減損之物",
+    "example": "Bronze is an alloy of copper and tin.",
+    "roots": "al- (向...) + loy (綁，源自拉丁文 ligare) → 把不同金屬綁在一起，引申為摻雜"
+  },
+  {
+    "word": "allude",
+    "pos": "v.",
+    "meaning": "暗指、間接提及",
+    "example": "In her speech, she alluded to the challenges the company had faced without naming them directly.",
+    "roots": "al- (向...) + lude (玩，源自拉丁文 ludere) → 拐彎抹角地提及，如同在文字上玩遊戲"
+  },
+  {
+    "word": "allure",
+    "pos": "n.",
+    "meaning": "誘惑力、吸引力",
+    "example": "The allure of a higher salary tempted him to leave his current job.",
+    "roots": "al- (向...) + lure (誘餌) → 如誘餌般吸引人的力量"
+  },
+  {
+    "word": "aloof",
+    "pos": "adj.",
+    "meaning": "冷漠疏遠的、超然的",
+    "example": "Despite her fame, the actress remained aloof from the media circus surrounding her.",
+    "roots": "a- (在...上) + loof (源自荷蘭語 loef，船的迎風面) → 原指船隻保持在上風處遠離危險，引申為保持距離、冷漠"
+  },
+  {
+    "word": "altercation",
+    "pos": "n.",
+    "meaning": "激烈爭吵",
+    "example": "The two drivers got into a heated altercation after the minor collision.",
+    "roots": "alter (另一個，拉丁文) + -cation (名詞後綴) → 與另一方發生的爭執衝突"
+  },
+  {
+    "word": "altruism",
+    "pos": "n.",
+    "meaning": "利他主義、無私",
+    "example": "Her decision to donate a kidney to a stranger was seen as an act of pure altruism.",
+    "roots": "altru- (源自拉丁文 alter，他人) + -ism (名詞後綴，表主義) → 以他人利益為重的主張"
+  },
+  {
+    "word": "altruistic",
+    "pos": "adj.",
+    "meaning": "利他的、無私的",
+    "example": "Donating a kidney to a stranger is often cited as a truly altruistic act.",
+    "roots": "同 altruism 字源 + -ic (形容詞後綴) → 以他人利益為重的"
+  },
+  {
+    "word": "amalgam",
+    "pos": "n.",
+    "meaning": "混合物、合成物",
+    "example": "The city's cuisine is an amalgam of French, African, and Caribbean influences.",
+    "roots": "源自拉丁文 amalgama (金屬與汞的合金) → 引申為不同事物的混合體"
+  },
+  {
+    "word": "amalgamate",
+    "pos": "v.",
+    "meaning": "合併、融合",
+    "example": "The two rival banks amalgamated to form the country's largest financial institution.",
+    "roots": "同 amalgam 字源 + -ate (動詞後綴) → 使融合成一體"
+  },
+  {
+    "word": "amass",
+    "pos": "v.",
+    "meaning": "積聚、累積(財富、資訊)",
+    "example": "Over three decades, the investor amassed a fortune worth billions.",
+    "roots": "a- (向...) + mass (一堆、質量) → 逐漸堆積成一大堆"
+  },
+  {
+    "word": "ambidextrous",
+    "pos": "adj.",
+    "meaning": "雙手都靈巧的；(能力上)全能的",
+    "example": "Being ambidextrous, she can write with either hand equally well.",
+    "roots": "ambi- (兩者、雙) + dext (右手、靈巧，拉丁文 dexter) + -rous (形容詞後綴) → 兩隻手都像右手一樣靈巧"
+  },
+  {
+    "word": "ambiguous",
+    "pos": "adj.",
+    "meaning": "模稜兩可的、含糊的",
+    "example": "The instructions were so ambiguous that half the class misunderstood the assignment.",
+    "roots": "ambi- (雙、兩者) + gu (驅使，源自拉丁文 agere) → 可以被理解成兩種方向，含糊不清"
+  },
+  {
+    "word": "ambivalence",
+    "pos": "n.",
+    "meaning": "矛盾心理、猶豫不決",
+    "example": "She felt a deep ambivalence about moving abroad, both excited and terrified.",
+    "roots": "ambi- (雙、兩者) + val (價值、力量，拉丁文 valere) + -ence (名詞後綴) → 同時存在兩種相反的價值判斷"
+  },
+  {
+    "word": "ambivalent",
+    "pos": "adj.",
+    "meaning": "抱持矛盾心理的",
+    "example": "He remained ambivalent about accepting the promotion, torn between ambition and comfort.",
+    "roots": "同 ambivalence 字源 → 內心兩極拉扯的"
+  },
+  {
+    "word": "amble",
+    "pos": "v.",
+    "meaning": "漫步、緩行",
+    "example": "The couple ambled along the beach, in no hurry to reach the pier.",
+    "roots": "源自拉丁文 ambulare (走路) → 悠閒地走"
+  },
+  {
+    "word": "ambulatory",
+    "pos": "adj.",
+    "meaning": "(病人)能走動的、非固定的",
+    "example": "Most patients become fully ambulatory within a week after the surgery.",
+    "roots": "ambul (走，拉丁文 ambulare) + -atory (形容詞後綴) → 能夠行走移動的"
+  },
+  {
+    "word": "ameliorate",
+    "pos": "v.",
+    "meaning": "改善、改良",
+    "example": "The new irrigation system helped ameliorate the effects of the drought on local crops.",
+    "roots": "a- (向...) + melior (更好的，拉丁文) + -ate (動詞後綴) → 使朝更好的方向前進"
+  },
+  {
+    "word": "amenable",
+    "pos": "adj.",
+    "meaning": "順從的、願意接受(建議、規勸)的",
+    "example": "Fortunately, the client was amenable to our suggested changes to the design.",
+    "roots": "a- (向...) + men (帶領，拉丁文 minare) + -able (形容詞後綴，可以的) → 可以被引導、順從的"
+  },
+  {
+    "word": "amiable",
+    "pos": "adj.",
+    "meaning": "友善的、和藹可親的",
+    "example": "Their new neighbor is an amiable man who always greets everyone with a smile.",
+    "roots": "ami (朋友，拉丁文 amicus) + -able (形容詞後綴) → 容易當朋友的，友善的"
+  },
+  {
+    "word": "amicable",
+    "pos": "adj.",
+    "meaning": "友好的、和睦的(尤指協議、關係)",
+    "example": "The couple reached an amicable settlement without going to court.",
+    "roots": "amic (朋友，拉丁文 amicus) + -able (形容詞後綴) → 以朋友般態度處理的"
+  },
+  {
+    "word": "amity",
+    "pos": "n.",
+    "meaning": "友好關係、和睦",
+    "example": "The treaty was designed to promote amity between the two long-feuding nations.",
+    "roots": "ami (朋友，拉丁文 amicus) + -ty (名詞後綴) → 友好的狀態"
+  },
+  {
+    "word": "amnesty",
+    "pos": "n.",
+    "meaning": "特赦、大赦",
+    "example": "The government granted amnesty to thousands of political prisoners.",
+    "roots": "源自希臘文 amnestia (遺忘，a- 無 + mnasthai 記得) → 官方選擇「遺忘」過去的罪行"
+  },
+  {
+    "word": "amoral",
+    "pos": "adj.",
+    "meaning": "與道德無關的、無道德意識的",
+    "example": "The consultant approached the layoffs in a coldly amoral, purely financial way.",
+    "roots": "a- (無) + moral (道德的) → 不涉及道德判斷的"
+  },
+  {
+    "word": "amorous",
+    "pos": "adj.",
+    "meaning": "多情的、充滿愛意的",
+    "example": "The old letters revealed an amorous side of the otherwise stern general.",
+    "roots": "amor (愛，拉丁文) + -ous (形容詞後綴) → 充滿愛意的"
+  },
+  {
+    "word": "amorphous",
+    "pos": "adj.",
+    "meaning": "無定形的、模糊不清的",
+    "example": "The startup began as an amorphous idea before evolving into a structured business plan.",
+    "roots": "a- (無) + morph (形狀，希臘文 morphe) + -ous (形容詞後綴) → 沒有固定形狀的"
+  },
+  {
+    "word": "amulet",
+    "pos": "n.",
+    "meaning": "護身符",
+    "example": "She wore a small amulet around her neck, believed to ward off bad luck.",
+    "roots": "源自拉丁文 amuletum (護身符，字源不確定，一說與 amoliri「移除」有關) → 用來驅除厄運的小物件"
+  },
+  {
+    "word": "anachronism",
+    "pos": "n.",
+    "meaning": "時代錯置(的事物)",
+    "example": "Using a rotary phone in the film was an obvious anachronism given the story's modern setting.",
+    "roots": "ana- (逆、錯) + chron (時間，希臘文 chronos) + -ism (名詞後綴) → 與所屬時代不符的事物"
+  },
+  {
+    "word": "anachronistic",
+    "pos": "adj.",
+    "meaning": "時代錯置的、過時的",
+    "example": "Critics found the film's portrayal of gender roles anachronistic for a story set in the present day.",
+    "roots": "同 anachronism 字源 → 時代錯置的"
+  },
+  {
+    "word": "analogous",
+    "pos": "adj.",
+    "meaning": "類似的、可比擬的",
+    "example": "The heart's function is often described as analogous to that of a mechanical pump.",
+    "roots": "ana- (依照) + log (比例、言詞，希臘文 logos) + -ous (形容詞後綴) → 依循相似比例對應的"
+  },
+  {
+    "word": "analogy",
+    "pos": "n.",
+    "meaning": "類比、類推",
+    "example": "The teacher used a traffic analogy to explain how data packets move through a network.",
+    "roots": "同 analogous 字源 → 藉相似性做的比較說明"
+  },
+  {
+    "word": "anarchy",
+    "pos": "n.",
+    "meaning": "無政府狀態、混亂",
+    "example": "When the government collapsed overnight, the capital descended into anarchy.",
+    "roots": "an- (無) + arch (統治，希臘文 arkhein) → 沒有統治權威的狀態"
+  },
+  {
+    "word": "anathema",
+    "pos": "n.",
+    "meaning": "令人深惡痛絕的事物、詛咒",
+    "example": "To a committed environmentalist, single-use plastic is anathema.",
+    "roots": "ana- (向上) + the (放置，希臘文 tithenai) → 原指獻祭給神而被詛咒之物，引申為被強烈厭惡的事物"
+  },
+  {
+    "word": "ancillary",
+    "pos": "adj.",
+    "meaning": "附屬的、輔助的",
+    "example": "The main hospital relies on several ancillary clinics to handle routine checkups.",
+    "roots": "ancill- (女僕，拉丁文 ancilla) + -ary (形容詞後綴) → 如同僕人般輔助主體的"
+  },
+  {
+    "word": "anecdotal",
+    "pos": "adj.",
+    "meaning": "軼事的、非正式證據的",
+    "example": "The claim is based on anecdotal evidence rather than rigorous scientific study.",
+    "roots": "an- (無) + ec (出，希臘文 ek) + dot (給予，希臘文 didonai) + -al (形容詞後綴) → 源自未公開發表的小故事，引申為非正式證據"
+  },
+  {
+    "word": "anecdote",
+    "pos": "n.",
+    "meaning": "軼事、趣聞",
+    "example": "The professor often opened his lectures with a humorous anecdote from his own career.",
+    "roots": "同 anecdotal 字源 → 私下流傳的小故事"
+  },
+  {
+    "word": "angst",
+    "pos": "n.",
+    "meaning": "(尤指對存在的)焦慮、憂懼",
+    "example": "The novel captures the quiet angst of a generation facing an uncertain future.",
+    "roots": "源自德文 Angst (恐懼、焦慮) → 深層的存在性不安"
+  },
+  {
+    "word": "anguish",
+    "pos": "n.",
+    "meaning": "極度痛苦、苦惱",
+    "example": "The missing child's parents were in anguish for the three days before she was found.",
+    "roots": "源自拉丁文 angustia (狹窄、困境，源自 angere 使窒息) → 如被扼住般的痛苦"
+  },
+  {
+    "word": "animosity",
+    "pos": "n.",
+    "meaning": "敵意、仇恨",
+    "example": "Years of border disputes have fueled deep animosity between the two neighboring countries.",
+    "roots": "anim (精神、生命，拉丁文 animus) + -osity (名詞後綴，表狀態) → 帶有敵對情緒的精神狀態"
+  },
+  {
+    "word": "animus",
+    "pos": "n.",
+    "meaning": "敵意、惡意",
+    "example": "His harsh review seemed driven more by personal animus than objective criticism.",
+    "roots": "源自拉丁文 animus (精神、意志) → 引申為帶有惡意的心理狀態"
+  },
+  {
+    "word": "annals",
+    "pos": "n.",
+    "meaning": "編年史、歷史紀錄",
+    "example": "Her heroic rescue will be remembered in the annals of the fire department.",
+    "roots": "ann- (年，拉丁文 annus) + -als (名詞後綴，複數) → 按年份記載的史冊"
+  },
+  {
+    "word": "annex",
+    "pos": "v.",
+    "meaning": "併吞、附加",
+    "example": "The empire annexed the neighboring province after a brief war.",
+    "roots": "an- (向...) + nex (連接，拉丁文 nectere) → 連接、併入"
+  },
+  {
+    "word": "annexation",
+    "pos": "n.",
+    "meaning": "併吞、兼併(領土)",
+    "example": "The annexation of the territory sparked international condemnation.",
+    "roots": "an- (向...) + nex (連接，拉丁文 nectere) + -ation (名詞後綴) → 把土地連接、併入自己版圖"
+  },
+  {
+    "word": "annihilate",
+    "pos": "v.",
+    "meaning": "徹底消滅、殲滅",
+    "example": "The invading army threatened to annihilate the small border town.",
+    "roots": "an- (向...) + nihil (無、虛無，拉丁文) + -ate (動詞後綴) → 使變成虛無"
+  },
+  {
+    "word": "annul",
+    "pos": "v.",
+    "meaning": "宣告無效、廢除",
+    "example": "The marriage was annulled after just three weeks.",
+    "roots": "an- (向...) + null (無效的，拉丁文 nullus) → 使變成無效"
+  },
+  {
+    "word": "anodyne",
+    "pos": "adj.",
+    "meaning": "溫和無害的、不會引起爭議的",
+    "example": "The politician gave an anodyne response that avoided any controversial commitment.",
+    "roots": "an- (無) + odyne (痛苦，希臘文 odyne) → 不會引起痛苦或爭議的"
+  },
+  {
+    "word": "anomalous",
+    "pos": "adj.",
+    "meaning": "異常的、反常的",
+    "example": "Scientists noticed an anomalous spike in temperature readings that didn't match any known pattern.",
+    "roots": "an- (無) + homalos (一致的，希臘文) → 與常態不一致的"
+  },
+  {
+    "word": "anomaly",
+    "pos": "n.",
+    "meaning": "異常現象",
+    "example": "The auditors flagged the transaction as an anomaly requiring further investigation.",
+    "roots": "同 anomalous 字源 → 不符合常態的事物"
+  },
+  {
+    "word": "antagonism",
+    "pos": "n.",
+    "meaning": "敵對、對立",
+    "example": "Deep-seated antagonism between the two departments made collaboration nearly impossible.",
+    "roots": "anti- (反) + agon (競爭，希臘文 agonia) + -ism (名詞後綴) → 相互對抗的狀態"
+  },
+  {
+    "word": "antagonist",
+    "pos": "n.",
+    "meaning": "對手、反派角色",
+    "example": "The film's antagonist is a corrupt executive determined to destroy the hero's company.",
+    "roots": "同 antagonism 字源 → 與主角對立的角色或人物"
+  },
+  {
+    "word": "antagonize",
+    "pos": "v.",
+    "meaning": "使敵對、招惹",
+    "example": "It's unwise to antagonize the very colleagues you'll need for support later.",
+    "roots": "同 antagonism 字源 + -ize (動詞後綴) → 使產生敵意"
+  },
+  {
+    "word": "antecedent",
+    "pos": "n.",
+    "meaning": "先例、前身",
+    "example": "Many scholars consider the pamphlet an antecedent of modern political journalism.",
+    "roots": "ante- (在...之前) + cedent (走，拉丁文 cedere) → 走在前面的事物"
+  },
+  {
+    "word": "antediluvian",
+    "pos": "adj.",
+    "meaning": "遠古的、過時的(字面：大洪水前的)",
+    "example": "His antediluvian views on gender roles seemed shockingly out of place in a modern office.",
+    "roots": "ante- (在...之前) + diluv (洪水，拉丁文 diluvium) + -ian (形容詞後綴) → 聖經大洪水之前，引申為極其古老過時"
+  },
+  {
+    "word": "anterior",
+    "pos": "adj.",
+    "meaning": "(時間或位置上)較早的、前面的",
+    "example": "The anterior chapters of the report lay out the historical background before the analysis begins.",
+    "roots": "ante- (在...之前) + -erior (比較級後綴) → 較前面的"
+  },
+  {
+    "word": "antic",
+    "pos": "n.",
+    "meaning": "(常用複數)滑稽古怪的舉動",
+    "example": "The class clown's antics kept everyone entertained but frequently got him sent to the principal's office.",
+    "roots": "源自義大利文 antico (古老的)，文藝復興時期指洞穴壁畫中的怪誕圖案 → 引申為滑稽古怪的行為"
+  },
+  {
+    "word": "anticlimax",
+    "pos": "n.",
+    "meaning": "虎頭蛇尾、令人掃興的結局",
+    "example": "After weeks of buildup, the final match was a complete anticlimax, ending in a scoreless draw.",
+    "roots": "anti- (反) + climax (高潮，希臘文 klimax 梯子) → 與高潮相反，令人失望的結尾"
+  },
+  {
+    "word": "antipathy",
+    "pos": "n.",
+    "meaning": "反感、厭惡",
+    "example": "There has always been a mutual antipathy between the two rival playwrights.",
+    "roots": "anti- (反) + pathy (感情，希臘文 pathos) → 相反的情感，反感"
+  },
+  {
+    "word": "antiquated",
+    "pos": "adj.",
+    "meaning": "過時的、老舊的",
+    "example": "The factory's antiquated machinery frequently broke down and slowed production.",
+    "roots": "antiqu- (古老的，拉丁文 antiquus) + -ated (形容詞後綴) → 顯得老舊過時的"
+  },
+  {
+    "word": "antiquity",
+    "pos": "n.",
+    "meaning": "古代；古老",
+    "example": "The museum's collection spans from classical antiquity to the modern era.",
+    "roots": "同 antiquated 字源 + -ity (名詞後綴) → 久遠的年代"
+  },
+  {
+    "word": "antithesis",
+    "pos": "n.",
+    "meaning": "對立面、正相反",
+    "example": "Her calm, methodical approach was the complete antithesis of her predecessor's chaotic style.",
+    "roots": "anti- (反) + thesis (論點，希臘文 tithenai 放置) → 相對立的論點或事物"
+  },
+  {
+    "word": "antithetical",
+    "pos": "adj.",
+    "meaning": "對立的、相反的",
+    "example": "His laissez-faire management style is antithetical to the founder's hands-on approach.",
+    "roots": "同 antithesis 字源 + -al (形容詞後綴) → 與某事物完全相反的"
+  },
+  {
+    "word": "apace",
+    "pos": "adv.",
+    "meaning": "快速地、迅速地",
+    "example": "Construction of the new stadium is proceeding apace, well ahead of schedule.",
+    "roots": "a- (在...) + pace (步伐) → 保持著(快)步調前進"
+  },
+  {
+    "word": "apathetic",
+    "pos": "adj.",
+    "meaning": "冷漠的、不關心的",
+    "example": "Voter turnout dropped as the public grew increasingly apathetic toward local politics.",
+    "roots": "a- (無) + path (感情，希臘文 pathos) + -etic (形容詞後綴) → 沒有情感投入的"
+  },
+  {
+    "word": "apathy",
+    "pos": "n.",
+    "meaning": "冷漠、漠不關心",
+    "example": "Widespread apathy among shareholders allowed the flawed merger to proceed unchallenged.",
+    "roots": "同 apathetic 字源 → 缺乏情感、興趣的狀態"
+  },
+  {
+    "word": "aphorism",
+    "pos": "n.",
+    "meaning": "格言、警句",
+    "example": "Benjamin Franklin's almanacs are full of pithy aphorisms about thrift and hard work.",
+    "roots": "apo- (從...分開) + horism (界定，希臘文 horizein) → 精煉出獨立成句的智慧結晶"
+  },
+  {
+    "word": "aplomb",
+    "pos": "n.",
+    "meaning": "沉著、鎮定自若",
+    "example": "She handled the unexpected question with remarkable aplomb, never losing her composure.",
+    "roots": "源自法文 aplomb (a- 向 + plomb 鉛垂線) → 像鉛垂線一樣穩定不偏移"
+  },
+  {
+    "word": "apocryphal",
+    "pos": "adj.",
+    "meaning": "未經證實的、虛構的(尤指流傳的軼事)",
+    "example": "The story of him fixing the engine with a paperclip is probably apocryphal, but it's a great tale.",
+    "roots": "apo- (從...離開) + cryph (隱藏，希臘文 kryptein) → 來源不明、真偽存疑的"
+  },
+  {
+    "word": "apogee",
+    "pos": "n.",
+    "meaning": "頂點、最高點",
+    "example": "The empire reached its apogee under the reign of its most ambitious emperor.",
+    "roots": "apo- (遠離) + gee (地球，希臘文 ge) → 距地球最遠的點，引申為事物的最高峰"
+  },
+  {
+    "word": "apostasy",
+    "pos": "n.",
+    "meaning": "背棄信仰、變節",
+    "example": "His conversion to a rival faith was condemned by his former church as apostasy.",
+    "roots": "apo- (離開) + sta (站立，希臘文 histanai) → 從原本立場上走開，背離信仰"
+  },
+  {
+    "word": "apostate",
+    "pos": "n.",
+    "meaning": "背教者、變節者",
+    "example": "The regime branded any critic who questioned its ideology an apostate.",
+    "roots": "同 apostasy 字源 → 背棄原本信仰或立場的人"
+  },
+  {
+    "word": "apotheosis",
+    "pos": "n.",
+    "meaning": "神化、頂峰、典範",
+    "example": "Critics consider the film the apotheosis of the director's entire career.",
+    "roots": "apo- (向上) + theo (神，希臘文 theos) + -sis (名詞後綴) → 被提升到神的地位，引申為極致典範"
+  },
+  {
+    "word": "appall",
+    "pos": "v.",
+    "meaning": "使震驚、使驚駭",
+    "example": "The conditions in the factory appalled the inspectors during their surprise visit.",
+    "roots": "ap- (向...加強) + pall (源自古法文 palir，變蒼白) → 嚇得臉色發白"
+  },
+  {
+    "word": "appease",
+    "pos": "v.",
+    "meaning": "平息、姑息、安撫",
+    "example": "The council tried to appease residents' anger by promising more parking spaces.",
+    "roots": "ap- (向...) + peace (和平，源自拉丁文 pax) → 使恢復和平狀態"
+  },
+  {
+    "word": "appellation",
+    "pos": "n.",
+    "meaning": "稱號、名稱",
+    "example": "The city earned the appellation \"Venice of the North\" for its many canals.",
+    "roots": "ap- (向...) + pell (呼喚，拉丁文 appellare) + -ation (名詞後綴) → 被稱呼的名字"
+  },
+  {
+    "word": "appendage",
+    "pos": "n.",
+    "meaning": "附加物、附屬部分",
+    "example": "The new wing felt like an awkward appendage tacked onto the original building.",
+    "roots": "ap- (向...) + pend (懸掛，拉丁文 pendere) + -age (名詞後綴) → 附掛在主體上的部分"
+  },
+  {
+    "word": "apposite",
+    "pos": "adj.",
+    "meaning": "恰當的、貼切的",
+    "example": "Her apposite remarks perfectly summarized the entire discussion in one sentence.",
+    "roots": "ap- (向...) + posite (放置，拉丁文 ponere) → 放在正確的位置，恰如其分"
+  },
+  {
+    "word": "appraise",
+    "pos": "v.",
+    "meaning": "評估、鑑定(價值)",
+    "example": "A professional was hired to appraise the antique before the auction.",
+    "roots": "ap- (向...) + praise (源自古法文 preisier，估定價值，與 price 同源) → 判定價值"
+  },
+  {
+    "word": "apprehend",
+    "pos": "v.",
+    "meaning": "逮捕；理解、領會",
+    "example": "Police apprehended the suspect just blocks from the crime scene.",
+    "roots": "ap- (向...) + prehend (抓，拉丁文 prehendere) → 抓住(人或概念)"
+  },
+  {
+    "word": "apprehensive",
+    "pos": "adj.",
+    "meaning": "憂慮的、擔心的",
+    "example": "She felt apprehensive about giving her first presentation to the entire company.",
+    "roots": "同 apprehend 字源 → 內心被憂慮抓住的"
+  },
+  {
+    "word": "apprise",
+    "pos": "v.",
+    "meaning": "通知、告知",
+    "example": "Keep me apprised of any changes to the shipping schedule.",
+    "roots": "源自法文 apprendre (學習、教導) → 使某人得知消息"
+  },
+  {
+    "word": "approbation",
+    "pos": "n.",
+    "meaning": "認可、讚許",
+    "example": "The committee gave its approbation to the proposed budget after a brief discussion.",
+    "roots": "ap- (向...) + probation (證明、認可，拉丁文 probare) → 正式表示認可"
+  },
+  {
+    "word": "appropriate",
+    "pos": "v.",
+    "meaning": "挪用、佔用(常指不當使用)",
+    "example": "The company was accused of appropriating funds meant for employee pensions.",
+    "roots": "ap- (向...) + proprius (自己的，拉丁文) + -ate (動詞後綴) → 把某物變成自己的"
+  },
+  {
+    "word": "apropos",
+    "pos": "adv.",
+    "meaning": "順帶一提地；恰如其分地",
+    "example": "Apropos of nothing, he suddenly asked whether anyone wanted coffee.",
+    "roots": "源自法文片語 à propos (關於目的) → 恰好與主題相關"
+  },
+  {
+    "word": "aptitude",
+    "pos": "n.",
+    "meaning": "才能、資質",
+    "example": "The test is designed to measure a student's aptitude for mathematics rather than memorized knowledge.",
+    "roots": "apt (適合的，拉丁文 aptus) + -itude (名詞後綴，表狀態) → 天生適合、有能力做某事的狀態"
+  },
+  {
+    "word": "aquiline",
+    "pos": "adj.",
+    "meaning": "鷹的、鉤狀的(尤指鼻子)",
+    "example": "His sharp, aquiline nose gave him a rather hawkish appearance.",
+    "roots": "aquil- (鷹，拉丁文 aquila) + -ine (形容詞後綴) → 如鷹喙般彎曲的"
+  },
+  {
+    "word": "arable",
+    "pos": "adj.",
+    "meaning": "適合耕種的",
+    "example": "Only a small fraction of the island's land is arable, the rest being rocky terrain.",
+    "roots": "ar (耕、犁，拉丁文 arare) + -able (形容詞後綴) → 可以被犁耕種植的"
+  },
+  {
+    "word": "arbiter",
+    "pos": "n.",
+    "meaning": "仲裁者、裁決者",
+    "example": "The court has traditionally served as the final arbiter of constitutional disputes.",
+    "roots": "源自拉丁文 arbiter (旁觀者、裁判) → 有權判斷是非的人"
+  },
+  {
+    "word": "arbitrary",
+    "pos": "adj.",
+    "meaning": "隨心所欲的、武斷的",
+    "example": "Employees complained that the new dress code seemed entirely arbitrary.",
+    "roots": "同 arbiter 字源 + -ary (形容詞後綴) → 依個人意志決定，缺乏客觀依據"
+  },
+  {
+    "word": "arbitrate",
+    "pos": "v.",
+    "meaning": "仲裁、公斷",
+    "example": "A neutral committee was brought in to arbitrate the dispute between the two unions.",
+    "roots": "同 arbiter 字源 + -ate (動詞後綴) → 以第三方身分裁決爭端"
+  },
+  {
+    "word": "arboreal",
+    "pos": "adj.",
+    "meaning": "樹木的、棲於樹上的",
+    "example": "Sloths are arboreal creatures that rarely descend to the forest floor.",
+    "roots": "arbor (樹，拉丁文) + -eal (形容詞後綴) → 與樹木相關或生活在樹上的"
+  },
+  {
+    "word": "arcane",
+    "pos": "adj.",
+    "meaning": "神秘的、晦澀難懂的",
+    "example": "The tax code is full of arcane rules that even accountants struggle to interpret.",
+    "roots": "源自拉丁文 arcanus (秘密的，源自 arca 箱子) → 被鎖在箱子裡不為人知的"
+  },
+  {
+    "word": "archaic",
+    "pos": "adj.",
+    "meaning": "古老的、過時的",
+    "example": "The contract still contains several archaic legal terms rarely used today.",
+    "roots": "源自希臘文 arkhaikos (古老的，源自 arkhe 起源) → 屬於古老時代的"
+  },
+  {
+    "word": "archetype",
+    "pos": "n.",
+    "meaning": "原型、典型",
+    "example": "The lone cowboy is a classic archetype in American Western films.",
+    "roots": "arche- (最初，希臘文) + type (形式) → 最原始的樣板、範例"
+  },
+  {
+    "word": "ardent",
+    "pos": "adj.",
+    "meaning": "熱情的、熱切的",
+    "example": "She has always been an ardent supporter of environmental causes.",
+    "roots": "源自拉丁文 ardere (燃燒) → 情感如火焰般熾熱"
+  },
+  {
+    "word": "ardor",
+    "pos": "n.",
+    "meaning": "熱情、熱忱",
+    "example": "His youthful ardor for revolution gradually gave way to cautious pragmatism.",
+    "roots": "同 ardent 字源 → 燃燒般的熱情"
+  },
+  {
+    "word": "arduous",
+    "pos": "adj.",
+    "meaning": "艱難費力的",
+    "example": "The climb to the summit was far more arduous than the guidebook suggested.",
+    "roots": "源自拉丁文 arduus (陡峭的、困難的) → 如攀爬陡坡般費力"
+  },
+  {
+    "word": "argot",
+    "pos": "n.",
+    "meaning": "(特定團體的)行話、黑話",
+    "example": "New traders had to learn the argot of the trading floor before they could keep up with conversations.",
+    "roots": "源自法文 argot (乞丐或罪犯的隱語，字源不確定) → 特定圈子內使用的專屬語言"
+  },
+  {
+    "word": "arid",
+    "pos": "adj.",
+    "meaning": "乾旱的、貧瘠的；枯燥乏味的",
+    "example": "Very few plants can survive in such an arid climate.",
+    "roots": "源自拉丁文 aridus (乾的) → 缺乏水分或活力"
+  },
+  {
+    "word": "armistice",
+    "pos": "n.",
+    "meaning": "停戰協定",
+    "example": "The two sides signed an armistice after four years of brutal fighting.",
+    "roots": "arm (武器，拉丁文 arma) + istice (停止，拉丁文 sistere) → 武器暫時停止使用的協議"
+  },
+  {
+    "word": "arraign",
+    "pos": "v.",
+    "meaning": "傳訊、控告(於法庭)",
+    "example": "The suspect was arraigned on three counts of fraud the following morning.",
+    "roots": "ar- (向...) + raign (源自古法文 araisnier，質問) → 在法庭上正式提出指控"
+  },
+  {
+    "word": "array",
+    "pos": "n.",
+    "meaning": "(整齊排列的)一系列、大批",
+    "example": "The store offered a dazzling array of options for every budget.",
+    "roots": "ar- (向...) + ray (排列，源自古法文 arei) → 依序排列展示"
+  },
+  {
+    "word": "arresting",
+    "pos": "adj.",
+    "meaning": "引人注目的、醒目的",
+    "example": "Her arresting portraits captured the raw emotion of ordinary people.",
+    "roots": "同 arrest 字源 (拉丁文 ad- + restare 停留) → 能讓人目光停駐的"
+  },
+  {
+    "word": "arrogance",
+    "pos": "n.",
+    "meaning": "傲慢、自大",
+    "example": "His arrogance alienated even his most loyal supporters.",
+    "roots": "ar- (向...) + rog (要求，拉丁文 rogare) + -ance (名詞後綴) → 一味要求他人順從自己的態度"
+  },
+  {
+    "word": "arrogant",
+    "pos": "adj.",
+    "meaning": "傲慢的",
+    "example": "The arrogant intern dismissed every suggestion from his more experienced colleagues.",
+    "roots": "同 arrogance 字源 → 自視甚高、目中無人的"
+  },
+  {
+    "word": "arrogate",
+    "pos": "v.",
+    "meaning": "擅自竊取、僭取(權力)",
+    "example": "The general arrogated to himself powers that rightfully belonged to the parliament.",
+    "roots": "同 arrogance 字源 + -ate (動詞後綴) → 不當地要求、佔為己有"
+  },
+  {
+    "word": "arsenal",
+    "pos": "n.",
+    "meaning": "軍火庫；(引申)儲備、可運用的資源",
+    "example": "The debate coach equipped her students with an arsenal of persuasive techniques.",
+    "roots": "源自阿拉伯文 dar as-sina'a (製造之屋) → 儲存武器的地方，引申為可運用的資源"
+  },
+  {
+    "word": "articulate",
+    "pos": "adj.",
+    "meaning": "表達清晰的、口齒伶俐的",
+    "example": "She was remarkably articulate when explaining the complex legal issue to the jury.",
+    "roots": "articul (關節，拉丁文 articulus) + -ate (形容詞後綴) → 如關節般分明清晰地連接表達"
+  },
+  {
+    "word": "artifice",
+    "pos": "n.",
+    "meaning": "詭計、巧妙的手法",
+    "example": "The magician's trick relied on simple artifice rather than any real sleight of hand.",
+    "roots": "arti- (技藝，拉丁文 ars) + fice (做，拉丁文 facere) → 憑技巧刻意製造出的效果"
+  },
+  {
+    "word": "artless",
+    "pos": "adj.",
+    "meaning": "天真的、樸實無華的(無心機)",
+    "example": "Her artless honesty was refreshing in a room full of calculating politicians.",
+    "roots": "art (技藝、心機) + -less (無...後綴) → 沒有刻意心機、單純自然的"
+  },
+  {
+    "word": "ascendancy",
+    "pos": "n.",
+    "meaning": "支配地位、優勢",
+    "example": "The company's ascendancy in the market was challenged by a wave of cheaper competitors.",
+    "roots": "a- (向...) + scend (爬升，拉丁文 scandere) + -ancy (名詞後綴) → 攀升到支配他人的地位"
+  },
+  {
+    "word": "ascertain",
+    "pos": "v.",
+    "meaning": "查明、確定",
+    "example": "Investigators are still trying to ascertain the exact cause of the fire.",
+    "roots": "a- (向...) + certain (確定的) → 使某事變得確定"
+  },
+  {
+    "word": "ascetic",
+    "pos": "adj.",
+    "meaning": "苦行的、禁慾的",
+    "example": "The monk led an ascetic life, owning nothing but a robe and a bowl.",
+    "roots": "源自希臘文 asketes (修行者，源自 askein 訓練) → 透過克己修行的"
+  },
+  {
+    "word": "ascribe",
+    "pos": "v.",
+    "meaning": "把...歸因於",
+    "example": "Historians ascribe the empire's decline to a combination of economic and military failures.",
+    "roots": "a- (向...) + scribe (寫，拉丁文 scribere) → 把原因記在某人或某事身上"
+  },
+  {
+    "word": "asinine",
+    "pos": "adj.",
+    "meaning": "愚蠢的、愚昧的",
+    "example": "It was an asinine mistake for a company of this size to make.",
+    "roots": "源自拉丁文 asinus (驢子) → 像驢子一樣愚笨的"
+  },
+  {
+    "word": "askance",
+    "pos": "adv.",
+    "meaning": "以懷疑/不贊同的眼光(look askance at)",
+    "example": "Her colleagues looked askance at her sudden promotion, suspecting favoritism.",
+    "roots": "字源不確定，一說源自古義大利文 a scancio (斜地) → 斜眼看，帶著懷疑"
+  },
+  {
+    "word": "askew",
+    "pos": "adv.",
+    "meaning": "歪斜地、偏離正軌地",
+    "example": "The picture frame hung slightly askew on the wall despite his best efforts.",
+    "roots": "a- (在...) + skew (歪斜，源自古法文 eskiuer) → 偏離原本正確的方向"
+  },
+  {
+    "word": "asperity",
+    "pos": "n.",
+    "meaning": "(言語、態度的)嚴厲、粗暴",
+    "example": "\"Get out,\" she said with sudden asperity that surprised everyone in the room.",
+    "roots": "源自拉丁文 asper (粗糙的) → 語氣如粗糙表面般刺人"
+  },
+  {
+    "word": "aspersion",
+    "pos": "n.",
+    "meaning": "誹謗、中傷(cast aspersions)",
+    "example": "He resented the reporter's aspersions on his integrity.",
+    "roots": "a- (向...) + spers (灑，拉丁文 spargere) → 把污名灑向他人"
+  },
+  {
+    "word": "aspiration",
+    "pos": "n.",
+    "meaning": "志向、抱負",
+    "example": "Her lifelong aspiration was to become a published novelist.",
+    "roots": "a- (向...) + spir (呼吸，拉丁文 spirare) + -ation (名詞後綴) → 向上呼吸渴望的目標"
+  },
+  {
+    "word": "aspire",
+    "pos": "v.",
+    "meaning": "渴望、立志",
+    "example": "Many young musicians aspire to perform on that very stage someday.",
+    "roots": "同 aspiration 字源 → 懷抱著向上的渴望"
+  },
+  {
+    "word": "assail",
+    "pos": "v.",
+    "meaning": "猛烈攻擊、抨擊",
+    "example": "Critics assailed the policy as both unrealistic and unfair.",
+    "roots": "as- (向...) + sail (跳躍，拉丁文 salire) → 猛然撲向攻擊"
+  },
+  {
+    "word": "assay",
+    "pos": "v.",
+    "meaning": "檢驗、評估(尤指金屬成分)",
+    "example": "The lab was hired to assay the ore samples for gold content.",
+    "roots": "源自古法文 assai (試驗，與 essay 同源) → 試驗、測定含量"
+  },
+  {
+    "word": "assent",
+    "pos": "n.",
+    "meaning": "同意、贊成",
+    "example": "The board gave its unanimous assent to the proposed merger.",
+    "roots": "as- (向...) + sent (感覺、想法，拉丁文 sentire) → 想法趨於一致，表示同意"
+  },
+  {
+    "word": "assiduous",
+    "pos": "adj.",
+    "meaning": "勤勉的、堅持不懈的",
+    "example": "Her assiduous note-taking during the trial impressed even the veteran journalists.",
+    "roots": "as- (向...) + sid (坐，拉丁文 sedere) + -uous (形容詞後綴) → 持續坐在崗位上努力不懈的"
+  },
+  {
+    "word": "assimilate",
+    "pos": "v.",
+    "meaning": "同化、吸收",
+    "example": "The immigrant community gradually assimilated into the local culture while preserving its own traditions.",
+    "roots": "as- (向...) + simil (相似，拉丁文 similis) + -ate (動詞後綴) → 使變得相似而融入"
+  },
+  {
+    "word": "assuage",
+    "pos": "v.",
+    "meaning": "緩和、平息(情緒、痛苦)",
+    "example": "The manager's apology did little to assuage the customer's frustration.",
+    "roots": "as- (向...) + suage (使甜美，源自拉丁文 suavis 甜美的) → 使變得溫和平緩"
+  },
+  {
+    "word": "astringent",
+    "pos": "adj.",
+    "meaning": "(言語)嚴厲刻薄的；(物質)收斂的",
+    "example": "The critic's astringent review left the young playwright devastated.",
+    "roots": "a- (向...) + string (拉緊，拉丁文 stringere) + -ent (形容詞後綴) → 使組織收緊，引申為言語尖刻"
+  },
+  {
+    "word": "astute",
+    "pos": "adj.",
+    "meaning": "精明的、機敏的",
+    "example": "Her astute observation about the market trend saved the company millions.",
+    "roots": "源自拉丁文 astutus (狡猾的，源自 astus 技巧) → 善於判斷、精於算計的"
+  },
+  {
+    "word": "asunder",
+    "pos": "adv.",
+    "meaning": "分裂地、四分五裂地(tear asunder)",
+    "example": "The scandal tore the once-close family asunder.",
+    "roots": "源自古英文 on sundran (分開地) → 徹底分開、分裂"
+  },
+  {
+    "word": "atavism",
+    "pos": "n.",
+    "meaning": "返祖現象、隔代遺傳",
+    "example": "Biologists study rare cases of atavism, such as a whale born with hind legs.",
+    "roots": "同 atavistic 字源 → 恢復到祖先特徵的現象"
+  },
+  {
+    "word": "atavistic",
+    "pos": "adj.",
+    "meaning": "返祖的、恢復原始特性的",
+    "example": "The riot revealed a disturbing atavistic urge for mob violence beneath the veneer of civilization.",
+    "roots": "源自拉丁文 atavus (遠祖) + -istic (形容詞後綴) → 表現出遠古祖先特徵的"
+  },
+  {
+    "word": "atone",
+    "pos": "v.",
+    "meaning": "贖罪、彌補(過錯)",
+    "example": "He spent years volunteering to atone for the mistakes of his youth.",
+    "roots": "源自中古英文片語 at one (合而為一) → 透過補償使雙方重歸和睦"
+  },
+  {
+    "word": "atrocious",
+    "pos": "adj.",
+    "meaning": "極其殘暴的、糟糕透頂的",
+    "example": "The prisoners were subjected to atrocious conditions in the overcrowded camp.",
+    "roots": "源自拉丁文 atrox (兇殘的) + -ious (形容詞後綴) → 令人髮指地惡劣"
+  },
+  {
+    "word": "atrocity",
+    "pos": "n.",
+    "meaning": "暴行、駭人聽聞的行為",
+    "example": "The tribunal was established to prosecute those responsible for wartime atrocities.",
+    "roots": "同 atrocious 字源 + -ity (名詞後綴) → 極端殘暴的行為"
+  },
+  {
+    "word": "atrophy",
+    "pos": "v.",
+    "meaning": "萎縮、衰退",
+    "example": "Without regular exercise, muscles begin to atrophy within just a few weeks.",
+    "roots": "a- (無) + troph (營養，希臘文 trophe) → 缺乏養分而萎縮退化"
+  },
+  {
+    "word": "attenuate",
+    "pos": "v.",
+    "meaning": "使變弱、稀釋",
+    "example": "The signal is significantly attenuated by thick concrete walls.",
+    "roots": "at- (向...) + tenu (細、薄，拉丁文 tenuis) + -ate (動詞後綴) → 使變得細弱"
+  },
+  {
+    "word": "attest",
+    "pos": "v.",
+    "meaning": "證明、證實",
+    "example": "Several colleagues were willing to attest to her honesty and work ethic.",
+    "roots": "at- (向...) + test (見證，拉丁文 testari) → 出面作證"
+  },
+  {
+    "word": "attrition",
+    "pos": "n.",
+    "meaning": "消耗、耗損(war of attrition)",
+    "example": "The prolonged strike became a war of attrition between workers and management.",
+    "roots": "at- (向...) + trit (磨，拉丁文 terere) + -ion (名詞後綴) → 逐漸磨損消耗"
+  },
+  {
+    "word": "audacious",
+    "pos": "adj.",
+    "meaning": "大膽的、無畏的",
+    "example": "The heist depicted in the film was based on an audacious real-life robbery.",
+    "roots": "源自拉丁文 audax (大膽的，源自 audere 敢於) → 敢於冒險的"
+  },
+  {
+    "word": "audacity",
+    "pos": "n.",
+    "meaning": "膽量、厚顏無恥",
+    "example": "I can't believe he had the audacity to ask for a raise after missing every deadline.",
+    "roots": "同 audacious 字源 + -ity (名詞後綴) → 大膽甚至放肆的程度"
+  },
+  {
+    "word": "augment",
+    "pos": "v.",
+    "meaning": "增加、擴增",
+    "example": "The company hired freelancers to augment its permanent staff during the busy season.",
+    "roots": "源自拉丁文 augere (增加) → 使數量或規模變大"
+  },
+  {
+    "word": "augur",
+    "pos": "v.",
+    "meaning": "預示、預兆",
+    "example": "The early sales figures augur well for the product's holiday season performance.",
+    "roots": "源自拉丁文 augur (占卜官，觀鳥占卜吉凶的祭司) → 從徵兆預測未來"
+  },
+  {
+    "word": "auspices",
+    "pos": "n.",
+    "meaning": "贊助、支持(under the auspices of)",
+    "example": "The peace talks were held under the auspices of the United Nations.",
+    "roots": "源自拉丁文 auspicium (觀鳥占卜，avis 鳥 + specere 看) → 在其庇護、支持之下"
+  },
+  {
+    "word": "auspicious",
+    "pos": "adj.",
+    "meaning": "吉祥的、有好兆頭的",
+    "example": "The company's record-breaking first quarter was an auspicious start to the new year.",
+    "roots": "同 auspices 字源 + -ious (形容詞後綴) → 顯示吉兆的"
+  },
+  {
+    "word": "austere",
+    "pos": "adj.",
+    "meaning": "嚴峻的、簡樸的",
+    "example": "The monastery's austere interior contained nothing but a bed and a wooden desk.",
+    "roots": "源自希臘文 austeros (苦澀的、嚴厲的) → 不加修飾、克己節制的"
+  },
+  {
+    "word": "austerity",
+    "pos": "n.",
+    "meaning": "樸素、(政府的)撙節政策",
+    "example": "The government's austerity measures sparked widespread protests across the country.",
+    "roots": "同 austere 字源 + -ity (名詞後綴) → 嚴格節制的狀態或措施"
+  },
+  {
+    "word": "authentic",
+    "pos": "adj.",
+    "meaning": "真正的、可信的",
+    "example": "Experts confirmed the painting to be an authentic work by the Renaissance master.",
+    "roots": "源自希臘文 authentikos (自己做的，autos 自己 + hentes 行動者) → 出自本人、確實無誤的"
+  },
+  {
+    "word": "authoritarian",
+    "pos": "adj.",
+    "meaning": "獨裁的、專制的",
+    "example": "Under the authoritarian regime, all forms of public dissent were swiftly crushed.",
+    "roots": "author (權威，拉丁文 auctor) + -itarian (形容詞後綴，表主義) → 崇尚絕對權威、壓制異議的"
+  },
+  {
+    "word": "autochthonous",
+    "pos": "adj.",
+    "meaning": "本土的、原生的",
+    "example": "The researchers studied several autochthonous species found nowhere else on the island.",
+    "roots": "auto- (自己) + chthon (土地，希臘文) + -ous (形容詞後綴) → 從當地土地本身生長出來的"
+  },
+  {
+    "word": "autocracy",
+    "pos": "n.",
+    "meaning": "獨裁統治、專制政體",
+    "example": "The revolution sought to replace the crumbling autocracy with a democratic government.",
+    "roots": "auto- (自己) + crat (統治，希臘文 kratos) + -acy (名詞後綴) → 由一人獨自掌權的政體"
+  },
+  {
+    "word": "autodidact",
+    "pos": "n.",
+    "meaning": "自學者",
+    "example": "Largely an autodidact, he never attended college yet mastered five languages on his own.",
+    "roots": "auto- (自己) + didact (教導，希臘文 didaskein) → 自己教導自己的人"
+  },
+  {
+    "word": "autonomous",
+    "pos": "adj.",
+    "meaning": "自主的、獨立的",
+    "example": "The region was granted autonomous status, allowing it to set its own local laws.",
+    "roots": "auto- (自己) + nom (法律、規則，希臘文 nomos) + -ous (形容詞後綴) → 依照自己的規則運作，不受外部支配"
+  },
+  {
+    "word": "autonomy",
+    "pos": "n.",
+    "meaning": "自主權、自治",
+    "example": "The university fiercely guards its academic autonomy from government interference.",
+    "roots": "同 autonomous 字源 → 自我治理的權力"
+  },
+  {
+    "word": "auxiliary",
+    "pos": "adj.",
+    "meaning": "輔助的、後備的",
+    "example": "The hospital brought in auxiliary staff to handle the surge in emergency cases.",
+    "roots": "源自拉丁文 auxilium (幫助) → 提供額外支援的"
+  },
+  {
+    "word": "avant-garde",
+    "pos": "adj.",
+    "meaning": "前衛的",
+    "example": "The gallery specializes in avant-garde art that challenges conventional aesthetics.",
+    "roots": "源自法文 avant-garde (軍事用語，前鋒部隊，avant 前 + garde 守衛) → 走在時代尖端、引領潮流的"
+  },
+  {
+    "word": "avarice",
+    "pos": "n.",
+    "meaning": "貪婪",
+    "example": "The tycoon's avarice knew no limit, even as his workers struggled to survive on minimum wage.",
+    "roots": "源自拉丁文 avarus (貪婪的，源自 avere 渴望) → 對財富的過度渴望"
+  },
+  {
+    "word": "avaricious",
+    "pos": "adj.",
+    "meaning": "貪婪的",
+    "example": "The avaricious landlord raised rents every year regardless of the tenants' hardship.",
+    "roots": "同 avarice 字源 + -ious (形容詞後綴) → 極度貪求財富的"
+  },
+  {
+    "word": "aver",
+    "pos": "v.",
+    "meaning": "斷言、鄭重宣稱",
+    "example": "The witness averred that she had seen the defendant leave the building at midnight.",
+    "roots": "a- (向...) + ver (真實，拉丁文 verus) → 堅稱某事為真"
+  },
+  {
+    "word": "averse",
+    "pos": "adj.",
+    "meaning": "厭惡的、反對的(be averse to)",
+    "example": "He has always been averse to taking unnecessary financial risks.",
+    "roots": "a- (離開) + verse (轉，拉丁文 vertere) → 轉身遠離，表示厭惡"
+  },
+  {
+    "word": "aversion",
+    "pos": "n.",
+    "meaning": "厭惡、嫌惡",
+    "example": "She developed a lasting aversion to seafood after a bout of food poisoning.",
+    "roots": "同 averse 字源 + -ion (名詞後綴) → 想要迴避某事物的強烈情緒"
+  },
+  {
+    "word": "avert",
+    "pos": "v.",
+    "meaning": "避免、防止；轉移(視線)",
+    "example": "Quick thinking by the pilot helped avert a mid-air collision.",
+    "roots": "a- (離開) + vert (轉，拉丁文 vertere) → 把視線或危機轉開"
+  },
+  {
+    "word": "avid",
+    "pos": "adj.",
+    "meaning": "熱衷的、渴望的",
+    "example": "An avid reader, she finishes at least two novels every week.",
+    "roots": "源自拉丁文 avidus (渴望的，源自 avere 渴望) → 對某事極度熱切"
+  },
+  {
+    "word": "avocation",
+    "pos": "n.",
+    "meaning": "業餘愛好、副業",
+    "example": "Though a lawyer by profession, painting has long been his true avocation.",
+    "roots": "a- (離開) + voc (呼喚，拉丁文 vocare) → 從本業之外被召喚去做的事，即興趣嗜好"
+  },
+  {
+    "word": "avow",
+    "pos": "v.",
+    "meaning": "公開承認、坦承",
+    "example": "He openly avowed his support for the controversial reform, despite the political risk.",
+    "roots": "a- (向...) + vow (誓言，拉丁文 votum) → 公開發誓承認"
+  },
+  {
+    "word": "avuncular",
+    "pos": "adj.",
+    "meaning": "像叔伯般慈愛的",
+    "example": "The old professor had an avuncular manner that put nervous students at ease.",
+    "roots": "avuncul (舅舅、叔伯，拉丁文 avunculus) + -ar (形容詞後綴) → 具有長輩般溫和關懷的態度"
+  },
+  {
+    "word": "awry",
+    "pos": "adv.",
+    "meaning": "出錯地、歪斜地(go awry)",
+    "example": "Their carefully laid plans went awry the moment it started to rain.",
+    "roots": "a- (在...) + wry (扭曲的，源自古英文 wrigian 轉向) → 偏離了正確方向"
+  },
+  {
+    "word": "axiom",
+    "pos": "n.",
+    "meaning": "公理、格言",
+    "example": "It is almost an axiom in economics that scarcity drives up price.",
+    "roots": "源自希臘文 axioma (被認為有價值的事物，源自 axios 值得的) → 不證自明的真理"
+  },
+  {
+    "word": "axiomatic",
+    "pos": "adj.",
+    "meaning": "不言而喻的、公理性的",
+    "example": "It is axiomatic that a well-rested employee is a more productive one.",
+    "roots": "同 axiom 字源 + -atic (形容詞後綴) → 如公理般顯而易見的"
+  }
+]
