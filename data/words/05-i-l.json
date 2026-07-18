@@ -1,0 +1,2536 @@
+[
+  {
+    "word": "iconoclast",
+    "pos": "n.",
+    "meaning": "偶像破壞者、反傳統者",
+    "example": "The artist was regarded as an iconoclast who rejected every convention of the art establishment.",
+    "roots": "icon (聖像，源自希臘文 eikon) + clast (打破，源自希臘文 klastes) → 打破偶像的人"
+  },
+  {
+    "word": "idiosyncrasy",
+    "pos": "n.",
+    "meaning": "特質、怪癖",
+    "example": "Each character in the novel has a distinct idiosyncrasy that makes them memorable.",
+    "roots": "idio- (自己的，希臘文 idios) + syn- (共同) + crasis (混合) → 個人獨特的氣質混合"
+  },
+  {
+    "word": "idiosyncratic",
+    "pos": "adj.",
+    "meaning": "異於常人的、特異的",
+    "example": "His idiosyncratic writing style made his essays instantly recognizable.",
+    "roots": "同 idiosyncrasy 字源 + -ic (形容詞後綴)"
+  },
+  {
+    "word": "idyllic",
+    "pos": "adj.",
+    "meaning": "田園詩般的、恬靜優美的",
+    "example": "They spent an idyllic summer at a cottage by the lake.",
+    "roots": "idyll (田園詩，源自希臘文 eidyllion 小畫面) + -ic → 如田園詩般美好的"
+  },
+  {
+    "word": "ignoble",
+    "pos": "adj.",
+    "meaning": "卑鄙的、不光彩的",
+    "example": "He was accused of pursuing his ambition through ignoble means.",
+    "roots": "i- (in-，不) + nobilis (高貴的，拉丁文) → 不高貴的"
+  },
+  {
+    "word": "ignominious",
+    "pos": "adj.",
+    "meaning": "恥辱的、丟臉的",
+    "example": "The team suffered an ignominious defeat in the final match.",
+    "roots": "ig- (in-，不) + nomen (名聲，拉丁文) → 名聲掃地的"
+  },
+  {
+    "word": "ignominy",
+    "pos": "n.",
+    "meaning": "恥辱、不名譽",
+    "example": "He resigned in ignominy after the scandal broke.",
+    "roots": "同 ignominious 字源 → 名譽受損的狀態"
+  },
+  {
+    "word": "illicit",
+    "pos": "adj.",
+    "meaning": "非法的、違禁的",
+    "example": "The police shut down an illicit gambling operation downtown.",
+    "roots": "il- (in-，不) + licit (合法的，拉丁文 licitus) → 不合法的"
+  },
+  {
+    "word": "illusory",
+    "pos": "adj.",
+    "meaning": "虛幻的、幻覺的",
+    "example": "The sense of security the treaty provided proved illusory.",
+    "roots": "illus (欺騙，拉丁文 illudere) + -ory (形容詞後綴) → 帶有欺騙性、不真實的"
+  },
+  {
+    "word": "imbibe",
+    "pos": "v.",
+    "meaning": "吸收、汲取(知識、思想)；飲用",
+    "example": "She imbibed the philosophy of her mentor over years of study.",
+    "roots": "im- (向內) + bibere (喝，拉丁文) → 向內喝入、吸收"
+  },
+  {
+    "word": "imbroglio",
+    "pos": "n.",
+    "meaning": "糾紛、複雜混亂的局面",
+    "example": "The company was caught in a legal imbroglio that lasted for years.",
+    "roots": "源自義大利文 imbrogliare (纏繞、混淆) → 糾結混亂的狀態"
+  },
+  {
+    "word": "imbue",
+    "pos": "v.",
+    "meaning": "灌輸、使充滿(情感、特質)",
+    "example": "Her speech was imbued with a sense of urgency.",
+    "roots": "im- (向內) + buere (染色，拉丁文 imbuere) → 深深染入、注入特質"
+  },
+  {
+    "word": "immaculate",
+    "pos": "adj.",
+    "meaning": "潔淨無瑕的、完美的",
+    "example": "The hotel room was kept immaculate at all times.",
+    "roots": "im- (不) + macula (污點，拉丁文) → 沒有污點的"
+  },
+  {
+    "word": "imminent",
+    "pos": "adj.",
+    "meaning": "迫在眉睫的、即將發生的",
+    "example": "Forecasters warned that a storm was imminent.",
+    "roots": "im- (在...上) + minere (突出、逼近，拉丁文) → 逼近眼前的"
+  },
+  {
+    "word": "immutable",
+    "pos": "adj.",
+    "meaning": "不可改變的",
+    "example": "He believed in certain immutable laws of nature.",
+    "roots": "im- (不) + mutare (改變，拉丁文) → 不能改變的"
+  },
+  {
+    "word": "impair",
+    "pos": "v.",
+    "meaning": "損害、削弱",
+    "example": "Lack of sleep can impair one's judgment.",
+    "roots": "im- (使...) + pejorare (使更壞，拉丁文 pejor 更壞) → 使變差"
+  },
+  {
+    "word": "impale",
+    "pos": "v.",
+    "meaning": "刺穿",
+    "example": "The fence post nearly impaled him when he fell.",
+    "roots": "im- (在...裡) + palus (尖樁，拉丁文) → 用尖樁刺入"
+  },
+  {
+    "word": "impassioned",
+    "pos": "adj.",
+    "meaning": "慷慨激昂的、熱情的",
+    "example": "She gave an impassioned speech in defense of the policy.",
+    "roots": "im- (使...) + passion (激情) + -ed → 充滿激情的"
+  },
+  {
+    "word": "impassive",
+    "pos": "adj.",
+    "meaning": "面無表情的、冷漠的",
+    "example": "The judge remained impassive as the verdict was read.",
+    "roots": "im- (不) + passive (被動、有感情反應的) → 不表露情感的"
+  },
+  {
+    "word": "impeccable",
+    "pos": "adj.",
+    "meaning": "完美無瑕的",
+    "example": "The waiter's impeccable manners impressed every guest.",
+    "roots": "im- (不) + peccare (犯錯，拉丁文) → 不犯錯的、無瑕疵的"
+  },
+  {
+    "word": "impecunious",
+    "pos": "adj.",
+    "meaning": "貧困的、身無分文的",
+    "example": "The impecunious student survived on instant noodles for months.",
+    "roots": "im- (不) + pecunia (金錢，拉丁文) → 沒有錢的"
+  },
+  {
+    "word": "impede",
+    "pos": "v.",
+    "meaning": "阻礙、妨礙",
+    "example": "Heavy traffic impeded the ambulance's progress.",
+    "roots": "im- (在...上) + pes/ped (腳，拉丁文) → 絆住腳步"
+  },
+  {
+    "word": "impediment",
+    "pos": "n.",
+    "meaning": "障礙、妨礙物",
+    "example": "A lack of funding remains a major impediment to the project.",
+    "roots": "同 impede 字源 + -ment (名詞後綴)"
+  },
+  {
+    "word": "impending",
+    "pos": "adj.",
+    "meaning": "即將發生的(通常指不好的事)",
+    "example": "There was a sense of impending doom before the storm hit.",
+    "roots": "im- (在...上) + pendere (懸掛，拉丁文) → 懸在頭頂、即將降臨"
+  },
+  {
+    "word": "impenetrable",
+    "pos": "adj.",
+    "meaning": "無法穿透的、難以理解的",
+    "example": "The jungle was so dense it seemed impenetrable.",
+    "roots": "im- (不) + penetrare (穿透，拉丁文) → 無法被穿透的"
+  },
+  {
+    "word": "imperative",
+    "pos": "adj.",
+    "meaning": "極重要的、必要的",
+    "example": "It is imperative that we act before the deadline.",
+    "roots": "拉丁文 imperare (命令) → 具有命令性、必須做的"
+  },
+  {
+    "word": "imperceptible",
+    "pos": "adj.",
+    "meaning": "難以察覺的",
+    "example": "The change in temperature was so gradual it was almost imperceptible.",
+    "roots": "im- (不) + percipere (察覺，拉丁文) → 無法被感知的"
+  },
+  {
+    "word": "imperil",
+    "pos": "v.",
+    "meaning": "使處於危險中",
+    "example": "The reckless decision imperiled the entire crew.",
+    "roots": "im- (使...) + peril (危險，源自拉丁文 periculum) → 使陷入危險"
+  },
+  {
+    "word": "imperious",
+    "pos": "adj.",
+    "meaning": "專橫的、盛氣凌人的",
+    "example": "The imperious manager barked orders at everyone in the office.",
+    "roots": "拉丁文 imperiosus (掌權的，源自 imperium 統治權) → 帶有支配欲的"
+  },
+  {
+    "word": "impermeable",
+    "pos": "adj.",
+    "meaning": "不可滲透的",
+    "example": "The raincoat is made of an impermeable fabric.",
+    "roots": "im- (不) + per- (穿過) + meare (流動，拉丁文) → 無法讓液體流過的"
+  },
+  {
+    "word": "impertinent",
+    "pos": "adj.",
+    "meaning": "無禮的、不切題的",
+    "example": "The child's impertinent remarks embarrassed his parents.",
+    "roots": "im- (不) + pertinere (相關，拉丁文) → 不相關、不合宜的言行"
+  },
+  {
+    "word": "impervious",
+    "pos": "adj.",
+    "meaning": "不受影響的、不可穿透的",
+    "example": "She remained impervious to criticism throughout the campaign.",
+    "roots": "im- (不) + per- (穿過) + via (路，拉丁文) → 沒有路可穿過去"
+  },
+  {
+    "word": "impetuous",
+    "pos": "adj.",
+    "meaning": "衝動的、魯莽的",
+    "example": "His impetuous decision to quit his job shocked his family.",
+    "roots": "拉丁文 impetus (衝力) + -ous → 帶有衝力、行事魯莽的"
+  },
+  {
+    "word": "impetus",
+    "pos": "n.",
+    "meaning": "動力、刺激",
+    "example": "The scandal provided the impetus for major reforms.",
+    "roots": "拉丁文 in- + petere (追求、衝向) → 向前衝的力量"
+  },
+  {
+    "word": "impiety",
+    "pos": "n.",
+    "meaning": "不虔誠、不敬",
+    "example": "His remarks about the clergy were seen as an act of impiety.",
+    "roots": "im- (不) + pietas (虔誠，拉丁文) → 缺乏虔敬之心"
+  },
+  {
+    "word": "impinge",
+    "pos": "v.",
+    "meaning": "侵犯、衝擊、影響",
+    "example": "The new regulations impinge on individual freedoms.",
+    "roots": "im- (在...上) + pangere (打入，拉丁文) → 撞擊、侵入"
+  },
+  {
+    "word": "implacable",
+    "pos": "adj.",
+    "meaning": "難以平息的、不肯讓步的",
+    "example": "She faced the implacable hostility of her rivals.",
+    "roots": "im- (不) + placare (安撫，拉丁文) → 無法被安撫的"
+  },
+  {
+    "word": "implausible",
+    "pos": "adj.",
+    "meaning": "難以置信的",
+    "example": "The alibi he offered seemed wholly implausible.",
+    "roots": "im- (不) + plaudere (鼓掌、認可，拉丁文) → 難以獲得認可、難信的"
+  },
+  {
+    "word": "implicate",
+    "pos": "v.",
+    "meaning": "牽連、暗示",
+    "example": "New evidence implicated the mayor in the fraud scheme.",
+    "roots": "im- (在...裡) + plicare (摺疊，拉丁文) → 摺入其中、牽扯進去"
+  },
+  {
+    "word": "implicit",
+    "pos": "adj.",
+    "meaning": "含蓄的、不言明的",
+    "example": "There was an implicit understanding between the two leaders.",
+    "roots": "同 implicate 字源 → 摺疊在內、未明說的"
+  },
+  {
+    "word": "imponderable",
+    "pos": "adj.",
+    "meaning": "難以衡量的、無法預料的",
+    "example": "The success of the campaign depends on several imponderable factors.",
+    "roots": "im- (不) + ponderare (稱重，拉丁文) → 無法秤量的"
+  },
+  {
+    "word": "importune",
+    "pos": "v.",
+    "meaning": "死纏爛打地要求",
+    "example": "Beggars would importune passersby for spare change.",
+    "roots": "im- (向...) + portunus (港口的，引申為機會，拉丁文) → 不斷向人索求機會"
+  },
+  {
+    "word": "imposture",
+    "pos": "n.",
+    "meaning": "冒充、詐欺",
+    "example": "The con artist's imposture was finally exposed by the journalist.",
+    "roots": "im- (使...) + ponere (放置，拉丁文) → 假裝擺出的姿態"
+  },
+  {
+    "word": "impotent",
+    "pos": "adj.",
+    "meaning": "無能力的、無效的",
+    "example": "The council felt impotent to stop the factory's pollution.",
+    "roots": "im- (不) + potent (有力的，拉丁文 potens) → 沒有力量的"
+  },
+  {
+    "word": "impoverish",
+    "pos": "v.",
+    "meaning": "使貧困、使枯竭",
+    "example": "Years of war had impoverished the entire region.",
+    "roots": "im- (使...) + povre (貧窮的，古法文) → 使變貧窮"
+  },
+  {
+    "word": "imprecation",
+    "pos": "n.",
+    "meaning": "詛咒",
+    "example": "The old sailor muttered imprecations at the storm.",
+    "roots": "im- (向...) + precari (祈求，拉丁文) → 向...祈求惡運降臨"
+  },
+  {
+    "word": "impregnable",
+    "pos": "adj.",
+    "meaning": "攻不破的、無法駁倒的",
+    "example": "The fortress was considered impregnable until the siege.",
+    "roots": "im- (不) + prehendere (抓取，拉丁文) → 無法被攻取的"
+  },
+  {
+    "word": "impresario",
+    "pos": "n.",
+    "meaning": "(演出、活動的)經理人、籌辦人",
+    "example": "The impresario organized the city's biggest music festival.",
+    "roots": "源自義大利文 impresa (事業、任務) → 負責籌辦事業的人"
+  },
+  {
+    "word": "impromptu",
+    "pos": "adj.",
+    "meaning": "即興的",
+    "example": "The musicians gave an impromptu performance in the square.",
+    "roots": "拉丁文 in promptu (在手邊、隨時可用) → 隨時準備好、即興的"
+  },
+  {
+    "word": "improvident",
+    "pos": "adj.",
+    "meaning": "無遠慮的、不節儉的",
+    "example": "His improvident spending left him deep in debt.",
+    "roots": "im- (不) + providere (預見，拉丁文) → 沒有事先考慮的"
+  },
+  {
+    "word": "imprudent",
+    "pos": "adj.",
+    "meaning": "不謹慎的、輕率的",
+    "example": "It would be imprudent to invest all your savings in one stock.",
+    "roots": "im- (不) + prudent (謹慎的，拉丁文 prudens) → 不謹慎的"
+  },
+  {
+    "word": "impudent",
+    "pos": "adj.",
+    "meaning": "厚顏無恥的",
+    "example": "The impudent intern questioned the CEO's decision in front of everyone.",
+    "roots": "im- (不) + pudere (感到羞恥，拉丁文) → 不知羞恥的"
+  },
+  {
+    "word": "impugn",
+    "pos": "v.",
+    "meaning": "抨擊、質疑(誠信、動機)",
+    "example": "The lawyer tried to impugn the witness's credibility.",
+    "roots": "im- (向...) + pugnare (戰鬥，拉丁文) → 向...發起攻擊"
+  },
+  {
+    "word": "impunity",
+    "pos": "n.",
+    "meaning": "免受懲罰",
+    "example": "The dictator ruled with impunity for decades.",
+    "roots": "im- (不) + poena (懲罰，拉丁文) → 不受懲罰的狀態"
+  },
+  {
+    "word": "impute",
+    "pos": "v.",
+    "meaning": "歸咎於、把...歸因於",
+    "example": "Critics imputed the failure to poor management.",
+    "roots": "im- (向...) + putare (計算、認為，拉丁文) → 把...算到某人頭上"
+  },
+  {
+    "word": "inadvertent",
+    "pos": "adj.",
+    "meaning": "非故意的、疏忽的",
+    "example": "The error was inadvertent and quickly corrected.",
+    "roots": "in- (不) + advertere (轉向注意，拉丁文) → 沒有轉向注意的"
+  },
+  {
+    "word": "inane",
+    "pos": "adj.",
+    "meaning": "空洞的、愚蠢的",
+    "example": "The talk show host asked a series of inane questions.",
+    "roots": "拉丁文 inanis (空的) → 內容空洞的"
+  },
+  {
+    "word": "inarticulate",
+    "pos": "adj.",
+    "meaning": "表達不清的",
+    "example": "He became inarticulate with rage and could barely speak.",
+    "roots": "in- (不) + articulate (清晰表達的) → 無法清楚表達的"
+  },
+  {
+    "word": "incandescent",
+    "pos": "adj.",
+    "meaning": "白熾的、光輝奪目的",
+    "example": "The incandescent bulb glowed brightly in the dark room.",
+    "roots": "in- (在...裡) + candescere (變白熱，拉丁文) → 因熱而發光的"
+  },
+  {
+    "word": "incantation",
+    "pos": "n.",
+    "meaning": "咒語",
+    "example": "The witch murmured an incantation over the boiling cauldron.",
+    "roots": "in- (向...) + cantare (唱，拉丁文) → 吟唱出的咒語"
+  },
+  {
+    "word": "incarcerate",
+    "pos": "v.",
+    "meaning": "監禁",
+    "example": "He was incarcerated for a decade for the crime.",
+    "roots": "in- (在...裡) + carcer (監獄，拉丁文) → 關進監獄"
+  },
+  {
+    "word": "incarnate",
+    "pos": "adj.",
+    "meaning": "化身的、具體化身的",
+    "example": "To his enemies, he seemed evil incarnate.",
+    "roots": "in- (在...裡) + carn (肉，拉丁文) → 賦予肉身、具體化"
+  },
+  {
+    "word": "incendiary",
+    "pos": "adj.",
+    "meaning": "縱火的、煽動性的",
+    "example": "The politician's incendiary remarks sparked outrage.",
+    "roots": "in- (使...) + candere (燃燒，拉丁文) → 引發燃燒、煽動的"
+  },
+  {
+    "word": "incense",
+    "pos": "v.",
+    "meaning": "使極為憤怒",
+    "example": "The unfair verdict incensed the victim's family.",
+    "roots": "in- (使...) + candere (燃燒，拉丁文) → 使人怒火中燒 (同源 incendiary)"
+  },
+  {
+    "word": "incessant",
+    "pos": "adj.",
+    "meaning": "不斷的、不停的",
+    "example": "The incessant noise from construction kept them awake all night.",
+    "roots": "in- (不) + cessare (停止，拉丁文) → 不停止的"
+  },
+  {
+    "word": "inchoate",
+    "pos": "adj.",
+    "meaning": "剛開始的、未成形的",
+    "example": "The plan was still inchoate and needed much more work.",
+    "roots": "拉丁文 inchoare (開始) → 剛啟動、尚未成形的"
+  },
+  {
+    "word": "incipient",
+    "pos": "adj.",
+    "meaning": "初期的、剛萌芽的",
+    "example": "Doctors detected the disease in its incipient stage.",
+    "roots": "in- (向內) + capere (開始，拉丁文 incipere) → 剛開始發生的"
+  },
+  {
+    "word": "incise",
+    "pos": "v.",
+    "meaning": "切開、雕刻",
+    "example": "The surgeon carefully incised the tissue.",
+    "roots": "in- (向內) + caedere (切，拉丁文) → 向內切入"
+  },
+  {
+    "word": "incision",
+    "pos": "n.",
+    "meaning": "切口",
+    "example": "The doctor made a small incision above the knee.",
+    "roots": "同 incise 字源 + -ion"
+  },
+  {
+    "word": "incisive",
+    "pos": "adj.",
+    "meaning": "一針見血的、犀利的",
+    "example": "Her incisive comments cut straight to the heart of the problem.",
+    "roots": "同 incise 字源 + -ive → 像刀切一樣銳利精準的"
+  },
+  {
+    "word": "incite",
+    "pos": "v.",
+    "meaning": "煽動、激起",
+    "example": "The speech was accused of inciting violence.",
+    "roots": "in- (加強) + citare (催促、喚起，拉丁文) → 激起某種行動"
+  },
+  {
+    "word": "inclement",
+    "pos": "adj.",
+    "meaning": "(天氣)惡劣的",
+    "example": "The game was postponed due to inclement weather.",
+    "roots": "in- (不) + clemens (溫和的，拉丁文) → 不溫和的"
+  },
+  {
+    "word": "incognito",
+    "pos": "adv.",
+    "meaning": "隱姓埋名地、微服地",
+    "example": "The celebrity traveled incognito to avoid the paparazzi.",
+    "roots": "in- (不) + cognitus (被認識的，拉丁文) → 不被認出的"
+  },
+  {
+    "word": "incoherent",
+    "pos": "adj.",
+    "meaning": "不連貫的、語無倫次的",
+    "example": "His story was so incoherent that no one believed him.",
+    "roots": "in- (不) + cohaerere (黏合，拉丁文) → 前後不連貫的"
+  },
+  {
+    "word": "incommensurate",
+    "pos": "adj.",
+    "meaning": "不相稱的、不成比例的",
+    "example": "The punishment seemed incommensurate with the offense.",
+    "roots": "in- (不) + commensurate (成比例的，源自 mensura 測量，拉丁文) → 比例不相符的"
+  },
+  {
+    "word": "incompatible",
+    "pos": "adj.",
+    "meaning": "不相容的",
+    "example": "The two software systems turned out to be incompatible.",
+    "roots": "in- (不) + compatible (相容的，源自 pati 忍受，拉丁文) → 無法共存的"
+  },
+  {
+    "word": "incompetent",
+    "pos": "adj.",
+    "meaning": "不勝任的、無能的",
+    "example": "The incompetent manager was replaced after the project failed.",
+    "roots": "in- (不) + competent (有能力的，拉丁文 competere) → 沒有能力的"
+  },
+  {
+    "word": "inconceivable",
+    "pos": "adj.",
+    "meaning": "難以想像的",
+    "example": "It was inconceivable that the small team could win the championship.",
+    "roots": "in- (不) + concipere (構想，拉丁文) → 無法構想出來的"
+  },
+  {
+    "word": "incongruity",
+    "pos": "n.",
+    "meaning": "不協調、不一致",
+    "example": "There was a striking incongruity between his words and his actions.",
+    "roots": "in- (不) + congruere (一致、符合，拉丁文) → 不一致的狀態"
+  },
+  {
+    "word": "incongruous",
+    "pos": "adj.",
+    "meaning": "不協調的、不合時宜的",
+    "example": "The skyscraper looked incongruous next to the old stone church.",
+    "roots": "同 incongruity 字源 + -ous"
+  },
+  {
+    "word": "inconsequential",
+    "pos": "adj.",
+    "meaning": "不重要的、無關緊要的",
+    "example": "Compared to the larger crisis, the delay was inconsequential.",
+    "roots": "in- (不) + consequent (隨之而來的重要結果) → 沒有重要後果的"
+  },
+  {
+    "word": "inconsolable",
+    "pos": "adj.",
+    "meaning": "無法安慰的、悲痛欲絕的",
+    "example": "She was inconsolable after the loss of her pet.",
+    "roots": "in- (不) + consolari (安慰，拉丁文) → 無法被安慰的"
+  },
+  {
+    "word": "inconspicuous",
+    "pos": "adj.",
+    "meaning": "不顯眼的",
+    "example": "He tried to remain inconspicuous at the back of the room.",
+    "roots": "in- (不) + conspicuous (顯眼的，源自 conspicere 看見) → 不容易被看見的"
+  },
+  {
+    "word": "inconstancy",
+    "pos": "n.",
+    "meaning": "反覆無常、易變",
+    "example": "Her lover complained of her inconstancy.",
+    "roots": "in- (不) + constant (穩定的) → 不穩定的性質"
+  },
+  {
+    "word": "incontestable",
+    "pos": "adj.",
+    "meaning": "無可爭辯的",
+    "example": "The results provided incontestable proof of the theory.",
+    "roots": "in- (不) + contestable (可爭辯的) → 不容爭辯的"
+  },
+  {
+    "word": "incontrovertible",
+    "pos": "adj.",
+    "meaning": "無可辯駁的",
+    "example": "The DNA evidence was incontrovertible.",
+    "roots": "in- (不) + controvertere (爭論，拉丁文) → 無法被反駁的"
+  },
+  {
+    "word": "incorporate",
+    "pos": "v.",
+    "meaning": "合併、納入",
+    "example": "The new policy incorporates feedback from employees.",
+    "roots": "in- (使...) + corpus (身體，拉丁文) → 使成為一體"
+  },
+  {
+    "word": "incorporeal",
+    "pos": "adj.",
+    "meaning": "無實體的、非物質的",
+    "example": "Ghosts are often depicted as incorporeal beings.",
+    "roots": "in- (不) + corpus (身體，拉丁文) → 沒有身體、非實體的"
+  },
+  {
+    "word": "incorrigible",
+    "pos": "adj.",
+    "meaning": "無可救藥的、積習難改的",
+    "example": "The teacher called him an incorrigible troublemaker.",
+    "roots": "in- (不) + corrigere (糾正，拉丁文) → 無法被糾正的"
+  },
+  {
+    "word": "incorruptible",
+    "pos": "adj.",
+    "meaning": "不能被腐化收買的",
+    "example": "The judge was known to be incorruptible.",
+    "roots": "in- (不) + corrumpere (腐化，拉丁文) → 不能被腐化的"
+  },
+  {
+    "word": "incredulity",
+    "pos": "n.",
+    "meaning": "懷疑、不相信",
+    "example": "She stared at him with obvious incredulity.",
+    "roots": "in- (不) + credere (相信，拉丁文) → 不相信的狀態"
+  },
+  {
+    "word": "incredulous",
+    "pos": "adj.",
+    "meaning": "不相信的、懷疑的",
+    "example": "He gave an incredulous laugh when he heard the news.",
+    "roots": "同 incredulity 字源 + -ous"
+  },
+  {
+    "word": "increment",
+    "pos": "n.",
+    "meaning": "增量、增額",
+    "example": "Her salary increased in small increments each year.",
+    "roots": "拉丁文 incrementum (增長，源自 increscere) → 增加的量"
+  },
+  {
+    "word": "incriminate",
+    "pos": "v.",
+    "meaning": "使負罪、連累",
+    "example": "He refused to answer questions that might incriminate him.",
+    "roots": "in- (使...) + crimen (罪，拉丁文) → 使...帶上罪名"
+  },
+  {
+    "word": "incubate",
+    "pos": "v.",
+    "meaning": "孵化、醞釀",
+    "example": "The eggs need to incubate for three weeks before hatching.",
+    "roots": "in- (在...裡) + cubare (躺，拉丁文) → 伏臥孵蛋"
+  },
+  {
+    "word": "incubus",
+    "pos": "n.",
+    "meaning": "夢魘、重擔",
+    "example": "Debt became an incubus that weighed on him for years.",
+    "roots": "in- (在...上) + cubare (躺，拉丁文) → 壓在人身上的夢魘"
+  },
+  {
+    "word": "inculcate",
+    "pos": "v.",
+    "meaning": "諄諄教誨、灌輸",
+    "example": "Parents try to inculcate good values in their children.",
+    "roots": "in- (向內) + calcare (踩踏，拉丁文) → 反覆踩踏使其深植"
+  },
+  {
+    "word": "inculpate",
+    "pos": "v.",
+    "meaning": "使負罪、控告",
+    "example": "The testimony seemed to inculpate rather than exonerate him.",
+    "roots": "in- (使...) + culpa (過錯，拉丁文) → 使負有過錯"
+  },
+  {
+    "word": "incumbent",
+    "pos": "adj.",
+    "meaning": "現任的",
+    "example": "The incumbent mayor faced a tough reelection campaign.",
+    "roots": "in- (在...上) + cumbere (躺、倚靠，拉丁文) → 倚靠在職位上的"
+  },
+  {
+    "word": "incur",
+    "pos": "v.",
+    "meaning": "招致、遭受",
+    "example": "The company incurred heavy losses during the recession.",
+    "roots": "in- (向...) + currere (跑，拉丁文) → 跑向、招致"
+  },
+  {
+    "word": "incursion",
+    "pos": "n.",
+    "meaning": "侵入、突襲",
+    "example": "The army launched a brief incursion into enemy territory.",
+    "roots": "同 incur 字源 + -sion"
+  },
+  {
+    "word": "indebted",
+    "pos": "adj.",
+    "meaning": "負債的、感激的",
+    "example": "I am deeply indebted to my mentor for her guidance.",
+    "roots": "in- (處於狀態) + debt (債務，源自拉丁文 debere) → 處於欠債的狀態"
+  },
+  {
+    "word": "indecipherable",
+    "pos": "adj.",
+    "meaning": "難以辨認、無法破解的",
+    "example": "The doctor's handwriting was completely indecipherable.",
+    "roots": "in- (不) + decipher (解讀) → 無法被解讀的"
+  },
+  {
+    "word": "indefatigable",
+    "pos": "adj.",
+    "meaning": "不知疲倦的",
+    "example": "She was an indefatigable advocate for children's rights.",
+    "roots": "in- (不) + de- (加強) + fatigare (使疲勞，拉丁文) → 不會感到疲勞的"
+  },
+  {
+    "word": "indefensible",
+    "pos": "adj.",
+    "meaning": "站不住腳的、無法辯護的",
+    "example": "His decision to lie to the public was indefensible.",
+    "roots": "in- (不) + defensible (可辯護的) → 無法被辯護的"
+  },
+  {
+    "word": "indelible",
+    "pos": "adj.",
+    "meaning": "無法抹滅的",
+    "example": "The trip left an indelible impression on her.",
+    "roots": "in- (不) + delere (刪除，拉丁文) → 不能被刪除的"
+  },
+  {
+    "word": "indemnify",
+    "pos": "v.",
+    "meaning": "賠償、保障",
+    "example": "The insurance policy will indemnify the company against losses.",
+    "roots": "in- (使...) + damnum (損害，拉丁文) → 使免於損害"
+  },
+  {
+    "word": "indenture",
+    "pos": "n.",
+    "meaning": "契約、合同",
+    "example": "The young apprentice signed an indenture with the blacksmith.",
+    "roots": "源自拉丁文 indentare (刻出鋸齒狀邊緣，因契約副本邊緣切成鋸齒以防偽造) → 契約文件"
+  },
+  {
+    "word": "indeterminate",
+    "pos": "adj.",
+    "meaning": "不確定的",
+    "example": "The exact cause of the fire remains indeterminate.",
+    "roots": "in- (不) + determinate (確定的，拉丁文 determinare) → 沒有確定下來的"
+  },
+  {
+    "word": "indict",
+    "pos": "v.",
+    "meaning": "起訴、控告",
+    "example": "The grand jury voted to indict him on fraud charges.",
+    "roots": "in- (向...) + dicere (說，拉丁文) → 正式宣告控訴"
+  },
+  {
+    "word": "indifferent",
+    "pos": "adj.",
+    "meaning": "漠不關心的",
+    "example": "He seemed indifferent to the criticism directed at him.",
+    "roots": "in- (不) + differre (不同，拉丁文) → 不加以區分、不在意"
+  },
+  {
+    "word": "indigence",
+    "pos": "n.",
+    "meaning": "貧困",
+    "example": "The charity was founded to relieve indigence in the city.",
+    "roots": "indigere (缺乏，拉丁文) → 處於匱乏狀態"
+  },
+  {
+    "word": "indigenous",
+    "pos": "adj.",
+    "meaning": "原生的、本土的",
+    "example": "The plant is indigenous to the rainforests of South America.",
+    "roots": "indi- (內部) + gen (出生，拉丁文 genus) → 生於當地的"
+  },
+  {
+    "word": "indigent",
+    "pos": "adj.",
+    "meaning": "貧困的",
+    "example": "The clinic offers free care to indigent patients.",
+    "roots": "同 indigence 字源 + -ent"
+  },
+  {
+    "word": "indignant",
+    "pos": "adj.",
+    "meaning": "憤慨的",
+    "example": "She was indignant at being accused of cheating.",
+    "roots": "in- (不) + dignus (值得的，拉丁文) → 對不值得受到的對待感到憤怒"
+  },
+  {
+    "word": "indignation",
+    "pos": "n.",
+    "meaning": "憤慨",
+    "example": "The scandal provoked public indignation.",
+    "roots": "同 indignant 字源 + -ion"
+  },
+  {
+    "word": "indignity",
+    "pos": "n.",
+    "meaning": "侮辱、輕蔑對待",
+    "example": "He suffered the indignity of being fired in front of his colleagues.",
+    "roots": "in- (不) + dignitas (尊嚴，拉丁文) → 不被當作有尊嚴地對待"
+  },
+  {
+    "word": "indiscriminate",
+    "pos": "adj.",
+    "meaning": "不加區別的、隨意的",
+    "example": "The bombing caused indiscriminate destruction across the city.",
+    "roots": "in- (不) + discriminate (區別) → 不加以區分的"
+  },
+  {
+    "word": "indisputable",
+    "pos": "adj.",
+    "meaning": "無可爭議的",
+    "example": "The evidence of his guilt was indisputable.",
+    "roots": "in- (不) + disputare (爭論，拉丁文) → 不容爭辯的"
+  },
+  {
+    "word": "indissoluble",
+    "pos": "adj.",
+    "meaning": "不能分解的、不可拆散的",
+    "example": "They vowed an indissoluble bond of friendship.",
+    "roots": "in- (不) + dissolvere (分解，拉丁文) → 不能被拆散的"
+  },
+  {
+    "word": "indolent",
+    "pos": "adj.",
+    "meaning": "懶惰的",
+    "example": "The indolent student rarely finished his homework on time.",
+    "roots": "in- (不) + dolere (感到痛苦，拉丁文) → 不願承受辛勞的"
+  },
+  {
+    "word": "indomitable",
+    "pos": "adj.",
+    "meaning": "不屈不撓的",
+    "example": "Her indomitable spirit helped her overcome every obstacle.",
+    "roots": "in- (不) + domitare (馴服，拉丁文) → 無法被馴服的"
+  },
+  {
+    "word": "indubitable",
+    "pos": "adj.",
+    "meaning": "無庸置疑的",
+    "example": "It is an indubitable fact that the experiment succeeded.",
+    "roots": "in- (不) + dubitare (懷疑，拉丁文) → 無法被懷疑的"
+  },
+  {
+    "word": "induce",
+    "pos": "v.",
+    "meaning": "誘導、引起",
+    "example": "The drug is used to induce sleep in patients.",
+    "roots": "in- (向內) + ducere (引導，拉丁文) → 引導產生某結果"
+  },
+  {
+    "word": "indulge",
+    "pos": "v.",
+    "meaning": "縱容、沉溺於",
+    "example": "She indulged her craving for chocolate every weekend.",
+    "roots": "in- (向內) + dulgere (寬容，拉丁文，可能源自 indulgere) → 對自己寬容放縱"
+  },
+  {
+    "word": "indulgent",
+    "pos": "adj.",
+    "meaning": "縱容的",
+    "example": "Indulgent parents often struggle to discipline their children.",
+    "roots": "同 indulge 字源 + -ent"
+  },
+  {
+    "word": "indurate",
+    "pos": "v.",
+    "meaning": "使變硬、使頑固化",
+    "example": "Years of hardship indurated his once gentle temperament.",
+    "roots": "in- (使...) + durare (使堅硬，拉丁文 durus 硬) → 使變得堅硬頑固"
+  },
+  {
+    "word": "ineffable",
+    "pos": "adj.",
+    "meaning": "難以言喻的",
+    "example": "She felt an ineffable joy watching the sunrise.",
+    "roots": "in- (不) + effari (說出，拉丁文) → 無法用言語表達的"
+  },
+  {
+    "word": "ineffectual",
+    "pos": "adj.",
+    "meaning": "無效的、無能的",
+    "example": "His ineffectual leadership led to the company's decline.",
+    "roots": "in- (不) + effectual (有效的) → 不能產生效果的"
+  },
+  {
+    "word": "ineluctable",
+    "pos": "adj.",
+    "meaning": "無法逃避的、必然的",
+    "example": "Death is the ineluctable fate of all living things.",
+    "roots": "in- (不) + eluctari (掙脫，拉丁文) → 無法掙脫的"
+  },
+  {
+    "word": "inept",
+    "pos": "adj.",
+    "meaning": "笨拙的、不勝任的",
+    "example": "His inept handling of the crisis cost him his job.",
+    "roots": "in- (不) + aptus (合適的，拉丁文) → 不合適、不擅長的"
+  },
+  {
+    "word": "ineptitude",
+    "pos": "n.",
+    "meaning": "笨拙、無能",
+    "example": "The team's ineptitude was evident in their disorganized play.",
+    "roots": "同 inept 字源 + -itude"
+  },
+  {
+    "word": "ineradicable",
+    "pos": "adj.",
+    "meaning": "根除不了的",
+    "example": "Some superstitions seem ineradicable, no matter how much education spreads.",
+    "roots": "in- (不) + eradicare (根除，拉丁文 radix 根) → 無法連根拔除的"
+  },
+  {
+    "word": "inert",
+    "pos": "adj.",
+    "meaning": "惰性的、遲鈍的",
+    "example": "Noble gases are chemically inert.",
+    "roots": "in- (不) + ars/art (技能、活動，拉丁文 ars) → 沒有活動能力的"
+  },
+  {
+    "word": "inertia",
+    "pos": "n.",
+    "meaning": "慣性、惰性",
+    "example": "It took great effort to overcome the inertia of the old bureaucracy.",
+    "roots": "同 inert 字源 + -ia"
+  },
+  {
+    "word": "inexhaustible",
+    "pos": "adj.",
+    "meaning": "用不盡的、無窮的",
+    "example": "Her enthusiasm for teaching seemed inexhaustible.",
+    "roots": "in- (不) + exhaustible (可耗盡的，源自 exhaurire 抽乾) → 不能被耗盡的"
+  },
+  {
+    "word": "inexorable",
+    "pos": "adj.",
+    "meaning": "不為所動的、不可阻擋的",
+    "example": "The disease progressed with inexorable speed.",
+    "roots": "in- (不) + exorare (以懇求打動，拉丁文) → 無法被懇求打動的"
+  },
+  {
+    "word": "inexplicable",
+    "pos": "adj.",
+    "meaning": "無法解釋的",
+    "example": "Her sudden disappearance remains inexplicable.",
+    "roots": "in- (不) + explicare (解釋，拉丁文) → 無法被解釋的"
+  },
+  {
+    "word": "infallible",
+    "pos": "adj.",
+    "meaning": "絕不會錯的",
+    "example": "No system, however advanced, is truly infallible.",
+    "roots": "in- (不) + fallere (欺騙、失誤，拉丁文) → 不會犯錯的"
+  },
+  {
+    "word": "infamous",
+    "pos": "adj.",
+    "meaning": "惡名昭彰的",
+    "example": "The city is infamous for its high crime rate.",
+    "roots": "in- (不) + fama (名聲，拉丁文) → 帶有壞名聲的"
+  },
+  {
+    "word": "infamy",
+    "pos": "n.",
+    "meaning": "惡名、恥辱",
+    "example": "The general lived in infamy after betraying his country.",
+    "roots": "同 infamous 字源 + -y"
+  },
+  {
+    "word": "infatuation",
+    "pos": "n.",
+    "meaning": "迷戀",
+    "example": "Her infatuation with the actor faded after a few months.",
+    "roots": "in- (使...) + fatuus (愚蠢的，拉丁文) → 使人變得盲目愚蠢地迷戀"
+  },
+  {
+    "word": "infelicitous",
+    "pos": "adj.",
+    "meaning": "不恰當的、不得體的",
+    "example": "His infelicitous remark at the funeral offended many guests.",
+    "roots": "in- (不) + felix (幸運的、恰當的，拉丁文) → 不恰當的"
+  },
+  {
+    "word": "infelicity",
+    "pos": "n.",
+    "meaning": "不恰當、不幸",
+    "example": "The infelicity of his word choice caused unnecessary confusion.",
+    "roots": "同 infelicitous 字源 + -y"
+  },
+  {
+    "word": "infernal",
+    "pos": "adj.",
+    "meaning": "地獄般的、可惡的",
+    "example": "The infernal noise from the machine kept everyone awake.",
+    "roots": "拉丁文 infernus (地下的，源自 infra 下方) → 如地獄般的"
+  },
+  {
+    "word": "infiltrate",
+    "pos": "v.",
+    "meaning": "滲透、潛入",
+    "example": "The spy managed to infiltrate the organization undetected.",
+    "roots": "in- (向內) + filtrare (過濾，中世紀拉丁文) → 慢慢滲入內部"
+  },
+  {
+    "word": "infinitesimal",
+    "pos": "adj.",
+    "meaning": "極小的、無窮小的",
+    "example": "The chances of winning were infinitesimal.",
+    "roots": "infinite (無限的) + -esimal (序數後綴，如 centesimal) → 無限小的量"
+  },
+  {
+    "word": "infirm",
+    "pos": "adj.",
+    "meaning": "體弱的",
+    "example": "The infirm elderly man needed a wheelchair to get around.",
+    "roots": "in- (不) + firmus (強壯的，拉丁文) → 不強壯的"
+  },
+  {
+    "word": "inflammatory",
+    "pos": "adj.",
+    "meaning": "煽動性的、易引發炎症的",
+    "example": "The senator's inflammatory speech divided the crowd.",
+    "roots": "in- (向內) + flamma (火焰，拉丁文) → 點燃情緒或炎症的"
+  },
+  {
+    "word": "inflexible",
+    "pos": "adj.",
+    "meaning": "不知變通的、僵硬的",
+    "example": "His inflexible attitude made negotiation impossible.",
+    "roots": "in- (不) + flectere (彎曲，拉丁文) → 不能彎曲的"
+  },
+  {
+    "word": "inflict",
+    "pos": "v.",
+    "meaning": "施加(痛苦、懲罰)",
+    "example": "The storm inflicted severe damage on the coastal town.",
+    "roots": "in- (向...) + fligere (打擊，拉丁文) → 向...施加打擊"
+  },
+  {
+    "word": "influx",
+    "pos": "n.",
+    "meaning": "湧入",
+    "example": "The city saw a huge influx of tourists during the festival.",
+    "roots": "in- (向內) + fluere (流動，拉丁文) → 向內流入"
+  },
+  {
+    "word": "infraction",
+    "pos": "n.",
+    "meaning": "違反、違規",
+    "example": "Even a minor infraction of the rules could result in suspension.",
+    "roots": "in- (向...) + frangere (打破，拉丁文) → 打破規則"
+  },
+  {
+    "word": "infringe",
+    "pos": "v.",
+    "meaning": "侵犯、違反",
+    "example": "The company was sued for infringing on the patent.",
+    "roots": "in- (向...) + frangere (打破，拉丁文) → 打破界限、侵犯"
+  },
+  {
+    "word": "infuse",
+    "pos": "v.",
+    "meaning": "灌輸、注入",
+    "example": "The new coach infused the team with fresh energy.",
+    "roots": "in- (向內) + fundere (傾注，拉丁文) → 向內注入"
+  },
+  {
+    "word": "ingenious",
+    "pos": "adj.",
+    "meaning": "巧妙的、有創意的",
+    "example": "The engineer devised an ingenious solution to the drainage problem.",
+    "roots": "拉丁文 ingenium (天賦、才智) → 富有才智巧思的"
+  },
+  {
+    "word": "ingenue",
+    "pos": "n.",
+    "meaning": "天真無邪的年輕女子(尤指戲劇角色)",
+    "example": "She was often cast as the innocent ingenue in romantic comedies.",
+    "roots": "源自法文 ingénue (天真的，拉丁文 ingenuus 出身自由的) → 天真純潔的年輕女性"
+  },
+  {
+    "word": "ingenuity",
+    "pos": "n.",
+    "meaning": "智巧、創造力",
+    "example": "The rescue required great ingenuity under time pressure.",
+    "roots": "同 ingenious 字源 + -ity"
+  },
+  {
+    "word": "ingenuous",
+    "pos": "adj.",
+    "meaning": "天真的、坦率的",
+    "example": "His ingenuous honesty sometimes got him into trouble.",
+    "roots": "拉丁文 ingenuus (出身自由的、天生高貴的) → 天生率直、不做作的 (與形似字 ingenious 意義不同)"
+  },
+  {
+    "word": "ingrained",
+    "pos": "adj.",
+    "meaning": "根深蒂固的",
+    "example": "Prejudice can become deeply ingrained from an early age.",
+    "roots": "in- (向內) + grain (顆粒、紋理) → 深深滲入紋理之中"
+  },
+  {
+    "word": "ingrate",
+    "pos": "n.",
+    "meaning": "忘恩負義的人",
+    "example": "He was called an ingrate for forgetting those who had helped him.",
+    "roots": "in- (不) + gratus (感激的，拉丁文) → 不知感恩的人"
+  },
+  {
+    "word": "ingratiate",
+    "pos": "v.",
+    "meaning": "討好、逢迎",
+    "example": "He tried to ingratiate himself with his new boss by working overtime.",
+    "roots": "in- (使...) + gratia (恩惠，拉丁文) → 使自己受到他人喜愛"
+  },
+  {
+    "word": "inherent",
+    "pos": "adj.",
+    "meaning": "固有的、天生的",
+    "example": "Risk is inherent in any investment.",
+    "roots": "in- (在...裡) + haerere (黏附，拉丁文) → 天生附著在其中的"
+  },
+  {
+    "word": "inimical",
+    "pos": "adj.",
+    "meaning": "不友善的、有敵意的",
+    "example": "The policy proved inimical to small businesses.",
+    "roots": "in- (不) + amicus (朋友，拉丁文) → 不友好的"
+  },
+  {
+    "word": "inimitable",
+    "pos": "adj.",
+    "meaning": "無法模仿的、獨一無二的",
+    "example": "The comedian performed in his own inimitable style.",
+    "roots": "in- (不) + imitari (模仿，拉丁文) → 無法被模仿的"
+  },
+  {
+    "word": "iniquitous",
+    "pos": "adj.",
+    "meaning": "邪惡的、不公正的",
+    "example": "The iniquitous tax system burdened the poorest citizens.",
+    "roots": "in- (不) + aequus (公平的，拉丁文) → 不公正的"
+  },
+  {
+    "word": "iniquity",
+    "pos": "n.",
+    "meaning": "邪惡、不公",
+    "example": "The novel exposes the iniquity of the slave trade.",
+    "roots": "同 iniquitous 字源 + -y"
+  },
+  {
+    "word": "initiate",
+    "pos": "v.",
+    "meaning": "開始、發起",
+    "example": "The council voted to initiate a new recycling program.",
+    "roots": "拉丁文 initiare (開始，源自 initium 開端) → 使某事開始"
+  },
+  {
+    "word": "injunction",
+    "pos": "n.",
+    "meaning": "禁令、指令",
+    "example": "The court issued an injunction to halt construction.",
+    "roots": "in- (向...) + jungere (連接、命令，拉丁文 injungere) → 加諸的命令"
+  },
+  {
+    "word": "injurious",
+    "pos": "adj.",
+    "meaning": "有害的",
+    "example": "Smoking is injurious to health.",
+    "roots": "in- (不) + jus (法律、正當，拉丁文) → 違反正當、造成傷害的"
+  },
+  {
+    "word": "inkling",
+    "pos": "n.",
+    "meaning": "略知、模糊的想法",
+    "example": "She had an inkling that something was wrong.",
+    "roots": "源自中古英文 inkle (暗示、線索) → 一點點的線索"
+  },
+  {
+    "word": "innate",
+    "pos": "adj.",
+    "meaning": "天生的、與生俱來的",
+    "example": "Some believe language ability is an innate human trait.",
+    "roots": "in- (在...裡) + nasci (出生，拉丁文) → 生來就有的"
+  },
+  {
+    "word": "innocuous",
+    "pos": "adj.",
+    "meaning": "無害的",
+    "example": "The comment seemed innocuous but caused unexpected offense.",
+    "roots": "in- (不) + nocuus (有害的，拉丁文 nocere 傷害) → 不會造成傷害的"
+  },
+  {
+    "word": "innuendo",
+    "pos": "n.",
+    "meaning": "影射、暗諷",
+    "example": "The tabloid article was full of innuendo about the star's private life.",
+    "roots": "拉丁文 innuendo (以點頭示意，源自 innuere) → 以暗示方式表達"
+  },
+  {
+    "word": "inoculate",
+    "pos": "v.",
+    "meaning": "接種疫苗、灌輸(思想)",
+    "example": "Children are routinely inoculated against measles.",
+    "roots": "in- (向內) + oculus (眼、芽，拉丁文，原指嫁接植物的芽) → 植入以產生免疫"
+  },
+  {
+    "word": "inordinate",
+    "pos": "adj.",
+    "meaning": "過度的、不成比例的",
+    "example": "He spent an inordinate amount of time on a minor detail.",
+    "roots": "in- (不) + ordinare (排序、安排，拉丁文) → 超出正常秩序的"
+  },
+  {
+    "word": "inquisitive",
+    "pos": "adj.",
+    "meaning": "好奇的、愛打聽的",
+    "example": "The inquisitive toddler asked endless questions.",
+    "roots": "in- (向內) + quaerere (尋求，拉丁文) → 喜歡探究的"
+  },
+  {
+    "word": "inroad",
+    "pos": "n.",
+    "meaning": "侵入、進展",
+    "example": "The company made significant inroads into the Asian market.",
+    "roots": "in- (向內) + road (道路) → 開闢進入的道路"
+  },
+  {
+    "word": "insatiable",
+    "pos": "adj.",
+    "meaning": "難以滿足的",
+    "example": "He had an insatiable appetite for knowledge.",
+    "roots": "in- (不) + satiare (使滿足，拉丁文) → 無法被滿足的"
+  },
+  {
+    "word": "inscribe",
+    "pos": "v.",
+    "meaning": "銘刻、題寫",
+    "example": "The names of the fallen soldiers were inscribed on the monument.",
+    "roots": "in- (向內) + scribere (寫，拉丁文) → 刻寫進去"
+  },
+  {
+    "word": "inscrutable",
+    "pos": "adj.",
+    "meaning": "難以理解的、高深莫測的",
+    "example": "His inscrutable expression gave nothing away.",
+    "roots": "in- (不) + scrutari (仔細檢查，拉丁文) → 無法被看透的"
+  },
+  {
+    "word": "insensate",
+    "pos": "adj.",
+    "meaning": "無感覺的、無情的、愚蠢的",
+    "example": "The soldier fell to the ground, insensate from the blow.",
+    "roots": "in- (不) + sensus (感覺，拉丁文) → 失去知覺的"
+  },
+  {
+    "word": "insensible",
+    "pos": "adj.",
+    "meaning": "無知覺的、感覺不到的",
+    "example": "He seemed insensible to the danger surrounding him.",
+    "roots": "in- (不) + sensible (有知覺的) → 感覺不到的"
+  },
+  {
+    "word": "insidious",
+    "pos": "adj.",
+    "meaning": "陰險的、潛伏的",
+    "example": "The disease progresses in an insidious manner, with few early symptoms.",
+    "roots": "in- (在...裡) + sedere (坐，拉丁文，引申埋伏) → 埋伏著等待時機"
+  },
+  {
+    "word": "insignia",
+    "pos": "n.",
+    "meaning": "徽章、標誌",
+    "example": "The general's insignia indicated his high rank.",
+    "roots": "in- (在...上) + signum (記號，拉丁文) → 標示在上面的記號"
+  },
+  {
+    "word": "insinuate",
+    "pos": "v.",
+    "meaning": "暗示、旁敲側擊",
+    "example": "Are you insinuating that I was responsible for the mistake?",
+    "roots": "in- (向內) + sinuare (彎曲，拉丁文 sinus 曲線) → 迂迴地暗示"
+  },
+  {
+    "word": "insipid",
+    "pos": "adj.",
+    "meaning": "平淡無味的",
+    "example": "The soup was bland and insipid.",
+    "roots": "in- (不) + sapidus (有味道的，拉丁文) → 沒有味道的"
+  },
+  {
+    "word": "insolence",
+    "pos": "n.",
+    "meaning": "傲慢無禮",
+    "example": "His insolence toward the teacher earned him a detention.",
+    "roots": "in- (不) + solere (習慣，拉丁文) → 不遵循應有禮節"
+  },
+  {
+    "word": "insolent",
+    "pos": "adj.",
+    "meaning": "傲慢無禮的",
+    "example": "The insolent remark left the room in stunned silence.",
+    "roots": "同 insolence 字源 + -ent"
+  },
+  {
+    "word": "insoluble",
+    "pos": "adj.",
+    "meaning": "無法解決的、不可溶解的",
+    "example": "The mystery remained insoluble for decades.",
+    "roots": "in- (不) + solvere (溶解、解決，拉丁文) → 無法被解開的"
+  },
+  {
+    "word": "insolvent",
+    "pos": "adj.",
+    "meaning": "無力償還的、破產的",
+    "example": "The company became insolvent after years of mismanagement.",
+    "roots": "in- (不) + solvere (清償，拉丁文) → 無法清償債務的"
+  },
+  {
+    "word": "insouciant",
+    "pos": "adj.",
+    "meaning": "無憂無慮的、漠不關心的",
+    "example": "He had an insouciant attitude toward deadlines.",
+    "roots": "法文 in- (不) + souciant (擔心的，源自拉丁文 sollicitare) → 不為所憂的"
+  },
+  {
+    "word": "instate",
+    "pos": "v.",
+    "meaning": "使就職、任命",
+    "example": "The new director was instated after a unanimous vote.",
+    "roots": "in- (使...進入) + state (狀態、職位) → 使進入某職位"
+  },
+  {
+    "word": "instigate",
+    "pos": "v.",
+    "meaning": "煽動、挑起",
+    "example": "He was accused of instigating the riot.",
+    "roots": "拉丁文 instigare (刺激、驅使) → 驅使某事發生"
+  },
+  {
+    "word": "instill",
+    "pos": "v.",
+    "meaning": "逐漸灌輸",
+    "example": "Good teachers instill a love of learning in their students.",
+    "roots": "in- (向內) + stillare (滴下，拉丁文) → 像水滴般漸漸滲入"
+  },
+  {
+    "word": "insubordinate",
+    "pos": "adj.",
+    "meaning": "不服從的",
+    "example": "The insubordinate soldier refused to follow the order.",
+    "roots": "in- (不) + subordinate (下屬的、服從的) → 不服從指揮的"
+  },
+  {
+    "word": "insubstantial",
+    "pos": "adj.",
+    "meaning": "不牢固的、無實體的",
+    "example": "The bridge looked insubstantial and swayed in the wind.",
+    "roots": "in- (不) + substantial (實在的) → 缺乏實質基礎的"
+  },
+  {
+    "word": "insular",
+    "pos": "adj.",
+    "meaning": "島國心態的、狹隘的",
+    "example": "Critics accused the committee of having an insular worldview.",
+    "roots": "拉丁文 insula (島) → 如孤島般封閉的心態"
+  },
+  {
+    "word": "insularity",
+    "pos": "n.",
+    "meaning": "島國心態、狹隘",
+    "example": "The novel critiques the insularity of small-town life.",
+    "roots": "同 insular 字源 + -ity"
+  },
+  {
+    "word": "insurgent",
+    "pos": "adj.",
+    "meaning": "叛亂的、起義的",
+    "example": "Government forces clashed with insurgent fighters near the border.",
+    "roots": "in- (向...) + surgere (起身，拉丁文) → 起身反抗"
+  },
+  {
+    "word": "insurrection",
+    "pos": "n.",
+    "meaning": "起義、叛亂",
+    "example": "The failed insurrection led to widespread arrests.",
+    "roots": "同 insurgent 字源 + -ion"
+  },
+  {
+    "word": "intangible",
+    "pos": "adj.",
+    "meaning": "無形的、難以捉摸的",
+    "example": "Employee morale is an intangible but important factor in productivity.",
+    "roots": "in- (不) + tangere (觸摸，拉丁文) → 無法觸摸到的"
+  },
+  {
+    "word": "integral",
+    "pos": "adj.",
+    "meaning": "不可或缺的、完整的",
+    "example": "Trust is integral to any successful partnership.",
+    "roots": "拉丁文 integer (完整的) → 構成整體不可缺少的部分"
+  },
+  {
+    "word": "intelligentsia",
+    "pos": "n.",
+    "meaning": "知識分子階層",
+    "example": "The country's intelligentsia debated the new policy for weeks.",
+    "roots": "源自俄文 intelligentsiya，拉丁文 intelligere (理解) → 具備知識與見解的階層"
+  },
+  {
+    "word": "intelligible",
+    "pos": "adj.",
+    "meaning": "可理解的、清晰易懂的",
+    "example": "The professor made the complex theory intelligible to beginners.",
+    "roots": "intel- (在...之間) + legere (選取、閱讀，拉丁文) → 可以被理解的"
+  },
+  {
+    "word": "inter",
+    "pos": "v.",
+    "meaning": "埋葬",
+    "example": "The soldiers were interred with full military honors.",
+    "roots": "in- (向內) + terra (土地，拉丁文) → 放入土中"
+  },
+  {
+    "word": "intercede",
+    "pos": "v.",
+    "meaning": "說情、調停",
+    "example": "She interceded on behalf of her brother, who had been unfairly punished.",
+    "roots": "inter- (在...之間) + cedere (走，拉丁文) → 走到中間調停"
+  },
+  {
+    "word": "intercessor",
+    "pos": "n.",
+    "meaning": "說情者、調解人",
+    "example": "He acted as an intercessor between the two feuding families.",
+    "roots": "同 intercede 字源 + -or"
+  },
+  {
+    "word": "interdict",
+    "pos": "v.",
+    "meaning": "禁止",
+    "example": "The council moved to interdict the sale of the controversial drug.",
+    "roots": "inter- (在...之間) + dicere (說，拉丁文) → 從中插話禁止"
+  },
+  {
+    "word": "interim",
+    "pos": "adj.",
+    "meaning": "暫時的、過渡期的",
+    "example": "She was appointed as interim CEO while the board searched for a permanent replacement.",
+    "roots": "拉丁文 interim (在此期間，源自 inter 之間) → 兩段時間之間的過渡"
+  },
+  {
+    "word": "interlocutor",
+    "pos": "n.",
+    "meaning": "對話者",
+    "example": "The diplomat proved to be a skilled interlocutor during the negotiations.",
+    "roots": "inter- (在...之間) + loqui (說話，拉丁文) → 彼此對話的人"
+  },
+  {
+    "word": "interloper",
+    "pos": "n.",
+    "meaning": "闖入者、干預他人事務者",
+    "example": "The locals viewed the new developer as an unwelcome interloper.",
+    "roots": "inter- (在...之間) + loper (跑者，源自荷蘭文 landloper 流浪漢) → 擅自闖入其中的人"
+  },
+  {
+    "word": "interlude",
+    "pos": "n.",
+    "meaning": "間奏、間歇",
+    "example": "The peaceful interlude between storms didn't last long.",
+    "roots": "inter- (之間) + ludus (遊戲、表演，拉丁文) → 兩段表演之間的插曲"
+  },
+  {
+    "word": "intermediary",
+    "pos": "n.",
+    "meaning": "中間人、中介者",
+    "example": "A trusted intermediary helped negotiate the ceasefire.",
+    "roots": "inter- (在...之間) + medius (中間的，拉丁文) → 處於雙方中間的人"
+  },
+  {
+    "word": "interminable",
+    "pos": "adj.",
+    "meaning": "冗長乏味的、沒完沒了的",
+    "example": "The meeting felt interminable, dragging on for hours.",
+    "roots": "in- (不) + terminare (結束，拉丁文) → 沒有盡頭的"
+  },
+  {
+    "word": "intermingle",
+    "pos": "v.",
+    "meaning": "混合、交融",
+    "example": "At the festival, cultures from around the world intermingle freely.",
+    "roots": "inter- (相互) + mingle (混合) → 彼此混合"
+  },
+  {
+    "word": "intermittent",
+    "pos": "adj.",
+    "meaning": "間歇性的",
+    "example": "The region experiences intermittent rainfall throughout the year.",
+    "roots": "inter- (在...之間) + mittere (放、送，拉丁文) → 時斷時續地發生"
+  },
+  {
+    "word": "internecine",
+    "pos": "adj.",
+    "meaning": "內部相殘的、兩敗俱傷的",
+    "example": "The party was weakened by internecine rivalries.",
+    "roots": "inter- (相互) + necare (殺，拉丁文) → 彼此相互殘殺"
+  },
+  {
+    "word": "interpolate",
+    "pos": "v.",
+    "meaning": "插入、竄改(文字)",
+    "example": "Later editors interpolated several passages into the original manuscript.",
+    "roots": "inter- (在...之間) + polire (打磨，拉丁文 interpolare 加工修飾) → 在原文中插入內容"
+  },
+  {
+    "word": "interpose",
+    "pos": "v.",
+    "meaning": "插入、介入",
+    "example": "She interposed herself between the two arguing men.",
+    "roots": "inter- (在...之間) + ponere (放置，拉丁文) → 放置於中間"
+  },
+  {
+    "word": "interregnum",
+    "pos": "n.",
+    "meaning": "空位期、過渡期",
+    "example": "The company faced an uncertain interregnum after the CEO's sudden resignation.",
+    "roots": "inter- (在...之間) + regnum (統治，拉丁文) → 兩段統治之間的空檔"
+  },
+  {
+    "word": "interrogate",
+    "pos": "v.",
+    "meaning": "審問、盤問",
+    "example": "Police interrogated the suspect for several hours.",
+    "roots": "inter- (加強) + rogare (詢問，拉丁文) → 反覆詢問"
+  },
+  {
+    "word": "intersperse",
+    "pos": "v.",
+    "meaning": "散布、點綴",
+    "example": "The speech was interspersed with humorous anecdotes.",
+    "roots": "inter- (在...之間) + spargere (散布，拉丁文) → 分散穿插其間"
+  },
+  {
+    "word": "intimate",
+    "pos": "v.",
+    "meaning": "暗示、示意",
+    "example": "She intimated that changes were coming to the department.",
+    "roots": "拉丁文 intimare (使熟悉、宣布，源自 intimus 最內部的) → 委婉透露內心想法"
+  },
+  {
+    "word": "intoxicate",
+    "pos": "v.",
+    "meaning": "使陶醉、使中毒",
+    "example": "The scent of the flowers seemed to intoxicate the entire garden.",
+    "roots": "in- (使...) + toxicum (毒藥，拉丁文) → 使中毒、使陶醉"
+  },
+  {
+    "word": "intractable",
+    "pos": "adj.",
+    "meaning": "難以駕馭的、棘手的",
+    "example": "Poverty remains an intractable problem in many countries.",
+    "roots": "in- (不) + tractare (處理，拉丁文) → 難以被處理的"
+  },
+  {
+    "word": "intransigent",
+    "pos": "adj.",
+    "meaning": "不妥協的、固執的",
+    "example": "The union leaders were intransigent in their demands.",
+    "roots": "in- (不) + transigere (達成協議，拉丁文) → 不願達成妥協的"
+  },
+  {
+    "word": "intrepid",
+    "pos": "adj.",
+    "meaning": "無畏的、勇敢的",
+    "example": "The intrepid explorer ventured deep into the uncharted forest.",
+    "roots": "in- (不) + trepidus (顫抖的、驚恐的，拉丁文) → 不會恐懼顫抖的"
+  },
+  {
+    "word": "intricacy",
+    "pos": "n.",
+    "meaning": "複雜、錯綜",
+    "example": "The novel's plot is full of intricacy and unexpected twists.",
+    "roots": "in- (向內) + tricae (麻煩、糾葛，拉丁文) → 內部糾結複雜"
+  },
+  {
+    "word": "intricate",
+    "pos": "adj.",
+    "meaning": "錯綜複雜的",
+    "example": "The watchmaker assembled the intricate mechanism by hand.",
+    "roots": "同 intricacy 字源 + -ate"
+  },
+  {
+    "word": "intrigue",
+    "pos": "v.",
+    "meaning": "引起...的興趣、迷住",
+    "example": "The mystery novel's plot intrigued readers from the first page.",
+    "roots": "in- (向內) + tricae (糾葛，拉丁文) → 錯綜複雜地牽動人心"
+  },
+  {
+    "word": "introspective",
+    "pos": "adj.",
+    "meaning": "內省的",
+    "example": "The long journey made him more introspective about his life choices.",
+    "roots": "intro- (向內) + spicere (看，拉丁文) → 向內審視自己"
+  },
+  {
+    "word": "inundate",
+    "pos": "v.",
+    "meaning": "淹沒、氾濫",
+    "example": "The office was inundated with complaints after the announcement.",
+    "roots": "in- (向內) + unda (波浪，拉丁文) → 被波浪淹沒"
+  },
+  {
+    "word": "inured",
+    "pos": "adj.",
+    "meaning": "已習慣的(尤指不快之事)",
+    "example": "Years of hardship had left him inured to disappointment.",
+    "roots": "in- (使...) + ure (使用，源自古法文 en ovre 起作用) → 因反覆經歷而習慣"
+  },
+  {
+    "word": "invective",
+    "pos": "n.",
+    "meaning": "謾罵、抨擊",
+    "example": "The debate quickly descended into personal invective.",
+    "roots": "in- (向...) + vehere (運載，拉丁文，引申為猛烈攻擊) → 猛烈的言語攻擊"
+  },
+  {
+    "word": "inveigh",
+    "pos": "v.",
+    "meaning": "猛烈抨擊",
+    "example": "The columnist inveighed against government corruption week after week.",
+    "roots": "in- (向...) + vehere (運載、猛衝，拉丁文) → 向...猛衝抨擊"
+  },
+  {
+    "word": "inveigle",
+    "pos": "v.",
+    "meaning": "誘騙、哄騙",
+    "example": "He inveigled his friends into lending him money.",
+    "roots": "源自古法文 aveugler (使盲目，源自拉丁文 ab oculis 沒有眼睛) → 使人盲目上當"
+  },
+  {
+    "word": "inveterate",
+    "pos": "adj.",
+    "meaning": "根深蒂固的、積習難改的",
+    "example": "He was an inveterate gambler who couldn't stop even after losing everything.",
+    "roots": "in- (向內) + vetus (老的，拉丁文) → 因長年累積而根深蒂固"
+  },
+  {
+    "word": "invidious",
+    "pos": "adj.",
+    "meaning": "引起反感的、招人嫉妒的",
+    "example": "It would be invidious to compare the two candidates directly.",
+    "roots": "拉丁文 invidia (嫉妒，源自 invidere 惡意看待) → 帶有惡意、招人反感的"
+  },
+  {
+    "word": "invigorate",
+    "pos": "v.",
+    "meaning": "使精力充沛",
+    "example": "A brisk walk in the morning always invigorates me.",
+    "roots": "in- (使...) + vigor (活力，拉丁文) → 賦予活力"
+  },
+  {
+    "word": "inviolable",
+    "pos": "adj.",
+    "meaning": "不可侵犯的、神聖的",
+    "example": "The treaty declared the border inviolable.",
+    "roots": "in- (不) + violare (侵犯，拉丁文) → 不能被侵犯的"
+  },
+  {
+    "word": "irascible",
+    "pos": "adj.",
+    "meaning": "易怒的",
+    "example": "The irascible old man snapped at anyone who disturbed his nap.",
+    "roots": "拉丁文 irasci (發怒，源自 ira 憤怒) → 容易發怒的"
+  },
+  {
+    "word": "irate",
+    "pos": "adj.",
+    "meaning": "憤怒的",
+    "example": "Irate customers flooded the store with complaints.",
+    "roots": "拉丁文 iratus (憤怒的，源自 ira 憤怒) → 處於憤怒狀態的"
+  },
+  {
+    "word": "iridescent",
+    "pos": "adj.",
+    "meaning": "五彩繽紛的、閃現彩虹光澤的",
+    "example": "The soap bubble shimmered with iridescent colors in the sunlight.",
+    "roots": "源自希臘文 iris (彩虹) + -escent (漸漸的) → 逐漸顯現彩虹光澤"
+  },
+  {
+    "word": "irk",
+    "pos": "v.",
+    "meaning": "使惱怒",
+    "example": "It irked him that no one had bothered to ask his opinion.",
+    "roots": "中古英文 irken (感到厭倦)，確切字源不詳 → 使人心生厭煩"
+  },
+  {
+    "word": "irksome",
+    "pos": "adj.",
+    "meaning": "令人厭煩的",
+    "example": "Filling out the same form twice was an irksome waste of time.",
+    "roots": "同 irk 字源 + -some (形容詞後綴，表傾向)"
+  },
+  {
+    "word": "irreconcilable",
+    "pos": "adj.",
+    "meaning": "無法調和的",
+    "example": "The two sides held irreconcilable differences over the treaty.",
+    "roots": "in- (不) + reconcile (調解) → 不能被調解的"
+  },
+  {
+    "word": "irremediable",
+    "pos": "adj.",
+    "meaning": "無法補救的",
+    "example": "The damage to the ecosystem may prove irremediable.",
+    "roots": "in- (不) + remediare (補救，拉丁文) → 無法被補救的"
+  },
+  {
+    "word": "irreparable",
+    "pos": "adj.",
+    "meaning": "無法修復的",
+    "example": "The scandal caused irreparable harm to his reputation.",
+    "roots": "in- (不) + reparare (修復，拉丁文) → 不能被修復的"
+  },
+  {
+    "word": "irrepressible",
+    "pos": "adj.",
+    "meaning": "壓抑不住的",
+    "example": "Her irrepressible enthusiasm was contagious.",
+    "roots": "in- (不) + repressible (可壓抑的) → 無法被壓制的"
+  },
+  {
+    "word": "irresolute",
+    "pos": "adj.",
+    "meaning": "猶豫不決的",
+    "example": "The irresolute manager kept delaying the decision.",
+    "roots": "in- (不) + resolute (堅決的，源自 resolvere 解決) → 無法下定決心的"
+  },
+  {
+    "word": "irreverent",
+    "pos": "adj.",
+    "meaning": "不敬的、輕慢的",
+    "example": "The comedian's irreverent jokes about politicians drew laughs and criticism alike.",
+    "roots": "in- (不) + reverent (恭敬的，源自 revereri 敬畏) → 不表現恭敬的"
+  },
+  {
+    "word": "irrevocable",
+    "pos": "adj.",
+    "meaning": "不可撤回的",
+    "example": "Once signed, the contract became irrevocable.",
+    "roots": "in- (不) + revocare (召回，拉丁文) → 不能被召回、撤銷的"
+  },
+  {
+    "word": "itinerant",
+    "pos": "adj.",
+    "meaning": "巡迴的、流動的",
+    "example": "The itinerant preacher traveled from town to town.",
+    "roots": "拉丁文 iter (旅程) → 不斷旅行的"
+  },
+  {
+    "word": "jaded",
+    "pos": "adj.",
+    "meaning": "厭倦的、麻木的",
+    "example": "After years in the industry, she felt jaded and cynical about the business.",
+    "roots": "jade (原指劣馬，引申為疲憊不堪) + -ed → 像疲憊老馬般麻木厭倦"
+  },
+  {
+    "word": "jargon",
+    "pos": "n.",
+    "meaning": "行話、術語",
+    "example": "The report was full of technical jargon that confused non-experts.",
+    "roots": "源自古法文 jargon (鳥叫聲、難懂的話) → 外行人聽不懂的話"
+  },
+  {
+    "word": "jarring",
+    "pos": "adj.",
+    "meaning": "刺耳的、不協調的",
+    "example": "The sudden change in tone felt jarring after such a calm opening.",
+    "roots": "jar (刺耳聲、震動) + -ing"
+  },
+  {
+    "word": "jaundiced",
+    "pos": "adj.",
+    "meaning": "帶偏見的、猜忌的",
+    "example": "He took a jaundiced view of his rival's every proposal.",
+    "roots": "源自法文 jaunisse (黃疸，jaune 黃色) → 因黃疸而視野發黃，引申為帶偏見地看待"
+  },
+  {
+    "word": "jeer",
+    "pos": "v.",
+    "meaning": "嘲笑、奚落",
+    "example": "The crowd began to jeer as the referee made another questionable call.",
+    "roots": "字源不確定，可能與古法文 gap (嘲笑) 相關 → 出聲嘲弄"
+  },
+  {
+    "word": "jejune",
+    "pos": "adj.",
+    "meaning": "枯燥乏味的、幼稚的",
+    "example": "Critics dismissed the script as jejune and lacking depth.",
+    "roots": "拉丁文 jejunus (空腹的、貧乏的) → 內容空洞貧乏的"
+  },
+  {
+    "word": "jettison",
+    "pos": "v.",
+    "meaning": "拋棄、丟棄",
+    "example": "The company decided to jettison its unprofitable divisions.",
+    "roots": "拉丁文 jactare (投擲，源自 jacere 投擲) → 為減輕負擔而拋棄"
+  },
+  {
+    "word": "jibe",
+    "pos": "v.",
+    "meaning": "一致、相符",
+    "example": "His account of the accident didn't jibe with the witness's testimony.",
+    "roots": "字源不確定，可能源自航海術語 gybe (轉帆) → 轉向一致"
+  },
+  {
+    "word": "jingoism",
+    "pos": "n.",
+    "meaning": "沙文主義、極端愛國主義",
+    "example": "The newspaper's coverage of the war was tinged with jingoism.",
+    "roots": "源自19世紀英國歌曲用語 by jingo (誓言用語)，引申指好戰的極端愛國情緒"
+  },
+  {
+    "word": "jockey",
+    "pos": "v.",
+    "meaning": "謀取(地位、利益)",
+    "example": "The candidates jockeyed for position in the final weeks of the campaign.",
+    "roots": "源自 jockey (騎師) → 如騎師般競逐有利位置"
+  },
+  {
+    "word": "jocose",
+    "pos": "adj.",
+    "meaning": "詼諧的、愛開玩笑的",
+    "example": "His jocose manner put the nervous students at ease.",
+    "roots": "拉丁文 jocus (笑話) + -ose (形容詞後綴，多...的)"
+  },
+  {
+    "word": "jocular",
+    "pos": "adj.",
+    "meaning": "幽默的、愛開玩笑的",
+    "example": "She kept the meeting light with jocular remarks.",
+    "roots": "同 jocose 字源 + -ular"
+  },
+  {
+    "word": "jocund",
+    "pos": "adj.",
+    "meaning": "快活的、愉悅的",
+    "example": "The jocund atmosphere of the festival lifted everyone's spirits.",
+    "roots": "拉丁文 jocundus (愉快的，源自 jucundus)"
+  },
+  {
+    "word": "jovial",
+    "pos": "adj.",
+    "meaning": "歡樂的、快活的",
+    "example": "Their jovial host greeted every guest with a warm laugh.",
+    "roots": "源自拉丁文 Jovialis (屬於朱庇特 Jove 的)，占星學認為受木星影響者性情開朗"
+  },
+  {
+    "word": "jubilant",
+    "pos": "adj.",
+    "meaning": "歡欣鼓舞的",
+    "example": "The jubilant fans celebrated their team's victory long into the night.",
+    "roots": "拉丁文 jubilare (歡呼) → 充滿歡呼喜悅的"
+  },
+  {
+    "word": "jubilation",
+    "pos": "n.",
+    "meaning": "歡騰、狂喜",
+    "example": "News of the ceasefire was met with jubilation across the country.",
+    "roots": "同 jubilant 字源 + -ion"
+  },
+  {
+    "word": "judicious",
+    "pos": "adj.",
+    "meaning": "明智的、審慎的",
+    "example": "Her judicious use of resources kept the project on budget.",
+    "roots": "拉丁文 judicium (判斷，源自 judex 法官) → 具有良好判斷力的"
+  },
+  {
+    "word": "juggernaut",
+    "pos": "n.",
+    "meaning": "龐大且不可阻擋的力量",
+    "example": "The tech company became a juggernaut that crushed smaller competitors.",
+    "roots": "源自印度教神祇 Jagannath (世界之主) 的巨大戰車，信徒常在其前喪命，引申為不可阻擋的力量"
+  },
+  {
+    "word": "junta",
+    "pos": "n.",
+    "meaning": "(尤指軍事)執政集團",
+    "example": "The military junta seized power after the coup.",
+    "roots": "源自西班牙文/葡萄牙文 junta (委員會，源自拉丁文 jungere 連結)"
+  },
+  {
+    "word": "juxtapose",
+    "pos": "v.",
+    "meaning": "並置、對比放置",
+    "example": "The exhibit juxtaposes ancient artifacts with modern art to highlight their similarities.",
+    "roots": "juxta- (在旁邊，拉丁文) + pose (放置) → 並排放置以對比"
+  },
+  {
+    "word": "juxtaposition",
+    "pos": "n.",
+    "meaning": "並置、對比",
+    "example": "The film's juxtaposition of wealth and poverty was striking.",
+    "roots": "同 juxtapose 字源 + -ition"
+  },
+  {
+    "word": "kaleidoscope",
+    "pos": "n.",
+    "meaning": "萬花筒、千變萬化的景象",
+    "example": "The city's culture is a kaleidoscope of languages, foods, and traditions.",
+    "roots": "希臘文 kalos (美) + eidos (形狀) + skopein (看) → 觀看美麗形狀變化的裝置"
+  },
+  {
+    "word": "ken",
+    "pos": "n.",
+    "meaning": "知識範圍、理解力",
+    "example": "The technical details of the contract were beyond her ken.",
+    "roots": "源自古英文 cennan (使知道)，與 know 同源 → 認知的範圍"
+  },
+  {
+    "word": "kernel",
+    "pos": "n.",
+    "meaning": "核心、要點",
+    "example": "Beneath his rambling complaint was a kernel of truth.",
+    "roots": "古英文 cyrnel (小種子，corn 的指小詞) → 事物的核心部分"
+  },
+  {
+    "word": "killjoy",
+    "pos": "n.",
+    "meaning": "掃興的人",
+    "example": "Don't be such a killjoy; let everyone enjoy the party.",
+    "roots": "kill (殺死) + joy (歡樂) → 破壞歡樂氣氛的人"
+  },
+  {
+    "word": "kindle",
+    "pos": "v.",
+    "meaning": "點燃、激起(興趣、情感)",
+    "example": "The lecture kindled her interest in astronomy.",
+    "roots": "源自古諾斯語 kynda (點火) → 引燃火焰或情感"
+  },
+  {
+    "word": "kindred",
+    "pos": "adj.",
+    "meaning": "同族的、氣味相投的",
+    "example": "The two artists, though from different countries, were kindred spirits.",
+    "roots": "古英文 cynn (家族，kin) + ræden (狀態) → 具有相同血緣或性質的"
+  },
+  {
+    "word": "kinetic",
+    "pos": "adj.",
+    "meaning": "運動的、動態的",
+    "example": "The sculpture's kinetic parts moved gently with the breeze.",
+    "roots": "希臘文 kinesis (運動，源自 kinein 移動) → 與運動相關的"
+  },
+  {
+    "word": "knack",
+    "pos": "n.",
+    "meaning": "訣竅、天賦",
+    "example": "She has a real knack for putting nervous students at ease.",
+    "roots": "中古英文 knakke (巧妙的把戲)，確切字源不詳 → 靈巧的技能"
+  },
+  {
+    "word": "knave",
+    "pos": "n.",
+    "meaning": "無賴、惡棍",
+    "example": "The play's villain is a scheming knave who deceives everyone around him.",
+    "roots": "古英文 cnafa (男孩、僕人)，後演變為指不誠實的人"
+  },
+  {
+    "word": "knell",
+    "pos": "n.",
+    "meaning": "喪鐘、不祥之兆",
+    "example": "The factory's closure sounded the knell for the town's economy.",
+    "roots": "古英文 cnyllan (敲鐘) → 象徵死亡或終結的鐘聲"
+  },
+  {
+    "word": "kudos",
+    "pos": "n.",
+    "meaning": "讚譽、榮譽",
+    "example": "The team deserves kudos for finishing the project ahead of schedule.",
+    "roots": "希臘文 kydos (榮耀)"
+  },
+  {
+    "word": "labyrinthine",
+    "pos": "adj.",
+    "meaning": "迷宮般的、錯綜複雜的",
+    "example": "Navigating the labyrinthine bureaucracy took months of patience.",
+    "roots": "labyrinth (迷宮，源自希臘神話克里特島的迷宮) + -ine (形容詞後綴)"
+  },
+  {
+    "word": "lacerate",
+    "pos": "v.",
+    "meaning": "撕裂、割傷",
+    "example": "The broken glass lacerated his hand as he fell.",
+    "roots": "拉丁文 lacerare (撕裂，源自 lacer 破碎的)"
+  },
+  {
+    "word": "lachrymose",
+    "pos": "adj.",
+    "meaning": "愛哭的、催淚的",
+    "example": "The film's lachrymose ending left the audience in tears.",
+    "roots": "拉丁文 lacrima (眼淚) → 與眼淚有關的"
+  },
+  {
+    "word": "lackadaisical",
+    "pos": "adj.",
+    "meaning": "無精打采的、漫不經心的",
+    "example": "His lackadaisical attitude toward his studies worried his parents.",
+    "roots": "源自感嘆詞 lackaday (表遺憾)，引申為缺乏熱情"
+  },
+  {
+    "word": "lackluster",
+    "pos": "adj.",
+    "meaning": "平淡無光的、缺乏活力的",
+    "example": "The team delivered a lackluster performance in the season opener.",
+    "roots": "lack (缺乏) + luster (光澤) → 缺乏光彩的"
+  },
+  {
+    "word": "laconic",
+    "pos": "adj.",
+    "meaning": "簡潔的、話少的",
+    "example": "His laconic reply gave no hint of his true feelings.",
+    "roots": "希臘文 Lakonikos (斯巴達的，斯巴達人以言簡意賅著稱) → 言語簡短的"
+  },
+  {
+    "word": "laden",
+    "pos": "adj.",
+    "meaning": "裝滿的、負擔沉重的",
+    "example": "The truck was laden with crates of fresh produce.",
+    "roots": "古英文 hladan (裝載) 的過去分詞 → 承載重物的"
+  },
+  {
+    "word": "lambaste",
+    "pos": "v.",
+    "meaning": "嚴厲批評、痛斥",
+    "example": "Critics lambasted the film for its weak plot.",
+    "roots": "可能源自 lam (打) + baste (鞭打)，字源不完全確定 → 猛烈抨擊"
+  },
+  {
+    "word": "lambent",
+    "pos": "adj.",
+    "meaning": "(光)輕輕搖曳的、柔和發光的",
+    "example": "A lambent glow from the fireplace filled the room.",
+    "roots": "拉丁文 lambere (輕舔) → 如火焰輕舔般搖曳的光"
+  },
+  {
+    "word": "lament",
+    "pos": "v.",
+    "meaning": "哀悼、悲嘆",
+    "example": "The poet's verses lament the loss of his homeland.",
+    "roots": "拉丁文 lamentari (哀嘆)"
+  },
+  {
+    "word": "lampoon",
+    "pos": "v.",
+    "meaning": "諷刺、嘲弄(文章)",
+    "example": "The satirical magazine lampooned the president's latest policy.",
+    "roots": "源自法文 lampon (飲酒歌中的諷刺疊句)"
+  },
+  {
+    "word": "languid",
+    "pos": "adj.",
+    "meaning": "慵懶的、無精打采的",
+    "example": "They spent a languid afternoon lounging by the pool.",
+    "roots": "拉丁文 languere (疲軟無力)"
+  },
+  {
+    "word": "languish",
+    "pos": "v.",
+    "meaning": "(因缺乏關注而)衰弱、憔悴",
+    "example": "The prisoner languished in a cell for years without trial.",
+    "roots": "同 languid 字源 → 逐漸衰弱下去"
+  },
+  {
+    "word": "languor",
+    "pos": "n.",
+    "meaning": "倦怠、無力感",
+    "example": "A pleasant languor settled over the travelers after the long meal.",
+    "roots": "同 languid 字源 + -or"
+  },
+  {
+    "word": "lapidary",
+    "pos": "adj.",
+    "meaning": "(文字)精鍊簡潔的",
+    "example": "The judge was known for her lapidary opinions, precise and free of excess words.",
+    "roots": "拉丁文 lapis (石頭) → 如雕刻寶石般精雕細琢的文字"
+  },
+  {
+    "word": "larceny",
+    "pos": "n.",
+    "meaning": "盜竊(罪)",
+    "example": "He was charged with grand larceny after stealing the jewelry.",
+    "roots": "拉丁文 latro (盜賊)"
+  },
+  {
+    "word": "lascivious",
+    "pos": "adj.",
+    "meaning": "好色的、淫蕩的",
+    "example": "The novel was banned for its lascivious content.",
+    "roots": "拉丁文 lascivus (嬉鬧的、放蕩的)"
+  },
+  {
+    "word": "lassitude",
+    "pos": "n.",
+    "meaning": "疲憊、倦怠",
+    "example": "A deep lassitude overcame her after the sleepless night.",
+    "roots": "拉丁文 lassus (疲倦的)"
+  },
+  {
+    "word": "latent",
+    "pos": "adj.",
+    "meaning": "潛在的、隱伏的",
+    "example": "The test revealed a latent talent for mathematics.",
+    "roots": "拉丁文 latere (隱藏)"
+  },
+  {
+    "word": "latitude",
+    "pos": "n.",
+    "meaning": "緯度；自由度、迴旋餘地",
+    "example": "The new manager was given considerable latitude in restructuring the department.",
+    "roots": "拉丁文 latus (寬的) → 寬廣的活動範圍"
+  },
+  {
+    "word": "laud",
+    "pos": "v.",
+    "meaning": "讚揚",
+    "example": "Critics lauded the film for its stunning cinematography.",
+    "roots": "拉丁文 laudare (讚揚)"
+  },
+  {
+    "word": "laudable",
+    "pos": "adj.",
+    "meaning": "值得讚揚的",
+    "example": "Her efforts to reform the system were laudable, even if unsuccessful.",
+    "roots": "同 laud 字源 + -able"
+  },
+  {
+    "word": "laudatory",
+    "pos": "adj.",
+    "meaning": "讚揚的",
+    "example": "The biography is almost entirely laudatory, with little critical distance.",
+    "roots": "同 laud 字源 + -atory"
+  },
+  {
+    "word": "lavish",
+    "pos": "adj.",
+    "meaning": "奢華的、慷慨的",
+    "example": "The couple was known for lavish parties that lasted all night.",
+    "roots": "源自古法文 lavache (過量，源自 laver 沖洗)"
+  },
+  {
+    "word": "lax",
+    "pos": "adj.",
+    "meaning": "鬆懈的、不嚴格的",
+    "example": "Security at the old warehouse had become dangerously lax.",
+    "roots": "拉丁文 laxus (鬆的)"
+  },
+  {
+    "word": "leaven",
+    "pos": "v.",
+    "meaning": "使發酵、使產生變化",
+    "example": "A bit of humor can leaven even the most serious speech.",
+    "roots": "拉丁文 levare (舉起) → 使發起、產生變化"
+  },
+  {
+    "word": "leer",
+    "pos": "v.",
+    "meaning": "色迷迷地看、斜眼窺視",
+    "example": "The stranger leered at her from across the bar.",
+    "roots": "古英文 hleor (臉頰)，引申為斜眼看"
+  },
+  {
+    "word": "leery",
+    "pos": "adj.",
+    "meaning": "提防的、懷疑的",
+    "example": "She was leery of strangers who approached her too eagerly.",
+    "roots": "同 leer 字源 + -y → 帶著警惕眼神的"
+  },
+  {
+    "word": "legerdemain",
+    "pos": "n.",
+    "meaning": "巧妙手法、戲法(常指欺騙)",
+    "example": "The politician's budget proposal relied on financial legerdemain to hide the deficit.",
+    "roots": "法文 léger de main (手輕巧) → 手法靈巧的把戲"
+  },
+  {
+    "word": "legion",
+    "pos": "adj.",
+    "meaning": "為數眾多的",
+    "example": "Complaints about the new policy are legion.",
+    "roots": "拉丁文 legio (軍團，源自 legere 徵召) → 由眾多士兵組成，引申為數量龐大"
+  },
+  {
+    "word": "leniency",
+    "pos": "n.",
+    "meaning": "寬大、仁慈",
+    "example": "The judge showed leniency toward the first-time offender.",
+    "roots": "拉丁文 lenis (溫和的)"
+  },
+  {
+    "word": "lenient",
+    "pos": "adj.",
+    "meaning": "寬大的、仁慈的",
+    "example": "Her parents were lenient about her curfew on weekends.",
+    "roots": "同 leniency 字源 + -ent"
+  },
+  {
+    "word": "lenity",
+    "pos": "n.",
+    "meaning": "寬厚、仁慈",
+    "example": "The king was known more for his cruelty than his lenity.",
+    "roots": "同 leniency 字源"
+  },
+  {
+    "word": "lethal",
+    "pos": "adj.",
+    "meaning": "致命的",
+    "example": "The venom of the snake can be lethal within minutes.",
+    "roots": "拉丁文 letum (死亡)"
+  },
+  {
+    "word": "lethargic",
+    "pos": "adj.",
+    "meaning": "昏睡的、無精打采的",
+    "example": "The heat made everyone feel lethargic in the afternoon.",
+    "roots": "希臘文 lethargos (遺忘、昏睡，源自 lethe 遺忘)"
+  },
+  {
+    "word": "lethargy",
+    "pos": "n.",
+    "meaning": "昏睡、倦怠",
+    "example": "A wave of lethargy swept over the office after lunch.",
+    "roots": "同 lethargic 字源 + -y"
+  },
+  {
+    "word": "levee",
+    "pos": "n.",
+    "meaning": "堤防、防洪堤",
+    "example": "The town built a levee to protect against flooding.",
+    "roots": "法文 lever (舉起) → 築起以擋水的堤岸"
+  },
+  {
+    "word": "leviathan",
+    "pos": "n.",
+    "meaning": "龐然大物",
+    "example": "The corporation had grown into a leviathan that dominated the industry.",
+    "roots": "希伯來文 livyathan，聖經中的巨大海怪"
+  },
+  {
+    "word": "levity",
+    "pos": "n.",
+    "meaning": "輕浮、輕率",
+    "example": "A moment of levity broke the tension in the courtroom.",
+    "roots": "拉丁文 levis (輕的)"
+  },
+  {
+    "word": "levy",
+    "pos": "v.",
+    "meaning": "徵收(稅)、徵召",
+    "example": "The government decided to levy a new tax on luxury goods.",
+    "roots": "法文 lever (舉起、徵集)"
+  },
+  {
+    "word": "lewd",
+    "pos": "adj.",
+    "meaning": "淫穢的、下流的",
+    "example": "He was fined for making lewd comments in public.",
+    "roots": "古英文 læwede (未受神職訓練的、粗俗的)"
+  },
+  {
+    "word": "lexicon",
+    "pos": "n.",
+    "meaning": "詞彙、字彙集",
+    "example": "New slang terms constantly enter the modern lexicon.",
+    "roots": "希臘文 lexis (詞語，源自 legein 說)"
+  },
+  {
+    "word": "liaison",
+    "pos": "n.",
+    "meaning": "聯絡(人)、聯繫",
+    "example": "She served as the liaison between the two departments.",
+    "roots": "法文 liaison (連結，源自拉丁文 ligare 綁)"
+  },
+  {
+    "word": "libel",
+    "pos": "n.",
+    "meaning": "(書面)誹謗",
+    "example": "The newspaper was sued for libel after publishing the false accusation.",
+    "roots": "拉丁文 libellus (小冊子，liber 書的指小詞)"
+  },
+  {
+    "word": "liberality",
+    "pos": "n.",
+    "meaning": "慷慨、大方",
+    "example": "The donor's liberality funded the entire new library wing.",
+    "roots": "拉丁文 liberalis (慷慨的，源自 liber 自由的)"
+  },
+  {
+    "word": "libertine",
+    "pos": "n.",
+    "meaning": "放蕩者、生活放縱的人",
+    "example": "The novel's protagonist is a libertine who scorns social conventions.",
+    "roots": "拉丁文 libertinus (獲釋的奴隸，後引申為不受拘束者)"
+  },
+  {
+    "word": "licentious",
+    "pos": "adj.",
+    "meaning": "放蕩的、淫蕩的",
+    "example": "The court was notorious for its licentious behavior.",
+    "roots": "拉丁文 licentia (放縱、許可)"
+  },
+  {
+    "word": "lilliputian",
+    "pos": "adj.",
+    "meaning": "極其微小的、渺小的",
+    "example": "From the airplane, the houses below looked lilliputian.",
+    "roots": "源自《格列佛遊記》中的小人國 Lilliput"
+  },
+  {
+    "word": "limber",
+    "pos": "adj.",
+    "meaning": "柔軟靈活的",
+    "example": "The gymnast's limber body allowed her to perform seemingly impossible stretches.",
+    "roots": "字源不確定，可能與 limb (肢體) 相關，指肢體靈活"
+  },
+  {
+    "word": "limn",
+    "pos": "v.",
+    "meaning": "描繪、描述",
+    "example": "The essay limns a vivid portrait of life in the countryside.",
+    "roots": "拉丁文 luminare (照亮)，經古法文 limner 演變 → 以文字或畫筆勾勒出形象"
+  },
+  {
+    "word": "limpid",
+    "pos": "adj.",
+    "meaning": "清澈的、清晰易懂的",
+    "example": "The lake's limpid water revealed every stone on the bottom.",
+    "roots": "拉丁文 limpidus (清澈的)"
+  },
+  {
+    "word": "lissome",
+    "pos": "adj.",
+    "meaning": "柔軟輕盈的、敏捷的",
+    "example": "The gymnast's lissome movements amazed the judges.",
+    "roots": "lithesome (lithe 柔軟的 + some) 的縮略形式"
+  },
+  {
+    "word": "listless",
+    "pos": "adj.",
+    "meaning": "無精打采的、懶洋洋的",
+    "example": "The heat left the children listless and unwilling to play.",
+    "roots": "list (古義：慾望、興趣) + -less (沒有) → 沒有興致的"
+  },
+  {
+    "word": "litany",
+    "pos": "n.",
+    "meaning": "連禱文、一連串(常指抱怨)",
+    "example": "She recited a litany of complaints about her new job.",
+    "roots": "希臘文 litaneia (祈求，源自 litē 懇求)"
+  },
+  {
+    "word": "lithe",
+    "pos": "adj.",
+    "meaning": "柔軟靈活的",
+    "example": "The cat moved with a lithe, silent grace.",
+    "roots": "古英文 lithe (柔軟的、溫和的)"
+  },
+  {
+    "word": "litigious",
+    "pos": "adj.",
+    "meaning": "好訴訟的",
+    "example": "The company operates in a highly litigious industry.",
+    "roots": "拉丁文 litigare (訴訟，源自 lis 爭端 + agere 進行)"
+  },
+  {
+    "word": "loath",
+    "pos": "adj.",
+    "meaning": "不情願的",
+    "example": "She was loath to admit that she had made a mistake.",
+    "roots": "古英文 lað (令人厭惡的)"
+  },
+  {
+    "word": "loathe",
+    "pos": "v.",
+    "meaning": "厭惡、憎恨",
+    "example": "He loathed the idea of moving to a new city.",
+    "roots": "同 loath 字源"
+  },
+  {
+    "word": "loathsome",
+    "pos": "adj.",
+    "meaning": "令人厭惡的",
+    "example": "The alley was filled with a loathsome smell of decay.",
+    "roots": "同 loathe 字源 + -some"
+  },
+  {
+    "word": "lofty",
+    "pos": "adj.",
+    "meaning": "崇高的、高傲的",
+    "example": "The charity was founded on lofty ideals of equality and justice.",
+    "roots": "loft (高處、閣樓) + -y"
+  },
+  {
+    "word": "longevity",
+    "pos": "n.",
+    "meaning": "長壽、長久",
+    "example": "The company's longevity in a competitive market is remarkable.",
+    "roots": "拉丁文 longus (長的) + aevum (年歲)"
+  },
+  {
+    "word": "loquacious",
+    "pos": "adj.",
+    "meaning": "話多的、健談的",
+    "example": "The loquacious tour guide never stopped talking during the entire trip.",
+    "roots": "拉丁文 loqui (說話)"
+  },
+  {
+    "word": "lore",
+    "pos": "n.",
+    "meaning": "傳說、知識",
+    "example": "The village elders passed down local lore through generations of storytelling.",
+    "roots": "古英文 lar (教導、學問)"
+  },
+  {
+    "word": "loutish",
+    "pos": "adj.",
+    "meaning": "粗魯笨拙的",
+    "example": "His loutish behavior at the dinner party embarrassed his family.",
+    "roots": "lout (粗魯的人，字源不確定) + -ish"
+  },
+  {
+    "word": "lucid",
+    "pos": "adj.",
+    "meaning": "清晰的、神智清醒的",
+    "example": "Despite her illness, she remained lucid until the very end.",
+    "roots": "拉丁文 lucere (發光)"
+  },
+  {
+    "word": "lucrative",
+    "pos": "adj.",
+    "meaning": "有利可圖的",
+    "example": "He left his teaching job for a more lucrative career in finance.",
+    "roots": "拉丁文 lucrum (利益、獲利)"
+  },
+  {
+    "word": "ludicrous",
+    "pos": "adj.",
+    "meaning": "荒謬可笑的",
+    "example": "The idea of finishing the project overnight was simply ludicrous.",
+    "roots": "拉丁文 ludicrus (嬉戲的，源自 ludus 遊戲)"
+  },
+  {
+    "word": "lugubrious",
+    "pos": "adj.",
+    "meaning": "悲哀的、憂鬱的(常帶誇張意味)",
+    "example": "The lugubrious music set an unnecessarily gloomy tone for the party.",
+    "roots": "拉丁文 lugere (哀悼)"
+  },
+  {
+    "word": "lull",
+    "pos": "v.",
+    "meaning": "使平靜、哄騙入睡",
+    "example": "The gentle rocking of the boat lulled the baby to sleep.",
+    "roots": "擬聲詞，模仿哄嬰兒入睡的聲音"
+  },
+  {
+    "word": "luminary",
+    "pos": "n.",
+    "meaning": "傑出人物、名人",
+    "example": "Several luminaries of the film industry attended the premiere.",
+    "roots": "拉丁文 lumen (光) → 如光一般照亮眾人的人物"
+  },
+  {
+    "word": "luminous",
+    "pos": "adj.",
+    "meaning": "發光的、明亮的",
+    "example": "The clock's luminous dial glowed in the dark.",
+    "roots": "同 luminary 字源 + -ous"
+  },
+  {
+    "word": "lurch",
+    "pos": "v.",
+    "meaning": "突然傾斜、蹣跚",
+    "example": "The bus lurched forward suddenly, throwing passengers off balance.",
+    "roots": "字源不確定，可能源自法式滾木球遊戲用語 lourche (慘敗)"
+  },
+  {
+    "word": "lurid",
+    "pos": "adj.",
+    "meaning": "聳人聽聞的、色彩過於鮮豔刺目的",
+    "example": "The tabloid published lurid details of the celebrity scandal.",
+    "roots": "拉丁文 luridus (蒼白土黃色的)"
+  },
+  {
+    "word": "lustrous",
+    "pos": "adj.",
+    "meaning": "有光澤的",
+    "example": "Her lustrous hair caught everyone's attention.",
+    "roots": "拉丁文 lustrare (照亮)"
+  },
+  {
+    "word": "luxuriant",
+    "pos": "adj.",
+    "meaning": "繁茂的、豐富的",
+    "example": "The garden was filled with luxuriant vines and blossoms.",
+    "roots": "拉丁文 luxuria (奢華、繁盛)"
+  },
+  {
+    "word": "lyrical",
+    "pos": "adj.",
+    "meaning": "抒情的",
+    "example": "The songwriter's lyrical style captures raw emotion in simple words.",
+    "roots": "希臘文 lyra (里拉琴) → 如吟唱詩歌般富有情感的"
+  }
+]
