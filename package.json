@@ -27,8 +27,5 @@
     "web": "expo start --web",
     "test": "jest"
   },
-  "jest": {
-    "preset": "jest-expo"
-  },
   "private": true
 }
