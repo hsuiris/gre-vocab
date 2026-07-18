@@ -1,0 +1,1899 @@
+[
+  {
+    "word": "tacit",
+    "pos": "adj.",
+    "meaning": "心照不宣的、默許的",
+    "example": "There was a tacit understanding between them that money would never be discussed.",
+    "roots": "源自拉丁文 tacitus（沉默的，tacere 之過去分詞）→ 不言明但雙方都明白的"
+  },
+  {
+    "word": "taciturn",
+    "pos": "adj.",
+    "meaning": "沉默寡言的",
+    "example": "The taciturn old farmer rarely spoke more than a few words to strangers.",
+    "roots": "同 tacit 字源（拉丁文 tacere，沉默）+ -urn（形容詞化）→ 習慣沉默的性格"
+  },
+  {
+    "word": "talisman",
+    "pos": "n.",
+    "meaning": "護身符、辟邪物",
+    "example": "She wore the small stone as a talisman to ward off bad luck.",
+    "roots": "源自阿拉伯文 tilsam，經法文轉入英文，指具有魔力的物品 → 帶來好運或保護的物品"
+  },
+  {
+    "word": "tamper",
+    "pos": "v.",
+    "meaning": "擅自改動、干預",
+    "example": "Someone had tampered with the lock before the break-in occurred.",
+    "roots": "源自拉丁文 temperare（混合、調節），與 temper 同源，詞義轉變為不當干預 → 未經授權而動手腳"
+  },
+  {
+    "word": "tangential",
+    "pos": "adj.",
+    "meaning": "離題的、不直接相關的",
+    "example": "His comments were tangential to the main argument and added little value.",
+    "roots": "tangent（切線，源自拉丁文 tangere 觸碰）+ -ial（形容詞後綴）→ 僅在一點碰觸、不深入核心"
+  },
+  {
+    "word": "tangible",
+    "pos": "adj.",
+    "meaning": "可觸摸的、實在的",
+    "example": "The project finally produced tangible results after months of effort.",
+    "roots": "源自拉丁文 tangere（觸摸）+ -ible（可…的）→ 摸得到、真實存在的"
+  },
+  {
+    "word": "tantalize",
+    "pos": "v.",
+    "meaning": "逗弄、以無法得到之物挑逗",
+    "example": "The smell of fresh bread tantalized the hungry travelers.",
+    "roots": "源自希臘神話人物 Tantalus，因受懲罰而永遠碰不到眼前的食物與水 → 引誘卻無法滿足"
+  },
+  {
+    "word": "tantamount",
+    "pos": "adj.",
+    "meaning": "相當於、等同於",
+    "example": "Her silence was tantamount to an admission of guilt.",
+    "roots": "源自古法文 tant amont（到那麼高的程度）→ 在效果上等同於"
+  },
+  {
+    "word": "tarnish",
+    "pos": "v.",
+    "meaning": "使失去光澤、玷污名譽",
+    "example": "The scandal tarnished his reputation for years to come.",
+    "roots": "源自古法文 ternir（使變暗），與 terne（暗淡的）同源 → 使原本光亮的東西變暗"
+  },
+  {
+    "word": "tarry",
+    "pos": "v.",
+    "meaning": "逗留、延誤",
+    "example": "They tarried at the inn longer than they had planned.",
+    "roots": "字源不十分確定，可能與古英文 tarien（激怒、延遲）有關 → 停留不前進"
+  },
+  {
+    "word": "taut",
+    "pos": "adj.",
+    "meaning": "拉緊的、緊繃的",
+    "example": "The sailor pulled the rope until it was taut.",
+    "roots": "源自中古英文 tought，與 tow（拖拉）同源 → 被拉到緊繃的狀態"
+  },
+  {
+    "word": "tautology",
+    "pos": "n.",
+    "meaning": "同義重複、贅述",
+    "example": "The phrase 'free gift' is a common tautology, since all gifts are free by definition.",
+    "roots": "希臘文 tauto（相同的）+ logos（話語）→ 用不同詞語重複相同意思"
+  },
+  {
+    "word": "tawdry",
+    "pos": "adj.",
+    "meaning": "俗豔的、廉價庸俗的",
+    "example": "The nightclub was decorated with tawdry neon signs and cheap decorations.",
+    "roots": "源自 St. Audrey's lace（聖奧德麗市集上賣的廉價花邊），tawdry 為 t'Audrey 的縮讀 → 廉價花俏的裝飾"
+  },
+  {
+    "word": "taxing",
+    "pos": "adj.",
+    "meaning": "費力的、繁重的",
+    "example": "Caring for three young children while working full-time proved taxing.",
+    "roots": "tax（課稅、負擔，源自拉丁文 taxare 評估）+ -ing（形容詞化）→ 如同被課稅般消耗心力"
+  },
+  {
+    "word": "tedium",
+    "pos": "n.",
+    "meaning": "沉悶、單調乏味",
+    "example": "The tedium of the long commute made her consider moving closer to work.",
+    "roots": "源自拉丁文 taedium（厭倦），與 taedet（使厭煩）同源 → 令人厭倦的單調感"
+  },
+  {
+    "word": "temerity",
+    "pos": "n.",
+    "meaning": "魯莽、冒失",
+    "example": "He had the temerity to question the CEO's decision in front of the whole board.",
+    "roots": "源自拉丁文 temere（魯莽地、不加思索地）+ -ity（名詞後綴）→ 不顧後果的膽大妄為"
+  },
+  {
+    "word": "temperate",
+    "pos": "adj.",
+    "meaning": "溫和的、有節制的",
+    "example": "The region enjoys a temperate climate with mild winters and cool summers.",
+    "roots": "源自拉丁文 temperare（調節、混合適中）→ 節制得宜、不過度"
+  },
+  {
+    "word": "tempestuous",
+    "pos": "adj.",
+    "meaning": "狂暴的、動盪的",
+    "example": "Their tempestuous relationship was marked by frequent breakups and reunions.",
+    "roots": "源自拉丁文 tempestas（暴風雨，亦指天氣）+ -uous（形容詞後綴）→ 如暴風雨般猛烈"
+  },
+  {
+    "word": "temporal",
+    "pos": "adj.",
+    "meaning": "時間的、世俗的（非宗教的）",
+    "example": "The novel explores the temporal distortions experienced by the protagonist.",
+    "roots": "源自拉丁文 tempus（時間）→ 與時間或塵世（相對於永恆、神聖）相關的"
+  },
+  {
+    "word": "temporize",
+    "pos": "v.",
+    "meaning": "拖延、隨機應變以爭取時間",
+    "example": "The negotiator temporized, hoping the other side would eventually make concessions.",
+    "roots": "源自拉丁文 tempus（時間）→ 順應時勢而拖延決定"
+  },
+  {
+    "word": "tenable",
+    "pos": "adj.",
+    "meaning": "站得住腳的、可防守的",
+    "example": "His argument was no longer tenable once the new evidence emerged.",
+    "roots": "源自拉丁文 tenere（持有、握住）+ -able（可…的）→ 守得住立場的"
+  },
+  {
+    "word": "tenacious",
+    "pos": "adj.",
+    "meaning": "堅韌不拔的、頑強的",
+    "example": "Her tenacious pursuit of justice eventually led to the case being reopened.",
+    "roots": "源自拉丁文 tenere（握住）+ -acious（充滿…性質的）→ 緊抓不放的性格"
+  },
+  {
+    "word": "tenacity",
+    "pos": "n.",
+    "meaning": "堅韌、頑強",
+    "example": "It took great tenacity to finish the marathon despite the injury.",
+    "roots": "同 tenacious 字源（拉丁文 tenere，握住）+ -ity（名詞後綴）→ 緊抓不放的特質"
+  },
+  {
+    "word": "tendentious",
+    "pos": "adj.",
+    "meaning": "帶有偏見的、有立場傾向的",
+    "example": "The documentary was criticized as tendentious propaganda rather than objective journalism.",
+    "roots": "源自拉丁文 tendere（伸展、傾向）+ -ious（形容詞後綴）→ 帶有特定傾向立場的"
+  },
+  {
+    "word": "tenement",
+    "pos": "n.",
+    "meaning": "擁擠簡陋的出租公寓",
+    "example": "The immigrant family shared a cramped tenement with three other households.",
+    "roots": "源自拉丁文 tenere（持有、佔用）+ -ment（名詞後綴）→ 被持有、租用的居所，引申為簡陋公寓"
+  },
+  {
+    "word": "tenet",
+    "pos": "n.",
+    "meaning": "信條、原則",
+    "example": "Equality before the law is a core tenet of democratic societies.",
+    "roots": "源自拉丁文 tenet（他/她堅持，動詞 tenere 的第三人稱單數）→ 被堅守的信念"
+  },
+  {
+    "word": "tenor",
+    "pos": "n.",
+    "meaning": "大意、要旨、方向",
+    "example": "The tenor of the meeting was one of cautious optimism.",
+    "roots": "源自拉丁文 tenor（持續的方向、路線，tenere 衍生）→ 事情發展的整體走向"
+  },
+  {
+    "word": "tenuous",
+    "pos": "adj.",
+    "meaning": "薄弱的、脆弱的（理由、關聯）",
+    "example": "The connection between the two events is tenuous at best.",
+    "roots": "源自拉丁文 tenuis（稀薄的、細的）→ 稀薄而站不住腳的"
+  },
+  {
+    "word": "tepid",
+    "pos": "adj.",
+    "meaning": "微溫的、不熱情的",
+    "example": "The critics gave the film a tepid reception.",
+    "roots": "源自拉丁文 tepidus（微溫的）→ 不冷不熱、缺乏熱情"
+  },
+  {
+    "word": "tergiversate",
+    "pos": "v.",
+    "meaning": "支吾搪塞、反覆改變立場",
+    "example": "The witness tergiversated under cross-examination, giving inconsistent answers.",
+    "roots": "源自拉丁文 tergum（背）+ versare（轉動）→ 轉身背對、反覆變卦"
+  },
+  {
+    "word": "terminus",
+    "pos": "n.",
+    "meaning": "終點、終點站",
+    "example": "The train reached its terminus just as the sun was setting.",
+    "roots": "源自拉丁文 terminus（界線、終點，羅馬神話中的界線之神）→ 旅程或路線的盡頭"
+  },
+  {
+    "word": "terrestrial",
+    "pos": "adj.",
+    "meaning": "陸地的、地球的",
+    "example": "Unlike aquatic species, terrestrial animals must adapt to life on land.",
+    "roots": "源自拉丁文 terra（土地、地球）+ -al（形容詞後綴）→ 屬於陸地、地球的"
+  },
+  {
+    "word": "terse",
+    "pos": "adj.",
+    "meaning": "簡潔的、簡短生硬的",
+    "example": "Her terse reply made it clear she did not want to discuss the matter further.",
+    "roots": "源自拉丁文 tersus（擦拭乾淨的，引申為簡潔精練）→ 言簡意賅、不拖泥帶水"
+  },
+  {
+    "word": "tertiary",
+    "pos": "adj.",
+    "meaning": "第三的、第三級的",
+    "example": "Tertiary education refers to university and college-level study.",
+    "roots": "源自拉丁文 tertius（第三的）→ 位居第三順位的"
+  },
+  {
+    "word": "testament",
+    "pos": "n.",
+    "meaning": "證明、證據",
+    "example": "The city's ancient walls stand as a testament to its long history.",
+    "roots": "源自拉丁文 testari（作證、立遺囑）→ 見證某事真實性的證明"
+  },
+  {
+    "word": "testy",
+    "pos": "adj.",
+    "meaning": "易怒的、暴躁的",
+    "example": "He grew testy after being kept waiting for over an hour.",
+    "roots": "源自古法文 teste（頭），引申為固執易怒 → 容易發脾氣的"
+  },
+  {
+    "word": "thespian",
+    "pos": "n./adj.",
+    "meaning": "演員（的）、戲劇的",
+    "example": "Even as a child, she showed a thespian flair for dramatic storytelling.",
+    "roots": "源自希臘悲劇之父 Thespis 的名字 → 與戲劇表演相關的人或事"
+  },
+  {
+    "word": "thrall",
+    "pos": "n.",
+    "meaning": "受控制、奴役狀態",
+    "example": "The small kingdom was long held in thrall to its powerful neighbor.",
+    "roots": "源自古諾斯語 thraell（奴隸）→ 完全受制於他人的狀態"
+  },
+  {
+    "word": "threadbare",
+    "pos": "adj.",
+    "meaning": "破舊的、老套的（藉口）",
+    "example": "He offered the same threadbare excuse for being late again.",
+    "roots": "thread（線）+ bare（裸露的）→ 布料磨到連線都露出來，引申為老舊過時"
+  },
+  {
+    "word": "threnody",
+    "pos": "n.",
+    "meaning": "輓歌、哀歌",
+    "example": "The composer wrote a threnody to mourn the victims of the disaster.",
+    "roots": "源自希臘文 threnos（哀悼）+ oide（歌）→ 為死者所作的悲歌"
+  },
+  {
+    "word": "throes",
+    "pos": "n.",
+    "meaning": "劇痛、掙扎（尤指痛苦的過程）",
+    "example": "The country was in the throes of a major economic crisis.",
+    "roots": "源自中古英文 throwe（劇痛），字源不十分確定 → 劇烈痛苦或掙扎的過程"
+  },
+  {
+    "word": "throttle",
+    "pos": "v.",
+    "meaning": "掐住喉嚨、扼殺；抑制、壓制",
+    "example": "New regulations threatened to throttle small businesses with excessive paperwork.",
+    "roots": "源自 throat（喉嚨）的指小詞形式 → 掐住咽喉，引申為抑制、扼殺"
+  },
+  {
+    "word": "thwart",
+    "pos": "v.",
+    "meaning": "阻撓、挫敗",
+    "example": "Security officers managed to thwart the planned robbery.",
+    "roots": "源自古諾斯語 thvert（橫越的）→ 橫在路中阻擋"
+  },
+  {
+    "word": "tidings",
+    "pos": "n.",
+    "meaning": "消息、音訊（尤指重大消息）",
+    "example": "The messenger arrived bearing glad tidings from the front.",
+    "roots": "源自古英文 tidan（發生），與 tide（時機、潮汐）同源 → 隨時間傳來的消息"
+  },
+  {
+    "word": "timbre",
+    "pos": "n.",
+    "meaning": "音色（聲音的特質）",
+    "example": "The cello's warm timbre distinguishes it from the sharper violin.",
+    "roots": "源自法文 timbre，原指鐘聲，源自希臘文 tympanon（鼓）→ 聲音獨特的質地"
+  },
+  {
+    "word": "timeworn",
+    "pos": "adj.",
+    "meaning": "因年久而磨損的、陳舊的",
+    "example": "The timeworn stairs creaked with every step.",
+    "roots": "time（時間）+ worn（磨損的，wear 過去分詞）→ 隨時間流逝而破舊"
+  },
+  {
+    "word": "timorous",
+    "pos": "adj.",
+    "meaning": "膽怯的、畏縮的",
+    "example": "The timorous cat hid under the bed whenever guests arrived.",
+    "roots": "源自拉丁文 timor（恐懼）+ -ous（形容詞後綴）→ 充滿恐懼、膽小的"
+  },
+  {
+    "word": "tincture",
+    "pos": "n.",
+    "meaning": "一絲、些許（特質）；酊劑",
+    "example": "There was a tincture of sadness in her otherwise cheerful voice.",
+    "roots": "源自拉丁文 tingere（染色）→ 帶有一點顏色或性質般的痕跡"
+  },
+  {
+    "word": "tinge",
+    "pos": "n./v.",
+    "meaning": "一絲、些微（色彩、情感）",
+    "example": "The sky was tinged with a faint orange as the sun set.",
+    "roots": "源自拉丁文 tingere（染色），與 tincture 同源 → 淡淡染上一層色彩或情緒"
+  },
+  {
+    "word": "tinker",
+    "pos": "v.",
+    "meaning": "隨意修補、擺弄",
+    "example": "He spent the weekend tinkering with the old motorcycle engine.",
+    "roots": "源自中古英文 tinkere（補鍋匠，可能因敲打金屬的聲音得名）→ 像補鍋匠般隨手修修弄弄"
+  },
+  {
+    "word": "tirade",
+    "pos": "n.",
+    "meaning": "長篇抨擊、連珠炮似的責罵",
+    "example": "The coach launched into a tirade after the team's poor performance.",
+    "roots": "源自義大利文 tirata（射擊、一連串），與 tirare（拉、發射）同源 → 連續猛烈的言詞攻擊"
+  },
+  {
+    "word": "titanic",
+    "pos": "adj.",
+    "meaning": "巨大的、力量驚人的",
+    "example": "It took a titanic effort to move the boulder from the road.",
+    "roots": "源自希臘神話中的巨神族 Titans → 如巨神般龐大有力"
+  },
+  {
+    "word": "titillate",
+    "pos": "v.",
+    "meaning": "使興奮、挑逗感官",
+    "example": "The tabloid headlines were designed to titillate rather than inform.",
+    "roots": "源自拉丁文 titillare（搔癢）→ 引起輕微的興奮或快感"
+  },
+  {
+    "word": "titular",
+    "pos": "adj.",
+    "meaning": "名義上的、有名無實的",
+    "example": "The queen remains the titular head of state but holds no real political power.",
+    "roots": "源自拉丁文 titulus（頭銜）+ -ar（形容詞後綴）→ 只有頭銜、沒有實權的"
+  },
+  {
+    "word": "toady",
+    "pos": "n./v.",
+    "meaning": "阿諛奉承者、拍馬屁",
+    "example": "He was dismissed by colleagues as a toady who agreed with everything the boss said.",
+    "roots": "源自 toad-eater（吃蟾蜍的人，早期江湖郎中的助手，假裝吃毒蟾蜍以顯示解藥有效）→ 為討好而卑躬屈膝的人"
+  },
+  {
+    "word": "tome",
+    "pos": "n.",
+    "meaning": "大部頭書籍、巨著",
+    "example": "The history of the empire filled several massive tomes.",
+    "roots": "源自希臘文 tomos（切割出的一部分，引申為書卷）→ 一大冊厚重的書"
+  },
+  {
+    "word": "torment",
+    "pos": "v.",
+    "meaning": "折磨、使痛苦",
+    "example": "Guilt over the accident tormented him for the rest of his life.",
+    "roots": "源自拉丁文 tormentum（刑具、扭轉裝置，torquere 扭轉 衍生）→ 如受刑般痛苦地折磨"
+  },
+  {
+    "word": "torpid",
+    "pos": "adj.",
+    "meaning": "遲鈍的、麻木不活躍的",
+    "example": "The bear becomes torpid during its winter hibernation.",
+    "roots": "源自拉丁文 torpere（麻木、僵硬）+ -id（形容詞後綴）→ 失去活力、遲緩"
+  },
+  {
+    "word": "torpor",
+    "pos": "n.",
+    "meaning": "麻木、遲鈍、不活躍狀態",
+    "example": "A deep torpor settled over the town during the summer heat.",
+    "roots": "同 torpid 字源（拉丁文 torpere，麻木）→ 缺乏活力的狀態"
+  },
+  {
+    "word": "torrent",
+    "pos": "n.",
+    "meaning": "急流、（言語、情感）傾瀉而出",
+    "example": "A torrent of complaints followed the announcement of the new policy.",
+    "roots": "源自拉丁文 torrere（燃燒、沸騰）→ 猛烈奔流而下的水勢或情緒"
+  },
+  {
+    "word": "torrid",
+    "pos": "adj.",
+    "meaning": "酷熱的、熱烈的（戀情）",
+    "example": "They had a torrid love affair that lasted only one summer.",
+    "roots": "同 torrent 字源（拉丁文 torrere，燃燒）→ 極度炎熱或情感熾烈"
+  },
+  {
+    "word": "tortuous",
+    "pos": "adj.",
+    "meaning": "曲折的、複雜難懂的",
+    "example": "The negotiations followed a tortuous path before finally reaching an agreement.",
+    "roots": "源自拉丁文 torquere（扭轉）→ 彎彎曲曲、不直接"
+  },
+  {
+    "word": "totalitarian",
+    "pos": "adj.",
+    "meaning": "極權主義的",
+    "example": "Citizens had no political freedom under the totalitarian regime.",
+    "roots": "total（完全的）+ -itarian（主義者，仿 authoritarian 造字）→ 對人民生活實施全面控制的"
+  },
+  {
+    "word": "touchstone",
+    "pos": "n.",
+    "meaning": "試金石、判斷標準",
+    "example": "Honesty has always been the touchstone of their friendship.",
+    "roots": "touch（觸摸）+ stone（石頭），原指用來測試金銀純度的黑石 → 用以檢驗價值的標準"
+  },
+  {
+    "word": "tout",
+    "pos": "v.",
+    "meaning": "極力宣傳、吹捧",
+    "example": "The company touted its new product as a revolutionary breakthrough.",
+    "roots": "源自古英文 totian（向外看、窺視），方言演變為兜售、招攬 → 大肆宣傳以招攬注意"
+  },
+  {
+    "word": "tract",
+    "pos": "n.",
+    "meaning": "大片土地、宣傳小冊子",
+    "example": "The charity distributed religious tracts on street corners.",
+    "roots": "源自拉丁文 tractus（拉伸、延展，tractare 衍生）→ 延展出去的一片區域或一篇論述"
+  },
+  {
+    "word": "tractable",
+    "pos": "adj.",
+    "meaning": "溫順的、易駕馭的",
+    "example": "Unlike her stubborn older brother, the child was remarkably tractable.",
+    "roots": "源自拉丁文 tractare（拖拉、處理）+ -able（可…的）→ 可以被牽引、易於掌控的"
+  },
+  {
+    "word": "traduce",
+    "pos": "v.",
+    "meaning": "誹謗、詆毀",
+    "example": "The politician accused the press of traducing his character with false reports.",
+    "roots": "源自拉丁文 traducere（公開展示、羞辱示眾，trans- 越過 + ducere 帶領）→ 公開羞辱、惡意中傷"
+  },
+  {
+    "word": "trajectory",
+    "pos": "n.",
+    "meaning": "軌跡、發展路線",
+    "example": "The company's sales trajectory has been steadily upward for five years.",
+    "roots": "源自拉丁文 trans-（穿越）+ jacere（投擲）→ 物體或事件移動的路徑"
+  },
+  {
+    "word": "tranquil",
+    "pos": "adj.",
+    "meaning": "寧靜的、平和的",
+    "example": "The lake was perfectly tranquil at dawn, without a single ripple.",
+    "roots": "源自拉丁文 tranquillus（平靜的）→ 沒有波動、安穩的狀態"
+  },
+  {
+    "word": "transcend",
+    "pos": "v.",
+    "meaning": "超越、超出範圍",
+    "example": "Great art has the power to transcend cultural and linguistic barriers.",
+    "roots": "trans-（越過）+ scendere（攀爬，拉丁文）→ 爬越、超出界限"
+  },
+  {
+    "word": "transcendent",
+    "pos": "adj.",
+    "meaning": "超越的、卓越非凡的",
+    "example": "The symphony offered a transcendent experience that moved the entire audience to tears.",
+    "roots": "同 transcend 字源 + -ent（形容詞後綴）→ 超乎尋常界限之上的"
+  },
+  {
+    "word": "transfigure",
+    "pos": "v.",
+    "meaning": "使變形、使昇華轉變",
+    "example": "Love seemed to transfigure her, giving her a new confidence and radiance.",
+    "roots": "trans-（改變）+ figura（形狀，拉丁文）→ 使外在形貌發生根本轉變"
+  },
+  {
+    "word": "transfix",
+    "pos": "v.",
+    "meaning": "使呆住、使目瞪口呆",
+    "example": "The audience was transfixed by the magician's final trick.",
+    "roots": "trans-（穿透）+ fix（固定，拉丁文 figere）→ 像被釘住一樣動彈不得"
+  },
+  {
+    "word": "transgress",
+    "pos": "v.",
+    "meaning": "違反規範、道德",
+    "example": "He was punished for transgressing the strict rules of the monastery.",
+    "roots": "trans-（越過）+ gradi（行走，拉丁文）→ 跨越不該跨越的界線"
+  },
+  {
+    "word": "transient",
+    "pos": "adj.",
+    "meaning": "短暫的、過渡的",
+    "example": "Fame in the entertainment industry can be remarkably transient.",
+    "roots": "源自拉丁文 transire（穿過、經過，trans- + ire 走）→ 匆匆經過、不長久"
+  },
+  {
+    "word": "transitory",
+    "pos": "adj.",
+    "meaning": "短暫的、無常的",
+    "example": "Youth and beauty are transitory, but wisdom endures.",
+    "roots": "同 transient 字源（拉丁文 transire）+ -ory（形容詞後綴）→ 轉瞬即逝的"
+  },
+  {
+    "word": "translucent",
+    "pos": "adj.",
+    "meaning": "半透明的",
+    "example": "The frosted glass was translucent, letting in light but obscuring the view.",
+    "roots": "trans-（穿透）+ lucere（發光，拉丁文）→ 光線可穿透但無法看清"
+  },
+  {
+    "word": "transmogrify",
+    "pos": "v.",
+    "meaning": "奇異地變形、變化",
+    "example": "In the story, the pumpkin transmogrifies into a golden carriage at midnight.",
+    "roots": "trans-（改變）+ -mogrify（字尾來源不明，可能為戲謔造字）→ 出人意料地徹底改變形態"
+  },
+  {
+    "word": "transmute",
+    "pos": "v.",
+    "meaning": "使變化、使轉化性質",
+    "example": "Alchemists once dreamed of transmuting lead into gold.",
+    "roots": "trans-（改變）+ mutare（改變，拉丁文）→ 從一種形態轉變為另一種"
+  },
+  {
+    "word": "transpire",
+    "pos": "v.",
+    "meaning": "發生、逐漸顯露",
+    "example": "It later transpired that the manager had known about the fraud for months.",
+    "roots": "trans-（穿過）+ spirare（呼吸，拉丁文）→ 如氣息般逐漸洩漏出來"
+  },
+  {
+    "word": "transpose",
+    "pos": "v.",
+    "meaning": "使互換位置、調換",
+    "example": "If you transpose the first two letters, the word becomes unreadable.",
+    "roots": "trans-（交換）+ ponere（放置，拉丁文）→ 把兩者位置互相調換"
+  },
+  {
+    "word": "trappings",
+    "pos": "n.",
+    "meaning": "象徵地位的外在裝飾、行頭",
+    "example": "Despite the trappings of success, he remained deeply unhappy.",
+    "roots": "源自古法文 drap（布料），原指馬匹的裝飾布 → 外顯的裝飾或象徵物"
+  },
+  {
+    "word": "travail",
+    "pos": "n.",
+    "meaning": "艱辛勞苦",
+    "example": "After years of travail, the settlers finally built a thriving community.",
+    "roots": "源自古法文 travail，可能源自拉丁文 tripalium（一種三根木樁做成的刑具）→ 極其辛苦的勞動或折磨"
+  },
+  {
+    "word": "travesty",
+    "pos": "n.",
+    "meaning": "拙劣的模仿、荒謬可笑的曲解",
+    "example": "Critics called the trial a travesty of justice.",
+    "roots": "源自法文 travestir（喬裝改扮，trans- 越過 + vestire 穿衣）→ 刻意扭曲成滑稽的版本"
+  },
+  {
+    "word": "treacherous",
+    "pos": "adj.",
+    "meaning": "背叛的、危險的（路況）",
+    "example": "The mountain path became treacherous after the heavy rain.",
+    "roots": "源自古法文 trichier（欺騙）→ 表面正常卻暗藏危險或背叛"
+  },
+  {
+    "word": "treatise",
+    "pos": "n.",
+    "meaning": "論文、專題論著",
+    "example": "He wrote a lengthy treatise on the origins of language.",
+    "roots": "源自古法文 tretiz，與 treat（論述、處理）同源，拉丁文 tractare → 有系統地論述某主題的著作"
+  },
+  {
+    "word": "tremor",
+    "pos": "n.",
+    "meaning": "顫抖、震動",
+    "example": "A slight tremor in her voice betrayed her nervousness.",
+    "roots": "源自拉丁文 tremere（顫抖）→ 輕微的震動或顫抖"
+  },
+  {
+    "word": "tremulous",
+    "pos": "adj.",
+    "meaning": "顫抖的、膽怯的",
+    "example": "He answered in a tremulous voice, clearly frightened.",
+    "roots": "同 tremor 字源（拉丁文 tremere）+ -ulous（形容詞後綴）→ 因恐懼或虛弱而顫抖的"
+  },
+  {
+    "word": "trenchant",
+    "pos": "adj.",
+    "meaning": "犀利的、尖銳有力的",
+    "example": "Her trenchant criticism exposed the flaws in his argument.",
+    "roots": "源自古法文 trenchier（切割）→ 如刀切般直截了當、有力"
+  },
+  {
+    "word": "trepidation",
+    "pos": "n.",
+    "meaning": "恐懼、忐忑不安",
+    "example": "She approached the interview with a mixture of excitement and trepidation.",
+    "roots": "源自拉丁文 trepidare（顫抖、慌張）→ 因擔憂而顫動不安"
+  },
+  {
+    "word": "triage",
+    "pos": "n.",
+    "meaning": "分診、依緊急程度判定優先順序",
+    "example": "In the emergency room, nurses perform triage to treat the most critical patients first.",
+    "roots": "源自法文 trier（篩選、分類）→ 依嚴重程度篩選優先處理順序"
+  },
+  {
+    "word": "tribulation",
+    "pos": "n.",
+    "meaning": "苦難、磨難",
+    "example": "The refugees faced great tribulation before reaching safety.",
+    "roots": "源自拉丁文 tribulum（打穀用的滾輪，引申為碾壓、折磨）→ 被碾壓般的痛苦經歷"
+  },
+  {
+    "word": "trifle",
+    "pos": "v./n.",
+    "meaning": "輕忽對待、隨便玩弄",
+    "example": "He is not a man to be trifled with.",
+    "roots": "源自古法文 trufle（嘲弄、詭計）→ 不認真、隨意對待"
+  },
+  {
+    "word": "trifling",
+    "pos": "adj.",
+    "meaning": "微不足道的、不重要的",
+    "example": "She refused to waste time on such trifling matters.",
+    "roots": "同 trifle 字源 + -ing（形容詞化）→ 瑣碎不值一提的"
+  },
+  {
+    "word": "trite",
+    "pos": "adj.",
+    "meaning": "陳腐的、老套的",
+    "example": "The speech was full of trite phrases about following your dreams.",
+    "roots": "源自拉丁文 tritus（磨損的，terere 之過去分詞）→ 用到磨損、失去新意"
+  },
+  {
+    "word": "triumvirate",
+    "pos": "n.",
+    "meaning": "三頭政治、三人執政集團",
+    "example": "The three founders formed an informal triumvirate that led the company for a decade.",
+    "roots": "源自拉丁文 tres（三）+ vir（男人）→ 由三人共同掌權的組織"
+  },
+  {
+    "word": "trove",
+    "pos": "n.",
+    "meaning": "寶藏、豐富收藏",
+    "example": "The attic turned out to be a trove of forgotten family photographs.",
+    "roots": "源自古法文 trover（尋找、發現），與 treasure trove（發現的寶藏）相關 → 意外發現的珍貴收藏"
+  },
+  {
+    "word": "truant",
+    "pos": "n./adj.",
+    "meaning": "逃學者（的）、擅離職守的",
+    "example": "The truant officer was sent to find the students skipping class.",
+    "roots": "源自古法文 truant（乞丐、遊民）→ 無故缺席、遊蕩不歸"
+  },
+  {
+    "word": "truckle",
+    "pos": "v.",
+    "meaning": "卑躬屈膝、諂媚順從",
+    "example": "He refused to truckle to the demands of his overbearing boss.",
+    "roots": "源自古法文 trocle（滑輪），原指須睡在主人床下的低矮滑輪床（truckle bed）→ 引申為屈居人下、順從權貴"
+  },
+  {
+    "word": "truculent",
+    "pos": "adj.",
+    "meaning": "好鬥的、粗暴易怒的",
+    "example": "The truculent customer shouted at the staff over a minor mistake.",
+    "roots": "源自拉丁文 truculentus（兇猛的，trux 兇惡 衍生）→ 帶有攻擊性、易怒的性格"
+  },
+  {
+    "word": "truism",
+    "pos": "n.",
+    "meaning": "不言自明的道理、老生常談",
+    "example": "'Honesty is the best policy' has become something of a truism.",
+    "roots": "true（真實的）+ -ism（主義、論述）→ 明顯到幾乎不需說明的真理"
+  },
+  {
+    "word": "truncate",
+    "pos": "v.",
+    "meaning": "截短、縮短",
+    "example": "The editor truncated the article to fit the available space.",
+    "roots": "源自拉丁文 truncare（砍斷），與 truncus（樹幹）同源 → 把某物砍去一部分"
+  },
+  {
+    "word": "tryst",
+    "pos": "n.",
+    "meaning": "秘密的幽會",
+    "example": "The two lovers arranged a secret tryst in the garden at midnight.",
+    "roots": "源自古法文 triste（等候點，狩獵用語），字源與現代法文 triste（悲傷）無關 → 事先約定的秘密會面"
+  },
+  {
+    "word": "tumbledown",
+    "pos": "adj.",
+    "meaning": "搖搖欲墜的、破舊倒塌的",
+    "example": "They restored the tumbledown cottage into a beautiful country home.",
+    "roots": "tumble（跌落、倒塌）+ down（向下）→ 幾乎要倒塌的破舊建築"
+  },
+  {
+    "word": "tumid",
+    "pos": "adj.",
+    "meaning": "腫脹的、文風浮誇的",
+    "example": "His tumid prose was more concerned with sounding impressive than making sense.",
+    "roots": "源自拉丁文 tumere（腫脹）→ 腫大或（語言）過度膨脹"
+  },
+  {
+    "word": "tumult",
+    "pos": "n.",
+    "meaning": "喧鬧、騷動",
+    "example": "The stadium erupted into tumult when the winning goal was scored.",
+    "roots": "源自拉丁文 tumultus（騷動、混亂）→ 嘈雜混亂的狀態"
+  },
+  {
+    "word": "tumultuous",
+    "pos": "adj.",
+    "meaning": "喧鬧的、動盪的",
+    "example": "The band received a tumultuous welcome from thousands of fans.",
+    "roots": "同 tumult 字源 + -uous（形容詞後綴）→ 充滿喧鬧與騷動的"
+  },
+  {
+    "word": "turbid",
+    "pos": "adj.",
+    "meaning": "混濁的（液體）、混亂的（思緒）",
+    "example": "After the storm, the river water turned turbid with mud and debris.",
+    "roots": "源自拉丁文 turba（混亂、人群）→ 攪動而變得混濁不清"
+  },
+  {
+    "word": "turbulent",
+    "pos": "adj.",
+    "meaning": "動盪的、狂暴的",
+    "example": "The country went through a turbulent period of political upheaval.",
+    "roots": "源自拉丁文 turba（混亂）+ -ulent（充滿…的）→ 充滿混亂與動盪"
+  },
+  {
+    "word": "turgid",
+    "pos": "adj.",
+    "meaning": "腫脹的、文風誇張浮誇的",
+    "example": "The professor's turgid writing style made the textbook difficult to read.",
+    "roots": "源自拉丁文 turgere（腫脹、膨脹）→ 過度膨脹、不自然的"
+  },
+  {
+    "word": "turmoil",
+    "pos": "n.",
+    "meaning": "混亂、動盪",
+    "example": "The company was thrown into turmoil after the sudden resignation of its CEO.",
+    "roots": "字源不十分確定，可能源自古法文 tremouille（磨坊漏斗，因震動而得名）→ 劇烈的混亂狀態"
+  },
+  {
+    "word": "turncoat",
+    "pos": "n.",
+    "meaning": "叛徒、變節者",
+    "example": "He was branded a turncoat after switching allegiance to the rival party.",
+    "roots": "turn（轉）+ coat（外套），原指把外套翻面穿以顯示效忠對象改變 → 背叛原陣營、改投他方的人"
+  },
+  {
+    "word": "turpitude",
+    "pos": "n.",
+    "meaning": "邪惡、卑劣",
+    "example": "The scandal revealed a shocking level of moral turpitude among the officials.",
+    "roots": "源自拉丁文 turpis（醜陋的、可恥的）+ -itude（名詞後綴）→ 道德上的卑劣敗壞"
+  },
+  {
+    "word": "tutelage",
+    "pos": "n.",
+    "meaning": "指導、監護",
+    "example": "Under her mentor's tutelage, she quickly mastered the craft.",
+    "roots": "源自拉丁文 tutela（保護、監護，tueri 守護 衍生）→ 受到指導與保護的關係"
+  },
+  {
+    "word": "tutelary",
+    "pos": "adj.",
+    "meaning": "守護的、監護的",
+    "example": "The ancient Romans believed each city had its own tutelary deity.",
+    "roots": "同 tutelage 字源（拉丁文 tueri，守護）→ 具有守護、保護性質的"
+  },
+  {
+    "word": "twinge",
+    "pos": "n.",
+    "meaning": "一陣劇痛、一陣情緒刺痛",
+    "example": "She felt a twinge of guilt after forgetting her friend's birthday.",
+    "roots": "源自古英文 twengan（擰、夾），與德文 zwingen 同源 → 突如其來的短暫刺痛感"
+  },
+  {
+    "word": "typify",
+    "pos": "v.",
+    "meaning": "是…的典型、代表",
+    "example": "The abandoned factory typifies the economic decline of the once-thriving town.",
+    "roots": "type（典型）+ -ify（使成為）→ 成為某類事物的代表性例子"
+  },
+  {
+    "word": "tyrannical",
+    "pos": "adj.",
+    "meaning": "專制的、暴虐的",
+    "example": "The tyrannical ruler crushed any hint of dissent among his subjects.",
+    "roots": "源自希臘文 tyrannos（僭主、獨裁統治者）+ -ical（形容詞後綴）→ 如暴君般專斷獨行的"
+  },
+  {
+    "word": "tyro",
+    "pos": "n.",
+    "meaning": "初學者、新手",
+    "example": "As a tyro in the field of law, she relied heavily on senior colleagues for guidance.",
+    "roots": "源自拉丁文 tiro（新兵）→ 剛入門、經驗不足的人"
+  },
+  {
+    "word": "ubiquitous",
+    "pos": "adj.",
+    "meaning": "無所不在的",
+    "example": "Smartphones have become ubiquitous in modern society.",
+    "roots": "源自拉丁文 ubique（到處）+ -ous（形容詞後綴）→ 到處都存在的"
+  },
+  {
+    "word": "ubiquity",
+    "pos": "n.",
+    "meaning": "無所不在的特性",
+    "example": "The ubiquity of social media has changed the way people communicate.",
+    "roots": "同 ubiquitous 字源（拉丁文 ubique）+ -ity（名詞後綴）→ 無所不在的性質"
+  },
+  {
+    "word": "ulterior",
+    "pos": "adj.",
+    "meaning": "隱藏的、別有用心的（動機）",
+    "example": "She suspected he had an ulterior motive for offering to help.",
+    "roots": "源自拉丁文 ulterior（更遠的，ultra 之比較級）→ 表面之外、隱藏更深的"
+  },
+  {
+    "word": "umbrage",
+    "pos": "n.",
+    "meaning": "不悅、生氣",
+    "example": "He took umbrage at being excluded from the meeting.",
+    "roots": "源自拉丁文 umbra（陰影）→ 心中蒙上陰影，引申為不悅"
+  },
+  {
+    "word": "unabashed",
+    "pos": "adj.",
+    "meaning": "毫不害臊的、坦然的",
+    "example": "She gave an unabashed account of her past mistakes.",
+    "roots": "un-（不）+ abashed（感到羞愧的，見 abash）→ 不感到羞愧、坦然面對"
+  },
+  {
+    "word": "unaccountable",
+    "pos": "adj.",
+    "meaning": "無法解釋的、莫名的",
+    "example": "She felt an unaccountable sense of dread as she entered the empty house.",
+    "roots": "un-（不）+ accountable（可解釋說明的，account 衍生）→ 無法說明原因的"
+  },
+  {
+    "word": "unadulterated",
+    "pos": "adj.",
+    "meaning": "純粹的、未摻雜的",
+    "example": "It was a moment of unadulterated joy for the entire family.",
+    "roots": "un-（不）+ adulterate（摻雜、使不純，拉丁文 adulterare）→ 完全沒有摻雜其他成分的"
+  },
+  {
+    "word": "unalloyed",
+    "pos": "adj.",
+    "meaning": "純粹的、未混合的（情感）",
+    "example": "He felt unalloyed relief when the test results came back negative.",
+    "roots": "un-（不）+ alloy（合金、混合物）→ 沒有摻入其他成分的純粹狀態"
+  },
+  {
+    "word": "unassailable",
+    "pos": "adj.",
+    "meaning": "無懈可擊的、不可攻破的",
+    "example": "Her research findings were built on unassailable evidence.",
+    "roots": "un-（不）+ assail（攻擊，拉丁文 assilire）+ -able（可…的）→ 無法被攻擊或反駁的"
+  },
+  {
+    "word": "unassuming",
+    "pos": "adj.",
+    "meaning": "不張揚的、謙遜的",
+    "example": "Despite his fame, he remained unassuming and approachable.",
+    "roots": "un-（不）+ assuming（自以為是的，assume 衍生）→ 不自視甚高、低調謙和"
+  },
+  {
+    "word": "unavailing",
+    "pos": "adj.",
+    "meaning": "徒勞無功的",
+    "example": "Their efforts to revive the dying business proved unavailing.",
+    "roots": "un-（不）+ availing（有效的，avail 衍生，拉丁文 valere 有力量）→ 沒有發揮作用、無效的"
+  },
+  {
+    "word": "unbecoming",
+    "pos": "adj.",
+    "meaning": "不得體的、不相稱的",
+    "example": "His rude remarks were considered unbecoming of a diplomat.",
+    "roots": "un-（不）+ becoming（合適的，become 衍生）→ 與身份或場合不相稱的"
+  },
+  {
+    "word": "unbeknownst",
+    "pos": "adj.",
+    "meaning": "在某人不知情的情況下",
+    "example": "Unbeknownst to her parents, she had already accepted the job abroad.",
+    "roots": "un-（不）+ beknown（為人所知的，古英文 becnawan）→ 在某人不知曉的情況下"
+  },
+  {
+    "word": "unbridled",
+    "pos": "adj.",
+    "meaning": "不受約束的、放縱的",
+    "example": "The crowd celebrated with unbridled enthusiasm.",
+    "roots": "un-（不）+ bridle（馬勒、韁繩）→ 沒有韁繩控制，形容毫無節制"
+  },
+  {
+    "word": "uncanny",
+    "pos": "adj.",
+    "meaning": "離奇的、詭異的",
+    "example": "There was an uncanny resemblance between the two strangers.",
+    "roots": "un-（不）+ canny（精明的、可解釋的，源自蘇格蘭方言 can 知道）→ 超出常理、無法解釋的"
+  },
+  {
+    "word": "unconscionable",
+    "pos": "adj.",
+    "meaning": "不合理的、違背良心的",
+    "example": "Charging such unconscionable interest rates should be illegal.",
+    "roots": "un-（不）+ conscionable（合乎良心的，conscience 衍生）→ 違反基本道德良知的"
+  },
+  {
+    "word": "uncouth",
+    "pos": "adj.",
+    "meaning": "粗俗的、沒教養的",
+    "example": "His uncouth table manners embarrassed his hosts.",
+    "roots": "un-（不）+ couth（熟悉的、有教養的，古英文 cuth）→ 不熟悉禮儀規範、顯得粗魯"
+  },
+  {
+    "word": "unctuous",
+    "pos": "adj.",
+    "meaning": "諂媚的、油腔滑調的",
+    "example": "The salesman's unctuous flattery made her uneasy.",
+    "roots": "源自拉丁文 unguere（塗油）→ 像塗了油般過度圓滑討好"
+  },
+  {
+    "word": "undaunted",
+    "pos": "adj.",
+    "meaning": "不畏懼的、勇往直前的",
+    "example": "Undaunted by previous failures, she tried the experiment once more.",
+    "roots": "un-（不）+ daunt（使畏縮，拉丁文 domitare 馴服）→ 不因困難而退縮"
+  },
+  {
+    "word": "underhanded",
+    "pos": "adj.",
+    "meaning": "卑鄙的、暗中行事的",
+    "example": "He won the election through underhanded tactics.",
+    "roots": "under（在下方）+ handed（用手的）→ 在檯面下、不光明正大地行事"
+  },
+  {
+    "word": "underling",
+    "pos": "n.",
+    "meaning": "部屬、手下（帶貶意）",
+    "example": "The manager treated his underlings with contempt.",
+    "roots": "under（在下方）+ -ling（小、輕蔑後綴）→ 地位低下的下屬"
+  },
+  {
+    "word": "undermine",
+    "pos": "v.",
+    "meaning": "逐漸破壞、暗中削弱",
+    "example": "Constant criticism undermined her confidence over time.",
+    "roots": "under（在下方）+ mine（挖掘）→ 從底下挖空，使其崩塌"
+  },
+  {
+    "word": "underscore",
+    "pos": "v.",
+    "meaning": "強調、突顯",
+    "example": "The report underscored the urgent need for reform.",
+    "roots": "under（在下方）+ score（劃線）→ 在文字下方劃線以示強調"
+  },
+  {
+    "word": "understated",
+    "pos": "adj.",
+    "meaning": "含蓄的、輕描淡寫的",
+    "example": "The design was elegant yet understated, avoiding unnecessary ornamentation.",
+    "roots": "under（不足地）+ stated（陳述的）→ 陳述或表現得比實際程度輕"
+  },
+  {
+    "word": "undulate",
+    "pos": "v.",
+    "meaning": "波動、起伏",
+    "example": "The wheat fields undulated gently in the breeze.",
+    "roots": "源自拉丁文 unda（波浪）→ 如波浪般起伏"
+  },
+  {
+    "word": "unencumbered",
+    "pos": "adj.",
+    "meaning": "不受阻礙的、無負擔的",
+    "example": "Freed from debt, she felt unencumbered for the first time in years.",
+    "roots": "un-（不）+ encumber（妨礙、拖累，古法文 combrer）→ 沒有負擔或阻礙的狀態"
+  },
+  {
+    "word": "unequivocal",
+    "pos": "adj.",
+    "meaning": "明確的、毫不含糊的",
+    "example": "The board gave an unequivocal rejection of the merger proposal.",
+    "roots": "un-（不）+ equivocal（模稜兩可的，拉丁文 aequus 相等 + vox 聲音）→ 不含糊、意義單一明確"
+  },
+  {
+    "word": "unerring",
+    "pos": "adj.",
+    "meaning": "不會出錯的、精準無誤的",
+    "example": "The archer hit the target with unerring accuracy.",
+    "roots": "un-（不）+ erring（犯錯的，err 衍生）→ 從不犯錯、始終準確"
+  },
+  {
+    "word": "unfathomable",
+    "pos": "adj.",
+    "meaning": "難以理解的、深不可測的",
+    "example": "The ocean's depths remain largely unfathomable to science.",
+    "roots": "un-（不）+ fathom（測深、理解，原指丈量水深的單位）+ -able（可…的）→ 無法測量或理解的深度"
+  },
+  {
+    "word": "unfeigned",
+    "pos": "adj.",
+    "meaning": "真誠的、非假裝的",
+    "example": "Her unfeigned surprise proved she truly hadn't known about the party.",
+    "roots": "un-（不）+ feigned（假裝的，拉丁文 fingere 捏造）→ 沒有虛假、發自真心的"
+  },
+  {
+    "word": "unfetter",
+    "pos": "v.",
+    "meaning": "使解放、去除束縛",
+    "example": "The reforms were designed to unfetter the economy from excessive regulation.",
+    "roots": "un-（去除）+ fetter（腳鐐、束縛）→ 解開束縛獲得自由"
+  },
+  {
+    "word": "unflagging",
+    "pos": "adj.",
+    "meaning": "不衰減的、堅持不懈的",
+    "example": "His unflagging enthusiasm inspired the entire team.",
+    "roots": "un-（不）+ flagging（衰退的，flag 作動詞指力量減弱）→ 始終不衰退的"
+  },
+  {
+    "word": "unflappable",
+    "pos": "adj.",
+    "meaning": "沉著冷靜的、不易慌亂的",
+    "example": "Even in the chaos of the emergency, the doctor remained unflappable.",
+    "roots": "un-（不）+ flap（慌亂、拍動，擬聲詞）+ -able（可…的）→ 不會因慌亂而失去鎮定"
+  },
+  {
+    "word": "unfledged",
+    "pos": "adj.",
+    "meaning": "羽翼未豐的、不成熟的",
+    "example": "As an unfledged writer, she still had much to learn about the craft.",
+    "roots": "un-（未）+ fledged（羽毛長成的，fledge 衍生）→ 尚未長出羽毛，引申為經驗不足"
+  },
+  {
+    "word": "unflinching",
+    "pos": "adj.",
+    "meaning": "不退縮的、堅定的",
+    "example": "She gave an unflinching account of the atrocities she witnessed.",
+    "roots": "un-（不）+ flinching（退縮的，flinch 衍生）→ 面對困難不退縮"
+  },
+  {
+    "word": "unfounded",
+    "pos": "adj.",
+    "meaning": "無根據的、缺乏事實依據的",
+    "example": "The rumors about the company's bankruptcy turned out to be unfounded.",
+    "roots": "un-（不）+ founded（有根基的，found 建立 衍生）→ 沒有事實基礎的"
+  },
+  {
+    "word": "ungainly",
+    "pos": "adj.",
+    "meaning": "笨拙的、不優雅的",
+    "example": "The young giraffe took its first ungainly steps.",
+    "roots": "un-（不）+ gainly（優雅的、靈巧的，古英文 gegn 方便的）→ 不靈活、不協調的"
+  },
+  {
+    "word": "unhinged",
+    "pos": "adj.",
+    "meaning": "精神錯亂的、失控的",
+    "example": "After the loss, he seemed increasingly unhinged and erratic.",
+    "roots": "un-（使脫離）+ hinged（裝有鉸鏈的）→ 像門脫離門軸般失去平衡與控制"
+  },
+  {
+    "word": "unimpeachable",
+    "pos": "adj.",
+    "meaning": "無可指責的、清白的",
+    "example": "Her unimpeachable integrity made her the ideal candidate for the position.",
+    "roots": "un-（不）+ impeach（彈劾、質疑，拉丁文 impedicare 使絆倒）+ -able（可…的）→ 無法被質疑或指控的"
+  },
+  {
+    "word": "uninitiated",
+    "pos": "n./adj.",
+    "meaning": "未入門的、外行的（人）",
+    "example": "To the uninitiated, the ritual's symbolism might seem strange.",
+    "roots": "un-（未）+ initiated（被引入、入門的，拉丁文 initiare）→ 尚未被引導入門、缺乏相關知識的"
+  },
+  {
+    "word": "unkempt",
+    "pos": "adj.",
+    "meaning": "蓬亂的、不整潔的",
+    "example": "The unkempt garden had not been tended in years.",
+    "roots": "un-（不）+ kempt（梳理過的，古英文 kembian 梳頭）→ 未經梳理、雜亂的"
+  },
+  {
+    "word": "unmindful",
+    "pos": "adj.",
+    "meaning": "不留意的、疏忽的",
+    "example": "He walked into the meeting, unmindful of the tension in the room.",
+    "roots": "un-（不）+ mindful（留意的，mind 心思 衍生）→ 沒有放在心上、疏忽的"
+  },
+  {
+    "word": "unmitigated",
+    "pos": "adj.",
+    "meaning": "十足的、未減輕的（壞事）",
+    "example": "The launch was an unmitigated disaster from start to finish.",
+    "roots": "un-（不）+ mitigated（減輕的，拉丁文 mitigare 使緩和）→ 程度絲毫未被減輕，形容徹頭徹尾"
+  },
+  {
+    "word": "unnerve",
+    "pos": "v.",
+    "meaning": "使失去勇氣、使緊張",
+    "example": "The eerie silence in the house began to unnerve her.",
+    "roots": "un-（去除）+ nerve（勇氣、神經）→ 抽掉勇氣，使人膽怯緊張"
+  },
+  {
+    "word": "unobtrusive",
+    "pos": "adj.",
+    "meaning": "不顯眼的、不引人注目的",
+    "example": "The security cameras were small and unobtrusive.",
+    "roots": "un-（不）+ obtrusive（突兀顯眼的，拉丁文 obtrudere 強行推入）→ 不會強行引人注意的"
+  },
+  {
+    "word": "unorthodox",
+    "pos": "adj.",
+    "meaning": "非正統的、非傳統的",
+    "example": "Her unorthodox teaching methods surprised the more traditional faculty.",
+    "roots": "un-（不）+ orthodox（正統的，希臘文 orthos 正確 + doxa 意見）→ 不遵循傳統或正統做法的"
+  },
+  {
+    "word": "unpalatable",
+    "pos": "adj.",
+    "meaning": "難以下嚥的、令人反感的（事實）",
+    "example": "The report contained several unpalatable truths about the company's finances.",
+    "roots": "un-（不）+ palatable（可口的，palate 味覺、口味 衍生）→ 令人難以接受的"
+  },
+  {
+    "word": "unperturbed",
+    "pos": "adj.",
+    "meaning": "鎮定的、不為所動的",
+    "example": "Unperturbed by the criticism, she continued with her original plan.",
+    "roots": "un-（不）+ perturbed（煩擾的，拉丁文 per- 徹底 + turbare 攪亂）→ 不受外界攪擾、保持鎮定"
+  },
+  {
+    "word": "unprepossessing",
+    "pos": "adj.",
+    "meaning": "不起眼的、外表平凡的",
+    "example": "Behind his unprepossessing appearance lay a brilliant mind.",
+    "roots": "un-（不）+ prepossessing（討人喜歡的，pre- 事先 + possess 佔有，指先入為主留下好印象）→ 外表無法留下好印象的"
+  },
+  {
+    "word": "unpretentious",
+    "pos": "adj.",
+    "meaning": "不做作的、樸實的",
+    "example": "The restaurant was unpretentious but served excellent food.",
+    "roots": "un-（不）+ pretentious（自命不凡的，拉丁文 praetendere 假裝）→ 不裝腔作勢、樸實無華"
+  },
+  {
+    "word": "unprincipled",
+    "pos": "adj.",
+    "meaning": "無原則的、不擇手段的",
+    "example": "The unprincipled lawyer would take any case for the right price.",
+    "roots": "un-（不）+ principled（有原則的，principle 衍生）→ 缺乏道德原則的"
+  },
+  {
+    "word": "unpropitious",
+    "pos": "adj.",
+    "meaning": "不吉利的、不利的",
+    "example": "The negotiations began under unpropitious circumstances.",
+    "roots": "un-（不）+ propitious（吉利的、有利的，拉丁文 propitius 恩慈的）→ 不利於成功的"
+  },
+  {
+    "word": "unqualified",
+    "pos": "adj.",
+    "meaning": "無保留的、絕對的（讚美、成功）",
+    "example": "The performance was an unqualified success.",
+    "roots": "un-（不）+ qualified（有限定的，拉丁文 qualis 何種性質）→ 不帶任何限定條件的、完全的"
+  },
+  {
+    "word": "unquenchable",
+    "pos": "adj.",
+    "meaning": "無法滿足的、無法撲滅的（渴望）",
+    "example": "She had an unquenchable thirst for knowledge.",
+    "roots": "un-（不）+ quenchable（可撲滅的，quench 熄滅、解渴 衍生）→ 無法被滿足或平息的"
+  },
+  {
+    "word": "unremitting",
+    "pos": "adj.",
+    "meaning": "不間斷的、持續不停的",
+    "example": "She faced the challenges with unremitting determination.",
+    "roots": "un-（不）+ remitting（減緩的，拉丁文 remittere 放鬆）→ 從不放鬆、持續不斷的"
+  },
+  {
+    "word": "unrepentant",
+    "pos": "adj.",
+    "meaning": "不悔改的、毫無悔意的",
+    "example": "The unrepentant criminal showed no remorse at his sentencing.",
+    "roots": "un-（不）+ repentant（懊悔的，拉丁文 paenitere 後悔）→ 對錯誤毫無悔意的"
+  },
+  {
+    "word": "unrequited",
+    "pos": "adj.",
+    "meaning": "得不到回報的（愛情）",
+    "example": "He suffered for years from unrequited love.",
+    "roots": "un-（不）+ requited（被回報的，require 衍生，拉丁文 requirere 要求）→ 付出的情感未獲得對等回應"
+  },
+  {
+    "word": "unruffled",
+    "pos": "adj.",
+    "meaning": "鎮定自若的、未受干擾的",
+    "example": "She remained unruffled even as the situation grew increasingly chaotic.",
+    "roots": "un-（不）+ ruffled（弄皺的、心煩意亂的，ruffle 衍生）→ 表面與內心都保持平靜"
+  },
+  {
+    "word": "unruly",
+    "pos": "adj.",
+    "meaning": "難以管束的、桀驁不馴的",
+    "example": "The teacher struggled to control the unruly classroom.",
+    "roots": "un-（不）+ ruly（守規矩的，rule 規則 衍生）→ 不服從規則、難以管教的"
+  },
+  {
+    "word": "unsavory",
+    "pos": "adj.",
+    "meaning": "令人反感的、名聲不佳的",
+    "example": "He was known to associate with unsavory characters.",
+    "roots": "un-（不）+ savory（美味的、令人愉悅的，拉丁文 sapere 有味道）→ 令人不悅或不齒的"
+  },
+  {
+    "word": "unscathed",
+    "pos": "adj.",
+    "meaning": "未受傷害的、安然無恙的",
+    "example": "Miraculously, all the passengers emerged from the crash unscathed.",
+    "roots": "un-（未）+ scathed（受損害的，古諾斯語 skathi 傷害）→ 完全沒有受到損傷"
+  },
+  {
+    "word": "unscrupulous",
+    "pos": "adj.",
+    "meaning": "無恥的、不擇手段的",
+    "example": "The unscrupulous businessman cheated his investors out of millions.",
+    "roots": "un-（不）+ scrupulous（謹慎講究道德的，拉丁文 scrupulus 小石子，引申為良心不安）→ 沒有道德顧忌的"
+  },
+  {
+    "word": "unseemly",
+    "pos": "adj.",
+    "meaning": "不得體的、不合宜的",
+    "example": "His unseemly behavior at the funeral shocked the other guests.",
+    "roots": "un-（不）+ seemly（合宜的，古諾斯語 soemr 適合）→ 與場合不相稱、失禮的"
+  },
+  {
+    "word": "unstinting",
+    "pos": "adj.",
+    "meaning": "慷慨的、毫不吝惜的",
+    "example": "She was unstinting in her praise for the young musician.",
+    "roots": "un-（不）+ stinting（吝惜的，stint 限制、節省 衍生）→ 給予時毫無保留、不設限"
+  },
+  {
+    "word": "unsullied",
+    "pos": "adj.",
+    "meaning": "未受玷污的、純潔的",
+    "example": "Her reputation remained unsullied despite the scandal surrounding her colleagues.",
+    "roots": "un-（不）+ sullied（被玷污的，古法文 souiller 弄髒）→ 保持純淨、未被污染"
+  },
+  {
+    "word": "unswerving",
+    "pos": "adj.",
+    "meaning": "不偏離的、堅定不移的",
+    "example": "He showed unswerving loyalty to his old friend, even in hard times.",
+    "roots": "un-（不）+ swerving（偏離的，swerve 轉向 衍生）→ 始終朝同一方向、不偏移"
+  },
+  {
+    "word": "untenable",
+    "pos": "adj.",
+    "meaning": "站不住腳的、無法維持的（立場）",
+    "example": "His position on the issue became untenable after the new data was released.",
+    "roots": "un-（不）+ tenable（可持守的，見 tenable 詞條）→ 無法防守或維持的立場"
+  },
+  {
+    "word": "untoward",
+    "pos": "adj.",
+    "meaning": "不合時宜的、不幸的",
+    "example": "Nothing untoward happened during the otherwise routine inspection.",
+    "roots": "un-（不）+ toward（順利的、朝向的）→ 不順利、不吉利的"
+  },
+  {
+    "word": "untrammeled",
+    "pos": "adj.",
+    "meaning": "不受限制的、自由自在的",
+    "example": "The artist enjoyed untrammeled creative freedom in this project.",
+    "roots": "un-（不）+ trammel（漁網、束縛工具，古法文 tremail 三層網）→ 不受網羅束縛，形容自由"
+  },
+  {
+    "word": "unvarnished",
+    "pos": "adj.",
+    "meaning": "未加修飾的、坦率的（真相）",
+    "example": "She gave him the unvarnished truth about his chances of success.",
+    "roots": "un-（不）+ varnished（上光漆的，varnish 衍生）→ 沒有粉飾、原原本本的"
+  },
+  {
+    "word": "unwarranted",
+    "pos": "adj.",
+    "meaning": "無正當理由的、不應該的",
+    "example": "His harsh criticism of the intern was completely unwarranted.",
+    "roots": "un-（不）+ warranted（有正當理由的，warrant 保證、授權 衍生）→ 沒有正當依據支持的"
+  },
+  {
+    "word": "unwavering",
+    "pos": "adj.",
+    "meaning": "堅定不移的",
+    "example": "Her unwavering support helped him through the most difficult period of his life.",
+    "roots": "un-（不）+ wavering（動搖的，wave 波動 衍生）→ 從不動搖、始終如一"
+  },
+  {
+    "word": "unwieldy",
+    "pos": "adj.",
+    "meaning": "笨重的、難以操控的",
+    "example": "The old printer was too unwieldy to fit on the small desk.",
+    "roots": "un-（不）+ wieldy（易操縱的，wield 揮動、操控 衍生）→ 難以搬動或掌控的"
+  },
+  {
+    "word": "unwitting",
+    "pos": "adj.",
+    "meaning": "不知情的、無意的",
+    "example": "She became an unwitting accomplice to the crime.",
+    "roots": "un-（不）+ witting（知曉的，古英文 witan 知道）→ 在不知情的情況下涉入某事"
+  },
+  {
+    "word": "unyielding",
+    "pos": "adj.",
+    "meaning": "不屈服的、堅定不移的",
+    "example": "He remained unyielding in his demand for a fair trial.",
+    "roots": "un-（不）+ yielding（讓步的，yield 衍生）→ 不向壓力低頭"
+  },
+  {
+    "word": "upbraid",
+    "pos": "v.",
+    "meaning": "嚴厲斥責",
+    "example": "The coach upbraided the team for their lack of effort.",
+    "roots": "源自古英文 upbregdan（up 向上 + bregdan 猛拉、責備）→ 拉起來當眾責罵"
+  },
+  {
+    "word": "upheaval",
+    "pos": "n.",
+    "meaning": "劇變、動盪",
+    "example": "The country experienced tremendous social upheaval during the revolution.",
+    "roots": "up（向上）+ heaval（舉起，heave 衍生）→ 猛烈地被掀起，引申為劇烈變動"
+  },
+  {
+    "word": "uproarious",
+    "pos": "adj.",
+    "meaning": "喧鬧的、極其滑稽的",
+    "example": "The comedian's uproarious jokes had the whole audience in stitches.",
+    "roots": "uproar（喧鬧，可能源自荷蘭文 oproer 騷動）+ -ious（形容詞後綴）→ 引發哄堂大笑或喧嘩的"
+  },
+  {
+    "word": "upshot",
+    "pos": "n.",
+    "meaning": "結果、結論",
+    "example": "The upshot of the meeting was that the project would be delayed by a month.",
+    "roots": "up（最終）+ shot（射擊，原指射箭比賽的最後一箭）→ 最終得出的結果"
+  },
+  {
+    "word": "urbane",
+    "pos": "adj.",
+    "meaning": "溫文儒雅的、有教養的",
+    "example": "The ambassador's urbane manner put everyone at ease.",
+    "roots": "源自拉丁文 urbanus（城市的，urbs 城市 衍生）→ 具有都市人般的教養與圓熟"
+  },
+  {
+    "word": "usurp",
+    "pos": "v.",
+    "meaning": "篡奪、奪取權力",
+    "example": "The general usurped the throne after the king's sudden death.",
+    "roots": "源自拉丁文 usurpare（擅自使用，usu 使用 + rapere 奪取）→ 非法奪取他人的地位或權力"
+  },
+  {
+    "word": "utilitarian",
+    "pos": "adj.",
+    "meaning": "實用主義的、功利的",
+    "example": "The building's utilitarian design prioritized function over beauty.",
+    "roots": "源自拉丁文 utilis（有用的）+ -arian（…主義者）→ 以實用效益為最高考量的"
+  },
+  {
+    "word": "utopian",
+    "pos": "adj.",
+    "meaning": "烏托邦式的、空想的",
+    "example": "Critics dismissed the plan as a utopian fantasy with no practical basis.",
+    "roots": "源自希臘文 ou（不）+ topos（地方），Thomas More 於1516年造字 Utopia（烏有之鄉）→ 理想但不切實際的"
+  },
+  {
+    "word": "vacillate",
+    "pos": "v.",
+    "meaning": "猶豫不決、搖擺不定",
+    "example": "He vacillated between the two job offers for weeks before deciding.",
+    "roots": "源自拉丁文 vacillare（搖晃、動搖）→ 心意來回搖擺不定"
+  },
+  {
+    "word": "vacuous",
+    "pos": "adj.",
+    "meaning": "空洞的、缺乏思想內容的",
+    "example": "Her vacuous stare suggested she wasn't listening at all.",
+    "roots": "源自拉丁文 vacuus（空的）→ 內容或思想空洞"
+  },
+  {
+    "word": "vagary",
+    "pos": "n.",
+    "meaning": "反覆無常的行為、變幻莫測",
+    "example": "Farmers must contend with the vagaries of the weather.",
+    "roots": "源自拉丁文 vagari（漫遊、遊蕩）→ 如遊走般難以預測的變化"
+  },
+  {
+    "word": "vagrant",
+    "pos": "n./adj.",
+    "meaning": "流浪者（的）、漂泊不定的",
+    "example": "The city passed new laws targeting vagrants sleeping in public parks.",
+    "roots": "同 vagary 字源（拉丁文 vagari，漫遊）→ 四處遊蕩、居無定所的人"
+  },
+  {
+    "word": "valedictory",
+    "pos": "adj./n.",
+    "meaning": "告別的、畢業致詞",
+    "example": "She delivered the valedictory address at her high school graduation.",
+    "roots": "源自拉丁文 vale（再見）+ dicere（說）→ 說出告別話語的"
+  },
+  {
+    "word": "valorous",
+    "pos": "adj.",
+    "meaning": "英勇的、勇敢的",
+    "example": "The valorous soldiers held the line despite overwhelming odds.",
+    "roots": "源自拉丁文 valor（價值、勇氣，valere 有力量 衍生）→ 展現極高勇氣的"
+  },
+  {
+    "word": "vanguard",
+    "pos": "n.",
+    "meaning": "先鋒、前衛",
+    "example": "The company has positioned itself at the vanguard of renewable energy technology.",
+    "roots": "源自古法文 avant-garde（avant 之前 + garde 守衛）→ 走在最前方的部隊或群體"
+  },
+  {
+    "word": "vanquish",
+    "pos": "v.",
+    "meaning": "徹底擊敗、征服",
+    "example": "The champion vanquished all challengers in the tournament.",
+    "roots": "源自拉丁文 vincere（征服，過去分詞 victus）→ 完全打敗對手"
+  },
+  {
+    "word": "vantage",
+    "pos": "n.",
+    "meaning": "有利位置、優勢視角",
+    "example": "From their vantage point on the hill, they could see the entire valley.",
+    "roots": "源自古法文 avantage（優勢，avant 之前 衍生）→ 佔據有利的觀察或競爭位置"
+  },
+  {
+    "word": "vapid",
+    "pos": "adj.",
+    "meaning": "乏味的、無趣的",
+    "example": "The conversation at the party was vapid and forgettable.",
+    "roots": "源自拉丁文 vapidus（走味的，原指沒有氣泡的酒）→ 索然無味、缺乏活力"
+  },
+  {
+    "word": "variegated",
+    "pos": "adj.",
+    "meaning": "多彩斑駁的、多樣化的",
+    "example": "The garden was filled with variegated tulips of every color.",
+    "roots": "源自拉丁文 varius（多樣的）+ agere（使…）→ 呈現多種顏色或形式"
+  },
+  {
+    "word": "vaunt",
+    "pos": "v.",
+    "meaning": "誇耀、吹噓",
+    "example": "The city vaunts its rich cultural heritage in every tourism brochure.",
+    "roots": "源自拉丁文 vanus（空虛的、自負的）→ 誇大地展示自己"
+  },
+  {
+    "word": "vehement",
+    "pos": "adj.",
+    "meaning": "強烈的、激烈的",
+    "example": "She raised vehement objections to the proposed changes.",
+    "roots": "源自拉丁文 vehemens（猛烈的，可能與 vehere 運載 有關，指驅使的力量）→ 情感或態度極其強烈"
+  },
+  {
+    "word": "velleity",
+    "pos": "n.",
+    "meaning": "微弱的意願、無意付諸行動的念頭",
+    "example": "His interest in learning French remained a mere velleity, never translated into actual study.",
+    "roots": "源自拉丁文 velle（想要）→ 想要的程度極其微弱、幾乎等於零"
+  },
+  {
+    "word": "venal",
+    "pos": "adj.",
+    "meaning": "貪贓枉法的、可收買的",
+    "example": "The venal official accepted bribes from anyone willing to pay.",
+    "roots": "源自拉丁文 venalis（待售的，venum 出售 衍生）→ 為錢可被收買的"
+  },
+  {
+    "word": "veneer",
+    "pos": "n.",
+    "meaning": "表面裝飾、虛假的外表",
+    "example": "Beneath his charming veneer lay a ruthless ambition.",
+    "roots": "源自法文 fournir（提供、裝備），經德文轉入英文指薄木片貼面 → 覆蓋在表面的一層裝飾，引申為假象"
+  },
+  {
+    "word": "venerable",
+    "pos": "adj.",
+    "meaning": "受尊崇的、德高望重的",
+    "example": "The venerable professor had taught at the university for over forty years.",
+    "roots": "源自拉丁文 venerari（尊敬、崇拜）→ 因年高德劭而受人敬重"
+  },
+  {
+    "word": "venerate",
+    "pos": "v.",
+    "meaning": "崇敬、敬仰",
+    "example": "Many cultures venerate their ancestors through annual rituals.",
+    "roots": "同 venerable 字源（拉丁文 venerari）→ 以極高的敬意對待"
+  },
+  {
+    "word": "venial",
+    "pos": "adj.",
+    "meaning": "可原諒的、輕微的（過錯）",
+    "example": "Forgetting to reply to an email is a venial offense, not a serious one.",
+    "roots": "源自拉丁文 venia（寬恕）→ 可以被寬恕的輕微過失"
+  },
+  {
+    "word": "veracious",
+    "pos": "adj.",
+    "meaning": "誠實的、真實可信的",
+    "example": "A veracious witness is essential for a fair trial.",
+    "roots": "源自拉丁文 verax（說真話的，verus 真實 衍生）→ 說真話、可信的"
+  },
+  {
+    "word": "veracity",
+    "pos": "n.",
+    "meaning": "真實性、誠實",
+    "example": "Journalists must verify the veracity of their sources before publishing.",
+    "roots": "同 veracious 字源（拉丁文 verus，真實）+ -ity（名詞後綴）→ 陳述或人的真實可信度"
+  },
+  {
+    "word": "verbatim",
+    "pos": "adv./adj.",
+    "meaning": "逐字地、一字不差地",
+    "example": "She recited the poem verbatim, without missing a single word.",
+    "roots": "源自拉丁文 verbum（字）→ 一字一句照原樣"
+  },
+  {
+    "word": "verbiage",
+    "pos": "n.",
+    "meaning": "冗詞贅句、累贅的措辭",
+    "example": "The contract was full of legal verbiage that confused most readers.",
+    "roots": "源自法文 verbe（動詞、詞語，拉丁文 verbum）→ 過多而不必要的文字"
+  },
+  {
+    "word": "verbose",
+    "pos": "adj.",
+    "meaning": "冗長的、囉唆的",
+    "example": "His verbose emails often buried the important information under unnecessary detail.",
+    "roots": "源自拉丁文 verbosus（多字的，verbum 字 衍生）→ 用字過多、不簡潔"
+  },
+  {
+    "word": "verboten",
+    "pos": "adj.",
+    "meaning": "被禁止的（尤指權威明令禁止）",
+    "example": "Discussing salaries with colleagues was practically verboten at the firm.",
+    "roots": "源自德文 verboten（禁止的，過去分詞）→ 借自德語，強調由權威明令禁止"
+  },
+  {
+    "word": "verdant",
+    "pos": "adj.",
+    "meaning": "翠綠的、青翠茂盛的",
+    "example": "The hikers admired the verdant hills stretching to the horizon.",
+    "roots": "源自拉丁文 viridis（綠色的）→ 生機盎然的翠綠色"
+  },
+  {
+    "word": "verdure",
+    "pos": "n.",
+    "meaning": "蒼翠、翠綠植物",
+    "example": "The valley was covered in lush verdure after weeks of spring rain.",
+    "roots": "源自拉丁文 viridis（綠色的），與 verdant 同源 → 茂盛翠綠的植被"
+  },
+  {
+    "word": "verge",
+    "pos": "n.",
+    "meaning": "邊緣、瀕臨",
+    "example": "The company was on the verge of bankruptcy before the last-minute investment.",
+    "roots": "源自拉丁文 virga（枝條、邊界棍）→ 事物的邊界或臨界點"
+  },
+  {
+    "word": "verisimilitude",
+    "pos": "n.",
+    "meaning": "逼真、擬真性",
+    "example": "The director insisted on historical verisimilitude in every costume and prop.",
+    "roots": "源自拉丁文 verum（真實）+ similis（相似的）→ 看起來像真的一樣"
+  },
+  {
+    "word": "veritable",
+    "pos": "adj.",
+    "meaning": "名副其實的、真正的",
+    "example": "The buffet was a veritable feast of international cuisine.",
+    "roots": "源自拉丁文 veritas（真理、真實）→ 確實名符其實的"
+  },
+  {
+    "word": "verity",
+    "pos": "n.",
+    "meaning": "真理、真實的事",
+    "example": "The verities of human nature remain unchanged across centuries.",
+    "roots": "源自拉丁文 veritas（真理）→ 被公認為真實的原則"
+  },
+  {
+    "word": "vernacular",
+    "pos": "n./adj.",
+    "meaning": "本地語言、通俗用語（的）",
+    "example": "The poet chose to write in the vernacular rather than formal Latin.",
+    "roots": "源自拉丁文 vernaculus（本地的、家生的，verna 家奴 衍生）→ 當地日常使用的語言"
+  },
+  {
+    "word": "vernal",
+    "pos": "adj.",
+    "meaning": "春天的、春天般的",
+    "example": "The vernal equinox marks the official beginning of spring.",
+    "roots": "源自拉丁文 ver（春天）→ 與春天相關的"
+  },
+  {
+    "word": "versatile",
+    "pos": "adj.",
+    "meaning": "多才多藝的、用途廣泛的",
+    "example": "The versatile actor is equally convincing in comedy and tragedy.",
+    "roots": "源自拉丁文 versare（轉動、改變）→ 能靈活轉換適應多種情況"
+  },
+  {
+    "word": "vertiginous",
+    "pos": "adj.",
+    "meaning": "令人暈眩的、極不穩定的",
+    "example": "The stock market's vertiginous swings left investors anxious.",
+    "roots": "源自拉丁文 vertere（轉動）→ 如旋轉般令人頭暈目眩"
+  },
+  {
+    "word": "vestige",
+    "pos": "n.",
+    "meaning": "痕跡、遺跡",
+    "example": "Only a few vestiges of the ancient civilization remain today.",
+    "roots": "源自拉丁文 vestigium（足跡）→ 事物留下的殘存痕跡"
+  },
+  {
+    "word": "vestigial",
+    "pos": "adj.",
+    "meaning": "退化的、殘存的",
+    "example": "The appendix is often considered a vestigial organ in humans.",
+    "roots": "同 vestige 字源（拉丁文 vestigium）+ -ial（形容詞後綴）→ 逐漸退化只留下痕跡的"
+  },
+  {
+    "word": "vex",
+    "pos": "v.",
+    "meaning": "使煩惱、使困擾",
+    "example": "The unanswered question continued to vex the researchers for years.",
+    "roots": "源自拉丁文 vexare（搖晃、使苦惱）→ 反覆攪擾使人心煩"
+  },
+  {
+    "word": "vexatious",
+    "pos": "adj.",
+    "meaning": "惱人的、令人苦惱的",
+    "example": "The neighbor filed a vexatious lawsuit purely to harass the family.",
+    "roots": "同 vex 字源（拉丁文 vexare）+ -ious（形容詞後綴）→ 帶來麻煩與困擾的"
+  },
+  {
+    "word": "vicarious",
+    "pos": "adj.",
+    "meaning": "替代性的、間接體驗的",
+    "example": "She got a vicarious thrill from watching her daughter perform on stage.",
+    "roots": "源自拉丁文 vicarius（代理的，vicis 更替 衍生）→ 透過他人經驗間接感受"
+  },
+  {
+    "word": "vicissitude",
+    "pos": "n.",
+    "meaning": "人生、命運的變遷起伏",
+    "example": "Despite the vicissitudes of fortune, she never lost her optimism.",
+    "roots": "同 vicarious 字源（拉丁文 vicis，更替）→ 生命中交替出現的起落變化"
+  },
+  {
+    "word": "vigilant",
+    "pos": "adj.",
+    "meaning": "警惕的、留心的",
+    "example": "Parents must remain vigilant when their children are near water.",
+    "roots": "源自拉丁文 vigil（清醒的、警覺的）→ 保持清醒警覺的狀態"
+  },
+  {
+    "word": "vignette",
+    "pos": "n.",
+    "meaning": "小插曲、短篇描寫",
+    "example": "The novel is composed of a series of vignettes rather than a single continuous plot.",
+    "roots": "源自法文 vigne（葡萄藤），原指手稿裝飾用的藤蔓花紋，引申為簡短片段 → 精緻的小片段描繪"
+  },
+  {
+    "word": "vilify",
+    "pos": "v.",
+    "meaning": "誹謗、詆毀",
+    "example": "The press unfairly vilified the scientist after her controversial statement.",
+    "roots": "源自拉丁文 vilis（低賤的）+ facere（使）→ 使人變得卑劣不堪，即抹黑"
+  },
+  {
+    "word": "vindicate",
+    "pos": "v.",
+    "meaning": "證明清白、為…辯護",
+    "example": "New DNA evidence eventually vindicated the man wrongly convicted decades earlier.",
+    "roots": "源自拉丁文 vindicare（主張、聲索權利，vis 力量 + dicare 宣布）→ 透過證據宣告清白或正當"
+  },
+  {
+    "word": "vindictive",
+    "pos": "adj.",
+    "meaning": "報復心強的、懷恨在心的",
+    "example": "His vindictive nature made him hold grudges for years.",
+    "roots": "同 vindicate 字源（拉丁文 vindicare）→ 執意要討回公道，引申為報復心強"
+  },
+  {
+    "word": "violable",
+    "pos": "adj.",
+    "meaning": "可能被侵犯的、易受破壞的",
+    "example": "Even sacred treaties proved violable in times of war.",
+    "roots": "源自拉丁文 violare（侵犯、褻瀆）+ -able（可…的）→ 有可能遭到破壞或侵犯的"
+  },
+  {
+    "word": "virtuoso",
+    "pos": "n.",
+    "meaning": "藝術、技藝的大師、名家",
+    "example": "The young pianist performed like a virtuoso far beyond her years.",
+    "roots": "源自義大利文 virtuoso（有德行的、有技藝的，拉丁文 virtus 德行、能力）→ 技藝超群的人"
+  },
+  {
+    "word": "virulent",
+    "pos": "adj.",
+    "meaning": "劇毒的、極具惡意的",
+    "example": "The virus proved far more virulent than initial reports suggested.",
+    "roots": "源自拉丁文 virus（毒液）+ -ulent（充滿…的）→ 毒性強烈或惡意猛烈的"
+  },
+  {
+    "word": "visage",
+    "pos": "n.",
+    "meaning": "面容、外貌",
+    "example": "His stern visage betrayed no hint of the joy he felt inside.",
+    "roots": "源自古法文 vis（臉，拉丁文 visus 視覺 衍生）→ 一個人的臉部樣貌"
+  },
+  {
+    "word": "visceral",
+    "pos": "adj.",
+    "meaning": "發自內心的、直覺的",
+    "example": "She felt a visceral disgust at the sight of the crime scene.",
+    "roots": "源自拉丁文 viscera（內臟）→ 源自身體深處、本能的反應"
+  },
+  {
+    "word": "viscous",
+    "pos": "adj.",
+    "meaning": "黏稠的",
+    "example": "The honey was too viscous to pour easily in the cold weather.",
+    "roots": "源自拉丁文 viscum（槲寄生漿果，古代用來製作黏膠）→ 具有黏稠性質的"
+  },
+  {
+    "word": "visionary",
+    "pos": "n./adj.",
+    "meaning": "有遠見的（人）、空想的",
+    "example": "The visionary founder imagined a world connected entirely by his technology.",
+    "roots": "vision（視野、願景，拉丁文 videre 看）+ -ary（…的人）→ 能看見未來可能性的人"
+  },
+  {
+    "word": "vista",
+    "pos": "n.",
+    "meaning": "遼闊的景色、展望",
+    "example": "The mountaintop offered a breathtaking vista of the valley below.",
+    "roots": "源自義大利文 vista（視野，拉丁文 videre 看 衍生）→ 一覽無遺的開闊景色"
+  },
+  {
+    "word": "vitiate",
+    "pos": "v.",
+    "meaning": "削弱、損害效力或價值",
+    "example": "The contract was vitiated by the fraudulent terms hidden within it.",
+    "roots": "源自拉丁文 vitiare（使有缺陷，vitium 缺陷 衍生）→ 使原本有效的事物出現缺陷而失效"
+  },
+  {
+    "word": "vitriolic",
+    "pos": "adj.",
+    "meaning": "尖酸刻薄的、充滿怨毒的（言語）",
+    "example": "The critic's vitriolic review devastated the young author.",
+    "roots": "源自拉丁文 vitriolum（硫酸鹽，具腐蝕性）→ 如硫酸般具腐蝕性的言語"
+  },
+  {
+    "word": "vituperate",
+    "pos": "v.",
+    "meaning": "辱罵、痛斥",
+    "example": "The senator vituperated against his opponent in increasingly personal terms.",
+    "roots": "源自拉丁文 vituperare（責備，vitium 缺陷 + parare 準備、指出）→ 猛烈指責他人的過錯"
+  },
+  {
+    "word": "vivify",
+    "pos": "v.",
+    "meaning": "使有活力、賦予生氣",
+    "example": "The bright colors and lively music vivified the otherwise dull festival.",
+    "roots": "源自拉丁文 vivus（活的）+ facere（使）→ 使變得有生命力"
+  },
+  {
+    "word": "vociferous",
+    "pos": "adj.",
+    "meaning": "大聲疾呼的、喧鬧的",
+    "example": "A small but vociferous group of protesters gathered outside city hall.",
+    "roots": "源自拉丁文 vox（聲音）+ ferre（帶來）→ 大聲表達，聲音四處傳播"
+  },
+  {
+    "word": "volatile",
+    "pos": "adj.",
+    "meaning": "易變的、不穩定的、易揮發的",
+    "example": "The volatile stock market made investors extremely nervous.",
+    "roots": "源自拉丁文 volare（飛）→ 像會飛走般容易變化或消散"
+  },
+  {
+    "word": "volition",
+    "pos": "n.",
+    "meaning": "意志、自主意願",
+    "example": "She left the company entirely of her own volition.",
+    "roots": "源自拉丁文 velle（想要，volo 我想要）→ 出於自己意願的選擇"
+  },
+  {
+    "word": "voluble",
+    "pos": "adj.",
+    "meaning": "健談的、滔滔不絕的",
+    "example": "The voluble tour guide kept up a constant stream of commentary.",
+    "roots": "源自拉丁文 volvere（滾動、轉動）→ 話語如滾動般源源不絕"
+  },
+  {
+    "word": "voluminous",
+    "pos": "adj.",
+    "meaning": "大量的、篇幅浩大的",
+    "example": "The historian left behind voluminous notes documenting decades of research.",
+    "roots": "源自拉丁文 volumen（卷軸、書卷，volvere 捲 衍生）→ 內容或體積龐大如許多卷書"
+  },
+  {
+    "word": "voluptuary",
+    "pos": "n.",
+    "meaning": "縱情享樂者、耽於逸樂之人",
+    "example": "The aging voluptuary spent his fortune on fine wine and lavish parties.",
+    "roots": "源自拉丁文 voluptas（快感、享樂）→ 沉溺於感官享樂的人"
+  },
+  {
+    "word": "voracious",
+    "pos": "adj.",
+    "meaning": "貪吃的、如飢似渴的（求知等）",
+    "example": "He has been a voracious reader since childhood.",
+    "roots": "源自拉丁文 vorare（狼吞虎嚥）→ 極度渴望、貪婪地攝取"
+  },
+  {
+    "word": "votary",
+    "pos": "n.",
+    "meaning": "忠實信徒、狂熱愛好者",
+    "example": "As a votary of classical music, she rarely missed a symphony performance.",
+    "roots": "源自拉丁文 votum（誓言、許願，vovere 發誓 衍生）→ 對某事物許下忠誠的信奉者"
+  },
+  {
+    "word": "vouchsafe",
+    "pos": "v.",
+    "meaning": "恩賜、屈尊給予",
+    "example": "The king vouchsafed a rare audience to the humble farmer.",
+    "roots": "vouch（擔保，古法文 vocare 召喚、保證）+ safe（安全地）→ 以保證的方式賜予，帶有居高臨下的恩惠意味"
+  },
+  {
+    "word": "vulpine",
+    "pos": "adj.",
+    "meaning": "狐狸般的、狡猾的",
+    "example": "His vulpine smile made her suspicious of his true intentions.",
+    "roots": "源自拉丁文 vulpes（狐狸）→ 具有狐狸般的狡猾特質"
+  }
+]
