@@ -1484,18 +1484,18 @@
     "roots": "com- (一起) + pend (稱重，拉丁文 pendere) → 把大量內容濃縮秤量成精簡摘要"
   },
   {
-    "word": "complacent",
-    "pos": "adj.",
-    "meaning": "自滿的、沾沾自喜的",
-    "example": "After three championship wins, the team grew complacent and lost focus.",
-    "roots": "com- (加強) + placent (使高興的，拉丁文 placere) → 對現狀過度滿意而失去警覺"
-  },
-  {
     "word": "complacency",
     "pos": "n.",
     "meaning": "自滿、自鳴得意",
     "example": "Years of market dominance bred a dangerous complacency within the company's leadership.",
     "roots": "同 complacent 字源 + -cy (名詞後綴) → 滿足現狀而不思進取的狀態"
+  },
+  {
+    "word": "complacent",
+    "pos": "adj.",
+    "meaning": "自滿的、沾沾自喜的",
+    "example": "After three championship wins, the team grew complacent and lost focus.",
+    "roots": "com- (加強) + placent (使高興的，拉丁文 placere) → 對現狀過度滿意而失去警覺"
   },
   {
     "word": "complaisant",
@@ -1526,18 +1526,18 @@
     "roots": "com- (加強) + pli (彎折，拉丁文 plicare) + -ant (形容詞後綴) → 願意彎折順應規定的"
   },
   {
-    "word": "compliment",
-    "pos": "v./n.",
-    "meaning": "稱讚、恭維",
-    "example": "She complimented the chef on the exquisite presentation of every dish.",
-    "roots": "com- (加強) + pli (填滿，拉丁文 complere) → 表達滿意讚賞之意(與 complement 為常見混淆字對)"
-  },
-  {
     "word": "complicity",
     "pos": "n.",
     "meaning": "共謀、牽連(於不法行為)",
     "example": "Evidence suggested the manager's complicity in covering up the accounting fraud.",
     "roots": "com- (一起) + plic (摺疊、糾纏，拉丁文 plicare) + -ity (名詞後綴) → 與不法行為牽扯糾纏在一起"
+  },
+  {
+    "word": "compliment",
+    "pos": "v./n.",
+    "meaning": "稱讚、恭維",
+    "example": "She complimented the chef on the exquisite presentation of every dish.",
+    "roots": "com- (加強) + pli (填滿，拉丁文 complere) → 表達滿意讚賞之意(與 complement 為常見混淆字對)"
   },
   {
     "word": "comport",
@@ -1813,18 +1813,18 @@
     "roots": "源自法文 connaisseur (知曉者，connaître 知道) → 對特定領域有精深鑑賞力的人"
   },
   {
-    "word": "connote",
-    "pos": "v.",
-    "meaning": "隱含、暗示(某種意涵)",
-    "example": "The word \"home\" connotes warmth and comfort far beyond its literal meaning of a dwelling.",
-    "roots": "con- (一起) + note (標記，拉丁文 notare) → 附帶在字面意義之外的隱含意味"
-  },
-  {
     "word": "connotation",
     "pos": "n.",
     "meaning": "隱含意義、言外之意",
     "example": "\"Cheap\" and \"frugal\" share a similar denotation but carry very different connotations.",
     "roots": "同 connote 字源 + -ation (名詞後綴) → 詞語附帶的言外之意"
+  },
+  {
+    "word": "connote",
+    "pos": "v.",
+    "meaning": "隱含、暗示(某種意涵)",
+    "example": "The word \"home\" connotes warmth and comfort far beyond its literal meaning of a dwelling.",
+    "roots": "con- (一起) + note (標記，拉丁文 notare) → 附帶在字面意義之外的隱含意味"
   },
   {
     "word": "conscientious",
@@ -1974,18 +1974,18 @@
     "roots": "con- (一起) + tig (接觸，拉丁文 tangere) + -uous (形容詞後綴) → 邊界彼此接觸相連的"
   },
   {
-    "word": "contingent",
-    "pos": "adj./n.",
-    "meaning": "視情況而定的；(引申)一支代表隊、隊伍",
-    "example": "Her acceptance of the job offer was contingent on the company agreeing to remote work.",
-    "roots": "con- (一起) + tingent (接觸，拉丁文 tangere) → 取決於某個接觸點或條件是否成立"
-  },
-  {
     "word": "continence",
     "pos": "n.",
     "meaning": "自制、節制(尤指慾望)",
     "example": "The monk's lifelong continence extended to food, sleep, and speech alike.",
     "roots": "con- (一起) + tine (拿、保持，拉丁文 tenere) + -ence (名詞後綴) → 把自己的慾望控制住的能力"
+  },
+  {
+    "word": "contingent",
+    "pos": "adj./n.",
+    "meaning": "視情況而定的；(引申)一支代表隊、隊伍",
+    "example": "Her acceptance of the job offer was contingent on the company agreeing to remote work.",
+    "roots": "con- (一起) + tingent (接觸，拉丁文 tangere) → 取決於某個接觸點或條件是否成立"
   },
   {
     "word": "continuum",
