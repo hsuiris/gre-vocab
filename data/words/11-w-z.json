@@ -1,0 +1,359 @@
+[
+  {
+    "word": "waffle",
+    "pos": "v.",
+    "meaning": "支吾其詞、(在立場上)搖擺不定",
+    "example": "The senator kept waffling on the tax proposal instead of taking a clear position.",
+    "roots": "非拉丁字根字，一般認為源自英國方言 waff（狗吠）+ -le（表重複動作的字尾）→ 反覆搖擺不定；與鬆餅 waffle（源自荷蘭文 wafel）為同形異義詞"
+  },
+  {
+    "word": "waft",
+    "pos": "v.",
+    "meaning": "(氣味、聲音)輕柔地飄盪、飄送",
+    "example": "The smell of fresh bread wafted through the open kitchen window.",
+    "roots": "源自中古荷蘭文 wachter（護航者），原指船隻護送前行，後轉指氣味、聲音等輕柔飄送的動作"
+  },
+  {
+    "word": "waggish",
+    "pos": "adj.",
+    "meaning": "詼諧的、愛開玩笑的",
+    "example": "His waggish sense of humor made even the dullest meetings bearable.",
+    "roots": "wag（愛開玩笑的人，字源不完全確定，可能與動詞 wag「搖動」有關）+ -ish（形容詞後綴，表帶有...特質）→ 帶有逗趣捉弄人特質的"
+  },
+  {
+    "word": "waive",
+    "pos": "v.",
+    "meaning": "放棄(權利)、不予堅持",
+    "example": "The university agreed to waive the application fee for low-income students.",
+    "roots": "源自古法文 weyver，與古北歐語 veifa（搖動、擺動）同源，也與 waif（棄兒、無主之物）同源 → 表示棄置不顧、放棄權利"
+  },
+  {
+    "word": "wan",
+    "pos": "adj.",
+    "meaning": "(臉色)蒼白病懨的；(光線)微弱黯淡的",
+    "example": "After weeks in the hospital, his face looked wan and hollow.",
+    "roots": "源自古英文 wann（原意為陰暗），後轉為形容面色蒼白，屬英語本土詞彙，無法以拉丁字根拆解"
+  },
+  {
+    "word": "wane",
+    "pos": "v.",
+    "meaning": "(月)漸虧；逐漸減弱、衰退",
+    "example": "Public interest in the scandal began to wane after a few weeks.",
+    "roots": "源自古英文 wanian（減少），與德文 wenig（少量）同源，屬英語本土詞彙"
+  },
+  {
+    "word": "wangle",
+    "pos": "v.",
+    "meaning": "用計謀取得、耍手段弄到手",
+    "example": "She managed to wangle an invitation to the exclusive gala through an old friend.",
+    "roots": "字源不完全確定，一般認為源自二十世紀初英國印刷業俚語，可能是 waggle（搖擺）的變體，引申為以巧妙手段取得"
+  },
+  {
+    "word": "wanton",
+    "pos": "adj.",
+    "meaning": "肆意妄為的、毫無節制的；放蕩的",
+    "example": "The court condemned the company's wanton disregard for worker safety.",
+    "roots": "wan-（缺乏，古英文字首，如 want）+ towen（togen 的變體，「受過訓練的」過去分詞，源自古英文 teon 訓練）→ 未受管教、缺乏約束的"
+  },
+  {
+    "word": "warble",
+    "pos": "v.",
+    "meaning": "(鳥)婉轉鳴唱、以顫音歌唱",
+    "example": "A thrush warbled cheerfully somewhere in the hedgerow.",
+    "roots": "源自古北法文 werbler，與日耳曼語 hwirbil（旋轉、迴旋）同源 → 聲音迴旋婉轉，引申為顫音歌唱"
+  },
+  {
+    "word": "warrant",
+    "pos": "v.",
+    "meaning": "使有正當理由、足以構成...的理由",
+    "example": "The evidence was not strong enough to warrant a full criminal investigation.",
+    "roots": "源自古法文 warant（保證人），與英文 ward、guard（守衛、保證）同源 → 提供保證、使有正當理由"
+  },
+  {
+    "word": "wary",
+    "pos": "adj.",
+    "meaning": "謹慎小心的、提防警惕的",
+    "example": "Investors have grown wary of companies that refuse to disclose their finances.",
+    "roots": "源自古英文 wær（謹慎的）+ -y（形容詞字尾），與 aware、beware 同源 → 保持警覺、謹慎小心"
+  },
+  {
+    "word": "waspish",
+    "pos": "adj.",
+    "meaning": "易怒的、尖酸刻薄的",
+    "example": "The critic was known for his waspish remarks about young playwrights.",
+    "roots": "wasp（黃蜂，以螫人著稱）+ -ish（形容詞後綴，表帶有...特質）→ 如黃蜂螫人般尖酸易怒的"
+  },
+  {
+    "word": "wastrel",
+    "pos": "n.",
+    "meaning": "揮霍浪費的人、遊手好閒者",
+    "example": "His grandfather considered him a wastrel who had squandered the family fortune.",
+    "roots": "waste（浪費，源自拉丁文 vastare 使荒蕪）+ -rel（帶輕蔑意味的名詞後綴，如 scoundrel）→ 揮霍度日、無所事事的人"
+  },
+  {
+    "word": "wax",
+    "pos": "v.",
+    "meaning": "(逐漸)增長、變強，與 wane(漸弱)相對",
+    "example": "As the campaign progressed, his confidence began to wax while his rival's began to wane.",
+    "roots": "源自古英文 weaxan（生長），與德文 wachsen 同源，屬英語本土詞彙，與蠟燭的「蠟」為同形異義詞"
+  },
+  {
+    "word": "wayward",
+    "pos": "adj.",
+    "meaning": "任性難管束的、悖離常軌的",
+    "example": "The novel follows a wayward teenager who runs away from a strict boarding school.",
+    "roots": "way（away 的縮略，離去之意）+ -ward（表方向的後綴）→ 原意「朝反方向而行」，引申為任性難管束的"
+  },
+  {
+    "word": "wean",
+    "pos": "v.",
+    "meaning": "使斷奶；使逐漸戒除(依賴、習慣)",
+    "example": "The government hopes to wean the economy off its dependence on oil exports.",
+    "roots": "源自古英文 wenian（使習慣於），與德文 gewöhnen（使習慣）同源，原指讓嬰兒習慣新的飲食方式即斷奶，後引申為使戒除依賴"
+  },
+  {
+    "word": "welter",
+    "pos": "n.",
+    "meaning": "混亂雜陳的一大團、大量雜物",
+    "example": "Buried under a welter of paperwork, she could barely find her own desk.",
+    "roots": "源自中古荷蘭文 welteren（翻滾），與英文 wallow（打滾）同源 → 混亂翻攪成一團的狀態"
+  },
+  {
+    "word": "wend",
+    "pos": "v.",
+    "meaning": "(緩緩)前行、行進，常用於 wend one's way",
+    "example": "The pilgrims wended their way slowly up the mountain path to the temple.",
+    "roots": "源自古英文 wendan（轉向、前行），現代英文 go 的過去式 went 即源自此字 → 緩緩前行、踏上旅途"
+  },
+  {
+    "word": "wheedle",
+    "pos": "v.",
+    "meaning": "用甜言蜜語哄騙、勸誘",
+    "example": "The child wheedled an extra cookie out of her grandmother with a well-timed pout.",
+    "roots": "字源不完全確定，一般認為可能源自德文 wedeln（如狗搖尾巴般諂媚討好）→ 以奉承話語哄騙他人"
+  },
+  {
+    "word": "whet",
+    "pos": "v.",
+    "meaning": "磨快(刀刃)；激起、刺激(興趣、食欲)",
+    "example": "The trailer was designed to whet the audience's appetite for the sequel.",
+    "roots": "源自古英文 hwettan（磨利），與 hwæt（銳利、勇猛）同源 → 磨快刀刃，引申為激發興趣或食欲"
+  },
+  {
+    "word": "whimsical",
+    "pos": "adj.",
+    "meaning": "異想天開的、古怪有趣的",
+    "example": "The garden was filled with whimsical sculptures of animals playing musical instruments.",
+    "roots": "whim（一時興起的念頭，可能源自古北歐語 hvima「眼神游移不定」）+ -sical（形容詞字尾）→ 想法多變、古怪有趣的"
+  },
+  {
+    "word": "wile",
+    "pos": "n.",
+    "meaning": "詭計、花招(常用複數 wiles)",
+    "example": "Through cunning and well-practiced wiles, the character manipulates every man in the story.",
+    "roots": "可能源自古北歐語 vél（詭計、機巧），與 guile（狡詐）同源 → 用來誘騙他人的手段"
+  },
+  {
+    "word": "willful",
+    "pos": "adj.",
+    "meaning": "一意孤行的、固執己見的；蓄意的",
+    "example": "Her willful refusal to follow instructions eventually got her removed from the project.",
+    "roots": "will（意志，源自古英文 willa）+ -ful（充滿...的形容詞後綴）→ 堅持己見到近乎固執的"
+  },
+  {
+    "word": "wily",
+    "pos": "adj.",
+    "meaning": "狡猾的、詭計多端的",
+    "example": "The wily fox in the fable always managed to outsmart its pursuers.",
+    "roots": "wile（詭計，見上）+ -y（形容詞字尾）→ 充滿詭計、狡猾的"
+  },
+  {
+    "word": "wince",
+    "pos": "v.",
+    "meaning": "(因痛苦、尷尬而)畏縮、皺眉",
+    "example": "He winced as the nurse cleaned the deep cut on his arm.",
+    "roots": "源自古法文 guenchir（轉身閃避），為日耳曼語系借詞 → 因痛苦或不適而身體不自主地退縮"
+  },
+  {
+    "word": "winnow",
+    "pos": "v.",
+    "meaning": "篩選、去蕪存菁；(原指)簸(穀)",
+    "example": "The committee winnowed the hundreds of applicants down to a shortlist of five.",
+    "roots": "源自古英文 windwian（用風吹去穀殼），與 wind（風）同源 → 過濾去除不需要的部分，留下精華"
+  },
+  {
+    "word": "winsome",
+    "pos": "adj.",
+    "meaning": "討人喜歡的、迷人的",
+    "example": "The candidate's winsome smile made her instantly popular with voters.",
+    "roots": "wynn（古英文，意為喜悅、愉快）+ -some（形容詞字尾，表「令人...的」）→ 令人感到愉悅、討喜的"
+  },
+  {
+    "word": "wistful",
+    "pos": "adj.",
+    "meaning": "惆悵渴望的、若有所思的",
+    "example": "She gave a wistful sigh as she looked through old photographs of her hometown.",
+    "roots": "字源學界看法不一，一般認為與古英文 wist（wit「知道」的過去式）及 wishful 相混合演變而來 → 帶著渴望與淡淡哀傷凝視、思念的"
+  },
+  {
+    "word": "wither",
+    "pos": "v.",
+    "meaning": "枯萎、凋謝；使畏縮萎靡",
+    "example": "Without regular watering, the seedlings quickly withered in the summer heat.",
+    "roots": "為中古英文 weather（風化、經歷天候）的變體字形，因暴露於風雨中而乾枯 → 枯萎、凋謝"
+  },
+  {
+    "word": "witticism",
+    "pos": "n.",
+    "meaning": "妙語、詼諧的俏皮話",
+    "example": "The dinner was full of clever witticisms exchanged between the two old rivals.",
+    "roots": "wit（機智，源自古英文 witan「知道」）+ -y + -icism（仿 criticism 造出的名詞後綴，十七世紀由英國作家 Dryden 創造）→ 機智詼諧的言語"
+  },
+  {
+    "word": "wizened",
+    "pos": "adj.",
+    "meaning": "(因老邁、乾枯而)乾癟皺縮的",
+    "example": "The wizened old man had lived in the village for nearly a century.",
+    "roots": "源自古英文 wisnian（枯萎乾癟），與古北歐語 visna 同源 → 因老化或乾燥而皺縮乾癟的"
+  },
+  {
+    "word": "wont",
+    "pos": "n./adj.",
+    "meaning": "習慣、慣例；習慣於(做某事)的",
+    "example": "As was his wont, the professor arrived exactly ten minutes early for every lecture.",
+    "roots": "源自古英文 wunian（居住、習慣於）的過去分詞 gewunod → 慣常的做法、習以為常的"
+  },
+  {
+    "word": "wrangle",
+    "pos": "v.",
+    "meaning": "激烈爭吵、爭論不休",
+    "example": "The two departments wrangled for months over who should pay for the new equipment.",
+    "roots": "源自低地德文 wrangeln（搏鬥、扭打），與 wring（擰、絞）同源 → 拉扯不休、激烈爭論"
+  },
+  {
+    "word": "wreak",
+    "pos": "v.",
+    "meaning": "施加(損害、報復)，常用 wreak havoc",
+    "example": "The hurricane wreaked havoc on the coastal towns, destroying hundreds of homes.",
+    "roots": "源自古英文 wrecan（復仇、施加懲罰），與 wreck（殘骸）、wretch（可憐蟲）同源 → 施加傷害或報復"
+  },
+  {
+    "word": "wrest",
+    "pos": "v.",
+    "meaning": "用力奪取、扭轉(控制權)",
+    "example": "Rebel forces attempted to wrest control of the capital from the government.",
+    "roots": "源自古英文 wræstan（扭轉、用力拉），與 wrist（手腕，可轉動的關節）同源 → 用力扭轉奪取"
+  },
+  {
+    "word": "wretched",
+    "pos": "adj.",
+    "meaning": "悲慘的、可憐的；(品質)惡劣的",
+    "example": "The refugees were living in wretched conditions with almost no access to clean water.",
+    "roots": "wretch（可憐蟲，源自古英文 wrecca「流亡者」，與 wreak 同源）+ -ed（形容詞字尾）→ 悲慘可憐的"
+  },
+  {
+    "word": "writhe",
+    "pos": "v.",
+    "meaning": "(因痛苦)扭動、翻滾掙扎",
+    "example": "The injured player writhed in agony on the field after the tackle.",
+    "roots": "源自古英文 wriþan（扭轉），與 wreath（花環，扭繞而成）、wrist 同屬 wr- 字群，皆與「扭轉」有關 → 痛苦地扭動身軀"
+  },
+  {
+    "word": "wry",
+    "pos": "adj.",
+    "meaning": "(表情、幽默)挖苦的、諷刺的；扭曲的",
+    "example": "She gave a wry smile at the irony of getting stuck in traffic on her way to a driving test.",
+    "roots": "源自古英文 wrigian（轉向、扭曲），與上述 wr- 字群（wrest、writhe、wring）同源 → 表情或語氣帶著扭曲、挖苦意味的"
+  },
+  {
+    "word": "xenophobia",
+    "pos": "n.",
+    "meaning": "排外、仇外心理",
+    "example": "The rise in xenophobia was reflected in increasingly hostile rhetoric toward immigrants.",
+    "roots": "xeno-（源自希臘文 xenos，外國人、陌生人）+ phobia（源自希臘文 phobos，恐懼）→ 對外來事物或外國人的恐懼、仇視"
+  },
+  {
+    "word": "xenophobic",
+    "pos": "adj.",
+    "meaning": "排外的、仇外的",
+    "example": "Critics accused the campaign of using xenophobic language to stoke fear of outsiders.",
+    "roots": "同 xenophobia 字源（xeno- 外國人 + phobia 恐懼）+ -ic（形容詞後綴）→ 具有排外、仇外傾向的"
+  },
+  {
+    "word": "yawning",
+    "pos": "adj.",
+    "meaning": "(裂口、差距)大而深的、開闊的",
+    "example": "Economists warned of a yawning gap between the wages of top executives and ordinary workers.",
+    "roots": "源自古英文 ginian（張口），與拉丁文 hiare（張開，同源詞如 hiatus 間隙）同源 → 引申形容如張口般寬闊、深邃的裂口或差距"
+  },
+  {
+    "word": "yearn",
+    "pos": "v.",
+    "meaning": "渴望、殷切思慕",
+    "example": "After years abroad, she yearned for the familiar streets of her childhood home.",
+    "roots": "源自古英文 giernan（渴望、追求），與德文 gern（樂於）同源 → 強烈渴望、殷切思慕"
+  },
+  {
+    "word": "yen",
+    "pos": "n.",
+    "meaning": "強烈的渴望、心癮",
+    "example": "He has always had a yen for adventure, moving to a new country every few years.",
+    "roots": "源自粵語「癮」(yan)，十九世紀末至二十世紀初經鴉片文化進入美式英語俚語(yen-yen，鴉片癮)，後泛化為任何強烈渴望；與日圓 yen 為同形異義詞"
+  },
+  {
+    "word": "yoke",
+    "pos": "v./n.",
+    "meaning": "使(不相關的事物)強行結合在一起；軛(牛拉車用的橫木)，引申為束縛、壓迫",
+    "example": "The critic argued that the film's two disparate plots were awkwardly yoked together.",
+    "roots": "源自古英文 geoc，與拉丁文 iugum（軛，同源詞如 conjugal 婚姻的、join 連結）同源 → 原指套在牛頸上的橫木，引申為強行結合或加諸的束縛"
+  },
+  {
+    "word": "zany",
+    "pos": "adj.",
+    "meaning": "滑稽古怪的、瘋瘋癲癲的",
+    "example": "The film is best known for its zany humor and absurd plot twists.",
+    "roots": "源自義大利文 Zanni（即興喜劇 Commedia dell'arte 中的丑角綽號，為 Giovanni 的暱稱）→ 引申為滑稽逗趣、古怪逗笑的"
+  },
+  {
+    "word": "zeal",
+    "pos": "n.",
+    "meaning": "熱忱、狂熱",
+    "example": "She approached every new project with remarkable zeal and energy.",
+    "roots": "源自希臘文 zelos（熱忱、競勝之心），經拉丁文 zelus 傳入英文 → 強烈的熱忱、幹勁"
+  },
+  {
+    "word": "zealot",
+    "pos": "n.",
+    "meaning": "狂熱份子、激進份子",
+    "example": "The reform movement was hijacked by a small group of zealots pushing extreme measures.",
+    "roots": "同 zeal 字源 + -ot（表「...的人」的名詞後綴），可追溯至西元一世紀猶太教激進派「奮銳黨」(Zealots) → 對某理念抱持狂熱、不妥協態度的人"
+  },
+  {
+    "word": "zealous",
+    "pos": "adj.",
+    "meaning": "熱心的、熱忱的",
+    "example": "The new intern was so zealous that he arrived an hour before everyone else on his first day.",
+    "roots": "zeal（熱忱，見上）+ -ous（充滿...的形容詞字尾）→ 充滿熱忱、積極投入的"
+  },
+  {
+    "word": "zenith",
+    "pos": "n.",
+    "meaning": "頂點、全盛時期",
+    "example": "The empire reached its zenith in the second century before slowly beginning to decline.",
+    "roots": "源自阿拉伯文 samt (al-ra's)（頭頂路徑），經中世紀拉丁文轉寫訛誤為 senit/zenit → 天文學上指天頂，引申為事物的最高點、全盛時期"
+  },
+  {
+    "word": "zephyr",
+    "pos": "n.",
+    "meaning": "和煦的微風、西風",
+    "example": "A gentle zephyr drifted across the meadow, carrying the scent of wildflowers.",
+    "roots": "源自希臘神話中的西風之神 Zephyros → 引申為輕柔和煦的微風"
+  },
+  {
+    "word": "zest",
+    "pos": "n.",
+    "meaning": "熱情、興致；(柑橘類果皮的)風味",
+    "example": "Even in her eighties, she approached life with the zest of someone half her age.",
+    "roots": "源自法文 zeste（柑橘類果皮，用於增添風味），確切更早字源尚有爭議 → 由果皮增添風味之意，引申為對生活或事物的熱情興致"
+  }
+]
