@@ -1,0 +1,2795 @@
+[
+  {
+    "word": "sabotage",
+    "pos": "n./v.",
+    "meaning": "破壞、蓄意妨害",
+    "example": "Workers were accused of sabotage after the factory's machines were mysteriously disabled.",
+    "roots": "源自法文 sabot（木鞋）→ 傳說工人以木鞋破壞機器抗議 → 引申為蓄意破壞"
+  },
+  {
+    "word": "saccharine",
+    "pos": "adj.",
+    "meaning": "過分甜膩的、矯情做作的",
+    "example": "The movie's saccharine ending felt unearned and manipulative.",
+    "roots": "sacchar (糖，源自希臘文 sakkharon) + -ine (形容詞後綴) → 如糖般甜膩造作"
+  },
+  {
+    "word": "sacrilege",
+    "pos": "n.",
+    "meaning": "褻瀆、對神聖之物的不敬",
+    "example": "Removing the ancient statue was considered an act of sacrilege by the local community.",
+    "roots": "sacr (神聖，拉丁文 sacer) + lege (奪取，源自拉丁文 legere) → 奪取神聖之物"
+  },
+  {
+    "word": "sacrilegious",
+    "pos": "adj.",
+    "meaning": "褻瀆神聖的",
+    "example": "He was denounced for making sacrilegious remarks about the temple.",
+    "roots": "同 sacrilege 字源 + -ous (形容詞後綴)"
+  },
+  {
+    "word": "sacrosanct",
+    "pos": "adj.",
+    "meaning": "神聖不可侵犯的",
+    "example": "For the editor, the deadline was sacrosanct and never to be missed.",
+    "roots": "sacro (神聖) + sanct (神聖化，拉丁文 sanctus) → 雙重強調不可侵犯"
+  },
+  {
+    "word": "sagacious",
+    "pos": "adj.",
+    "meaning": "睿智的、有洞察力的",
+    "example": "The sagacious old advisor foresaw the political crisis years in advance.",
+    "roots": "sag (敏銳感知，拉丁文 sagire 察覺) + -acious (形容詞後綴) → 感知敏銳而睿智"
+  },
+  {
+    "word": "sagacity",
+    "pos": "n.",
+    "meaning": "睿智、精明",
+    "example": "Her sagacity in business matters earned her a seat on the board.",
+    "roots": "同 sagacious 字源 + -ity (名詞後綴)"
+  },
+  {
+    "word": "salacious",
+    "pos": "adj.",
+    "meaning": "好色的、猥褻的",
+    "example": "The tabloid was criticized for its salacious coverage of the scandal.",
+    "roots": "sal (跳躍、躍動，拉丁文 salire) + -acious (形容詞後綴) → 情慾躁動的"
+  },
+  {
+    "word": "salient",
+    "pos": "adj.",
+    "meaning": "顯著的、突出的",
+    "example": "The report highlighted the most salient points of the negotiation.",
+    "roots": "sal (跳躍，拉丁文 salire) + -ient (形容詞後綴) → 跳出來、引人注目的"
+  },
+  {
+    "word": "salubrious",
+    "pos": "adj.",
+    "meaning": "有益健康的",
+    "example": "The mountain air was praised for its salubrious effects on the lungs.",
+    "roots": "salu (健康，拉丁文 salus) + -brious (形容詞後綴) → 對身體有益的"
+  },
+  {
+    "word": "salubrity",
+    "pos": "n.",
+    "meaning": "有益健康、衛生",
+    "example": "Doctors extolled the salubrity of the seaside climate.",
+    "roots": "同 salubrious 字源 + -ity (名詞後綴)"
+  },
+  {
+    "word": "salutary",
+    "pos": "adj.",
+    "meaning": "有益的、有益健康的",
+    "example": "Losing the first game had a salutary effect on the team's discipline.",
+    "roots": "salut (健康，拉丁文 salus) + -ary (形容詞後綴) → 帶來益處的"
+  },
+  {
+    "word": "salutation",
+    "pos": "n.",
+    "meaning": "問候、致意",
+    "example": "The letter began with a formal salutation to the committee.",
+    "roots": "salut (問候，拉丁文 salutare) + -ation (名詞後綴)"
+  },
+  {
+    "word": "salvo",
+    "pos": "n.",
+    "meaning": "齊射、齊聲抨擊",
+    "example": "The senator opened his speech with a salvo of criticism against the policy.",
+    "roots": "源自義大利文 salva（致敬式齊射），拉丁文 salve（致敬）→ 集中攻擊或致敬"
+  },
+  {
+    "word": "sanctimonious",
+    "pos": "adj.",
+    "meaning": "假裝虔誠的、偽善的",
+    "example": "His sanctimonious lecture on honesty rang hollow given his own lies.",
+    "roots": "sancti (神聖，拉丁文 sanctus) + -monious (形容詞後綴，狀態) → 表面裝出神聖狀態"
+  },
+  {
+    "word": "sanctimony",
+    "pos": "n.",
+    "meaning": "假裝的虔誠、偽善",
+    "example": "The audience quickly saw through the politician's sanctimony.",
+    "roots": "同 sanctimonious 字源"
+  },
+  {
+    "word": "sanction",
+    "pos": "n./v.",
+    "meaning": "制裁；批准、認可",
+    "example": "The UN imposed sanctions on the regime after the invasion.",
+    "roots": "源自拉丁文 sanctio (神聖化的法令、附帶懲罰的法律)，字面既可指許可也可指懲罰"
+  },
+  {
+    "word": "sanctity",
+    "pos": "n.",
+    "meaning": "神聖性、聖潔",
+    "example": "The judge spoke of the sanctity of the law and the need to uphold it.",
+    "roots": "sanct (神聖，拉丁文 sanctus) + -ity (名詞後綴)"
+  },
+  {
+    "word": "sanguinary",
+    "pos": "adj.",
+    "meaning": "嗜血的、血腥的",
+    "example": "Historians described the battle as one of the most sanguinary in the region's history.",
+    "roots": "sangui (血，拉丁文 sanguis) + -nary (形容詞後綴) → 與血相關、嗜殺的"
+  },
+  {
+    "word": "sanguine",
+    "pos": "adj.",
+    "meaning": "樂觀的、面色紅潤的",
+    "example": "Despite the setbacks, she remained sanguine about the project's chances.",
+    "roots": "sangui (血，拉丁文 sanguis) + -ine → 中世紀體液學說中血液充盈者性情樂觀"
+  },
+  {
+    "word": "sap",
+    "pos": "v.",
+    "meaning": "削弱、耗盡(體力、精神)",
+    "example": "Months of overwork had sapped his enthusiasm for the job.",
+    "roots": "源自古英文 sæp (樹液) → 如抽乾樹液般削弱生命力"
+  },
+  {
+    "word": "sapient",
+    "pos": "adj.",
+    "meaning": "有智慧的",
+    "example": "The sapient old judge weighed every argument with care.",
+    "roots": "sapi (辨別滋味，拉丁文 sapere 知曉) + -ent (形容詞後綴) → 能辨別、有智慧的"
+  },
+  {
+    "word": "sardonic",
+    "pos": "adj.",
+    "meaning": "嘲諷的、譏笑的",
+    "example": "He gave a sardonic smile when told the plan had failed exactly as he predicted.",
+    "roots": "源自希臘文 sardonios，傳說與薩丁尼亞島一種令臉部抽搐如笑的毒草有關 → 苦笑譏諷"
+  },
+  {
+    "word": "sartorial",
+    "pos": "adj.",
+    "meaning": "裁縫的、服裝的",
+    "example": "The actor was known for his sartorial elegance on the red carpet.",
+    "roots": "sartor (裁縫，拉丁文) + -ial (形容詞後綴)"
+  },
+  {
+    "word": "sate",
+    "pos": "v.",
+    "meaning": "使饜足、使滿足",
+    "example": "Years of luxury never seemed to sate his craving for more.",
+    "roots": "字源不確定，可能源自古英文 sadian (使飽足)，與 satiate 字源相關"
+  },
+  {
+    "word": "satiate",
+    "pos": "v.",
+    "meaning": "使充分滿足、使饜足",
+    "example": "No amount of praise could satiate his hunger for recognition.",
+    "roots": "sati (足夠，拉丁文 satis) + -ate (動詞後綴) → 給予足夠而滿足"
+  },
+  {
+    "word": "satirical",
+    "pos": "adj.",
+    "meaning": "諷刺的",
+    "example": "The novel offers a satirical portrait of political ambition.",
+    "roots": "satir (諷刺文，拉丁文 satira) + -ical (形容詞後綴)"
+  },
+  {
+    "word": "satirist",
+    "pos": "n.",
+    "meaning": "諷刺作家",
+    "example": "The satirist skewered politicians of every party equally.",
+    "roots": "satire (諷刺文，拉丁文 satira) + -ist (行為者後綴)"
+  },
+  {
+    "word": "satirize",
+    "pos": "v.",
+    "meaning": "諷刺",
+    "example": "The cartoon satirizes the government's handling of the crisis.",
+    "roots": "satire (諷刺文，拉丁文 satira) + -ize (動詞後綴)"
+  },
+  {
+    "word": "saturnine",
+    "pos": "adj.",
+    "meaning": "陰鬱的、性情冷峻的",
+    "example": "The saturnine professor rarely smiled during his lectures.",
+    "roots": "源自古羅馬農神 Saturn，占星術中受土星影響者性情陰沉遲緩"
+  },
+  {
+    "word": "saunter",
+    "pos": "v.",
+    "meaning": "漫步、悠閒地走",
+    "example": "He sauntered into the meeting twenty minutes late without a hint of concern.",
+    "roots": "字源不確定，一說源自古法文 sauntrer（朝聖）→ 悠然而行"
+  },
+  {
+    "word": "savant",
+    "pos": "n.",
+    "meaning": "學者、博學之士",
+    "example": "The young savant could recite entire mathematical proofs from memory.",
+    "roots": "源自法文 savoir（知道）的現在分詞，拉丁文 sapere（知曉）→ 有學問的人"
+  },
+  {
+    "word": "savor",
+    "pos": "v./n.",
+    "meaning": "品味、玩味；風味",
+    "example": "She savored every moment of her long-awaited vacation.",
+    "roots": "源自拉丁文 sapor (味道，sapere 知曉、辨味)"
+  },
+  {
+    "word": "scabrous",
+    "pos": "adj.",
+    "meaning": "粗糙的；猥褻的、棘手的",
+    "example": "The novel's scabrous humor offended some early readers.",
+    "roots": "scab (粗糙表面，拉丁文 scaber) + -rous (形容詞後綴) → 表面粗糙引申為題材棘手"
+  },
+  {
+    "word": "scanty",
+    "pos": "adj.",
+    "meaning": "不足的、稀少的",
+    "example": "The refugees survived on scanty rations for weeks.",
+    "roots": "scant (缺乏，源自古諾斯語 skamt) + -y (形容詞後綴)"
+  },
+  {
+    "word": "scapegoat",
+    "pos": "n.",
+    "meaning": "代罪羔羊",
+    "example": "The junior clerk became the scapegoat for the department's failures.",
+    "roots": "scape (逃脫，escape 的縮寫) + goat (山羊) → 源自聖經中承擔罪過而被放逐的山羊"
+  },
+  {
+    "word": "scathing",
+    "pos": "adj.",
+    "meaning": "尖刻嚴厲的",
+    "example": "The critic wrote a scathing review of the director's latest film.",
+    "roots": "scathe (傷害，源自古諾斯語 skaða) + -ing (形容詞後綴) → 帶有傷害性的言語"
+  },
+  {
+    "word": "scavenge",
+    "pos": "v.",
+    "meaning": "拾荒、翻找廢物",
+    "example": "Stray dogs scavenged for food among the market's leftover crates.",
+    "roots": "源自中古英文 scavager（清道夫）"
+  },
+  {
+    "word": "schadenfreude",
+    "pos": "n.",
+    "meaning": "幸災樂禍",
+    "example": "He felt a guilty schadenfreude when his rival's project collapsed.",
+    "roots": "德文 Schaden (傷害) + Freude (喜悅) → 見人受害而生的喜悅"
+  },
+  {
+    "word": "schism",
+    "pos": "n.",
+    "meaning": "分裂、派系分裂",
+    "example": "A doctrinal dispute led to a schism within the church.",
+    "roots": "源自希臘文 skhisma (分裂)，schizein (切開)"
+  },
+  {
+    "word": "scintilla",
+    "pos": "n.",
+    "meaning": "微量、一丁點",
+    "example": "The prosecution failed to produce a scintilla of evidence.",
+    "roots": "源自拉丁文 scintilla (火花)"
+  },
+  {
+    "word": "scintillate",
+    "pos": "v.",
+    "meaning": "閃爍發光；才思橫溢",
+    "example": "Her scintillating wit made her the center of every conversation.",
+    "roots": "scintilla (火花，拉丁文) + -ate (動詞後綴)"
+  },
+  {
+    "word": "scion",
+    "pos": "n.",
+    "meaning": "子孫、後裔；嫁接的枝條",
+    "example": "He was the scion of a wealthy shipping family.",
+    "roots": "源自古法文 cion (幼枝) → 家族延續的枝脈"
+  },
+  {
+    "word": "scoff",
+    "pos": "v.",
+    "meaning": "嘲笑、嗤之以鼻",
+    "example": "Critics scoffed at the idea when it was first proposed.",
+    "roots": "字源不確定，一說源自中古英文 scof (嘲弄)"
+  },
+  {
+    "word": "scoundrel",
+    "pos": "n.",
+    "meaning": "無賴、惡棍",
+    "example": "The old scoundrel had swindled half the town before he was caught.",
+    "roots": "字源不確定，可能源自古法文 escondre (躲藏) → 躲避責任的人"
+  },
+  {
+    "word": "scourge",
+    "pos": "n./v.",
+    "meaning": "禍害；鞭笞",
+    "example": "Famine remained a scourge of the region for decades.",
+    "roots": "源自古法文 escorgier (鞭打)，拉丁文 excoriare (剝皮)"
+  },
+  {
+    "word": "screed",
+    "pos": "n.",
+    "meaning": "冗長的說教文章、長篇大論",
+    "example": "He posted a lengthy screed denouncing his former employer online.",
+    "roots": "字源不確定，可能源自 shred (碎片) 的變體，原指撕下的長條文字"
+  },
+  {
+    "word": "scruple",
+    "pos": "n.",
+    "meaning": "顧慮、道德疑慮",
+    "example": "He had no scruples about lying to protect his business.",
+    "roots": "同 scrupulous 字源 → 心中如小石子般的不安"
+  },
+  {
+    "word": "scrupulous",
+    "pos": "adj.",
+    "meaning": "一絲不苟的、審慎的",
+    "example": "The accountant kept scrupulous records of every transaction.",
+    "roots": "scrupul (小石子，拉丁文 scrupulus，引申為不安的顧慮) + -ous (形容詞後綴) → 因顧慮而謹慎行事"
+  },
+  {
+    "word": "scrutinize",
+    "pos": "v.",
+    "meaning": "仔細審查",
+    "example": "Auditors scrutinized every invoice for signs of fraud.",
+    "roots": "scrutin (仔細搜查，拉丁文 scrutari，源自 scruta 破爛雜物) + -ize (動詞後綴) → 翻找雜物般仔細檢查"
+  },
+  {
+    "word": "scurrilous",
+    "pos": "adj.",
+    "meaning": "粗鄙誹謗的",
+    "example": "The tabloid published scurrilous accusations without any evidence.",
+    "roots": "scurra (拉丁文，弄臣、小丑) + -ilous (形容詞後綴) → 如弄臣般口出穢言"
+  },
+  {
+    "word": "scurry",
+    "pos": "v.",
+    "meaning": "急促奔跑、匆忙跑動",
+    "example": "The mice scurried across the floor as soon as the light came on.",
+    "roots": "疊音自 hurry-scurry (匆忙) → 急促短促的動作"
+  },
+  {
+    "word": "seamy",
+    "pos": "adj.",
+    "meaning": "卑劣醜陋的",
+    "example": "The documentary exposed the seamy underside of the fashion industry.",
+    "roots": "seam (衣物接縫) + -y → 翻至縫線外露的一面，引申為醜陋不堪的一面"
+  },
+  {
+    "word": "sear",
+    "pos": "v.",
+    "meaning": "燒灼；使枯萎、烙印",
+    "example": "The image of the burning building was seared into her memory.",
+    "roots": "源自古英文 searian (使乾枯)"
+  },
+  {
+    "word": "secession",
+    "pos": "n.",
+    "meaning": "脫離、退出(聯盟等)",
+    "example": "The region's secession from the union sparked years of conflict.",
+    "roots": "se- (分開) + cess (走，拉丁文 cedere) + -ion (名詞後綴)"
+  },
+  {
+    "word": "seclude",
+    "pos": "v.",
+    "meaning": "使隔離、使隱居",
+    "example": "The writer secluded herself in a cabin to finish the novel.",
+    "roots": "se- (分開) + clude (關閉，拉丁文 claudere)"
+  },
+  {
+    "word": "seclusion",
+    "pos": "n.",
+    "meaning": "隱居、隔離",
+    "example": "The writer spent years in seclusion, avoiding all public attention.",
+    "roots": "同 seclude 字源 + -ion (名詞後綴)"
+  },
+  {
+    "word": "secrete",
+    "pos": "v.",
+    "meaning": "分泌；隱藏、藏匿",
+    "example": "The gland secretes a hormone that regulates blood sugar.",
+    "roots": "se- (分開) + crete (分離，拉丁文 secretus，源自 cernere)"
+  },
+  {
+    "word": "secretive",
+    "pos": "adj.",
+    "meaning": "隱秘的、遮遮掩掩的",
+    "example": "His secretive behavior made his colleagues suspicious.",
+    "roots": "secret (秘密的，拉丁文 secretus) + -ive (形容詞後綴)"
+  },
+  {
+    "word": "secular",
+    "pos": "adj.",
+    "meaning": "世俗的、非宗教的",
+    "example": "The country adopted a secular constitution separating church and state.",
+    "roots": "源自拉丁文 saecularis (世代的、屬於此世的)"
+  },
+  {
+    "word": "sedate",
+    "pos": "adj./v.",
+    "meaning": "沉靜的；使鎮靜",
+    "example": "The nurse sedated the anxious patient before the procedure.",
+    "roots": "sed (坐，拉丁文 sedare 使平靜) → 使安定下來"
+  },
+  {
+    "word": "sedentary",
+    "pos": "adj.",
+    "meaning": "久坐的、缺乏活動的",
+    "example": "A sedentary lifestyle has been linked to numerous health problems.",
+    "roots": "sedent (坐著，拉丁文 sedere 坐) + -ary (形容詞後綴)"
+  },
+  {
+    "word": "sedition",
+    "pos": "n.",
+    "meaning": "煽動叛亂、鼓動顛覆",
+    "example": "The pamphlet was banned for inciting sedition against the government.",
+    "roots": "se- (分開) + it (走，拉丁文 ire) + -ion (名詞後綴) → 引人走向分裂叛離"
+  },
+  {
+    "word": "seditious",
+    "pos": "adj.",
+    "meaning": "煽動叛亂的",
+    "example": "He was arrested for distributing seditious literature.",
+    "roots": "同 sedition 字源 + -ious (形容詞後綴)"
+  },
+  {
+    "word": "seduce",
+    "pos": "v.",
+    "meaning": "誘惑、勾引",
+    "example": "The advertisement seduces consumers with promises of instant success.",
+    "roots": "se- (離開) + duce (引導，拉丁文 ducere) → 引誘離開正道"
+  },
+  {
+    "word": "sedulous",
+    "pos": "adj.",
+    "meaning": "勤勉的、孜孜不倦的",
+    "example": "Her sedulous attention to detail made her the team's most reliable editor.",
+    "roots": "sedul (拉丁文 sedulo，殷勤地) → 不辭辛勞、專心致志的"
+  },
+  {
+    "word": "seeming",
+    "pos": "adj.",
+    "meaning": "表面上的、貌似的",
+    "example": "Beneath her seeming calm, she was terrified.",
+    "roots": "seem (看似) + -ing (形容詞後綴)"
+  },
+  {
+    "word": "seemly",
+    "pos": "adj.",
+    "meaning": "得體的、合宜的",
+    "example": "It was not seemly for a guest to criticize the host's cooking.",
+    "roots": "seem (合適，源自古諾斯語 sœma) + -ly (形容詞後綴)"
+  },
+  {
+    "word": "seep",
+    "pos": "v.",
+    "meaning": "滲透、滲出",
+    "example": "Doubt slowly seeped into his once unshakable confidence.",
+    "roots": "源自古英文 sipian (滲漏)"
+  },
+  {
+    "word": "seer",
+    "pos": "n.",
+    "meaning": "先知、預言者",
+    "example": "The village seer predicted the drought years before it struck.",
+    "roots": "see (看見) + -er (行為者後綴) → 能預先看見未來之人"
+  },
+  {
+    "word": "seethe",
+    "pos": "v.",
+    "meaning": "(情緒)沸騰、極度憤怒",
+    "example": "She seethed with anger after being publicly humiliated.",
+    "roots": "源自古英文 seoþan (煮沸) → 情緒如沸水般翻騰"
+  },
+  {
+    "word": "self-aggrandizing",
+    "pos": "adj.",
+    "meaning": "自我吹捧的、自大的",
+    "example": "The CEO's self-aggrandizing speech alienated much of the staff.",
+    "roots": "self (自己) + aggrandize (使壯大，拉丁文 ad- + grandis 巨大)"
+  },
+  {
+    "word": "self-effacing",
+    "pos": "adj.",
+    "meaning": "謙遜的、不愛出風頭的",
+    "example": "Despite his fame, the scientist remained remarkably self-effacing.",
+    "roots": "self (自己) + efface (抹去，法文 effacer) + -ing → 把自己抹去、不突顯自己"
+  },
+  {
+    "word": "self-indulgent",
+    "pos": "adj.",
+    "meaning": "放縱自己的、耽於享樂的",
+    "example": "Critics found the film's long, self-indulgent monologues tedious.",
+    "roots": "self (自己) + indulgent (放縱的，拉丁文 indulgere)"
+  },
+  {
+    "word": "self-righteous",
+    "pos": "adj.",
+    "meaning": "自以為是的、道貌岸然的",
+    "example": "His self-righteous tone made it hard for anyone to accept his advice.",
+    "roots": "self (自己) + righteous (正直的) → 自認為道德正確而顯得傲慢"
+  },
+  {
+    "word": "semblance",
+    "pos": "n.",
+    "meaning": "外表、假象、貌似",
+    "example": "The negotiators tried to maintain a semblance of civility.",
+    "roots": "sembl (相似，拉丁文 simulare) + -ance (名詞後綴) → 表面相似的樣子"
+  },
+  {
+    "word": "senescence",
+    "pos": "n.",
+    "meaning": "衰老、老化",
+    "example": "Biologists study senescence to understand why cells stop dividing.",
+    "roots": "sen (老，拉丁文 senex) + -escence (名詞後綴，逐漸變化的過程)"
+  },
+  {
+    "word": "senile",
+    "pos": "adj.",
+    "meaning": "衰老的、老年癡呆的",
+    "example": "The once-brilliant scholar had grown senile in his final years.",
+    "roots": "sen (老，拉丁文 senex) + -ile (形容詞後綴)"
+  },
+  {
+    "word": "sensational",
+    "pos": "adj.",
+    "meaning": "聳人聽聞的、轟動的",
+    "example": "The newspaper ran a sensational headline to boost sales.",
+    "roots": "sensat (感覺，拉丁文 sentire) + -ional (形容詞後綴) → 強烈刺激感官的"
+  },
+  {
+    "word": "sensuality",
+    "pos": "n.",
+    "meaning": "感官享樂、肉慾",
+    "example": "The painting was praised for its unabashed sensuality.",
+    "roots": "sensu (感官，拉丁文 sensus) + -ality (名詞後綴)"
+  },
+  {
+    "word": "sensuous",
+    "pos": "adj.",
+    "meaning": "感官愉悅的、悅目悅耳的",
+    "example": "The painter was known for the sensuous curves in his portraits.",
+    "roots": "sens (感官，拉丁文 sensus) + -uous (形容詞後綴) → 訴諸感官享受的"
+  },
+  {
+    "word": "sentient",
+    "pos": "adj.",
+    "meaning": "有知覺的、有感知能力的",
+    "example": "The philosopher debated whether all animals are sentient beings.",
+    "roots": "senti (感覺，拉丁文 sentire) + -ent (形容詞後綴)"
+  },
+  {
+    "word": "sentinel",
+    "pos": "n.",
+    "meaning": "哨兵、守衛者",
+    "example": "A lone sentinel stood watch at the castle gate through the night.",
+    "roots": "源自義大利文 sentinella，拉丁文 sentire (感知) → 保持警覺之人"
+  },
+  {
+    "word": "sepulcher",
+    "pos": "n.",
+    "meaning": "墳墓、埋葬處",
+    "example": "The ancient sepulcher had remained sealed for over a thousand years.",
+    "roots": "源自拉丁文 sepulcrum (墳墓，sepelire 埋葬)"
+  },
+  {
+    "word": "sepulchral",
+    "pos": "adj.",
+    "meaning": "墳墓的、陰森的",
+    "example": "A sepulchral silence fell over the abandoned church.",
+    "roots": "同 sepulcher 字源 + -al (形容詞後綴)"
+  },
+  {
+    "word": "sequester",
+    "pos": "v.",
+    "meaning": "使隔離、扣押",
+    "example": "The jury was sequestered to prevent outside influence during the trial.",
+    "roots": "源自拉丁文 sequestrare (交付保管、隔離)"
+  },
+  {
+    "word": "sequestration",
+    "pos": "n.",
+    "meaning": "隔離、扣押",
+    "example": "The court ordered the sequestration of the disputed assets.",
+    "roots": "同 sequester 字源 + -ation (名詞後綴)"
+  },
+  {
+    "word": "sere",
+    "pos": "adj.",
+    "meaning": "枯萎的、乾枯的",
+    "example": "By late summer, the once-green hills had turned sere and brown.",
+    "roots": "源自古英文 sear (乾枯的)"
+  },
+  {
+    "word": "serendipitous",
+    "pos": "adj.",
+    "meaning": "機緣巧合的、意外幸運的",
+    "example": "Their meeting at the airport was entirely serendipitous.",
+    "roots": "serendipity (機緣巧合) + -ous (形容詞後綴)"
+  },
+  {
+    "word": "serendipity",
+    "pos": "n.",
+    "meaning": "機緣巧合、意外發現的幸運",
+    "example": "Finding her future business partner at that conference was pure serendipity.",
+    "roots": "源自英國作家 Horace Walpole 據波斯童話《錫蘭三王子》(Serendip) 於1754年創造，主角總能意外發現珍寶"
+  },
+  {
+    "word": "serene",
+    "pos": "adj.",
+    "meaning": "寧靜的、平和的",
+    "example": "The lake remained serene even as the storm gathered overhead.",
+    "roots": "源自拉丁文 serenus (晴朗的、平靜的)"
+  },
+  {
+    "word": "serpentine",
+    "pos": "adj.",
+    "meaning": "蛇形的、曲折的",
+    "example": "The road wound in a serpentine path up the mountainside.",
+    "roots": "serpent (蛇，拉丁文 serpere 爬行) + -ine (形容詞後綴) → 如蛇般蜿蜒"
+  },
+  {
+    "word": "serrated",
+    "pos": "adj.",
+    "meaning": "鋸齒狀的",
+    "example": "The knife's serrated edge made it ideal for cutting bread.",
+    "roots": "serrate (鋸齒狀，拉丁文 serra 鋸子) + -ed (形容詞後綴)"
+  },
+  {
+    "word": "serration",
+    "pos": "n.",
+    "meaning": "鋸齒(狀)",
+    "example": "The blade's fine serration allowed it to cut through rope easily.",
+    "roots": "serrate (鋸齒狀，拉丁文 serra 鋸子) + -ion (名詞後綴)"
+  },
+  {
+    "word": "serried",
+    "pos": "adj.",
+    "meaning": "(隊伍等)密集排列的",
+    "example": "Serried ranks of soldiers marched across the parade ground.",
+    "roots": "serry (使緊密排列，源自古法文 serrer 壓緊) + -ed (形容詞後綴)"
+  },
+  {
+    "word": "servile",
+    "pos": "adj.",
+    "meaning": "奴性的、卑躬屈膝的",
+    "example": "The courtiers offered servile compliments to please the king.",
+    "roots": "serv (奴隸，拉丁文 servus) + -ile (形容詞後綴) → 如奴隸般順從"
+  },
+  {
+    "word": "servility",
+    "pos": "n.",
+    "meaning": "奴性、卑躬屈膝",
+    "example": "His servility toward his boss disgusted his coworkers.",
+    "roots": "同 servile 字源 + -ity (名詞後綴)"
+  },
+  {
+    "word": "servitude",
+    "pos": "n.",
+    "meaning": "奴役、苦役",
+    "example": "The prisoners were sentenced to years of hard servitude.",
+    "roots": "serv (奴隸，拉丁文 servus) + -itude (名詞後綴，狀態)"
+  },
+  {
+    "word": "sever",
+    "pos": "v.",
+    "meaning": "切斷、斷絕(關係)",
+    "example": "The two countries severed diplomatic ties after the incident.",
+    "roots": "源自拉丁文 separare (分開)"
+  },
+  {
+    "word": "severity",
+    "pos": "n.",
+    "meaning": "嚴厲、嚴重程度",
+    "example": "The severity of the punishment shocked even the prosecutors.",
+    "roots": "sever (嚴厲的，拉丁文 severus) + -ity (名詞後綴)"
+  },
+  {
+    "word": "shabby",
+    "pos": "adj.",
+    "meaning": "破舊的、寒酸的；卑劣的",
+    "example": "The hotel's shabby furniture didn't match its five-star price tag.",
+    "roots": "字源不確定，可能與 scab (痂) 同源，原指衣物磨損"
+  },
+  {
+    "word": "shackle",
+    "pos": "n./v.",
+    "meaning": "鐐銬；束縛",
+    "example": "Outdated regulations shackled the company's ability to innovate.",
+    "roots": "源自古英文 sceacel (鎖鏈環節)"
+  },
+  {
+    "word": "sham",
+    "pos": "n./adj.",
+    "meaning": "假貨、騙局；假冒的",
+    "example": "The investigation revealed the charity to be an elaborate sham.",
+    "roots": "源自方言 shame (羞恥) 的變體，引申為令人蒙羞的騙局"
+  },
+  {
+    "word": "shamble",
+    "pos": "v.",
+    "meaning": "蹣跚而行、拖著腳走",
+    "example": "The exhausted hikers shambled into camp just before nightfall.",
+    "roots": "字源不確定，同 shambles (肉架) 演變而來，原指笨拙的姿態"
+  },
+  {
+    "word": "shambles",
+    "pos": "n.",
+    "meaning": "一片混亂、殘破景象",
+    "example": "After the storm, the coastal town was left in shambles.",
+    "roots": "源自古英文 sceamol (肉架、屠宰檯) → 引申為血腥混亂的場面"
+  },
+  {
+    "word": "shard",
+    "pos": "n.",
+    "meaning": "碎片(尤指玻璃、陶瓷)",
+    "example": "Shards of glass littered the floor after the window shattered.",
+    "roots": "源自古英文 sceard (破裂的碎片)"
+  },
+  {
+    "word": "sheaf",
+    "pos": "n.",
+    "meaning": "一捆、一束(穀物、文件)",
+    "example": "She carried a sheaf of papers into the boardroom.",
+    "roots": "源自古英文 sceaf (捆束)"
+  },
+  {
+    "word": "shear",
+    "pos": "v.",
+    "meaning": "剪、修剪(羊毛等)；強行奪去",
+    "example": "The farmer sheared the sheep before the summer heat set in.",
+    "roots": "源自古英文 sceran (切割)"
+  },
+  {
+    "word": "sheathe",
+    "pos": "v.",
+    "meaning": "將(刀劍)入鞘；包覆",
+    "example": "The soldier sheathed his sword after the duel ended.",
+    "roots": "sheath (刀鞘) + -e (動詞化)"
+  },
+  {
+    "word": "sheepish",
+    "pos": "adj.",
+    "meaning": "忸怩不安的、不好意思的",
+    "example": "He gave a sheepish grin after realizing he'd made the same mistake twice.",
+    "roots": "sheep (綿羊，喻溫順膽怯) + -ish (形容詞後綴)"
+  },
+  {
+    "word": "shibboleth",
+    "pos": "n.",
+    "meaning": "(過時而僵化的)信條、識別暗語",
+    "example": "The old economic shibboleth no longer applies to today's markets.",
+    "roots": "源自希伯來文 shibbolet (穀穗)，《聖經》中作為辨別敵我發音的暗語"
+  },
+  {
+    "word": "shirk",
+    "pos": "v.",
+    "meaning": "逃避(責任、工作)",
+    "example": "He was accused of shirking his duties whenever things got difficult.",
+    "roots": "字源不確定，一說源自德文 Schurke (無賴)"
+  },
+  {
+    "word": "shoal",
+    "pos": "n.",
+    "meaning": "淺灘；魚群",
+    "example": "The boat ran aground on a hidden shoal near the shore.",
+    "roots": "源自古英文 sceald (淺的)"
+  },
+  {
+    "word": "shoddy",
+    "pos": "adj.",
+    "meaning": "劣質的、粗製濫造的",
+    "example": "Customers complained about the shoddy workmanship of the furniture.",
+    "roots": "源自 shoddy（回收羊毛製成的劣質布料）→ 引申為品質低劣"
+  },
+  {
+    "word": "shrew",
+    "pos": "n.",
+    "meaning": "潑婦；鼩鼱(一種小型哺乳動物)",
+    "example": "Shakespeare's comedy centers on the taming of a sharp-tongued shrew.",
+    "roots": "源自古英文 screawa (鼩鼱)，因其兇猛而引申指脾氣暴躁的女人"
+  },
+  {
+    "word": "shrewd",
+    "pos": "adj.",
+    "meaning": "精明的、敏銳的",
+    "example": "Her shrewd investments doubled the company's profits within a year.",
+    "roots": "源自中古英文 shrewed (邪惡的，shrew 潑婦) → 引申為機警精明"
+  },
+  {
+    "word": "shrewish",
+    "pos": "adj.",
+    "meaning": "潑辣的、脾氣壞的",
+    "example": "The play mocks the shrewish wife who dominates her timid husband.",
+    "roots": "shrew (潑婦) + -ish (形容詞後綴)"
+  },
+  {
+    "word": "shrivel",
+    "pos": "v.",
+    "meaning": "枯萎、乾癟收縮",
+    "example": "The grapes shriveled in the sun until they resembled raisins.",
+    "roots": "字源不確定，可能源自古諾斯語，與皺縮相關"
+  },
+  {
+    "word": "shroud",
+    "pos": "n./v.",
+    "meaning": "裹屍布；遮蔽、籠罩",
+    "example": "A thick fog shrouded the harbor, hiding the ships from view.",
+    "roots": "源自古英文 scrud (衣物、覆蓋物)"
+  },
+  {
+    "word": "shun",
+    "pos": "v.",
+    "meaning": "躲避、迴避",
+    "example": "After the scandal, he was shunned by his former colleagues.",
+    "roots": "源自古英文 scunian (避開)"
+  },
+  {
+    "word": "shunt",
+    "pos": "v.",
+    "meaning": "使轉向、分流",
+    "example": "The train was shunted onto a side track to let the express pass.",
+    "roots": "shun (躲避) 的變體 → 使轉向以避開"
+  },
+  {
+    "word": "shyster",
+    "pos": "n.",
+    "meaning": "訟棍、不擇手段的律師",
+    "example": "The old man refused to hire a shyster to fight the eviction.",
+    "roots": "字源不確定，一說源自 19 世紀紐約俚語，指手段不正的律師"
+  },
+  {
+    "word": "sibilant",
+    "pos": "adj.",
+    "meaning": "發嘶嘶聲的",
+    "example": "The snake let out a sibilant hiss as it slithered away.",
+    "roots": "源自拉丁文 sibilare (發出嘶嘶聲)"
+  },
+  {
+    "word": "sibylline",
+    "pos": "adj.",
+    "meaning": "神諭般的、隱晦難解的",
+    "example": "The oracle's sibylline pronouncements left the king more confused than before.",
+    "roots": "源自 Sibyl (古希臘羅馬傳說中的女先知)"
+  },
+  {
+    "word": "sidelong",
+    "pos": "adj./adv.",
+    "meaning": "斜眼的、間接的",
+    "example": "She gave him a sidelong glance of disapproval across the table.",
+    "roots": "side (側邊) + long (沿著) → 從側面看去的"
+  },
+  {
+    "word": "sidereal",
+    "pos": "adj.",
+    "meaning": "恆星的、以恆星為準的",
+    "example": "Astronomers use sidereal time to track the position of distant stars.",
+    "roots": "sider (星星，拉丁文 sidus) + -eal (形容詞後綴)"
+  },
+  {
+    "word": "signatory",
+    "pos": "n./adj.",
+    "meaning": "簽署國、簽署人的",
+    "example": "Every signatory nation agreed to reduce carbon emissions by 2030.",
+    "roots": "signat (簽署，拉丁文 signare) + -ory (名詞/形容詞後綴)"
+  },
+  {
+    "word": "simian",
+    "pos": "adj./n.",
+    "meaning": "似猿猴的；猿猴",
+    "example": "The actor's simian gait made him perfect for the role of the ape.",
+    "roots": "源自拉丁文 simia (猿猴) + -an (形容詞後綴)"
+  },
+  {
+    "word": "simmer",
+    "pos": "v.",
+    "meaning": "煨煮；(情緒)醞釀、將爆發",
+    "example": "Tension simmered beneath the surface of the otherwise polite meeting.",
+    "roots": "字源不確定，擬聲詞，模擬文火慢煮的聲音"
+  },
+  {
+    "word": "simper",
+    "pos": "v.",
+    "meaning": "假笑、傻笑",
+    "example": "She simpered nervously whenever the manager entered the room.",
+    "roots": "字源不確定，擬聲詞，模擬做作淺笑的聲音"
+  },
+  {
+    "word": "simplistic",
+    "pos": "adj.",
+    "meaning": "過度簡化的",
+    "example": "The politician's simplistic solution ignored the problem's true complexity.",
+    "roots": "simpl (簡單，拉丁文 simplex) + -istic (形容詞後綴，帶貶義) → 過度簡化"
+  },
+  {
+    "word": "simulacrum",
+    "pos": "n.",
+    "meaning": "模擬物、虛假的表象",
+    "example": "The theme park offered a simulacrum of a medieval village, complete with actors.",
+    "roots": "源自拉丁文 simulacrum (影像、仿製品，simulare 模仿)"
+  },
+  {
+    "word": "sinecure",
+    "pos": "n.",
+    "meaning": "閒差、有薪無責的職位",
+    "example": "The board position turned out to be a sinecure requiring little actual work.",
+    "roots": "sine (無，拉丁文) + cure (職責、照顧，拉丁文 cura) → 無需負責的職位"
+  },
+  {
+    "word": "sinewy",
+    "pos": "adj.",
+    "meaning": "強健有力的、肌腱發達的",
+    "example": "The blacksmith's sinewy arms showed decades of hard labor.",
+    "roots": "sinew (肌腱) + -y (形容詞後綴)"
+  },
+  {
+    "word": "singular",
+    "pos": "adj.",
+    "meaning": "獨特的、非凡的；單數的",
+    "example": "Her singular talent for languages set her apart from every other candidate.",
+    "roots": "singul (單一，拉丁文 singulus) + -ar (形容詞後綴)"
+  },
+  {
+    "word": "sinister",
+    "pos": "adj.",
+    "meaning": "不祥的、邪惡的",
+    "example": "A sinister figure lurked in the shadows outside the warehouse.",
+    "roots": "源自拉丁文 sinister (左邊的) → 古羅馬占卜傳統中左側被視為不吉之兆"
+  },
+  {
+    "word": "sinuosity",
+    "pos": "n.",
+    "meaning": "曲折、蜿蜒",
+    "example": "The river's sinuosity made navigation difficult for large vessels.",
+    "roots": "sinuous (蜿蜒的) + -ity (名詞後綴)"
+  },
+  {
+    "word": "sinuous",
+    "pos": "adj.",
+    "meaning": "蜿蜒曲折的",
+    "example": "The river followed a sinuous course through the valley.",
+    "roots": "sinu (彎曲，拉丁文 sinus 彎曲、灣) + -ous (形容詞後綴)"
+  },
+  {
+    "word": "skeptic",
+    "pos": "n.",
+    "meaning": "懷疑論者",
+    "example": "A lifelong skeptic, he demanded evidence for every claim.",
+    "roots": "源自希臘文 skeptikos (探究的，skeptesthai 仔細觀察)"
+  },
+  {
+    "word": "skeptical",
+    "pos": "adj.",
+    "meaning": "懷疑的、質疑的",
+    "example": "She remained skeptical of the salesman's extravagant claims.",
+    "roots": "skeptic (懷疑論者) + -al (形容詞後綴)"
+  },
+  {
+    "word": "skepticism",
+    "pos": "n.",
+    "meaning": "懷疑論、懷疑態度",
+    "example": "The new theory was met with widespread skepticism among scientists.",
+    "roots": "同 skeptic 字源 + -ism (名詞後綴，主義/態度)"
+  },
+  {
+    "word": "skew",
+    "pos": "v./adj.",
+    "meaning": "使偏斜、扭曲；歪斜的",
+    "example": "A small sample size can skew the results of the entire study.",
+    "roots": "源自古法文 eskiuer (躲避、閃避) → 引申為偏離正軌"
+  },
+  {
+    "word": "skimp",
+    "pos": "v.",
+    "meaning": "吝嗇地供應、省儉",
+    "example": "The contractor was accused of skimping on materials to cut costs.",
+    "roots": "字源不確定，可能為 scrimp 的變體，表示過度節省"
+  },
+  {
+    "word": "skimpy",
+    "pos": "adj.",
+    "meaning": "過少的、寒酸的",
+    "example": "The restaurant was criticized for its skimpy portions.",
+    "roots": "skimp (省儉) + -y (形容詞後綴)"
+  },
+  {
+    "word": "skirmish",
+    "pos": "n./v.",
+    "meaning": "小規模衝突",
+    "example": "A minor skirmish broke out between rival factions before the treaty was signed.",
+    "roots": "源自古法文 escarmouche (小戰鬥)"
+  },
+  {
+    "word": "skirt",
+    "pos": "v.",
+    "meaning": "迴避、繞過(問題、地區)",
+    "example": "The spokesperson skirted every question about the layoffs.",
+    "roots": "源自古諾斯語 skyrta (襯衫、邊緣衣物) → 沿著邊緣走、不直接涉入"
+  },
+  {
+    "word": "skittish",
+    "pos": "adj.",
+    "meaning": "易受驚的、輕浮不安的",
+    "example": "The skittish horse bolted at the sound of the fireworks.",
+    "roots": "skit (輕快移動，源自古諾斯語 skjuta) + -ish (形容詞後綴)"
+  },
+  {
+    "word": "skulk",
+    "pos": "v.",
+    "meaning": "潛伏、鬼鬼祟祟地躲藏",
+    "example": "A shadowy figure skulked in the alley behind the building.",
+    "roots": "源自中古英文 skulken，可能源自古諾斯語，表示躲藏"
+  },
+  {
+    "word": "slake",
+    "pos": "v.",
+    "meaning": "解(渴)、平息(慾望)",
+    "example": "Nothing seemed to slake his thirst for power.",
+    "roots": "源自古英文 slacian (使鬆弛、減緩)，同 slack 字源"
+  },
+  {
+    "word": "slander",
+    "pos": "n./v.",
+    "meaning": "誹謗、中傷",
+    "example": "She sued the newspaper for slander after it published false accusations.",
+    "roots": "源自古法文 esclandre，拉丁文 scandalum (醜聞)"
+  },
+  {
+    "word": "slanderous",
+    "pos": "adj.",
+    "meaning": "誹謗性的",
+    "example": "He denied making any slanderous remarks about his former partner.",
+    "roots": "同 slander 字源 + -ous (形容詞後綴)"
+  },
+  {
+    "word": "slapdash",
+    "pos": "adj.",
+    "meaning": "草率的、馬虎的",
+    "example": "The report was criticized for its slapdash research and sloppy citations.",
+    "roots": "slap (猛擊) + dash (匆忙) → 匆忙草率完成"
+  },
+  {
+    "word": "slattern",
+    "pos": "n.",
+    "meaning": "邋遢的女人",
+    "example": "The old novel described her as a slattern who never kept a tidy house.",
+    "roots": "字源不確定，可能源自德文方言 Schlutte (邋遢女子)"
+  },
+  {
+    "word": "slavish",
+    "pos": "adj.",
+    "meaning": "盲從的、奴性的",
+    "example": "Critics dismissed the film as a slavish imitation of earlier classics.",
+    "roots": "slave (奴隸) + -ish (形容詞後綴) → 如奴隸般毫無主見"
+  },
+  {
+    "word": "sleazy",
+    "pos": "adj.",
+    "meaning": "卑劣的、下流的",
+    "example": "The politician's sleazy tactics eventually cost him the election.",
+    "roots": "字源不確定，20世紀俚語，原指質料低劣的織物"
+  },
+  {
+    "word": "sleight",
+    "pos": "n.",
+    "meaning": "手法、技巧(尤指欺騙性的)",
+    "example": "The magician's sleight of hand fooled even the sharpest observers.",
+    "roots": "源自古諾斯語 slœgð (狡猾)"
+  },
+  {
+    "word": "slight",
+    "pos": "v./adj.",
+    "meaning": "輕視、怠慢；輕微的",
+    "example": "He felt slighted when his contribution went unmentioned in the report.",
+    "roots": "源自古諾斯語 slettr (平滑的、不足掛齒的)"
+  },
+  {
+    "word": "slink",
+    "pos": "v.",
+    "meaning": "潛行、溜走",
+    "example": "Every evening, the alley cat would slink along the fence, avoiding the streetlights.",
+    "roots": "源自古英文 slincan (爬行)"
+  },
+  {
+    "word": "slipshod",
+    "pos": "adj.",
+    "meaning": "草率的、邋遢的",
+    "example": "The audit uncovered slipshod bookkeeping throughout the company.",
+    "roots": "slip (滑動的拖鞋) + shod (穿鞋的) → 原指穿著拖鞋般隨便，引申為草率"
+  },
+  {
+    "word": "slog",
+    "pos": "v.",
+    "meaning": "艱苦跋涉、苦幹",
+    "example": "The team had to slog through months of tedious data entry.",
+    "roots": "字源不確定，19世紀俚語，或與 slug (重擊) 相關"
+  },
+  {
+    "word": "sloth",
+    "pos": "n.",
+    "meaning": "懶惰",
+    "example": "Sloth is traditionally listed as one of the seven deadly sins.",
+    "roots": "源自古英文 slæwð，slow (緩慢) 的名詞化"
+  },
+  {
+    "word": "slothful",
+    "pos": "adj.",
+    "meaning": "懶惰的",
+    "example": "The slothful clerk let paperwork pile up for weeks.",
+    "roots": "sloth (懶惰) + -ful (形容詞後綴)"
+  },
+  {
+    "word": "slouch",
+    "pos": "v./n.",
+    "meaning": "無精打采地站或坐；懶散的姿態",
+    "example": "He slouched in his chair, clearly bored by the lecture.",
+    "roots": "字源不確定，可能源自古諾斯語，表示笨拙的姿態"
+  },
+  {
+    "word": "slovenly",
+    "pos": "adj.",
+    "meaning": "邋遢的、懶散的",
+    "example": "The inspector cited the slovenly conditions of the kitchen.",
+    "roots": "sloven (邋遢的人，字源不確定) + -ly (形容詞後綴)"
+  },
+  {
+    "word": "sluggard",
+    "pos": "n.",
+    "meaning": "懶漢",
+    "example": "The fable mocks the sluggard who refuses to prepare for winter.",
+    "roots": "slug (行動遲緩的軟體動物) + -ard (帶貶義的名詞後綴)"
+  },
+  {
+    "word": "sluggish",
+    "pos": "adj.",
+    "meaning": "遲緩的、懶散的",
+    "example": "The economy remained sluggish despite the government's stimulus measures.",
+    "roots": "slug (行動遲緩) + -ish (形容詞後綴)"
+  },
+  {
+    "word": "slur",
+    "pos": "n./v.",
+    "meaning": "詆毀、侮辱；含糊地說",
+    "example": "He was fired for making a racial slur during the meeting.",
+    "roots": "字源不確定，可能源自低地德文 sluren (拖曳、馬虎行事)"
+  },
+  {
+    "word": "sly",
+    "pos": "adj.",
+    "meaning": "狡猾的",
+    "example": "The sly fox slipped past the guards unnoticed.",
+    "roots": "源自古諾斯語 slœgr (狡猾的)"
+  },
+  {
+    "word": "smattering",
+    "pos": "n.",
+    "meaning": "一知半解、少量",
+    "example": "He had only a smattering of French, enough to order a meal.",
+    "roots": "字源不確定，可能與 smatter (略知一二) 同源"
+  },
+  {
+    "word": "smear",
+    "pos": "v./n.",
+    "meaning": "塗抹；抹黑、詆毀",
+    "example": "The campaign accused its rival of running a smear campaign.",
+    "roots": "源自古英文 smeoru (油脂)"
+  },
+  {
+    "word": "smirch",
+    "pos": "v.",
+    "meaning": "玷污、抹黑",
+    "example": "The scandal smirched the reputation of the entire administration.",
+    "roots": "字源不確定，可能源自古法文 esmorcher (弄髒)"
+  },
+  {
+    "word": "smirk",
+    "pos": "n./v.",
+    "meaning": "得意的笑、假笑",
+    "example": "He couldn't hide the smirk on his face when his rival lost.",
+    "roots": "源自古英文 smearcian (微笑)，逐漸帶上得意、輕蔑之意"
+  },
+  {
+    "word": "smolder",
+    "pos": "v.",
+    "meaning": "悶燒、鬱積(情緒)",
+    "example": "Resentment smoldered beneath her calm exterior for years.",
+    "roots": "源自中古英文 smolder (悶煙)"
+  },
+  {
+    "word": "smother",
+    "pos": "v.",
+    "meaning": "悶熄、抑制、過度保護",
+    "example": "Overprotective parents can smother a child's independence.",
+    "roots": "smore (悶死，古英文) + -ther → 使窒息、壓制"
+  },
+  {
+    "word": "smug",
+    "pos": "adj.",
+    "meaning": "自鳴得意的",
+    "example": "He wore a smug expression after winning the debate.",
+    "roots": "源自低地德文 smuk (整潔的)，逐漸演變為自滿的"
+  },
+  {
+    "word": "smuggle",
+    "pos": "v.",
+    "meaning": "走私",
+    "example": "Officials caught the crew trying to smuggle goods across the border.",
+    "roots": "源自低地德文 smuggeln (偷運)"
+  },
+  {
+    "word": "snare",
+    "pos": "n./v.",
+    "meaning": "陷阱；誘捕",
+    "example": "The hunter set a snare to catch small game.",
+    "roots": "源自古諾斯語 snara (繩套)"
+  },
+  {
+    "word": "snarl",
+    "pos": "v./n.",
+    "meaning": "咆哮；纏結、混亂",
+    "example": "Traffic snarled for miles after the accident on the highway.",
+    "roots": "snar (咆哮，擬聲詞) + -l"
+  },
+  {
+    "word": "sneer",
+    "pos": "v./n.",
+    "meaning": "嘲笑、冷笑",
+    "example": "He sneered at the suggestion, calling it hopelessly naive.",
+    "roots": "擬聲詞式構詞，模擬輕蔑的表情或聲音"
+  },
+  {
+    "word": "snide",
+    "pos": "adj.",
+    "meaning": "諷刺的、輕蔑的",
+    "example": "She made a snide comment about his outdated wardrobe.",
+    "roots": "字源不確定，19世紀俚語，原指假冒的"
+  },
+  {
+    "word": "snippet",
+    "pos": "n.",
+    "meaning": "片段、小段",
+    "example": "Reporters pieced together the story from snippets of conversation.",
+    "roots": "snip (剪下一小塊) + -et (小型後綴)"
+  },
+  {
+    "word": "snobbery",
+    "pos": "n.",
+    "meaning": "勢利",
+    "example": "The novel satirizes the snobbery of the upper class.",
+    "roots": "snob (勢利眼，字源不確定，19世紀劍橋俚語) + -ery (名詞後綴)"
+  },
+  {
+    "word": "snobbish",
+    "pos": "adj.",
+    "meaning": "勢利的",
+    "example": "He found their snobbish attitude toward newcomers off-putting.",
+    "roots": "同 snobbery 字源 + -ish (形容詞後綴)"
+  },
+  {
+    "word": "snub",
+    "pos": "v./n.",
+    "meaning": "冷落、怠慢",
+    "example": "She felt snubbed when her invitation was ignored.",
+    "roots": "源自古諾斯語 snubba (斥責)"
+  },
+  {
+    "word": "soar",
+    "pos": "v.",
+    "meaning": "高飛、飆升",
+    "example": "Stock prices soared after the announcement of record profits.",
+    "roots": "源自古法文 essorer (向上升起)"
+  },
+  {
+    "word": "sober",
+    "pos": "adj.",
+    "meaning": "清醒的、嚴肅冷靜的",
+    "example": "The committee took a sober look at the project's actual costs.",
+    "roots": "se- (無) + ebrius (拉丁文，酒醉的) → 無醉意的、清醒的"
+  },
+  {
+    "word": "sobering",
+    "pos": "adj.",
+    "meaning": "發人深省的、令人清醒的",
+    "example": "The report's statistics were a sobering reminder of the crisis's scale.",
+    "roots": "sober (清醒的) + -ing (形容詞後綴)"
+  },
+  {
+    "word": "sobriety",
+    "pos": "n.",
+    "meaning": "清醒、節制",
+    "example": "He credited his years of sobriety for saving his career.",
+    "roots": "同 sober 字源 + -ety (名詞後綴)"
+  },
+  {
+    "word": "sobriquet",
+    "pos": "n.",
+    "meaning": "綽號、渾名",
+    "example": "The general earned the sobriquet \"Iron Duke\" for his unyielding discipline.",
+    "roots": "源自法文 sobriquet (綽號)，字源不確定"
+  },
+  {
+    "word": "sodden",
+    "pos": "adj.",
+    "meaning": "濕透的",
+    "example": "Her sodden shoes squelched with every step after the storm.",
+    "roots": "seethe (煮沸) 的古分詞 soden → 引申為浸透的"
+  },
+  {
+    "word": "sojourn",
+    "pos": "n./v.",
+    "meaning": "逗留、旅居",
+    "example": "The author's brief sojourn in Paris inspired her next novel.",
+    "roots": "so- (完全) + journ (一天，古法文 jorn) → 停留數日"
+  },
+  {
+    "word": "solace",
+    "pos": "n./v.",
+    "meaning": "安慰、慰藉",
+    "example": "She found solace in music after her father's death.",
+    "roots": "源自拉丁文 solacium (安慰)"
+  },
+  {
+    "word": "solecism",
+    "pos": "n.",
+    "meaning": "語法錯誤、失禮之舉",
+    "example": "Using \"whom\" incorrectly is a common solecism among careful writers.",
+    "roots": "源自希臘文 soloikismos，據說源於 Soloi 城居民不規範的希臘語"
+  },
+  {
+    "word": "solemn",
+    "pos": "adj.",
+    "meaning": "莊嚴的、嚴肅的",
+    "example": "The judge addressed the courtroom in a solemn tone.",
+    "roots": "源自拉丁文 sollemnis (每年舉行的儀式，引申為莊重的)"
+  },
+  {
+    "word": "solemnity",
+    "pos": "n.",
+    "meaning": "莊嚴、隆重",
+    "example": "The solemnity of the funeral procession silenced the crowd.",
+    "roots": "同 solemn 字源 + -ity (名詞後綴)"
+  },
+  {
+    "word": "solicit",
+    "pos": "v.",
+    "meaning": "請求、招攬",
+    "example": "The charity solicited donations from local businesses.",
+    "roots": "soli (整個，拉丁文 sollus) + cit (召喚，拉丁文 citare)"
+  },
+  {
+    "word": "solicitous",
+    "pos": "adj.",
+    "meaning": "關切的、殷勤的",
+    "example": "The host was solicitous about his guests' every comfort.",
+    "roots": "同 solicit 字源 + -ous (形容詞後綴)"
+  },
+  {
+    "word": "solicitude",
+    "pos": "n.",
+    "meaning": "關切、掛念",
+    "example": "Her constant solicitude for her aging parents impressed the neighbors.",
+    "roots": "同 solicit 字源 + -ude (名詞後綴)"
+  },
+  {
+    "word": "soliloquy",
+    "pos": "n.",
+    "meaning": "獨白",
+    "example": "Hamlet's soliloquy reveals his deepest doubts about life and death.",
+    "roots": "soli (單獨，拉丁文 solus) + loquy (說話，拉丁文 loqui)"
+  },
+  {
+    "word": "solipsism",
+    "pos": "n.",
+    "meaning": "唯我論",
+    "example": "The philosopher's solipsism led him to doubt the existence of other minds.",
+    "roots": "sol (獨自，拉丁文 solus) + ips (自己，拉丁文 ipse) + -ism (名詞後綴)"
+  },
+  {
+    "word": "solitary",
+    "pos": "adj.",
+    "meaning": "孤獨的、單獨的",
+    "example": "He led a solitary life in a cabin far from town.",
+    "roots": "sol (獨自，拉丁文 solus) + -itary (形容詞後綴)"
+  },
+  {
+    "word": "solitude",
+    "pos": "n.",
+    "meaning": "獨處、孤獨",
+    "example": "She cherished the solitude of early morning walks.",
+    "roots": "同 solitary 字源 + -ude (名詞後綴)"
+  },
+  {
+    "word": "solvency",
+    "pos": "n.",
+    "meaning": "償債能力",
+    "example": "The bank's solvency was questioned after the market crash.",
+    "roots": "solv (溶解、償清，拉丁文 solvere) + -ency (名詞後綴)"
+  },
+  {
+    "word": "solvent",
+    "pos": "adj./n.",
+    "meaning": "有償債能力的；溶劑",
+    "example": "The company remained solvent despite years of declining sales.",
+    "roots": "solv (鬆開、償清，拉丁文 solvere) + -ent (形容詞後綴)"
+  },
+  {
+    "word": "somatic",
+    "pos": "adj.",
+    "meaning": "軀體的、身體的",
+    "example": "Chronic stress can manifest as somatic symptoms like headaches.",
+    "roots": "soma (身體，希臘文) + -tic (形容詞後綴)"
+  },
+  {
+    "word": "somber",
+    "pos": "adj.",
+    "meaning": "陰鬱的、憂鬱的",
+    "example": "A somber mood settled over the room after the announcement.",
+    "roots": "sub- (在下方) + umbra (陰影，拉丁文) → 蒙上陰影的"
+  },
+  {
+    "word": "somnolent",
+    "pos": "adj.",
+    "meaning": "昏昏欲睡的",
+    "example": "The warm classroom and droning lecture made the students somnolent.",
+    "roots": "somn (睡眠，拉丁文 somnus) + -olent (形容詞後綴，充滿...的)"
+  },
+  {
+    "word": "sonorous",
+    "pos": "adj.",
+    "meaning": "響亮的、渾厚的",
+    "example": "The preacher's sonorous voice filled the entire cathedral.",
+    "roots": "son (聲音，拉丁文 sonus) + -orous (形容詞後綴)"
+  },
+  {
+    "word": "sop",
+    "pos": "n./v.",
+    "meaning": "安撫物、賄賂物；浸濕",
+    "example": "The tax rebate was widely seen as a political sop to angry voters.",
+    "roots": "源自古英文 sopp (浸濕的麵包塊)，源於神話中餵給看門犬的麵包以求通過"
+  },
+  {
+    "word": "sophist",
+    "pos": "n.",
+    "meaning": "詭辯家",
+    "example": "The ancient sophist was paid to argue any side of a debate convincingly.",
+    "roots": "源自希臘文 sophistes (智者，後帶貶義指詭辯者)"
+  },
+  {
+    "word": "sophistic",
+    "pos": "adj.",
+    "meaning": "詭辯的",
+    "example": "His sophistic reasoning sounded convincing but concealed a logical flaw.",
+    "roots": "同 sophist 字源 + -ic (形容詞後綴)"
+  },
+  {
+    "word": "sophistry",
+    "pos": "n.",
+    "meaning": "詭辯",
+    "example": "The lawyer's closing argument was dismissed as mere sophistry.",
+    "roots": "同 sophist 字源 + -ry (名詞後綴)"
+  },
+  {
+    "word": "sophomoric",
+    "pos": "adj.",
+    "meaning": "幼稚而自負的",
+    "example": "The critic panned the film's sophomoric humor and shallow plot.",
+    "roots": "sophomore (大二學生，喻自以為懂很多實則膚淺) + -ic (形容詞後綴)"
+  },
+  {
+    "word": "soporific",
+    "pos": "adj./n.",
+    "meaning": "催眠的、令人昏睡的；安眠藥",
+    "example": "The professor's monotone lecture had a soporific effect on the class.",
+    "roots": "sopor (深沉的睡眠，拉丁文) + -fic (使...的後綴)"
+  },
+  {
+    "word": "sordid",
+    "pos": "adj.",
+    "meaning": "骯髒的、卑鄙的",
+    "example": "The tabloid exposed the senator's sordid financial dealings.",
+    "roots": "源自拉丁文 sordidus (骯髒的，源自 sordere 骯髒)"
+  },
+  {
+    "word": "soulless",
+    "pos": "adj.",
+    "meaning": "無靈魂的、空洞的",
+    "example": "Critics called the new mall a soulless block of concrete and glass.",
+    "roots": "soul (靈魂) + -less (無...的後綴)"
+  },
+  {
+    "word": "spar",
+    "pos": "v.",
+    "meaning": "(拳擊)對打練習；爭論",
+    "example": "The two candidates sparred over tax policy during the debate.",
+    "roots": "字源不確定，可能源自古諾斯語 sparra (掙扎、踢動)"
+  },
+  {
+    "word": "sparse",
+    "pos": "adj.",
+    "meaning": "稀疏的、稀少的",
+    "example": "Vegetation grew sparse as the trail climbed above the tree line.",
+    "roots": "源自拉丁文 sparsus (散布的，spargere 撒開的過去分詞)"
+  },
+  {
+    "word": "spasmodic",
+    "pos": "adj.",
+    "meaning": "痙攣的；斷斷續續的",
+    "example": "Her spasmodic bursts of productivity were followed by long periods of inertia.",
+    "roots": "spasm (痙攣，希臘文 spasmos) + -odic (形容詞後綴)"
+  },
+  {
+    "word": "spate",
+    "pos": "n.",
+    "meaning": "大量、突然湧現",
+    "example": "The company faced a spate of lawsuits after the product recall.",
+    "roots": "源自中古英文 spate (洪水暴漲)，字源進一步不確定"
+  },
+  {
+    "word": "specious",
+    "pos": "adj.",
+    "meaning": "似是而非的、貌似有理實則錯誤的",
+    "example": "His specious argument fooled the jury until the evidence was reexamined.",
+    "roots": "speci (外觀，拉丁文 species) + -ous (形容詞後綴) → 表面好看實則虛假"
+  },
+  {
+    "word": "specter",
+    "pos": "n.",
+    "meaning": "幽靈；令人畏懼的事物",
+    "example": "The specter of inflation loomed over the central bank's decisions.",
+    "roots": "源自拉丁文 spectrum (影像、幻影)"
+  },
+  {
+    "word": "spectral",
+    "pos": "adj.",
+    "meaning": "幽靈似的、鬼魅般的",
+    "example": "A spectral figure seemed to drift through the abandoned mansion.",
+    "roots": "spectr (幽靈、影像，拉丁文 spectrum) + -al (形容詞後綴)"
+  },
+  {
+    "word": "speculative",
+    "pos": "adj.",
+    "meaning": "推測性的、投機的",
+    "example": "The report's conclusions were largely speculative, lacking solid data.",
+    "roots": "specul (觀察、窺視，拉丁文 speculari) + -ative (形容詞後綴)"
+  },
+  {
+    "word": "spendthrift",
+    "pos": "n./adj.",
+    "meaning": "揮霍者；揮霍無度的",
+    "example": "The spendthrift heir squandered his fortune within a decade.",
+    "roots": "spend (花費) + thrift (節儉) → 諷刺地將節儉花光"
+  },
+  {
+    "word": "spiteful",
+    "pos": "adj.",
+    "meaning": "惡意的、懷恨的",
+    "example": "Her spiteful remarks revealed how deeply she resented his success.",
+    "roots": "spite (惡意，源自 despite 的縮略) + -ful (形容詞後綴)"
+  },
+  {
+    "word": "spleen",
+    "pos": "n.",
+    "meaning": "脾臟；怒氣、怨恨",
+    "example": "He vented his spleen on anyone unfortunate enough to be nearby.",
+    "roots": "源自希臘文 splen (脾臟)，中世紀體液學說認為脾臟主宰怒氣"
+  },
+  {
+    "word": "splenetic",
+    "pos": "adj.",
+    "meaning": "易怒的、脾氣暴躁的",
+    "example": "The splenetic critic seemed to despise every film he reviewed.",
+    "roots": "splen (脾臟，拉丁文 splen) → 中世紀體液學說中脾臟過剩導致易怒"
+  },
+  {
+    "word": "spontaneity",
+    "pos": "n.",
+    "meaning": "自發性、天性流露",
+    "example": "The jazz performance was praised for its raw spontaneity.",
+    "roots": "spontane (自願的，拉丁文 sponte) + -ity (名詞後綴)"
+  },
+  {
+    "word": "spontaneous",
+    "pos": "adj.",
+    "meaning": "自發的、自然而然的",
+    "example": "The crowd broke into spontaneous applause before the song even ended.",
+    "roots": "同 spontaneity 字源 + -ous (形容詞後綴)"
+  },
+  {
+    "word": "spoof",
+    "pos": "n./v.",
+    "meaning": "戲仿、惡搞",
+    "example": "The sketch was a gentle spoof of political talk shows.",
+    "roots": "源自19世紀英國喜劇演員發明的遊戲名稱，字源不確定"
+  },
+  {
+    "word": "sporadic",
+    "pos": "adj.",
+    "meaning": "零星的、偶發的",
+    "example": "Sporadic gunfire could still be heard hours after the ceasefire.",
+    "roots": "spor (播種，希臘文 sporas) + -adic (形容詞後綴) → 如種子般零星散布"
+  },
+  {
+    "word": "sprawling",
+    "pos": "adj.",
+    "meaning": "蔓延的、雜亂擴展的",
+    "example": "The sprawling metropolis had swallowed up dozens of once-separate towns.",
+    "roots": "sprawl (伸展、蔓延，古英文 spreawlian) + -ing (形容詞後綴)"
+  },
+  {
+    "word": "spry",
+    "pos": "adj.",
+    "meaning": "矯健的、老當益壯的",
+    "example": "Despite his age, the spry old man still hiked every weekend.",
+    "roots": "字源不確定，可能源自古諾斯語 sprækr (活躍的)"
+  },
+  {
+    "word": "spurious",
+    "pos": "adj.",
+    "meaning": "虛假的、偽造的",
+    "example": "The scholar exposed the document as a spurious forgery.",
+    "roots": "源自拉丁文 spurius (私生的、非正統的)"
+  },
+  {
+    "word": "spurn",
+    "pos": "v.",
+    "meaning": "唾棄、斷然拒絕",
+    "example": "She spurned his apology, still furious over his betrayal.",
+    "roots": "源自古英文 spurnan (用腳踢開)"
+  },
+  {
+    "word": "sputter",
+    "pos": "v.",
+    "meaning": "發出劈啪聲；語無倫次地說",
+    "example": "The old engine sputtered and died halfway up the hill.",
+    "roots": "擬聲詞，模擬斷續噴濺的聲音"
+  },
+  {
+    "word": "squabble",
+    "pos": "v./n.",
+    "meaning": "爭吵、拌嘴",
+    "example": "The siblings squabbled over who would get the last slice of cake.",
+    "roots": "擬聲詞，模擬吵鬧爭執聲"
+  },
+  {
+    "word": "squalid",
+    "pos": "adj.",
+    "meaning": "骯髒的、破敗的",
+    "example": "The refugees were housed in squalid, overcrowded camps.",
+    "roots": "squal (骯髒，拉丁文 squalere) + -id (形容詞後綴)"
+  },
+  {
+    "word": "squalor",
+    "pos": "n.",
+    "meaning": "骯髒、貧困環境",
+    "example": "The documentary depicted the squalor of the city's slums.",
+    "roots": "同 squalid 字源 + -or (名詞後綴)"
+  },
+  {
+    "word": "squander",
+    "pos": "v.",
+    "meaning": "揮霍、浪費",
+    "example": "He squandered his inheritance on reckless investments.",
+    "roots": "字源不確定，可能與 scatter (散開) 有關"
+  },
+  {
+    "word": "squeamish",
+    "pos": "adj.",
+    "meaning": "易生反感的、過分講究的",
+    "example": "She was too squeamish to watch the surgical procedure.",
+    "roots": "字源不確定，中古英文 squaimous，可能與 qualm (噁心感) 同源"
+  },
+  {
+    "word": "stagger",
+    "pos": "v.",
+    "meaning": "蹣跚；使震驚",
+    "example": "The boxer staggered backward after the unexpected blow.",
+    "roots": "源自古諾斯語 stakra (搖晃不穩)"
+  },
+  {
+    "word": "stagnant",
+    "pos": "adj.",
+    "meaning": "停滯的、不流動的",
+    "example": "The stagnant pond bred mosquitoes throughout the summer.",
+    "roots": "stagn (靜水池，拉丁文 stagnum) + -ant (形容詞後綴)"
+  },
+  {
+    "word": "stagnate",
+    "pos": "v.",
+    "meaning": "停滯、萎靡不振",
+    "example": "Sales stagnated after the initial launch excitement faded.",
+    "roots": "同 stagnant 字源 + -ate (動詞後綴)"
+  },
+  {
+    "word": "staid",
+    "pos": "adj.",
+    "meaning": "沉穩的、古板的",
+    "example": "The staid old bank resisted every attempt at modernization.",
+    "roots": "stay (停留) 的古分詞形式 → 固定不變、穩重的"
+  },
+  {
+    "word": "stalemate",
+    "pos": "n.",
+    "meaning": "僵局",
+    "example": "Negotiations reached a stalemate after months without compromise.",
+    "roots": "stale (西洋棋中無法移動的困局，源自古法文 estal) + mate (將死，源自阿拉伯文 mata 死亡)"
+  },
+  {
+    "word": "stalk",
+    "pos": "v.",
+    "meaning": "跟蹤、潛近；(疾病、恐懼等)蔓延、籠罩",
+    "example": "Fear stalked the village long after the danger had passed.",
+    "roots": "源自古英文 stealcian (潛行)"
+  },
+  {
+    "word": "stalwart",
+    "pos": "adj./n.",
+    "meaning": "堅定的、忠誠的；忠實支持者",
+    "example": "A party stalwart, she had campaigned for the candidate for thirty years.",
+    "roots": "源自古英文 stælwierþe (可靠的、值得信賴的)"
+  },
+  {
+    "word": "stamina",
+    "pos": "n.",
+    "meaning": "耐力、持久力",
+    "example": "Marathon runners need exceptional stamina to finish the race.",
+    "roots": "源自拉丁文 stamen (紗線的複數，命運三女神所紡的生命之線)"
+  },
+  {
+    "word": "stanch",
+    "pos": "v.",
+    "meaning": "止住(血流)、遏止",
+    "example": "Doctors worked quickly to stanch the bleeding.",
+    "roots": "源自古法文 estanchier (止住)"
+  },
+  {
+    "word": "standoffish",
+    "pos": "adj.",
+    "meaning": "冷淡疏遠的、拒人於千里之外的",
+    "example": "His standoffish manner made it hard for new colleagues to approach him.",
+    "roots": "stand off (保持距離) + -ish (形容詞後綴)"
+  },
+  {
+    "word": "static",
+    "pos": "adj.",
+    "meaning": "靜止的、停滯的",
+    "example": "The population has remained static for the past decade.",
+    "roots": "stat (站立，拉丁文 stare) + -ic (形容詞後綴)"
+  },
+  {
+    "word": "staunch",
+    "pos": "adj.",
+    "meaning": "堅定的、忠誠的",
+    "example": "He remained a staunch defender of free speech throughout his career.",
+    "roots": "源自古法文 estanche (堅固的)，同 stanch 字源"
+  },
+  {
+    "word": "steadfast",
+    "pos": "adj.",
+    "meaning": "堅定不移的",
+    "example": "Her steadfast loyalty to the cause never wavered, even under threat.",
+    "roots": "stead (地方、位置，古英文) + fast (牢固的) → 固守在原地不動搖"
+  },
+  {
+    "word": "stealth",
+    "pos": "n.",
+    "meaning": "秘密行動、隱匿",
+    "example": "The team moved with stealth to avoid detection.",
+    "roots": "源自中古英文 stelth，同 steal (偷) 字源"
+  },
+  {
+    "word": "stealthy",
+    "pos": "adj.",
+    "meaning": "偷偷摸摸的、隱密的",
+    "example": "A stealthy predator, the leopard rarely reveals itself before striking.",
+    "roots": "stealth (隱匿) + -y (形容詞後綴)"
+  },
+  {
+    "word": "steeped",
+    "pos": "adj.",
+    "meaning": "浸透的、深受...薰陶的",
+    "example": "The city's culture is steeped in centuries of maritime tradition.",
+    "roots": "steep (浸泡，源自古諾斯語 steypa) + -ed (形容詞後綴)"
+  },
+  {
+    "word": "stem",
+    "pos": "v.",
+    "meaning": "抑制、遏止(源頭)",
+    "example": "The government took measures to stem the flow of illegal goods.",
+    "roots": "源自古諾斯語 stemma (堵住)，與 stem (莖) 字源不同"
+  },
+  {
+    "word": "stentorian",
+    "pos": "adj.",
+    "meaning": "聲音洪亮的",
+    "example": "The stentorian announcer's voice carried across the entire stadium.",
+    "roots": "源自荷馬史詩中傳令官 Stentor，據說其嗓音抵得上五十人"
+  },
+  {
+    "word": "stern",
+    "pos": "adj.",
+    "meaning": "嚴厲的、嚴峻的",
+    "example": "The teacher gave the students a stern warning about plagiarism.",
+    "roots": "源自古英文 styrne (嚴厲的)"
+  },
+  {
+    "word": "stickler",
+    "pos": "n.",
+    "meaning": "拘泥細節的人、堅持者",
+    "example": "She was a stickler for punctuality and never tolerated lateness.",
+    "roots": "stickle (堅持小事，源自 stickle 裁判、仲裁) + -er (行為者後綴)"
+  },
+  {
+    "word": "stifle",
+    "pos": "v.",
+    "meaning": "抑制、悶熄",
+    "example": "Government censorship stifled any public criticism of the regime.",
+    "roots": "字源不確定，中古英文 stuflen，可能與窒息相關"
+  },
+  {
+    "word": "stigma",
+    "pos": "n.",
+    "meaning": "恥辱、汙名",
+    "example": "Mental illness still carries a stigma in many societies.",
+    "roots": "源自希臘文 stigma (烙印、刺青記號)"
+  },
+  {
+    "word": "stigmatize",
+    "pos": "v.",
+    "meaning": "使蒙羞、給...貼上恥辱標籤",
+    "example": "The media tends to stigmatize those struggling with addiction.",
+    "roots": "同 stigma 字源 + -ize (動詞後綴)"
+  },
+  {
+    "word": "stilted",
+    "pos": "adj.",
+    "meaning": "生硬的、做作的",
+    "example": "His stilted dialogue made the characters feel unnatural.",
+    "roots": "stilt (高蹺) + -ed → 如踩高蹺般不自然"
+  },
+  {
+    "word": "stint",
+    "pos": "n./v.",
+    "meaning": "一段工作期間；節制、限量",
+    "example": "After a brief stint abroad, she returned to lead the local office.",
+    "roots": "字源不確定，古英文 styntan (使遲鈍、限制)"
+  },
+  {
+    "word": "stipend",
+    "pos": "n.",
+    "meaning": "津貼、薪俸",
+    "example": "Graduate students received a modest monthly stipend.",
+    "roots": "sti (拉丁文 stips 小額捐款) + pend (支付，拉丁文 pendere)"
+  },
+  {
+    "word": "stipulate",
+    "pos": "v.",
+    "meaning": "規定、明確要求",
+    "example": "The contract stipulates that payment must be made within thirty days.",
+    "roots": "源自拉丁文 stipulari (訂立契約)，字源進一步不確定"
+  },
+  {
+    "word": "stodgy",
+    "pos": "adj.",
+    "meaning": "乏味的、古板守舊的",
+    "example": "The stodgy committee rejected every innovative proposal.",
+    "roots": "stodge (厚重難消化的食物) + -y (形容詞後綴) → 如厚重食物般沉悶"
+  },
+  {
+    "word": "stoic",
+    "pos": "adj./n.",
+    "meaning": "堅忍的、隱忍的；斯多葛學派信徒",
+    "example": "He remained stoic even as the diagnosis delivered devastating news.",
+    "roots": "源自希臘文 Stoikos，得名於雅典的 Stoa (柱廊)，斯多葛學派在此講學"
+  },
+  {
+    "word": "stoicism",
+    "pos": "n.",
+    "meaning": "堅忍克己、斯多葛主義",
+    "example": "Her stoicism in the face of tragedy inspired the entire community.",
+    "roots": "同 stoic 字源 + -ism (名詞後綴)"
+  },
+  {
+    "word": "stoke",
+    "pos": "v.",
+    "meaning": "添柴加火；煽動(情緒)",
+    "example": "The politician's rhetoric only stoked further public anger.",
+    "roots": "源自荷蘭文 stoken (添柴生火)"
+  },
+  {
+    "word": "stolid",
+    "pos": "adj.",
+    "meaning": "麻木的、不動聲色的",
+    "example": "The stolid guard showed no reaction to the prisoner's pleas.",
+    "roots": "源自拉丁文 stolidus (遲鈍的、愚笨的)"
+  },
+  {
+    "word": "stony",
+    "pos": "adj.",
+    "meaning": "冷酷的、無情的；多石的",
+    "example": "Her question was met with stony silence.",
+    "roots": "stone (石頭) + -y (形容詞後綴) → 如石頭般冷硬無情"
+  },
+  {
+    "word": "stopgap",
+    "pos": "n./adj.",
+    "meaning": "權宜之計、臨時替代方案",
+    "example": "The coalition government was widely seen as a stopgap until new elections could be held.",
+    "roots": "stop (阻止) + gap (缺口) → 暫時填補缺口之物"
+  },
+  {
+    "word": "strait-laced",
+    "pos": "adj.",
+    "meaning": "拘謹古板的、嚴守禮教的",
+    "example": "Her strait-laced parents disapproved of her choice to travel alone.",
+    "roots": "strait (緊的，拉丁文 strictus) + laced (綁緊的) → 如緊束的束胸衣般拘謹"
+  },
+  {
+    "word": "stratagem",
+    "pos": "n.",
+    "meaning": "策略、詭計",
+    "example": "The general devised a clever stratagem to outflank the enemy.",
+    "roots": "strat (軍隊，希臘文 stratos) + agem (引導，源自 agein) → 用兵之計"
+  },
+  {
+    "word": "stratify",
+    "pos": "v.",
+    "meaning": "使分層",
+    "example": "Society tends to stratify along lines of income and education.",
+    "roots": "strat (層，拉丁文 stratum) + -ify (動詞後綴)"
+  },
+  {
+    "word": "stratum",
+    "pos": "n.",
+    "meaning": "階層、地層",
+    "example": "The upper stratum of society rarely interacted with the working class.",
+    "roots": "源自拉丁文 stratum (鋪展之物，sternere 的過去分詞)"
+  },
+  {
+    "word": "stray",
+    "pos": "v./adj.",
+    "meaning": "迷路、偏離；走失的",
+    "example": "His mind strayed from the lecture to thoughts of the weekend.",
+    "roots": "源自古法文 estraier (漫遊、走失)"
+  },
+  {
+    "word": "strident",
+    "pos": "adj.",
+    "meaning": "刺耳的、尖銳刺耳的",
+    "example": "Her strident criticism alienated even her closest allies.",
+    "roots": "strid (發出刺耳聲，拉丁文 stridere) + -ent (形容詞後綴)"
+  },
+  {
+    "word": "stringency",
+    "pos": "n.",
+    "meaning": "嚴格、嚴峻",
+    "example": "The new law's stringency surprised even its original sponsors.",
+    "roots": "同 stringent 字源 + -ency (名詞後綴)"
+  },
+  {
+    "word": "stringent",
+    "pos": "adj.",
+    "meaning": "嚴格的、嚴峻的",
+    "example": "Stringent safety regulations were imposed after the factory accident.",
+    "roots": "string (拉緊，拉丁文 stringere) + -ent (形容詞後綴) → 拉緊、收緊的規範"
+  },
+  {
+    "word": "strut",
+    "pos": "v./n.",
+    "meaning": "昂首闊步、趾高氣揚地走",
+    "example": "He strutted into the office as if he already owned the company.",
+    "roots": "源自古英文 strutian (僵直地突出)"
+  },
+  {
+    "word": "studied",
+    "pos": "adj.",
+    "meaning": "刻意的、深思熟慮的",
+    "example": "His studied indifference couldn't quite hide how much he cared.",
+    "roots": "study (研究、琢磨) + -ed (形容詞後綴) → 經過琢磨而顯得刻意的"
+  },
+  {
+    "word": "stultify",
+    "pos": "v.",
+    "meaning": "使顯得愚蠢、使停滯無效",
+    "example": "Years of bureaucratic routine had stultified his creativity.",
+    "roots": "stult (愚蠢，拉丁文 stultus) + -ify (動詞後綴)"
+  },
+  {
+    "word": "stupefy",
+    "pos": "v.",
+    "meaning": "使驚呆、使麻木",
+    "example": "The sheer scale of the disaster stupefied rescue workers.",
+    "roots": "stup (麻木，拉丁文 stupere) + -efy (動詞後綴)"
+  },
+  {
+    "word": "stupendous",
+    "pos": "adj.",
+    "meaning": "驚人的、巨大的",
+    "example": "The building project was a stupendous engineering achievement.",
+    "roots": "stupend (令人驚愕的，拉丁文 stupere) + -ous (形容詞後綴)"
+  },
+  {
+    "word": "stupor",
+    "pos": "n.",
+    "meaning": "恍惚、麻木狀態",
+    "example": "He woke from a drunken stupor with no memory of the night before.",
+    "roots": "源自拉丁文 stupor (麻木、驚愕，stupere 的名詞化)"
+  },
+  {
+    "word": "stygian",
+    "pos": "adj.",
+    "meaning": "陰森黑暗的、地獄般的",
+    "example": "A stygian darkness enveloped the cave once the torches went out.",
+    "roots": "源自希臘神話冥河 Styx，象徵幽冥晦暗"
+  },
+  {
+    "word": "stymie",
+    "pos": "v.",
+    "meaning": "阻礙、使受挫",
+    "example": "Budget cuts stymied the research team's progress.",
+    "roots": "字源不確定，源自蘇格蘭高爾夫術語 stymie (球被對手球擋住去路)"
+  },
+  {
+    "word": "suave",
+    "pos": "adj.",
+    "meaning": "圓滑的、溫文爾雅的",
+    "example": "The suave diplomat charmed even his harshest critics.",
+    "roots": "源自拉丁文 suavis (甜美的、宜人的)"
+  },
+  {
+    "word": "subaltern",
+    "pos": "n./adj.",
+    "meaning": "下級軍官；下屬的",
+    "example": "As a subaltern, he had little say in the regiment's strategy.",
+    "roots": "sub- (在下) + altern (交替，拉丁文 alternus) → 位階居下者"
+  },
+  {
+    "word": "subdue",
+    "pos": "v.",
+    "meaning": "征服、抑制",
+    "example": "Soldiers were sent in to subdue the rebellion.",
+    "roots": "sub- (在下) + duce (引導，拉丁文 ducere) → 引導至臣服之下"
+  },
+  {
+    "word": "subjacent",
+    "pos": "adj.",
+    "meaning": "在下方的、下伏的",
+    "example": "Geologists studied the subjacent rock layers for signs of past volcanic activity.",
+    "roots": "sub- (在下) + jacent (躺臥，拉丁文 jacere)"
+  },
+  {
+    "word": "subjective",
+    "pos": "adj.",
+    "meaning": "主觀的",
+    "example": "Taste in art is inherently subjective and varies from person to person.",
+    "roots": "subject (主體，拉丁文 subjectus) + -ive (形容詞後綴)"
+  },
+  {
+    "word": "subjugate",
+    "pos": "v.",
+    "meaning": "征服、使屈服",
+    "example": "The empire sought to subjugate every neighboring territory.",
+    "roots": "sub- (在下) + jug (軛，拉丁文 jugum) + -ate (動詞後綴) → 使套上軛、臣服"
+  },
+  {
+    "word": "sublimate",
+    "pos": "v.",
+    "meaning": "昇華、使昇華",
+    "example": "She learned to sublimate her anger into productive work.",
+    "roots": "sub- (向上) + limat (磨光，拉丁文 limare) → 提煉至更高、更純的形式"
+  },
+  {
+    "word": "sublime",
+    "pos": "adj.",
+    "meaning": "崇高的、卓越的",
+    "example": "The view from the summit was nothing short of sublime.",
+    "roots": "sub- (至...下) + limen (門檻，拉丁文) → 抵達最高門檻"
+  },
+  {
+    "word": "subliminal",
+    "pos": "adj.",
+    "meaning": "潛意識的",
+    "example": "Advertisers were accused of using subliminal messages to influence buyers.",
+    "roots": "sub- (在下) + limin (門檻，拉丁文 limen) + -al → 低於意識門檻的"
+  },
+  {
+    "word": "sublunary",
+    "pos": "adj.",
+    "meaning": "塵世的、凡俗的",
+    "example": "The philosopher dismissed sublunary concerns as unworthy of true wisdom.",
+    "roots": "sub- (在下) + lunar (月亮的，拉丁文 luna) → 月亮之下的凡間世界"
+  },
+  {
+    "word": "submerge",
+    "pos": "v.",
+    "meaning": "淹沒、潛入",
+    "example": "The submarine submerged silently beneath the waves.",
+    "roots": "sub- (在下) + merge (沉入，拉丁文 mergere)"
+  },
+  {
+    "word": "submissive",
+    "pos": "adj.",
+    "meaning": "順從的、屈服的",
+    "example": "The dog's submissive posture signaled it posed no threat.",
+    "roots": "sub- (在下) + miss (送、放，拉丁文 mittere) + -ive → 使自己置於他人之下"
+  },
+  {
+    "word": "subordinate",
+    "pos": "adj./n./v.",
+    "meaning": "下屬的；使從屬於",
+    "example": "The manager was criticized for treating every subordinate with contempt.",
+    "roots": "sub- (在下) + ordinate (排列，拉丁文 ordinare)"
+  },
+  {
+    "word": "suborn",
+    "pos": "v.",
+    "meaning": "教唆(尤指偽證)",
+    "example": "The lawyer was disbarred for attempting to suborn a witness.",
+    "roots": "sub- (暗中) + orn (裝備、準備，拉丁文 ornare) → 暗中促成不法行為"
+  },
+  {
+    "word": "subpoena",
+    "pos": "n./v.",
+    "meaning": "傳票；傳喚出庭",
+    "example": "The witness was served a subpoena to testify before the grand jury.",
+    "roots": "sub- (在...之下) + poena (刑罰，拉丁文) → 若不出庭將受罰"
+  },
+  {
+    "word": "subservience",
+    "pos": "n.",
+    "meaning": "卑屈、順從",
+    "example": "His subservience to his supervisor bordered on the obsequious.",
+    "roots": "同 subservient 字源 + -ence (名詞後綴)"
+  },
+  {
+    "word": "subservient",
+    "pos": "adj.",
+    "meaning": "卑屈的、居次要地位的",
+    "example": "His subservient attitude toward his boss annoyed his colleagues.",
+    "roots": "sub- (在下) + serv (服務，拉丁文 servire) + -ient (形容詞後綴)"
+  },
+  {
+    "word": "subside",
+    "pos": "v.",
+    "meaning": "平息、逐漸減弱",
+    "example": "The flood waters gradually subsided after a week of dry weather.",
+    "roots": "sub- (向下) + side (坐，拉丁文 sidere) → 沉降下去"
+  },
+  {
+    "word": "subsidiary",
+    "pos": "adj./n.",
+    "meaning": "附屬的；子公司",
+    "example": "The parent company sold off its unprofitable subsidiary.",
+    "roots": "sub- (在下) + sid (坐，拉丁文 sedere) + -iary → 坐鎮於旁協助的"
+  },
+  {
+    "word": "subsidize",
+    "pos": "v.",
+    "meaning": "補貼、資助",
+    "example": "The government subsidizes farmers to keep food prices low.",
+    "roots": "同 subsidy 字源 + -ize (動詞後綴)"
+  },
+  {
+    "word": "subsidy",
+    "pos": "n.",
+    "meaning": "補貼、津貼",
+    "example": "Without the state subsidy, the ferry service would have shut down.",
+    "roots": "sub- (在旁) + sid (坐，拉丁文 sedere) → 坐鎮在旁提供的援助"
+  },
+  {
+    "word": "subsist",
+    "pos": "v.",
+    "meaning": "維持生存、勉強度日",
+    "example": "The family subsisted on a small plot of farmland.",
+    "roots": "sub- (在下) + sist (站立，拉丁文 sistere) → 站得住、維持下去"
+  },
+  {
+    "word": "substantiate",
+    "pos": "v.",
+    "meaning": "證實、以證據支持",
+    "example": "The journalist could not substantiate the anonymous tip.",
+    "roots": "substant (實質，拉丁文 substantia) + -iate (動詞後綴)"
+  },
+  {
+    "word": "substantive",
+    "pos": "adj.",
+    "meaning": "實質性的、重要的",
+    "example": "The two sides failed to reach any substantive agreement.",
+    "roots": "同 substantiate 字源 + -ive (形容詞後綴)"
+  },
+  {
+    "word": "subsume",
+    "pos": "v.",
+    "meaning": "把...歸入、包含在內",
+    "example": "Smaller local disputes were subsumed under the larger trade conflict.",
+    "roots": "sub- (在下) + sume (拿取，拉丁文 sumere) → 納入更大範疇之下"
+  },
+  {
+    "word": "subterfuge",
+    "pos": "n.",
+    "meaning": "詭計、託辭",
+    "example": "He resorted to subterfuge to avoid answering the committee's questions.",
+    "roots": "subter- (在下方、暗中) + fuge (逃跑，拉丁文 fugere) → 暗中逃避的手段"
+  },
+  {
+    "word": "subterranean",
+    "pos": "adj.",
+    "meaning": "地下的",
+    "example": "The city's subterranean tunnels once served as bomb shelters.",
+    "roots": "subter- (在下方) + ran (土地，拉丁文 terra) + -ean (形容詞後綴)"
+  },
+  {
+    "word": "subtle",
+    "pos": "adj.",
+    "meaning": "微妙的、精細的",
+    "example": "There was a subtle shift in her tone that only close friends noticed.",
+    "roots": "源自拉丁文 subtilis (精細的，sub- 在下 + tela 織物 → 織得極細)"
+  },
+  {
+    "word": "subtlety",
+    "pos": "n.",
+    "meaning": "微妙之處、精妙",
+    "example": "The novel's subtlety rewards careful, attentive readers.",
+    "roots": "同 subtle 字源 + -ty (名詞後綴)"
+  },
+  {
+    "word": "subvert",
+    "pos": "v.",
+    "meaning": "顛覆、破壞(體制)",
+    "example": "The pamphlet was seen as an attempt to subvert public order.",
+    "roots": "sub- (在下) + vert (轉，拉丁文 vertere) → 從底部翻轉"
+  },
+  {
+    "word": "succinct",
+    "pos": "adj.",
+    "meaning": "簡潔的",
+    "example": "Her succinct summary captured the report's key findings in two sentences.",
+    "roots": "suc- (在下) + cinct (束緊，拉丁文 cingere) → 束緊、不冗贅的"
+  },
+  {
+    "word": "succor",
+    "pos": "n./v.",
+    "meaning": "援助、救濟",
+    "example": "Villagers offered succor to the shipwrecked sailors.",
+    "roots": "suc- (在下) + cur (跑，拉丁文 currere) → 跑去救援"
+  },
+  {
+    "word": "succulent",
+    "pos": "adj.",
+    "meaning": "多汁的、豐美的",
+    "example": "The recipe called for a thick cut of succulent roast beef.",
+    "roots": "succ (汁液，拉丁文 succus) + -ulent (形容詞後綴，充滿...的)"
+  },
+  {
+    "word": "succumb",
+    "pos": "v.",
+    "meaning": "屈服、(因病等)死去",
+    "example": "The old oak tree finally succumbed to years of disease.",
+    "roots": "suc- (在下) + cumb (躺臥，拉丁文 cumbere) → 倒下屈服"
+  },
+  {
+    "word": "suffocating",
+    "pos": "adj.",
+    "meaning": "令人窒息的、壓抑的",
+    "example": "She found the suffocating expectations of her family unbearable.",
+    "roots": "suffocate (使窒息，拉丁文 sub- + fauces 咽喉) + -ing (形容詞後綴)"
+  },
+  {
+    "word": "suffrage",
+    "pos": "n.",
+    "meaning": "選舉權、投票權",
+    "example": "Women's suffrage was achieved in the United States in 1920.",
+    "roots": "suf- (在下) + frag (投票，拉丁文，字源不確定) → 表示投票支持"
+  },
+  {
+    "word": "suffuse",
+    "pos": "v.",
+    "meaning": "瀰漫、充滿(光、色、情感)",
+    "example": "A warm glow suffused the room as the sun set.",
+    "roots": "suf- (在下) + fuse (傾注，拉丁文 fundere) → 從底部逐漸滲透瀰漫"
+  },
+  {
+    "word": "sugarcoat",
+    "pos": "v.",
+    "meaning": "美化、掩飾(不愉快的事實)",
+    "example": "The manager refused to sugarcoat the company's dismal earnings report.",
+    "roots": "sugar (糖) + coat (包覆) → 用糖衣包裹使其容易入口，引申為粉飾"
+  },
+  {
+    "word": "sulk",
+    "pos": "v.",
+    "meaning": "生悶氣、鬧彆扭",
+    "example": "The child sulked in his room after being told no.",
+    "roots": "字源不確定，可能源自 sulky (陰沉的) 的逆構詞"
+  },
+  {
+    "word": "sullen",
+    "pos": "adj.",
+    "meaning": "慍怒的、陰沉的",
+    "example": "The teenager gave a sullen shrug and said nothing more.",
+    "roots": "源自古法文 solain (孤僻的)，拉丁文 solus (獨自)"
+  },
+  {
+    "word": "sully",
+    "pos": "v.",
+    "meaning": "玷污、敗壞(名譽)",
+    "example": "The scandal sullied the reputation of the entire firm.",
+    "roots": "源自古法文 soillier (弄髒)"
+  },
+  {
+    "word": "sultry",
+    "pos": "adj.",
+    "meaning": "悶熱的；(舉止)撩人的",
+    "example": "The sultry afternoon made everyone long for a swim.",
+    "roots": "字源不確定，可能為 sweltry (悶熱的) 的變體"
+  },
+  {
+    "word": "summarily",
+    "pos": "adv.",
+    "meaning": "立即地、不經審議地",
+    "example": "The employee was summarily dismissed without any hearing.",
+    "roots": "summary (概要的、即決的，拉丁文 summarius) + -ly (副詞後綴)"
+  },
+  {
+    "word": "sumptuous",
+    "pos": "adj.",
+    "meaning": "奢華的、豪華的",
+    "example": "The wedding featured a sumptuous banquet for five hundred guests.",
+    "roots": "sumpt (花費，拉丁文 sumptus) + -uous (形容詞後綴)"
+  },
+  {
+    "word": "sunder",
+    "pos": "v.",
+    "meaning": "使分裂、切斷",
+    "example": "The civil war sundered the nation for a generation.",
+    "roots": "源自古英文 sundrian (分開)"
+  },
+  {
+    "word": "sundry",
+    "pos": "adj.",
+    "meaning": "各式各樣的、雜項的",
+    "example": "The shop sold sundry goods, from candles to fishing hooks.",
+    "roots": "源自古英文 syndrig (個別的、分開的)"
+  },
+  {
+    "word": "superannuated",
+    "pos": "adj.",
+    "meaning": "過時的、因老而退休的",
+    "example": "The museum displayed a collection of superannuated typewriters.",
+    "roots": "super- (超過) + annu (年，拉丁文 annus) + -ated → 超過應有年限的"
+  },
+  {
+    "word": "supercilious",
+    "pos": "adj.",
+    "meaning": "傲慢的、目中無人的",
+    "example": "The supercilious waiter sneered at our choice of wine.",
+    "roots": "super- (在上方) + cilium (眉毛，拉丁文) → 揚起眉毛表示輕蔑"
+  },
+  {
+    "word": "superficial",
+    "pos": "adj.",
+    "meaning": "表面的、膚淺的",
+    "example": "His superficial understanding of the topic became obvious under questioning.",
+    "roots": "super- (在上) + faci (表面，拉丁文 facies) + -al (形容詞後綴)"
+  },
+  {
+    "word": "superficiality",
+    "pos": "n.",
+    "meaning": "膚淺、表面性",
+    "example": "The critic accused the film of trading depth for superficiality.",
+    "roots": "同 superficial 字源 + -ity (名詞後綴)"
+  },
+  {
+    "word": "superfluous",
+    "pos": "adj.",
+    "meaning": "多餘的、過剩的",
+    "example": "Once the main point was made, further explanation seemed superfluous.",
+    "roots": "super- (超過) + flu (流動，拉丁文 fluere) + -ous → 溢出所需之外的"
+  },
+  {
+    "word": "superimpose",
+    "pos": "v.",
+    "meaning": "疊加、把...置於上面",
+    "example": "The designer superimposed the logo onto the photograph.",
+    "roots": "super- (在上) + impose (置於、強加)"
+  },
+  {
+    "word": "superintend",
+    "pos": "v.",
+    "meaning": "監督、管理",
+    "example": "A foreman was hired to superintend the construction site.",
+    "roots": "super- (在上) + intend (注意，拉丁文 intendere) → 從上方留意監督"
+  },
+  {
+    "word": "superlative",
+    "pos": "adj./n.",
+    "meaning": "最高級的、極好的；最高級(語法)",
+    "example": "Critics used superlative praise to describe the young violinist's debut.",
+    "roots": "super- (超過) + lat (抬起，拉丁文 latus) + -ive → 抬升至最高的"
+  },
+  {
+    "word": "supernumerary",
+    "pos": "adj./n.",
+    "meaning": "額外的、多餘的(人或物)；臨時演員",
+    "example": "The play required a dozen supernumerary actors for the crowd scenes.",
+    "roots": "super- (超過) + numer (數目，拉丁文 numerus) + -ary → 超過所需數目的"
+  },
+  {
+    "word": "supersede",
+    "pos": "v.",
+    "meaning": "取代、淘汰",
+    "example": "The new safety code supersedes all previous regulations.",
+    "roots": "super- (在上) + sede (坐，拉丁文 sedere) → 坐到原位置之上取而代之"
+  },
+  {
+    "word": "supervene",
+    "pos": "v.",
+    "meaning": "突然發生、伴隨而來",
+    "example": "Complications supervened during the surgery, prolonging the operation.",
+    "roots": "super- (在上) + vene (來，拉丁文 venire) → 在原有情況之上突然出現"
+  },
+  {
+    "word": "supine",
+    "pos": "adj.",
+    "meaning": "仰臥的；消極怠惰的",
+    "example": "The patient was placed in a supine position for the examination.",
+    "roots": "源自拉丁文 supinus (仰臥的，引申為懶散被動的)"
+  },
+  {
+    "word": "supplant",
+    "pos": "v.",
+    "meaning": "取代、篡奪(地位)",
+    "example": "Digital cameras quickly supplanted film in the photography industry.",
+    "roots": "sup- (在下) + plant (腳掌，拉丁文 planta) → 用腳將對方絆倒取而代之"
+  },
+  {
+    "word": "supple",
+    "pos": "adj.",
+    "meaning": "柔軟的、靈活的",
+    "example": "Years of yoga kept her body remarkably supple.",
+    "roots": "源自拉丁文 supplex (屈膝的，sub- 在下 + plicare 彎折)"
+  },
+  {
+    "word": "supplicant",
+    "pos": "n.",
+    "meaning": "懇求者、乞求者",
+    "example": "The novel's protagonist arrives at the temple as a humble supplicant.",
+    "roots": "supplic (懇求，拉丁文 supplicare) + -ant (行為者後綴)"
+  },
+  {
+    "word": "supplicate",
+    "pos": "v.",
+    "meaning": "懇求、乞求",
+    "example": "The prisoner supplicated the king for mercy.",
+    "roots": "sup- (在下) + plic (彎折，拉丁文 plicare) → 屈膝彎身懇求"
+  },
+  {
+    "word": "supplication",
+    "pos": "n.",
+    "meaning": "懇求、祈求",
+    "example": "The prisoner's supplication for mercy went unanswered.",
+    "roots": "同 supplicate 字源 + -ion (名詞後綴)"
+  },
+  {
+    "word": "supposition",
+    "pos": "n.",
+    "meaning": "假設、猜測",
+    "example": "The theory rests on the supposition that markets are always rational.",
+    "roots": "sup- (在下) + posit (放置，拉丁文 ponere) + -ion → 預先放置的假定前提"
+  },
+  {
+    "word": "supposititious",
+    "pos": "adj.",
+    "meaning": "假冒的、冒名頂替的",
+    "example": "The court dismissed the supposititious heir's claim to the estate.",
+    "roots": "同 supposition 字源，引申為以假亂真的"
+  },
+  {
+    "word": "suppress",
+    "pos": "v.",
+    "meaning": "壓制、鎮壓",
+    "example": "The regime suppressed all forms of dissent.",
+    "roots": "sup- (在下) + press (壓，拉丁文 premere)"
+  },
+  {
+    "word": "surcease",
+    "pos": "n.",
+    "meaning": "停止、終止",
+    "example": "The old poem speaks of death as a surcease from earthly sorrow.",
+    "roots": "sur- (在上) + cease (停止，拉丁文 cessare)"
+  },
+  {
+    "word": "surfeit",
+    "pos": "n./v.",
+    "meaning": "過量、過度",
+    "example": "A surfeit of information can be as paralyzing as too little.",
+    "roots": "sur- (超過) + feit (做，拉丁文 facere) → 做得過頭、過量"
+  },
+  {
+    "word": "surge",
+    "pos": "n./v.",
+    "meaning": "洶湧、激增",
+    "example": "A surge of applications followed the university's new scholarship program.",
+    "roots": "源自拉丁文 surgere (upward + rise，起身、上升)"
+  },
+  {
+    "word": "surly",
+    "pos": "adj.",
+    "meaning": "粗暴無禮的、乖戾的",
+    "example": "The surly clerk barely acknowledged the customer's questions.",
+    "roots": "字源不確定，可能源自 sir + -ly，原指高高在上的貴族態度，後轉為粗魯"
+  },
+  {
+    "word": "surmise",
+    "pos": "v./n.",
+    "meaning": "推測、猜想",
+    "example": "Investigators could only surmise the cause of the fire.",
+    "roots": "sur- (在上) + mise (放置，古法文 mise) → 在有限線索上推測"
+  },
+  {
+    "word": "surmount",
+    "pos": "v.",
+    "meaning": "克服、戰勝",
+    "example": "The team surmounted every obstacle to complete the project on time.",
+    "roots": "sur- (在上) + mount (爬升、登上)"
+  },
+  {
+    "word": "surpass",
+    "pos": "v.",
+    "meaning": "超越、勝過",
+    "example": "Her performance surpassed even the judges' highest expectations.",
+    "roots": "sur- (超過) + pass (經過)"
+  },
+  {
+    "word": "surreal",
+    "pos": "adj.",
+    "meaning": "超現實的、離奇的",
+    "example": "Walking through the flooded streets felt surreal, like a scene from a dream.",
+    "roots": "sur- (超越) + real (真實的) → 源自超現實主義藝術運動 (surrealism)"
+  },
+  {
+    "word": "surreptitious",
+    "pos": "adj.",
+    "meaning": "偷偷摸摸的、鬼鬼祟祟的",
+    "example": "He took a surreptitious glance at his phone during the meeting.",
+    "roots": "sur- (在下方) + rept (抓取，拉丁文 rapere) + -itious → 暗中攫取、隱瞞行事的"
+  },
+  {
+    "word": "surrogate",
+    "pos": "n./adj.",
+    "meaning": "代理人、替代品；代理的",
+    "example": "In his absence, the vice president acted as a surrogate decision-maker.",
+    "roots": "sur- (代替) + rogate (要求，拉丁文 rogare) → 被要求代替他人行事者"
+  },
+  {
+    "word": "surveillance",
+    "pos": "n.",
+    "meaning": "監視、監控",
+    "example": "Civil liberties groups criticized the expansion of government surveillance.",
+    "roots": "sur- (在上方) + veillance (看守，法文 veiller，拉丁文 vigilare)"
+  },
+  {
+    "word": "susceptible",
+    "pos": "adj.",
+    "meaning": "易受影響的、易感的",
+    "example": "Young children are especially susceptible to peer pressure.",
+    "roots": "sus- (在下) + cept (拿取，拉丁文 capere) + -ible → 容易被(某種影響)攫取的"
+  },
+  {
+    "word": "suspend",
+    "pos": "v.",
+    "meaning": "暫停、懸掛",
+    "example": "The referee suspended the match due to heavy rain.",
+    "roots": "sus- (在下) + pend (懸掛，拉丁文 pendere)"
+  },
+  {
+    "word": "sustenance",
+    "pos": "n.",
+    "meaning": "生計、滋養(物)",
+    "example": "The remote village relies on fishing for its daily sustenance.",
+    "roots": "sustain (維持) + -ence (名詞後綴)"
+  },
+  {
+    "word": "susurrus",
+    "pos": "n.",
+    "meaning": "沙沙聲、低語聲",
+    "example": "A susurrus of whispers spread through the crowd as the verdict was read.",
+    "roots": "擬聲詞，源自拉丁文 susurrus (低語聲、沙沙聲)"
+  },
+  {
+    "word": "svelte",
+    "pos": "adj.",
+    "meaning": "苗條優雅的",
+    "example": "The svelte dancer moved across the stage with effortless grace.",
+    "roots": "源自法文 svelte，義大利文 svelto (苗條的、敏捷的)"
+  },
+  {
+    "word": "swagger",
+    "pos": "v./n.",
+    "meaning": "大搖大擺地走、炫耀；傲慢的姿態",
+    "example": "He walked into the boardroom with the swagger of someone who already knew he'd won.",
+    "roots": "擬聲詞式構詞，源自 swag (搖擺) + -er"
+  },
+  {
+    "word": "swarthy",
+    "pos": "adj.",
+    "meaning": "(皮膚)黝黑的",
+    "example": "Years of working outdoors had given the farmer a swarthy complexion.",
+    "roots": "源自古英文 sweart (黑暗的)"
+  },
+  {
+    "word": "swathe",
+    "pos": "v.",
+    "meaning": "包裹、纏繞",
+    "example": "The infant was swathed in blankets against the winter cold.",
+    "roots": "源自古英文 swaþu (痕跡、繃帶)"
+  },
+  {
+    "word": "sway",
+    "pos": "v./n.",
+    "meaning": "搖擺；影響力、支配",
+    "example": "The senator's speech swayed several undecided voters.",
+    "roots": "源自中古英文 sweyen，古諾斯語 sveigja (使彎曲)"
+  },
+  {
+    "word": "sweeping",
+    "pos": "adj.",
+    "meaning": "大範圍的、影響深遠的",
+    "example": "The new administration introduced sweeping reforms to the tax code.",
+    "roots": "sweep (橫掃) + -ing (形容詞後綴)"
+  },
+  {
+    "word": "swelter",
+    "pos": "v.",
+    "meaning": "悶熱難耐",
+    "example": "Tourists sweltered in the midday heat while waiting in line.",
+    "roots": "源自古英文 sweltan (被熱死、酷熱難忍)"
+  },
+  {
+    "word": "swindle",
+    "pos": "v./n.",
+    "meaning": "詐騙、欺詐",
+    "example": "Investors were swindled out of millions in the elaborate scheme.",
+    "roots": "源自德文 Schwindel (欺騙、暈眩)"
+  },
+  {
+    "word": "sybarite",
+    "pos": "n.",
+    "meaning": "貪圖享樂的人",
+    "example": "A confirmed sybarite, he spent his fortune on nothing but luxury and leisure.",
+    "roots": "源自古希臘城邦 Sybaris，以居民奢華享樂聞名"
+  },
+  {
+    "word": "sybaritic",
+    "pos": "adj.",
+    "meaning": "耽於逸樂的、奢華享樂的",
+    "example": "The resort catered to guests seeking a sybaritic escape from routine.",
+    "roots": "同 sybarite 字源 + -ic (形容詞後綴)"
+  },
+  {
+    "word": "sycophant",
+    "pos": "n.",
+    "meaning": "諂媚者、拍馬屁的人",
+    "example": "The king surrounded himself with sycophants who never questioned his decisions.",
+    "roots": "源自希臘文 sykophantes (原指誣告者，字面義為「指出無花果者」)"
+  },
+  {
+    "word": "sycophantic",
+    "pos": "adj.",
+    "meaning": "諂媚的、奉承的",
+    "example": "His sycophantic praise for the boss fooled no one in the office.",
+    "roots": "同 sycophant 字源 + -ic (形容詞後綴)"
+  },
+  {
+    "word": "syllogism",
+    "pos": "n.",
+    "meaning": "三段論、演繹推理",
+    "example": "The classic syllogism concludes that Socrates is mortal because all men are mortal.",
+    "roots": "syl- (共同) + logism (推理，希臘文 logizesthai) → 邏輯推理過程"
+  },
+  {
+    "word": "sylvan",
+    "pos": "adj.",
+    "meaning": "森林的、林木蒼鬱的",
+    "example": "The poem describes a sylvan retreat far from the noise of the city.",
+    "roots": "源自拉丁文 silva (森林)"
+  },
+  {
+    "word": "symbiosis",
+    "pos": "n.",
+    "meaning": "共生(關係)",
+    "example": "The clownfish and sea anemone exist in a relationship of symbiosis.",
+    "roots": "sym- (共同) + bio (生命，希臘文 bios) + -sis (名詞後綴)"
+  },
+  {
+    "word": "symbiotic",
+    "pos": "adj.",
+    "meaning": "共生的",
+    "example": "The two companies developed a symbiotic partnership over the years.",
+    "roots": "同 symbiosis 字源 + -tic (形容詞後綴)"
+  },
+  {
+    "word": "symmetry",
+    "pos": "n.",
+    "meaning": "對稱",
+    "example": "The building's design is admired for its perfect symmetry.",
+    "roots": "sym- (共同) + metry (測量，希臘文 metron)"
+  },
+  {
+    "word": "symposium",
+    "pos": "n.",
+    "meaning": "座談會、學術討論會",
+    "example": "Scholars from around the world gathered for the symposium on climate policy.",
+    "roots": "源自希臘文 symposion (共飲的宴會) → 引申為思想交流的聚會"
+  },
+  {
+    "word": "synchronous",
+    "pos": "adj.",
+    "meaning": "同步的、同時發生的",
+    "example": "The dancers' movements were perfectly synchronous with the music.",
+    "roots": "syn- (共同) + chron (時間，希臘文 khronos) + -ous (形容詞後綴)"
+  },
+  {
+    "word": "syncopate",
+    "pos": "v.",
+    "meaning": "使切分(音樂節奏)",
+    "example": "Jazz musicians often syncopate the rhythm to create a sense of surprise.",
+    "roots": "syn- (共同) + cop (切、削，希臘文 koptein) → 切斷正拍造成節奏變化"
+  },
+  {
+    "word": "syncretism",
+    "pos": "n.",
+    "meaning": "(信仰、思想的)融合主義",
+    "example": "The region's religion reflects centuries of cultural syncretism.",
+    "roots": "syn- (共同) + cret (混合，希臘文 kerannynai) + -ism (名詞後綴)"
+  },
+  {
+    "word": "synergy",
+    "pos": "n.",
+    "meaning": "協同作用、綜效",
+    "example": "The merger was expected to create synergy between the two companies' strengths.",
+    "roots": "syn- (共同) + erg (工作，希臘文 ergon) → 共同運作產生的加乘效果"
+  },
+  {
+    "word": "synod",
+    "pos": "n.",
+    "meaning": "(教會)會議、宗教會議",
+    "example": "The bishops convened a synod to address the theological dispute.",
+    "roots": "syn- (共同) + hod (道路，希臘文 hodos) → 共同前行、聚會商議"
+  },
+  {
+    "word": "synoptic",
+    "pos": "adj.",
+    "meaning": "概要的、綜觀的",
+    "example": "The report offers a synoptic overview of the country's economic history.",
+    "roots": "syn- (共同) + optic (視覺，希臘文 opsis) → 一覽全貌的"
+  },
+  {
+    "word": "synthesis",
+    "pos": "n.",
+    "meaning": "綜合、合成",
+    "example": "Her thesis attempts a synthesis of two seemingly opposed philosophical traditions.",
+    "roots": "syn- (共同) + thesis (放置、論點，希臘文 tithenai) → 放在一起組成整體"
+  },
+  {
+    "word": "synthesize",
+    "pos": "v.",
+    "meaning": "綜合、合成",
+    "example": "Researchers synthesized a new compound in the lab.",
+    "roots": "同 synthesis 字源 + -ize (動詞後綴)"
+  }
+]
