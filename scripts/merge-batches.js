@@ -4,10 +4,23 @@ const path = require('path');
 const { validateWords } = require('./validate-words');
 
 function mergeBatches(batchDir) {
+  // Guard: check if batch directory exists
+  if (!fs.existsSync(batchDir)) {
+    console.error(`Batch directory not found: ${batchDir}`);
+    process.exit(1);
+  }
+
   const files = fs.readdirSync(batchDir).filter((f) => f.endsWith('.json')).sort();
   const merged = [];
   for (const file of files) {
-    const batch = JSON.parse(fs.readFileSync(path.join(batchDir, file), 'utf8'));
+    const filePath = path.join(batchDir, file);
+    let batch;
+    try {
+      batch = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+    } catch (err) {
+      console.error(`Failed to parse ${file}: ${err.message}`);
+      process.exit(1);
+    }
     merged.push(...batch);
   }
   return merged;
