@@ -1,0 +1,2550 @@
+[
+  {
+    "word": "babble",
+    "pos": "v.",
+    "meaning": "喋喋不休地說、含糊地說；(溪水)潺潺作響",
+    "example": "The toddler babbled happily to herself while playing with her blocks.",
+    "roots": "源自擬聲詞，模仿嬰兒發出的無意義聲音「ba-ba」→ 引申為含糊不清或喋喋不休的說話聲"
+  },
+  {
+    "word": "baleful",
+    "pos": "adj.",
+    "meaning": "惡意的、不祥的",
+    "example": "The old house had a baleful atmosphere that made visitors uneasy.",
+    "roots": "bale (源自古英文 bealu，邪惡、災禍) + -ful (充滿...的) → 充滿惡意或凶兆的"
+  },
+  {
+    "word": "balk",
+    "pos": "v.",
+    "meaning": "畏縮、猶豫拒絕(做某事)",
+    "example": "Many investors balked at the company's inflated valuation.",
+    "roots": "源自古英文 balca (橫梁、田埂) → 田埂會擋住犁地的路，引申為受阻而猶豫不前"
+  },
+  {
+    "word": "banal",
+    "pos": "adj.",
+    "meaning": "陳腐的、平庸乏味的",
+    "example": "The film's plot was so banal that audiences could predict every twist.",
+    "roots": "源自古法文 ban (公告、徵召令) → 原指人人皆須遵守的普通規範，引申為毫無新意的"
+  },
+  {
+    "word": "bane",
+    "pos": "n.",
+    "meaning": "禍根、剋星",
+    "example": "Procrastination has always been the bane of his academic career.",
+    "roots": "源自古英文 bana (殺手、致命之物) → 引申為造成持續困擾或毀滅的根源"
+  },
+  {
+    "word": "banish",
+    "pos": "v.",
+    "meaning": "放逐、驅逐；消除(念頭、恐懼)",
+    "example": "The king banished the traitor from the kingdom forever.",
+    "roots": "源自古法文 banir (宣布放逐，與 ban 公告同源) → 透過公告將人逐出"
+  },
+  {
+    "word": "banter",
+    "pos": "n./v.",
+    "meaning": "打趣、逗趣的對話",
+    "example": "The two old friends exchanged playful banter throughout the entire dinner.",
+    "roots": "字源不確定，一般認為源自17世紀俚語 → 泛指輕鬆詼諧的言語往來"
+  },
+  {
+    "word": "bawdy",
+    "pos": "adj.",
+    "meaning": "粗俗下流的(尤指與性有關的玩笑)",
+    "example": "The comedian's bawdy jokes made some audience members blush.",
+    "roots": "源自古法文 baud (歡樂的、放蕩的) → 引申為粗俗猥褻的言語或幽默"
+  },
+  {
+    "word": "beatific",
+    "pos": "adj.",
+    "meaning": "幸福洋溢的、至福的",
+    "example": "A beatific smile spread across her face as she held her newborn son.",
+    "roots": "beati- (幸福，源自拉丁文 beatus) + -fic (使...的) → 使人顯得極度幸福的"
+  },
+  {
+    "word": "bedraggled",
+    "pos": "adj.",
+    "meaning": "(因潮濕、汙泥)濕透邋遢的",
+    "example": "The hikers arrived at the lodge looking bedraggled after hours in the rain.",
+    "roots": "be- (使...) + draggled (拖過泥濘的，源自 drag 拖拉) → 被拖過泥水而顯得狼狽的"
+  },
+  {
+    "word": "beguile",
+    "pos": "v.",
+    "meaning": "欺騙；迷惑、吸引",
+    "example": "She was beguiled by his charm and didn't notice the warning signs.",
+    "roots": "be- (加強) + guile (欺詐，源自古法文 guile) → 用魅力或詭計迷惑他人"
+  },
+  {
+    "word": "behemoth",
+    "pos": "n.",
+    "meaning": "龐然大物",
+    "example": "The tech behemoth now controls nearly half of the global smartphone market.",
+    "roots": "源自希伯來文 behemah (野獸) 的複數強調形式 → 聖經中形容的巨獸，引申為極其龐大的事物"
+  },
+  {
+    "word": "beleaguer",
+    "pos": "v.",
+    "meaning": "圍困、困擾",
+    "example": "The beleaguered city held out against the siege for nearly a year.",
+    "roots": "be- (加強) + leaguer (源自荷蘭文 leger，軍營) → 被軍隊團團圍住的營地，引申為深陷困境"
+  },
+  {
+    "word": "belie",
+    "pos": "v.",
+    "meaning": "掩飾、與...不符、顯示(某事)是假的",
+    "example": "Her calm expression belied the panic she felt inside.",
+    "roots": "be- (使...) + lie (謊言) → 使某事顯得像謊言，即與表面不符"
+  },
+  {
+    "word": "belittle",
+    "pos": "v.",
+    "meaning": "輕視、貶低",
+    "example": "He constantly belittled his coworkers' ideas in front of the whole team.",
+    "roots": "be- (使...) + little (小的) → 使顯得渺小不重要"
+  },
+  {
+    "word": "bellicose",
+    "pos": "adj.",
+    "meaning": "好戰的、好鬥的",
+    "example": "The senator's bellicose rhetoric alarmed diplomats hoping for a peaceful resolution.",
+    "roots": "belli- (戰爭，源自拉丁文 bellum) + -cose (充滿...的) → 充滿好戰傾向的"
+  },
+  {
+    "word": "belligerent",
+    "pos": "adj.",
+    "meaning": "好鬥的、挑釁的",
+    "example": "The belligerent customer began shouting at the staff over a minor billing error.",
+    "roots": "belli- (戰爭，拉丁文 bellum) + ger (進行，拉丁文 gerere) + -ent (形容詞後綴) → 正在進行戰鬥、充滿敵意的"
+  },
+  {
+    "word": "bemoan",
+    "pos": "v.",
+    "meaning": "哀嘆、抱怨",
+    "example": "Critics bemoaned the museum's decision to sell off part of its permanent collection.",
+    "roots": "be- (加強) + moan (呻吟、抱怨) → 反覆表達不滿或悲傷"
+  },
+  {
+    "word": "bemuse",
+    "pos": "v.",
+    "meaning": "使困惑、使茫然",
+    "example": "The tourists looked thoroughly bemused by the city's chaotic subway map.",
+    "roots": "be- (使...) + muse (沉思，源自古法文 muser) → 使人陷入困惑的沉思狀態"
+  },
+  {
+    "word": "benevolent",
+    "pos": "adj.",
+    "meaning": "仁慈的、慈善的",
+    "example": "The benevolent donor funded scholarships for hundreds of low-income students.",
+    "roots": "bene- (好，拉丁文 bene) + vol (意願，拉丁文 velle) + -ent (形容詞後綴) → 懷有善意的"
+  },
+  {
+    "word": "benign",
+    "pos": "adj.",
+    "meaning": "溫和的、無害的；(腫瘤)良性的",
+    "example": "Fortunately, the biopsy revealed that the tumor was benign.",
+    "roots": "bene- (好) + gn (出生，拉丁文 gnasci) → 天生和善無害的"
+  },
+  {
+    "word": "bequeath",
+    "pos": "v.",
+    "meaning": "遺贈、遺留(給後代)",
+    "example": "The philanthropist bequeathed her entire art collection to the city museum.",
+    "roots": "be- (加強) + queath (源自古英文 cwethan，說) → 透過遺囑正式宣告贈與"
+  },
+  {
+    "word": "bequest",
+    "pos": "n.",
+    "meaning": "遺產、遺贈物",
+    "example": "The university library was built entirely from a single alumnus's generous bequest.",
+    "roots": "同 bequeath 字源 → 遺囑中留下的財物"
+  },
+  {
+    "word": "berate",
+    "pos": "v.",
+    "meaning": "嚴厲斥責",
+    "example": "The coach berated the team for their lack of effort in the second half.",
+    "roots": "be- (加強) + rate (責罵，源自古法文 rater) → 用力責罵"
+  },
+  {
+    "word": "bereft",
+    "pos": "adj.",
+    "meaning": "喪失(某物)的、痛失所愛的",
+    "example": "The village was left bereft of its main source of income after the factory closed.",
+    "roots": "源自古英文 bereafian (剝奪) 的過去分詞 → 被剝奪、失去某物後的狀態"
+  },
+  {
+    "word": "besiege",
+    "pos": "v.",
+    "meaning": "圍攻、包圍；(比喻)使應接不暇",
+    "example": "Reporters besieged the courthouse, hoping for a comment from the defendant.",
+    "roots": "be- (加強) + siege (圍困，源自古法文 sege 座位) → 長時間圍困不放"
+  },
+  {
+    "word": "besmirch",
+    "pos": "v.",
+    "meaning": "玷污、抹黑(名譽)",
+    "example": "The scandal besmirched the senator's reputation beyond repair.",
+    "roots": "be- (使...) + smirch (弄髒，源自中古英文) → 使沾染污點"
+  },
+  {
+    "word": "bestow",
+    "pos": "v.",
+    "meaning": "授予、贈予(尤指榮譽)",
+    "example": "The university bestowed an honorary degree upon the visiting scientist.",
+    "roots": "be- (加強) + stow (放置、儲存) → 鄭重地放置、給予"
+  },
+  {
+    "word": "betoken",
+    "pos": "v.",
+    "meaning": "預示、象徵",
+    "example": "Dark clouds on the horizon betokened the storm that was about to hit the coast.",
+    "roots": "be- (加強) + token (象徵、記號) → 成為某事即將發生的徵兆"
+  },
+  {
+    "word": "bevy",
+    "pos": "n.",
+    "meaning": "一群、一批",
+    "example": "A bevy of reporters gathered outside the courtroom awaiting the verdict.",
+    "roots": "字源不確定，14世紀起用於形容一群鳥或少女聚在一起 → 引申泛指任何一大群人或事物"
+  },
+  {
+    "word": "bewilder",
+    "pos": "v.",
+    "meaning": "使困惑、使迷惘",
+    "example": "The confusing set of instructions left new employees completely bewildered.",
+    "roots": "be- (使...) + wilder (源自古英文 wildern，荒野) → 使人如置身荒野般迷失方向"
+  },
+  {
+    "word": "bibulous",
+    "pos": "adj.",
+    "meaning": "嗜酒的、酗酒的",
+    "example": "The bibulous uncle at every family gathering could be counted on to tell the same old jokes.",
+    "roots": "bibul- (源自拉丁文 bibere，喝) + -ous (形容詞後綴) → 喜好飲酒的"
+  },
+  {
+    "word": "bicker",
+    "pos": "v.",
+    "meaning": "為小事爭吵、鬥嘴",
+    "example": "The siblings bickered over who would get the last slice of pizza.",
+    "roots": "字源不確定，中古英文 bikeren，可能為擬聲詞 → 模仿爭吵時的短促聲響"
+  },
+  {
+    "word": "bifurcate",
+    "pos": "v.",
+    "meaning": "分岔、分成兩支",
+    "example": "The trail bifurcates about a mile past the ranger station, with one path leading to the summit.",
+    "roots": "bi- (二) + furc (叉，拉丁文 furca) + -ate (動詞後綴) → 分成兩個分支"
+  },
+  {
+    "word": "bigot",
+    "pos": "n.",
+    "meaning": "偏執者、心胸狹隘固執己見的人",
+    "example": "The talk show host was widely condemned as a bigot after his racist remarks.",
+    "roots": "源自古法文 bigot，確切字源不詳 → 引申為固守己見、不容異己的人"
+  },
+  {
+    "word": "bilious",
+    "pos": "adj.",
+    "meaning": "壞脾氣的、易怒的；膽汁的",
+    "example": "The critic's bilious review left no aspect of the play unscathed.",
+    "roots": "bili- (膽汁，拉丁文 bilis) + -ous (形容詞後綴) → 古時認為膽汁過多會導致壞脾氣"
+  },
+  {
+    "word": "bilk",
+    "pos": "v.",
+    "meaning": "詐騙、賴帳(欠款)",
+    "example": "The con artist bilked elderly investors out of their life savings.",
+    "roots": "字源不確定，可能源自 balk 的變體 → 引申為欺騙躲避應付的款項"
+  },
+  {
+    "word": "bland",
+    "pos": "adj.",
+    "meaning": "平淡無味的、乏味的",
+    "example": "The hotel's bland breakfast buffet offered nothing memorable.",
+    "roots": "源自拉丁文 blandus (溫和的、諂媚的) → 引申為缺乏刺激、平淡無奇的"
+  },
+  {
+    "word": "blandish",
+    "pos": "v.",
+    "meaning": "以甜言蜜語奉承、哄騙",
+    "example": "Salespeople tried to blandish customers into buying the extended warranty.",
+    "roots": "bland (溫和諂媚，拉丁文 blandus) + -ish (動詞後綴) → 用柔和討好的話語勸誘"
+  },
+  {
+    "word": "blandishment",
+    "pos": "n.",
+    "meaning": "奉承話、甜言蜜語",
+    "example": "Despite the salesman's blandishments, she refused to buy anything she didn't need.",
+    "roots": "同 blandish 字源 + -ment (名詞後綴) → 用來討好誘導的言語"
+  },
+  {
+    "word": "blase",
+    "pos": "adj.",
+    "meaning": "厭倦的、對事物無動於衷的",
+    "example": "After years of world travel, he had grown blase about even the most famous landmarks.",
+    "roots": "源自法文 blasé (過去分詞，意為「厭倦感官刺激的」) → 因見多識廣而不再感到興奮"
+  },
+  {
+    "word": "blasphemous",
+    "pos": "adj.",
+    "meaning": "褻瀆神明的、大不敬的",
+    "example": "The artist's depiction of religious figures was condemned as blasphemous by church leaders.",
+    "roots": "blas- (傷害，希臘文 blaptein) + phem (說話，希臘文 pheme) + -ous (形容詞後綴) → 說出傷害神聖事物的話"
+  },
+  {
+    "word": "blasphemy",
+    "pos": "n.",
+    "meaning": "褻瀆(神明)的言行",
+    "example": "In the medieval court, questioning the church's authority was punishable as blasphemy.",
+    "roots": "同 blasphemous 字源 → 褻瀆神聖事物的言論"
+  },
+  {
+    "word": "blatant",
+    "pos": "adj.",
+    "meaning": "明目張膽的、毫不掩飾的",
+    "example": "The politician's blatant disregard for the rules outraged even his own supporters.",
+    "roots": "字源不確定，可能為16世紀詩人 Spenser 創造的擬聲詞 → 引申為公然、露骨的"
+  },
+  {
+    "word": "blazon",
+    "pos": "v.",
+    "meaning": "宣揚、公開展示",
+    "example": "The tabloid blazoned the celebrity's divorce across its front page.",
+    "roots": "源自古法文 blason (盾徽) → 原指在盾牌上展示紋章，引申為公開炫耀、宣揚"
+  },
+  {
+    "word": "bleak",
+    "pos": "adj.",
+    "meaning": "荒涼的；(前景)黯淡的",
+    "example": "Economists offered a bleak forecast for the region's job market next year.",
+    "roots": "源自古英文 blac (蒼白的、發亮的) → 引申為陰冷荒涼、缺乏希望的"
+  },
+  {
+    "word": "blemish",
+    "pos": "n.",
+    "meaning": "瑕疵、污點",
+    "example": "A single blemish on the antique vase reduced its value considerably.",
+    "roots": "源自古法文 blesmir (使變蒼白、損傷) → 造成表面或名譽上的缺陷"
+  },
+  {
+    "word": "blight",
+    "pos": "n.",
+    "meaning": "枯萎病；(引申)禍害、破壞性因素",
+    "example": "Urban blight has left entire neighborhoods filled with abandoned buildings.",
+    "roots": "字源不確定，16世紀起用於指農作物病害 → 引申為造成衰敗的破壞力量"
+  },
+  {
+    "word": "blithe",
+    "pos": "adj.",
+    "meaning": "快樂無憂的、漫不經心的",
+    "example": "She made the decision with a blithe confidence that worried her more cautious friends.",
+    "roots": "源自古英文 blithe (快樂的) → 引申為輕鬆愉快甚至不夠謹慎的態度"
+  },
+  {
+    "word": "bluff",
+    "pos": "v./n.",
+    "meaning": "虛張聲勢、恐嚇",
+    "example": "He was only bluffing about quitting his job to get a raise.",
+    "roots": "源自荷蘭文 bluffen (吹噓) → 用誇張的姿態掩蓋真實實力"
+  },
+  {
+    "word": "blunder",
+    "pos": "n.",
+    "meaning": "大錯、失誤",
+    "example": "Forgetting the client's name during the pitch was an embarrassing blunder.",
+    "roots": "源自中古英文 blunderen (盲目行動)，可能與 blind 同源 → 因未經思考而犯下的錯誤"
+  },
+  {
+    "word": "blunt",
+    "pos": "adj.",
+    "meaning": "直言不諱的；鈍的",
+    "example": "Her blunt feedback was hard to hear but ultimately helped him improve.",
+    "roots": "源自中古英文 blunt (遲鈍的) → 引申為不加修飾、直來直往的言語"
+  },
+  {
+    "word": "bluster",
+    "pos": "v./n.",
+    "meaning": "咆哮、虛張聲勢地說話",
+    "example": "Beneath all his blustering threats, he rarely followed through on anything.",
+    "roots": "源自中古低地德文 blüstren (吹、咆哮) → 引申為用大聲威嚇掩飾底氣不足"
+  },
+  {
+    "word": "boggle",
+    "pos": "v.",
+    "meaning": "使震驚、使猶豫",
+    "example": "The sheer scale of the universe boggles the mind.",
+    "roots": "源自蘇格蘭方言 bogill (鬼怪) → 引申為因驚訝或恐懼而困惑猶豫"
+  },
+  {
+    "word": "bogus",
+    "pos": "adj.",
+    "meaning": "假的、偽造的",
+    "example": "The investigation revealed that most of the charity's donation receipts were bogus.",
+    "roots": "19世紀美國俚語，原指偽造貨幣的機器 → 引申為虛假不實的"
+  },
+  {
+    "word": "boisterous",
+    "pos": "adj.",
+    "meaning": "喧鬧的、吵嚷的",
+    "example": "The boisterous crowd cheered loudly as the home team scored the winning goal.",
+    "roots": "源自中古英文 boistous (粗野的、猛烈的) → 引申為吵鬧粗獷的"
+  },
+  {
+    "word": "bombastic",
+    "pos": "adj.",
+    "meaning": "誇誇其談的、言辭浮誇的",
+    "example": "His bombastic speech was full of grand promises but short on specifics.",
+    "roots": "bombast (源自古法文 bombace，棉花填充物) + -ic (形容詞後綴) → 像填充棉花般虛有其表"
+  },
+  {
+    "word": "boon",
+    "pos": "n.",
+    "meaning": "恩惠、有益之事物",
+    "example": "The new highway has been a boon to businesses in the once-isolated town.",
+    "roots": "源自古諾斯語 bon (祈求、恩惠) → 引申為帶來好處的事物"
+  },
+  {
+    "word": "boondoggle",
+    "pos": "n.",
+    "meaning": "徒勞無益的工作、浪費公帑的計畫",
+    "example": "Critics called the half-built stadium a taxpayer-funded boondoggle.",
+    "roots": "20世紀美國俚語，原指童子軍編織的皮繩手工藝品 → 引申為毫無實際價值卻耗費資源的計畫"
+  },
+  {
+    "word": "boorish",
+    "pos": "adj.",
+    "meaning": "粗野無禮的",
+    "example": "His boorish table manners embarrassed everyone at the formal dinner.",
+    "roots": "boor (源自荷蘭文 boer，農民) + -ish (形容詞後綴) → 帶有貶義的鄉巴佬式粗魯行為"
+  },
+  {
+    "word": "bootless",
+    "pos": "adj.",
+    "meaning": "無用的、徒勞的",
+    "example": "Their bootless attempt to revive the failing company only delayed the inevitable.",
+    "roots": "boot (源自古英文 bot，利益、補救) + -less (無...的) → 沒有任何益處的"
+  },
+  {
+    "word": "bourgeois",
+    "pos": "adj./n.",
+    "meaning": "中產階級的(人)；(帶貶意)世俗功利的",
+    "example": "The novel satirizes the bourgeois obsession with respectability and material comfort.",
+    "roots": "源自法文 bourgeois (城鎮居民，源自 bourg 城鎮) → 引申為講求物質與體面的中產階級價值觀"
+  },
+  {
+    "word": "bravado",
+    "pos": "n.",
+    "meaning": "虛張聲勢、逞強",
+    "example": "His bravado on the field masked a deep fear of failure.",
+    "roots": "源自西班牙文 bravada (勇敢的展示，與 brave 同源) → 表面上誇示勇氣"
+  },
+  {
+    "word": "bravura",
+    "pos": "n.",
+    "meaning": "高超技巧的表演；大膽的風格",
+    "example": "The pianist's bravura performance earned a ten-minute standing ovation.",
+    "roots": "源自義大利文 bravura (技藝精湛，與 brave 同源) → 展現非凡技巧與膽識的表演"
+  },
+  {
+    "word": "brazen",
+    "pos": "adj.",
+    "meaning": "厚顏無恥的、明目張膽的",
+    "example": "The brazen theft was caught on camera in broad daylight.",
+    "roots": "源自古英文 braesen (黃銅製的) → 黃銅堅硬耀眼，引申為厚顏無恥、毫不遮掩"
+  },
+  {
+    "word": "breach",
+    "pos": "n./v.",
+    "meaning": "違反(規定、協議)；缺口、破裂",
+    "example": "The company was fined heavily for its breach of data protection regulations.",
+    "roots": "源自古英文 brice (破裂，與 break 同源) → 規則或防線的破裂"
+  },
+  {
+    "word": "brevity",
+    "pos": "n.",
+    "meaning": "簡潔、簡短",
+    "example": "The editor praised the article for its brevity and clarity.",
+    "roots": "brev- (短，拉丁文 brevis) + -ity (名詞後綴) → 言簡意賅的性質"
+  },
+  {
+    "word": "brink",
+    "pos": "n.",
+    "meaning": "邊緣(尤指危險或重大改變前)",
+    "example": "The negotiations brought the two countries back from the brink of war.",
+    "roots": "源自中古低地德文 brink (邊緣、斜坡) → 懸崖或危機的邊緣"
+  },
+  {
+    "word": "brisk",
+    "pos": "adj.",
+    "meaning": "輕快的、敏捷的；(生意)興隆的",
+    "example": "Business was brisk at the bakery on the morning of the festival.",
+    "roots": "字源不確定，16世紀出現，可能源自法文 brusque → 形容動作或步調快速有活力"
+  },
+  {
+    "word": "bristle",
+    "pos": "v.",
+    "meaning": "(因憤怒)豎起毛髮、勃然變色；充滿(危險、困難)",
+    "example": "She bristled at the suggestion that her research was flawed.",
+    "roots": "源自古英文 byrst (剛毛) → 動物受驚時豎毛，引申為人因不悅而反應激烈"
+  },
+  {
+    "word": "brittle",
+    "pos": "adj.",
+    "meaning": "易碎的、脆弱的；(性格)易怒的",
+    "example": "Years of stress had left him emotionally brittle and quick to anger.",
+    "roots": "源自古英文 breotan (打碎) → 容易破裂的特性"
+  },
+  {
+    "word": "broach",
+    "pos": "v.",
+    "meaning": "提出(敏感話題)",
+    "example": "She waited until dessert to broach the subject of the family inheritance.",
+    "roots": "源自古法文 brochier (刺穿，broche 尖銳工具) → 用尖器打開容器，引申為打開話題"
+  },
+  {
+    "word": "bromide",
+    "pos": "n.",
+    "meaning": "陳腔濫調、老生常談",
+    "example": "His speech was full of bromides about hard work and perseverance, with no fresh ideas.",
+    "roots": "源自化學名詞「溴化物」，早期用作鎮靜劑 → 引申為使人麻木、缺乏新意的老套說法"
+  },
+  {
+    "word": "brood",
+    "pos": "v.",
+    "meaning": "沉思、鬱悶地想(不愉快的事)",
+    "example": "He spent the entire weekend brooding over the harsh feedback from his editor.",
+    "roots": "源自古英文 brod (孵蛋) → 母鳥長時間靜靜孵蛋，引申為反覆沉思煩惱"
+  },
+  {
+    "word": "browbeat",
+    "pos": "v.",
+    "meaning": "恐嚇、威嚇(使屈服)",
+    "example": "The manager browbeat junior staff into working unpaid overtime.",
+    "roots": "brow (眉毛) + beat (打) → 皺眉怒視、以氣勢壓迫他人"
+  },
+  {
+    "word": "bruit",
+    "pos": "v.",
+    "meaning": "散布(消息、謠言)",
+    "example": "Rumors of the merger were bruited about the office long before the official announcement.",
+    "roots": "源自古法文 bruit (噪音、聲響) → 消息如噪音般四處傳開"
+  },
+  {
+    "word": "brunt",
+    "pos": "n.",
+    "meaning": "(攻擊、打擊的)主要衝擊",
+    "example": "Coastal towns bore the brunt of the hurricane's destructive force.",
+    "roots": "字源不確定，中古英文 brunt 原指猛烈一擊 → 引申為承受主要衝擊之處"
+  },
+  {
+    "word": "brusque",
+    "pos": "adj.",
+    "meaning": "粗率無禮的、生硬的",
+    "example": "The doctor's brusque manner made anxious patients even more uncomfortable.",
+    "roots": "源自義大利文 brusco (粗糙的、酸澀的) → 引申為言行唐突無禮"
+  },
+  {
+    "word": "bucolic",
+    "pos": "adj.",
+    "meaning": "田園的、鄉村生活的",
+    "example": "The novel is set in a bucolic village untouched by modern industry.",
+    "roots": "源自希臘文 boukolos (牧牛人，bous 牛 + kolos 照顧) → 引申為與田園牧歌生活相關的"
+  },
+  {
+    "word": "buffoon",
+    "pos": "n.",
+    "meaning": "小丑、愚蠢滑稽的人",
+    "example": "The prince was widely mocked as a pompous buffoon by the court.",
+    "roots": "源自義大利文 buffone (小丑，與 buffare 吹氣、鼓腮同源) → 靠滑稽表情逗人發笑的人"
+  },
+  {
+    "word": "bumptious",
+    "pos": "adj.",
+    "meaning": "自大冒失的、傲慢的",
+    "example": "The bumptious new intern kept correcting senior colleagues in meetings.",
+    "roots": "bump (碰撞) + -tious (仿 fractious 等字形成的形容詞後綴) → 給人莽撞冒犯之感的"
+  },
+  {
+    "word": "buoyant",
+    "pos": "adj.",
+    "meaning": "有浮力的；(情緒、經濟)樂觀向上的",
+    "example": "The buoyant housing market surprised analysts who had predicted a downturn.",
+    "roots": "源自西班牙文 boyar (漂浮) → 引申為情緒或狀態輕快向上的"
+  },
+  {
+    "word": "bureaucracy",
+    "pos": "n.",
+    "meaning": "官僚體制、繁瑣的行政程序",
+    "example": "Starting a small business required wading through layers of government bureaucracy.",
+    "roots": "bureau (辦公室，法文) + -cracy (統治，希臘文 kratos) → 由辦公室文書體系主導的統治方式"
+  },
+  {
+    "word": "burgeon",
+    "pos": "v.",
+    "meaning": "迅速成長、蓬勃發展",
+    "example": "The city's tech sector burgeoned after several major companies opened offices there.",
+    "roots": "源自古法文 burjon (植物的新芽) → 如新芽般迅速萌發生長"
+  },
+  {
+    "word": "burlesque",
+    "pos": "n.",
+    "meaning": "滑稽劇、誇張的模仿",
+    "example": "The play is a burlesque of Victorian melodrama, exaggerating every cliché.",
+    "roots": "源自義大利文 burlesco (burla 玩笑) → 以誇張手法達到滑稽諷刺效果的作品"
+  },
+  {
+    "word": "burnish",
+    "pos": "v.",
+    "meaning": "擦亮、磨光；(引申)提升(形象、聲譽)",
+    "example": "The senator toured the disaster area to burnish his image as a hands-on leader.",
+    "roots": "源自古法文 burnir (使光亮，與 brown 同源) → 打磨表面使其發亮"
+  },
+  {
+    "word": "buttress",
+    "pos": "v./n.",
+    "meaning": "支持、加強；(建築)扶壁",
+    "example": "The lawyer buttressed her argument with three separate expert testimonies.",
+    "roots": "源自古法文 bouterez (支撐物，bouter 推、頂) → 提供額外支撐力量"
+  },
+  {
+    "word": "byword",
+    "pos": "n.",
+    "meaning": "代名詞、典型例子(常帶貶義)",
+    "example": "The company's name became a byword for corporate greed after the scandal.",
+    "roots": "by- (旁邊) + word (話語) → 常被人掛在嘴邊、用作代稱的詞語"
+  },
+  {
+    "word": "cabal",
+    "pos": "n.",
+    "meaning": "陰謀集團、小圈子密謀者",
+    "example": "A small cabal of senior executives secretly plotted to oust the CEO.",
+    "roots": "源自希伯來文 qabbalah (神秘傳承的知識，經法文轉為 cabale) → 引申為秘密結社密謀之人"
+  },
+  {
+    "word": "cache",
+    "pos": "n.",
+    "meaning": "儲藏物、隱藏處",
+    "example": "The soldiers discovered a hidden cache of weapons buried beneath the barn.",
+    "roots": "源自法文 cacher (隱藏) → 藏起來以備日後使用的物資"
+  },
+  {
+    "word": "cacophonous",
+    "pos": "adj.",
+    "meaning": "刺耳的、不和諧的",
+    "example": "The cacophonous noise of the construction site made it impossible to concentrate.",
+    "roots": "caco- (壞，希臘文 kakos) + phon (聲音，希臘文 phone) + -ous (形容詞後綴) → 難聽刺耳的聲音"
+  },
+  {
+    "word": "cacophony",
+    "pos": "n.",
+    "meaning": "刺耳的雜音、不和諧的聲音",
+    "example": "The cacophony of car horns filled the gridlocked intersection.",
+    "roots": "同 cacophonous 字源 → 雜亂刺耳的聲響"
+  },
+  {
+    "word": "cadge",
+    "pos": "v.",
+    "meaning": "乞討、討要(小恩小惠)",
+    "example": "He was always cadging cigarettes from his coworkers instead of buying his own.",
+    "roots": "字源不確定，可能與 catch 或方言 cadger (小販) 有關 → 引申為靠他人施捨獲取小利"
+  },
+  {
+    "word": "cajole",
+    "pos": "v.",
+    "meaning": "哄騙、以甜言蜜語勸誘",
+    "example": "She cajoled her little brother into doing her chores by promising him ice cream.",
+    "roots": "源自法文 cajoler (哄勸)，字源可能與籠中鳥的叫聲有關 → 用討好的話語說服他人"
+  },
+  {
+    "word": "calamity",
+    "pos": "n.",
+    "meaning": "災難、大禍",
+    "example": "The flood was the worst calamity the small town had faced in a century.",
+    "roots": "源自拉丁文 calamitas (損害、災禍) → 造成重大損失的事件"
+  },
+  {
+    "word": "calibrate",
+    "pos": "v.",
+    "meaning": "校準、精確調整",
+    "example": "Technicians carefully calibrated the telescope before the eclipse.",
+    "roots": "源自拉丁文 calibrare (可能源自阿拉伯文 qalib，模具) → 精確調整至標準規格"
+  },
+  {
+    "word": "callous",
+    "pos": "adj.",
+    "meaning": "冷漠無情的、麻木不仁的",
+    "example": "His callous remark about the layoffs showed no concern for the affected families.",
+    "roots": "源自拉丁文 callosus (長繭的，callus 硬皮) → 情感上如長了厚繭般麻木"
+  },
+  {
+    "word": "callow",
+    "pos": "adj.",
+    "meaning": "不成熟的、少不更事的",
+    "example": "As a callow freshman, he had no idea how demanding college coursework would be.",
+    "roots": "源自古英文 calu (無毛的，形容雛鳥未長羽毛) → 引申為經驗不足、稚嫩的"
+  },
+  {
+    "word": "calumniate",
+    "pos": "v.",
+    "meaning": "誹謗、中傷",
+    "example": "The former partner calumniated him in the press, accusing him of fraud with no evidence.",
+    "roots": "calumni- (誹謗，拉丁文 calumnia) + -ate (動詞後綴) → 惡意散布不實指控"
+  },
+  {
+    "word": "calumny",
+    "pos": "n.",
+    "meaning": "誹謗、中傷之言",
+    "example": "The senator's career was nearly destroyed by a wave of political calumny.",
+    "roots": "同 calumniate 字源 → 惡意中傷的言論"
+  },
+  {
+    "word": "canard",
+    "pos": "n.",
+    "meaning": "無根據的謠言、誤傳",
+    "example": "The claim that the vaccine causes the disease it prevents is a persistent canard.",
+    "roots": "源自法文 canard (鴨子)，源自諺語「賣半隻鴨」意指騙人的故事 → 引申為毫無根據的謠傳"
+  },
+  {
+    "word": "candid",
+    "pos": "adj.",
+    "meaning": "坦率的、直言不諱的",
+    "example": "In a rare candid interview, the actor admitted his early films were disappointing.",
+    "roots": "源自拉丁文 candidus (白色的、純淨的) → 引申為心地坦誠、不加掩飾的"
+  },
+  {
+    "word": "candor",
+    "pos": "n.",
+    "meaning": "坦率、直言",
+    "example": "Her candor about the company's struggles surprised the shareholders at the meeting.",
+    "roots": "同 candid 字源 → 坦誠不隱瞞的態度"
+  },
+  {
+    "word": "canny",
+    "pos": "adj.",
+    "meaning": "精明的、機警的",
+    "example": "A canny negotiator, she managed to secure a much better deal than expected.",
+    "roots": "can (能夠，源自古英文 cunnan 知道) + -y (形容詞後綴) → 有見識、判斷精準的"
+  },
+  {
+    "word": "canon",
+    "pos": "n.",
+    "meaning": "教規；(公認的)經典作品集",
+    "example": "Shakespeare's plays remain central to the Western literary canon.",
+    "roots": "源自希臘文 kanon (標準、規則) → 被公認為權威標準的作品或規範"
+  },
+  {
+    "word": "canonical",
+    "pos": "adj.",
+    "meaning": "權威公認的、符合正統的",
+    "example": "This translation has become the canonical version studied in most universities.",
+    "roots": "同 canon 字源 + -ical (形容詞後綴) → 符合公認標準的"
+  },
+  {
+    "word": "cant",
+    "pos": "n.",
+    "meaning": "虛偽的言辭、行話套語",
+    "example": "The politician's speech was full of moralistic cant but offered no concrete plan.",
+    "roots": "源自拉丁文 cantare (吟唱)，原指乞丐或宗教人士的吟誦腔調 → 引申為空洞虛偽的陳腔套話"
+  },
+  {
+    "word": "cantankerous",
+    "pos": "adj.",
+    "meaning": "脾氣暴躁的、好爭吵的",
+    "example": "The cantankerous old man complained about every small change in the neighborhood.",
+    "roots": "字源不確定，可能源自愛爾蘭語 cannran (抱怨) → 形容易怒好爭辯的性格"
+  },
+  {
+    "word": "canvass",
+    "pos": "v.",
+    "meaning": "遊說、逐戶拜訪徵求(意見、選票)",
+    "example": "Volunteers canvassed the neighborhood, asking residents about the upcoming ballot measure.",
+    "roots": "源自 canvas (帆布)，早期指用帆布篩選穀物 → 引申為仔細徵詢、篩選意見"
+  },
+  {
+    "word": "capacious",
+    "pos": "adj.",
+    "meaning": "容量大的、寬敞的",
+    "example": "The capacious trunk of the old sedan could fit an entire family's luggage.",
+    "roots": "capac- (能容納，拉丁文 capax) + -ious (形容詞後綴) → 能容納大量事物的"
+  },
+  {
+    "word": "capitulate",
+    "pos": "v.",
+    "meaning": "投降、屈服",
+    "example": "After a lengthy siege, the garrison finally capitulated to the invading army.",
+    "roots": "capit- (頭，拉丁文 caput) + -ulate (動詞後綴) → 原指依條款(逐條列出)投降，引申為屈服讓步"
+  },
+  {
+    "word": "caprice",
+    "pos": "n.",
+    "meaning": "反覆無常、一時興起",
+    "example": "The company's strategy seemed to shift with every caprice of the new CEO.",
+    "roots": "源自義大利文 capriccio (突然的顫抖，可能源自 capra 山羊的跳躍) → 如山羊跳躍般難以預料"
+  },
+  {
+    "word": "capricious",
+    "pos": "adj.",
+    "meaning": "反覆無常的、變幻莫測的",
+    "example": "Mountain weather can be capricious, shifting from sunshine to snow within an hour.",
+    "roots": "同 caprice 字源 + -ous (形容詞後綴) → 情緒或行為變化無常的"
+  },
+  {
+    "word": "captious",
+    "pos": "adj.",
+    "meaning": "吹毛求疵的、愛挑毛病的",
+    "example": "The captious critic found fault with even the most minor details of the production.",
+    "roots": "capt- (抓住，拉丁文 capere) + -ious (形容詞後綴) → 抓住小錯不放的"
+  },
+  {
+    "word": "captivate",
+    "pos": "v.",
+    "meaning": "迷住、吸引住",
+    "example": "The storyteller captivated the children with tales of dragons and distant kingdoms.",
+    "roots": "capt- (抓住，拉丁文 capere) + -ivate (動詞後綴) → 抓住注意力，使著迷"
+  },
+  {
+    "word": "carouse",
+    "pos": "v.",
+    "meaning": "狂歡痛飲、喧鬧作樂",
+    "example": "The sailors caroused in the harbor tavern late into the night.",
+    "roots": "源自德文片語 gar aus (trinken)，意為「喝乾杯」 → 引申為縱情飲酒作樂"
+  },
+  {
+    "word": "carping",
+    "pos": "adj.",
+    "meaning": "吹毛求疵的、愛抱怨的",
+    "example": "Ignoring the carping comments from online critics, she continued to write in her own style.",
+    "roots": "carp (源自古諾斯語 karpa，誇耀、抱怨) + -ing (形容詞後綴) → 不斷挑剔抱怨的"
+  },
+  {
+    "word": "castigate",
+    "pos": "v.",
+    "meaning": "嚴厲批評、懲罰",
+    "example": "The report castigated the agency for its slow response to the disaster.",
+    "roots": "cast- (純淨，拉丁文 castus) + -igate (使...，源自 agere) → 原指使人純淨，引申為嚴厲糾正批評"
+  },
+  {
+    "word": "catalyst",
+    "pos": "n.",
+    "meaning": "催化劑；(引申)促成變化的因素",
+    "example": "The protest served as a catalyst for widespread political reform.",
+    "roots": "cata- (向下、完全) + lys (鬆解，希臘文 lysis) → 加速反應、促成改變的物質或事件"
+  },
+  {
+    "word": "catalyze",
+    "pos": "v.",
+    "meaning": "促成、加速(變化)",
+    "example": "Government subsidies helped catalyze the growth of the renewable energy industry.",
+    "roots": "同 catalyst 字源 + -yze (動詞後綴) → 引發或加速某個過程"
+  },
+  {
+    "word": "categorical",
+    "pos": "adj.",
+    "meaning": "絕對的、明確無疑的",
+    "example": "The spokesperson issued a categorical denial of all the allegations.",
+    "roots": "category (範疇，希臘文 kategoria) + -ical (形容詞後綴) → 毫無保留地歸於明確類別，引申為斬釘截鐵的"
+  },
+  {
+    "word": "catholic",
+    "pos": "adj.",
+    "meaning": "(興趣、品味)廣泛的、包羅萬象的",
+    "example": "Her catholic taste in music ranges from baroque opera to underground hip-hop.",
+    "roots": "cata- (完全) + holos (整體，希臘文) → 涵蓋一切、廣泛包容的"
+  },
+  {
+    "word": "caustic",
+    "pos": "adj.",
+    "meaning": "刻薄的、腐蝕性的",
+    "example": "His caustic remarks during the meeting left several colleagues visibly offended.",
+    "roots": "源自希臘文 kaustikos (能燃燒的，kaiein 燃燒) → 化學上有腐蝕性，引申為言語尖酸刻薄"
+  },
+  {
+    "word": "cavalier",
+    "pos": "adj.",
+    "meaning": "滿不在乎的、輕率傲慢的",
+    "example": "Investors were alarmed by the CEO's cavalier attitude toward the company's mounting debt.",
+    "roots": "源自拉丁文 caballarius (騎士，caballus 馬) → 原指騎士階級的傲慢氣派，引申為輕率隨便"
+  },
+  {
+    "word": "caveat",
+    "pos": "n.",
+    "meaning": "警告、附加條件",
+    "example": "The financial advisor recommended the investment, with the caveat that markets can be unpredictable.",
+    "roots": "源自拉丁文 cavere (小心、提防) → 事先提出的警告或但書"
+  },
+  {
+    "word": "cavil",
+    "pos": "v.",
+    "meaning": "無謂地挑剔、吹毛求疵",
+    "example": "Rather than address the main proposal, he caviled over minor wording issues.",
+    "roots": "源自拉丁文 cavillari (嘲弄、詭辯) → 針對細節無理挑剔"
+  },
+  {
+    "word": "cede",
+    "pos": "v.",
+    "meaning": "割讓、放棄(權利、領土)",
+    "example": "The treaty required the empire to cede several border territories to its rival.",
+    "roots": "源自拉丁文 cedere (走、讓步) → 讓出、放棄所有權"
+  },
+  {
+    "word": "celerity",
+    "pos": "n.",
+    "meaning": "快速、敏捷",
+    "example": "The rescue team responded with remarkable celerity, reaching the scene within minutes.",
+    "roots": "celer- (快，拉丁文 celer) + -ity (名詞後綴) → 行動迅速的特質"
+  },
+  {
+    "word": "censorious",
+    "pos": "adj.",
+    "meaning": "吹毛求疵的、苛責的",
+    "example": "Her censorious tone made it clear she disapproved of every decision the committee had made.",
+    "roots": "censor (監察官，拉丁文，負責評判道德風紀) + -ious (形容詞後綴) → 習慣嚴厲批評指責的"
+  },
+  {
+    "word": "censure",
+    "pos": "v./n.",
+    "meaning": "譴責、正式批評",
+    "example": "The board voted to censure the director for misusing company funds.",
+    "roots": "源自拉丁文 censura (評判，與 censor 同源) → 正式且嚴厲地批評"
+  },
+  {
+    "word": "cerebral",
+    "pos": "adj.",
+    "meaning": "大腦的；(以)理智取向的",
+    "example": "The film is more cerebral than most action movies, favoring dialogue over explosions.",
+    "roots": "cerebr- (大腦，拉丁文 cerebrum) + -al (形容詞後綴) → 訴諸理智思考而非情感的"
+  },
+  {
+    "word": "certitude",
+    "pos": "n.",
+    "meaning": "確信、篤定(常指主觀上的堅信)",
+    "example": "He spoke with a certitude that left no room for doubt, though he was later proven wrong.",
+    "roots": "cert- (確定，拉丁文 certus) + -itude (名詞後綴) → 內心確定不疑的狀態"
+  },
+  {
+    "word": "cessation",
+    "pos": "n.",
+    "meaning": "停止、終止",
+    "example": "Both sides agreed to an immediate cessation of hostilities.",
+    "roots": "cess- (停止，拉丁文 cedere 的過去分詞 cessum) + -ation (名詞後綴) → 活動或狀態的終止"
+  },
+  {
+    "word": "chafe",
+    "pos": "v.",
+    "meaning": "(因限制)惱怒、不耐；擦傷",
+    "example": "The young executive chafed under the strict rules imposed by upper management.",
+    "roots": "源自古法文 chaufer (加熱，與 chauffeur 同源) → 摩擦生熱，引申為因摩擦而惱怒"
+  },
+  {
+    "word": "chaff",
+    "pos": "n.",
+    "meaning": "穀殼、無價值的東西(常見於 separate the wheat from the chaff)",
+    "example": "Editors must learn to separate the wheat from the chaff when reviewing submissions.",
+    "roots": "源自古英文 ceaf (穀殼) → 脫穀後剩下的無用外殼，引申為無價值之物"
+  },
+  {
+    "word": "chagrin",
+    "pos": "n.",
+    "meaning": "懊惱、失望",
+    "example": "To her chagrin, the meeting was cancelled just as she finished preparing her presentation.",
+    "roots": "源自法文 chagrin (悲傷、煩惱)，字源不確定 → 因失望或難堪而產生的懊惱"
+  },
+  {
+    "word": "chameleon",
+    "pos": "n.",
+    "meaning": "變色龍；(引申)善變、易於變換立場的人",
+    "example": "As a political chameleon, he shifted his positions to match whatever audience he addressed.",
+    "roots": "源自希臘文 khamaileon (地上的獅子，khamai 地面 + leon 獅子) → 因該蜥蜴能變色而引申為善變之人"
+  },
+  {
+    "word": "charade",
+    "pos": "n.",
+    "meaning": "虛假的表演、裝模作樣",
+    "example": "Everyone in the office knew the polite handshake was just a charade masking deep resentment.",
+    "roots": "源自法文 charade (猜謎遊戲) → 引申為表面裝飾、實則虛假的行為"
+  },
+  {
+    "word": "charlatan",
+    "pos": "n.",
+    "meaning": "江湖郎中、招搖撞騙者",
+    "example": "The self-proclaimed healer turned out to be a charlatan selling nothing but false hope.",
+    "roots": "源自義大利文 ciarlatano (吹噓叫賣的小販，ciarlare 喋喋不休) → 靠花言巧語行騙的人"
+  },
+  {
+    "word": "chary",
+    "pos": "adj.",
+    "meaning": "小心謹慎的、不情願的",
+    "example": "Investors remained chary of the volatile market after last year's crash.",
+    "roots": "源自古英文 cearig (悲傷的、憂慮的，與 care 同源) → 因憂慮而格外謹慎"
+  },
+  {
+    "word": "chasm",
+    "pos": "n.",
+    "meaning": "深谷、巨大分歧",
+    "example": "A growing chasm has emerged between the party's moderate and radical factions.",
+    "roots": "源自希臘文 khasma (裂口、深淵) → 引申為觀點或狀態上的巨大鴻溝"
+  },
+  {
+    "word": "chaste",
+    "pos": "adj.",
+    "meaning": "貞潔的、樸素無裝飾的",
+    "example": "The chapel's chaste interior contrasted sharply with the ornate cathedral next door.",
+    "roots": "源自拉丁文 castus (純淨的、無瑕的) → 引申為純潔或樸素不加修飾的"
+  },
+  {
+    "word": "chastise",
+    "pos": "v.",
+    "meaning": "嚴厲斥責、懲罰",
+    "example": "The coach chastised the players for their careless mistakes during the match.",
+    "roots": "同 chaste 字源，原意為使純淨 → 引申為透過責罰使人改正"
+  },
+  {
+    "word": "chauvinism",
+    "pos": "n.",
+    "meaning": "沙文主義、盲目的偏執愛國(或性別)心態",
+    "example": "His constant dismissal of his female colleagues' ideas reflected deep-seated chauvinism.",
+    "roots": "源自法國士兵 Nicolas Chauvin，因其對拿破崙的盲目崇拜而得名 → 引申為過度偏執的優越感"
+  },
+  {
+    "word": "chauvinistic",
+    "pos": "adj.",
+    "meaning": "沙文主義的、盲目偏執的",
+    "example": "The film was criticized for its chauvinistic portrayal of women as mere sidekicks.",
+    "roots": "同 chauvinism 字源 + -istic (形容詞後綴) → 帶有盲目優越感的"
+  },
+  {
+    "word": "cherubic",
+    "pos": "adj.",
+    "meaning": "(外貌)天真可愛的、如天使般的",
+    "example": "The cherubic toddler charmed everyone at the family reunion with his round cheeks and giggles.",
+    "roots": "cherub (源自希伯來文 kerub，天使) + -ic (形容詞後綴) → 具有天使般純真可愛外貌的"
+  },
+  {
+    "word": "chicanery",
+    "pos": "n.",
+    "meaning": "詭計、狡猾的手段",
+    "example": "The merger was pushed through only through a series of legal chicanery.",
+    "roots": "源自法文 chicane (無理取鬧的爭執，可能源自波斯馬球術語) → 引申為狡猾欺詐的手段"
+  },
+  {
+    "word": "chide",
+    "pos": "v.",
+    "meaning": "責備、責罵",
+    "example": "The librarian gently chided the students for talking too loudly.",
+    "roots": "源自古英文 cidan (爭吵、責罵) → 以言語表達不滿或責備"
+  },
+  {
+    "word": "chimera",
+    "pos": "n.",
+    "meaning": "空想、不可能實現的幻想；(神話)喀邁拉獸",
+    "example": "Critics dismissed the plan for a self-sustaining colony on Mars as a chimera.",
+    "roots": "源自希臘神話 Khimaira (獅頭、羊身、蛇尾的怪獸) → 引申為虛幻不切實際的想法"
+  },
+  {
+    "word": "chimerical",
+    "pos": "adj.",
+    "meaning": "空想的、不切實際的",
+    "example": "His chimerical scheme to double the company's revenue overnight convinced no one on the board.",
+    "roots": "同 chimera 字源 + -ical (形容詞後綴) → 如神話怪獸般虛幻不真實的"
+  },
+  {
+    "word": "chintzy",
+    "pos": "adj.",
+    "meaning": "小氣的；廉價俗麗的",
+    "example": "Guests were unimpressed by the chintzy decorations at the otherwise expensive wedding.",
+    "roots": "源自 chintz (印花棉布)，因廉價印花布在19世紀被視為俗氣 → 引申為廉價又小氣的"
+  },
+  {
+    "word": "chivalrous",
+    "pos": "adj.",
+    "meaning": "有騎士風度的、彬彬有禮的",
+    "example": "He held the door open and offered his seat, a chivalrous gesture that impressed everyone.",
+    "roots": "chival- (騎士，源自古法文 chevalier，來自拉丁文 caballus 馬) + -rous (形容詞後綴) → 具有中世紀騎士般的禮節與勇氣"
+  },
+  {
+    "word": "chivalry",
+    "pos": "n.",
+    "meaning": "騎士精神、彬彬有禮的風度",
+    "example": "The novel romanticizes medieval chivalry, portraying knights as paragons of honor.",
+    "roots": "同 chivalrous 字源 → 騎士應具備的美德與禮儀"
+  },
+  {
+    "word": "choleric",
+    "pos": "adj.",
+    "meaning": "易怒的、暴躁的",
+    "example": "The choleric general was known for shouting at subordinates over the smallest mistake.",
+    "roots": "choler (膽汁，希臘文 khole) + -ic (形容詞後綴) → 古代體液學說認為膽汁過多導致易怒"
+  },
+  {
+    "word": "chronicle",
+    "pos": "v.",
+    "meaning": "編年記載、詳細記錄",
+    "example": "The documentary chronicles the rise and fall of the once-dominant newspaper industry.",
+    "roots": "chron- (時間，希臘文 chronos) + -icle (名詞/動詞後綴) → 依時間順序記錄事件"
+  },
+  {
+    "word": "churlish",
+    "pos": "adj.",
+    "meaning": "粗魯無禮的、乖戾的",
+    "example": "It seemed churlish to refuse the invitation after they had gone to so much trouble.",
+    "roots": "churl (源自古英文 ceorl，平民、粗人) + -ish (形容詞後綴) → 帶有粗俗無禮舉止的"
+  },
+  {
+    "word": "circuitous",
+    "pos": "adj.",
+    "meaning": "迂迴的、繞道的",
+    "example": "Roadwork forced drivers to take a circuitous route through the back streets.",
+    "roots": "circuit (源自拉丁文 circuitus，環繞) + -ous (形容詞後綴) → 繞遠路的、非直接的"
+  },
+  {
+    "word": "circumlocution",
+    "pos": "n.",
+    "meaning": "迂迴累贅的說法、拐彎抹角",
+    "example": "Instead of a simple yes or no, the spokesperson offered pages of circumlocution.",
+    "roots": "circum- (周圍) + loc (說，拉丁文 loqui) + -ution (名詞後綴) → 繞著主題說話而不直接表達"
+  },
+  {
+    "word": "circumnavigate",
+    "pos": "v.",
+    "meaning": "環航、繞道而行",
+    "example": "Magellan's crew was the first to circumnavigate the globe by sea.",
+    "roots": "circum- (周圍) + navig (航行，拉丁文 navigare) + -ate (動詞後綴) → 繞著某物航行一周"
+  },
+  {
+    "word": "circumscribe",
+    "pos": "v.",
+    "meaning": "限制、劃定範圍",
+    "example": "The new law circumscribes the powers previously granted to local governments.",
+    "roots": "circum- (周圍) + scribe (寫，拉丁文 scribere) → 在四周畫線界定範圍"
+  },
+  {
+    "word": "circumspect",
+    "pos": "adj.",
+    "meaning": "謹慎小心的、考慮周全的",
+    "example": "Given the market's volatility, the fund manager took a more circumspect approach to investing.",
+    "roots": "circum- (周圍) + spect (看，拉丁文 spicere) → 環顧四周後才行動，形容謹慎"
+  },
+  {
+    "word": "circumvent",
+    "pos": "v.",
+    "meaning": "規避、繞過(規則、障礙)",
+    "example": "The company restructured its operations abroad to circumvent the new tariffs.",
+    "roots": "circum- (周圍) + vent (來，拉丁文 venire) → 繞道而行，避開正面阻礙"
+  },
+  {
+    "word": "civility",
+    "pos": "n.",
+    "meaning": "禮貌、彬彬有禮",
+    "example": "Despite their political disagreements, the two candidates debated with notable civility.",
+    "roots": "civil (公民的、有禮貌的，拉丁文 civilis) + -ity (名詞後綴) → 符合社會禮儀的態度"
+  },
+  {
+    "word": "clairvoyant",
+    "pos": "adj./n.",
+    "meaning": "有洞察力的(人)、能預知的(人)",
+    "example": "Her clairvoyant grasp of market trends made her one of the firm's most valuable analysts.",
+    "roots": "clair- (清楚，法文 clair) + voyant (看見的，voir) → 能清楚看見常人看不見之事物"
+  },
+  {
+    "word": "clamor",
+    "pos": "n./v.",
+    "meaning": "喧鬧、強烈要求(的聲音)",
+    "example": "Public clamor for reform grew louder after the scandal was exposed.",
+    "roots": "源自拉丁文 clamare (喊叫) → 大聲呼喊、要求"
+  },
+  {
+    "word": "clandestine",
+    "pos": "adj.",
+    "meaning": "秘密的、隱密的",
+    "example": "The two rival companies held a clandestine meeting to discuss a potential merger.",
+    "roots": "源自拉丁文 clandestinus (秘密的，clam 秘密地) → 刻意隱藏不讓人知道的"
+  },
+  {
+    "word": "clannish",
+    "pos": "adj.",
+    "meaning": "宗派性的、排外的",
+    "example": "The clannish group of veteran employees rarely welcomed new hires into their circle.",
+    "roots": "clan (氏族，蘇格蘭蓋爾語 clann) + -ish (形容詞後綴) → 像氏族般緊密團結卻排斥外人的"
+  },
+  {
+    "word": "cleave",
+    "pos": "v.",
+    "meaning": "劈開、分裂；(反義)緊緊依附",
+    "example": "The axe cleaved the log neatly in two with a single blow.",
+    "roots": "源自兩個不同的古英文詞根 cleofan (劈開) 與 clifian (黏附) 巧合合流 → 是英文中少見同形反義的「矛盾詞」"
+  },
+  {
+    "word": "clemency",
+    "pos": "n.",
+    "meaning": "寬大、仁慈(尤指對罪犯)",
+    "example": "The governor granted clemency to the prisoner after new evidence emerged.",
+    "roots": "clement (溫和的，拉丁文 clemens) + -cy (名詞後綴) → 對他人過錯展現寬容的態度"
+  },
+  {
+    "word": "clement",
+    "pos": "adj.",
+    "meaning": "溫和的、寬厚的(常指天氣或態度)",
+    "example": "The unusually clement winter meant fewer heating costs for local residents.",
+    "roots": "源自拉丁文 clemens (溫和的、仁慈的) → 形容天氣或人態度溫和"
+  },
+  {
+    "word": "cliche",
+    "pos": "n.",
+    "meaning": "陳腔濫調、老套的說法",
+    "example": "The graduation speech was filled with clichés about following your dreams.",
+    "roots": "源自法文 cliché (印刷業術語，指鑄版)，因鑄版被重複使用而引申為被過度使用的表達方式"
+  },
+  {
+    "word": "clique",
+    "pos": "n.",
+    "meaning": "小圈子、派系",
+    "example": "The popular clique at school rarely let anyone else sit at their lunch table.",
+    "roots": "源自法文 clique (小團體)，可能與擬聲詞 cliquer (發出喀噠聲) 有關 → 引申為排他的小群體"
+  },
+  {
+    "word": "cloture",
+    "pos": "n.",
+    "meaning": "(議會)結束辯論、限制發言的程序",
+    "example": "The Senate invoked cloture to end the filibuster and proceed to a final vote.",
+    "roots": "源自法文 clôture (關閉，與 close 同源) → 用以終結冗長辯論的正式程序"
+  },
+  {
+    "word": "clout",
+    "pos": "n.",
+    "meaning": "影響力、勢力",
+    "example": "As the company's largest shareholder, she carried enormous clout on the board.",
+    "roots": "源自古英文 clut (一擊、補丁) → 原指用力一擊，引申為具有份量的影響力"
+  },
+  {
+    "word": "cloying",
+    "pos": "adj.",
+    "meaning": "過分甜膩的、令人生厭的",
+    "example": "The cloying sweetness of the dessert made it hard to finish more than a few bites.",
+    "roots": "源自 cloy (使厭膩，古法文 encloyer 釘死) + -ing (形容詞後綴) → 甜膩到令人反感的程度"
+  },
+  {
+    "word": "coalesce",
+    "pos": "v.",
+    "meaning": "結合、合併(成一體)",
+    "example": "The various protest groups gradually coalesced into a single unified movement.",
+    "roots": "co- (一起) + alesce (成長，拉丁文 alescere) → 各部分成長合為一體"
+  },
+  {
+    "word": "coalition",
+    "pos": "n.",
+    "meaning": "聯盟、聯合政府",
+    "example": "The two smaller parties formed a coalition to challenge the ruling majority.",
+    "roots": "同 coalesce 字源 + -tion (名詞後綴) → 各方結合而成的聯合體"
+  },
+  {
+    "word": "coax",
+    "pos": "v.",
+    "meaning": "溫言哄勸、慢慢說服",
+    "example": "It took nearly an hour to coax the frightened cat down from the tree.",
+    "roots": "源自中古英文俚語 cokes (愚人)，coax 原意為「愚弄」 → 引申為以溫和手段誘導對方順從"
+  },
+  {
+    "word": "cocksure",
+    "pos": "adj.",
+    "meaning": "自信滿滿的、過度自負的",
+    "example": "The cocksure rookie assured everyone he'd win the tournament in his first attempt.",
+    "roots": "cock (公雞，象徵自負) + sure (確定的) → 像公雞般昂首自信、過分篤定"
+  },
+  {
+    "word": "coda",
+    "pos": "n.",
+    "meaning": "(音樂或事件的)結尾部分、尾聲",
+    "example": "The peace treaty served as a fitting coda to years of brutal conflict.",
+    "roots": "源自拉丁文 cauda (尾巴) → 附加在主體之後的結束部分"
+  },
+  {
+    "word": "coddle",
+    "pos": "v.",
+    "meaning": "溺愛、過分呵護",
+    "example": "Critics argue the policy coddles large corporations at taxpayers' expense.",
+    "roots": "字源不確定，17世紀起指用溫水慢煮，引申為細心呵護 → 過度小心地照顧使其軟弱"
+  },
+  {
+    "word": "coerce",
+    "pos": "v.",
+    "meaning": "強迫、脅迫",
+    "example": "The witness claimed she had been coerced into signing the false statement.",
+    "roots": "co- (加強) + erce (限制，拉丁文 arcere) → 強行限制、逼迫對方行動"
+  },
+  {
+    "word": "coercion",
+    "pos": "n.",
+    "meaning": "脅迫、強制",
+    "example": "The confession was later ruled inadmissible because it had been obtained through coercion.",
+    "roots": "同 coerce 字源 + -ion (名詞後綴) → 用力量或威脅迫使他人服從"
+  },
+  {
+    "word": "coercive",
+    "pos": "adj.",
+    "meaning": "強制性的、脅迫性的",
+    "example": "Human rights groups condemned the regime's coercive interrogation tactics.",
+    "roots": "同 coerce 字源 + -ive (形容詞後綴) → 帶有強迫性質的"
+  },
+  {
+    "word": "coeval",
+    "pos": "adj.",
+    "meaning": "同時代的、同齡的",
+    "example": "The two philosophers, though coeval, never actually met in person.",
+    "roots": "co- (共同) + aev (時代，拉丁文 aevum) + -al (形容詞後綴) → 存在於同一時期的"
+  },
+  {
+    "word": "cogent",
+    "pos": "adj.",
+    "meaning": "有說服力的、令人信服的",
+    "example": "She presented a cogent argument that swayed even the most skeptical board members.",
+    "roots": "co- (一起) + gent (驅使，拉丁文 agere) → 把論點緊密地驅趕在一起，形成有力的論證"
+  },
+  {
+    "word": "cogitate",
+    "pos": "v.",
+    "meaning": "深思、沉思",
+    "example": "He spent the afternoon cogitating on the ethical implications of the new technology.",
+    "roots": "co- (一起) + git (驅使，拉丁文 agitare 反覆推動) → 反覆推敲思考"
+  },
+  {
+    "word": "cognate",
+    "pos": "adj./n.",
+    "meaning": "同源的(詞)、性質相近的",
+    "example": "\"Night\" in English and \"Nacht\" in German are cognate words derived from a common root.",
+    "roots": "co- (共同) + gnate (出生，拉丁文 gnasci) → 出自同一根源的"
+  },
+  {
+    "word": "cognizance",
+    "pos": "n.",
+    "meaning": "認知、知曉",
+    "example": "The committee took cognizance of the new evidence before reaching its decision.",
+    "roots": "cogn- (知道，拉丁文 cognoscere) + -izance (名詞後綴) → 對某事有所認識的狀態"
+  },
+  {
+    "word": "cognizant",
+    "pos": "adj.",
+    "meaning": "知曉的、意識到的",
+    "example": "Employees should be cognizant of the risks before signing the new contract.",
+    "roots": "同 cognizance 字源 → 對某事有清楚認識的"
+  },
+  {
+    "word": "cognoscenti",
+    "pos": "n.",
+    "meaning": "內行人、鑑賞家",
+    "example": "The tiny wine bar is known mostly to local cognoscenti rather than tourists.",
+    "roots": "源自義大利文 cognoscente (知曉者，與 cognizant 同源) → 對特定領域有深入了解的行家"
+  },
+  {
+    "word": "cohesive",
+    "pos": "adj.",
+    "meaning": "緊密結合的、有凝聚力的",
+    "example": "The new coach quickly turned a group of individual stars into a cohesive team.",
+    "roots": "co- (一起) + hes (黏著，拉丁文 haerere) + -ive (形容詞後綴) → 各部分緊密黏合在一起的"
+  },
+  {
+    "word": "collate",
+    "pos": "v.",
+    "meaning": "核對、整理彙編(資料)",
+    "example": "Researchers spent months collating data from hundreds of separate studies.",
+    "roots": "col- (一起) + late (帶來，拉丁文 latus) → 把資料收集在一起加以比對整理"
+  },
+  {
+    "word": "collateral",
+    "pos": "adj.",
+    "meaning": "附帶的、旁系的",
+    "example": "The airstrike caused significant collateral damage to nearby residential buildings.",
+    "roots": "col- (一起) + later (側邊，拉丁文 latus) + -al (形容詞後綴) → 位於主體側邊、附帶伴隨的"
+  },
+  {
+    "word": "collegial",
+    "pos": "adj.",
+    "meaning": "同事間合作友好的",
+    "example": "The department prides itself on a collegial atmosphere where junior staff can freely challenge senior researchers.",
+    "roots": "colleg- (同事，拉丁文 collega) + -ial (形容詞後綴) → 具有同僚間合作精神的"
+  },
+  {
+    "word": "colloquial",
+    "pos": "adj.",
+    "meaning": "口語的、非正式的",
+    "example": "The professor's colloquial teaching style made even dense theory feel approachable.",
+    "roots": "col- (一起) + loqu (說話，拉丁文 loqui) + -ial (形容詞後綴) → 日常交談中使用的語言風格"
+  },
+  {
+    "word": "colloquy",
+    "pos": "n.",
+    "meaning": "正式對話、會談",
+    "example": "The two scholars engaged in a lengthy colloquy on the nature of consciousness.",
+    "roots": "同 colloquial 字源 → 雙方深入交流的正式對話"
+  },
+  {
+    "word": "collude",
+    "pos": "v.",
+    "meaning": "共謀、勾結",
+    "example": "Regulators accused the two airlines of colluding to fix ticket prices.",
+    "roots": "col- (一起) + lude (玩，拉丁文 ludere) → 私下一起玩弄手段，引申為共謀"
+  },
+  {
+    "word": "collusion",
+    "pos": "n.",
+    "meaning": "共謀、勾結",
+    "example": "The investigation found no evidence of collusion between the two companies.",
+    "roots": "同 collude 字源 + -ion (名詞後綴) → 秘密合謀的行為"
+  },
+  {
+    "word": "colossal",
+    "pos": "adj.",
+    "meaning": "巨大的、龐大的",
+    "example": "Rebuilding the flooded city will require a colossal investment of both money and time.",
+    "roots": "coloss- (巨像，希臘文 kolossos) + -al (形容詞後綴) → 如巨像般規模驚人的"
+  },
+  {
+    "word": "colossus",
+    "pos": "n.",
+    "meaning": "巨像、巨人般的人物或事物",
+    "example": "The company grew from a garage startup into a colossus dominating the entire industry.",
+    "roots": "源自希臘文 kolossos (巨大雕像，如羅德島太陽神銅像) → 引申為體積或影響力極其龐大之物"
+  },
+  {
+    "word": "comatose",
+    "pos": "adj.",
+    "meaning": "昏迷的；(引申)呆滯無生氣的",
+    "example": "After the marathon, he collapsed onto the couch, practically comatose with exhaustion.",
+    "roots": "coma (昏迷，希臘文 koma 深睡) + -tose (形容詞後綴) → 陷入深度無意識狀態的"
+  },
+  {
+    "word": "comely",
+    "pos": "adj.",
+    "meaning": "容貌姣好的、討人喜歡的",
+    "example": "The old ballad describes a comely maiden who charmed every villager she met.",
+    "roots": "源自古英文 cymlic (合適的、美麗的) → 外表令人賞心悅目的"
+  },
+  {
+    "word": "comity",
+    "pos": "n.",
+    "meaning": "禮讓、友好和睦的關係(尤指國家間)",
+    "example": "The treaty was signed in a spirit of comity between the two long-time rivals.",
+    "roots": "com- (共同) + ity (源自拉丁文 comitas，禮貌友善) → 彼此尊重和睦相處的關係"
+  },
+  {
+    "word": "commensurate",
+    "pos": "adj.",
+    "meaning": "相稱的、成比例的",
+    "example": "Her salary was hardly commensurate with the long hours and heavy responsibilities of the job.",
+    "roots": "com- (共同) + mensurate (測量，拉丁文 mensurare) → 用同一標準衡量後相符的"
+  },
+  {
+    "word": "commingle",
+    "pos": "v.",
+    "meaning": "混合、混雜在一起",
+    "example": "In the old quarter, ancient traditions commingle freely with modern street art.",
+    "roots": "com- (一起) + mingle (混合) → 使不同事物融合在一起"
+  },
+  {
+    "word": "commiserate",
+    "pos": "v.",
+    "meaning": "同情、慰問",
+    "example": "Coworkers gathered to commiserate with her over the sudden loss of her job.",
+    "roots": "com- (一起) + miser (悲慘的，拉丁文 miser) + -ate (動詞後綴) → 與他人一同感受悲傷"
+  },
+  {
+    "word": "commodious",
+    "pos": "adj.",
+    "meaning": "寬敞舒適的",
+    "example": "The new apartment's commodious living room easily accommodates large family gatherings.",
+    "roots": "commod- (方便、適合，拉丁文 commodus) + -ious (形容詞後綴) → 空間充裕、使用方便的"
+  },
+  {
+    "word": "commonplace",
+    "pos": "adj.",
+    "meaning": "普通的、平常的",
+    "example": "Remote work, once rare, has become commonplace across nearly every industry.",
+    "roots": "common (普通的) + place (地方) → 隨處可見、毫不特別的"
+  },
+  {
+    "word": "compatriot",
+    "pos": "n.",
+    "meaning": "同胞、同鄉",
+    "example": "Meeting a compatriot while traveling abroad instantly made her feel less homesick.",
+    "roots": "com- (共同) + patriot (愛國者，源自拉丁文 patria 祖國) → 來自同一祖國的人"
+  },
+  {
+    "word": "compelling",
+    "pos": "adj.",
+    "meaning": "引人入勝的、令人信服的",
+    "example": "The prosecutor presented a compelling case that left the jury with little doubt.",
+    "roots": "com- (加強) + pel (驅使，拉丁文 pellere) + -ing (形容詞後綴) → 強烈驅使人相信或關注的"
+  },
+  {
+    "word": "compendium",
+    "pos": "n.",
+    "meaning": "摘要、概要、彙編",
+    "example": "The textbook serves as a handy compendium of every major theory in the field.",
+    "roots": "com- (一起) + pend (稱重，拉丁文 pendere) → 把大量內容濃縮秤量成精簡摘要"
+  },
+  {
+    "word": "complacent",
+    "pos": "adj.",
+    "meaning": "自滿的、沾沾自喜的",
+    "example": "After three championship wins, the team grew complacent and lost focus.",
+    "roots": "com- (加強) + placent (使高興的，拉丁文 placere) → 對現狀過度滿意而失去警覺"
+  },
+  {
+    "word": "complacency",
+    "pos": "n.",
+    "meaning": "自滿、自鳴得意",
+    "example": "Years of market dominance bred a dangerous complacency within the company's leadership.",
+    "roots": "同 complacent 字源 + -cy (名詞後綴) → 滿足現狀而不思進取的狀態"
+  },
+  {
+    "word": "complaisant",
+    "pos": "adj.",
+    "meaning": "順從討好的、樂於取悅他人的",
+    "example": "His complaisant staff rarely challenged even his most questionable decisions.",
+    "roots": "com- (加強) + plais (取悅，拉丁文 placere) + -ant (形容詞後綴) → 一味迎合他人以求討好"
+  },
+  {
+    "word": "complement",
+    "pos": "v./n.",
+    "meaning": "使互補、與...相輔相成",
+    "example": "The tangy sauce perfectly complements the richness of the grilled meat.",
+    "roots": "com- (完全) + ple (填滿，拉丁文 plere) + -ment (名詞/動詞後綴) → 補足使其完整"
+  },
+  {
+    "word": "complementary",
+    "pos": "adj.",
+    "meaning": "互補的、相輔相成的",
+    "example": "The two researchers brought complementary skills, one strong in theory and the other in data analysis.",
+    "roots": "同 complement 字源 + -ary (形容詞後綴) → 彼此填補不足的"
+  },
+  {
+    "word": "compliant",
+    "pos": "adj.",
+    "meaning": "順從的、依從規定的",
+    "example": "All new buildings must be compliant with the updated fire safety codes.",
+    "roots": "com- (加強) + pli (彎折，拉丁文 plicare) + -ant (形容詞後綴) → 願意彎折順應規定的"
+  },
+  {
+    "word": "compliment",
+    "pos": "v./n.",
+    "meaning": "稱讚、恭維",
+    "example": "She complimented the chef on the exquisite presentation of every dish.",
+    "roots": "com- (加強) + pli (填滿，拉丁文 complere) → 表達滿意讚賞之意(與 complement 為常見混淆字對)"
+  },
+  {
+    "word": "complicity",
+    "pos": "n.",
+    "meaning": "共謀、牽連(於不法行為)",
+    "example": "Evidence suggested the manager's complicity in covering up the accounting fraud.",
+    "roots": "com- (一起) + plic (摺疊、糾纏，拉丁文 plicare) + -ity (名詞後綴) → 與不法行為牽扯糾纏在一起"
+  },
+  {
+    "word": "comport",
+    "pos": "v.",
+    "meaning": "(comport oneself)舉止表現；(comport with)與...相符",
+    "example": "The ambassador comported herself with dignity throughout the tense negotiations.",
+    "roots": "com- (加強) + port (攜帶，拉丁文 portare) → 帶著某種態度行事、表現"
+  },
+  {
+    "word": "composure",
+    "pos": "n.",
+    "meaning": "鎮定、沉著",
+    "example": "Even under intense questioning, the witness maintained perfect composure.",
+    "roots": "com- (一起) + pos (放置，拉丁文 ponere) + -ure (名詞後綴) → 把情緒安放妥當，保持冷靜"
+  },
+  {
+    "word": "compunction",
+    "pos": "n.",
+    "meaning": "內疚、良心不安",
+    "example": "He showed no compunction about firing employees just before the holidays.",
+    "roots": "com- (加強) + punct (刺，拉丁文 pungere) → 良心被刺痛的感覺"
+  },
+  {
+    "word": "concatenate",
+    "pos": "v.",
+    "meaning": "連結成串、串聯",
+    "example": "The software concatenates hundreds of small data files into a single report.",
+    "roots": "con- (一起) + caten (鏈，拉丁文 catena) + -ate (動詞後綴) → 像鎖鏈一樣連結在一起"
+  },
+  {
+    "word": "concede",
+    "pos": "v.",
+    "meaning": "讓步、承認(不情願地)",
+    "example": "The candidate conceded the election shortly after the final results were announced.",
+    "roots": "con- (加強) + cede (走、讓，拉丁文 cedere) → 讓出立場、承認對方觀點"
+  },
+  {
+    "word": "conceit",
+    "pos": "n.",
+    "meaning": "自負；(文學)巧妙的比喻手法",
+    "example": "The novel's central conceit imagines an entire city built inside a giant whale.",
+    "roots": "con- (一起) + ceit (拿、想，拉丁文 concipere) → 心中構思出的想法，引申為自負或精巧構思"
+  },
+  {
+    "word": "concerted",
+    "pos": "adj.",
+    "meaning": "協同一致的、共同努力的",
+    "example": "It took a concerted effort from every department to meet the tight deadline.",
+    "roots": "con- (一起) + cert (確定，拉丁文 certare 競爭) + -ed (形容詞後綴) → 各方協調一致行動的"
+  },
+  {
+    "word": "concession",
+    "pos": "n.",
+    "meaning": "讓步、妥協",
+    "example": "Neither side was willing to make a single concession during the negotiations.",
+    "roots": "同 concede 字源 + -ion (名詞後綴) → 讓步所付出或給予的事物"
+  },
+  {
+    "word": "conciliate",
+    "pos": "v.",
+    "meaning": "安撫、調解",
+    "example": "The mediator worked hard to conciliate the two feuding business partners.",
+    "roots": "con- (一起) + cili (召集，拉丁文 concilium 會議) + -ate (動詞後綴) → 使雙方重新聚合和解"
+  },
+  {
+    "word": "conciliatory",
+    "pos": "adj.",
+    "meaning": "安撫的、和解的",
+    "example": "After weeks of harsh rhetoric, the leader finally adopted a more conciliatory tone.",
+    "roots": "同 conciliate 字源 + -ory (形容詞後綴) → 意在化解衝突、促成和解的"
+  },
+  {
+    "word": "conclave",
+    "pos": "n.",
+    "meaning": "秘密會議(尤指教宗選舉)",
+    "example": "Cardinals gathered in a conclave to elect the new pope in strict secrecy.",
+    "roots": "con- (一起) + clave (鑰匙，拉丁文 clavis) → 原指用鑰匙鎖上的房間，引申為秘密會議"
+  },
+  {
+    "word": "concoct",
+    "pos": "v.",
+    "meaning": "編造(謊言)；調製(食物、飲品)",
+    "example": "The suspect concocted an elaborate alibi that quickly fell apart under questioning.",
+    "roots": "con- (一起) + coct (煮，拉丁文 coquere) → 將各種材料混合烹調，引申為捏造story"
+  },
+  {
+    "word": "concomitant",
+    "pos": "adj./n.",
+    "meaning": "伴隨而來的(事物)",
+    "example": "Rapid urban growth brought with it a host of concomitant environmental problems.",
+    "roots": "con- (一起) + comit (陪伴，拉丁文 comitari) + -ant (形容詞後綴) → 與主要事件同時發生的"
+  },
+  {
+    "word": "concord",
+    "pos": "n.",
+    "meaning": "和睦、一致",
+    "example": "The two rival tribes eventually reached a lasting concord after decades of conflict.",
+    "roots": "con- (共同) + cord (心，拉丁文 cor) → 心意相通，彼此和諧一致"
+  },
+  {
+    "word": "concur",
+    "pos": "v.",
+    "meaning": "同意、意見一致",
+    "example": "Most economists concur that the policy will slow inflation in the short term.",
+    "roots": "con- (一起) + cur (跑，拉丁文 currere) → 各方意見朝同一方向匯集"
+  },
+  {
+    "word": "condescend",
+    "pos": "v.",
+    "meaning": "屈尊俯就；(帶貶意)以高人一等的態度對待",
+    "example": "He condescended to answer the intern's question, but his tone made her feel foolish for asking.",
+    "roots": "con- (加強) + descend (下降，拉丁文 descendere) → 從高處降下與地位較低者互動"
+  },
+  {
+    "word": "condescending",
+    "pos": "adj.",
+    "meaning": "居高臨下的、屈尊俯就的",
+    "example": "Her condescending explanation made the new hire feel like a child rather than a colleague.",
+    "roots": "同 condescend 字源 + -ing (形容詞後綴) → 帶有高人一等態度的"
+  },
+  {
+    "word": "condone",
+    "pos": "v.",
+    "meaning": "寬恕、默許(不當行為)",
+    "example": "The company insists it does not condone any form of workplace harassment.",
+    "roots": "con- (加強) + done (贈與，拉丁文 donare) → 選擇原諒、不予追究"
+  },
+  {
+    "word": "conducive",
+    "pos": "adj.",
+    "meaning": "有助於...的、促成的",
+    "example": "A quiet, well-lit room is far more conducive to studying than a noisy café.",
+    "roots": "con- (一起) + duc (引導，拉丁文 ducere) + -ive (形容詞後綴) → 引導朝向某種有利結果的"
+  },
+  {
+    "word": "confederate",
+    "pos": "n.",
+    "meaning": "同盟者、共犯",
+    "example": "Police believe the getaway driver was a confederate of the two men who robbed the bank.",
+    "roots": "con- (一起) + feder (同盟，拉丁文 foedus) + -ate (名詞後綴) → 結為同盟一起行動的人"
+  },
+  {
+    "word": "confer",
+    "pos": "v.",
+    "meaning": "商議、討論；授予(頭銜、榮譽)",
+    "example": "The university will confer an honorary doctorate on the retiring professor next spring.",
+    "roots": "con- (一起) + fer (帶來，拉丁文 ferre) → 把想法或榮譽帶到一起交流、授予"
+  },
+  {
+    "word": "confidant",
+    "pos": "n.",
+    "meaning": "知己、可信賴的密友",
+    "example": "Over the years, her assistant became her closest confidant on both personal and business matters.",
+    "roots": "con- (加強) + fid (信任，拉丁文 fidere) + -ant (名詞後綴) → 可以完全信任、傾訴心事的人"
+  },
+  {
+    "word": "confine",
+    "pos": "v.",
+    "meaning": "限制、侷限",
+    "example": "Doctors confined the patient to bed rest for at least two weeks.",
+    "roots": "con- (一起) + fine (界線，拉丁文 finis) → 限制在特定範圍之內"
+  },
+  {
+    "word": "conflagration",
+    "pos": "n.",
+    "meaning": "大火、(戰爭般的)大災難",
+    "example": "A single spark from the campfire was enough to start a conflagration that consumed the entire forest.",
+    "roots": "con- (加強) + flagr (燃燒，拉丁文 flagrare) + -ation (名詞後綴) → 大範圍猛烈的火災或衝突"
+  },
+  {
+    "word": "conflate",
+    "pos": "v.",
+    "meaning": "混淆、混為一談",
+    "example": "The article mistakenly conflates two separate studies with very different conclusions.",
+    "roots": "con- (一起) + flate (吹，拉丁文 flare) → 把不同事物吹混在一起"
+  },
+  {
+    "word": "confluence",
+    "pos": "n.",
+    "meaning": "匯流、匯合(尤指多種因素同時發生)",
+    "example": "The company's success resulted from a confluence of good timing, talent, and luck.",
+    "roots": "con- (一起) + flu (流動，拉丁文 fluere) + -ence (名詞後綴) → 多股力量流向同一處匯合"
+  },
+  {
+    "word": "conformist",
+    "pos": "n./adj.",
+    "meaning": "順從者、墨守成規的(人)",
+    "example": "In an industry that prizes rebellion, being seen as a conformist can hurt a young artist's reputation.",
+    "roots": "con- (一起) + form (形式) + -ist (名詞後綴) → 使自己符合既有形式、隨大流的人"
+  },
+  {
+    "word": "confound",
+    "pos": "v.",
+    "meaning": "使困惑；使混淆",
+    "example": "The magician's final trick confounded even the most experienced audience members.",
+    "roots": "con- (一起) + found (傾倒，拉丁文 fundere) → 把事物混雜在一起，令人困惑"
+  },
+  {
+    "word": "congeal",
+    "pos": "v.",
+    "meaning": "凝結、凝固",
+    "example": "The gravy had congealed into a thick, cold layer by the time dinner was served.",
+    "roots": "con- (一起) + geal (結凍，拉丁文 gelare) → 液體凝結成固態"
+  },
+  {
+    "word": "congenial",
+    "pos": "adj.",
+    "meaning": "意氣相投的、(環境)宜人的",
+    "example": "The small liberal arts college offered a congenial atmosphere for independent-minded students.",
+    "roots": "con- (共同) + genial (天性的，拉丁文 genius) → 天性相合、令人感到舒適的"
+  },
+  {
+    "word": "congenital",
+    "pos": "adj.",
+    "meaning": "先天性的、與生俱來的",
+    "example": "The surgeon specializes in correcting congenital heart defects in newborns.",
+    "roots": "con- (共同) + genit (出生，拉丁文 gignere) + -al (形容詞後綴) → 出生時就存在的"
+  },
+  {
+    "word": "conglomerate",
+    "pos": "n.",
+    "meaning": "企業集團；聚合物",
+    "example": "The media conglomerate now owns dozens of newspapers, television stations, and streaming platforms.",
+    "roots": "con- (一起) + glomer (球狀，拉丁文 glomus) + -ate (名詞後綴) → 由許多不同部分聚合而成的整體"
+  },
+  {
+    "word": "congregate",
+    "pos": "v.",
+    "meaning": "聚集、集合",
+    "example": "Fans began to congregate outside the stadium hours before the gates opened.",
+    "roots": "con- (一起) + greg (羊群，拉丁文 grex) + -ate (動詞後綴) → 像羊群一樣聚集在一起"
+  },
+  {
+    "word": "congruent",
+    "pos": "adj.",
+    "meaning": "一致的、相符的",
+    "example": "Her actions were finally congruent with the values she had always claimed to hold.",
+    "roots": "con- (共同) + gru (聚合，拉丁文 congruere) + -ent (形容詞後綴) → 彼此相符合一致的"
+  },
+  {
+    "word": "congruous",
+    "pos": "adj.",
+    "meaning": "適合的、協調一致的",
+    "example": "The modern glass wing seemed oddly congruous with the centuries-old stone facade.",
+    "roots": "同 congruent 字源 + -ous (形容詞後綴) → 各部分彼此協調相稱的"
+  },
+  {
+    "word": "conjecture",
+    "pos": "n./v.",
+    "meaning": "推測、猜測",
+    "example": "Without hard evidence, the detective's theory remained pure conjecture.",
+    "roots": "con- (一起) + ject (投擲，拉丁文 jacere) + -ure (名詞後綴) → 把想法拋出，未經證實的猜想"
+  },
+  {
+    "word": "conjugal",
+    "pos": "adj.",
+    "meaning": "婚姻的、夫妻的",
+    "example": "Prison policy allows inmates limited conjugal visits with their spouses.",
+    "roots": "con- (一起) + jug (結合，拉丁文 jugum 軛) + -al (形容詞後綴) → 如牛軛般把兩人結合在一起的關係"
+  },
+  {
+    "word": "connive",
+    "pos": "v.",
+    "meaning": "共謀、暗中策劃；默許(不當行為)",
+    "example": "The two executives connived to hide the company's mounting losses from shareholders.",
+    "roots": "源自拉丁文 connivere (閉上眼睛) → 對不當行為睜一隻眼閉一隻眼，引申為暗中共謀"
+  },
+  {
+    "word": "connoisseur",
+    "pos": "n.",
+    "meaning": "鑑賞家、行家",
+    "example": "As a wine connoisseur, he could identify the vineyard of a bottle after a single sip.",
+    "roots": "源自法文 connaisseur (知曉者，connaître 知道) → 對特定領域有精深鑑賞力的人"
+  },
+  {
+    "word": "connote",
+    "pos": "v.",
+    "meaning": "隱含、暗示(某種意涵)",
+    "example": "The word \"home\" connotes warmth and comfort far beyond its literal meaning of a dwelling.",
+    "roots": "con- (一起) + note (標記，拉丁文 notare) → 附帶在字面意義之外的隱含意味"
+  },
+  {
+    "word": "connotation",
+    "pos": "n.",
+    "meaning": "隱含意義、言外之意",
+    "example": "\"Cheap\" and \"frugal\" share a similar denotation but carry very different connotations.",
+    "roots": "同 connote 字源 + -ation (名詞後綴) → 詞語附帶的言外之意"
+  },
+  {
+    "word": "conscientious",
+    "pos": "adj.",
+    "meaning": "認真負責的、一絲不苟的",
+    "example": "Her conscientious attention to detail made her the most reliable editor on the team.",
+    "roots": "con- (一起) + scient (知道，拉丁文 scire) + -ious (形容詞後綴) → 時時意識到自己責任並謹慎行事的"
+  },
+  {
+    "word": "conscript",
+    "pos": "v./n.",
+    "meaning": "徵召入伍(的人)",
+    "example": "Thousands of young men were conscripted into the army within weeks of the war's outbreak.",
+    "roots": "con- (一起) + script (寫，拉丁文 scribere) → 把姓名登記造冊、強制徵召"
+  },
+  {
+    "word": "consecrate",
+    "pos": "v.",
+    "meaning": "奉獻、使神聖化",
+    "example": "The cathedral was consecrated by the archbishop in a ceremony attended by thousands.",
+    "roots": "con- (加強) + secrate (使神聖，拉丁文 sacrare) → 正式使某物具有神聖地位"
+  },
+  {
+    "word": "consequential",
+    "pos": "adj.",
+    "meaning": "有重大後果的；自命不凡的",
+    "example": "The board made several consequential decisions that would shape the company for decades.",
+    "roots": "con- (一起) + sequ (跟隨，拉丁文 sequi) + -ential (形容詞後綴) → 帶來重大後續影響的"
+  },
+  {
+    "word": "consign",
+    "pos": "v.",
+    "meaning": "把...託付、使...淪為(某種下場)",
+    "example": "The failed invention was quickly consigned to the dustbin of history.",
+    "roots": "con- (加強) + sign (簽署，拉丁文 signare) → 正式簽署交付，引申為使歸於某種命運"
+  },
+  {
+    "word": "consolidate",
+    "pos": "v.",
+    "meaning": "鞏固、合併",
+    "example": "The victory allowed the party to consolidate its control over both houses of parliament.",
+    "roots": "con- (一起) + solid (堅固的，拉丁文 solidus) + -ate (動詞後綴) → 使變得更加堅固、統一"
+  },
+  {
+    "word": "consonant",
+    "pos": "adj.",
+    "meaning": "一致的、相符的(常接 with)",
+    "example": "His quiet lifestyle was entirely consonant with the modest values he preached.",
+    "roots": "con- (共同) + son (聲音，拉丁文 sonare) + -ant (形容詞後綴) → 聲音和諧一致，引申為觀念相符"
+  },
+  {
+    "word": "conspicuous",
+    "pos": "adj.",
+    "meaning": "顯眼的、引人注目的",
+    "example": "Her bright red coat made her conspicuous in the otherwise gray winter crowd.",
+    "roots": "con- (加強) + spic (看，拉丁文 specere) + -uous (形容詞後綴) → 一眼就能被看見的"
+  },
+  {
+    "word": "consternation",
+    "pos": "n.",
+    "meaning": "驚愕、恐慌",
+    "example": "The sudden resignation of the CEO caused consternation among investors.",
+    "roots": "con- (加強) + stern (使驚駭，拉丁文 sternere 擊倒) + -ation (名詞後綴) → 被驚嚇到不知所措的狀態"
+  },
+  {
+    "word": "constituent",
+    "pos": "n./adj.",
+    "meaning": "組成部分；選民",
+    "example": "Hydrogen and oxygen are the two constituent elements of water.",
+    "roots": "con- (一起) + stitu (建立，拉丁文 statuere) + -ent (名詞/形容詞後綴) → 共同組成整體的部分"
+  },
+  {
+    "word": "constrain",
+    "pos": "v.",
+    "meaning": "限制、約束",
+    "example": "Budget cuts have severely constrained the department's ability to hire new staff.",
+    "roots": "con- (一起) + strain (拉緊，拉丁文 stringere) → 把行動範圍緊緊束縛住"
+  },
+  {
+    "word": "constraint",
+    "pos": "n.",
+    "meaning": "限制、約束(因素)",
+    "example": "Working within tight time constraints, the team still managed to deliver the project on schedule.",
+    "roots": "同 constrain 字源 + -t (名詞後綴) → 限制自由發揮的因素"
+  },
+  {
+    "word": "construe",
+    "pos": "v.",
+    "meaning": "解釋、理解為",
+    "example": "Her silence was construed by some as tacit agreement with the proposal.",
+    "roots": "con- (一起) + strue (建造，拉丁文 struere) → 將各部分組合建構出一種理解"
+  },
+  {
+    "word": "consummate",
+    "pos": "adj.",
+    "meaning": "完美的、技藝高超的",
+    "example": "As a consummate professional, she never let personal stress affect her work.",
+    "roots": "con- (完全) + summ (最高，拉丁文 summa) + -ate (形容詞後綴) → 達到最高完成度的"
+  },
+  {
+    "word": "contagion",
+    "pos": "n.",
+    "meaning": "傳染(病)；(比喻)蔓延、擴散",
+    "example": "Analysts feared that the banking crisis could spread through financial contagion to other economies.",
+    "roots": "con- (一起) + tag (接觸，拉丁文 tangere) + -ion (名詞後綴) → 透過接觸而擴散傳播"
+  },
+  {
+    "word": "contemporaneous",
+    "pos": "adj.",
+    "meaning": "同時代發生的、同時期存在的",
+    "example": "The two revolutions were contemporaneous, though they occurred on opposite sides of the globe.",
+    "roots": "con- (共同) + tempor (時間，拉丁文 tempus) + -aneous (形容詞後綴) → 發生於相同時間的"
+  },
+  {
+    "word": "contemptible",
+    "pos": "adj.",
+    "meaning": "可鄙的、應受輕視的",
+    "example": "Abandoning his teammates during the crisis was seen as a contemptible act of cowardice.",
+    "roots": "con- (加強) + tempt (輕視，拉丁文 contemnere) + -ible (形容詞後綴，值得...的) → 值得被輕視的"
+  },
+  {
+    "word": "contemptuous",
+    "pos": "adj.",
+    "meaning": "輕蔑的、鄙視的",
+    "example": "He gave a contemptuous laugh when asked whether he took the criticism seriously.",
+    "roots": "同 contemptible 字源 + -uous (形容詞後綴) → 表現出輕視態度的"
+  },
+  {
+    "word": "contend",
+    "pos": "v.",
+    "meaning": "主張、堅稱；競爭",
+    "example": "The defense attorney contended that her client had acted entirely in self-defense.",
+    "roots": "con- (一起) + tend (伸展，拉丁文 tendere) → 拉緊立場堅持己見"
+  },
+  {
+    "word": "contentious",
+    "pos": "adj.",
+    "meaning": "好爭論的、有爭議的",
+    "example": "Immigration reform remains one of the most contentious issues in national politics.",
+    "roots": "同 contend 字源 + -ious (形容詞後綴) → 容易引發爭論的"
+  },
+  {
+    "word": "contiguous",
+    "pos": "adj.",
+    "meaning": "鄰接的、相連的",
+    "example": "The ranch spans three contiguous counties, covering nearly a hundred thousand acres.",
+    "roots": "con- (一起) + tig (接觸，拉丁文 tangere) + -uous (形容詞後綴) → 邊界彼此接觸相連的"
+  },
+  {
+    "word": "contingent",
+    "pos": "adj./n.",
+    "meaning": "視情況而定的；(引申)一支代表隊、隊伍",
+    "example": "Her acceptance of the job offer was contingent on the company agreeing to remote work.",
+    "roots": "con- (一起) + tingent (接觸，拉丁文 tangere) → 取決於某個接觸點或條件是否成立"
+  },
+  {
+    "word": "continence",
+    "pos": "n.",
+    "meaning": "自制、節制(尤指慾望)",
+    "example": "The monk's lifelong continence extended to food, sleep, and speech alike.",
+    "roots": "con- (一起) + tine (拿、保持，拉丁文 tenere) + -ence (名詞後綴) → 把自己的慾望控制住的能力"
+  },
+  {
+    "word": "continuum",
+    "pos": "n.",
+    "meaning": "連續體、連續統一體",
+    "example": "Political opinions often fall along a continuum rather than into two simple camps.",
+    "roots": "contin- (連續，拉丁文 continere) + -uum (名詞後綴) → 不可分割、連續變化的整體"
+  },
+  {
+    "word": "contraband",
+    "pos": "n.",
+    "meaning": "違禁品、走私貨",
+    "example": "Customs officers seized several crates of contraband hidden beneath the ship's legal cargo.",
+    "roots": "contra- (反對) + band (公告，源自 ban) → 違反禁令而被查禁的物品"
+  },
+  {
+    "word": "contravene",
+    "pos": "v.",
+    "meaning": "違反(法律、規定)",
+    "example": "The company's disposal methods clearly contravene the region's environmental regulations.",
+    "roots": "contra- (反對) + vene (來，拉丁文 venire) → 與規定背道而行"
+  },
+  {
+    "word": "contrite",
+    "pos": "adj.",
+    "meaning": "懊悔的、悔過的",
+    "example": "The contrite employee apologized personally to every client affected by the error.",
+    "roots": "con- (加強) + trite (磨損，拉丁文 terere) → 被過錯磨損內心，引申為深感懊悔"
+  },
+  {
+    "word": "contrition",
+    "pos": "n.",
+    "meaning": "悔過、悔恨",
+    "example": "His public expression of contrition did little to restore the public's trust.",
+    "roots": "同 contrite 字源 + -ion (名詞後綴) → 對過錯感到悔恨的狀態"
+  },
+  {
+    "word": "contrivance",
+    "pos": "n.",
+    "meaning": "精巧的裝置；人為做作的手法",
+    "example": "The play's happy ending felt like a contrivance rather than a natural conclusion.",
+    "roots": "con- (一起) + trive (發現，源自古法文 trover) + -ance (名詞後綴) → 巧妙設計出來的裝置或手段"
+  },
+  {
+    "word": "contrived",
+    "pos": "adj.",
+    "meaning": "做作的、人為刻意的",
+    "example": "Critics found the film's plot twist contrived and unearned.",
+    "roots": "同 contrivance 字源 → 刻意設計、顯得不自然的"
+  },
+  {
+    "word": "controvert",
+    "pos": "v.",
+    "meaning": "反駁、辯駁",
+    "example": "The new fossil evidence controverts the long-accepted theory of the species' extinction date.",
+    "roots": "contro- (相反) + vert (轉，拉丁文 vertere) → 轉向相反方向提出反駁"
+  },
+  {
+    "word": "contumely",
+    "pos": "n.",
+    "meaning": "侮辱、輕蔑的言行",
+    "example": "He endured years of public contumely before his reputation was finally restored.",
+    "roots": "源自拉丁文 contumelia (侮辱)，字源可能與 tumere (膨脹、傲慢) 有關 → 帶有傲慢輕蔑意味的羞辱"
+  },
+  {
+    "word": "conundrum",
+    "pos": "n.",
+    "meaning": "難題、謎題",
+    "example": "Balancing economic growth with environmental protection remains a persistent conundrum for policymakers.",
+    "roots": "16世紀牛津學術界的戲謔造詞，字源不確定 → 引申為令人費解的難題"
+  },
+  {
+    "word": "convalesce",
+    "pos": "v.",
+    "meaning": "康復、療養",
+    "example": "After the surgery, she spent two weeks convalescing at her parents' house.",
+    "roots": "con- (加強) + valesce (變強壯，拉丁文 valere) → 逐漸恢復體力健康"
+  },
+  {
+    "word": "convene",
+    "pos": "v.",
+    "meaning": "召集、集會",
+    "example": "The emergency committee convened within hours of the disaster striking.",
+    "roots": "con- (一起) + vene (來，拉丁文 venire) → 聚集在一起開會"
+  },
+  {
+    "word": "converge",
+    "pos": "v.",
+    "meaning": "匯聚、趨於一致",
+    "example": "Thousands of fans converged on the stadium hours before the concert began.",
+    "roots": "con- (一起) + verge (轉向，拉丁文 vergere) → 從不同方向朝同一點靠近"
+  },
+  {
+    "word": "convergent",
+    "pos": "adj.",
+    "meaning": "匯聚的、趨同的",
+    "example": "Evolutionary biologists study convergent traits that arise independently in unrelated species.",
+    "roots": "同 converge 字源 + -ent (形容詞後綴) → 趨向同一方向或結果的"
+  },
+  {
+    "word": "conversant",
+    "pos": "adj.",
+    "meaning": "熟悉的、精通的(常接 with)",
+    "example": "Every new hire is expected to be conversant with the company's core software tools.",
+    "roots": "con- (一起) + vers (轉、居住，拉丁文 versari) + -ant (形容詞後綴) → 經常接觸而熟悉的"
+  },
+  {
+    "word": "converse",
+    "pos": "n.",
+    "meaning": "相反的陳述、反面",
+    "example": "If the statement is true, the converse is not necessarily true as well.",
+    "roots": "con- (一起) + verse (轉，拉丁文 vertere) → 邏輯上翻轉過來的另一面陳述"
+  },
+  {
+    "word": "convivial",
+    "pos": "adj.",
+    "meaning": "歡樂的、喜好交際的",
+    "example": "The bed and breakfast is known for its convivial atmosphere, where strangers quickly become friends.",
+    "roots": "con- (共同) + viv (生活，拉丁文 vivere) + -ial (形容詞後綴) → 共同享受生活樂趣的氣氛"
+  },
+  {
+    "word": "convoluted",
+    "pos": "adj.",
+    "meaning": "複雜難懂的、迂迴曲折的",
+    "example": "The tax code has become so convoluted that even accountants struggle to interpret it.",
+    "roots": "con- (一起) + volut (捲、繞，拉丁文 volvere) + -ed (形容詞後綴) → 層層纏繞、難以理清的"
+  },
+  {
+    "word": "copious",
+    "pos": "adj.",
+    "meaning": "大量的、豐富的",
+    "example": "She took copious notes during the lecture, filling nearly an entire notebook.",
+    "roots": "copi- (豐富，拉丁文 copia) + -ous (形容詞後綴) → 數量極多的"
+  },
+  {
+    "word": "coquettish",
+    "pos": "adj.",
+    "meaning": "賣弄風情的、調情的",
+    "example": "She gave a coquettish smile before turning away to join her friends.",
+    "roots": "源自法文 coquet (賣弄風情的男子，coq 公雞) + -ish (形容詞後綴) → 如公雞炫耀羽毛般賣弄魅力"
+  },
+  {
+    "word": "cordial",
+    "pos": "adj.",
+    "meaning": "熱誠友好的、誠摯的",
+    "example": "Despite their business rivalry, the two founders maintained a cordial relationship for decades.",
+    "roots": "cord- (心，拉丁文 cor) + -ial (形容詞後綴) → 發自內心的友善"
+  },
+  {
+    "word": "cordon",
+    "pos": "n./v.",
+    "meaning": "警戒線、封鎖線；用警戒線隔離",
+    "example": "Police cordoned off the area immediately after the explosion.",
+    "roots": "源自法文 cordon (繩子，corde 繩索) → 用繩狀防線圍住某個區域"
+  },
+  {
+    "word": "corollary",
+    "pos": "n.",
+    "meaning": "必然的結果、推論",
+    "example": "Increased traffic congestion is a natural corollary of the city's rapid population growth.",
+    "roots": "coroll- (花冠，拉丁文 corolla) + -ary (名詞後綴) → 原指額外附贈的花環，引申為隨之而來的結果"
+  },
+  {
+    "word": "corporeal",
+    "pos": "adj.",
+    "meaning": "肉體的、有形的",
+    "example": "The philosopher distinguished between the corporeal body and the immaterial soul.",
+    "roots": "corpor- (身體，拉丁文 corpus) + -eal (形容詞後綴) → 與物質身體相關、實體存在的"
+  },
+  {
+    "word": "corpulent",
+    "pos": "adj.",
+    "meaning": "肥胖的",
+    "example": "The corpulent innkeeper greeted every guest with a hearty laugh and a generous meal.",
+    "roots": "corpul- (身體，拉丁文 corpus) + -ent (形容詞後綴) → 身形肥大的"
+  },
+  {
+    "word": "corpus",
+    "pos": "n.",
+    "meaning": "文集、全集；(語言學)語料庫",
+    "example": "The linguist analyzed a corpus of over ten thousand news articles to study word frequency.",
+    "roots": "源自拉丁文 corpus (身體、整體) → 由大量文本組成的整體集合"
+  },
+  {
+    "word": "corral",
+    "pos": "v.",
+    "meaning": "把...趕入圍欄；(引申)聚攏、控制",
+    "example": "The teacher struggled to corral the excited students back into a single line.",
+    "roots": "源自西班牙文 corral (畜欄)，可能源自拉丁文 currere 跑 → 引申為把分散的人事物聚集控制住"
+  },
+  {
+    "word": "corroborate",
+    "pos": "v.",
+    "meaning": "證實、確證",
+    "example": "Two independent witnesses corroborated the victim's account of the incident.",
+    "roots": "cor- (加強) + robor (力量，拉丁文 robur) + -ate (動詞後綴) → 為某項說法增加力量、加以證實"
+  },
+  {
+    "word": "corrode",
+    "pos": "v.",
+    "meaning": "腐蝕；(比喻)逐漸破壞",
+    "example": "Years of mutual suspicion had corroded whatever trust once existed between the two nations.",
+    "roots": "cor- (加強) + rode (啃咬，拉丁文 rodere) → 逐漸啃食侵蝕，引申為緩慢破壞"
+  },
+  {
+    "word": "corrosive",
+    "pos": "adj.",
+    "meaning": "腐蝕性的；(比喻)有害的",
+    "example": "Constant negativity can have a corrosive effect on team morale.",
+    "roots": "同 corrode 字源 + -ive (形容詞後綴) → 具有逐漸侵蝕破壞性質的"
+  },
+  {
+    "word": "coruscate",
+    "pos": "v.",
+    "meaning": "閃爍發光；(比喻，才華等)光彩四射",
+    "example": "Her coruscating wit made her the most sought-after dinner guest in the city.",
+    "roots": "源自拉丁文 coruscare (閃爍、震動) → 引申為才智或言語如光芒般耀眼奪目"
+  },
+  {
+    "word": "cosmopolitan",
+    "pos": "adj.",
+    "meaning": "世界性的、見多識廣的",
+    "example": "Growing up in five different countries gave her a truly cosmopolitan outlook on life.",
+    "roots": "cosmo- (世界，希臘文 kosmos) + polit (城市、公民，希臘文 polis) + -an (形容詞後綴) → 視整個世界為自己家園的"
+  },
+  {
+    "word": "cosset",
+    "pos": "v.",
+    "meaning": "溺愛、嬌寵",
+    "example": "The child had been so cosseted by his grandparents that he struggled with the discipline of school.",
+    "roots": "源自古英文 cot-sǣta (住小屋的人，引申為寵物羊) → 像對待寵物般精心呵護"
+  },
+  {
+    "word": "costive",
+    "pos": "adj.",
+    "meaning": "便秘的；(比喻)吝嗇的、遲鈍的",
+    "example": "The negotiations stalled thanks to the delegation's costive approach to every concession.",
+    "roots": "cost- (源自拉丁文 constipare，壓緊、擠壓) + -ive (形容詞後綴) → 原指身體阻塞，引申為態度上的吝於付出或遲滯不前"
+  },
+  {
+    "word": "coterie",
+    "pos": "n.",
+    "meaning": "小圈子、志同道合的一群人",
+    "example": "The professor was surrounded by a small coterie of devoted graduate students.",
+    "roots": "源自古法文 coterie (佃農聯合租地的小團體) → 引申為緊密結合的小圈子"
+  },
+  {
+    "word": "countenance",
+    "pos": "n./v.",
+    "meaning": "面容、神情；容忍、認可",
+    "example": "The principal refused to countenance any form of bullying on school grounds.",
+    "roots": "counten- (源自拉丁文 continere，容納、克制) + -ance (名詞後綴) → 原指維持鎮定的表情，引申為表示認可"
+  },
+  {
+    "word": "counteract",
+    "pos": "v.",
+    "meaning": "抵消、對抗(不良影響)",
+    "example": "Regular exercise can help counteract the negative effects of a sedentary job.",
+    "roots": "counter- (相反) + act (行動) → 採取行動抵銷相反力量"
+  },
+  {
+    "word": "counterfeit",
+    "pos": "adj./n.",
+    "meaning": "偽造的、仿冒的(物品)",
+    "example": "Customs officials confiscated thousands of counterfeit handbags at the border.",
+    "roots": "counter- (相對應) + feit (做，拉丁文 facere) → 仿照原物做出來的假貨"
+  },
+  {
+    "word": "countermand",
+    "pos": "v.",
+    "meaning": "撤銷(命令)、發布相反命令",
+    "example": "The general countermanded the earlier retreat order and pushed the troops forward.",
+    "roots": "counter- (相反) + mand (命令，拉丁文 mandare) → 下達與原命令相反的指示"
+  },
+  {
+    "word": "countervailing",
+    "pos": "adj.",
+    "meaning": "抗衡的、抵消的",
+    "example": "The court weighed the countervailing interests of free speech and public safety.",
+    "roots": "counter- (相對) + vail (有價值，拉丁文 valere) + -ing (形容詞後綴) → 提供相反力量以達平衡的"
+  },
+  {
+    "word": "coup",
+    "pos": "n.",
+    "meaning": "政變；(引申)成功的一擊",
+    "example": "The military seized power in a swift, bloodless coup.",
+    "roots": "源自法文 coup (打擊)，源自拉丁文 colpus → 一次突然而果斷的行動"
+  },
+  {
+    "word": "court",
+    "pos": "v.",
+    "meaning": "設法贏得(支持、青睞)；招致(危險)",
+    "example": "By ignoring the safety warnings, the company was courting disaster.",
+    "roots": "源自拉丁文 cohors (庭院、隨從) → 原指在宮廷中討好君主，引申為刻意追求或招致某事"
+  },
+  {
+    "word": "covenant",
+    "pos": "n.",
+    "meaning": "(正式、莊嚴的)盟約、契約",
+    "example": "The two nations signed a covenant promising mutual defense in the event of invasion.",
+    "roots": "源自古法文 covenir (一致同意，拉丁文 convenire) → 雙方共同同意並承諾遵守的約定"
+  },
+  {
+    "word": "covert",
+    "pos": "adj.",
+    "meaning": "秘密的、隱蔽的",
+    "example": "The agency ran a covert operation to gather intelligence on the smuggling ring.",
+    "roots": "源自古法文 covert (被覆蓋的，couvrir 覆蓋) → 被遮蓋而不為人知的"
+  },
+  {
+    "word": "covet",
+    "pos": "v.",
+    "meaning": "覬覦、渴望擁有(他人之物)",
+    "example": "Rival studios coveted the streaming rights to the wildly popular series.",
+    "roots": "源自古法文 coveitier (強烈渴望)，源自拉丁文 cupere → 強烈渴望得到(通常屬於他人的東西)"
+  },
+  {
+    "word": "covetous",
+    "pos": "adj.",
+    "meaning": "貪婪的、覬覦的",
+    "example": "He cast a covetous glance at his neighbor's newly renovated kitchen.",
+    "roots": "同 covet 字源 + -ous (形容詞後綴) → 帶有強烈貪求慾望的"
+  },
+  {
+    "word": "cow",
+    "pos": "v.",
+    "meaning": "恐嚇、威嚇使屈服",
+    "example": "The witness refused to be cowed by the defense attorney's aggressive questioning.",
+    "roots": "源自古諾斯語 kuga (壓迫、恐嚇) → 以威嚇手段使人退縮順從"
+  },
+  {
+    "word": "cower",
+    "pos": "v.",
+    "meaning": "畏縮、蜷縮(因害怕)",
+    "example": "The dog cowered in the corner every time the thunder rumbled overhead.",
+    "roots": "源自中古低地德文 kuren (蹲伏) → 因恐懼而蜷曲身體"
+  },
+  {
+    "word": "coy",
+    "pos": "adj.",
+    "meaning": "忸怩作態的、故作靦腆的",
+    "example": "She remained coy about the details of her new project, hinting only that it was \"big.\"",
+    "roots": "源自古法文 coi (安靜的，拉丁文 quietus) → 引申為故意保持含蓄、不直接表態"
+  },
+  {
+    "word": "crass",
+    "pos": "adj.",
+    "meaning": "粗俗的、愚鈍的",
+    "example": "His crass jokes about the layoffs were met with stony silence from the room.",
+    "roots": "源自拉丁文 crassus (厚的、密的) → 引申為思想或言行粗鈍不敏感的"
+  },
+  {
+    "word": "craven",
+    "pos": "adj.",
+    "meaning": "懦弱的、膽小的",
+    "example": "His craven refusal to defend his colleague in the meeting disappointed the entire team.",
+    "roots": "源自古法文 cravanter (壓垮、擊敗) → 被擊垮而顯得怯懦的"
+  },
+  {
+    "word": "credence",
+    "pos": "n.",
+    "meaning": "相信、採信",
+    "example": "The committee gave little credence to the anonymous complaint without supporting evidence.",
+    "roots": "cred- (相信，拉丁文 credere) + -ence (名詞後綴) → 對某事物予以相信的程度"
+  },
+  {
+    "word": "credulity",
+    "pos": "n.",
+    "meaning": "輕信、易受騙",
+    "example": "The scam preyed on the credulity of elderly investors who trusted the friendly salesman.",
+    "roots": "同 credulous 字源 + -ity (名詞後綴) → 過於容易相信他人的傾向"
+  },
+  {
+    "word": "credulous",
+    "pos": "adj.",
+    "meaning": "輕信的、易受騙的",
+    "example": "Credulous readers shared the fabricated news story without checking its source.",
+    "roots": "cred- (相信，拉丁文 credere) + -ulous (形容詞後綴) → 過於容易相信、缺乏懷疑的"
+  },
+  {
+    "word": "creed",
+    "pos": "n.",
+    "meaning": "信條、教義",
+    "example": "Tolerance for differing opinions was a core creed of the small liberal college.",
+    "roots": "源自拉丁文 credo (我相信) → 個人或團體所堅信的原則"
+  },
+  {
+    "word": "crescendo",
+    "pos": "n.",
+    "meaning": "(音樂或情緒)漸強、高潮",
+    "example": "The protest built to a crescendo as thousands more demonstrators joined the march.",
+    "roots": "源自義大利文 crescendo (逐漸增強，crescere 成長) → 逐步增強直至頂點"
+  },
+  {
+    "word": "crestfallen",
+    "pos": "adj.",
+    "meaning": "垂頭喪氣的、沮喪的",
+    "example": "The crestfallen team trudged off the field after losing the championship in overtime.",
+    "roots": "crest (雞冠、鳥冠) + fallen (垂落的) → 如同鳥冠垂落般失去了原有的神氣"
+  },
+  {
+    "word": "crony",
+    "pos": "n.",
+    "meaning": "(尤指政商)老友、密友(常帶貶意)",
+    "example": "The mayor was accused of awarding city contracts to his cronies instead of the lowest bidder.",
+    "roots": "源自17世紀劍橋大學俚語 chronios (同齡的，希臘文 chronos 時間) → 引申為長年結交、關係密切的朋友"
+  },
+  {
+    "word": "cronyism",
+    "pos": "n.",
+    "meaning": "任用親信、裙帶關係",
+    "example": "Critics accused the administration of rampant cronyism in its hiring practices.",
+    "roots": "同 crony 字源 + -ism (名詞後綴，表主義、行為) → 憑私交而非能力任用親信的行為"
+  },
+  {
+    "word": "crucible",
+    "pos": "n.",
+    "meaning": "坩堝；(比喻)嚴峻的考驗",
+    "example": "The startup's first year became a crucible that tested every founder's resolve.",
+    "roots": "源自中古拉丁文 crucibulum (熔煉容器)，字源可能與 crux 十字架有關 → 高溫熔煉金屬的容器，引申為淬鍊性格的嚴峻環境"
+  },
+  {
+    "word": "crux",
+    "pos": "n.",
+    "meaning": "(問題的)核心、關鍵所在",
+    "example": "The crux of the dispute was not money but a fundamental disagreement over control of the company.",
+    "roots": "源自拉丁文 crux (十字架、難題) → 事情最關鍵、最難解的部分"
+  },
+  {
+    "word": "cryptic",
+    "pos": "adj.",
+    "meaning": "隱晦難解的、神秘的",
+    "example": "The billionaire's cryptic tweet left investors guessing about the company's next move.",
+    "roots": "crypt- (隱藏，希臘文 kryptos) + -ic (形容詞後綴) → 意義隱藏不明的"
+  },
+  {
+    "word": "cull",
+    "pos": "v.",
+    "meaning": "從中挑選、淘汰",
+    "example": "The editor culled the best essays from over a thousand submissions for the anthology.",
+    "roots": "源自拉丁文 colligere (聚集、挑選，與 collect 同源) → 從一大群中篩選出部分"
+  },
+  {
+    "word": "culminate",
+    "pos": "v.",
+    "meaning": "以...達到高潮、最終演變為",
+    "example": "Years of research culminated in a breakthrough discovery published last month.",
+    "roots": "culmin- (頂點，拉丁文 culmen) + -ate (動詞後綴) → 到達最高點、最終結果"
+  },
+  {
+    "word": "culmination",
+    "pos": "n.",
+    "meaning": "頂點、最高峰、結果",
+    "example": "The championship win was the culmination of a decade of hard training.",
+    "roots": "同 culminate 字源 + -ion (名詞後綴) → 發展到達的最終高點"
+  },
+  {
+    "word": "culpable",
+    "pos": "adj.",
+    "meaning": "應受責備的、有過失的",
+    "example": "The investigation found the contractor culpable for the building's structural failure.",
+    "roots": "culp- (過錯，拉丁文 culpa) + -able (形容詞後綴) → 應為過錯負責的"
+  },
+  {
+    "word": "cultivate",
+    "pos": "v.",
+    "meaning": "培養(能力、關係、興趣)；耕種",
+    "example": "The mentorship program helps young employees cultivate leadership skills early in their careers.",
+    "roots": "cult- (耕種，拉丁文 colere) + -ivate (動詞後綴) → 悉心栽培使其成長"
+  },
+  {
+    "word": "cumbersome",
+    "pos": "adj.",
+    "meaning": "笨重的、繁瑣的",
+    "example": "The approval process is so cumbersome that most small projects never get past the paperwork.",
+    "roots": "cumber (阻礙，源自古法文 combrer 堵塞) + -some (形容詞後綴) → 造成阻礙、難以操作的"
+  },
+  {
+    "word": "cunning",
+    "pos": "adj.",
+    "meaning": "狡猾的、精明的",
+    "example": "The cunning fox managed to slip past the farmer's dogs undetected.",
+    "roots": "源自古英文 cunnan (知道、能夠) → 引申為運用智謀達成目的的"
+  },
+  {
+    "word": "cupidity",
+    "pos": "n.",
+    "meaning": "貪婪、貪財",
+    "example": "The scandal exposed the sheer cupidity of executives who looted the pension fund.",
+    "roots": "cupid- (慾望，拉丁文 cupiditas，與愛神 Cupid 同源) + -ity (名詞後綴) → 對財富或利益的強烈貪求"
+  },
+  {
+    "word": "curb",
+    "pos": "v.",
+    "meaning": "抑制、控制",
+    "example": "The new regulations aim to curb excessive speculation in the housing market.",
+    "roots": "源自古法文 courbe (彎曲的，拉丁文 curvus) → 原指套在馬嘴上的彎曲鏈條，用以控制馬匹，引申為抑制行為"
+  },
+  {
+    "word": "curmudgeon",
+    "pos": "n.",
+    "meaning": "脾氣暴躁的老人、易怒的人",
+    "example": "The old curmudgeon next door yells at anyone who steps on his lawn.",
+    "roots": "字源不確定，16世紀出現，一說源自法文 coeur méchant (惡毒的心) → 引申為性情乖僻好抱怨的人"
+  },
+  {
+    "word": "cursory",
+    "pos": "adj.",
+    "meaning": "草率的、粗略的",
+    "example": "A cursory glance at the report was enough to spot several glaring errors.",
+    "roots": "curs- (跑，拉丁文 currere) + -ory (形容詞後綴) → 匆匆跑過、未加細究的"
+  },
+  {
+    "word": "curt",
+    "pos": "adj.",
+    "meaning": "簡短生硬的、無禮的",
+    "example": "His curt reply to her question made it clear he didn't want to discuss it further.",
+    "roots": "源自拉丁文 curtus (縮短的) → 話語簡短到近乎無禮"
+  },
+  {
+    "word": "curtail",
+    "pos": "v.",
+    "meaning": "縮減、削減",
+    "example": "The airline was forced to curtail its flight schedule due to the fuel shortage.",
+    "roots": "curt- (縮短，拉丁文 curtus) + -ail (動詞後綴，可能受 tail 尾巴影響) → 剪短、削減"
+  },
+  {
+    "word": "cushion",
+    "pos": "v.",
+    "meaning": "緩衝、減輕(衝擊)",
+    "example": "The government's emergency fund helped cushion the economy against the worst effects of the recession.",
+    "roots": "源自古法文 coissin (坐墊) → 像坐墊般吸收緩解衝擊力"
+  },
+  {
+    "word": "cynic",
+    "pos": "n.",
+    "meaning": "憤世嫉俗者、懷疑他人動機的人",
+    "example": "Even the biggest cynic in the office admitted the new policy was a genuine improvement.",
+    "roots": "源自希臘文 kynikos (犬儒學派，kyon 狗) → 犬儒學派主張輕視世俗價值，引申為對人性抱持懷疑態度的人"
+  },
+  {
+    "word": "cynical",
+    "pos": "adj.",
+    "meaning": "憤世嫉俗的、懷疑他人動機的",
+    "example": "Years of political scandal have left many voters deeply cynical about government promises.",
+    "roots": "同 cynic 字源 + -al (形容詞後綴) → 傾向懷疑他人真誠、看淡理想的"
+  },
+  {
+    "word": "cynicism",
+    "pos": "n.",
+    "meaning": "憤世嫉俗、犬儒主義",
+    "example": "Her early idealism gradually gave way to cynicism after years of watching corruption go unpunished.",
+    "roots": "同 cynic 字源 + -ism (名詞後綴) → 對人性或世事抱持懷疑貶低態度的思想傾向"
+  },
+  {
+    "word": "cynosure",
+    "pos": "n.",
+    "meaning": "眾所矚目的焦點、引導的中心",
+    "example": "With her stunning gown, she quickly became the cynosure of the entire gala.",
+    "roots": "源自希臘文 kynosoura (小熊座，字面意為狗尾) → 古代航海者依此星座導航，引申為眾人目光的中心"
+  }
+]
