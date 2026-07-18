@@ -1,0 +1,2942 @@
+[
+  {
+    "word": "daub",
+    "pos": "v.",
+    "meaning": "塗抹、亂塗",
+    "example": "The child daubed paint across the wall with gleeful abandon.",
+    "roots": "源自古法文 dauber（塗灰泥），引申為隨意塗抹"
+  },
+  {
+    "word": "daunt",
+    "pos": "v.",
+    "meaning": "使膽怯、使畏縮",
+    "example": "The sheer size of the mountain did not daunt the experienced climbers.",
+    "roots": "源自拉丁文 domitare（馴服），引申為使人屈服、膽怯"
+  },
+  {
+    "word": "dauntless",
+    "pos": "adj.",
+    "meaning": "無畏的、不屈不撓的",
+    "example": "The dauntless firefighter ran back into the burning building to save the child.",
+    "roots": "daunt (使膽怯) + -less (無...的) → 不會被嚇倒的"
+  },
+  {
+    "word": "dawdle",
+    "pos": "v.",
+    "meaning": "閒蕩、磨蹭",
+    "example": "Stop dawdling and finish your homework before dinner.",
+    "roots": "擬聲/方言詞源，模仿懶散拖延的動作，確切字源不詳"
+  },
+  {
+    "word": "deadlock",
+    "pos": "n.",
+    "meaning": "僵局、相持不下",
+    "example": "The negotiations reached a deadlock after neither side would compromise.",
+    "roots": "dead (死的、無法動彈的) + lock (鎖住) → 完全鎖死無法前進的狀態"
+  },
+  {
+    "word": "deadpan",
+    "pos": "adj.",
+    "meaning": "面無表情的、故作正經的",
+    "example": "He delivered the joke in a deadpan voice, which made it even funnier.",
+    "roots": "dead (無生氣的) + pan (俚語指臉) → 臉上毫無表情"
+  },
+  {
+    "word": "dearth",
+    "pos": "n.",
+    "meaning": "缺乏、不足",
+    "example": "There is a dearth of affordable housing in the city center.",
+    "roots": "源自古英文 deore（珍貴的）衍生，物以稀為貴 → 稀少、缺乏"
+  },
+  {
+    "word": "debacle",
+    "pos": "n.",
+    "meaning": "潰敗、慘敗、大災難",
+    "example": "The product launch turned into a complete debacle when the servers crashed.",
+    "roots": "源自法文 débâcler（解開、崩解），原指冰河解凍時的崩裂 → 引申為突然的崩潰"
+  },
+  {
+    "word": "debase",
+    "pos": "v.",
+    "meaning": "貶低、降低(品質或價值)",
+    "example": "Critics argued that the new policy would debase the currency's value.",
+    "roots": "de- (向下) + base (低下的) → 使降到更低的層次"
+  },
+  {
+    "word": "debauch",
+    "pos": "v.",
+    "meaning": "使墮落、放縱",
+    "example": "The prince's advisors worried that court life would debauch his character.",
+    "roots": "源自古法文 desbaucher（誘離正軌），de- (離開) + bauche (工作場所) → 誘使人離開正道"
+  },
+  {
+    "word": "debilitate",
+    "pos": "v.",
+    "meaning": "使衰弱、削弱",
+    "example": "The prolonged illness debilitated her once-strong body.",
+    "roots": "de- (加強/向下) + bilis (拉丁文，力量) + -ate (動詞化) → 使失去力量"
+  },
+  {
+    "word": "debunk",
+    "pos": "v.",
+    "meaning": "揭穿、戳破(謬論或迷思)",
+    "example": "The documentary aimed to debunk popular myths about nutrition.",
+    "roots": "de- (去除) + bunk (胡說、誇大的說法，源自 bunkum) → 拆穿虛假的說法"
+  },
+  {
+    "word": "decadence",
+    "pos": "n.",
+    "meaning": "頹廢、道德或文化的衰敗",
+    "example": "The novel depicts the decadence of aristocratic society before the revolution.",
+    "roots": "de- (向下) + cadere (拉丁文，跌落) + -ence (名詞後綴) → 逐漸墮落衰敗"
+  },
+  {
+    "word": "decapitate",
+    "pos": "v.",
+    "meaning": "斬首、砍頭",
+    "example": "The statue had been decapitated during the riots decades earlier.",
+    "roots": "de- (去除) + caput (拉丁文，頭) + -ate (動詞化) → 去除頭部"
+  },
+  {
+    "word": "deceptive",
+    "pos": "adj.",
+    "meaning": "欺騙性的、誤導的",
+    "example": "The calm sea was deceptive; a storm was brewing just beyond the horizon.",
+    "roots": "de- (加強) + capere (拉丁文，抓取) → 誘使人上當的，引申為誤導性的"
+  },
+  {
+    "word": "decorous",
+    "pos": "adj.",
+    "meaning": "得體的、合乎禮儀的",
+    "example": "She maintained a decorous silence throughout the formal ceremony.",
+    "roots": "源自拉丁文 decorus（合宜的，來自 decor 美觀）→ 舉止合宜得體"
+  },
+  {
+    "word": "decorum",
+    "pos": "n.",
+    "meaning": "得體、禮節",
+    "example": "The judge insisted on strict decorum in the courtroom.",
+    "roots": "源自拉丁文 decorum（合宜之事，decor 美觀的中性名詞化）→ 合宜的行為規範"
+  },
+  {
+    "word": "decoy",
+    "pos": "n.",
+    "meaning": "誘餌、圈套",
+    "example": "Hunters used a wooden duck as a decoy to lure real birds within range.",
+    "roots": "源自荷蘭文 de kooi（鳥籠陷阱），引申為誘捕用的假餌"
+  },
+  {
+    "word": "decrepit",
+    "pos": "adj.",
+    "meaning": "老朽的、破舊不堪的",
+    "example": "The decrepit old house looked as though it might collapse at any moment.",
+    "roots": "de- (加強) + crepare (拉丁文，破裂、發出聲響) → 因老舊而發出嘎吱聲、破敗"
+  },
+  {
+    "word": "decry",
+    "pos": "v.",
+    "meaning": "公開譴責、貶斥",
+    "example": "Environmentalists decried the government's decision to reopen the coal mine.",
+    "roots": "de- (向下) + cry (喊叫) → 大聲貶低、公開責難"
+  },
+  {
+    "word": "deface",
+    "pos": "v.",
+    "meaning": "毀損(外觀)、塗污",
+    "example": "Vandals had defaced the monument with spray paint overnight.",
+    "roots": "de- (破壞) + face (表面、外貌) → 破壞外觀"
+  },
+  {
+    "word": "defame",
+    "pos": "v.",
+    "meaning": "誹謗、詆毀名譽",
+    "example": "The tabloid was sued for defaming the actor with false accusations.",
+    "roots": "de- (向下) + fama (拉丁文，名聲) → 破壞名聲"
+  },
+  {
+    "word": "defamatory",
+    "pos": "adj.",
+    "meaning": "誹謗性的",
+    "example": "The newspaper retracted the defamatory statements after a legal threat.",
+    "roots": "defame (誹謗) 字源 + -atory (形容詞後綴) → 具誹謗性質的"
+  },
+  {
+    "word": "defiant",
+    "pos": "adj.",
+    "meaning": "反抗的、挑釁的",
+    "example": "The defiant teenager refused to apologize despite repeated warnings.",
+    "roots": "de- (加強) + fidere (拉丁文，信任) 的否定衍生 → 拒絕服從、公然對抗"
+  },
+  {
+    "word": "defile",
+    "pos": "v.",
+    "meaning": "弄髒、褻瀆",
+    "example": "The vandals were accused of defiling a sacred burial ground.",
+    "roots": "de- (使...) + fyle (中古英文，弄髒) → 使變髒、玷污"
+  },
+  {
+    "word": "deft",
+    "pos": "adj.",
+    "meaning": "靈巧的、熟練的",
+    "example": "With a few deft strokes, the artist completed the portrait.",
+    "roots": "源自古英文 gedæfte（溫和的、恰當的），引申為動作恰到好處、靈巧"
+  },
+  {
+    "word": "defray",
+    "pos": "v.",
+    "meaning": "支付、償付(費用)",
+    "example": "The scholarship helps defray the cost of tuition for low-income students.",
+    "roots": "de- (完全) + fray (源自古法文 freer，支出) → 全額支付"
+  },
+  {
+    "word": "defunct",
+    "pos": "adj.",
+    "meaning": "不再存在的、已作廢的",
+    "example": "The company acquired several defunct brands to revive their names.",
+    "roots": "de- (完全) + functus (拉丁文 fungi 的過去分詞，執行) → 已完成運作、不再運作"
+  },
+  {
+    "word": "degenerate",
+    "pos": "v.",
+    "meaning": "墮落、退化",
+    "example": "The peaceful protest quickly degenerated into a violent riot.",
+    "roots": "de- (向下) + genus (拉丁文，種類、血統) + -ate (動詞化) → 偏離原本的優良種性"
+  },
+  {
+    "word": "deign",
+    "pos": "v.",
+    "meaning": "屈尊、俯就",
+    "example": "The celebrity did not even deign to answer the reporter's question.",
+    "roots": "源自拉丁文 dignari（認為值得，來自 dignus 有價值的）→ 屈尊做某事"
+  },
+  {
+    "word": "dejected",
+    "pos": "adj.",
+    "meaning": "沮喪的、灰心的",
+    "example": "He looked utterly dejected after failing the exam for the second time.",
+    "roots": "de- (向下) + jacere (拉丁文，投擲) → 情緒被拋向低處，引申為沮喪"
+  },
+  {
+    "word": "delectable",
+    "pos": "adj.",
+    "meaning": "美味的、令人愉悅的",
+    "example": "The bakery is known for its delectable pastries.",
+    "roots": "源自拉丁文 delectare（使愉悅），delight 同源 → 令人享受的"
+  },
+  {
+    "word": "delegate",
+    "pos": "v.",
+    "meaning": "委派、授權(他人代理)",
+    "example": "A good manager knows how to delegate tasks to the team.",
+    "roots": "de- (完全) + legare (拉丁文，派遣、委任) → 完全委託給他人"
+  },
+  {
+    "word": "deleterious",
+    "pos": "adj.",
+    "meaning": "有害的",
+    "example": "Excessive screen time can have deleterious effects on children's sleep.",
+    "roots": "源自希臘文 deleterios（有害的，來自 deleisthai 傷害）→ 造成損害的"
+  },
+  {
+    "word": "deliberate",
+    "pos": "adj.",
+    "meaning": "故意的、深思熟慮的",
+    "example": "It was a deliberate decision to delay the announcement until after the vote.",
+    "roots": "de- (完全) + librare (拉丁文，權衡，源自 libra 天秤) → 仔細權衡後決定"
+  },
+  {
+    "word": "delineate",
+    "pos": "v.",
+    "meaning": "描繪、界定(輪廓、界線)",
+    "example": "The contract clearly delineates the responsibilities of each party.",
+    "roots": "de- (完全) + lineare (拉丁文，畫線，源自 linea 線) → 用線條清楚勾勒"
+  },
+  {
+    "word": "delirious",
+    "pos": "adj.",
+    "meaning": "神智不清的、狂喜的",
+    "example": "The fans were delirious with joy after their team won the championship.",
+    "roots": "de- (偏離) + lira (拉丁文，田埂、軌道) → 偏離常軌，引申為神智錯亂或極度亢奮"
+  },
+  {
+    "word": "delude",
+    "pos": "v.",
+    "meaning": "欺騙、使誤信",
+    "example": "He deluded himself into thinking the risky investment would pay off.",
+    "roots": "de- (加強) + ludere (拉丁文，玩弄) → 玩弄他人使其誤信"
+  },
+  {
+    "word": "deluge",
+    "pos": "n.",
+    "meaning": "洪水、大量湧入",
+    "example": "The company was hit with a deluge of complaints after the price hike.",
+    "roots": "源自拉丁文 diluvium（大洪水，來自 diluere 沖走）→ 大量湧來的事物"
+  },
+  {
+    "word": "delusion",
+    "pos": "n.",
+    "meaning": "妄想、錯覺",
+    "example": "He suffered from the delusion that he was being followed by government agents.",
+    "roots": "delude (欺騙) 字源 + -ion (名詞後綴) → 被欺騙後形成的錯誤信念"
+  },
+  {
+    "word": "demagogue",
+    "pos": "n.",
+    "meaning": "煽動群眾的政客",
+    "example": "The demagogue exploited people's fears to gain political power.",
+    "roots": "希臘文 demos (人民) + agogos (領導者) → 帶領群眾的人，引申為煽動者"
+  },
+  {
+    "word": "demarcate",
+    "pos": "v.",
+    "meaning": "劃定界線、區分",
+    "example": "A low stone wall demarcates the boundary between the two properties.",
+    "roots": "de- (加強) + marcare (西班牙文 marcar 的拉丁化，標記) → 明確標出界線"
+  },
+  {
+    "word": "demean",
+    "pos": "v.",
+    "meaning": "降低身份、貶低",
+    "example": "She refused to demean herself by responding to the insults.",
+    "roots": "de- (向下) + mean (品行、舉止，源自古英文) → 使行為降格"
+  },
+  {
+    "word": "demeanor",
+    "pos": "n.",
+    "meaning": "舉止、態度",
+    "example": "The lawyer's calm demeanor reassured the anxious defendant.",
+    "roots": "de- (加強) + mener (古法文，引導、舉止) → 一個人展現出來的行為方式"
+  },
+  {
+    "word": "demise",
+    "pos": "n.",
+    "meaning": "終止、死亡、消亡",
+    "example": "Poor management led to the eventual demise of the once-thriving company.",
+    "roots": "源自古法文 desmis（放下、放棄），de- (向下) + mittere (拉丁文，送出) → 職位或生命的終結"
+  },
+  {
+    "word": "demur",
+    "pos": "v.",
+    "meaning": "反對、表示異議",
+    "example": "Several board members demurred when asked to approve the risky merger.",
+    "roots": "源自拉丁文 demorari（延遲，de- 完全 + morari 拖延）→ 遲疑不決以表示反對"
+  },
+  {
+    "word": "demure",
+    "pos": "adj.",
+    "meaning": "端莊的、嫻靜的(常帶矜持意味)",
+    "example": "She gave a demure smile and looked away shyly.",
+    "roots": "源自古法文 demoure（舉止端莊），與 demur 同源，引申為矜持保守的態度"
+  },
+  {
+    "word": "denigrate",
+    "pos": "v.",
+    "meaning": "詆毀、貶低",
+    "example": "The candidate was criticized for denigrating his opponent's record.",
+    "roots": "de- (加強) + nigrare (拉丁文，使變黑，源自 niger 黑色) → 抹黑他人名譽"
+  },
+  {
+    "word": "denizen",
+    "pos": "n.",
+    "meaning": "居民、棲息者",
+    "example": "Owls and bats are common denizens of the old abandoned barn.",
+    "roots": "源自古法文 deinz（裡面）→ 居住在某地之內的生物或人"
+  },
+  {
+    "word": "denounce",
+    "pos": "v.",
+    "meaning": "公開譴責、揭發",
+    "example": "World leaders denounced the invasion as a violation of international law.",
+    "roots": "de- (加強) + nuntiare (拉丁文，宣告) → 公開宣告譴責"
+  },
+  {
+    "word": "denouement",
+    "pos": "n.",
+    "meaning": "(故事、事件的)結局、收場",
+    "example": "The novel's denouement ties together every loose thread from earlier chapters.",
+    "roots": "源自法文 dénouement（解開），de- (去除) + nouer (打結) → 情節解開後的結局"
+  },
+  {
+    "word": "deplete",
+    "pos": "v.",
+    "meaning": "耗盡、使枯竭",
+    "example": "Years of overfishing have depleted the region's fish stocks.",
+    "roots": "de- (完全) + plere (拉丁文，填滿) → 反向，使完全空掉"
+  },
+  {
+    "word": "deplorable",
+    "pos": "adj.",
+    "meaning": "應受譴責的、糟糕透頂的",
+    "example": "The prisoners were kept in deplorable conditions with little food or water.",
+    "roots": "deplore (悲嘆、譴責) + -able (值得...的) → 令人悲嘆、應受譴責的"
+  },
+  {
+    "word": "deplore",
+    "pos": "v.",
+    "meaning": "強烈反對、悲嘆、譴責",
+    "example": "The committee deplored the use of violence against peaceful protesters.",
+    "roots": "de- (加強) + plorare (拉丁文，哭泣、哀嘆) → 強烈地表達不滿"
+  },
+  {
+    "word": "deploy",
+    "pos": "v.",
+    "meaning": "部署、調度",
+    "example": "The general decided to deploy additional troops along the border.",
+    "roots": "源自法文 déployer（展開），de- (相反) + plicare (拉丁文，摺疊) → 展開部署"
+  },
+  {
+    "word": "depose",
+    "pos": "v.",
+    "meaning": "罷免、廢黜",
+    "example": "The military junta deposed the president in a swift coup.",
+    "roots": "de- (向下) + ponere (拉丁文，放置) → 從位子上拉下來"
+  },
+  {
+    "word": "depravity",
+    "pos": "n.",
+    "meaning": "墮落、邪惡",
+    "example": "The novel explores the depravity that lurks beneath polite society.",
+    "roots": "de- (向下) + pravus (拉丁文，扭曲、邪惡) + -ity (名詞後綴) → 道德扭曲敗壞的狀態"
+  },
+  {
+    "word": "deprecate",
+    "pos": "v.",
+    "meaning": "反對、輕視；(技術上)視為過時",
+    "example": "The manual deprecates this older function in favor of a newer method.",
+    "roots": "de- (向下) + precari (拉丁文，祈禱) → 原指祈禱驅除災禍，引申為表示不贊同"
+  },
+  {
+    "word": "deprecatory",
+    "pos": "adj.",
+    "meaning": "表示不贊同的、貶抑的",
+    "example": "He made a self-deprecatory joke about his own clumsiness.",
+    "roots": "deprecate (反對、貶抑) + -ory (形容詞後綴) → 帶有貶抑意味的"
+  },
+  {
+    "word": "depredation",
+    "pos": "n.",
+    "meaning": "掠奪、破壞",
+    "example": "The village never fully recovered from the depredations of the war.",
+    "roots": "de- (加強) + praedari (拉丁文，掠奪) → 大肆掠奪造成的破壞"
+  },
+  {
+    "word": "deride",
+    "pos": "v.",
+    "meaning": "嘲笑、奚落",
+    "example": "Critics derided the film as a shallow imitation of the original.",
+    "roots": "de- (向下) + ridere (拉丁文，笑) → 帶著輕蔑地嘲笑"
+  },
+  {
+    "word": "derision",
+    "pos": "n.",
+    "meaning": "嘲笑、奚落",
+    "example": "His outdated proposal was met with derision from the entire committee.",
+    "roots": "deride (嘲笑) + -ion (名詞後綴) → 嘲笑的行為"
+  },
+  {
+    "word": "derisive",
+    "pos": "adj.",
+    "meaning": "嘲笑的、表示輕蔑的",
+    "example": "She gave a derisive laugh when she heard his excuse.",
+    "roots": "deride (嘲笑) 字源 + -ive (形容詞後綴) → 帶有嘲弄意味的"
+  },
+  {
+    "word": "derivative",
+    "pos": "adj.",
+    "meaning": "衍生的、缺乏原創性的",
+    "example": "The critics dismissed the band's new album as derivative of their earlier work.",
+    "roots": "de- (向下) + rivus (拉丁文，河流) → 從主流分支出來的，引申為非原創的"
+  },
+  {
+    "word": "derogatory",
+    "pos": "adj.",
+    "meaning": "貶損的、輕蔑的",
+    "example": "He was fired for making derogatory remarks about his colleagues.",
+    "roots": "de- (向下) + rogare (拉丁文，請求、提議) → 削減他人的地位或尊嚴"
+  },
+  {
+    "word": "descry",
+    "pos": "v.",
+    "meaning": "隱約看見、發現",
+    "example": "From the tower, the lookout could descry a ship far on the horizon.",
+    "roots": "源自古法文 descrier（宣告、辨識），des- (分離) + crier (喊叫) → 辨認出遠處事物"
+  },
+  {
+    "word": "desecrate",
+    "pos": "v.",
+    "meaning": "褻瀆、污損(神聖之物)",
+    "example": "The vandals were arrested for desecrating the ancient temple.",
+    "roots": "de- (相反) + sacrare (拉丁文，使神聖) → 使神聖之物變得世俗、遭褻瀆"
+  },
+  {
+    "word": "desiccate",
+    "pos": "v.",
+    "meaning": "使乾燥、使脫水",
+    "example": "The intense desert heat quickly desiccated the exposed wood.",
+    "roots": "de- (完全) + siccare (拉丁文，弄乾，源自 siccus 乾的) → 完全弄乾"
+  },
+  {
+    "word": "desist",
+    "pos": "v.",
+    "meaning": "停止、放棄(某行動)",
+    "example": "The court ordered the company to desist from further unauthorized use of the logo.",
+    "roots": "de- (離開) + sistere (拉丁文，站立、停止) → 停止站立在原行動上"
+  },
+  {
+    "word": "despicable",
+    "pos": "adj.",
+    "meaning": "卑鄙的、可鄙的",
+    "example": "Betraying a close friend for money is a despicable act.",
+    "roots": "de- (向下) + specere (拉丁文，看) → 被人往下看、不屑一顧的"
+  },
+  {
+    "word": "despoil",
+    "pos": "v.",
+    "meaning": "掠奪、蹂躪",
+    "example": "Colonizers despoiled the land of its natural resources.",
+    "roots": "de- (完全) + spoliare (拉丁文，剝奪) → 徹底奪取、破壞"
+  },
+  {
+    "word": "despondent",
+    "pos": "adj.",
+    "meaning": "沮喪的、絕望的",
+    "example": "He grew despondent after losing his job for the third time that year.",
+    "roots": "de- (向下) + spondere (拉丁文，承諾) → 對前景失去信心而心灰意冷"
+  },
+  {
+    "word": "despot",
+    "pos": "n.",
+    "meaning": "暴君、專制統治者",
+    "example": "The people finally rose up against the despot who had ruled for decades.",
+    "roots": "源自希臘文 despotes（主人、統治者）→ 擁有絕對權力的統治者"
+  },
+  {
+    "word": "despotic",
+    "pos": "adj.",
+    "meaning": "專制的、暴虐的",
+    "example": "The despotic regime crushed any sign of dissent.",
+    "roots": "despot (暴君) + -ic (形容詞後綴) → 具暴君式統治特徵的"
+  },
+  {
+    "word": "destitute",
+    "pos": "adj.",
+    "meaning": "赤貧的、一無所有的",
+    "example": "The flood left thousands of families destitute and homeless.",
+    "roots": "de- (完全) + statuere (拉丁文，設立) 的否定 → 失去一切支撐、一無所有"
+  },
+  {
+    "word": "desultory",
+    "pos": "adj.",
+    "meaning": "散漫的、無條理的、東拉西扯的",
+    "example": "Their desultory conversation drifted from topic to topic without any real focus.",
+    "roots": "de- (向下) + salire (拉丁文，跳躍) → 像跳來跳去般缺乏連貫性"
+  },
+  {
+    "word": "detached",
+    "pos": "adj.",
+    "meaning": "超然的、不動感情的、分離的",
+    "example": "The surgeon maintained a detached demeanor even during the most stressful operations.",
+    "roots": "de- (分離) + attach (連接) → 從情感或連結中分離出來"
+  },
+  {
+    "word": "deteriorate",
+    "pos": "v.",
+    "meaning": "惡化、變壞",
+    "example": "The patient's condition began to deteriorate rapidly overnight.",
+    "roots": "de- (向下) + deterior (拉丁文，更差的) + -ate (動詞化) → 變得更差"
+  },
+  {
+    "word": "deterrent",
+    "pos": "n.",
+    "meaning": "遏阻物、嚇阻手段",
+    "example": "Higher fines serve as a deterrent against illegal dumping.",
+    "roots": "de- (離開) + terrere (拉丁文，使害怕) → 使人因害怕而不敢行動的事物"
+  },
+  {
+    "word": "detest",
+    "pos": "v.",
+    "meaning": "厭惡、憎恨",
+    "example": "She detests being interrupted while she is working.",
+    "roots": "de- (加強) + testari (拉丁文，見證、宣告) → 公開表明強烈厭惡"
+  },
+  {
+    "word": "dethrone",
+    "pos": "v.",
+    "meaning": "廢黜、推翻(王位或首位)",
+    "example": "The champion was finally dethroned after a decade of dominance.",
+    "roots": "de- (去除) + throne (王座) → 使離開王位"
+  },
+  {
+    "word": "detonate",
+    "pos": "v.",
+    "meaning": "引爆、爆炸",
+    "example": "The bomb squad safely detonated the explosive device.",
+    "roots": "de- (加強) + tonare (拉丁文，打雷) → 發出如雷的巨響、爆炸"
+  },
+  {
+    "word": "detract",
+    "pos": "v.",
+    "meaning": "減損、貶低(價值)",
+    "example": "The scandal did nothing to detract from his reputation as a brilliant scientist.",
+    "roots": "de- (向下) + trahere (拉丁文，拉) → 把價值往下拉"
+  },
+  {
+    "word": "detriment",
+    "pos": "n.",
+    "meaning": "損害、傷害",
+    "example": "He worked overtime every day, to the detriment of his health.",
+    "roots": "de- (向下) + terere (拉丁文，磨損) → 逐漸磨損造成的損害"
+  },
+  {
+    "word": "detrimental",
+    "pos": "adj.",
+    "meaning": "有害的、造成損害的",
+    "example": "Skipping breakfast can be detrimental to a child's concentration in school.",
+    "roots": "detriment (損害) + -al (形容詞後綴) → 造成損害的"
+  },
+  {
+    "word": "devastate",
+    "pos": "v.",
+    "meaning": "摧毀、蹂躪；使極度悲痛",
+    "example": "The earthquake devastated entire neighborhoods within seconds.",
+    "roots": "de- (完全) + vastare (拉丁文，使荒蕪) → 徹底摧毀成廢墟"
+  },
+  {
+    "word": "deviate",
+    "pos": "v.",
+    "meaning": "偏離(常軌、標準)",
+    "example": "The pilot deviated from the flight plan to avoid the storm.",
+    "roots": "de- (離開) + via (拉丁文，道路) → 離開原本的道路"
+  },
+  {
+    "word": "devious",
+    "pos": "adj.",
+    "meaning": "狡詐的、迂迴的",
+    "example": "He used devious tactics to gain his rival's trust before betraying him.",
+    "roots": "de- (離開) + via (道路) → 偏離正道，引申為不誠實、狡猾"
+  },
+  {
+    "word": "devoid",
+    "pos": "adj.",
+    "meaning": "全無的、缺乏的",
+    "example": "The report was devoid of any real evidence to support its claims.",
+    "roots": "de- (完全) + void (空的) → 完全空無、缺乏"
+  },
+  {
+    "word": "devolve",
+    "pos": "v.",
+    "meaning": "移交(權力)、退化",
+    "example": "Responsibility for the project devolved onto the junior staff after the manager resigned.",
+    "roots": "de- (向下) + volvere (拉丁文，滾動) → 權力向下滾動、移轉"
+  },
+  {
+    "word": "devotee",
+    "pos": "n.",
+    "meaning": "熱衷者、信徒",
+    "example": "As a lifelong devotee of jazz, she never missed a festival.",
+    "roots": "devote (奉獻) + -ee (被動或身分後綴) → 全心投入的人"
+  },
+  {
+    "word": "devout",
+    "pos": "adj.",
+    "meaning": "虔誠的、熱忱的",
+    "example": "Her grandmother was a devout Catholic who attended Mass every morning.",
+    "roots": "源自拉丁文 devotus（devote 的過去分詞，奉獻的）→ 全心奉獻信仰的"
+  },
+  {
+    "word": "dexterity",
+    "pos": "n.",
+    "meaning": "靈巧、敏捷",
+    "example": "The surgeon's dexterity allowed her to perform the delicate operation flawlessly.",
+    "roots": "源自拉丁文 dexter（右手的、靈巧的）→ 手部動作靈巧的能力"
+  },
+  {
+    "word": "dexterous",
+    "pos": "adj.",
+    "meaning": "靈巧的、手法熟練的",
+    "example": "The dexterous magician performed card tricks with remarkable speed.",
+    "roots": "dexter (拉丁文，右手的、靈巧的) + -ous (形容詞後綴) → 動作靈巧熟練的"
+  },
+  {
+    "word": "diabolical",
+    "pos": "adj.",
+    "meaning": "邪惡的、如惡魔般的",
+    "example": "The villain devised a diabolical plan to seize control of the city.",
+    "roots": "源自希臘文 diabolos（惡魔，dia- 穿過 + ballein 投擲）→ 具惡魔般邪惡本質的"
+  },
+  {
+    "word": "diadem",
+    "pos": "n.",
+    "meaning": "王冠、冕",
+    "example": "The queen wore a jeweled diadem at her coronation.",
+    "roots": "源自希臘文 diadema（束在頭上之物，dia- 穿過 + dein 綁）→ 象徵王權的頭飾"
+  },
+  {
+    "word": "diaphanous",
+    "pos": "adj.",
+    "meaning": "透明的、輕薄透光的",
+    "example": "The dancer's diaphanous gown floated as she moved across the stage.",
+    "roots": "希臘文 dia- (穿過) + phainein (顯現) → 光線能穿透顯現的，形容輕薄透明"
+  },
+  {
+    "word": "diatribe",
+    "pos": "n.",
+    "meaning": "長篇抨擊、痛罵",
+    "example": "The columnist launched into a diatribe against government corruption.",
+    "roots": "源自希臘文 diatribe（消磨時間、論述，dia- 穿過 + tribein 摩擦）→ 引申為激烈的抨擊言論"
+  },
+  {
+    "word": "dichotomy",
+    "pos": "n.",
+    "meaning": "二分法、對立的兩部分",
+    "example": "The film explores the dichotomy between tradition and modernity.",
+    "roots": "希臘文 dicha (分成兩半) + temnein (切) → 分成兩個對立部分"
+  },
+  {
+    "word": "dictum",
+    "pos": "n.",
+    "meaning": "格言、權威性的斷言",
+    "example": "The old dictum \"honesty is the best policy\" still holds true today.",
+    "roots": "源自拉丁文 dictum（已說出之事，dicere 說 的過去分詞）→ 被鄭重宣告的話"
+  },
+  {
+    "word": "didactic",
+    "pos": "adj.",
+    "meaning": "教誨的、說教意味重的",
+    "example": "The novel's didactic tone made it feel more like a lecture than a story.",
+    "roots": "源自希臘文 didaktikos（善於教導的，didaskein 教）→ 帶有教育目的的"
+  },
+  {
+    "word": "diffidence",
+    "pos": "n.",
+    "meaning": "缺乏自信、羞怯",
+    "example": "His diffidence in meetings often kept his good ideas from being heard.",
+    "roots": "dif- (dis-，缺乏) + fidere (拉丁文，信任) + -ence (名詞後綴) → 缺乏自信"
+  },
+  {
+    "word": "diffident",
+    "pos": "adj.",
+    "meaning": "缺乏自信的、羞怯的",
+    "example": "The diffident intern hesitated before sharing her opinion with senior staff.",
+    "roots": "dif- (缺乏) + fidere (信任) → 對自己缺乏信心的"
+  },
+  {
+    "word": "diffuse",
+    "pos": "v./adj.",
+    "meaning": "散布、擴散；(adj.)冗長散漫的",
+    "example": "Light diffused softly through the frosted glass window.",
+    "roots": "dif- (分散) + fundere (拉丁文，傾倒) → 向四方傾倒散開"
+  },
+  {
+    "word": "digress",
+    "pos": "v.",
+    "meaning": "離題、偏離主題",
+    "example": "The professor often digresses into personal anecdotes during lectures.",
+    "roots": "di- (離開) + gradi (拉丁文，行走) → 走離原本的路徑，引申為離題"
+  },
+  {
+    "word": "digression",
+    "pos": "n.",
+    "meaning": "離題、題外話",
+    "example": "Despite the frequent digressions, the speech remained engaging throughout.",
+    "roots": "digress (離題) + -ion (名詞後綴) → 偏離主題的言論"
+  },
+  {
+    "word": "digressive",
+    "pos": "adj.",
+    "meaning": "離題的、東拉西扯的",
+    "example": "His digressive writing style makes it hard to follow the main argument.",
+    "roots": "digress (離題) + -ive (形容詞後綴) → 傾向於離題的"
+  },
+  {
+    "word": "dilapidated",
+    "pos": "adj.",
+    "meaning": "破舊失修的、傾頹的",
+    "example": "The dilapidated barn had not been used in over twenty years.",
+    "roots": "di- (加強) + lapidare (拉丁文，用石頭打，源自 lapis 石頭) → 原指石造建築逐漸崩塌，引申為破敗"
+  },
+  {
+    "word": "dilate",
+    "pos": "v.",
+    "meaning": "使擴張、使膨脹",
+    "example": "Her pupils dilated as she stepped from the bright sunlight into the dark room.",
+    "roots": "di- (分開) + latus (拉丁文，寬闊的) → 向外變寬"
+  },
+  {
+    "word": "dilatory",
+    "pos": "adj.",
+    "meaning": "拖延的、遲緩的",
+    "example": "The company's dilatory response to the complaint frustrated many customers.",
+    "roots": "源自拉丁文 dilatorius（延遲的，differre 延遲的過去分詞衍生）→ 故意拖延的"
+  },
+  {
+    "word": "dilettante",
+    "pos": "n.",
+    "meaning": "淺嚐輒止的業餘愛好者",
+    "example": "He dismissed the critic as a mere dilettante with no formal training in art.",
+    "roots": "源自義大利文 dilettante（喜愛藝術者，dilettare 使愉悅）→ 只憑興趣淺嚐、不深入鑽研的人"
+  },
+  {
+    "word": "diminutive",
+    "pos": "adj.",
+    "meaning": "微小的、嬌小的",
+    "example": "The diminutive puppy could fit easily in the palm of her hand.",
+    "roots": "de- (向下) + minuere (拉丁文，減少) + -ive (形容詞後綴) → 被縮小的、微小的"
+  },
+  {
+    "word": "dire",
+    "pos": "adj.",
+    "meaning": "可怕的、極其嚴重的",
+    "example": "The refugees faced dire shortages of food and clean water.",
+    "roots": "源自拉丁文 dirus（可怕的、不祥的）→ 形容極端嚴峻的處境"
+  },
+  {
+    "word": "disabuse",
+    "pos": "v.",
+    "meaning": "使醒悟、糾正(某人的錯誤想法)",
+    "example": "The teacher gently disabused the students of their misconception about gravity.",
+    "roots": "dis- (相反) + abuse (誤用、誤導) → 糾正之前被誤導的想法"
+  },
+  {
+    "word": "disaffected",
+    "pos": "adj.",
+    "meaning": "心懷不滿的、疏離的",
+    "example": "The disaffected workers eventually organized a strike.",
+    "roots": "dis- (相反) + affected (被感動、依附的) → 不再對其效忠或滿意的"
+  },
+  {
+    "word": "disarming",
+    "pos": "adj.",
+    "meaning": "消除敵意的、令人卸下心防的",
+    "example": "His disarming smile put the nervous applicant instantly at ease.",
+    "roots": "dis- (去除) + arm (武裝) → 使人放下戒心、卸除武裝"
+  },
+  {
+    "word": "disavow",
+    "pos": "v.",
+    "meaning": "否認、拒絕承認",
+    "example": "The politician quickly disavowed the controversial remarks made by his aide.",
+    "roots": "dis- (相反) + avow (公開承認) → 公開否認"
+  },
+  {
+    "word": "discern",
+    "pos": "v.",
+    "meaning": "辨別、看出",
+    "example": "It was hard to discern any pattern in the seemingly random data.",
+    "roots": "dis- (分開) + cernere (拉丁文，篩選、區分) → 區分辨識出來"
+  },
+  {
+    "word": "discernible",
+    "pos": "adj.",
+    "meaning": "可辨別的、可察覺的",
+    "example": "There was no discernible difference between the two paint colors.",
+    "roots": "discern (辨別) + -ible (可...的) → 能夠被辨別出來的"
+  },
+  {
+    "word": "discerning",
+    "pos": "adj.",
+    "meaning": "有識別力的、有眼光的",
+    "example": "A discerning shopper always checks the ingredients before buying.",
+    "roots": "discern (辨別) 現在分詞 → 具備敏銳判斷力的"
+  },
+  {
+    "word": "discernment",
+    "pos": "n.",
+    "meaning": "洞察力、識別力",
+    "example": "Choosing the right investment requires discernment and patience.",
+    "roots": "discern (辨別) + -ment (名詞後綴) → 辨別事物的能力"
+  },
+  {
+    "word": "disclaim",
+    "pos": "v.",
+    "meaning": "否認、放棄(權利或責任)",
+    "example": "The manufacturer disclaimed any responsibility for damage caused by misuse.",
+    "roots": "dis- (相反) + claim (聲稱) → 撤回原先的聲稱"
+  },
+  {
+    "word": "discombobulate",
+    "pos": "v.",
+    "meaning": "使困惑、使不知所措",
+    "example": "The sudden change in schedule completely discombobulated the entire office.",
+    "roots": "美式俚語詞，19世紀仿拉丁文造字，戲謔地表示「使混亂困惑」，確切字源不詳"
+  },
+  {
+    "word": "discomfit",
+    "pos": "v.",
+    "meaning": "使窘迫、使困惑不安",
+    "example": "The unexpected question discomfited the usually confident spokesperson.",
+    "roots": "dis- (相反) + conficere (拉丁文，完成、擊敗) → 原指使軍隊潰敗，引申為使人窘迫"
+  },
+  {
+    "word": "discomfiture",
+    "pos": "n.",
+    "meaning": "窘迫、狼狽",
+    "example": "He tried to hide his discomfiture after tripping in front of the class.",
+    "roots": "discomfit (使窘迫) + -ure (名詞後綴) → 窘迫的狀態"
+  },
+  {
+    "word": "disconcert",
+    "pos": "v.",
+    "meaning": "使不安、使驚慌失措",
+    "example": "The interviewer's blunt question disconcerted the candidate momentarily.",
+    "roots": "dis- (相反) + concert (協調一致) → 打亂原本的鎮定與協調"
+  },
+  {
+    "word": "disconsolate",
+    "pos": "adj.",
+    "meaning": "無法安慰的、悲傷絕望的",
+    "example": "The disconsolate widow could not be comforted by her friends' kind words.",
+    "roots": "dis- (相反) + consolari (拉丁文，安慰) → 無法被安慰的"
+  },
+  {
+    "word": "discordant",
+    "pos": "adj.",
+    "meaning": "不和諧的、不一致的",
+    "example": "The committee members offered discordant opinions on how to proceed.",
+    "roots": "dis- (分開) + cor (拉丁文，心) → 心意不合、不和諧"
+  },
+  {
+    "word": "discountenance",
+    "pos": "v.",
+    "meaning": "不贊成、使難堪",
+    "example": "The teacher discountenanced any attempt to cheat during the exam.",
+    "roots": "dis- (相反) + countenance (贊同、面容) → 表示不贊同、使人難堪"
+  },
+  {
+    "word": "discredit",
+    "pos": "v.",
+    "meaning": "使不受信任、詆毀",
+    "example": "The scandal discredited the once-respected institution.",
+    "roots": "dis- (相反) + credit (信任) → 使失去信譽"
+  },
+  {
+    "word": "discreet",
+    "pos": "adj.",
+    "meaning": "謹慎的、審慎的",
+    "example": "She was discreet about her plans until everything was finalized.",
+    "roots": "dis- (分開) + cernere (拉丁文，區分) → 能夠分辨恰當言行的謹慎特質"
+  },
+  {
+    "word": "discrepancy",
+    "pos": "n.",
+    "meaning": "差異、不一致",
+    "example": "Auditors found a significant discrepancy between the two sets of accounts.",
+    "roots": "dis- (分開) + crepare (拉丁文，發出聲響、破裂) → 說法互相矛盾產生的落差"
+  },
+  {
+    "word": "discrete",
+    "pos": "adj.",
+    "meaning": "個別的、分離的",
+    "example": "The course is divided into six discrete modules.",
+    "roots": "dis- (分開) + cernere (區分) → 彼此獨立分開的"
+  },
+  {
+    "word": "discretion",
+    "pos": "n.",
+    "meaning": "判斷力、自由裁量權；謹慎",
+    "example": "The judge has discretion to decide the length of the sentence.",
+    "roots": "discreet (謹慎) 字源 + -ion (名詞後綴) → 審慎判斷的能力或權限"
+  },
+  {
+    "word": "discretionary",
+    "pos": "adj.",
+    "meaning": "可自由裁量的、非強制性的",
+    "example": "The manager was given a discretionary budget for team-building activities.",
+    "roots": "discretion (裁量權) + -ary (形容詞後綴) → 依個人判斷決定的"
+  },
+  {
+    "word": "discriminating",
+    "pos": "adj.",
+    "meaning": "有辨別力的、挑剔的",
+    "example": "A discriminating palate can tell the difference between the two wines.",
+    "roots": "discriminate (區分) 現在分詞 → 能敏銳分辨優劣的"
+  },
+  {
+    "word": "discursive",
+    "pos": "adj.",
+    "meaning": "散漫的、東拉西扯的",
+    "example": "His discursive lecture wandered far from the announced topic.",
+    "roots": "dis- (分開) + currere (拉丁文，跑) → 思緒四處奔跑、不聚焦"
+  },
+  {
+    "word": "disdain",
+    "pos": "n./v.",
+    "meaning": "輕蔑、鄙視",
+    "example": "She looked at the shabby offer with obvious disdain.",
+    "roots": "dis- (相反) + dignari (拉丁文，認為值得) → 認為不值得，引申為輕視"
+  },
+  {
+    "word": "disdainful",
+    "pos": "adj.",
+    "meaning": "輕蔑的、鄙視的",
+    "example": "He gave a disdainful glance at the poorly written report.",
+    "roots": "disdain (輕蔑) + -ful (充滿...的) → 充滿輕蔑態度的"
+  },
+  {
+    "word": "disgorge",
+    "pos": "v.",
+    "meaning": "吐出、傾瀉而出",
+    "example": "The stadium gates opened and disgorged thousands of cheering fans.",
+    "roots": "dis- (向外) + gorge (咽喉) → 從喉嚨湧出，引申為大量湧出"
+  },
+  {
+    "word": "disgruntled",
+    "pos": "adj.",
+    "meaning": "不滿的、悶悶不樂的",
+    "example": "A disgruntled former employee leaked the internal memo to the press.",
+    "roots": "dis- (加強) + gruntle (方言，發牢騷，源自 grunt 咕噥) → 心懷不滿、發牢騷的"
+  },
+  {
+    "word": "disheveled",
+    "pos": "adj.",
+    "meaning": "凌亂的、蓬頭垢面的",
+    "example": "He arrived at the meeting disheveled, having run all the way from the station.",
+    "roots": "源自古法文 descheveler（弄亂頭髮，des- 分開 + chevel 頭髮）→ 頭髮衣著凌亂"
+  },
+  {
+    "word": "disingenuous",
+    "pos": "adj.",
+    "meaning": "不誠懇的、虛偽的",
+    "example": "It would be disingenuous to claim he had no role in the decision.",
+    "roots": "dis- (相反) + ingenuous (坦率的，源自拉丁文 ingenuus 天生自由的) → 表面坦率實則虛假"
+  },
+  {
+    "word": "disinter",
+    "pos": "v.",
+    "meaning": "掘出、發掘(埋藏之物)",
+    "example": "Archaeologists disinterred the remains for further forensic study.",
+    "roots": "dis- (相反) + inter (埋葬) → 把埋葬之物挖出"
+  },
+  {
+    "word": "disinterested",
+    "pos": "adj.",
+    "meaning": "無私的、不偏不倚的",
+    "example": "A disinterested mediator can help both sides reach a fair agreement.",
+    "roots": "dis- (無) + interest (利益、私利) → 沒有私利牽涉其中的"
+  },
+  {
+    "word": "disjointed",
+    "pos": "adj.",
+    "meaning": "不連貫的、雜亂的",
+    "example": "The disjointed narrative jumped between timelines without warning.",
+    "roots": "dis- (分開) + joint (連接、關節) → 關節脫離，引申為結構不連貫"
+  },
+  {
+    "word": "dismal",
+    "pos": "adj.",
+    "meaning": "陰鬱的、悽慘的",
+    "example": "The team's dismal performance this season disappointed all the fans.",
+    "roots": "源自拉丁文 dies mali（凶日），中世紀迷信中不祥的日子 → 引申為陰鬱悲慘的"
+  },
+  {
+    "word": "dismantle",
+    "pos": "v.",
+    "meaning": "拆除、拆解",
+    "example": "The workers dismantled the old stage after the concert ended.",
+    "roots": "dis- (相反) + mantle (披風、覆蓋物) → 拆去外層結構"
+  },
+  {
+    "word": "dismay",
+    "pos": "n./v.",
+    "meaning": "驚愕、沮喪",
+    "example": "To her dismay, the flight was cancelled just minutes before boarding.",
+    "roots": "dis- (加強) + magan (古日耳曼文，有力量) 的否定 → 失去力量而感到沮喪驚愕"
+  },
+  {
+    "word": "disparage",
+    "pos": "v.",
+    "meaning": "貶低、輕視",
+    "example": "He often disparages his colleagues' ideas without offering alternatives.",
+    "roots": "dis- (向下) + parage (古法文，地位相當) → 使地位降低，引申為輕蔑貶低"
+  },
+  {
+    "word": "disparate",
+    "pos": "adj.",
+    "meaning": "截然不同的、性質迥異的",
+    "example": "The committee had to reconcile disparate opinions from members with very different backgrounds.",
+    "roots": "dis- (分開) + parare (拉丁文，準備、配對) → 無法配對、本質不同"
+  },
+  {
+    "word": "disparity",
+    "pos": "n.",
+    "meaning": "差異、不平等",
+    "example": "The report highlighted the growing income disparity between urban and rural areas.",
+    "roots": "disparate (截然不同的) 字源 + -ity (名詞後綴) → 差異的狀態"
+  },
+  {
+    "word": "dispassionate",
+    "pos": "adj.",
+    "meaning": "冷靜的、不帶感情的",
+    "example": "The judge gave a dispassionate assessment of the evidence presented.",
+    "roots": "dis- (無) + passion (激情) → 不受情感左右的"
+  },
+  {
+    "word": "dispatch",
+    "pos": "v./n.",
+    "meaning": "派遣、迅速處理；急件",
+    "example": "The editor dispatched a reporter to cover the breaking story immediately.",
+    "roots": "dis- (分開) + patch (古法文 empescher 的相反，阻礙) → 排除阻礙、迅速送出"
+  },
+  {
+    "word": "dispel",
+    "pos": "v.",
+    "meaning": "驅散、消除(疑慮、恐懼)",
+    "example": "The spokesperson's calm explanation helped dispel public fears about the vaccine.",
+    "roots": "dis- (分散) + pellere (拉丁文，驅趕) → 向四方驅散"
+  },
+  {
+    "word": "disperse",
+    "pos": "v.",
+    "meaning": "驅散、散布",
+    "example": "Police used water cannons to disperse the crowd of protesters.",
+    "roots": "dis- (分散) + spargere (拉丁文，散布) → 分散到各處"
+  },
+  {
+    "word": "dispirited",
+    "pos": "adj.",
+    "meaning": "沮喪的、失去鬥志的",
+    "example": "The dispirited team trudged off the field after their fourth straight loss.",
+    "roots": "dis- (去除) + spirit (精神、鬥志) → 失去精神鬥志的"
+  },
+  {
+    "word": "disputatious",
+    "pos": "adj.",
+    "meaning": "好爭辯的、愛爭論的",
+    "example": "The disputatious lawyer challenged every point the opposing counsel made.",
+    "roots": "dispute (爭論) + -atious (形容詞後綴) → 傾向於爭論不休的"
+  },
+  {
+    "word": "disquiet",
+    "pos": "n./v.",
+    "meaning": "不安、憂慮",
+    "example": "A growing sense of disquiet spread through the office as layoffs were rumored.",
+    "roots": "dis- (相反) + quiet (平靜) → 失去平靜的狀態"
+  },
+  {
+    "word": "disquieting",
+    "pos": "adj.",
+    "meaning": "令人不安的",
+    "example": "The report contained several disquieting statistics about ocean pollution.",
+    "roots": "disquiet (不安) 現在分詞 → 引起不安的"
+  },
+  {
+    "word": "disquisition",
+    "pos": "n.",
+    "meaning": "長篇論述、詳細探討",
+    "example": "He delivered a lengthy disquisition on the origins of Roman law.",
+    "roots": "dis- (分開仔細) + quaerere (拉丁文，探求) → 深入探求後的詳細論述"
+  },
+  {
+    "word": "disrepute",
+    "pos": "n.",
+    "meaning": "壞名聲、聲名狼藉",
+    "example": "The scandal brought the once-respected firm into disrepute.",
+    "roots": "dis- (相反) + repute (名聲) → 名聲敗壞"
+  },
+  {
+    "word": "dissemble",
+    "pos": "v.",
+    "meaning": "掩飾、假裝",
+    "example": "He dissembled his true feelings behind a polite smile.",
+    "roots": "dis- (相反) + semblable (古法文，相似) → 假裝成不同的樣子以掩飾真相"
+  },
+  {
+    "word": "disseminate",
+    "pos": "v.",
+    "meaning": "散布、傳播(訊息、思想)",
+    "example": "The organization works to disseminate accurate health information worldwide.",
+    "roots": "dis- (分散) + seminare (拉丁文，播種，源自 semen 種子) → 像播種般廣泛散布"
+  },
+  {
+    "word": "dissension",
+    "pos": "n.",
+    "meaning": "意見分歧、紛爭",
+    "example": "Internal dissension weakened the political party ahead of the election.",
+    "roots": "dis- (分開) + sentire (拉丁文，感覺、認為) → 意見不合"
+  },
+  {
+    "word": "dissent",
+    "pos": "v./n.",
+    "meaning": "持異議、不同意",
+    "example": "One judge dissented from the majority opinion in the landmark ruling.",
+    "roots": "dis- (分開) + sentire (感覺、認為) → 想法與他人分歧"
+  },
+  {
+    "word": "dissertation",
+    "pos": "n.",
+    "meaning": "學位論文、長篇論述",
+    "example": "She spent three years researching and writing her doctoral dissertation.",
+    "roots": "dis- (分開仔細) + serere (拉丁文，排列、論述) → 有系統地詳細論述"
+  },
+  {
+    "word": "dissident",
+    "pos": "n./adj.",
+    "meaning": "持不同政見者、異議份子",
+    "example": "The exiled dissident continued to criticize the regime from abroad.",
+    "roots": "dis- (分開) + sedere (拉丁文，坐) → 坐在不同立場上，引申為持異議者"
+  },
+  {
+    "word": "dissimulate",
+    "pos": "v.",
+    "meaning": "掩飾、隱瞞(感情或意圖)",
+    "example": "She dissimulated her anger and greeted the guests with a smile.",
+    "roots": "dis- (相反) + simulare (拉丁文，假裝) → 假裝成不是真實的樣子"
+  },
+  {
+    "word": "dissipate",
+    "pos": "v.",
+    "meaning": "驅散、消散；揮霍",
+    "example": "The morning fog gradually dissipated as the sun rose higher.",
+    "roots": "dis- (分散) + supare (拉丁文，投擲) → 向四處拋散消失"
+  },
+  {
+    "word": "dissociate",
+    "pos": "v.",
+    "meaning": "使脫離關係、分離",
+    "example": "The board voted to dissociate the company from its former CEO's remarks.",
+    "roots": "dis- (分開) + sociare (拉丁文，結合，源自 socius 夥伴) → 解除原本的結合關係"
+  },
+  {
+    "word": "dissolute",
+    "pos": "adj.",
+    "meaning": "放蕩的、生活放縱的",
+    "example": "He was known for his dissolute lifestyle of gambling and excess.",
+    "roots": "dis- (分離) + solvere (拉丁文，鬆開) → 道德約束鬆脫、放蕩不羈"
+  },
+  {
+    "word": "dissolution",
+    "pos": "n.",
+    "meaning": "解散、瓦解",
+    "example": "The dissolution of the alliance marked the end of a decade-long partnership.",
+    "roots": "dis- (分開) + solvere (鬆開) + -ion (名詞後綴) → 結構鬆散瓦解"
+  },
+  {
+    "word": "dissonance",
+    "pos": "n.",
+    "meaning": "不和諧、不協調",
+    "example": "The composer used dissonance deliberately to create a sense of unease.",
+    "roots": "dis- (分開) + sonare (拉丁文，發聲) → 聲音互相衝突不協調"
+  },
+  {
+    "word": "dissonant",
+    "pos": "adj.",
+    "meaning": "不和諧的、不一致的",
+    "example": "The two policies sent dissonant messages to voters about the party's priorities.",
+    "roots": "dissonance (不和諧) 字源 + -ant (形容詞後綴) → 彼此衝突不協調的"
+  },
+  {
+    "word": "dissuade",
+    "pos": "v.",
+    "meaning": "勸阻、勸退",
+    "example": "Her parents tried to dissuade her from quitting her stable job.",
+    "roots": "dis- (相反) + suadere (拉丁文，勸說) → 勸說使其不要做某事"
+  },
+  {
+    "word": "distend",
+    "pos": "v.",
+    "meaning": "使膨脹、使脹大",
+    "example": "The starving child's stomach was distended from malnutrition.",
+    "roots": "dis- (向外) + tendere (拉丁文，伸展) → 向外伸展膨脹"
+  },
+  {
+    "word": "distention",
+    "pos": "n.",
+    "meaning": "膨脹、脹大",
+    "example": "The doctor examined the abdominal distention with concern.",
+    "roots": "distend (使膨脹) + -ion (名詞後綴) → 膨脹的狀態"
+  },
+  {
+    "word": "distill",
+    "pos": "v.",
+    "meaning": "蒸餾；提煉(精華)",
+    "example": "The book distills decades of research into a few accessible chapters.",
+    "roots": "dis- (分開) + stillare (拉丁文，滴下) → 逐滴分離提煉出精華"
+  },
+  {
+    "word": "distort",
+    "pos": "v.",
+    "meaning": "扭曲、曲解",
+    "example": "The tabloid distorted her comments to create a more sensational headline.",
+    "roots": "dis- (分開、相反) + torquere (拉丁文，扭轉) → 扭轉使變形"
+  },
+  {
+    "word": "distraught",
+    "pos": "adj.",
+    "meaning": "心煩意亂的、痛苦不安的",
+    "example": "The distraught mother searched frantically for her missing child.",
+    "roots": "源自拉丁文 distractus（distrahere 的過去分詞，拉扯分開）→ 心思被拉扯得四分五裂"
+  },
+  {
+    "word": "diurnal",
+    "pos": "adj.",
+    "meaning": "白天的、日間活動的",
+    "example": "Most humans are diurnal creatures, active during the day and asleep at night.",
+    "roots": "源自拉丁文 diurnus（每日的，來自 dies 白天）→ 與白天相關的"
+  },
+  {
+    "word": "diverge",
+    "pos": "v.",
+    "meaning": "分歧、分岔",
+    "example": "The two roads diverge just beyond the old bridge.",
+    "roots": "di- (分開) + vergere (拉丁文，轉向) → 各自轉向不同方向"
+  },
+  {
+    "word": "divergent",
+    "pos": "adj.",
+    "meaning": "分歧的、不同的",
+    "example": "The two economists offered divergent views on how to tackle inflation.",
+    "roots": "diverge (分歧) 現在分詞 → 朝不同方向發展的"
+  },
+  {
+    "word": "diversion",
+    "pos": "n.",
+    "meaning": "轉移(注意力)、消遣",
+    "example": "The magician created a diversion while his assistant set up the next trick.",
+    "roots": "di- (分開) + vertere (拉丁文，轉) + -ion (名詞後綴) → 使注意力轉向他處"
+  },
+  {
+    "word": "divert",
+    "pos": "v.",
+    "meaning": "轉移、使轉向",
+    "example": "The government diverted funds from education to defense spending.",
+    "roots": "di- (分開) + vertere (轉) → 使轉向另一方向"
+  },
+  {
+    "word": "divest",
+    "pos": "v.",
+    "meaning": "剝奪、脫去；撤資",
+    "example": "The university decided to divest its holdings in fossil fuel companies.",
+    "roots": "di- (相反) + vestire (拉丁文，穿衣) → 脫去衣物，引申為剝奪、撤除"
+  },
+  {
+    "word": "divination",
+    "pos": "n.",
+    "meaning": "占卜、預言",
+    "example": "Ancient cultures often relied on divination to guide important decisions.",
+    "roots": "源自拉丁文 divinare（預言，源自 divus 神）→ 藉神力預知未來"
+  },
+  {
+    "word": "divisive",
+    "pos": "adj.",
+    "meaning": "造成分裂的、引發爭議的",
+    "example": "Immigration remains one of the most divisive issues in modern politics.",
+    "roots": "divide (分割) + -ive (形容詞後綴) → 容易造成分裂的"
+  },
+  {
+    "word": "divulge",
+    "pos": "v.",
+    "meaning": "洩露、透露(祕密)",
+    "example": "The witness refused to divulge the identity of her source.",
+    "roots": "di- (分開、向外) + vulgare (拉丁文，公開，源自 vulgus 大眾) → 向大眾公開祕密"
+  },
+  {
+    "word": "doctrinaire",
+    "pos": "adj.",
+    "meaning": "教條主義的、固執己見的",
+    "example": "His doctrinaire approach to economics left no room for pragmatic compromise.",
+    "roots": "源自法文 doctrinaire（doctrine 教義 + -aire 後綴）→ 死板地堅持教義原則"
+  },
+  {
+    "word": "dogged",
+    "pos": "adj.",
+    "meaning": "頑強的、不屈不撓的",
+    "example": "Her dogged determination eventually earned her a spot on the national team.",
+    "roots": "dog (狗) + -ged (形容詞化) → 如獵犬般緊咬不放的堅持"
+  },
+  {
+    "word": "dogma",
+    "pos": "n.",
+    "meaning": "教條、教義",
+    "example": "The scientist challenged long-held dogma about the origins of the universe.",
+    "roots": "源自希臘文 dogma（意見、信條，來自 dokein 認為）→ 被奉為不容質疑的信條"
+  },
+  {
+    "word": "dogmatic",
+    "pos": "adj.",
+    "meaning": "教條式的、武斷的",
+    "example": "His dogmatic insistence on tradition left no room for new ideas.",
+    "roots": "dogma (教條) + -tic (形容詞後綴) → 固守教條、不容質疑的"
+  },
+  {
+    "word": "doldrums",
+    "pos": "n.",
+    "meaning": "低迷、意氣消沉；(海上)無風帶",
+    "example": "The housing market has been in the doldrums for over a year.",
+    "roots": "源自古英文 dol（愚笨的），原指赤道無風帶使船隻停滯 → 引申為停滯低迷的狀態"
+  },
+  {
+    "word": "dolorous",
+    "pos": "adj.",
+    "meaning": "悲傷的、令人哀痛的",
+    "example": "The dolorous melody of the funeral hymn moved the entire congregation.",
+    "roots": "源自拉丁文 dolor（痛苦、悲傷）→ 充滿悲痛情緒的"
+  },
+  {
+    "word": "dolt",
+    "pos": "n.",
+    "meaning": "笨蛋、蠢貨",
+    "example": "Only a dolt would sign a contract without reading it first.",
+    "roots": "源自古英文 dol（愚笨的），與 dull 同源 → 指反應遲鈍的人"
+  },
+  {
+    "word": "domineering",
+    "pos": "adj.",
+    "meaning": "專橫的、盛氣凌人的",
+    "example": "Her domineering boss micromanaged every detail of the project.",
+    "roots": "domineer (稱霸、專橫行事，源自拉丁文 dominus 主人) 現在分詞 → 像主人般支配他人"
+  },
+  {
+    "word": "dormant",
+    "pos": "adj.",
+    "meaning": "休眠的、蟄伏的",
+    "example": "The volcano had lain dormant for centuries before it suddenly erupted.",
+    "roots": "源自拉丁文 dormire（睡覺）現在分詞 → 處於睡眠、休止狀態"
+  },
+  {
+    "word": "dossier",
+    "pos": "n.",
+    "meaning": "檔案、卷宗",
+    "example": "The detective compiled a thick dossier on the suspect's movements.",
+    "roots": "源自法文 dossier（檔案，來自 dos 背，因文件捆綁時像脊背）→ 一整套相關文件"
+  },
+  {
+    "word": "dote",
+    "pos": "v.",
+    "meaning": "溺愛、寵愛",
+    "example": "Grandparents often dote on their grandchildren, spoiling them with gifts.",
+    "roots": "源自中古荷蘭文 doten（發呆、變傻），引申為因溺愛而失去理智判斷"
+  },
+  {
+    "word": "doting",
+    "pos": "adj.",
+    "meaning": "溺愛的、寵愛的",
+    "example": "Her doting parents attended every single one of her recitals.",
+    "roots": "dote (溺愛) 現在分詞 → 過度寵愛的"
+  },
+  {
+    "word": "dour",
+    "pos": "adj.",
+    "meaning": "陰沉的、嚴厲的",
+    "example": "The dour expression on his face suggested the meeting had gone badly.",
+    "roots": "源自拉丁文 durus（堅硬的），蘇格蘭語保留此意 → 引申為性格嚴峻不苟言笑"
+  },
+  {
+    "word": "dovetail",
+    "pos": "v.",
+    "meaning": "吻合、緊密配合",
+    "example": "Her research interests dovetail nicely with the lab's ongoing projects.",
+    "roots": "dove (鴿子) + tail (尾巴) → 木工榫接如鴿尾形狀，緊密咬合，引申為完美配合"
+  },
+  {
+    "word": "doyen",
+    "pos": "n.",
+    "meaning": "資深權威人士、領袖",
+    "example": "As the doyen of modern architecture, he influenced an entire generation of designers.",
+    "roots": "源自法文 doyen（教長、資深者，源自拉丁文 decanus 十人之首）→ 某領域中最資深受敬重者"
+  },
+  {
+    "word": "drab",
+    "pos": "adj.",
+    "meaning": "單調的、枯燥乏味的",
+    "example": "The office walls were painted a drab gray that matched everyone's mood.",
+    "roots": "源自古法文 drap（布料），原指未染色的粗布顏色 → 引申為單調沉悶"
+  },
+  {
+    "word": "draconian",
+    "pos": "adj.",
+    "meaning": "嚴苛的、殘酷的(法律或懲罰)",
+    "example": "The government imposed draconian penalties for even minor offenses.",
+    "roots": "源自古雅典立法者 Draco 之名，其法典以刑罰嚴酷著稱 → 引申為極端嚴苛的"
+  },
+  {
+    "word": "dregs",
+    "pos": "n.",
+    "meaning": "殘渣、糟粕；社會渣滓",
+    "example": "He poured out the coffee, leaving only the bitter dregs at the bottom of the cup.",
+    "roots": "源自古諾斯語 dregg（沉澱物）→ 液體底部剩餘的雜質"
+  },
+  {
+    "word": "drivel",
+    "pos": "n./v.",
+    "meaning": "廢話、胡說",
+    "example": "The tabloid was full of celebrity drivel with no real news value.",
+    "roots": "源自古英文 dreflian（流口水），引申為口出無意義的言語"
+  },
+  {
+    "word": "droll",
+    "pos": "adj.",
+    "meaning": "滑稽古怪的、逗趣的",
+    "example": "He has a droll sense of humor that catches people off guard.",
+    "roots": "源自古法文 drolle（滑稽的傢伙），可能源自荷蘭文 drol（矮胖的人）→ 引申為古怪逗趣的"
+  },
+  {
+    "word": "dubious",
+    "pos": "adj.",
+    "meaning": "可疑的、半信半疑的",
+    "example": "She remained dubious about the salesman's extravagant claims.",
+    "roots": "源自拉丁文 dubius（搖擺不定的，源自 duo 二）→ 在兩種可能之間猶豫，引申為可疑"
+  },
+  {
+    "word": "ductile",
+    "pos": "adj.",
+    "meaning": "延展性的、易受影響的",
+    "example": "Copper is prized for being highly ductile, allowing it to be drawn into thin wires.",
+    "roots": "源自拉丁文 ducere（引導、拉伸）→ 能被拉伸延展的"
+  },
+  {
+    "word": "dudgeon",
+    "pos": "n.",
+    "meaning": "憤怒、不滿(常用 in high dudgeon)",
+    "example": "She stormed out of the meeting in high dudgeon after being interrupted repeatedly.",
+    "roots": "字源不詳，16世紀英文出現，確切來源存疑，僅知用於表達強烈不滿的固定語"
+  },
+  {
+    "word": "dulcet",
+    "pos": "adj.",
+    "meaning": "悅耳的、甜美的",
+    "example": "The dulcet tones of the cello filled the concert hall.",
+    "roots": "源自拉丁文 dulcis（甜的）→ 聲音如甜味般令人愉悅"
+  },
+  {
+    "word": "dupe",
+    "pos": "v./n.",
+    "meaning": "欺騙、矇騙；受騙者",
+    "example": "The scammer duped elderly victims out of their life savings.",
+    "roots": "源自法文方言 dupe（戴勝鳥，被視為愚笨的鳥）→ 引申為容易受騙的人"
+  },
+  {
+    "word": "duplicity",
+    "pos": "n.",
+    "meaning": "口是心非、欺詐",
+    "example": "His duplicity was revealed when investigators found he had been lying to both sides.",
+    "roots": "duplic- (拉丁文，雙重的) + -ity (名詞後綴) → 表裡不一、兩面手法"
+  },
+  {
+    "word": "duress",
+    "pos": "n.",
+    "meaning": "脅迫、強制",
+    "example": "The confession was later ruled invalid because it was obtained under duress.",
+    "roots": "源自拉丁文 durus（堅硬的）→ 強硬手段施加的壓力"
+  },
+  {
+    "word": "dwindle",
+    "pos": "v.",
+    "meaning": "逐漸減少、縮小",
+    "example": "The population of the small town has dwindled over the past few decades.",
+    "roots": "源自古英文 dwinan（消失、萎縮）的重複體 → 逐漸持續減少"
+  },
+  {
+    "word": "dyspeptic",
+    "pos": "adj.",
+    "meaning": "消化不良的；易怒的、脾氣壞的",
+    "example": "The dyspeptic critic found fault with nearly every restaurant he reviewed.",
+    "roots": "dys- (不良) + peptic (消化的，源自希臘文 pessein 消化) → 消化不良引申為易怒暴躁"
+  },
+  {
+    "word": "dystopia",
+    "pos": "n.",
+    "meaning": "反烏托邦、惡托邦",
+    "example": "The novel depicts a dystopia ruled by constant surveillance and fear.",
+    "roots": "dys- (希臘文，不良) + topos (希臘文，地方) → 與 utopia 相對，糟糕的社會"
+  },
+  {
+    "word": "ebullient",
+    "pos": "adj.",
+    "meaning": "熱情洋溢的、興高采烈的",
+    "example": "She was ebullient after hearing the news of her acceptance into the program.",
+    "roots": "e- (向外) + bullire (拉丁文，沸騰) → 情緒如沸水般向外湧出"
+  },
+  {
+    "word": "eclectic",
+    "pos": "adj.",
+    "meaning": "兼容並蓄的、博採眾長的",
+    "example": "Her eclectic taste in music ranges from classical symphonies to punk rock.",
+    "roots": "希臘文 ek- (向外) + legein (選擇) → 從各處挑選最好的部分"
+  },
+  {
+    "word": "edify",
+    "pos": "v.",
+    "meaning": "教誨、啟迪(道德或智識)",
+    "example": "The lecture series was designed to edify rather than merely entertain.",
+    "roots": "源自拉丁文 aedificare（建造，aedes 房屋 + facere 做）→ 建構道德或智識，引申為教化"
+  },
+  {
+    "word": "efface",
+    "pos": "v.",
+    "meaning": "抹去、消除",
+    "example": "Years of weathering had almost effaced the inscription on the gravestone.",
+    "roots": "ef- (ex-，向外) + face (表面) → 從表面抹去"
+  },
+  {
+    "word": "effervesce",
+    "pos": "v.",
+    "meaning": "冒泡沸騰；情緒高漲",
+    "example": "The soda effervesced as soon as the cap was removed.",
+    "roots": "ef- (向外) + fervere (拉丁文，沸騰) → 向外冒泡"
+  },
+  {
+    "word": "effervescent",
+    "pos": "adj.",
+    "meaning": "冒泡的；興高采烈的",
+    "example": "Her effervescent personality made her the life of every party.",
+    "roots": "effervesce (冒泡) 現在分詞 → 情緒如氣泡般活躍洋溢"
+  },
+  {
+    "word": "effete",
+    "pos": "adj.",
+    "meaning": "衰弱無力的、萎靡的",
+    "example": "Critics dismissed the aging aristocracy as effete and out of touch.",
+    "roots": "源自拉丁文 effetus（因生產而耗盡，ex- 出 + fetus 產子）→ 精力耗盡而衰弱"
+  },
+  {
+    "word": "efficacious",
+    "pos": "adj.",
+    "meaning": "有效的、奏效的",
+    "example": "The new treatment proved highly efficacious in clinical trials.",
+    "roots": "ef- (向外) + facere (拉丁文，做) → 能夠產生效果的"
+  },
+  {
+    "word": "efficacy",
+    "pos": "n.",
+    "meaning": "功效、效力",
+    "example": "Researchers are still studying the efficacy of the vaccine against new variants.",
+    "roots": "efficacious (有效的) 字源 + -y (名詞後綴) → 產生預期效果的能力"
+  },
+  {
+    "word": "effigy",
+    "pos": "n.",
+    "meaning": "肖像、模擬像(尤指用來焚燒或懲罰)",
+    "example": "Protesters burned an effigy of the dictator in the town square.",
+    "roots": "源自拉丁文 effigies（塑像，ex- 出 + fingere 塑造）→ 代表某人的模擬像"
+  },
+  {
+    "word": "effluvium",
+    "pos": "n.",
+    "meaning": "臭氣、廢氣、排放物",
+    "example": "An unpleasant effluvium drifted from the nearby chemical plant.",
+    "roots": "ex- (向外) + fluere (拉丁文，流動) → 向外流出的氣體或液體"
+  },
+  {
+    "word": "effrontery",
+    "pos": "n.",
+    "meaning": "厚顏無恥、放肆",
+    "example": "He had the effrontery to ask for a raise after missing every deadline.",
+    "roots": "源自拉丁文 effrons（無恥的，ex- 出 + frons 額頭）→ 額頭外露不知羞恥"
+  },
+  {
+    "word": "effulgent",
+    "pos": "adj.",
+    "meaning": "光輝燦爛的、耀眼的",
+    "example": "The effulgent sunrise bathed the mountains in golden light.",
+    "roots": "ef- (向外) + fulgere (拉丁文，發光) → 光芒向外閃耀"
+  },
+  {
+    "word": "effusion",
+    "pos": "n.",
+    "meaning": "(情感的)流露、迸發",
+    "example": "Her letter was full of effusions of gratitude and affection.",
+    "roots": "ef- (向外) + fundere (拉丁文，傾倒) → 情感或液體大量湧出"
+  },
+  {
+    "word": "effusive",
+    "pos": "adj.",
+    "meaning": "(情感)洋溢的、過度熱情的",
+    "example": "He gave an effusive thank-you speech that went on for nearly ten minutes.",
+    "roots": "effusion (流露) 字源 + -ive (形容詞後綴) → 情感表達毫無保留地湧出"
+  },
+  {
+    "word": "egalitarian",
+    "pos": "adj.",
+    "meaning": "平等主義的",
+    "example": "The commune was founded on egalitarian principles, with no formal leadership.",
+    "roots": "源自法文 égal（平等的，來自拉丁文 aequalis）→ 主張人人平等的"
+  },
+  {
+    "word": "egocentric",
+    "pos": "adj.",
+    "meaning": "自我中心的",
+    "example": "His egocentric worldview made it hard for him to consider others' feelings.",
+    "roots": "ego (拉丁文，我) + centric (中心的) → 以自我為中心的"
+  },
+  {
+    "word": "egotism",
+    "pos": "n.",
+    "meaning": "自負、自我中心主義",
+    "example": "His constant boasting revealed a deep-seated egotism.",
+    "roots": "ego (我) + -tism (主義後綴) → 過度以自我為重的心態"
+  },
+  {
+    "word": "egregious",
+    "pos": "adj.",
+    "meaning": "極壞的、令人震驚的(錯誤或行為)",
+    "example": "The referee made an egregious error that cost the team the game.",
+    "roots": "e- (向外) + grex (拉丁文，羊群) → 超出羊群之外，原指卓越，後轉為負面的「離譜」"
+  },
+  {
+    "word": "egress",
+    "pos": "n.",
+    "meaning": "出口、外出",
+    "example": "Fire codes require every building to have a clearly marked egress.",
+    "roots": "e- (向外) + gradi (拉丁文，行走) → 走出去的通道"
+  },
+  {
+    "word": "elated",
+    "pos": "adj.",
+    "meaning": "興高采烈的、得意洋洋的",
+    "example": "She was elated when she learned she had won the scholarship.",
+    "roots": "e- (向上) + latus (拉丁文，被舉起) → 情緒被高高舉起"
+  },
+  {
+    "word": "elegy",
+    "pos": "n.",
+    "meaning": "輓歌、悼詞",
+    "example": "The poet wrote an elegy to mourn his late brother.",
+    "roots": "源自希臘文 elegos（哀歌）→ 表達哀悼的詩歌"
+  },
+  {
+    "word": "elicit",
+    "pos": "v.",
+    "meaning": "引出、誘出(反應、資訊)",
+    "example": "The survey was designed to elicit honest feedback from employees.",
+    "roots": "e- (向外) + lacere (拉丁文，誘騙) → 引誘使其顯露出來"
+  },
+  {
+    "word": "elliptical",
+    "pos": "adj.",
+    "meaning": "橢圓形的；(言語)省略的、晦澀的",
+    "example": "His elliptical answers left the reporters more confused than before.",
+    "roots": "希臘文 elleipein (省略、缺乏) → 語意有所省略、不完整"
+  },
+  {
+    "word": "elocution",
+    "pos": "n.",
+    "meaning": "演講術、發音技巧",
+    "example": "The actress took elocution lessons to perfect her stage diction.",
+    "roots": "e- (向外) + loqui (拉丁文，說話) → 清晰有力地表達言語的技巧"
+  },
+  {
+    "word": "eloquence",
+    "pos": "n.",
+    "meaning": "口才、雄辯",
+    "example": "The senator's eloquence moved even his political opponents.",
+    "roots": "e- (向外) + loqui (說話) + -ence (名詞後綴) → 流暢動人的表達能力"
+  },
+  {
+    "word": "elucidate",
+    "pos": "v.",
+    "meaning": "闡明、解釋清楚",
+    "example": "The professor took extra time to elucidate the more difficult concepts.",
+    "roots": "e- (向外) + lucidus (拉丁文，明亮的) → 使變得清楚明白"
+  },
+  {
+    "word": "elude",
+    "pos": "v.",
+    "meaning": "躲避、逃避；使費解",
+    "example": "The fugitive managed to elude police for nearly a decade.",
+    "roots": "e- (向外) + ludere (拉丁文，玩耍) → 靈巧地躲開，逃出掌握"
+  },
+  {
+    "word": "elusive",
+    "pos": "adj.",
+    "meaning": "難以捉摸的、難以達成的",
+    "example": "A cure for the disease has remained elusive despite decades of research.",
+    "roots": "elude (躲避) + -ive (形容詞後綴) → 不斷躲避、難以掌握的"
+  },
+  {
+    "word": "emaciated",
+    "pos": "adj.",
+    "meaning": "極度消瘦的、憔悴的",
+    "example": "The rescued dog was emaciated and clearly had not eaten in weeks.",
+    "roots": "e- (完全) + macies (拉丁文，瘦) → 完全消瘦"
+  },
+  {
+    "word": "emanate",
+    "pos": "v.",
+    "meaning": "散發、發出",
+    "example": "A warm glow emanated from the fireplace at the center of the room.",
+    "roots": "e- (向外) + manare (拉丁文，流出) → 從內部向外流出、散發"
+  },
+  {
+    "word": "emancipate",
+    "pos": "v.",
+    "meaning": "解放、使自由",
+    "example": "The proclamation emancipated millions of enslaved people across the country.",
+    "roots": "e- (脫離) + manus (拉丁文，手) + capere (拿取) → 脫離他人掌控之手"
+  },
+  {
+    "word": "embargo",
+    "pos": "n.",
+    "meaning": "禁運、貿易禁令",
+    "example": "The country imposed a trade embargo on goods from the sanctioned nation.",
+    "roots": "源自西班牙文 embargar（扣押，em- 使 + barra 障礙）→ 設下障礙禁止貿易"
+  },
+  {
+    "word": "embellish",
+    "pos": "v.",
+    "meaning": "美化、修飾(常指誇大)",
+    "example": "He tends to embellish his stories with exaggerated details.",
+    "roots": "em- (使) + bel (古法文，美麗的) → 使變得華麗，引申為誇飾"
+  },
+  {
+    "word": "embezzle",
+    "pos": "v.",
+    "meaning": "侵占、盜用(公款)",
+    "example": "The accountant was arrested for embezzling funds from the charity.",
+    "roots": "源自古法文 embesillier（毀壞、竊取）→ 秘密挪用他人財物"
+  },
+  {
+    "word": "embitter",
+    "pos": "v.",
+    "meaning": "使痛苦、使怨恨",
+    "example": "Years of unfair treatment had embittered him toward his employer.",
+    "roots": "em- (使) + bitter (苦的) → 使心生怨恨、痛苦"
+  },
+  {
+    "word": "emblazon",
+    "pos": "v.",
+    "meaning": "(以徽章、圖案)裝飾、彰顯",
+    "example": "The team's logo was emblazoned across the front of every jersey.",
+    "roots": "em- (使) + blazon (紋章、鮮明展示) → 醒目地標示裝飾"
+  },
+  {
+    "word": "emblematic",
+    "pos": "adj.",
+    "meaning": "象徵性的、典型的",
+    "example": "The crumbling factory was emblematic of the town's economic decline.",
+    "roots": "emblem (象徵、徽章) + -atic (形容詞後綴) → 具有代表性象徵意義的"
+  },
+  {
+    "word": "embolden",
+    "pos": "v.",
+    "meaning": "使大膽、鼓舞",
+    "example": "The early success emboldened the team to take on even greater challenges.",
+    "roots": "em- (使) + bold (大膽的) → 使變得更有膽量"
+  },
+  {
+    "word": "embroil",
+    "pos": "v.",
+    "meaning": "使捲入(紛爭)",
+    "example": "The company became embroiled in a lengthy legal battle over patents.",
+    "roots": "em- (使) + broil (混亂，源自古法文 brouiller 攪亂) → 使陷入混亂紛爭"
+  },
+  {
+    "word": "emend",
+    "pos": "v.",
+    "meaning": "修訂、校正(文本)",
+    "example": "The editor emended several errors in the manuscript before publication.",
+    "roots": "e- (去除) + mendum (拉丁文，錯誤) → 去除文中的錯誤"
+  },
+  {
+    "word": "emissary",
+    "pos": "n.",
+    "meaning": "使者、特使",
+    "example": "The president sent a special emissary to negotiate the ceasefire.",
+    "roots": "e- (向外) + mittere (拉丁文，派遣) → 被派出去的人"
+  },
+  {
+    "word": "emollient",
+    "pos": "adj./n.",
+    "meaning": "軟化的、緩和的；潤膚劑",
+    "example": "The lotion contains emollient oils that soothe dry skin.",
+    "roots": "e- (加強) + mollire (拉丁文，使柔軟) → 使變得柔軟緩和"
+  },
+  {
+    "word": "emote",
+    "pos": "v.",
+    "meaning": "誇張地表露情感",
+    "example": "The actor was criticized for emoting too dramatically in the quiet scene.",
+    "roots": "emotion (情感) 的逆構詞 → 表現出情感"
+  },
+  {
+    "word": "empirical",
+    "pos": "adj.",
+    "meaning": "經驗主義的、以實證為依據的",
+    "example": "The theory needs more empirical evidence before it can be widely accepted.",
+    "roots": "源自希臘文 empeirikos（有經驗的，em- 在內 + peira 試驗）→ 依據觀察實驗而非理論"
+  },
+  {
+    "word": "emulate",
+    "pos": "v.",
+    "meaning": "仿效、努力趕上",
+    "example": "Young athletes often emulate the training habits of their idols.",
+    "roots": "源自拉丁文 aemulari（競爭、努力趕上，源自 aemulus 對手）→ 努力效法超越"
+  },
+  {
+    "word": "emulsify",
+    "pos": "v.",
+    "meaning": "使乳化",
+    "example": "Egg yolk helps emulsify the oil and vinegar into a smooth dressing.",
+    "roots": "e- (向外) + mulgere (拉丁文，擠壓) + -ify (使...化) → 使油水均勻融合成乳狀"
+  },
+  {
+    "word": "enamor",
+    "pos": "v.",
+    "meaning": "使迷戀、使傾心(常用被動)",
+    "example": "She was completely enamored with the small coastal town after her first visit.",
+    "roots": "en- (使) + amor (拉丁文，愛) → 使陷入愛戀"
+  },
+  {
+    "word": "encapsulate",
+    "pos": "v.",
+    "meaning": "概括、濃縮；封裝",
+    "example": "The slogan encapsulates the company's entire philosophy in just five words.",
+    "roots": "en- (使...在內) + capsula (拉丁文，小盒子) → 裝入小盒子般濃縮概括"
+  },
+  {
+    "word": "encomium",
+    "pos": "n.",
+    "meaning": "頌詞、讚美之辭",
+    "example": "The retiring professor received an encomium from each of his former students.",
+    "roots": "源自希臘文 enkomion（讚美之詞，en- 在內 + komos 慶典遊行）→ 正式的頌揚"
+  },
+  {
+    "word": "encompass",
+    "pos": "v.",
+    "meaning": "包含、涵蓋；包圍",
+    "example": "The new curriculum encompasses everything from ancient history to modern politics.",
+    "roots": "en- (使...在內) + compass (羅盤、範圍) → 將事物納入某個範圍之內"
+  },
+  {
+    "word": "encroach",
+    "pos": "v.",
+    "meaning": "侵占、侵犯(權利或土地)",
+    "example": "The new development began to encroach on the protected wetland.",
+    "roots": "en- (使) + croc (古法文，鉤子) → 像用鉤子逐漸拉近、侵入他人領域"
+  },
+  {
+    "word": "encumber",
+    "pos": "v.",
+    "meaning": "妨礙、拖累",
+    "example": "The hikers were encumbered by heavy packs on the steep trail.",
+    "roots": "en- (使) + cumber (阻礙，源自古法文 combre 障礙物) → 使負擔沉重而受阻"
+  },
+  {
+    "word": "endearing",
+    "pos": "adj.",
+    "meaning": "討人喜歡的、惹人憐愛的",
+    "example": "His endearing habit of humming while he works makes him easy to like.",
+    "roots": "en- (使) + dear (親愛的) → 使人感到親近可愛"
+  },
+  {
+    "word": "endemic",
+    "pos": "adj.",
+    "meaning": "地方性的、某地特有的",
+    "example": "Malaria remains endemic to parts of sub-Saharan Africa.",
+    "roots": "en- (在內) + demos (希臘文，人民、地區) → 存在於特定地區之內的"
+  },
+  {
+    "word": "enervate",
+    "pos": "v.",
+    "meaning": "使衰弱、使無力",
+    "example": "The oppressive heat enervated even the most energetic travelers.",
+    "roots": "e- (去除) + nervus (拉丁文，神經、力量) → 抽走力量使人衰弱"
+  },
+  {
+    "word": "enfeeble",
+    "pos": "v.",
+    "meaning": "使衰弱、使虛弱",
+    "example": "The long illness had enfeebled his once-robust frame.",
+    "roots": "en- (使) + feeble (虛弱的) → 使變得虛弱"
+  },
+  {
+    "word": "engender",
+    "pos": "v.",
+    "meaning": "產生、引起",
+    "example": "The proposed layoffs engendered widespread anxiety among the staff.",
+    "roots": "en- (使) + generare (拉丁文，生育、產生) → 使產生、引發"
+  },
+  {
+    "word": "engross",
+    "pos": "v.",
+    "meaning": "使全神貫注、佔用(全部注意力)",
+    "example": "She was so engrossed in the novel that she missed her stop.",
+    "roots": "en- (使) + gross (整體的、龐大的) → 使全部心思被佔據"
+  },
+  {
+    "word": "engulf",
+    "pos": "v.",
+    "meaning": "吞沒、淹沒",
+    "example": "Flames quickly engulfed the entire warehouse.",
+    "roots": "en- (使...在內) + gulf (大海灣、深淵) → 像被大海吞沒般完全包圍"
+  },
+  {
+    "word": "enigma",
+    "pos": "n.",
+    "meaning": "謎、難以理解的事物",
+    "example": "The disappearance of the entire crew remains an enigma to this day.",
+    "roots": "源自希臘文 ainigma（謎語，來自 ainissesthai 說暗語）→ 令人費解的事物"
+  },
+  {
+    "word": "enigmatic",
+    "pos": "adj.",
+    "meaning": "神祕難解的",
+    "example": "The Mona Lisa is famous for her enigmatic smile.",
+    "roots": "enigma (謎) + -atic (形容詞後綴) → 具有謎一般性質的"
+  },
+  {
+    "word": "enjoin",
+    "pos": "v.",
+    "meaning": "命令、責令；禁止",
+    "example": "The court enjoined the company from releasing the confidential documents.",
+    "roots": "en- (使) + jungere (拉丁文，連結、加諸) → 加諸命令於人"
+  },
+  {
+    "word": "enliven",
+    "pos": "v.",
+    "meaning": "使更活潑、使生動",
+    "example": "A splash of color can enliven even the dullest room.",
+    "roots": "en- (使) + liven (使有生氣，源自 live 活的) → 使變得有活力"
+  },
+  {
+    "word": "enmity",
+    "pos": "n.",
+    "meaning": "敵意、仇恨",
+    "example": "Decades of enmity between the two nations finally began to ease.",
+    "roots": "源自古法文 enemi（敵人）→ 敵對關係中的仇恨"
+  },
+  {
+    "word": "ennoble",
+    "pos": "v.",
+    "meaning": "使高尚、賦予尊嚴",
+    "example": "The sacrifice made by the volunteers seemed to ennoble the entire community.",
+    "roots": "en- (使) + noble (高貴的) → 使變得高尚"
+  },
+  {
+    "word": "ennui",
+    "pos": "n.",
+    "meaning": "無聊、倦怠",
+    "example": "A deep sense of ennui settled over him during the long summer break.",
+    "roots": "源自法文 ennui（厭煩，源自拉丁文 in odio 在憎惡中）→ 因無事可做而生的倦怠感"
+  },
+  {
+    "word": "enormity",
+    "pos": "n.",
+    "meaning": "極大的嚴重性、暴行",
+    "example": "It took days for the enormity of the disaster to fully sink in.",
+    "roots": "e- (向外) + norma (拉丁文，規範) → 超出常規之外，引申為驚人的嚴重程度"
+  },
+  {
+    "word": "enrapture",
+    "pos": "v.",
+    "meaning": "使狂喜、使著迷",
+    "example": "The audience was enraptured by the violinist's flawless performance.",
+    "roots": "en- (使) + rapture (狂喜) → 使陷入極度喜悅"
+  },
+  {
+    "word": "ensconce",
+    "pos": "v.",
+    "meaning": "安頓、安置(於舒適或隱蔽處)",
+    "example": "He ensconced himself in the armchair with a good book and a cup of tea.",
+    "roots": "en- (使...在內) + sconce (堡壘、防護物) → 使安穩地藏身其中"
+  },
+  {
+    "word": "ensue",
+    "pos": "v.",
+    "meaning": "隨之發生、接著發生",
+    "example": "A heated argument ensued after the referee's controversial call.",
+    "roots": "en- (加強) + sequi (拉丁文，跟隨) → 緊隨其後發生"
+  },
+  {
+    "word": "entangle",
+    "pos": "v.",
+    "meaning": "使纏結、使捲入",
+    "example": "The dolphin had become entangled in an abandoned fishing net.",
+    "roots": "en- (使) + tangle (纏結) → 使陷入糾纏狀態"
+  },
+  {
+    "word": "enthrall",
+    "pos": "v.",
+    "meaning": "使著迷、使入迷",
+    "example": "The magician's tricks enthralled the children in the front row.",
+    "roots": "en- (使) + thrall (奴隸、束縛，源自古諾斯語) → 使被迷住如同被奴役"
+  },
+  {
+    "word": "entice",
+    "pos": "v.",
+    "meaning": "誘使、引誘",
+    "example": "The bakery's aroma enticed passersby to step inside.",
+    "roots": "源自古法文 enticier（煽動、引誘）→ 以誘惑手段吸引"
+  },
+  {
+    "word": "entreat",
+    "pos": "v.",
+    "meaning": "懇求、乞求",
+    "example": "She entreated the judge for one more chance to present her case.",
+    "roots": "en- (使) + traiter (古法文，對待、處理) → 懇切地對待請求"
+  },
+  {
+    "word": "entrenched",
+    "pos": "adj.",
+    "meaning": "根深蒂固的、牢固確立的",
+    "example": "Corruption had become deeply entrenched within the local government.",
+    "roots": "en- (使...在內) + trench (壕溝) → 像挖了壕溝般難以動搖"
+  },
+  {
+    "word": "entropy",
+    "pos": "n.",
+    "meaning": "熵；混亂度、衰退趨勢",
+    "example": "Without constant maintenance, any organization tends toward entropy.",
+    "roots": "希臘文 en- (在內) + trope (轉變) → 系統內部趨向混亂的度量"
+  },
+  {
+    "word": "enunciate",
+    "pos": "v.",
+    "meaning": "清晰發音、明確表達",
+    "example": "The teacher asked students to enunciate each word carefully during the speech.",
+    "roots": "e- (向外) + nuntiare (拉丁文，宣告) → 清楚地說出、宣告"
+  },
+  {
+    "word": "envenom",
+    "pos": "v.",
+    "meaning": "使充滿惡意、使有毒",
+    "example": "Years of rivalry had envenomed the relationship between the two families.",
+    "roots": "en- (使) + venom (毒液) → 注入毒素，引申為使充滿惡意"
+  },
+  {
+    "word": "envisage",
+    "pos": "v.",
+    "meaning": "設想、預想",
+    "example": "The architects envisage a park that will transform the entire neighborhood.",
+    "roots": "en- (使) + visage (面貌、外觀) → 在心中描繪出未來樣貌"
+  },
+  {
+    "word": "ephemeral",
+    "pos": "adj.",
+    "meaning": "短暫的、朝生暮死的",
+    "example": "Fame in the entertainment industry can be remarkably ephemeral.",
+    "roots": "希臘文 epi- (在...之上) + hemera (一天) → 僅持續一天，引申為極短暫"
+  },
+  {
+    "word": "epicure",
+    "pos": "n.",
+    "meaning": "美食家、講究享樂者",
+    "example": "As an epicure, he could name the exact vintage of wine just by tasting it.",
+    "roots": "源自希臘哲學家 Epicurus（伊比鳩魯）之名，其學派強調感官愉悅 → 講究美食享樂之人"
+  },
+  {
+    "word": "epicurean",
+    "pos": "adj.",
+    "meaning": "享樂主義的、講究美食的",
+    "example": "The resort is known for its epicurean dining experiences.",
+    "roots": "epicure (美食家) + -an (形容詞後綴) → 與追求感官享樂相關的"
+  },
+  {
+    "word": "epigram",
+    "pos": "n.",
+    "meaning": "警句、格言",
+    "example": "Oscar Wilde was famous for his witty epigrams.",
+    "roots": "希臘文 epi- (在...之上) + gramma (文字) → 刻寫於物品上的簡短雋語"
+  },
+  {
+    "word": "epigraph",
+    "pos": "n.",
+    "meaning": "題詞、卷頭語",
+    "example": "The novel opens with an epigraph taken from an ancient poem.",
+    "roots": "希臘文 epi- (在...之上) + graphein (書寫) → 寫在書籍開頭的引文"
+  },
+  {
+    "word": "epiphany",
+    "pos": "n.",
+    "meaning": "頓悟、豁然開朗的領悟",
+    "example": "She had an epiphany while walking home and finally understood the solution.",
+    "roots": "希臘文 epi- (在...之上) + phainein (顯現) → 真理突然顯現於眼前"
+  },
+  {
+    "word": "episodic",
+    "pos": "adj.",
+    "meaning": "偶發的、插曲式的",
+    "example": "The novel's episodic structure makes it easy to read in short bursts.",
+    "roots": "episode (插曲) + -ic (形容詞後綴) → 由片段組成、非連續性的"
+  },
+  {
+    "word": "epitaph",
+    "pos": "n.",
+    "meaning": "墓誌銘",
+    "example": "His epitaph simply read, \"He loved and was loved.\"",
+    "roots": "希臘文 epi- (在...之上) + taphos (墳墓) → 刻在墓碑上的文字"
+  },
+  {
+    "word": "epithet",
+    "pos": "n.",
+    "meaning": "稱號、綽號(常帶貶意)",
+    "example": "The tyrant earned the epithet \"the Butcher\" for his brutal reign.",
+    "roots": "希臘文 epi- (在...之上) + tithenai (放置) → 加諸於人名之上的形容稱號"
+  },
+  {
+    "word": "epitome",
+    "pos": "n.",
+    "meaning": "縮影、典型代表",
+    "example": "The small café is the epitome of old-world charm.",
+    "roots": "希臘文 epi- (在...之上) + temnein (切割) → 濃縮切割出精華的縮影"
+  },
+  {
+    "word": "epoch",
+    "pos": "n.",
+    "meaning": "時代、新紀元",
+    "example": "The invention of the internet marked the beginning of a new epoch.",
+    "roots": "希臘文 epokhe（停頓點）→ 作為時代劃分起點的重要時刻"
+  },
+  {
+    "word": "equable",
+    "pos": "adj.",
+    "meaning": "平穩的、鎮定的(氣候或性情)",
+    "example": "His equable temperament made him an excellent mediator during disputes.",
+    "roots": "aequ- (拉丁文，平等的) + -able (形容詞後綴) → 情緒或狀態保持平穩一致"
+  },
+  {
+    "word": "equanimity",
+    "pos": "n.",
+    "meaning": "沉著、鎮定",
+    "example": "She faced the crisis with remarkable equanimity, never losing her composure.",
+    "roots": "aequ- (平等) + animus (拉丁文，心靈) → 心境保持平衡"
+  },
+  {
+    "word": "equestrian",
+    "pos": "adj./n.",
+    "meaning": "騎馬的；騎師",
+    "example": "The park hosts an annual equestrian competition every spring.",
+    "roots": "源自拉丁文 equester（騎馬的，源自 equus 馬）→ 與馬術相關的"
+  },
+  {
+    "word": "equine",
+    "pos": "adj.",
+    "meaning": "馬的、似馬的",
+    "example": "The veterinarian specializes in equine medicine.",
+    "roots": "源自拉丁文 equus（馬）+ -ine (形容詞後綴) → 與馬相關的"
+  },
+  {
+    "word": "equinox",
+    "pos": "n.",
+    "meaning": "晝夜平分點、分點",
+    "example": "The autumnal equinox marks the day when daylight and darkness are equal.",
+    "roots": "aequi- (拉丁文，相等) + nox (夜晚) → 晝夜等長之日"
+  },
+  {
+    "word": "equitable",
+    "pos": "adj.",
+    "meaning": "公平的、公正的",
+    "example": "The mediator proposed an equitable division of the shared assets.",
+    "roots": "源自拉丁文 aequus（公平的）→ 依公平原則行事的"
+  },
+  {
+    "word": "equivocal",
+    "pos": "adj.",
+    "meaning": "模稜兩可的、含糊的",
+    "example": "His equivocal response left everyone unsure of his true intentions.",
+    "roots": "aequi- (相等) + vocare (拉丁文，稱呼) → 可作兩種解釋的說法"
+  },
+  {
+    "word": "equivocate",
+    "pos": "v.",
+    "meaning": "說話含糊、模稜兩可",
+    "example": "The witness equivocated whenever asked about the exact time of the incident.",
+    "roots": "equivocal (模稜兩可的) 字源 → 故意用含糊言語迴避明確表態"
+  },
+  {
+    "word": "eradicate",
+    "pos": "v.",
+    "meaning": "根除、消滅",
+    "example": "The vaccination campaign successfully eradicated the disease within a decade.",
+    "roots": "e- (去除) + radix (拉丁文，根) → 連根拔除"
+  },
+  {
+    "word": "errant",
+    "pos": "adj.",
+    "meaning": "行為不端的、離經叛道的；漫遊的",
+    "example": "The coach pulled aside the errant player after his repeated fouls.",
+    "roots": "源自拉丁文 errare（漫遊、犯錯）→ 偏離正軌行事的"
+  },
+  {
+    "word": "erratic",
+    "pos": "adj.",
+    "meaning": "不穩定的、飄忽不定的",
+    "example": "His erratic driving worried the other passengers in the car.",
+    "roots": "erra- (拉丁文 errare 漫遊) + -tic (形容詞後綴) → 行為或路線不穩定、變化無常"
+  },
+  {
+    "word": "erroneous",
+    "pos": "adj.",
+    "meaning": "錯誤的、不正確的",
+    "example": "The report was based on erroneous data from a faulty sensor.",
+    "roots": "erra- (漫遊、犯錯) + -eous (形容詞後綴) → 偏離正確的、有誤的"
+  },
+  {
+    "word": "ersatz",
+    "pos": "adj.",
+    "meaning": "人造的、代用的(常帶劣質意味)",
+    "example": "During the shortage, people had to make do with ersatz coffee made from roasted grain.",
+    "roots": "源自德文 Ersatz（替代品）→ 用來替代原物的仿製品"
+  },
+  {
+    "word": "erudite",
+    "pos": "adj.",
+    "meaning": "博學的、學識淵博的",
+    "example": "The erudite professor could discuss almost any topic in great depth.",
+    "roots": "e- (去除) + rudis (拉丁文，未經雕琢的) → 去除粗野無知，變得有學問"
+  },
+  {
+    "word": "erudition",
+    "pos": "n.",
+    "meaning": "博學、學識",
+    "example": "His erudition was evident from the range of references in his speech.",
+    "roots": "erudite (博學的) + -ion (名詞後綴) → 淵博學識的狀態"
+  },
+  {
+    "word": "eschew",
+    "pos": "v.",
+    "meaning": "避開、迴避",
+    "example": "The monastery encourages residents to eschew material possessions.",
+    "roots": "源自古法文 eschiver（躲避），與英文 shy 同源 → 刻意避開某事物"
+  },
+  {
+    "word": "esoteric",
+    "pos": "adj.",
+    "meaning": "深奧的、只有少數人懂的",
+    "example": "The professor's lecture on esoteric mathematical theories lost most of the class.",
+    "roots": "希臘文 esoterikos（內部的，來自 eso 內部）→ 只有圈內人才理解的知識"
+  },
+  {
+    "word": "espionage",
+    "pos": "n.",
+    "meaning": "間諜活動",
+    "example": "The agency was accused of conducting industrial espionage against rival firms.",
+    "roots": "源自法文 espionner（偵察、當間諜）→ 秘密刺探情報的活動"
+  },
+  {
+    "word": "espouse",
+    "pos": "v.",
+    "meaning": "支持、擁護(理念、主張)",
+    "example": "The senator has long espoused policies aimed at reducing carbon emissions.",
+    "roots": "源自拉丁文 sponsare（訂婚、承諾），引申為對理念的承諾支持"
+  },
+  {
+    "word": "espy",
+    "pos": "v.",
+    "meaning": "突然看見、發現",
+    "example": "From the crow's nest, the sailor was the first to espy land on the horizon.",
+    "roots": "源自古法文 espier（窺視、觀察），與 spy 同源 → 眼尖地發現"
+  },
+  {
+    "word": "esprit",
+    "pos": "n.",
+    "meaning": "精神、氣概(常見於 esprit de corps 團隊精神)",
+    "example": "Years of shared hardship built a strong esprit de corps among the soldiers.",
+    "roots": "源自法文 esprit（精神、才智，源自拉丁文 spiritus）→ 團體共有的精神風貌"
+  },
+  {
+    "word": "essay",
+    "pos": "v.",
+    "meaning": "嘗試、試圖(較正式用法)",
+    "example": "The novice climber essayed the difficult route despite the risks.",
+    "roots": "源自法文 essayer（嘗試），與 assay 同源 → 試圖去做某事"
+  },
+  {
+    "word": "estimable",
+    "pos": "adj.",
+    "meaning": "值得尊敬的、可估量的",
+    "example": "She built an estimable reputation over decades of honest business dealings.",
+    "roots": "estimate (估量) + -able (值得...的) → 值得被高度評價的"
+  },
+  {
+    "word": "estrange",
+    "pos": "v.",
+    "meaning": "使疏遠、離間",
+    "example": "Years of neglect gradually estranged him from his childhood friends.",
+    "roots": "源自拉丁文 extraneus（外來的、陌生的）→ 使變得如陌生人般疏遠"
+  },
+  {
+    "word": "estranged",
+    "pos": "adj.",
+    "meaning": "疏遠的、關係破裂的",
+    "example": "He hadn't spoken to his estranged brother in over fifteen years.",
+    "roots": "estrange (使疏遠) 過去分詞 → 已經變得疏遠的"
+  },
+  {
+    "word": "ethereal",
+    "pos": "adj.",
+    "meaning": "縹緲的、超凡脫俗的",
+    "example": "The soprano's ethereal voice seemed to float above the orchestra.",
+    "roots": "源自希臘文 aither（天空、上層空氣）→ 如天界般輕盈脫俗"
+  },
+  {
+    "word": "ethos",
+    "pos": "n.",
+    "meaning": "民族精神、道德風貌",
+    "example": "Hard work and self-reliance are central to the company's ethos.",
+    "roots": "源自希臘文 ethos（習慣、性格）→ 群體共有的價值觀與精神特質"
+  },
+  {
+    "word": "etymology",
+    "pos": "n.",
+    "meaning": "字源學、詞源",
+    "example": "Studying the etymology of a word can reveal fascinating historical connections.",
+    "roots": "希臘文 etymon (真實意義) + logos (學問) → 探究詞語真正起源的學問"
+  },
+  {
+    "word": "eugenic",
+    "pos": "adj.",
+    "meaning": "優生學的",
+    "example": "The eugenic policies of the era have since been widely condemned as unethical.",
+    "roots": "希臘文 eu- (良好) + genos (種族、出身) → 與改良人種相關的"
+  },
+  {
+    "word": "eulogize",
+    "pos": "v.",
+    "meaning": "頌揚、讚美",
+    "example": "Colleagues eulogized her decades of dedicated public service.",
+    "roots": "希臘文 eu- (良好) + logos (言語) → 用美好言辭稱頌"
+  },
+  {
+    "word": "eulogy",
+    "pos": "n.",
+    "meaning": "頌詞、悼詞",
+    "example": "His closest friend delivered a moving eulogy at the funeral.",
+    "roots": "希臘文 eu- (良好) + logos (言語) → 讚美之詞"
+  },
+  {
+    "word": "euphemism",
+    "pos": "n.",
+    "meaning": "委婉語、婉言",
+    "example": "\"Passed away\" is a common euphemism for \"died.\"",
+    "roots": "希臘文 eu- (良好) + pheme (言語) → 用悅耳言辭代替刺耳的說法"
+  },
+  {
+    "word": "euphonious",
+    "pos": "adj.",
+    "meaning": "悅耳的、聲音和諧的",
+    "example": "The poet chose euphonious words that flowed pleasantly when read aloud.",
+    "roots": "希臘文 eu- (良好) + phone (聲音) → 聲音悅耳動聽的"
+  },
+  {
+    "word": "euphony",
+    "pos": "n.",
+    "meaning": "悅耳、和諧的聲音",
+    "example": "The euphony of the choir's harmonies filled the cathedral.",
+    "roots": "希臘文 eu- (良好) + phone (聲音) → 和諧悅耳的聲音"
+  },
+  {
+    "word": "euphoria",
+    "pos": "n.",
+    "meaning": "興高采烈、極度愉悅感",
+    "example": "A wave of euphoria swept through the stadium as the final whistle blew.",
+    "roots": "希臘文 eu- (良好) + pherein (帶來) → 帶來極度美好感受的狀態"
+  },
+  {
+    "word": "evacuate",
+    "pos": "v.",
+    "meaning": "撤離、疏散",
+    "example": "Residents were ordered to evacuate before the hurricane made landfall.",
+    "roots": "e- (向外) + vacuus (拉丁文，空的) → 使某地變空、撤離"
+  },
+  {
+    "word": "evade",
+    "pos": "v.",
+    "meaning": "逃避、躲避",
+    "example": "The suspect managed to evade capture for several weeks.",
+    "roots": "e- (向外) + vadere (拉丁文，行走) → 走脫、躲開"
+  },
+  {
+    "word": "evanescent",
+    "pos": "adj.",
+    "meaning": "短暫易逝的、瞬息即逝的",
+    "example": "The evanescent beauty of the cherry blossoms lasts only a few days each spring.",
+    "roots": "e- (向外) + vanescere (拉丁文，消失，源自 vanus 空的) → 逐漸消失的、短暫的"
+  },
+  {
+    "word": "evasive",
+    "pos": "adj.",
+    "meaning": "躲避的、迴避的",
+    "example": "The politician gave evasive answers to avoid committing to a clear position.",
+    "roots": "evade (逃避) + -ive (形容詞後綴) → 傾向於迴避的"
+  },
+  {
+    "word": "evenhanded",
+    "pos": "adj.",
+    "meaning": "公平的、不偏不倚的",
+    "example": "The mediator was praised for her evenhanded approach to the dispute.",
+    "roots": "even (平等的) + handed (以手處理的) → 雙手一視同仁地處理"
+  },
+  {
+    "word": "evict",
+    "pos": "v.",
+    "meaning": "驅逐、逐出(房客)",
+    "example": "The landlord evicted the tenants for failing to pay rent for months.",
+    "roots": "e- (向外) + vincere (拉丁文，征服) → 以武力或法律將人趕出"
+  },
+  {
+    "word": "eviction",
+    "pos": "n.",
+    "meaning": "驅逐、逐出",
+    "example": "The family faced eviction after losing their primary source of income.",
+    "roots": "evict (驅逐) + -ion (名詞後綴) → 被驅逐的行為或過程"
+  },
+  {
+    "word": "evince",
+    "pos": "v.",
+    "meaning": "表明、顯示(情感或特質)",
+    "example": "Her calm response evinced a maturity beyond her years.",
+    "roots": "e- (向外) + vincere (拉丁文，征服、證明) → 明確地顯露出來"
+  },
+  {
+    "word": "evocative",
+    "pos": "adj.",
+    "meaning": "喚起回憶或情感的",
+    "example": "The old photograph was evocative of a simpler, happier time.",
+    "roots": "e- (向外) + vocare (拉丁文，呼喚) → 喚起某種感受或聯想"
+  },
+  {
+    "word": "evoke",
+    "pos": "v.",
+    "meaning": "喚起、引起(感情或回憶)",
+    "example": "The smell of fresh bread always evokes memories of her grandmother's kitchen.",
+    "roots": "e- (向外) + vocare (呼喚) → 呼喚出某種情感或反應"
+  },
+  {
+    "word": "exacerbate",
+    "pos": "v.",
+    "meaning": "使惡化、加劇",
+    "example": "The new tariffs are likely to exacerbate tensions between the two countries.",
+    "roots": "ex- (加強) + acerbus (拉丁文，苦澀的) → 使情況變得更糟"
+  },
+  {
+    "word": "exacting",
+    "pos": "adj.",
+    "meaning": "嚴格要求的、苛求的",
+    "example": "Her exacting standards meant that every report was checked multiple times.",
+    "roots": "exact (精確、要求) 現在分詞 → 要求極高精確度的"
+  },
+  {
+    "word": "exalt",
+    "pos": "v.",
+    "meaning": "高度讚揚、提升(地位)",
+    "example": "The ceremony exalted the veterans who had sacrificed so much for their country.",
+    "roots": "ex- (向上) + altus (拉丁文，高的) → 提升到很高的地位"
+  },
+  {
+    "word": "exaltation",
+    "pos": "n.",
+    "meaning": "興高采烈；讚頌、提升",
+    "example": "A sense of exaltation filled the climbers as they reached the summit.",
+    "roots": "exalt (高度讚揚) + -ation (名詞後綴) → 被提升到極度喜悅或崇高的狀態"
+  },
+  {
+    "word": "exasperate",
+    "pos": "v.",
+    "meaning": "激怒、使惱火",
+    "example": "The endless bureaucratic delays exasperated even the most patient applicants.",
+    "roots": "ex- (加強) + asper (拉丁文，粗糙的) → 使情緒變得粗暴、惱怒"
+  },
+  {
+    "word": "excavate",
+    "pos": "v.",
+    "meaning": "挖掘、開鑿",
+    "example": "Archaeologists spent months excavating the buried ruins.",
+    "roots": "ex- (向外) + cavare (拉丁文，挖空，源自 cavus 空洞) → 向外挖出空洞"
+  },
+  {
+    "word": "excise",
+    "pos": "v.",
+    "meaning": "切除、刪除",
+    "example": "The surgeon carefully excised the tumor from the surrounding tissue.",
+    "roots": "ex- (向外) + caedere (拉丁文，切割) → 切除移出"
+  },
+  {
+    "word": "excitable",
+    "pos": "adj.",
+    "meaning": "易激動的、容易興奮的",
+    "example": "The excitable puppy barked at every passing car.",
+    "roots": "excite (激發) + -able (容易...的) → 容易被激起情緒的"
+  },
+  {
+    "word": "exclaim",
+    "pos": "v.",
+    "meaning": "呼喊、驚呼",
+    "example": "\"Look out!\" she exclaimed as the car swerved toward them.",
+    "roots": "ex- (向外) + clamare (拉丁文，喊叫) → 突然大聲喊出"
+  },
+  {
+    "word": "excoriate",
+    "pos": "v.",
+    "meaning": "嚴厲批評、譴責；擦傷皮膚",
+    "example": "The critic excoriated the film for its shallow plot and wooden acting.",
+    "roots": "ex- (向外) + corium (拉丁文，皮) → 剝去皮膚，引申為嚴厲批評"
+  },
+  {
+    "word": "excrescence",
+    "pos": "n.",
+    "meaning": "贅生物、不正常的增生物",
+    "example": "The old law was widely seen as an excrescence that served no modern purpose.",
+    "roots": "ex- (向外) + crescere (拉丁文，生長) → 額外異常生長出的部分"
+  },
+  {
+    "word": "excruciating",
+    "pos": "adj.",
+    "meaning": "極其痛苦的、折磨人的",
+    "example": "He described the pain from the injury as absolutely excruciating.",
+    "roots": "ex- (加強) + cruciare (拉丁文，釘十字架，源自 crux 十字架) → 如受刑般極度痛苦"
+  },
+  {
+    "word": "exculpate",
+    "pos": "v.",
+    "meaning": "開脫、證明無罪",
+    "example": "New DNA evidence finally exculpated the man after twenty years in prison.",
+    "roots": "ex- (去除) + culpa (拉丁文，罪過) → 去除罪責"
+  },
+  {
+    "word": "exceptionable",
+    "pos": "adj.",
+    "meaning": "會引起異議的、不妥的",
+    "example": "Nothing in his proposal seemed exceptionable to the committee members.",
+    "roots": "except (反對、提出異議) + -able (容易...的) → 容易招致反對的"
+  },
+  {
+    "word": "exemplary",
+    "pos": "adj.",
+    "meaning": "堪為典範的、優秀的",
+    "example": "Her exemplary conduct throughout the crisis earned her a promotion.",
+    "roots": "exemplum (拉丁文，範例) + -ary (形容詞後綴) → 值得作為範例的"
+  },
+  {
+    "word": "exemplify",
+    "pos": "v.",
+    "meaning": "作為範例、例證說明",
+    "example": "This painting exemplifies the artist's early experimental style.",
+    "roots": "exemplum (範例) + -ify (使...化) → 使成為範例、具體展現"
+  },
+  {
+    "word": "exhaustive",
+    "pos": "adj.",
+    "meaning": "詳盡的、徹底的",
+    "example": "The report offers an exhaustive analysis of the region's economic trends.",
+    "roots": "ex- (完全) + haurire (拉丁文，抽乾) → 徹底抽乾，引申為毫無遺漏的"
+  },
+  {
+    "word": "exhilarate",
+    "pos": "v.",
+    "meaning": "使興奮、使歡欣鼓舞",
+    "example": "The thrill of skydiving exhilarated even the most cautious participants.",
+    "roots": "ex- (加強) + hilaris (拉丁文，快樂的) → 使變得非常快樂興奮"
+  },
+  {
+    "word": "exhilaration",
+    "pos": "n.",
+    "meaning": "興奮、歡欣",
+    "example": "A sense of exhilaration swept over her as the roller coaster plunged downward.",
+    "roots": "exhilarate (使興奮) + -ion (名詞後綴) → 興奮愉悅的狀態"
+  },
+  {
+    "word": "exhort",
+    "pos": "v.",
+    "meaning": "力勸、勸誡",
+    "example": "The coach exhorted the team to give their best effort in the final quarter.",
+    "roots": "ex- (加強) + hortari (拉丁文，鼓勵) → 強力鼓勵敦促"
+  },
+  {
+    "word": "exhortation",
+    "pos": "n.",
+    "meaning": "勸誡、忠告",
+    "example": "Despite his exhortations to save more, the family continued to overspend.",
+    "roots": "exhort (力勸) + -ation (名詞後綴) → 勸誡的言語或行動"
+  },
+  {
+    "word": "exhume",
+    "pos": "v.",
+    "meaning": "掘出、挖出(屍體)",
+    "example": "Investigators exhumed the body to conduct a more thorough autopsy.",
+    "roots": "ex- (向外) + humus (拉丁文，土地) → 從土中挖出"
+  },
+  {
+    "word": "exigency",
+    "pos": "n.",
+    "meaning": "緊急情況、迫切需求",
+    "example": "The exigencies of wartime forced the government to ration food supplies.",
+    "roots": "exigere (拉丁文，要求、逼迫) + -ency (名詞後綴) → 迫切要求應對的狀況"
+  },
+  {
+    "word": "exigent",
+    "pos": "adj.",
+    "meaning": "緊急的、急迫的",
+    "example": "The nurse responded quickly to the patient's exigent condition.",
+    "roots": "ex- (向外) + agere (拉丁文，驅使) → 逼迫著需要立即處理的"
+  },
+  {
+    "word": "exiguous",
+    "pos": "adj.",
+    "meaning": "稀少的、微薄的",
+    "example": "The family survived on an exiguous income for several difficult years.",
+    "roots": "ex- (向外) + agere (驅使、耗盡) → 被耗盡剩下極少的"
+  },
+  {
+    "word": "exodus",
+    "pos": "n.",
+    "meaning": "大批離去、出走",
+    "example": "The company's poor management triggered a mass exodus of talented employees.",
+    "roots": "希臘文 ex- (向外) + hodos (道路) → 集體踏上離開的道路"
+  },
+  {
+    "word": "exonerate",
+    "pos": "v.",
+    "meaning": "免罪、開脫",
+    "example": "New evidence exonerated the man who had spent a decade in prison.",
+    "roots": "ex- (去除) + onus (拉丁文，負擔、罪責) → 卸下罪責的負擔"
+  },
+  {
+    "word": "exorbitant",
+    "pos": "adj.",
+    "meaning": "過高的、過分的(價格或要求)",
+    "example": "The hotel charged an exorbitant fee for a bottle of water from the minibar.",
+    "roots": "ex- (超出) + orbita (拉丁文，軌道) → 超出正常軌道範圍之外"
+  },
+  {
+    "word": "exorcise",
+    "pos": "v.",
+    "meaning": "驅除(邪靈)、消除(不好的事物)",
+    "example": "The novel follows a priest trying to exorcise the demon from the child.",
+    "roots": "希臘文 ex- (向外) + horkos (誓言) → 以誓言驅趕邪靈"
+  },
+  {
+    "word": "exotic",
+    "pos": "adj.",
+    "meaning": "異國情調的、奇特的",
+    "example": "The market sold exotic spices imported from across the globe.",
+    "roots": "希臘文 exo (在外) → 來自外地、與本土不同的"
+  },
+  {
+    "word": "expansive",
+    "pos": "adj.",
+    "meaning": "廣闊的；健談的、豪爽的",
+    "example": "After a few drinks, he became more expansive and shared stories from his youth.",
+    "roots": "expand (擴展) + -ive (形容詞後綴) → 向外延伸擴展的"
+  },
+  {
+    "word": "expatiate",
+    "pos": "v.",
+    "meaning": "詳述、細說",
+    "example": "The lecturer expatiated on the causes of the economic collapse for nearly an hour.",
+    "roots": "ex- (向外) + spatiari (拉丁文，漫步，源自 spatium 空間) → 在話題上盡情漫遊、詳加闡述"
+  },
+  {
+    "word": "expatriate",
+    "pos": "n./v.",
+    "meaning": "僑民、移居國外者；流放",
+    "example": "Many American expatriates settled in Paris during the 1920s.",
+    "roots": "ex- (離開) + patria (拉丁文，祖國) → 離開祖國生活的人"
+  },
+  {
+    "word": "expedient",
+    "pos": "adj./n.",
+    "meaning": "權宜的、便利的；權宜之計",
+    "example": "Lying seemed like the most expedient way to avoid an awkward conversation.",
+    "roots": "ex- (向外) + pedis (拉丁文，腳) → 解開腳鐐能快速前進，引申為便利實用"
+  },
+  {
+    "word": "expedite",
+    "pos": "v.",
+    "meaning": "加速、迅速處理",
+    "example": "The manager asked the courier to expedite delivery of the urgent documents.",
+    "roots": "ex- (向外) + pedis (腳) → 使腳步加快，引申為加速處理"
+  },
+  {
+    "word": "expeditious",
+    "pos": "adj.",
+    "meaning": "迅速有效率的",
+    "example": "The company promised an expeditious response to all customer complaints.",
+    "roots": "expedite (加速) + -ious (形容詞後綴) → 講求快速效率的"
+  },
+  {
+    "word": "expendable",
+    "pos": "adj.",
+    "meaning": "可犧牲的、非必要的",
+    "example": "In the budget crisis, several expendable positions were eliminated first.",
+    "roots": "expend (花費) + -able (可...的) → 可被消耗捨棄的"
+  },
+  {
+    "word": "expenditure",
+    "pos": "n.",
+    "meaning": "支出、花費",
+    "example": "Government expenditure on infrastructure rose sharply last year.",
+    "roots": "expend (花費，源自拉丁文 ex- 向外 + pendere 秤重支付) + -iture (名詞後綴) → 支出的金額或行為"
+  },
+  {
+    "word": "expiate",
+    "pos": "v.",
+    "meaning": "贖罪、彌補(過錯)",
+    "example": "He spent years volunteering in an effort to expiate his youthful mistakes.",
+    "roots": "ex- (完全) + piare (拉丁文，使聖潔、贖罪) → 完全洗淨過錯"
+  },
+  {
+    "word": "explicable",
+    "pos": "adj.",
+    "meaning": "可解釋的、可說明的",
+    "example": "The sudden drop in sales was easily explicable once the recall was announced.",
+    "roots": "explicate (解釋) + -able (可...的) → 能夠被解釋清楚的"
+  },
+  {
+    "word": "explicate",
+    "pos": "v.",
+    "meaning": "詳細解說、闡述",
+    "example": "The professor spent the entire class explicating a single stanza of the poem.",
+    "roots": "ex- (向外) + plicare (拉丁文，摺疊) → 把摺疊的意涵展開說明"
+  },
+  {
+    "word": "exponent",
+    "pos": "n.",
+    "meaning": "倡導者、代表人物；指數",
+    "example": "She is widely regarded as a leading exponent of modernist architecture.",
+    "roots": "ex- (向外) + ponere (拉丁文，放置) → 將理念展現出來闡述的人"
+  },
+  {
+    "word": "expostulate",
+    "pos": "v.",
+    "meaning": "抗議、規勸",
+    "example": "The employees expostulated with management over the sudden schedule changes.",
+    "roots": "ex- (向外) + postulare (拉丁文，要求) → 向對方提出強烈的異議"
+  },
+  {
+    "word": "expound",
+    "pos": "v.",
+    "meaning": "詳細闡述、說明",
+    "example": "The guide expounded on the historical significance of each monument.",
+    "roots": "ex- (向外) + ponere (放置) → 把觀點完整展開陳述"
+  },
+  {
+    "word": "expunge",
+    "pos": "v.",
+    "meaning": "刪除、清除(記錄)",
+    "example": "His criminal record was expunged after ten years of good behavior.",
+    "roots": "ex- (向外) + pungere (拉丁文，戳刺) → 用尖物戳刺塗銷，引申為刪除"
+  },
+  {
+    "word": "expurgate",
+    "pos": "v.",
+    "meaning": "刪除(不當內容)、淨化(文本)",
+    "example": "The publisher released an expurgated version of the novel for younger readers.",
+    "roots": "ex- (向外) + purgare (拉丁文，清洗) → 清除不當的部分"
+  },
+  {
+    "word": "exquisite",
+    "pos": "adj.",
+    "meaning": "精緻的、精美的；(痛苦)劇烈的",
+    "example": "The museum displayed an exquisite collection of ancient jade carvings.",
+    "roots": "ex- (向外) + quaerere (拉丁文，尋求) → 精心尋求打造出的極致之作"
+  },
+  {
+    "word": "extant",
+    "pos": "adj.",
+    "meaning": "現存的、尚存的",
+    "example": "Only a handful of extant manuscripts from that period have survived.",
+    "roots": "ex- (向外) + stare (拉丁文，站立) → 仍然存在、屹立不倒的"
+  },
+  {
+    "word": "extemporaneous",
+    "pos": "adj.",
+    "meaning": "即席的、未經準備的",
+    "example": "The debate required students to give extemporaneous speeches on assigned topics.",
+    "roots": "ex- (向外) + tempus (拉丁文，時間) → 當下即時完成，未經事先準備"
+  },
+  {
+    "word": "extemporize",
+    "pos": "v.",
+    "meaning": "即席演說、臨場發揮",
+    "example": "When the slides failed, the speaker had to extemporize for several minutes.",
+    "roots": "extempore (拉丁文，即時地) + -ize (動詞化) → 不靠準備即時發揮"
+  },
+  {
+    "word": "extenuate",
+    "pos": "v.",
+    "meaning": "減輕(罪責)、找藉口開脫",
+    "example": "The lawyer argued that his client's difficult childhood should extenuate the sentence.",
+    "roots": "ex- (向外) + tenuare (拉丁文，使變薄，源自 tenuis 薄的) → 使罪責變得輕微"
+  },
+  {
+    "word": "exterminate",
+    "pos": "v.",
+    "meaning": "消滅、滅絕",
+    "example": "The company was hired to exterminate the termite infestation in the basement.",
+    "roots": "ex- (向外) + terminare (拉丁文，設定界限) → 徹底趕出界限之外、消滅殆盡"
+  },
+  {
+    "word": "extol",
+    "pos": "v.",
+    "meaning": "高度讚揚、頌揚",
+    "example": "The coach extolled the team's discipline and work ethic after the win.",
+    "roots": "ex- (向上) + tollere (拉丁文，舉起) → 把某人事物舉高稱頌"
+  },
+  {
+    "word": "extort",
+    "pos": "v.",
+    "meaning": "勒索、強取",
+    "example": "The gang extorted money from local business owners in exchange for protection.",
+    "roots": "ex- (向外) + torquere (拉丁文，扭轉) → 用力扭轉逼取財物"
+  },
+  {
+    "word": "extraneous",
+    "pos": "adj.",
+    "meaning": "無關的、外來的",
+    "example": "The editor removed several extraneous details that didn't serve the plot.",
+    "roots": "extra- (在外) + -aneous (形容詞後綴) → 來自外部、與主題無關的"
+  },
+  {
+    "word": "extrapolate",
+    "pos": "v.",
+    "meaning": "推斷、推知(根據已知數據)",
+    "example": "Scientists extrapolated future sea-level rise based on current melting rates.",
+    "roots": "extra- (以外) + polire (拉丁文，磨光) 衍生自 interpolate → 從已知數據向外推展估算"
+  },
+  {
+    "word": "extricate",
+    "pos": "v.",
+    "meaning": "使解脫、使脫離(困境)",
+    "example": "It took hours to extricate the driver from the wreckage.",
+    "roots": "ex- (向外) + tricae (拉丁文，麻煩、糾纏) → 從糾纏困境中脫身"
+  },
+  {
+    "word": "extrinsic",
+    "pos": "adj.",
+    "meaning": "外在的、非本質的",
+    "example": "Extrinsic rewards like bonuses can sometimes undermine intrinsic motivation.",
+    "roots": "extra- (在外) + secus (拉丁文，跟隨) → 來自外部而非本質的"
+  },
+  {
+    "word": "extrude",
+    "pos": "v.",
+    "meaning": "擠出、擠壓成形",
+    "example": "The machine extrudes molten plastic into long, uniform tubes.",
+    "roots": "ex- (向外) + trudere (拉丁文，推) → 向外推擠出來"
+  },
+  {
+    "word": "exuberance",
+    "pos": "n.",
+    "meaning": "熱情洋溢、旺盛的活力",
+    "example": "The children's exuberance was infectious as they ran through the park.",
+    "roots": "ex- (向外) + uberare (拉丁文，豐饒，源自 uber 乳房、豐盛) → 生命力向外豐沛湧現"
+  },
+  {
+    "word": "exuberant",
+    "pos": "adj.",
+    "meaning": "熱情洋溢的、繁茂的",
+    "example": "Her exuberant welcome made everyone feel instantly at home.",
+    "roots": "exuberance (熱情洋溢) 字源 + -ant (形容詞後綴) → 充滿活力、繁盛的"
+  },
+  {
+    "word": "exude",
+    "pos": "v.",
+    "meaning": "散發出(氣味、情感)、滲出",
+    "example": "The chef's dishes exude confidence and years of culinary experience.",
+    "roots": "ex- (向外) + sudare (拉丁文，流汗) → 像流汗般緩緩滲出散發"
+  },
+  {
+    "word": "exult",
+    "pos": "v.",
+    "meaning": "狂喜、歡欣鼓舞",
+    "example": "The fans exulted as their team scored the winning goal in overtime.",
+    "roots": "ex- (向外) + salire (拉丁文，跳躍) → 因喜悅而雀躍歡呼"
+  },
+  {
+    "word": "exultant",
+    "pos": "adj.",
+    "meaning": "狂喜的、興高采烈的",
+    "example": "The exultant crowd celebrated late into the night after the victory.",
+    "roots": "exult (狂喜) + -ant (形容詞後綴) → 表現出極度喜悅的"
+  }
+]
