@@ -1,0 +1,2424 @@
+[
+  {
+    "word": "oafish",
+    "pos": "adj.",
+    "meaning": "笨拙的、粗魯愚蠢的",
+    "example": "His oafish behavior at the dinner party embarrassed his date.",
+    "roots": "源自古北歐文 álfr (精靈，中世紀民間傳說中笨拙的換生兒即被稱為 oaf) + -ish (形容詞後綴) → 像笨拙的換生兒般粗魯無知的"
+  },
+  {
+    "word": "obdurate",
+    "pos": "adj.",
+    "meaning": "固執的、頑固不化的",
+    "example": "Despite hours of pleading, the obdurate landlord refused to lower the rent.",
+    "roots": "ob- (加強) + dur (硬，拉丁文 durus) + -ate (形容詞後綴) → 心腸像硬石般不為所動"
+  },
+  {
+    "word": "obeisance",
+    "pos": "n.",
+    "meaning": "鞠躬、恭順的姿態",
+    "example": "The courtiers made a deep obeisance as the queen entered the hall.",
+    "roots": "源自古法文 obeissance (服從，源自 obeir 服從，拉丁文 oboedire) → 表示服從與敬意的動作"
+  },
+  {
+    "word": "obese",
+    "pos": "adj.",
+    "meaning": "過度肥胖的",
+    "example": "The doctor warned that being obese significantly raises the risk of heart disease.",
+    "roots": "ob- (完全) + es (吃，拉丁文 edere) → 吃到過度、變得肥胖"
+  },
+  {
+    "word": "obfuscate",
+    "pos": "v.",
+    "meaning": "使模糊難懂、故意搞混",
+    "example": "The report was full of jargon designed to obfuscate rather than clarify the company's losses.",
+    "roots": "ob- (在...之上) + fusc (黑暗，拉丁文 fuscus) + -ate (動詞後綴) → 用陰暗遮蔽使人看不清"
+  },
+  {
+    "word": "objurgate",
+    "pos": "v.",
+    "meaning": "嚴厲斥責",
+    "example": "The coach objurgated the team for their lack of discipline during the match.",
+    "roots": "ob- (向著) + jurg (爭吵，拉丁文 jurgare，源自 jus 法律 + agere 驅使) → 以言語向對方發起責罵"
+  },
+  {
+    "word": "oblique",
+    "pos": "adj.",
+    "meaning": "間接的、斜的",
+    "example": "She made only an oblique reference to the scandal, never naming names directly.",
+    "roots": "ob- (向著) + liquus (彎曲的，拉丁文) → 不走直線、拐彎抹角的"
+  },
+  {
+    "word": "obliterate",
+    "pos": "v.",
+    "meaning": "徹底消滅、抹去",
+    "example": "The flood obliterated the entire village within hours.",
+    "roots": "ob- (在...之上) + liter (字母，拉丁文 littera) → 把文字塗抹到完全看不見，引申為徹底消除"
+  },
+  {
+    "word": "oblivious",
+    "pos": "adj.",
+    "meaning": "未察覺的、渾然不覺的",
+    "example": "Absorbed in his book, he was oblivious to the noise around him.",
+    "roots": "ob- (在...之上) + liv (遺忘，拉丁文 oblivisci) + -ous (形容詞後綴) → 完全被遺忘覆蓋，渾然不知"
+  },
+  {
+    "word": "obloquy",
+    "pos": "n.",
+    "meaning": "謾罵、惡名",
+    "example": "The politician endured public obloquy after the scandal broke.",
+    "roots": "ob- (向著) + loqu (說話，拉丁文 loqui) → 對著某人大肆責罵，引申為惡名"
+  },
+  {
+    "word": "obnoxious",
+    "pos": "adj.",
+    "meaning": "討人厭的、可憎的",
+    "example": "His obnoxious jokes at the meeting made everyone uncomfortable.",
+    "roots": "ob- (向著) + noxious (有害的，拉丁文 noxa 傷害) → 對人造成傷害般的討厭"
+  },
+  {
+    "word": "obscure",
+    "pos": "adj.",
+    "meaning": "晦澀難懂的、不出名的",
+    "example": "The professor's lecture was so obscure that most students left more confused than when they arrived.",
+    "roots": "ob- (在...之上) + scurus (遮蔽的，拉丁文 obscurus 黑暗的) → 被遮蔽而難以看清的"
+  },
+  {
+    "word": "obscurity",
+    "pos": "n.",
+    "meaning": "晦澀、默默無聞",
+    "example": "The band rose from obscurity to international fame within a single year.",
+    "roots": "同 obscure 字源 + -ity (名詞後綴) → 不為人知或難以理解的狀態"
+  },
+  {
+    "word": "obsequious",
+    "pos": "adj.",
+    "meaning": "諂媚逢迎的",
+    "example": "The obsequious waiter fawned over every wealthy customer who walked in.",
+    "roots": "ob- (向著) + sequ (跟隨，拉丁文 sequi) + -ious (形容詞後綴) → 一味順從跟隨、討好他人"
+  },
+  {
+    "word": "obsolescent",
+    "pos": "adj.",
+    "meaning": "逐漸過時的",
+    "example": "Many manual skills have become obsolescent as automation spreads through the industry.",
+    "roots": "ob- (完全) + solesc (變舊，拉丁文 obsolescere) → 正逐漸走向廢棄"
+  },
+  {
+    "word": "obsolete",
+    "pos": "adj.",
+    "meaning": "過時的、廢棄的",
+    "example": "The old telephone switchboards are now completely obsolete.",
+    "roots": "ob- (完全) + solet (習慣，拉丁文 solere) → 不再被使用習慣的，已被淘汰"
+  },
+  {
+    "word": "obstinate",
+    "pos": "adj.",
+    "meaning": "頑固的、固執的",
+    "example": "The obstinate child refused to eat anything green.",
+    "roots": "ob- (against) + stin (站立，拉丁文 stinare，源自 stare 站立) → 站穩立場不肯改變"
+  },
+  {
+    "word": "obstreperous",
+    "pos": "adj.",
+    "meaning": "喧鬧的、難以控制的",
+    "example": "The obstreperous crowd had to be calmed down by security before the concert could continue.",
+    "roots": "ob- (向著) + strep (吵鬧，拉丁文 strepere) + -ous (形容詞後綴) → 對著人大聲喧鬧、不服管束"
+  },
+  {
+    "word": "obstruct",
+    "pos": "v.",
+    "meaning": "阻礙、阻塞",
+    "example": "A fallen tree obstructed the only road out of town.",
+    "roots": "ob- (在...之上) + struct (建造，拉丁文 struere) → 在路上築起障礙物"
+  },
+  {
+    "word": "obtrude",
+    "pos": "v.",
+    "meaning": "強行介入、突出",
+    "example": "He tends to obtrude his opinions into conversations that don't concern him.",
+    "roots": "ob- (向著) + trud (推，拉丁文 trudere) → 把自己硬推進去"
+  },
+  {
+    "word": "obtrusive",
+    "pos": "adj.",
+    "meaning": "顯眼的、過分突出的",
+    "example": "The bright neon sign was too obtrusive for the quiet neighborhood.",
+    "roots": "同 obtrude 字源 + -ive (形容詞後綴) → 硬要引人注意的"
+  },
+  {
+    "word": "obtuse",
+    "pos": "adj.",
+    "meaning": "遲鈍的、愚鈍的",
+    "example": "He remained obtuse to the hints she kept dropping about the surprise party.",
+    "roots": "ob- (向著) + tusus (敲鈍的，拉丁文 tundere 敲打的過去分詞) → 被敲鈍了，感覺遲鈍"
+  },
+  {
+    "word": "obviate",
+    "pos": "v.",
+    "meaning": "排除(困難)、使不必要",
+    "example": "Installing a backup generator obviates the need to worry about power outages.",
+    "roots": "ob- (在...之前) + via (路，拉丁文 via) + -ate (動詞後綴) → 事先擋在路上，使問題不會發生"
+  },
+  {
+    "word": "occidental",
+    "pos": "adj.",
+    "meaning": "西方的、西洋的",
+    "example": "The museum displays both occidental and oriental art side by side.",
+    "roots": "occident (西方，拉丁文 occidens，源自 occidere 落下，指太陽落下之處) + -al (形容詞後綴) → 太陽落下的方向，即西方"
+  },
+  {
+    "word": "occlude",
+    "pos": "v.",
+    "meaning": "阻塞、遮蔽",
+    "example": "A blood clot occluded the artery, cutting off circulation to the leg.",
+    "roots": "oc- (在...之上，ob 的變體) + clud (關閉，拉丁文 claudere) → 把通道關閉堵住"
+  },
+  {
+    "word": "occult",
+    "pos": "adj.",
+    "meaning": "神秘的、隱密的",
+    "example": "She has always been fascinated by occult practices like tarot reading and astrology.",
+    "roots": "oc- (完全) + cult (隱藏，拉丁文 celare) → 完全被隱藏起來，超乎常理理解"
+  },
+  {
+    "word": "octogenarian",
+    "pos": "n.",
+    "meaning": "八十多歲的人",
+    "example": "The octogenarian still goes for a five-mile walk every morning.",
+    "roots": "源自拉丁文 octogeni (八十歲，octoginta「八十」的變化形) + -arian (...的人) → 八十多歲的人"
+  },
+  {
+    "word": "odious",
+    "pos": "adj.",
+    "meaning": "可憎的、令人厭惡的",
+    "example": "Slavery is now universally regarded as an odious institution.",
+    "roots": "od (憎恨，拉丁文 odium) + -ious (形容詞後綴) → 令人生出憎惡之情的"
+  },
+  {
+    "word": "odium",
+    "pos": "n.",
+    "meaning": "憎惡、招人恨的處境",
+    "example": "The dictator's collaborators shared in the public odium after his fall.",
+    "roots": "源自拉丁文 odium (憎恨) → 強烈的厭惡或因某事而招致的惡名"
+  },
+  {
+    "word": "odoriferous",
+    "pos": "adj.",
+    "meaning": "有氣味的(常指難聞)",
+    "example": "The odoriferous garbage bins hadn't been emptied in weeks.",
+    "roots": "odor (氣味，拉丁文) + fer (帶有，拉丁文 ferre) + -ous (形容詞後綴) → 帶有濃烈氣味的"
+  },
+  {
+    "word": "odyssey",
+    "pos": "n.",
+    "meaning": "長途冒險旅程",
+    "example": "Their two-year odyssey across five continents became the subject of a bestselling memoir.",
+    "roots": "源自希臘史詩《奧德賽》(Odyssey)，主角 Odysseus 歷經漫長返鄉旅程 → 引申為漫長曲折的旅程"
+  },
+  {
+    "word": "oeuvre",
+    "pos": "n.",
+    "meaning": "(藝術家的)全部作品",
+    "example": "Critics consider this novel the crowning achievement of her entire oeuvre.",
+    "roots": "源自法文 oeuvre (作品，源自拉丁文 opera 工作) → 一位藝術家一生創作的總和"
+  },
+  {
+    "word": "oleaginous",
+    "pos": "adj.",
+    "meaning": "油性的；諂媚油滑的",
+    "example": "The oleaginous salesman's compliments made her deeply suspicious of his motives.",
+    "roots": "ole (油，拉丁文 oleum) + -aginous (形容詞後綴) → 像油一樣滑溜，引申為諂媚討好"
+  },
+  {
+    "word": "olfactory",
+    "pos": "adj.",
+    "meaning": "嗅覺的",
+    "example": "Dogs have an olfactory sense far more acute than that of humans.",
+    "roots": "olfact (嗅聞，拉丁文 olfacere，源自 olere 聞 + facere 做) + -ory (形容詞後綴) → 與聞味道有關的"
+  },
+  {
+    "word": "oligarchy",
+    "pos": "n.",
+    "meaning": "寡頭政治",
+    "example": "Critics argued that the country had become an oligarchy controlled by a handful of wealthy families.",
+    "roots": "olig (少數，希臘文 oligos) + arch (統治，希臘文 arkhein) + -y (名詞後綴) → 由少數人掌權的政體"
+  },
+  {
+    "word": "ominous",
+    "pos": "adj.",
+    "meaning": "不祥的、預兆凶險的",
+    "example": "Dark clouds gathered on the horizon, ominous of the storm to come.",
+    "roots": "omin (預兆，拉丁文 omen) + -ous (形容詞後綴) → 帶有壞預兆的"
+  },
+  {
+    "word": "omnibus",
+    "pos": "adj.",
+    "meaning": "綜合的、包羅萬象的",
+    "example": "The publisher released an omnibus edition collecting all three novels in one volume.",
+    "roots": "omni- (全部，拉丁文) + -bus (與格複數字尾，意為「為了所有人」) → 為了涵蓋一切而集合起來的"
+  },
+  {
+    "word": "omnipotent",
+    "pos": "adj.",
+    "meaning": "全能的",
+    "example": "In many religious traditions, God is described as omnipotent, omniscient, and omnipresent.",
+    "roots": "omni- (全部) + potent (有力量的，拉丁文 potens) → 擁有無限的力量"
+  },
+  {
+    "word": "omnipresent",
+    "pos": "adj.",
+    "meaning": "無所不在的",
+    "example": "Smartphones have become omnipresent in modern daily life.",
+    "roots": "omni- (全部) + present (在場的) → 同時存在於每個地方"
+  },
+  {
+    "word": "omniscient",
+    "pos": "adj.",
+    "meaning": "全知的、無所不知的",
+    "example": "The novel is narrated by an omniscient voice who knows every character's thoughts.",
+    "roots": "omni- (全部) + sci (知道，拉丁文 scire) + -ent (形容詞後綴) → 知曉一切事物的"
+  },
+  {
+    "word": "omnivorous",
+    "pos": "adj.",
+    "meaning": "雜食性的；興趣廣泛、來者不拒的",
+    "example": "An omnivorous reader, she devours everything from physics textbooks to detective novels.",
+    "roots": "omni- (全部) + vor (吃，拉丁文 vorare) + -ous (形容詞後綴) → 什麼都吃、什麼都涉獵的"
+  },
+  {
+    "word": "onerous",
+    "pos": "adj.",
+    "meaning": "繁重的、負擔沉重的",
+    "example": "The new regulations impose an onerous burden on small businesses.",
+    "roots": "源自拉丁文 onus (負擔) + -ous (形容詞後綴) → 造成沉重負擔的"
+  },
+  {
+    "word": "onslaught",
+    "pos": "n.",
+    "meaning": "猛攻、猛烈的攻擊",
+    "example": "The small clinic was unprepared for the onslaught of patients during the epidemic.",
+    "roots": "源自荷蘭文 aenslag (攻擊，aen 向著 + slag 打擊) → 對某目標發動的猛烈攻勢"
+  },
+  {
+    "word": "onus",
+    "pos": "n.",
+    "meaning": "責任、負擔",
+    "example": "The onus is on the defense to prove that the contract was never signed.",
+    "roots": "源自拉丁文 onus (重擔) → 落在某人身上的責任"
+  },
+  {
+    "word": "opacity",
+    "pos": "n.",
+    "meaning": "不透明、晦澀難懂",
+    "example": "The opacity of the legal document made it nearly impossible for laypeople to understand.",
+    "roots": "同 opaque 字源 + -ity (名詞後綴) → 不透光、難以看穿的性質"
+  },
+  {
+    "word": "opaque",
+    "pos": "adj.",
+    "meaning": "不透明的；難以理解的",
+    "example": "The windows were painted opaque to block any view from outside.",
+    "roots": "源自拉丁文 opacus (陰暗的，字源進一步來源不確定) → 光線無法穿透的"
+  },
+  {
+    "word": "opine",
+    "pos": "v.",
+    "meaning": "表達意見、認為",
+    "example": "The critic opined that the film's ending felt rushed and unsatisfying.",
+    "roots": "源自拉丁文 opinari (認為、猜想) → 提出個人看法"
+  },
+  {
+    "word": "opinionated",
+    "pos": "adj.",
+    "meaning": "固執己見的",
+    "example": "He's so opinionated that he rarely listens to anyone else's point of view.",
+    "roots": "opinion (意見) + -ated (形容詞後綴，帶有...的) → 過度堅持自己意見的"
+  },
+  {
+    "word": "opportune",
+    "pos": "adj.",
+    "meaning": "適時的、恰當的",
+    "example": "The rain stopped at an opportune moment, just before the outdoor wedding began.",
+    "roots": "ob- (向著) + port (港口，拉丁文 portus) → 船隻正好順風駛入港口的時機"
+  },
+  {
+    "word": "opportunist",
+    "pos": "n.",
+    "meaning": "機會主義者",
+    "example": "The critics called him a political opportunist who switched parties whenever it suited him.",
+    "roots": "同 opportune 字源 + -ist (...的人) → 善於抓住每個有利時機謀利的人"
+  },
+  {
+    "word": "oppress",
+    "pos": "v.",
+    "meaning": "壓迫、壓制",
+    "example": "The regime oppressed dissidents through censorship and imprisonment.",
+    "roots": "op- (向下，ob 的變體) + press (壓，拉丁文 pressare) → 用力壓制使人屈服"
+  },
+  {
+    "word": "oppressive",
+    "pos": "adj.",
+    "meaning": "壓迫性的、令人喘不過氣的",
+    "example": "The oppressive heat made it hard to concentrate on anything.",
+    "roots": "同 oppress 字源 + -ive (形容詞後綴) → 帶來沉重壓力的"
+  },
+  {
+    "word": "opprobrious",
+    "pos": "adj.",
+    "meaning": "辱罵的、可恥的",
+    "example": "He hurled opprobrious insults at the referee after the controversial call.",
+    "roots": "op- (向著) + probr (恥辱，拉丁文 probrum) + -ious (形容詞後綴) → 帶著羞辱意味的言語"
+  },
+  {
+    "word": "opprobrium",
+    "pos": "n.",
+    "meaning": "羞辱、惡名",
+    "example": "The scandal brought public opprobrium down on the entire organization.",
+    "roots": "同 opprobrious 字源 → 因惡行而招致的公眾譴責"
+  },
+  {
+    "word": "optimum",
+    "pos": "adj.",
+    "meaning": "最適宜的、最理想的",
+    "example": "Researchers are trying to identify the optimum temperature for storing the vaccine.",
+    "roots": "源自拉丁文 optimus (最好的，bonus 好的最高級) → 條件最好、最理想的"
+  },
+  {
+    "word": "opulence",
+    "pos": "n.",
+    "meaning": "富裕、奢華",
+    "example": "The palace's opulence, with gold-leafed ceilings and marble floors, overwhelmed the visitors.",
+    "roots": "源自拉丁文 opulentia (富裕，源自 ops 財富) → 極度豐富的財富與奢華"
+  },
+  {
+    "word": "opulent",
+    "pos": "adj.",
+    "meaning": "奢華的、富裕的",
+    "example": "They stayed in an opulent suite overlooking the entire city.",
+    "roots": "同 opulence 字源 + -ent (形容詞後綴) → 極盡奢華的"
+  },
+  {
+    "word": "oracle",
+    "pos": "n.",
+    "meaning": "神諭、預言者",
+    "example": "In ancient Greece, people traveled great distances to consult the oracle at Delphi.",
+    "roots": "源自拉丁文 orare (說話、祈禱) → 代神明傳達話語的人或所在"
+  },
+  {
+    "word": "oracular",
+    "pos": "adj.",
+    "meaning": "神諭般的、含糊隱晦的",
+    "example": "The professor's oracular comments left the students more puzzled than enlightened.",
+    "roots": "同 oracle 字源 + -ar (形容詞後綴) → 如神諭般難以捉摸的"
+  },
+  {
+    "word": "oration",
+    "pos": "n.",
+    "meaning": "正式演說",
+    "example": "The general delivered a stirring oration to rally the troops before battle.",
+    "roots": "or (說話，拉丁文 orare) + -ation (名詞後綴) → 正式場合的說話、演講"
+  },
+  {
+    "word": "oratorical",
+    "pos": "adj.",
+    "meaning": "演說的、雄辯的",
+    "example": "Her oratorical skills were on full display during the debate finals.",
+    "roots": "同 oration 字源 + -ical (形容詞後綴) → 與演說技巧相關的"
+  },
+  {
+    "word": "oratory",
+    "pos": "n.",
+    "meaning": "演講術、雄辯",
+    "example": "His powerful oratory moved even the most skeptical members of the audience.",
+    "roots": "同 oration 字源 + -ory (名詞後綴) → 演說的藝術"
+  },
+  {
+    "word": "ordain",
+    "pos": "v.",
+    "meaning": "命令、頒布；任命(神職)",
+    "example": "She was ordained as a minister after years of theological study.",
+    "roots": "ordin (順序，拉丁文 ordo) + -ain (動詞後綴) → 按規定的秩序正式任命或頒布"
+  },
+  {
+    "word": "ordeal",
+    "pos": "n.",
+    "meaning": "嚴峻考驗、痛苦經歷",
+    "example": "Surviving the earthquake was an ordeal she would never forget.",
+    "roots": "源自古英文 ordal (審判，日耳曼語源，指古代神明裁判的酷刑考驗) → 極其痛苦艱難的經歷"
+  },
+  {
+    "word": "ordinance",
+    "pos": "n.",
+    "meaning": "法令、條例",
+    "example": "The city council passed an ordinance banning single-use plastic bags.",
+    "roots": "ordin (順序，拉丁文 ordo) + -ance (名詞後綴) → 為維持秩序而頒布的規定"
+  },
+  {
+    "word": "orient",
+    "pos": "v.",
+    "meaning": "使熟悉方向/情況、確定方位",
+    "example": "New employees spend their first day being oriented to the company's systems.",
+    "roots": "orient (東方，拉丁文 oriens，源自 oriri 升起，指太陽升起之處) → 依方向確定位置，引申為找到方向"
+  },
+  {
+    "word": "ornate",
+    "pos": "adj.",
+    "meaning": "華麗的、裝飾繁複的",
+    "example": "The cathedral's ceiling was covered in ornate carvings of angels and saints.",
+    "roots": "orn (裝飾，拉丁文 ornare) + -ate (形容詞後綴) → 裝飾得極為繁複的"
+  },
+  {
+    "word": "ornery",
+    "pos": "adj.",
+    "meaning": "脾氣壞的、難相處的",
+    "example": "The ornery old farmer chased trespassers off his land.",
+    "roots": "源自 ordinary 的美國方言變體 → 引申為性情乖僻難纏"
+  },
+  {
+    "word": "orotund",
+    "pos": "adj.",
+    "meaning": "(聲音)洪亮的；(言語)浮誇的",
+    "example": "The politician's orotund speech was full of grand phrases but short on substance.",
+    "roots": "源自拉丁文成語 ore rotundo (以圓潤之口，os 口 + rotundus 圓的) → 從口中發出圓潤宏亮的聲音，引申為浮誇的言辭"
+  },
+  {
+    "word": "orthodox",
+    "pos": "adj.",
+    "meaning": "正統的、傳統的",
+    "example": "The clinic offers both orthodox and alternative treatments for chronic pain.",
+    "roots": "ortho- (正確，希臘文 orthos) + dox (意見，希臘文 doxa) → 符合正確、普遍接受的觀念"
+  },
+  {
+    "word": "orthodoxy",
+    "pos": "n.",
+    "meaning": "正統觀念、傳統信仰",
+    "example": "Questioning the scientific orthodoxy of the time cost him his academic career.",
+    "roots": "同 orthodox 字源 + -y (名詞後綴) → 被普遍接受的正統思想體系"
+  },
+  {
+    "word": "oscillate",
+    "pos": "v.",
+    "meaning": "擺動、搖擺不定",
+    "example": "His mood tends to oscillate between wild enthusiasm and deep despair.",
+    "roots": "源自拉丁文 oscillare (擺動，原指懸掛在樹上隨風搖晃的小面具 oscillum) → 像鐘擺一樣來回擺動"
+  },
+  {
+    "word": "ossify",
+    "pos": "v.",
+    "meaning": "骨化；(思想)僵化",
+    "example": "Without new leadership, the once-innovative company began to ossify into a rigid bureaucracy.",
+    "roots": "os (骨頭，拉丁文 os) + -ify (使...) → 使變得像骨頭一樣堅硬僵化"
+  },
+  {
+    "word": "ostensible",
+    "pos": "adj.",
+    "meaning": "表面上的、佯裝的",
+    "example": "The ostensible reason for the trip was business, but he really went to see his family.",
+    "roots": "源自拉丁文 ostendere (展示) + -ible (形容詞後綴) → 展示在外表、給人看的(未必是真相)"
+  },
+  {
+    "word": "ostentation",
+    "pos": "n.",
+    "meaning": "誇示、炫耀",
+    "example": "Despite her wealth, she lived without any ostentation.",
+    "roots": "同 ostentatious 字源 → 刻意誇耀的行為"
+  },
+  {
+    "word": "ostentatious",
+    "pos": "adj.",
+    "meaning": "招搖炫耀的",
+    "example": "The billionaire's ostentatious mansion featured a gold-plated staircase.",
+    "roots": "同 ostensible 字源 + -atious (形容詞後綴) → 刻意展示以引人注目的"
+  },
+  {
+    "word": "ostracism",
+    "pos": "n.",
+    "meaning": "排斥、放逐",
+    "example": "Whistleblowers often face social ostracism from their former colleagues.",
+    "roots": "源自希臘文 ostrakon (陶片，古雅典人用陶片投票將人放逐) → 被眾人排除在外"
+  },
+  {
+    "word": "ostracize",
+    "pos": "v.",
+    "meaning": "排斥、放逐",
+    "example": "The village ostracized the family after the false rumor spread.",
+    "roots": "同 ostracism 字源 + -ize (動詞後綴) → 以集體行動將某人排除在外"
+  },
+  {
+    "word": "otiose",
+    "pos": "adj.",
+    "meaning": "無用的、多餘的",
+    "example": "Once the merger was finalized, the old committee became entirely otiose.",
+    "roots": "源自拉丁文 otiosus (悠閒的、無事可做的，源自 otium 閒暇) → 因無所事事而顯得多餘"
+  },
+  {
+    "word": "outlandish",
+    "pos": "adj.",
+    "meaning": "古怪的、離奇的",
+    "example": "She showed up to the interview in an outlandish costume that left the panel speechless.",
+    "roots": "out- (外面) + land (土地) + -ish (形容詞後綴) → 像來自外地般陌生怪異的"
+  },
+  {
+    "word": "outstrip",
+    "pos": "v.",
+    "meaning": "超越、勝過",
+    "example": "Demand for the new phone quickly outstripped the factory's production capacity.",
+    "roots": "out- (超過) + strip (源自古英文 strīpan，快速移動) → 移動得比對方更快，超越過去"
+  },
+  {
+    "word": "outwit",
+    "pos": "v.",
+    "meaning": "以機智勝過、智取",
+    "example": "The young detective managed to outwit the seasoned con artist.",
+    "roots": "out- (超過) + wit (智慧) → 在智力較量中勝過對方"
+  },
+  {
+    "word": "overbearing",
+    "pos": "adj.",
+    "meaning": "專橫的、盛氣凌人的",
+    "example": "Her overbearing manager scrutinized every email before it was sent.",
+    "roots": "over- (超過) + bear (施加、承受) + -ing (形容詞後綴) → 把自己的意志強壓在他人之上"
+  },
+  {
+    "word": "overreach",
+    "pos": "v.",
+    "meaning": "做得過火、貪多失敗",
+    "example": "The company overreached by expanding into five new markets at once, and profits collapsed.",
+    "roots": "over- (超過) + reach (伸手觸及) → 伸手伸得太遠而失去平衡"
+  },
+  {
+    "word": "overshadow",
+    "pos": "v.",
+    "meaning": "使相形失色、遮蔽",
+    "example": "Her brilliant performance overshadowed everyone else's in the competition.",
+    "roots": "over- (在...之上) + shadow (陰影) → 投下陰影使他人顯得不重要"
+  },
+  {
+    "word": "overt",
+    "pos": "adj.",
+    "meaning": "公開的、不隱瞞的",
+    "example": "The company faced overt criticism from shareholders over its executive bonuses.",
+    "roots": "源自古法文 overt (openable過去分詞，源自拉丁文 aperire 打開) → 公開攤在陽光下的"
+  },
+  {
+    "word": "overture",
+    "pos": "n.",
+    "meaning": "序曲；試探性的提議",
+    "example": "The government made diplomatic overtures to its former rival in hopes of easing tensions.",
+    "roots": "同 overt 字源 + -ure (名詞後綴) → 為正式行動打開序幕的舉動"
+  },
+  {
+    "word": "overweening",
+    "pos": "adj.",
+    "meaning": "極度自負的、傲慢的",
+    "example": "His overweening confidence led him to ignore every warning sign before the deal collapsed.",
+    "roots": "over- (過度) + ween (源自古英文 wenan，認為、相信) → 對自己的看法過度自信"
+  },
+  {
+    "word": "overwrought",
+    "pos": "adj.",
+    "meaning": "過度緊張的、情緒激動的",
+    "example": "The overwrought mother paced the hospital hallway, unable to sit still.",
+    "roots": "over- (過度) + wrought (work 的古過去分詞，加工) → 被情緒過度加工，緊繃到極點"
+  },
+  {
+    "word": "oxymoron",
+    "pos": "n.",
+    "meaning": "矛盾修飾法(如「震耳欲聾的沉默」)",
+    "example": "'Deafening silence' is a classic oxymoron used to heighten dramatic tension.",
+    "roots": "oxy- (尖銳，希臘文 oxys) + moron (愚笨，希臘文 moros) → 尖銳又愚蠢並存，指字面矛盾卻有修辭效果的說法"
+  },
+  {
+    "word": "pacifist",
+    "pos": "n.",
+    "meaning": "和平主義者",
+    "example": "As a committed pacifist, he refused to serve in the military even during wartime.",
+    "roots": "pac (和平，拉丁文 pax) + -ify (使...) + -ist (...的人) → 致力於促成和平的人"
+  },
+  {
+    "word": "pacify",
+    "pos": "v.",
+    "meaning": "使平靜、安撫",
+    "example": "The mother sang softly to pacify the crying infant.",
+    "roots": "pac (和平，拉丁文 pax) + -ify (使...) → 使進入和平狀態"
+  },
+  {
+    "word": "pact",
+    "pos": "n.",
+    "meaning": "協定、條約",
+    "example": "The two nations signed a non-aggression pact after years of hostility.",
+    "roots": "源自拉丁文 pactum (協議，pangere 訂立的過去分詞) → 雙方共同訂立的約定"
+  },
+  {
+    "word": "paean",
+    "pos": "n.",
+    "meaning": "頌歌、讚美之詞",
+    "example": "The critic's review was less an analysis than a paean to the director's genius.",
+    "roots": "源自希臘文 Paian (阿波羅的別名，用於頌歌開頭的呼喚) → 表達歡慶讚美的歌曲"
+  },
+  {
+    "word": "pageantry",
+    "pos": "n.",
+    "meaning": "盛大的排場、壯觀的儀式",
+    "example": "The coronation was marked by centuries-old pageantry, from golden carriages to trumpet fanfares.",
+    "roots": "pageant (露天歷史劇、盛會，源自中古拉丁文 pagina 舞台場景) + -ry (名詞後綴) → 盛大華麗的公開展示"
+  },
+  {
+    "word": "painstaking",
+    "pos": "adj.",
+    "meaning": "煞費苦心的、細心周到的",
+    "example": "Restoring the ancient fresco required painstaking attention to every tiny crack.",
+    "roots": "pains (辛苦、努力) + taking (投入) → 投入大量心力於細節之中"
+  },
+  {
+    "word": "palatable",
+    "pos": "adj.",
+    "meaning": "可口的；(比喻)可接受的",
+    "example": "The committee revised the proposal into a more palatable version that both sides could accept.",
+    "roots": "palat (上顎、味覺，拉丁文 palatum) + -able (可...的) → 能被味覺或心理所接受的"
+  },
+  {
+    "word": "palate",
+    "pos": "n.",
+    "meaning": "上顎；味覺、鑑賞力",
+    "example": "Years of fine dining had refined her palate considerably.",
+    "roots": "源自拉丁文 palatum (上顎) → 品嚐辨味的能力，引申為鑑賞力"
+  },
+  {
+    "word": "palatial",
+    "pos": "adj.",
+    "meaning": "宮殿般的、富麗堂皇的",
+    "example": "The hotel's palatial lobby featured marble columns and a crystal chandelier.",
+    "roots": "palac (宮殿，拉丁文 palatium，源自羅馬帕拉丁山 Palatine Hill 皇宮所在地) + -ial (形容詞後綴) → 如宮殿般宏偉的"
+  },
+  {
+    "word": "pall",
+    "pos": "v.",
+    "meaning": "變得乏味、失去吸引力(常用 pall on someone)",
+    "example": "The novelty of living abroad began to pall after the first few lonely months.",
+    "roots": "字源不確定，可能是 appall (使驚駭) 的簡化形式，經語意演變成「失去吸引力」"
+  },
+  {
+    "word": "palliate",
+    "pos": "v.",
+    "meaning": "減輕(痛苦)、掩飾(過錯)",
+    "example": "The medication can palliate the symptoms, though it cannot cure the underlying disease.",
+    "roots": "pall (斗篷，拉丁文 pallium) + -iate (動詞後綴) → 用斗篷蓋住，引申為掩飾或減輕"
+  },
+  {
+    "word": "palliative",
+    "pos": "adj.",
+    "meaning": "姑息性的、緩和的",
+    "example": "Palliative care focuses on comfort rather than curing the illness.",
+    "roots": "同 palliate 字源 + -ive (形容詞後綴) → 用以緩解而非根治的"
+  },
+  {
+    "word": "pallid",
+    "pos": "adj.",
+    "meaning": "蒼白的、無血色的",
+    "example": "His pallid face betrayed how little sleep he'd gotten before the exam.",
+    "roots": "源自拉丁文 pallidus (蒼白的，源自 pallere 變蒼白) → 失去血色的"
+  },
+  {
+    "word": "pallor",
+    "pos": "n.",
+    "meaning": "蒼白",
+    "example": "A deathly pallor spread across her face as she read the telegram.",
+    "roots": "同 pallid 字源 → 蒼白的狀態"
+  },
+  {
+    "word": "palpable",
+    "pos": "adj.",
+    "meaning": "可觸知的、明顯的",
+    "example": "The tension in the courtroom was palpable as the jury filed back in.",
+    "roots": "palp (觸摸，拉丁文 palpare) + -able (可...的) → 可以被觸摸感受到的"
+  },
+  {
+    "word": "palter",
+    "pos": "v.",
+    "meaning": "含糊其辭、討價還價地敷衍",
+    "example": "He refused to palter with the truth, even when a lie would have been easier.",
+    "roots": "源自中古英文，字源不確定，一說與 paltry (無價值的) 有關 → 用不誠實含糊的話語搪塞"
+  },
+  {
+    "word": "paltry",
+    "pos": "adj.",
+    "meaning": "微不足道的、無價值的",
+    "example": "The workers went on strike over what they considered a paltry raise.",
+    "roots": "源自方言 palt (垃圾、廢物，日耳曼語源) + -ry (形容詞後綴) → 像垃圾一樣不值一提的"
+  },
+  {
+    "word": "panacea",
+    "pos": "n.",
+    "meaning": "萬靈藥、萬能解方",
+    "example": "Technology alone is no panacea for the education system's deep-rooted problems.",
+    "roots": "pan- (全部，希臘文) + akos (治療) → 能治百病的藥"
+  },
+  {
+    "word": "panache",
+    "pos": "n.",
+    "meaning": "派頭、神采飛揚的風格",
+    "example": "She delivered the presentation with such panache that no one noticed her nerves.",
+    "roots": "源自法文 panache (羽飾，源自拉丁文 pinnaculum 小羽毛)，古時騎士頭盔上的羽飾象徵英勇風采 → 引申為引人注目的自信風格"
+  },
+  {
+    "word": "pandemonium",
+    "pos": "n.",
+    "meaning": "大混亂、喧鬧騷動",
+    "example": "Pandemonium broke out in the stadium when the home team scored in the final second.",
+    "roots": "pan- (全部，希臘文) + daemonium (惡魔，希臘文 daimon) → 原指密爾頓《失樂園》中群魔聚集的地獄首都，引申為極度混亂"
+  },
+  {
+    "word": "panegyric",
+    "pos": "n.",
+    "meaning": "頌詞、讚揚的言論",
+    "example": "The eulogy turned into an extended panegyric that glossed over the senator's flaws.",
+    "roots": "pan- (全部) + agyris (集會，希臘文) → 在公開集會上發表的讚美演說"
+  },
+  {
+    "word": "panoply",
+    "pos": "n.",
+    "meaning": "全副裝備、盛大的展示",
+    "example": "The museum displays a full panoply of medieval armor and weaponry.",
+    "roots": "pan- (全部，希臘文) + hopla (武器，希臘文 hoplon) → 一整套完備的裝備，引申為壯觀的全套展示"
+  },
+  {
+    "word": "pantheon",
+    "pos": "n.",
+    "meaning": "眾神殿；(某領域的)群英殿堂",
+    "example": "She is now regarded as belonging to the pantheon of great twentieth-century novelists.",
+    "roots": "pan- (全部) + theo (神，希臘文 theos) → 供奉所有神明之處，引申為群英薈萃之地"
+  },
+  {
+    "word": "paradigm",
+    "pos": "n.",
+    "meaning": "範例、典範、思維模式",
+    "example": "The discovery forced scientists to abandon the old paradigm and adopt a new theoretical framework.",
+    "roots": "para- (旁邊，希臘文) + deigma (展示，希臘文 deiknynai 顯示) → 放在旁邊供對照的範例"
+  },
+  {
+    "word": "paradox",
+    "pos": "n.",
+    "meaning": "悖論、自相矛盾卻又合理的說法",
+    "example": "It's something of a paradox that the safest cars often encourage the most reckless driving.",
+    "roots": "para- (違反) + dox (意見，希臘文 doxa) → 違反常理意見的說法"
+  },
+  {
+    "word": "paradoxical",
+    "pos": "adj.",
+    "meaning": "自相矛盾的、悖論性的",
+    "example": "It seems paradoxical that cutting the training budget could improve performance, but the data confirmed it.",
+    "roots": "同 paradox 字源 + -ical (形容詞後綴) → 表面矛盾卻可能為真的"
+  },
+  {
+    "word": "paragon",
+    "pos": "n.",
+    "meaning": "模範、典範",
+    "example": "She was held up as a paragon of diplomatic tact throughout her career.",
+    "roots": "源自古義大利文 paragone (試金石，源自希臘文 parakonan 磨利，para- 旁邊 + akone 磨刀石) → 用來檢驗、對照的最高標準"
+  },
+  {
+    "word": "parasitic",
+    "pos": "adj.",
+    "meaning": "寄生的；依附剝削他人的",
+    "example": "Critics described the shell company as a parasitic entity that drained resources from its subsidiaries.",
+    "roots": "para- (旁邊，希臘文) + sitos (食物) → 依附在他人身旁取食維生的"
+  },
+  {
+    "word": "parched",
+    "pos": "adj.",
+    "meaning": "極度乾渴的、乾裂的",
+    "example": "After hours in the desert sun, the hikers were desperately parched.",
+    "roots": "源自中古英文 parchen，字源不確定 → 被曬乾、烤乾的狀態"
+  },
+  {
+    "word": "pariah",
+    "pos": "n.",
+    "meaning": "被排斥的人、賤民",
+    "example": "After the fraud was exposed, he became a pariah in the business community.",
+    "roots": "源自坦米爾語 paraiyar (印度種姓制度中最低階層的擊鼓人) → 被社會排斥在外的人"
+  },
+  {
+    "word": "parity",
+    "pos": "n.",
+    "meaning": "對等、平等",
+    "example": "The union fought for wage parity between male and female employees doing the same job.",
+    "roots": "par (相等，拉丁文 par) + -ity (名詞後綴) → 彼此相等的狀態"
+  },
+  {
+    "word": "parochial",
+    "pos": "adj.",
+    "meaning": "地方性的、眼界狹隘的",
+    "example": "His parochial view of world affairs rarely extended beyond his own hometown's concerns.",
+    "roots": "paroch (教區，拉丁文 parochia，源自希臘文 para- 旁邊 + oikos 住所) + -ial (形容詞後綴) → 侷限在小教區範圍內的狹隘視野"
+  },
+  {
+    "word": "parody",
+    "pos": "n.",
+    "meaning": "諷刺模仿作品",
+    "example": "The comedy sketch was a sharp parody of the president's press conferences.",
+    "roots": "para- (旁邊、伴隨) + ode (歌曲，希臘文 oide) → 模仿原作、伴隨其旁的滑稽版本"
+  },
+  {
+    "word": "paroxysm",
+    "pos": "n.",
+    "meaning": "(情感、動作的)突發、陣發",
+    "example": "She was seized by a paroxysm of coughing that lasted several minutes.",
+    "roots": "para- (超越) + oxys (尖銳，希臘文) → 症狀或情緒突然尖銳地爆發"
+  },
+  {
+    "word": "parry",
+    "pos": "v.",
+    "meaning": "擋開、避開(攻擊或問題)",
+    "example": "The senator skillfully parried every hostile question from the reporters.",
+    "roots": "源自法文 parer (防禦，源自拉丁文 parare 準備) → 準備好擋開來襲的攻擊"
+  },
+  {
+    "word": "parsimonious",
+    "pos": "adj.",
+    "meaning": "過度節儉的、吝嗇的",
+    "example": "Despite his enormous fortune, he remained famously parsimonious, reusing tea bags multiple times.",
+    "roots": "parci (節省，拉丁文 parcere 的字根變體) + -monious (形容詞後綴) → 極度節省、不願花費的"
+  },
+  {
+    "word": "parsimony",
+    "pos": "n.",
+    "meaning": "過度節儉、吝嗇",
+    "example": "The company's parsimony extended even to rationing office supplies.",
+    "roots": "同 parsimonious 字源 → 過度節省的態度"
+  },
+  {
+    "word": "partisan",
+    "pos": "adj.",
+    "meaning": "黨派的、偏袒一方的",
+    "example": "The debate quickly became partisan, with each side refusing to consider the other's evidence.",
+    "roots": "part (部分，拉丁文 pars) + -isan (...的人) → 只站在某一部分立場的"
+  },
+  {
+    "word": "parvenu",
+    "pos": "n.",
+    "meaning": "暴發戶、新貴",
+    "example": "Old society sneered at the parvenu who had bought his way into their exclusive club.",
+    "roots": "源自法文 parvenu (到達的過去分詞，parvenir 抵達) → 剛剛抵達某種社會地位、尚未被真正接受的人"
+  },
+  {
+    "word": "pastiche",
+    "pos": "n.",
+    "meaning": "拼湊模仿之作",
+    "example": "The film is a loving pastiche of 1980s action movies, borrowing freely from its predecessors.",
+    "roots": "源自義大利文 pasticcio (餡餅，引申為大雜燴) → 混合多種風格拼湊而成的作品"
+  },
+  {
+    "word": "patent",
+    "pos": "adj.",
+    "meaning": "明顯的、顯而易見的",
+    "example": "His patent disregard for the rules eventually got him fired.",
+    "roots": "源自拉丁文 patere (敞開、顯露) → 敞開在外，一目瞭然的"
+  },
+  {
+    "word": "paternalistic",
+    "pos": "adj.",
+    "meaning": "家長式作風的",
+    "example": "Employees resented the company's paternalistic policies that dictated even their off-hours behavior.",
+    "roots": "pater (父親，拉丁文) + -alistic (形容詞後綴) → 像父親般替他人決定一切的作風"
+  },
+  {
+    "word": "pathological",
+    "pos": "adj.",
+    "meaning": "病態的、不正常的",
+    "example": "His pathological fear of germs made even shaking hands unbearable.",
+    "roots": "patho (疾病，希臘文 pathos) + logic (學說) → 源自疾病的、不健康的"
+  },
+  {
+    "word": "pathos",
+    "pos": "n.",
+    "meaning": "悲愴感、感傷情懷",
+    "example": "The final scene's quiet pathos left the entire audience in tears.",
+    "roots": "源自希臘文 pathos (苦難、情感) → 引發同情與哀傷的特質"
+  },
+  {
+    "word": "patina",
+    "pos": "n.",
+    "meaning": "(表面因年久形成的)光澤、氣質",
+    "example": "The antique desk had acquired a warm patina after a century of use.",
+    "roots": "源自拉丁文 patina (淺盤、鍋)，字義後轉指金屬或木器表面因年久氧化而生成的色澤 → 物體因歲月而生成的表層色澤"
+  },
+  {
+    "word": "patrician",
+    "pos": "adj.",
+    "meaning": "貴族的、有貴族氣質的",
+    "example": "Her patrician manner made it clear she had grown up among old money.",
+    "roots": "pater (父親，拉丁文) → 古羅馬「元老之子」的貴族階級"
+  },
+  {
+    "word": "patronizing",
+    "pos": "adj.",
+    "meaning": "高高在上的、屈尊俯就的",
+    "example": "His patronizing tone made her feel like a child being lectured.",
+    "roots": "patron (贊助人、庇護者，拉丁文 patronus) + -izing (形容詞後綴) → 以居高臨下的姿態對待他人"
+  },
+  {
+    "word": "paucity",
+    "pos": "n.",
+    "meaning": "缺乏、不足",
+    "example": "The report highlighted a paucity of affordable housing in the city center.",
+    "roots": "pauc (少，拉丁文 paucus) + -ity (名詞後綴) → 數量稀少的狀態"
+  },
+  {
+    "word": "peccadillo",
+    "pos": "n.",
+    "meaning": "小過失、輕微的錯誤",
+    "example": "The tabloids treated the minor peccadillo as if it were a major scandal.",
+    "roots": "源自西班牙文 pecadillo (小罪，源自拉丁文 peccare 犯錯的指小詞) → 微不足道的小錯"
+  },
+  {
+    "word": "peculate",
+    "pos": "v.",
+    "meaning": "侵吞(公款)、盜用",
+    "example": "The treasurer was accused of peculating funds meant for the orphanage.",
+    "roots": "源自拉丁文 peculari (盜用公款，源自 peculium 私產) → 把公有財產據為己有"
+  },
+  {
+    "word": "pecuniary",
+    "pos": "adj.",
+    "meaning": "金錢上的、財務的",
+    "example": "The lawsuit sought pecuniary damages for the losses caused by the breach of contract.",
+    "roots": "pecu (牲畜，拉丁文，古代財富的計量單位) + -iary (形容詞後綴) → 與金錢財富相關的"
+  },
+  {
+    "word": "pedagogue",
+    "pos": "n.",
+    "meaning": "教師、教育者(常含賣弄學問意味)",
+    "example": "The old pedagogue insisted on strict grammar drills every morning.",
+    "roots": "paid (兒童，希臘文 pais) + agogos (引導者，希臘文 agein 引導) → 引導兒童學習的人"
+  },
+  {
+    "word": "pedant",
+    "pos": "n.",
+    "meaning": "學究、拘泥細節的人",
+    "example": "The editor was a pedant who would reject a manuscript over a single misplaced comma.",
+    "roots": "可能與 pedagogue 同源(經義大利文 pedante 演變)，字源不完全確定 → 過度拘泥於形式規則的人"
+  },
+  {
+    "word": "pedantic",
+    "pos": "adj.",
+    "meaning": "學究氣的、賣弄學問的",
+    "example": "His pedantic insistence on correcting everyone's grammar made him tiresome company.",
+    "roots": "同 pedant 字源 + -ic (形容詞後綴) → 過分講究細節規則的"
+  },
+  {
+    "word": "pedantry",
+    "pos": "n.",
+    "meaning": "學究作風、賣弄學問",
+    "example": "The professor's lectures were bogged down in pedantry rather than big ideas.",
+    "roots": "同 pedant 字源 + -ry (名詞後綴) → 過度拘泥細節的作風"
+  },
+  {
+    "word": "pedestrian",
+    "pos": "adj.",
+    "meaning": "平淡無奇的、乏味的",
+    "example": "The film's pedestrian plot failed to hold the audience's attention.",
+    "roots": "ped (腳，拉丁文 pes) + -estrian (形容詞後綴) → 徒步而非飛馳，引申為平凡無奇的"
+  },
+  {
+    "word": "pejorative",
+    "pos": "adj.",
+    "meaning": "貶損的、輕蔑的",
+    "example": "The word was originally neutral but has since taken on a pejorative meaning.",
+    "roots": "pejor (更壞，拉丁文比較級) + -ative (形容詞後綴) → 使意義變得更差、帶有貶意的"
+  },
+  {
+    "word": "pell-mell",
+    "pos": "adv.",
+    "meaning": "慌亂地、雜亂無章地",
+    "example": "The shoppers rushed pell-mell toward the doors the moment the sale began.",
+    "roots": "源自法文 pêle-mêle (混雜地，可能源自 mesler「混合」的重複型態) → 匆忙混亂、毫無秩序地"
+  },
+  {
+    "word": "pellucid",
+    "pos": "adj.",
+    "meaning": "清澈的、清晰易懂的",
+    "example": "Her pellucid prose made even the most complex economic theories easy to follow.",
+    "roots": "per- (完全) + luc (光，拉丁文 lucere) → 完全透光的，引申為清澈明晰的"
+  },
+  {
+    "word": "penance",
+    "pos": "n.",
+    "meaning": "(為贖罪而做的)苦行、懺悔",
+    "example": "As penance for his betrayal, he spent years quietly helping the family he had wronged.",
+    "roots": "源自拉丁文 paenitere (後悔) → 為彌補過錯而自願承受的苦行"
+  },
+  {
+    "word": "penchant",
+    "pos": "n.",
+    "meaning": "嗜好、強烈偏好",
+    "example": "She has always had a penchant for dramatic, oversized jewelry.",
+    "roots": "源自法文 penchant (傾斜的現在分詞，pencher 傾斜，拉丁文 pendere) → 心向某事物傾斜，即偏好"
+  },
+  {
+    "word": "penitence",
+    "pos": "n.",
+    "meaning": "悔恨、懺悔",
+    "example": "His public apology was seen by some as genuine penitence and by others as mere theater.",
+    "roots": "同 penance 字源 + -ence (名詞後綴) → 對過錯感到後悔的心理狀態"
+  },
+  {
+    "word": "penitent",
+    "pos": "adj.",
+    "meaning": "悔悟的、懺悔的",
+    "example": "The penitent employee returned every item he had stolen over the years.",
+    "roots": "同 penitence 字源 + -ent (形容詞後綴) → 表現出後悔悔改態度的"
+  },
+  {
+    "word": "pensive",
+    "pos": "adj.",
+    "meaning": "沉思的、憂鬱地思索的",
+    "example": "She stared out the train window with a pensive expression, lost in thought.",
+    "roots": "pens (思考，拉丁文 pensare，pendere 的頻繁體) + -ive (形容詞後綴) → 陷入沉思的"
+  },
+  {
+    "word": "penurious",
+    "pos": "adj.",
+    "meaning": "極度貧窮的；吝嗇的",
+    "example": "The penurious years after the war shaped his lifelong habit of saving everything.",
+    "roots": "源自拉丁文 penuria (缺乏、貧窮) + -ous (形容詞後綴) → 處於匱乏狀態的"
+  },
+  {
+    "word": "penury",
+    "pos": "n.",
+    "meaning": "赤貧、貧困",
+    "example": "The family slipped into penury after the factory closed down.",
+    "roots": "同 penurious 字源 → 極度貧窮的狀態"
+  },
+  {
+    "word": "peon",
+    "pos": "n.",
+    "meaning": "苦力、低階勞工",
+    "example": "As the newest hire, he was treated like a peon, stuck with all the tedious paperwork.",
+    "roots": "源自西班牙文 peón (步兵、勞工，源自拉丁文 pes 腳) → 從事基層粗活的勞工"
+  },
+  {
+    "word": "perambulate",
+    "pos": "v.",
+    "meaning": "漫步、巡視",
+    "example": "Every evening he would perambulate the same three blocks around his apartment.",
+    "roots": "per- (貫穿) + ambul (走，拉丁文 ambulare) → 走遍整個範圍"
+  },
+  {
+    "word": "perdition",
+    "pos": "n.",
+    "meaning": "永劫沉淪、毀滅(尤指靈魂)",
+    "example": "The preacher warned that a life of sin would lead straight to perdition.",
+    "roots": "per- (完全) + dit (拉丁文 perdere「失去、毀滅」，per- + dare 給予) → 完全失去(靈魂)，即墮入地獄"
+  },
+  {
+    "word": "peremptory",
+    "pos": "adj.",
+    "meaning": "專斷的、不容置疑的",
+    "example": "Her peremptory tone left no room for discussion or disagreement.",
+    "roots": "per- (完全) + empt (取得，拉丁文 emere，見於 perimere 消滅) → 完全確定不可更改的命令語氣"
+  },
+  {
+    "word": "perennial",
+    "pos": "adj.",
+    "meaning": "長期存在的、反覆出現的",
+    "example": "Traffic congestion remains a perennial complaint among residents of the city.",
+    "roots": "per- (貫穿) + ann (年，拉丁文 annus) + -ial (形容詞後綴) → 貫穿多年持續存在的"
+  },
+  {
+    "word": "perfidious",
+    "pos": "adj.",
+    "meaning": "背信棄義的、不忠的",
+    "example": "History remembers him as a perfidious ally who abandoned his allies at the first sign of trouble.",
+    "roots": "per- (使...落空) + fid (信任，拉丁文 fides) + -ious (形容詞後綴) → 使信任落空、背叛的"
+  },
+  {
+    "word": "perfidy",
+    "pos": "n.",
+    "meaning": "背信棄義",
+    "example": "The treaty's collapse was blamed on the perfidy of one of the signatory nations.",
+    "roots": "同 perfidious 字源 → 背叛信任的行為"
+  },
+  {
+    "word": "perfunctory",
+    "pos": "adj.",
+    "meaning": "敷衍了事的、草率的",
+    "example": "He gave the report only a perfunctory glance before signing off on it.",
+    "roots": "per- (完全，此處指走過場) + funct (執行，拉丁文 fungi) → 例行公事般地執行，不投入心力"
+  },
+  {
+    "word": "peripatetic",
+    "pos": "adj.",
+    "meaning": "四處遊走的、巡迴的",
+    "example": "Her peripatetic childhood, spent moving between six countries, gave her a rare fluency in languages.",
+    "roots": "peri- (周圍，希臘文) + pat (走，希臘文 patein) → 四處走動不定居的"
+  },
+  {
+    "word": "peripheral",
+    "pos": "adj.",
+    "meaning": "邊緣的、次要的",
+    "example": "The committee decided the issue was peripheral to the main investigation and set it aside.",
+    "roots": "peri- (周圍) + pher (攜帶，希臘文 pherein) → 位於邊緣周圍而非中心的"
+  },
+  {
+    "word": "periphery",
+    "pos": "n.",
+    "meaning": "外圍、邊緣",
+    "example": "Small startups often operate on the periphery of an industry before disrupting it entirely.",
+    "roots": "同 peripheral 字源 → 中心以外的邊緣地帶"
+  },
+  {
+    "word": "pernicious",
+    "pos": "adj.",
+    "meaning": "有害的、致命的(尤指隱伏漸進的傷害)",
+    "example": "The pernicious effects of the misinformation campaign took years to undo.",
+    "roots": "per- (完全) + nec (殺死，拉丁文 necare) → 造成徹底毀滅性傷害的"
+  },
+  {
+    "word": "perpetrate",
+    "pos": "v.",
+    "meaning": "犯(罪)、施行(惡行)",
+    "example": "The commission was formed to investigate the atrocities perpetrated during the civil war.",
+    "roots": "per- (完全) + patr (完成，拉丁文 patrare) → 徹底完成(通常指壞事)"
+  },
+  {
+    "word": "perpetuate",
+    "pos": "v.",
+    "meaning": "使永久化、使持續存在",
+    "example": "Critics argued that the policy would only perpetuate the cycle of poverty.",
+    "roots": "per- (貫穿) + petu (拉丁文 perpetuus「永恆的」相關字根) → 使持續貫穿下去"
+  },
+  {
+    "word": "perquisite",
+    "pos": "n.",
+    "meaning": "額外福利、特權",
+    "example": "A company car was one of the perquisites that came with his new executive position.",
+    "roots": "per- (完全) + quisit (尋求，拉丁文 quaerere) → 額外爭取到的好處"
+  },
+  {
+    "word": "persiflage",
+    "pos": "n.",
+    "meaning": "輕鬆戲謔的談話、俏皮話",
+    "example": "Beneath the witty persiflage of the dinner conversation lay a serious disagreement.",
+    "roots": "源自法文 persifler (嘲弄，per- 貫穿 + siffler 吹口哨、噓聲) → 以輕佻語調戲弄式的談話"
+  },
+  {
+    "word": "perspicacious",
+    "pos": "adj.",
+    "meaning": "有洞察力的、敏銳的",
+    "example": "The perspicacious detective noticed the inconsistency that everyone else had missed.",
+    "roots": "per- (完全) + spic (看，拉丁文 specere) + -acious (形容詞後綴) → 能看穿事物本質的"
+  },
+  {
+    "word": "perspicacity",
+    "pos": "n.",
+    "meaning": "洞察力、敏銳",
+    "example": "Her perspicacity in reading market trends made her firm enormously profitable.",
+    "roots": "同 perspicacious 字源 + -ity (名詞後綴) → 敏銳洞察的能力"
+  },
+  {
+    "word": "perspicuous",
+    "pos": "adj.",
+    "meaning": "(表達)清晰易懂的",
+    "example": "The textbook's perspicuous explanations made even quantum mechanics approachable for beginners.",
+    "roots": "per- (完全) + spic (看，拉丁文 specere) + -uous (形容詞後綴) → 讓人能完全看清楚、理解的"
+  },
+  {
+    "word": "pertinacious",
+    "pos": "adj.",
+    "meaning": "堅持不懈的、固執的",
+    "example": "The pertinacious reporter kept calling the office every day until she got an answer.",
+    "roots": "per- (貫穿、始終) + tenac (堅持，拉丁文 tenax，源自 tenere 握住) → 始終緊抓不放的"
+  },
+  {
+    "word": "perturb",
+    "pos": "v.",
+    "meaning": "使不安、擾亂",
+    "example": "The unexpected drop in sales perturbed the entire management team.",
+    "roots": "per- (完全) + turb (擾亂，拉丁文 turbare) → 徹底攪亂使人心神不寧"
+  },
+  {
+    "word": "peruse",
+    "pos": "v.",
+    "meaning": "仔細閱讀、詳讀",
+    "example": "She spent the afternoon perusing the contract line by line before signing it.",
+    "roots": "per- (完全) + use (使用，拉丁文 usus) → 徹底運用心思去讀"
+  },
+  {
+    "word": "pervade",
+    "pos": "v.",
+    "meaning": "瀰漫、遍佈",
+    "example": "A sense of unease pervaded the office after the layoffs were announced.",
+    "roots": "per- (貫穿) + vad (走，拉丁文 vadere) → 走遍每個角落，瀰漫其中"
+  },
+  {
+    "word": "pervasive",
+    "pos": "adj.",
+    "meaning": "瀰漫的、無孔不入的",
+    "example": "The company's pervasive influence extends into nearly every sector of the economy.",
+    "roots": "同 pervade 字源 + -ive (形容詞後綴) → 廣泛滲透瀰漫的"
+  },
+  {
+    "word": "perverse",
+    "pos": "adj.",
+    "meaning": "悖逆的、故意作對的；反常的",
+    "example": "He took a perverse pleasure in disagreeing with whatever the group decided.",
+    "roots": "per- (完全) + vers (轉，拉丁文 vertere) → 完全轉向反方向的，違反常理的"
+  },
+  {
+    "word": "pestilence",
+    "pos": "n.",
+    "meaning": "瘟疫、禍害",
+    "example": "The novel is set during a pestilence that wiped out half the city's population.",
+    "roots": "源自拉丁文 pestis (瘟疫、災禍) → 大規模流行的致命疾病"
+  },
+  {
+    "word": "petrify",
+    "pos": "v.",
+    "meaning": "使石化；使嚇呆",
+    "example": "The sight of the snake petrified her; she couldn't move a muscle.",
+    "roots": "petr (石頭，希臘文 petra) + -ify (使...) → 使變成石頭般僵硬不動"
+  },
+  {
+    "word": "petulance",
+    "pos": "n.",
+    "meaning": "易怒、鬧脾氣",
+    "example": "The toddler's petulance over the smallest inconvenience exhausted his parents.",
+    "roots": "源自拉丁文 petulans (放肆的，源自 petere 攻擊) + -ce (名詞後綴) → 動輒發脾氣的性情"
+  },
+  {
+    "word": "petulant",
+    "pos": "adj.",
+    "meaning": "鬧脾氣的、易怒的",
+    "example": "He gave a petulant sigh when asked to redo the assignment.",
+    "roots": "同 petulance 字源 → 表現出任性易怒的"
+  },
+  {
+    "word": "phalanx",
+    "pos": "n.",
+    "meaning": "方陣、緊密團結的一群人",
+    "example": "A phalanx of lawyers accompanied the CEO into the courtroom.",
+    "roots": "源自希臘文 phalanx (原指圓木，引申為古代重裝步兵密集方陣) → 緊密排列、共同行動的一群人"
+  },
+  {
+    "word": "phantasm",
+    "pos": "n.",
+    "meaning": "幻影、幻覺",
+    "example": "The ghost story described a phantasm that appeared only at midnight.",
+    "roots": "源自希臘文 phantasma (幻影，源自 phainein 顯現) → 顯現卻不真實存在的影像"
+  },
+  {
+    "word": "philanderer",
+    "pos": "n.",
+    "meaning": "玩弄感情的男子、花花公子",
+    "example": "The novel's protagonist is a notorious philanderer who breaks hearts across three continents.",
+    "roots": "phil (愛，希臘文 philos) + andr (男人，希臘文 aner) → 原指「愛男人的人」，後轉指四處拈花惹草的男子"
+  },
+  {
+    "word": "philanthropic",
+    "pos": "adj.",
+    "meaning": "慈善的、博愛的",
+    "example": "The foundation's philanthropic work has funded hundreds of scholarships for low-income students.",
+    "roots": "phil (愛) + anthrop (人類，希臘文 anthropos) → 愛全人類的"
+  },
+  {
+    "word": "philanthropy",
+    "pos": "n.",
+    "meaning": "慈善事業、博愛",
+    "example": "After selling his company, he devoted the rest of his life to philanthropy.",
+    "roots": "同 philanthropic 字源 → 對人類福祉的無私關懷與資助"
+  },
+  {
+    "word": "philippic",
+    "pos": "n.",
+    "meaning": "猛烈抨擊的演說",
+    "example": "The senator's speech was less a policy proposal than a philippic against his rivals.",
+    "roots": "源自希臘演說家 Demosthenes 抨擊馬其頓王 Philip 二世的系列演說 Philippics → 措辭激烈的抨擊性演說"
+  },
+  {
+    "word": "philistine",
+    "pos": "n.",
+    "meaning": "缺乏文化修養的人、俗人",
+    "example": "He was dismissed as a philistine for admitting he'd never read a single classic novel.",
+    "roots": "源自聖經中與以色列人為敵的 Philistines (非利士人) → 引申為對藝術文化毫無鑑賞力的人"
+  },
+  {
+    "word": "phlegmatic",
+    "pos": "adj.",
+    "meaning": "冷靜的、不易激動的",
+    "example": "Even in the middle of the crisis, the captain remained phlegmatic and gave calm orders.",
+    "roots": "源自希臘文 phlegma (痰，古代體液學說中代表冷靜性格的體液) → 性情冷靜不易動怒的"
+  },
+  {
+    "word": "physiognomy",
+    "pos": "n.",
+    "meaning": "面相、外貌特徵",
+    "example": "The old novel relies on physiognomy, describing villains with sharp, cruel features.",
+    "roots": "physis (自然，希臘文) + gnomon (判斷者，希臘文 gignoskein 知道) → 透過外貌判斷內在性格的相術"
+  },
+  {
+    "word": "picaresque",
+    "pos": "adj.",
+    "meaning": "(小說)流浪漢體的、描寫流浪冒險的",
+    "example": "The picaresque novel follows a roguish hero through a series of loosely connected adventures.",
+    "roots": "源自西班牙文 pícaro (流浪漢、無賴) → 以流浪漢冒險經歷為主題的文學風格"
+  },
+  {
+    "word": "picayune",
+    "pos": "adj.",
+    "meaning": "微不足道的、瑣碎的",
+    "example": "He was known for obsessing over picayune details while ignoring the bigger picture.",
+    "roots": "源自法文 picaillon (一種小面額硬幣) → 像小錢幣一樣不值一提的"
+  },
+  {
+    "word": "piebald",
+    "pos": "adj.",
+    "meaning": "花斑的、雜色的(尤指馬)",
+    "example": "A piebald pony grazed lazily in the corner of the field.",
+    "roots": "pie (喜鵲，因其黑白相間的羽色) + bald (源自 balled，帶有白斑的) → 像喜鵲一樣黑白花斑的"
+  },
+  {
+    "word": "piety",
+    "pos": "n.",
+    "meaning": "虔誠、虔敬",
+    "example": "Her quiet piety was evident in her daily visits to the chapel.",
+    "roots": "源自拉丁文 pietas (虔誠、孝順) → 對信仰或義務的忠誠態度"
+  },
+  {
+    "word": "pillage",
+    "pos": "v.",
+    "meaning": "掠奪、劫掠",
+    "example": "Retreating soldiers pillaged the villages along their route, leaving nothing behind.",
+    "roots": "源自古法文 pillier (剝奪、搶劫) → 大肆搶奪財物"
+  },
+  {
+    "word": "pillory",
+    "pos": "v.",
+    "meaning": "公開嘲弄、抨擊",
+    "example": "The press pilloried the minister for weeks after the leaked memo surfaced.",
+    "roots": "源自古法文 pilori，字源不確定，原指中世紀公開示眾用的頸手枷 → 引申為公開羞辱抨擊"
+  },
+  {
+    "word": "pinnacle",
+    "pos": "n.",
+    "meaning": "頂點、顛峰",
+    "example": "Winning the championship marked the pinnacle of her athletic career.",
+    "roots": "源自拉丁文 pinna (尖端、翅膀) + -acle (名詞後綴) → 建築物或成就的最高點"
+  },
+  {
+    "word": "pious",
+    "pos": "adj.",
+    "meaning": "虔誠的、篤信宗教的",
+    "example": "Her pious grandmother attended mass every single morning without fail.",
+    "roots": "同 piety 字源 → 表現出宗教虔誠態度的"
+  },
+  {
+    "word": "piquant",
+    "pos": "adj.",
+    "meaning": "辛辣開胃的；饒富趣味、刺激的",
+    "example": "The sauce had a piquant tang that woke up every dish it touched.",
+    "roots": "源自法文 piquer (刺、扎) → 像被扎了一下般帶有刺激的味道或趣味"
+  },
+  {
+    "word": "pique",
+    "pos": "v.",
+    "meaning": "激起、引發(興趣、好奇心等)",
+    "example": "The mysterious headline was enough to pique her curiosity.",
+    "roots": "同 piquant 字源 → 刺激起某種情緒或興趣"
+  },
+  {
+    "word": "pithy",
+    "pos": "adj.",
+    "meaning": "簡潔有力的、言簡意賅的",
+    "example": "His pithy one-liner summed up the entire debate better than any lengthy speech could.",
+    "roots": "pith (植物的髓心，引申為核心要義) + -y (形容詞後綴) → 直達核心、不帶贅語的"
+  },
+  {
+    "word": "pittance",
+    "pos": "n.",
+    "meaning": "微薄的收入或報酬",
+    "example": "The factory workers were paid a mere pittance despite the grueling hours.",
+    "roots": "源自古法文 pitance (修道院分配的少量食物，源自拉丁文 pietas 虔誠、憐憫) → 少得可憐的一份"
+  },
+  {
+    "word": "placate",
+    "pos": "v.",
+    "meaning": "安撫、平息(怒氣)",
+    "example": "The airline offered free upgrades to placate the furious passengers.",
+    "roots": "plac (使平靜，拉丁文 placare) → 使人平靜下來"
+  },
+  {
+    "word": "placid",
+    "pos": "adj.",
+    "meaning": "平靜的、溫和的",
+    "example": "The lake was placid, its surface undisturbed by even the slightest breeze.",
+    "roots": "同 placate 字源 + -id (形容詞後綴) → 呈現平靜狀態的"
+  },
+  {
+    "word": "plaintive",
+    "pos": "adj.",
+    "meaning": "哀怨的、悲傷的",
+    "example": "The violin played a plaintive melody that matched the mood of the funeral.",
+    "roots": "plain (哀嘆，拉丁文 plangere) + -tive (形容詞後綴) → 帶有哀傷情緒的"
+  },
+  {
+    "word": "plangent",
+    "pos": "adj.",
+    "meaning": "(聲音)悲愴回響的、洪亮而哀傷的",
+    "example": "The plangent toll of the church bell echoed across the empty valley.",
+    "roots": "源自拉丁文 plangere (悲嘆、捶打) → 發出如悲嘆般迴盪的聲響"
+  },
+  {
+    "word": "platitude",
+    "pos": "n.",
+    "meaning": "陳腔濫調",
+    "example": "Instead of real advice, the speaker offered only tired platitudes about following your dreams.",
+    "roots": "源自法文 plat (平淡的) + -itude (名詞後綴) → 平淡無新意的話語"
+  },
+  {
+    "word": "plaudit",
+    "pos": "n.",
+    "meaning": "(常用複數)喝采、讚揚",
+    "example": "The young violinist received plaudits from critics after her debut performance.",
+    "roots": "源自拉丁文 plaudere (鼓掌) → 表示讚許的鼓掌喝采"
+  },
+  {
+    "word": "plausible",
+    "pos": "adj.",
+    "meaning": "貌似合理的、可信的",
+    "example": "Her explanation for the missing funds sounded plausible, but the auditors remained suspicious.",
+    "roots": "plaus (鼓掌，拉丁文 plaudere) + -ible (可...的) → 值得被鼓掌認可、看似合理的"
+  },
+  {
+    "word": "plebeian",
+    "pos": "adj.",
+    "meaning": "平民的、粗俗的",
+    "example": "The senator's plebeian tastes in food surprised his aristocratic dinner guests.",
+    "roots": "源自拉丁文 plebs (平民階級) + -eian (形容詞後綴) → 屬於一般平民的"
+  },
+  {
+    "word": "plebiscite",
+    "pos": "n.",
+    "meaning": "公民投票、全民公決",
+    "example": "The government called a plebiscite to decide whether the region should gain independence.",
+    "roots": "pleb (平民，拉丁文 plebs) + scit (法令，拉丁文 scitum) → 由平民投票決定的法令"
+  },
+  {
+    "word": "plenary",
+    "pos": "adj.",
+    "meaning": "全體出席的、完全的",
+    "example": "All delegates were required to attend the plenary session on the final day of the conference.",
+    "roots": "源自拉丁文 plenus (充滿的、完全的) → 完整、無所欠缺的"
+  },
+  {
+    "word": "plenipotentiary",
+    "pos": "n.",
+    "meaning": "全權代表",
+    "example": "The treaty was signed by plenipotentiaries representing all twelve nations.",
+    "roots": "plen (充滿，拉丁文 plenus) + potent (力量，拉丁文 potens) → 被賦予完整權力代表國家行事的人"
+  },
+  {
+    "word": "plenitude",
+    "pos": "n.",
+    "meaning": "豐富、充足",
+    "example": "The harvest festival celebrated the plenitude of the autumn crops.",
+    "roots": "同 plenary 字源 + -itude (名詞後綴) → 充盈豐富的狀態"
+  },
+  {
+    "word": "plethora",
+    "pos": "n.",
+    "meaning": "過多、過剩",
+    "example": "The buffet offered a plethora of desserts, far more than anyone could sample in one sitting.",
+    "roots": "源自希臘文 plethein (充滿、變滿) → 多到滿溢出來的程度"
+  },
+  {
+    "word": "pliable",
+    "pos": "adj.",
+    "meaning": "易彎曲的、順從的",
+    "example": "The willow's pliable branches bent easily in the wind without snapping.",
+    "roots": "pli (彎曲，拉丁文 plicare) + -able (可...的) → 容易被彎折或說服的"
+  },
+  {
+    "word": "pliant",
+    "pos": "adj.",
+    "meaning": "柔順的、易受影響的",
+    "example": "The dictator surrounded himself with pliant advisors who never challenged his decisions.",
+    "roots": "同 pliable 字源 + -ant (形容詞後綴) → 容易屈服或彎曲的"
+  },
+  {
+    "word": "plodding",
+    "pos": "adj.",
+    "meaning": "步履沉重的、進展緩慢的",
+    "example": "The plodding pace of the negotiations frustrated both delegations.",
+    "roots": "plod (沉重緩慢地走，擬聲詞) + -ing (形容詞後綴) → 緩慢吃力地前進的"
+  },
+  {
+    "word": "ploy",
+    "pos": "n.",
+    "meaning": "花招、策略",
+    "example": "Offering a free trial was just a ploy to collect customers' credit card information.",
+    "roots": "源自 employ 的縮略形式(法文 employer 使用) → 為達目的而使用的手段"
+  },
+  {
+    "word": "plucky",
+    "pos": "adj.",
+    "meaning": "勇敢的、有膽量的",
+    "example": "The plucky young reporter refused to back down despite threats from the corporation.",
+    "roots": "pluck (原指拔除、拉扯，引申為「有膽量豁出去」的勇氣) + -y (形容詞後綴) → 展現出勇氣的"
+  },
+  {
+    "word": "plumb",
+    "pos": "v.",
+    "meaning": "探究、深入探測(深度)",
+    "example": "The documentary plumbs the depths of the financial crisis to find its root causes.",
+    "roots": "源自拉丁文 plumbum (鉛，古代用鉛錘測量深度) → 用鉛錘測量，引申為深入探究"
+  },
+  {
+    "word": "plummet",
+    "pos": "v.",
+    "meaning": "驟然下跌、垂直落下",
+    "example": "Stock prices plummeted after the company announced disappointing earnings.",
+    "roots": "同 plumb 字源(鉛錘垂直墜落) → 像鉛錘一樣直線下墜"
+  },
+  {
+    "word": "plunder",
+    "pos": "v.",
+    "meaning": "掠奪、搶劫",
+    "example": "Retreating troops plundered every farmhouse they passed for food and supplies.",
+    "roots": "源自德文 Plunder (家用雜物，中古德文引申為掠奪家具財物) → 大肆搶奪財物"
+  },
+  {
+    "word": "plutocracy",
+    "pos": "n.",
+    "meaning": "富豪統治、財閥政治",
+    "example": "Critics warned that unchecked campaign spending was turning democracy into a plutocracy.",
+    "roots": "plut (財富，希臘文 ploutos) + cracy (統治，希臘文 kratos) → 由富人掌權的政體"
+  },
+  {
+    "word": "poignancy",
+    "pos": "n.",
+    "meaning": "深刻感人、辛酸",
+    "example": "The poignancy of the farewell scene left the entire theater in silence.",
+    "roots": "同 poignant 字源 + -cy (名詞後綴) → 強烈觸動人心的特質"
+  },
+  {
+    "word": "poignant",
+    "pos": "adj.",
+    "meaning": "令人心酸的、深刻感人的",
+    "example": "The memoir's most poignant chapter describes the author's final conversation with her dying father.",
+    "roots": "源自拉丁文 pungere (刺) → 像被刺中般帶來強烈情感觸動"
+  },
+  {
+    "word": "polarize",
+    "pos": "v.",
+    "meaning": "使兩極化、使對立",
+    "example": "The proposed policy has polarized public opinion into two starkly opposed camps.",
+    "roots": "polar (極，源自 pole 極點) + -ize (使...) → 使意見分裂成兩個極端"
+  },
+  {
+    "word": "polemic",
+    "pos": "n.",
+    "meaning": "論戰、激烈的爭辯文章",
+    "example": "His latest book is less a balanced analysis than a polemic against modern capitalism.",
+    "roots": "源自希臘文 polemos (戰爭) → 以言語進行的激烈論戰"
+  },
+  {
+    "word": "polemical",
+    "pos": "adj.",
+    "meaning": "論戰性的、好辯的",
+    "example": "The op-ed's polemical tone alienated readers who might otherwise have agreed with its conclusions.",
+    "roots": "同 polemic 字源 + -ical (形容詞後綴) → 具有強烈爭辯性質的"
+  },
+  {
+    "word": "politic",
+    "pos": "adj.",
+    "meaning": "精明審慎的、明智的(尤指策略上)",
+    "example": "It seemed politic to remain silent during the heated argument between the two executives.",
+    "roots": "源自希臘文 polis (城邦，經拉丁文 politicus) → 對公共事務精明審慎的處理方式"
+  },
+  {
+    "word": "poltroon",
+    "pos": "n.",
+    "meaning": "懦夫、膽小鬼",
+    "example": "The old play mocks the poltroon who boasts of courage he never displays in battle.",
+    "roots": "源自義大利文 poltrone，字源不確定，一說源自 poltro (床墊，指賴床怕事的人) → 極度怯懦的人"
+  },
+  {
+    "word": "polyglot",
+    "pos": "n.",
+    "meaning": "通曉多種語言的人",
+    "example": "As a polyglot who spoke seven languages fluently, she was invaluable to the diplomatic mission.",
+    "roots": "poly- (多，希臘文) + glot (語言，希臘文 glotta) → 通曉多種語言的人"
+  },
+  {
+    "word": "pomp",
+    "pos": "n.",
+    "meaning": "排場、盛大隆重",
+    "example": "The coronation was celebrated with all the pomp befitting a new monarch.",
+    "roots": "源自希臘文 pompe (遊行隊伍) → 盛大隆重的公開展示"
+  },
+  {
+    "word": "pompous",
+    "pos": "adj.",
+    "meaning": "自負的、浮誇的",
+    "example": "The pompous professor never missed a chance to remind students of his credentials.",
+    "roots": "同 pomp 字源 + -ous (形容詞後綴) → 表現得自認為重要盛大的"
+  },
+  {
+    "word": "ponderous",
+    "pos": "adj.",
+    "meaning": "笨重的；(文風)冗長乏味的",
+    "example": "The report's ponderous prose made a simple idea take twenty pages to explain.",
+    "roots": "ponder (重量、思考，拉丁文 ponderare) + -ous (形容詞後綴) → 沉重到令人費力承受的"
+  },
+  {
+    "word": "populace",
+    "pos": "n.",
+    "meaning": "民眾、平民百姓",
+    "example": "The new tax hit the general populace far harder than it did the wealthy elite.",
+    "roots": "源自拉丁文 populus (人民) → 一般大眾"
+  },
+  {
+    "word": "portend",
+    "pos": "v.",
+    "meaning": "預示、預兆",
+    "example": "The sudden drop in the stock market portended a broader economic downturn.",
+    "roots": "por- (向前，pro 的變體) + tend (伸展，拉丁文 tendere) → 向前伸展出徵兆"
+  },
+  {
+    "word": "portent",
+    "pos": "n.",
+    "meaning": "預兆、徵兆",
+    "example": "The eclipse was seen by ancient cultures as a portent of disaster.",
+    "roots": "同 portend 字源 → 預示未來事件的徵兆"
+  },
+  {
+    "word": "portentous",
+    "pos": "adj.",
+    "meaning": "預兆性的；裝腔作勢的",
+    "example": "He announced the minor schedule change in a portentous tone, as if it were world-changing news.",
+    "roots": "同 portent 字源 + -ous (形容詞後綴) → 帶有預兆意味的，或裝腔作勢般嚴肅的"
+  },
+  {
+    "word": "posit",
+    "pos": "v.",
+    "meaning": "假定、提出(論點)",
+    "example": "The theory posits that memory loss is linked to disrupted sleep patterns.",
+    "roots": "源自拉丁文 ponere (放置) 的過去分詞 positus → 把論點放在檯面上供討論"
+  },
+  {
+    "word": "posthumous",
+    "pos": "adj.",
+    "meaning": "死後的、身後的",
+    "example": "The author's posthumous novel was published two years after her death.",
+    "roots": "源自拉丁文 postumus (posterus 的最高級「最後的」，常指人死後才出生的孩子)，後人望文生義誤解為 post- (之後) + humus (土地) → 死後、入土之後發生的"
+  },
+  {
+    "word": "postulate",
+    "pos": "v.",
+    "meaning": "假定、視為前提",
+    "example": "Euclidean geometry postulates that only one line can be drawn parallel to another through a given point.",
+    "roots": "源自拉丁文 postulare (要求、主張) → 要求被視為理所當然的前提"
+  },
+  {
+    "word": "potable",
+    "pos": "adj.",
+    "meaning": "可飲用的",
+    "example": "After the hurricane, residents lacked access to potable water for nearly a week.",
+    "roots": "pot (喝，拉丁文 potare) + -able (可...的) → 可以安全飲用的"
+  },
+  {
+    "word": "potentate",
+    "pos": "n.",
+    "meaning": "統治者、掌權者",
+    "example": "The ancient potentate ruled over a vast empire from his palace on the hill.",
+    "roots": "potent (有力量的，拉丁文 potens) + -ate (名詞後綴) → 擁有巨大權力的統治者"
+  },
+  {
+    "word": "pragmatic",
+    "pos": "adj.",
+    "meaning": "務實的、講求實際的",
+    "example": "Rather than debating theory, the new manager took a pragmatic approach to solving the problem.",
+    "roots": "源自希臘文 pragma (行動、事情) → 著重實際行動而非理論的"
+  },
+  {
+    "word": "prattle",
+    "pos": "v.",
+    "meaning": "喋喋不休、閒扯",
+    "example": "The children prattled on about their favorite cartoons the entire car ride.",
+    "roots": "擬聲詞，源自中古低地德文 pratelen，模仿絮叨閒聊聲 → 無意義地不停說話"
+  },
+  {
+    "word": "precarious",
+    "pos": "adj.",
+    "meaning": "不穩固的、危險的",
+    "example": "The company's finances remained precarious even after the emergency loan.",
+    "roots": "prec (祈求，拉丁文 precari) + -arious (形容詞後綴) → 原指依賴他人施捨、地位不穩固的"
+  },
+  {
+    "word": "precedent",
+    "pos": "n.",
+    "meaning": "先例、判例",
+    "example": "The court's ruling set a precedent that would shape similar cases for decades.",
+    "roots": "pre- (在...之前) + ced (走，拉丁文 cedere) → 走在前面、先發生的案例"
+  },
+  {
+    "word": "precept",
+    "pos": "n.",
+    "meaning": "準則、格言",
+    "example": "The old precept 'measure twice, cut once' still guides careful craftsmen today.",
+    "roots": "pre- (在...之前) + cept (拿取，拉丁文 capere) → 事先給予的教導原則"
+  },
+  {
+    "word": "precipice",
+    "pos": "n.",
+    "meaning": "懸崖、危急關頭",
+    "example": "The economy stood on the precipice of collapse before the last-minute bailout.",
+    "roots": "prae- (在前) + cip (頭，拉丁文 caput) → 陡峭的懸崖邊緣"
+  },
+  {
+    "word": "precipitate",
+    "pos": "v.",
+    "meaning": "促使(突然發生)",
+    "example": "The assassination precipitated a war that would engulf the entire continent.",
+    "roots": "prae- (向前) + cip (頭，拉丁文 caput) → 頭朝下急速墜落，引申為促使事情倉促發生"
+  },
+  {
+    "word": "precipitous",
+    "pos": "adj.",
+    "meaning": "陡峭的；(變化)急遽的",
+    "example": "Sales took a precipitous decline after the recall of the defective product.",
+    "roots": "同 precipitate 字源 + -ous (形容詞後綴) → 像懸崖一樣陡峭急遽的"
+  },
+  {
+    "word": "preclude",
+    "pos": "v.",
+    "meaning": "排除、阻止(可能性)",
+    "example": "His criminal record precludes him from ever obtaining a security clearance.",
+    "roots": "pre- (事先) + clud (關閉，拉丁文 claudere) → 事先把門關上，排除可能性"
+  },
+  {
+    "word": "precocious",
+    "pos": "adj.",
+    "meaning": "早熟的",
+    "example": "The precocious eight-year-old was already reading novels meant for teenagers.",
+    "roots": "prae- (提前) + coc (煮熟，拉丁文 coquere) → 提前成熟的"
+  },
+  {
+    "word": "precursor",
+    "pos": "n.",
+    "meaning": "先驅、前身",
+    "example": "The telegraph was an important precursor to modern telecommunications.",
+    "roots": "pre- (在...之前) + curs (跑，拉丁文 currere) → 跑在前面的事物"
+  },
+  {
+    "word": "predatory",
+    "pos": "adj.",
+    "meaning": "掠奪成性的、捕食性的",
+    "example": "Regulators cracked down on the bank's predatory lending practices targeting vulnerable borrowers.",
+    "roots": "praed (獵物，拉丁文 praeda) + -atory (形容詞後綴) → 以掠奪獵物為生的"
+  },
+  {
+    "word": "predilection",
+    "pos": "n.",
+    "meaning": "偏愛、嗜好",
+    "example": "He has a lifelong predilection for spy novels and old detective films.",
+    "roots": "prae- (事先) + dilect (選擇，拉丁文 diligere 珍愛) → 事先就傾向選擇的偏好"
+  },
+  {
+    "word": "predisposition",
+    "pos": "n.",
+    "meaning": "傾向、易罹患性",
+    "example": "A family history of heart disease can indicate a genetic predisposition to the condition.",
+    "roots": "pre- (事先) + dispos (安排，拉丁文 disponere) → 事先被安排好的傾向"
+  },
+  {
+    "word": "preeminent",
+    "pos": "adj.",
+    "meaning": "卓越的、首屈一指的",
+    "example": "She is widely regarded as the preeminent authority on medieval manuscripts.",
+    "roots": "pre- (在...之前) + eminent (突出的，拉丁文 eminere) → 在眾人之前突出顯著的"
+  },
+  {
+    "word": "preemptive",
+    "pos": "adj.",
+    "meaning": "先發制人的",
+    "example": "The company launched a preemptive strike against the rumor by releasing the full report early.",
+    "roots": "pre- (事先) + empt (取得，拉丁文 emere) → 事先搶先取得，先發制人"
+  },
+  {
+    "word": "prefatory",
+    "pos": "adj.",
+    "meaning": "序言的、引言的",
+    "example": "The book opens with a lengthy prefatory note explaining the author's methodology.",
+    "roots": "源自拉丁文 praefari (事先說明，prae- 之前 + fari 說) + -ory (形容詞後綴) → 位於正文之前的引言性質"
+  },
+  {
+    "word": "preposterous",
+    "pos": "adj.",
+    "meaning": "荒謬的、不合情理的",
+    "example": "The idea that the earth is flat is preposterous given centuries of scientific evidence.",
+    "roots": "prae- (之前) + posterus (之後的，拉丁文) → 把先後順序顛倒，即本末倒置般荒謬"
+  },
+  {
+    "word": "prerogative",
+    "pos": "n.",
+    "meaning": "特權",
+    "example": "Choosing her own successor was a prerogative reserved solely for the retiring CEO.",
+    "roots": "prae- (事先) + rog (詢問，拉丁文 rogare) → 事先被賦予優先發言/決定的特權"
+  },
+  {
+    "word": "presage",
+    "pos": "v.",
+    "meaning": "預示、預兆",
+    "example": "The unusual animal behavior seemed to presage the coming earthquake.",
+    "roots": "prae- (事先) + sag (感知，拉丁文 sagire) → 事先感知到即將發生的事"
+  },
+  {
+    "word": "prescience",
+    "pos": "n.",
+    "meaning": "先見之明、預知能力",
+    "example": "The novelist's prescience about future technology has amazed readers for decades.",
+    "roots": "同 prescient 字源 → 預先知曉未來的能力"
+  },
+  {
+    "word": "prescient",
+    "pos": "adj.",
+    "meaning": "有先見之明的",
+    "example": "Her prescient warnings about the housing bubble went unheeded until it was too late.",
+    "roots": "prae- (事先) + sci (知道，拉丁文 scire) → 事先就知曉的"
+  },
+  {
+    "word": "presumptuous",
+    "pos": "adj.",
+    "meaning": "自以為是的、僭越的",
+    "example": "It would be presumptuous of me to speak on behalf of the entire committee.",
+    "roots": "prae- (事先) + sumpt (取用，拉丁文 sumere) → 未經允許就事先擅自取用/斷定"
+  },
+  {
+    "word": "presuppose",
+    "pos": "v.",
+    "meaning": "預設、以...為前提",
+    "example": "The argument presupposes that all voters have equal access to accurate information.",
+    "roots": "pre- (事先) + suppose (假定) → 事先假定某件事為真"
+  },
+  {
+    "word": "pretense",
+    "pos": "n.",
+    "meaning": "藉口、假裝",
+    "example": "He entered the office under the pretense of delivering a package, then began asking questions.",
+    "roots": "prae- (在前) + tens (伸展，拉丁文 tendere) → 在人前展示出的假象"
+  },
+  {
+    "word": "pretentious",
+    "pos": "adj.",
+    "meaning": "自命不凡的、矯揉造作的",
+    "example": "The restaurant's pretentious menu described a simple grilled cheese sandwich in three paragraphs.",
+    "roots": "同 pretense 字源 + -ious (形容詞後綴) → 刻意展示出超越自身實際地位的姿態"
+  },
+  {
+    "word": "pretext",
+    "pos": "n.",
+    "meaning": "藉口、託辭",
+    "example": "The invasion was launched under the pretext of protecting national security.",
+    "roots": "prae- (在前) + text (編織，拉丁文 texere) → 事先編織好的說詞，掩蓋真實動機"
+  },
+  {
+    "word": "prevaricate",
+    "pos": "v.",
+    "meaning": "支吾其詞、閃爍其詞",
+    "example": "Instead of answering directly, the witness prevaricated for several minutes.",
+    "roots": "prae- (在前) + varic (跨開雙腿，拉丁文 varicare) → 走得歪七扭八，引申為說話閃躲不直接"
+  },
+  {
+    "word": "priggish",
+    "pos": "adj.",
+    "meaning": "一本正經的、假道學的",
+    "example": "His priggish disapproval of any joke, however mild, made him unpopular at parties.",
+    "roots": "源自 prig (自命清高的人，字源不確定) + -ish (形容詞後綴) → 表現出道貌岸然的態度"
+  },
+  {
+    "word": "prim",
+    "pos": "adj.",
+    "meaning": "拘謹的、一本正經的",
+    "example": "The prim schoolteacher insisted that every student sit up perfectly straight.",
+    "roots": "可能源自法文 prime (精緻的、最初的，拉丁文 primus)，字源不完全確定 → 過度講究規矩禮節的"
+  },
+  {
+    "word": "primeval",
+    "pos": "adj.",
+    "meaning": "遠古的、原始的",
+    "example": "The documentary explores the primeval forests that have existed since before human civilization.",
+    "roots": "prim (最初，拉丁文 primus) + aev (時代，拉丁文 aevum) → 屬於最初時代的、遠古的"
+  },
+  {
+    "word": "primordial",
+    "pos": "adj.",
+    "meaning": "原始的、最初的",
+    "example": "Scientists believe life first emerged from a primordial soup of organic chemicals.",
+    "roots": "prim (最初，拉丁文 primus) + ord (順序，拉丁文 ordo) → 排在最初順位的，最原始的"
+  },
+  {
+    "word": "pristine",
+    "pos": "adj.",
+    "meaning": "純淨的、未受破壞的",
+    "example": "The remote beach remained pristine, untouched by tourism or development.",
+    "roots": "源自拉丁文 pristinus (先前的、原始的) → 保持最初未受污染的狀態"
+  },
+  {
+    "word": "privation",
+    "pos": "n.",
+    "meaning": "匱乏、艱困",
+    "example": "The soldiers endured months of privation, with little food and no shelter from the cold.",
+    "roots": "priv (剝奪，拉丁文 privare) + -ation (名詞後綴) → 被剝奪基本需求的狀態"
+  },
+  {
+    "word": "privy",
+    "pos": "adj.",
+    "meaning": "知悉內情的(privy to)",
+    "example": "Only a handful of executives were privy to the merger negotiations before the announcement.",
+    "roots": "源自拉丁文 privatus (私人的，源自 privare 使...私有) → 屬於私下、少數人知曉的"
+  },
+  {
+    "word": "probity",
+    "pos": "n.",
+    "meaning": "正直、誠實",
+    "example": "The judge was known throughout her career for unimpeachable probity.",
+    "roots": "源自拉丁文 probus (誠實正直的) + -ity (名詞後綴) → 品格上的正直誠信"
+  },
+  {
+    "word": "proclivity",
+    "pos": "n.",
+    "meaning": "傾向、癖好(常指不良的)",
+    "example": "His proclivity for exaggeration made it hard to trust his account of events.",
+    "roots": "pro- (向前) + cliv (斜坡，拉丁文 clivus) → 向某個方向傾斜的自然傾向"
+  },
+  {
+    "word": "procrastinate",
+    "pos": "v.",
+    "meaning": "拖延",
+    "example": "She always procrastinates on tax filing until the very last day.",
+    "roots": "pro- (向前) + crastin (明天，拉丁文 cras) → 把事情一直推到明天"
+  },
+  {
+    "word": "procreate",
+    "pos": "v.",
+    "meaning": "生育、繁殖",
+    "example": "The documentary follows the elaborate rituals some species use to procreate.",
+    "roots": "pro- (向前) + creat (創造，拉丁文 creare) → 創造出新的生命"
+  },
+  {
+    "word": "prodigal",
+    "pos": "adj.",
+    "meaning": "揮霍的、浪費的",
+    "example": "The parable of the prodigal son tells of a young man who squanders his inheritance.",
+    "roots": "源自拉丁文 prodigere (揮霍，prod- 向前 + agere 驅使) → 把財富任意揮霍出去的"
+  },
+  {
+    "word": "prodigious",
+    "pos": "adj.",
+    "meaning": "驚人的、巨大的",
+    "example": "The young pianist displayed a prodigious talent that astonished even seasoned critics.",
+    "roots": "源自拉丁文 prodigium (奇兆、異象) + -ious (形容詞後綴) → 大到如奇蹟般驚人的"
+  },
+  {
+    "word": "prodigy",
+    "pos": "n.",
+    "meaning": "天才、神童",
+    "example": "By the age of six, she was already being called a musical prodigy.",
+    "roots": "同 prodigious 字源 → 展現超凡才能的人，尤指年輕人"
+  },
+  {
+    "word": "profane",
+    "pos": "adj.",
+    "meaning": "褻瀆的、世俗的",
+    "example": "The critics accused the artist of using profane imagery to mock religious tradition.",
+    "roots": "pro- (在...之外) + fane (神殿，拉丁文 fanum) → 被排除在神聖之外的，即世俗甚至褻瀆的"
+  },
+  {
+    "word": "profligate",
+    "pos": "adj.",
+    "meaning": "揮霍無度的、放蕩不羈的",
+    "example": "His profligate spending on yachts and parties quickly drained the family fortune.",
+    "roots": "源自拉丁文 profligare (打垮、揮霍，pro- 向前 + fligere 打擊) → 把自己徹底打垮，形容揮霍到失控的地步"
+  },
+  {
+    "word": "profundity",
+    "pos": "n.",
+    "meaning": "深奧、深刻",
+    "example": "The simplicity of the poem belies the profundity of its message about mortality.",
+    "roots": "pro- (向前) + fund (底部，拉丁文 fundus) → 深入到底部，形容思想深邃"
+  },
+  {
+    "word": "profuse",
+    "pos": "adj.",
+    "meaning": "大量的、豐富的",
+    "example": "She offered profuse apologies for arriving so late to the ceremony.",
+    "roots": "pro- (向前) + fus (流動，拉丁文 fundere) → 大量湧流而出的"
+  },
+  {
+    "word": "profusion",
+    "pos": "n.",
+    "meaning": "大量、充沛",
+    "example": "The garden bloomed with a profusion of wildflowers after the spring rains.",
+    "roots": "同 profuse 字源 + -ion (名詞後綴) → 大量湧現的狀態"
+  },
+  {
+    "word": "progeny",
+    "pos": "n.",
+    "meaning": "後代、子孫",
+    "example": "The old oak tree's progeny now populate the entire hillside.",
+    "roots": "pro- (向前) + gen (產生，拉丁文 gignere) → 向前代代產生出的後代"
+  },
+  {
+    "word": "prognosticate",
+    "pos": "v.",
+    "meaning": "預測、預言",
+    "example": "Economists have long tried to prognosticate the next recession, often unsuccessfully.",
+    "roots": "pro- (事先) + gnost (知道，希臘文 gignoskein) → 事先知曉並宣告未來"
+  },
+  {
+    "word": "proliferate",
+    "pos": "v.",
+    "meaning": "激增、迅速繁殖",
+    "example": "Online scams have proliferated as more people shop and bank digitally.",
+    "roots": "proli (後代，拉丁文 proles) + fer (帶來，拉丁文 ferre) → 不斷產生後代般迅速增生"
+  },
+  {
+    "word": "prolific",
+    "pos": "adj.",
+    "meaning": "多產的",
+    "example": "The prolific author published over sixty novels during her lifetime.",
+    "roots": "同 proliferate 字源 + -ic (形容詞後綴) → 大量產出的"
+  },
+  {
+    "word": "prolix",
+    "pos": "adj.",
+    "meaning": "冗長的、囉嗦的",
+    "example": "The lawyer's prolix opening statement tested the patience of the entire jury.",
+    "roots": "源自拉丁文 prolixus (延伸的、冗長的，pro- 向前 + 可能與 liquere 流動有關) → 話語像水一樣不斷流出、拖沓冗長"
+  },
+  {
+    "word": "promiscuous",
+    "pos": "adj.",
+    "meaning": "混雜的、不加選擇的；性關係隨便的",
+    "example": "The report criticized the fund's promiscuous investment strategy, spread thin across too many unrelated sectors.",
+    "roots": "pro- (向前) + miscu (混合，拉丁文 miscere) → 不加篩選地混雜在一起"
+  },
+  {
+    "word": "promontory",
+    "pos": "n.",
+    "meaning": "海角、岬",
+    "example": "The lighthouse stood on a rocky promontory overlooking the churning sea.",
+    "roots": "pro- (向前) + mont (山，拉丁文 mons) → 向海中突出的山岬"
+  },
+  {
+    "word": "promulgate",
+    "pos": "v.",
+    "meaning": "頒布、公布",
+    "example": "The new safety regulations were promulgated shortly after the factory accident.",
+    "roots": "源自拉丁文 promulgare (公開宣布) → 正式向公眾公布"
+  },
+  {
+    "word": "propagate",
+    "pos": "v.",
+    "meaning": "傳播、繁殖",
+    "example": "Social media platforms have made it easier for false rumors to propagate quickly.",
+    "roots": "源自拉丁文 propago (壓條繁殖法，插枝的枝條) → 像植物繁殖一樣擴散開來"
+  },
+  {
+    "word": "propensity",
+    "pos": "n.",
+    "meaning": "傾向、癖好",
+    "example": "He has a propensity for taking on more projects than he can realistically finish.",
+    "roots": "pro- (向前) + pens (懸掛，拉丁文 pendere) → 心向某方向懸掛傾斜"
+  },
+  {
+    "word": "propitiate",
+    "pos": "v.",
+    "meaning": "撫慰、討好(尤指神明)",
+    "example": "Ancient farmers made offerings to propitiate the gods before each harvest.",
+    "roots": "源自拉丁文 propitius (有利的、恩慈的)，字源進一步來源不確定 → 使對方轉為仁慈寬容"
+  },
+  {
+    "word": "propitious",
+    "pos": "adj.",
+    "meaning": "吉利的、有利的",
+    "example": "The astrologer declared the following Tuesday a propitious day for the wedding.",
+    "roots": "同 propitiate 字源 → 徵兆顯示有利、吉祥的"
+  },
+  {
+    "word": "proponent",
+    "pos": "n.",
+    "meaning": "支持者、擁護者",
+    "example": "She has long been a vocal proponent of universal healthcare.",
+    "roots": "pro- (為了) + pon (放置，拉丁文 ponere) → 把論點擺出來支持某立場的人"
+  },
+  {
+    "word": "propound",
+    "pos": "v.",
+    "meaning": "提出(理論、看法)",
+    "example": "The philosopher propounded a radical new theory of consciousness.",
+    "roots": "pro- (向前) + pound (放置，拉丁文 ponere) → 把想法向前提出"
+  },
+  {
+    "word": "propriety",
+    "pos": "n.",
+    "meaning": "得體、禮節",
+    "example": "The etiquette book outlined the propriety expected at formal dinners.",
+    "roots": "propri (自己的，拉丁文 proprius) + -ety (名詞後綴) → 合乎自身身分應有的舉止"
+  },
+  {
+    "word": "prosaic",
+    "pos": "adj.",
+    "meaning": "平淡無奇的、乏味的",
+    "example": "After the excitement of the trip, everyday life felt almost unbearably prosaic.",
+    "roots": "prosa (散文，拉丁文，相對於韻文詩歌) + -ic (形容詞後綴) → 如散文般平鋪直敘、缺乏詩意"
+  },
+  {
+    "word": "proscribe",
+    "pos": "v.",
+    "meaning": "禁止、取締",
+    "example": "The new law proscribes the use of the pesticide in residential areas.",
+    "roots": "pro- (公開) + scrib (寫，拉丁文 scribere) → 公開寫下禁令(注意與 prescribe「開藥方、規定」相對)"
+  },
+  {
+    "word": "proselytize",
+    "pos": "v.",
+    "meaning": "(尤指宗教)勸人改信、招募信徒",
+    "example": "The missionaries traveled from village to village trying to proselytize the local population.",
+    "roots": "源自希臘文 proselytos (皈依者，pros- 向著 + elthein 來到) → 使人轉而信奉某種信仰"
+  },
+  {
+    "word": "protean",
+    "pos": "adj.",
+    "meaning": "千變萬化的、善變的",
+    "example": "The actor's protean talent allowed him to convincingly play villains, heroes, and comic fools alike.",
+    "roots": "源自希臘海神 Proteus，能隨意變換形體 → 形容能不斷變化形態或角色的"
+  },
+  {
+    "word": "protracted",
+    "pos": "adj.",
+    "meaning": "拖長的、曠日費時的",
+    "example": "The protracted legal battle dragged on for nearly a decade before reaching a verdict.",
+    "roots": "pro- (向前) + tract (拉，拉丁文 trahere) → 被向前拉長的時間"
+  },
+  {
+    "word": "protuberant",
+    "pos": "adj.",
+    "meaning": "突出的、隆起的",
+    "example": "The old man's protuberant belly strained against his buttoned shirt.",
+    "roots": "pro- (向前) + tuber (腫塊，拉丁文) + -ant (形容詞後綴) → 向外隆起突出的"
+  },
+  {
+    "word": "provident",
+    "pos": "adj.",
+    "meaning": "有遠見的、未雨綢繆的",
+    "example": "Her provident habit of saving a portion of every paycheck paid off during the layoffs.",
+    "roots": "pro- (事先) + vid (看，拉丁文 videre) → 事先看到未來需求而做準備的"
+  },
+  {
+    "word": "providential",
+    "pos": "adj.",
+    "meaning": "幸運的、天佑的",
+    "example": "Their providential escape from the collapsing building was later called a miracle.",
+    "roots": "同 provident 字源 + -ial (形容詞後綴) → 彷彿受到上天眷顧安排的"
+  },
+  {
+    "word": "provincial",
+    "pos": "adj.",
+    "meaning": "省份的；眼界狹隘的",
+    "example": "His provincial outlook rarely extended beyond the concerns of his own small town.",
+    "roots": "源自拉丁文 provincia (行省) + -ial (形容詞後綴) → 侷限於地方省份思維的狹隘"
+  },
+  {
+    "word": "prowess",
+    "pos": "n.",
+    "meaning": "高超的技能、勇猛",
+    "example": "His prowess on the battlefield earned him the respect of even his enemies.",
+    "roots": "源自古法文 proece (源自 prou 勇敢的，拉丁文 prode 有用的) → 展現出的卓越能力或勇氣"
+  },
+  {
+    "word": "proximate",
+    "pos": "adj.",
+    "meaning": "最接近的、直接的(尤指原因)",
+    "example": "The proximate cause of the crash was pilot error, though poor maintenance played a role too.",
+    "roots": "proxim (最近，拉丁文 proximus) + -ate (形容詞後綴) → 最直接相鄰的"
+  },
+  {
+    "word": "proximity",
+    "pos": "n.",
+    "meaning": "接近、鄰近",
+    "example": "The hotel's proximity to the airport made it a popular choice for business travelers.",
+    "roots": "同 proximate 字源 + -ity (名詞後綴) → 相鄰接近的狀態"
+  },
+  {
+    "word": "prudery",
+    "pos": "n.",
+    "meaning": "假正經、過分拘謹",
+    "example": "Her prudery extended even to disapproving of sleeveless dresses at the beach.",
+    "roots": "prude (拘謹保守的人，源自法文 prude femme 貞潔的女人) + -ry (名詞後綴) → 過度講究禮教的態度"
+  },
+  {
+    "word": "prudish",
+    "pos": "adj.",
+    "meaning": "假正經的、過分拘謹的",
+    "example": "The prudish censors cut the scene for being far too suggestive.",
+    "roots": "同 prudery 字源 + -ish (形容詞後綴) → 表現出過度保守拘謹的"
+  },
+  {
+    "word": "puerile",
+    "pos": "adj.",
+    "meaning": "幼稚的、孩子氣的",
+    "example": "The senators' puerile name-calling overshadowed any serious policy debate.",
+    "roots": "puer (男孩，拉丁文) + -ile (形容詞後綴) → 像孩子般不成熟的"
+  },
+  {
+    "word": "pugilist",
+    "pos": "n.",
+    "meaning": "拳擊手",
+    "example": "The retired pugilist now trains a new generation of boxers at the local gym.",
+    "roots": "pugil (拳擊手，拉丁文，源自 pugnus 拳頭) + -ist (...的人) → 以拳頭搏鬥的人"
+  },
+  {
+    "word": "pugnacious",
+    "pos": "adj.",
+    "meaning": "好鬥的、愛挑釁的",
+    "example": "His pugnacious debating style often turned discussions into shouting matches.",
+    "roots": "pugn (打鬥，拉丁文 pugnare) + -acious (形容詞後綴) → 傾向以武力或言語挑起爭鬥的"
+  },
+  {
+    "word": "puissant",
+    "pos": "adj.",
+    "meaning": "強而有力的(文學用語)",
+    "example": "The bard's poem praised the puissant king who had united the warring clans.",
+    "roots": "源自古法文 puissant (強大的，源自拉丁文 posse 能夠) → 擁有強大力量的"
+  },
+  {
+    "word": "pulchritude",
+    "pos": "n.",
+    "meaning": "美麗、姿色(正式或詼諧用語)",
+    "example": "The pageant judges were instructed to consider more than mere physical pulchritude.",
+    "roots": "源自拉丁文 pulcher (美麗的) + -itude (名詞後綴) → 外在美的狀態"
+  },
+  {
+    "word": "pulverize",
+    "pos": "v.",
+    "meaning": "粉碎、擊潰",
+    "example": "The machine pulverizes the rock into fine powder for testing.",
+    "roots": "pulver (粉末，拉丁文 pulvis) + -ize (使...) → 使變成粉末狀"
+  },
+  {
+    "word": "punctilious",
+    "pos": "adj.",
+    "meaning": "一絲不苟的、拘泥細節的",
+    "example": "The punctilious accountant double-checked every figure before submitting the report.",
+    "roots": "punct (點，拉丁文 punctum) + -ilious (形容詞後綴) → 連小細節都不放過的"
+  },
+  {
+    "word": "pundit",
+    "pos": "n.",
+    "meaning": "專家、評論家(常指媒體上的)",
+    "example": "Political pundits had wildly different predictions for the election outcome.",
+    "roots": "源自梵文 pandita (學者、飽學之士) → 被視為某領域權威的評論者"
+  },
+  {
+    "word": "pungent",
+    "pos": "adj.",
+    "meaning": "刺鼻的、辛辣的；(言語)尖銳的",
+    "example": "The pungent smell of garlic filled the kitchen as soon as she started cooking.",
+    "roots": "pung (刺，拉丁文 pungere) + -ent (形容詞後綴) → 像被刺一樣強烈刺激的氣味或言語"
+  },
+  {
+    "word": "punitive",
+    "pos": "adj.",
+    "meaning": "懲罰性的",
+    "example": "The court imposed punitive damages far exceeding the actual financial loss.",
+    "roots": "pun (懲罰，拉丁文 punire) + -itive (形容詞後綴) → 帶有懲罰性質的"
+  },
+  {
+    "word": "puny",
+    "pos": "adj.",
+    "meaning": "弱小的、微不足道的",
+    "example": "Compared to the towering skyscrapers nearby, the old cottage looked puny.",
+    "roots": "源自古法文 puisné (較晚出生的，puis 之後 + né 出生) → 因較晚出生而顯得弱小的"
+  },
+  {
+    "word": "puritanical",
+    "pos": "adj.",
+    "meaning": "極端拘謹的、清教徒式的",
+    "example": "His puritanical objections to any form of entertainment made him an unpopular chaperone.",
+    "roots": "purit (純潔，拉丁文 purus) + -anical (形容詞後綴) → 追求極端道德純潔的態度"
+  },
+  {
+    "word": "purloin",
+    "pos": "v.",
+    "meaning": "竊取、盜用",
+    "example": "The clerk was fired after he was caught purloining office supplies for months.",
+    "roots": "pur- (完全，por- 的變體) + loin (遠，古法文 loing) → 把東西拿到遠處藏起來，即偷竊"
+  },
+  {
+    "word": "purport",
+    "pos": "v.",
+    "meaning": "聲稱、意圖(表示)",
+    "example": "The document purports to be an original manuscript, but experts suspect it's a forgery.",
+    "roots": "pur- (向前) + port (攜帶，拉丁文 portare) → 對外展示、聲稱自己所代表的意義"
+  },
+  {
+    "word": "purported",
+    "pos": "adj.",
+    "meaning": "據稱的、傳聞的",
+    "example": "The purported cure has never been tested in a proper clinical trial.",
+    "roots": "同 purport 字源 + -ed (形容詞後綴) → 被聲稱如此，但未經證實的"
+  },
+  {
+    "word": "purview",
+    "pos": "n.",
+    "meaning": "(職權或活動的)範圍",
+    "example": "Environmental regulation falls outside the purview of this particular committee.",
+    "roots": "源自古法文法律用語 purveu(que) 「已規定...」，源自 porveoir (provide，拉丁文 providere = pro- 事先 + videre 看) → 法律文件中規定的範圍，引申為職權或活動範圍"
+  },
+  {
+    "word": "pusillanimous",
+    "pos": "adj.",
+    "meaning": "懦弱的、膽小的",
+    "example": "His pusillanimous refusal to confront the bully disappointed his teammates.",
+    "roots": "pusill (微小，拉丁文 pusillus) + anim (精神、勇氣，拉丁文 animus) → 精神氣魄微小，即怯懦"
+  },
+  {
+    "word": "putative",
+    "pos": "adj.",
+    "meaning": "據稱的、推定的",
+    "example": "The putative heir to the fortune turned out to be a distant cousin no one had ever met.",
+    "roots": "put (思考、認為，拉丁文 putare) + -ative (形容詞後綴) → 被普遍認為如此的"
+  },
+  {
+    "word": "putrefy",
+    "pos": "v.",
+    "meaning": "腐爛、腐敗",
+    "example": "Without refrigeration, the meat began to putrefy within a day.",
+    "roots": "putr (腐爛，拉丁文 putris) + -efy (使...) → 使腐壞"
+  },
+  {
+    "word": "putrid",
+    "pos": "adj.",
+    "meaning": "腐爛的、發臭的",
+    "example": "A putrid smell rose from the garbage left out in the summer heat.",
+    "roots": "同 putrefy 字源 + -id (形容詞後綴) → 呈現腐爛狀態的"
+  },
+  {
+    "word": "pyre",
+    "pos": "n.",
+    "meaning": "火葬柴堆",
+    "example": "According to tradition, the fallen warrior's body was placed on a funeral pyre.",
+    "roots": "源自希臘文 pyra (火，源自 pyr 火) → 用來焚燒屍體的柴堆"
+  },
+  {
+    "word": "pyrrhic",
+    "pos": "adj.",
+    "meaning": "(勝利)得不償失的",
+    "example": "The company's court victory was a pyrrhic one, costing more in legal fees than the disputed amount.",
+    "roots": "源自古希臘伊庇魯斯國王 Pyrrhus，雖擊敗羅馬軍隊卻損失慘重 → 代價過高、雖勝猶敗的勝利"
+  }
+]
