@@ -5,7 +5,13 @@ import { HomeScreen } from '../screens/HomeScreen';
 import { PracticeScreen } from '../screens/PracticeScreen';
 import { StatsScreen } from '../screens/StatsScreen';
 
-const Stack = createNativeStackNavigator();
+export type RootStackParamList = {
+  Home: undefined;
+  Practice: { direction: 'en-zh' | 'zh-en' };
+  Stats: undefined;
+};
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export function RootNavigator() {
   return (

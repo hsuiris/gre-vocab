@@ -1,13 +1,17 @@
 import React, { useCallback, useState } from 'react';
 import { View, Text, Pressable, StyleSheet } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+import type { RootStackParamList } from '../navigation/RootNavigator';
 import { words } from '../data/words';
 import { getAllProgress, getHeatmap } from '../lib/storage';
 import { isDue } from '../lib/leitner';
 import { Heatmap } from '../components/Heatmap';
 import { todayStr } from '../lib/date';
 
-export function HomeScreen({ navigation }: any) {
+type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
+
+export function HomeScreen({ navigation }: Props) {
   const [dueCount, setDueCount] = useState(0);
   const [heatmap, setHeatmap] = useState<Record<string, number>>({});
 

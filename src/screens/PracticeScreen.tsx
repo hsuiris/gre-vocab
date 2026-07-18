@@ -1,12 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+import type { RootStackParamList } from '../navigation/RootNavigator';
 import { words, WordEntry } from '../data/words';
 import { getAllProgress, saveWordProgress, incrementHeatmapToday } from '../lib/storage';
 import { initialProgress, isDue, reviewWord } from '../lib/leitner';
 import { todayStr } from '../lib/date';
 import { FlashCard } from '../components/FlashCard';
 
-export function PracticeScreen({ route }: any) {
+type Props = NativeStackScreenProps<RootStackParamList, 'Practice'>;
+
+export function PracticeScreen({ route }: Props) {
   const direction: 'en-zh' | 'zh-en' = route.params?.direction ?? 'en-zh';
   const [queue, setQueue] = useState<WordEntry[]>([]);
   const [index, setIndex] = useState(0);
