@@ -27,5 +27,11 @@
     "web": "expo start --web",
     "test": "jest"
   },
+  "jest": {
+    "preset": "jest-expo",
+    "setupFiles": [
+      "<rootDir>/jest.setup.js"
+    ]
+  },
   "private": true
 }
