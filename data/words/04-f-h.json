@@ -1,0 +1,2228 @@
+[
+  {
+    "word": "fabricate",
+    "pos": "v.",
+    "meaning": "捏造、虛構；製造",
+    "example": "The suspect tried to fabricate an alibi to avoid suspicion.",
+    "roots": "fabric (製造，源自拉丁文 fabricare) + -ate (動詞後綴) → 動手做出，常指捏造"
+  },
+  {
+    "word": "facade",
+    "pos": "n.",
+    "meaning": "表面、外觀(尤指虛假的)；建築正面",
+    "example": "Behind the calm facade, she was extremely anxious.",
+    "roots": "源自法文 façade，face (臉、面) 的變體 → 建築物的正面，引申為表面假象"
+  },
+  {
+    "word": "facet",
+    "pos": "n.",
+    "meaning": "方面、面向；(寶石的)刻面",
+    "example": "Her research examines every facet of the immigration debate.",
+    "roots": "源自法文 facette，face (臉) 的指小詞 → 小的切面，引申為事物的一個面向"
+  },
+  {
+    "word": "facetious",
+    "pos": "adj.",
+    "meaning": "愛開玩笑的、不正經的",
+    "example": "His facetious remarks were inappropriate during the serious meeting.",
+    "roots": "facet (源自拉丁文 facetus，詼諧的) + -ious (形容詞後綴) → 好開玩笑的"
+  },
+  {
+    "word": "facile",
+    "pos": "adj.",
+    "meaning": "膚淺的、輕而易舉的(含貶義)",
+    "example": "The politician offered a facile solution that ignored the problem's complexity.",
+    "roots": "源自拉丁文 facilis (容易的，fac- 做) → 做起來容易的，引申為輕率膚淺"
+  },
+  {
+    "word": "facilitate",
+    "pos": "v.",
+    "meaning": "促進、使便利",
+    "example": "The new software is designed to facilitate communication between teams.",
+    "roots": "facil (易，同 facile) + -itate (動詞後綴) → 使變得容易"
+  },
+  {
+    "word": "faction",
+    "pos": "n.",
+    "meaning": "派系、小集團",
+    "example": "Rival factions within the party struggled for control.",
+    "roots": "源自拉丁文 factio (行動、黨派，fac- 做) → 一群人共同行動形成的派系"
+  },
+  {
+    "word": "factious",
+    "pos": "adj.",
+    "meaning": "好搞派系鬥爭的、製造分裂的",
+    "example": "Factious disputes weakened the once-unified movement.",
+    "roots": "faction 同源 + -ious (形容詞後綴) → 傾向搞派系鬥爭的"
+  },
+  {
+    "word": "factitious",
+    "pos": "adj.",
+    "meaning": "人為的、做作的、虛假的",
+    "example": "The critic dismissed the film's emotion as factitious sentimentality.",
+    "roots": "源自拉丁文 facticius (人造的，fac- 做) → 人工做出來而非天然的"
+  },
+  {
+    "word": "factotum",
+    "pos": "n.",
+    "meaning": "雜務員、打雜的人",
+    "example": "As the office factotum, he handled everything from filing to fixing the printer.",
+    "roots": "fac (做) + totum (拉丁文，一切) → 什麼都做的人"
+  },
+  {
+    "word": "fallacious",
+    "pos": "adj.",
+    "meaning": "謬誤的、似是而非的",
+    "example": "The argument was fallacious, resting on a hidden false premise.",
+    "roots": "源自拉丁文 fallere (欺騙) → 具欺騙性、邏輯有誤的"
+  },
+  {
+    "word": "fallacy",
+    "pos": "n.",
+    "meaning": "謬論、謬誤",
+    "example": "It's a common fallacy that more money always leads to more happiness.",
+    "roots": "同 fallacious 字源 (fallere 欺騙) → 錯誤的推論"
+  },
+  {
+    "word": "fallible",
+    "pos": "adj.",
+    "meaning": "易犯錯的、不可靠的",
+    "example": "Even experts are fallible and can make mistakes.",
+    "roots": "fall (源自拉丁文 fallere，欺騙、失敗) + -ible (可…的) → 可能犯錯的"
+  },
+  {
+    "word": "fallow",
+    "pos": "adj.",
+    "meaning": "休耕的、閒置的",
+    "example": "The farmer let the field lie fallow to restore its nutrients.",
+    "roots": "源自古英文 fealg，指耕地暫時不種植 → 休耕、閒置"
+  },
+  {
+    "word": "falter",
+    "pos": "v.",
+    "meaning": "搖晃、猶豫、衰退",
+    "example": "Her voice faltered as she recalled the tragic accident.",
+    "roots": "可能源自古北歐語 faltra (搖擺) → 站不穩、猶豫不決"
+  },
+  {
+    "word": "famish",
+    "pos": "v.",
+    "meaning": "(使)挨餓",
+    "example": "The stranded hikers were famished after three days without food.",
+    "roots": "源自拉丁文 fames (飢餓) → 使極度飢餓"
+  },
+  {
+    "word": "fanatic",
+    "pos": "n.",
+    "meaning": "狂熱者",
+    "example": "He's a sports fanatic who never misses a game.",
+    "roots": "源自拉丁文 fanaticus (受神廟感召而狂熱的，fanum 神廟) → 宗教般狂熱的人"
+  },
+  {
+    "word": "fanciful",
+    "pos": "adj.",
+    "meaning": "幻想的、不切實際的",
+    "example": "The children loved her fanciful stories about talking animals.",
+    "roots": "fancy (源自 fantasy，幻想) + -ful (充滿…的) → 充滿幻想的"
+  },
+  {
+    "word": "farcical",
+    "pos": "adj.",
+    "meaning": "滑稽可笑的、荒謬的",
+    "example": "The trial descended into a farcical spectacle.",
+    "roots": "farce (鬧劇，源自拉丁文 farcire，填塞) + -ical (形容詞後綴) → 如鬧劇般荒謬的"
+  },
+  {
+    "word": "fastidious",
+    "pos": "adj.",
+    "meaning": "一絲不苟的、挑剔的",
+    "example": "The fastidious editor caught every small error in the manuscript.",
+    "roots": "源自拉丁文 fastidium (厭惡、挑剔) → 極度講究、難以滿足"
+  },
+  {
+    "word": "fatalism",
+    "pos": "n.",
+    "meaning": "宿命論",
+    "example": "Her fatalism made her accept every setback as inevitable.",
+    "roots": "fatal (命中注定的，源自拉丁文 fatum，命運) + -ism (主義) → 相信命運早已註定的思想"
+  },
+  {
+    "word": "fatalistic",
+    "pos": "adj.",
+    "meaning": "宿命論的",
+    "example": "He took a fatalistic view of the war, believing nothing could change its outcome.",
+    "roots": "同 fatalism 字源 → 具宿命論色彩的"
+  },
+  {
+    "word": "fathom",
+    "pos": "v.",
+    "meaning": "理解、測透",
+    "example": "I simply cannot fathom why he would betray his closest friend.",
+    "roots": "源自古英文 fæthm (伸展的雙臂，用以測量水深) → 探測深度，引申為理解"
+  },
+  {
+    "word": "fatuity",
+    "pos": "n.",
+    "meaning": "愚蠢、蠢話",
+    "example": "The fatuity of his plan became obvious once he tried to execute it.",
+    "roots": "同 fatuous 字源 (拉丁文 fatuus，愚蠢的) → 愚蠢的性質"
+  },
+  {
+    "word": "fatuous",
+    "pos": "adj.",
+    "meaning": "愚蠢的、空洞的",
+    "example": "Her fatuous comment revealed she hadn't read the report at all.",
+    "roots": "源自拉丁文 fatuus (愚蠢的) → 空洞無知的"
+  },
+  {
+    "word": "fawn",
+    "pos": "v.",
+    "meaning": "諂媚、逢迎",
+    "example": "The assistant fawned over the celebrity, hoping for a favor.",
+    "roots": "源自古英文 fagnian (表示喜悅)，後轉為狗搖尾巴討好之意 → 卑躬屈膝地討好"
+  },
+  {
+    "word": "faze",
+    "pos": "v.",
+    "meaning": "使驚慌、使不安",
+    "example": "Nothing seemed to faze the veteran negotiator, not even the threats.",
+    "roots": "源自方言 feeze (驅趕、使驚嚇) → 使人心慌意亂"
+  },
+  {
+    "word": "fealty",
+    "pos": "n.",
+    "meaning": "效忠、忠誠(尤指封建時代對領主)",
+    "example": "The knight swore fealty to his lord.",
+    "roots": "源自古法文 feaute，拉丁文 fidelitas (忠誠，fides 信任) → 對君主的忠誠誓言"
+  },
+  {
+    "word": "feasible",
+    "pos": "adj.",
+    "meaning": "可行的",
+    "example": "Engineers determined that the bridge design was structurally feasible.",
+    "roots": "源自拉丁文 facere (做) → 可以做到的"
+  },
+  {
+    "word": "feckless",
+    "pos": "adj.",
+    "meaning": "無能的、不負責任的",
+    "example": "His feckless management led the company to bankruptcy.",
+    "roots": "feck (蘇格蘭方言，effect 的縮寫，效力) + -less (無) → 無效力、沒用的"
+  },
+  {
+    "word": "fecund",
+    "pos": "adj.",
+    "meaning": "多產的、豐饒的",
+    "example": "The fecund soil of the river valley supported abundant crops.",
+    "roots": "源自拉丁文 fecundus (多產的) → 富有生產力的"
+  },
+  {
+    "word": "fecundity",
+    "pos": "n.",
+    "meaning": "多產、豐饒",
+    "example": "The fecundity of her imagination produced dozens of story ideas.",
+    "roots": "同 fecund 字源 → 多產的性質"
+  },
+  {
+    "word": "feign",
+    "pos": "v.",
+    "meaning": "假裝",
+    "example": "He feigned illness to avoid attending the meeting.",
+    "roots": "源自拉丁文 fingere (塑造、虛構) → 捏造出假象"
+  },
+  {
+    "word": "feint",
+    "pos": "n.",
+    "meaning": "佯攻、假動作",
+    "example": "The boxer used a feint to the left before landing a right hook.",
+    "roots": "同 feign 字源 (fingere，虛構) → 虛晃一招"
+  },
+  {
+    "word": "felicitous",
+    "pos": "adj.",
+    "meaning": "恰如其分的、巧妙的",
+    "example": "She found a felicitous phrase that captured the mood perfectly.",
+    "roots": "源自拉丁文 felix (幸運的、恰當的) → 恰到好處的"
+  },
+  {
+    "word": "felicity",
+    "pos": "n.",
+    "meaning": "幸福；(措辭等的)貼切",
+    "example": "The poem is admired for the felicity of its language.",
+    "roots": "同 felicitous 字源 (felix，幸運的) → 幸福或貼切的狀態"
+  },
+  {
+    "word": "felon",
+    "pos": "n.",
+    "meaning": "重罪犯",
+    "example": "As a convicted felon, he lost his right to vote.",
+    "roots": "源自中世紀拉丁文 fellon (惡人) → 犯重罪的人"
+  },
+  {
+    "word": "feral",
+    "pos": "adj.",
+    "meaning": "野生的、未馴化的",
+    "example": "A pack of feral cats roamed the abandoned warehouse.",
+    "roots": "源自拉丁文 fera (野獸) → 如野獸般未受馴化的"
+  },
+  {
+    "word": "ferment",
+    "pos": "n.",
+    "meaning": "騷動、動盪；發酵",
+    "example": "Political ferment swept through the country after the announcement.",
+    "roots": "源自拉丁文 fervere (沸騰) → 如沸騰般騷動"
+  },
+  {
+    "word": "fervent",
+    "pos": "adj.",
+    "meaning": "熱情的、熱烈的",
+    "example": "She made a fervent plea for peace between the two nations.",
+    "roots": "源自拉丁文 fervere (沸騰、燃燒) → 情感如火燃燒般熱烈"
+  },
+  {
+    "word": "fervid",
+    "pos": "adj.",
+    "meaning": "熱烈的、狂熱的",
+    "example": "The fervid crowd cheered wildly for their team.",
+    "roots": "同 fervent 字源 (fervere，沸騰) → 熱切到近乎狂熱"
+  },
+  {
+    "word": "fervor",
+    "pos": "n.",
+    "meaning": "熱情、熱忱",
+    "example": "She spoke with such fervor that the audience was moved to tears.",
+    "roots": "同 fervent 字源 → 熱切的情感"
+  },
+  {
+    "word": "fester",
+    "pos": "v.",
+    "meaning": "潰爛、惡化",
+    "example": "The wound began to fester because it was never properly cleaned.",
+    "roots": "源自拉丁文 fistula (瘻管、潰瘍) → 傷口化膿，引申為問題惡化"
+  },
+  {
+    "word": "festoon",
+    "pos": "v.",
+    "meaning": "(用花彩等)裝飾",
+    "example": "The hall was festooned with colorful ribbons for the celebration.",
+    "roots": "源自義大利文 festone (節慶裝飾，festa 節日) → 用花飾妝點"
+  },
+  {
+    "word": "fetid",
+    "pos": "adj.",
+    "meaning": "惡臭的",
+    "example": "A fetid smell rose from the stagnant pond.",
+    "roots": "源自拉丁文 fetere (發臭) → 散發惡臭的"
+  },
+  {
+    "word": "fetter",
+    "pos": "v.",
+    "meaning": "束縛、限制",
+    "example": "Old regulations still fettered the company's ability to innovate.",
+    "roots": "源自古英文 feter，與 foot (腳) 同源 → 拴住腳的鐐銬，引申為束縛"
+  },
+  {
+    "word": "feud",
+    "pos": "n.",
+    "meaning": "世仇、長期爭鬥",
+    "example": "The two families had been locked in a bitter feud for generations.",
+    "roots": "源自古法文 faide (敵意)，與 foe (敵人) 同源 → 長期的敵對關係"
+  },
+  {
+    "word": "feudal",
+    "pos": "adj.",
+    "meaning": "封建的",
+    "example": "Under the feudal system, peasants worked the land in exchange for protection.",
+    "roots": "源自中世紀拉丁文 feudum (采邑、封地) → 與封建土地制度相關的"
+  },
+  {
+    "word": "fiasco",
+    "pos": "n.",
+    "meaning": "慘敗、大失敗",
+    "example": "The product launch turned into a complete fiasco.",
+    "roots": "源自義大利文 fiasco (瓶子)，劇場俚語指演出失敗 → 徹底的失敗"
+  },
+  {
+    "word": "fiat",
+    "pos": "n.",
+    "meaning": "命令、法令",
+    "example": "The new tax was imposed by government fiat, without public debate.",
+    "roots": "源自拉丁文 fiat (讓它發生，fieri 的虛擬式) → 一聲令下的命令"
+  },
+  {
+    "word": "fickle",
+    "pos": "adj.",
+    "meaning": "善變的、反覆無常的",
+    "example": "Fashion trends are notoriously fickle, changing from season to season.",
+    "roots": "源自古英文 ficol (欺騙的) → 不可靠、常變化的"
+  },
+  {
+    "word": "fictitious",
+    "pos": "adj.",
+    "meaning": "虛構的、假的",
+    "example": "The names in the novel are entirely fictitious.",
+    "roots": "源自拉丁文 fingere (塑造、虛構) → 憑空捏造的"
+  },
+  {
+    "word": "fidelity",
+    "pos": "n.",
+    "meaning": "忠誠、忠實；精確度",
+    "example": "The recording captures the orchestra with remarkable fidelity.",
+    "roots": "源自拉丁文 fides (信任) → 忠實可信的程度"
+  },
+  {
+    "word": "figment",
+    "pos": "n.",
+    "meaning": "虛構之事、幻想產物",
+    "example": "The ghost was just a figment of her overactive imagination.",
+    "roots": "源自拉丁文 fingere (塑造、虛構) → 憑空想像出的東西"
+  },
+  {
+    "word": "filch",
+    "pos": "v.",
+    "meaning": "偷竊(小東西)",
+    "example": "The boy filched a few coins from his brother's jar.",
+    "roots": "源自中古英文 filchen，字源不詳 → 順手偷走小東西"
+  },
+  {
+    "word": "filial",
+    "pos": "adj.",
+    "meaning": "子女的、孝順的",
+    "example": "He performed his filial duty by caring for his aging parents.",
+    "roots": "源自拉丁文 filius (兒子)／filia (女兒) → 與子女身分相關的"
+  },
+  {
+    "word": "filibuster",
+    "pos": "n.",
+    "meaning": "(國會的)冗長辯論以阻撓表決",
+    "example": "The senator staged a filibuster to delay the vote on the bill.",
+    "roots": "源自西班牙文 filibustero (海盜) → 以拖延手段「劫持」議事程序"
+  },
+  {
+    "word": "finagle",
+    "pos": "v.",
+    "meaning": "(用狡猾手段)取得、騙取",
+    "example": "He managed to finagle a free upgrade from the airline.",
+    "roots": "可能源自方言 fainaigue (欺騙) → 用手段巧妙取得"
+  },
+  {
+    "word": "finesse",
+    "pos": "n.",
+    "meaning": "技巧、手腕",
+    "example": "She handled the delicate negotiation with great finesse.",
+    "roots": "源自法文 finesse (精細，fin 精細的) → 精巧細膩的處理手法"
+  },
+  {
+    "word": "finicky",
+    "pos": "adj.",
+    "meaning": "過分挑剔的",
+    "example": "The finicky cat refused to eat anything but a specific brand of food.",
+    "roots": "可能源自 fine (精細) 的變體 → 對細節過分講究"
+  },
+  {
+    "word": "finite",
+    "pos": "adj.",
+    "meaning": "有限的",
+    "example": "Human resources on Earth are finite, not infinite.",
+    "roots": "fin (結束，拉丁文 finis) + -ite (形容詞後綴) → 有邊界、有限度的"
+  },
+  {
+    "word": "firebrand",
+    "pos": "n.",
+    "meaning": "煽動者、激進分子",
+    "example": "The young firebrand rallied the crowd with passionate speeches.",
+    "roots": "fire (火) + brand (燃燒的木棍) → 點燃火焰的人，引申為煽動群眾者"
+  },
+  {
+    "word": "fissile",
+    "pos": "adj.",
+    "meaning": "易裂的；(核物理)可裂變的",
+    "example": "Uranium-235 is a fissile material used in nuclear reactors.",
+    "roots": "源自拉丁文 findere (分裂) → 容易裂開的"
+  },
+  {
+    "word": "fissure",
+    "pos": "n.",
+    "meaning": "裂縫、裂痕",
+    "example": "A deep fissure had opened in the rock face after the earthquake.",
+    "roots": "同 fissile 字源 (findere，分裂) → 分裂形成的縫隙"
+  },
+  {
+    "word": "fitful",
+    "pos": "adj.",
+    "meaning": "斷斷續續的、不規律的",
+    "example": "He fell into a fitful sleep, waking every hour.",
+    "roots": "fit (陣發，古英文 fitt，一段) + -ful (形容詞後綴) → 一陣一陣、不連續的"
+  },
+  {
+    "word": "flabbergast",
+    "pos": "v.",
+    "meaning": "使目瞪口呆",
+    "example": "The magician's trick left the audience completely flabbergasted.",
+    "roots": "字源不詳，可能混合 flabby (鬆軟) 與 aghast (驚駭) → 使人驚呆到說不出話"
+  },
+  {
+    "word": "flag",
+    "pos": "v.",
+    "meaning": "(力氣、興趣)減退",
+    "example": "His enthusiasm for the project began to flag after months of setbacks.",
+    "roots": "源自中古英文，本義為植物枯萎下垂 → 逐漸衰退無力"
+  },
+  {
+    "word": "flagitious",
+    "pos": "adj.",
+    "meaning": "罪大惡極的、窮凶極惡的",
+    "example": "The dictator's flagitious crimes shocked the international community.",
+    "roots": "源自拉丁文 flagitium (可恥的行為) → 極端邪惡的"
+  },
+  {
+    "word": "flagrant",
+    "pos": "adj.",
+    "meaning": "明目張膽的、公然的",
+    "example": "It was a flagrant violation of the ceasefire agreement.",
+    "roots": "源自拉丁文 flagrare (燃燒) → 如火焰般顯眼、無法忽視的惡行"
+  },
+  {
+    "word": "flail",
+    "pos": "v.",
+    "meaning": "(手腳)亂揮亂舞",
+    "example": "The swimmer flailed his arms desperately to stay afloat.",
+    "roots": "源自拉丁文 flagellum (鞭子)，本指打穀用的連枷 → 像揮動連枷般亂動"
+  },
+  {
+    "word": "flair",
+    "pos": "n.",
+    "meaning": "天賦、才華；風格",
+    "example": "She has a natural flair for languages.",
+    "roots": "源自古法文 flair (氣味、嗅覺，fleir 嗅) → 敏銳的鑑賞力，引申為天賦"
+  },
+  {
+    "word": "flamboyant",
+    "pos": "adj.",
+    "meaning": "華麗炫耀的、浮誇的",
+    "example": "His flamboyant style of dressing always drew attention.",
+    "roots": "源自法文 flamboyer (燃燒、閃耀，flamme 火焰) → 如火焰般耀眼奪目"
+  },
+  {
+    "word": "flaunt",
+    "pos": "v.",
+    "meaning": "炫耀",
+    "example": "She flaunted her new jewelry at the party.",
+    "roots": "字源不確定，可能源自古北歐語 flana (魯莽行動) → 大搖大擺地展示"
+  },
+  {
+    "word": "flay",
+    "pos": "v.",
+    "meaning": "剝(皮)；嚴厲批評",
+    "example": "Critics flayed the director for the film's clumsy script.",
+    "roots": "源自古英文 flean (剝皮) → 剝去外皮，引申為嚴厲抨擊"
+  },
+  {
+    "word": "fledgling",
+    "pos": "n.",
+    "meaning": "新手；羽翼未豐的雛鳥",
+    "example": "The fledgling company struggled to compete with established rivals.",
+    "roots": "fledge (長羽毛，古英文 flycge) + -ling (小、幼) → 剛長出羽毛、還不成熟的"
+  },
+  {
+    "word": "fleece",
+    "pos": "v.",
+    "meaning": "詐騙、敲竹槓",
+    "example": "The con artist fleeced elderly customers out of their savings.",
+    "roots": "源自 fleece (羊毛)，本義為剪羊毛 → 像剪羊毛般榨取他人財物"
+  },
+  {
+    "word": "fleeting",
+    "pos": "adj.",
+    "meaning": "短暫的、稍縱即逝的",
+    "example": "He caught a fleeting glimpse of her before she disappeared into the crowd.",
+    "roots": "fleet (快速移動，古英文 fleotan，漂浮、快速移動) + -ing (形容詞後綴) → 快速消逝的"
+  },
+  {
+    "word": "flimsy",
+    "pos": "adj.",
+    "meaning": "脆弱的、站不住腳的",
+    "example": "The lawyer easily dismantled the flimsy alibi.",
+    "roots": "字源不詳，可能與 film (薄膜) 相關 → 單薄不堅固的"
+  },
+  {
+    "word": "flinch",
+    "pos": "v.",
+    "meaning": "畏縮、退縮",
+    "example": "She didn't flinch even when the doctor mentioned the needle.",
+    "roots": "源自古法文 flenchir (轉身逃避) → 因恐懼而退縮"
+  },
+  {
+    "word": "flippant",
+    "pos": "adj.",
+    "meaning": "輕率無禮的、不正經的",
+    "example": "His flippant attitude toward the tragedy offended many people.",
+    "roots": "源自 flip (輕彈)，引申為說話輕浮 → 態度輕率不莊重"
+  },
+  {
+    "word": "flippancy",
+    "pos": "n.",
+    "meaning": "輕率無禮",
+    "example": "The teacher was annoyed by the student's flippancy during the exam review.",
+    "roots": "同 flippant 字源 → 輕率無禮的性質"
+  },
+  {
+    "word": "flit",
+    "pos": "v.",
+    "meaning": "(輕快地)掠過、飛掠",
+    "example": "Hummingbirds flitted from flower to flower in the garden.",
+    "roots": "源自古北歐語 flytja (移動) → 輕快迅速地移動"
+  },
+  {
+    "word": "florid",
+    "pos": "adj.",
+    "meaning": "過於華麗的(文體)；紅潤的(臉色)",
+    "example": "The essay's florid prose obscured its rather thin argument.",
+    "roots": "源自拉丁文 flos (花) → 如花朵般繁複豔麗"
+  },
+  {
+    "word": "flotsam",
+    "pos": "n.",
+    "meaning": "(海上)漂浮殘骸；無足輕重之人事物",
+    "example": "The beach was littered with flotsam after the storm.",
+    "roots": "源自古法文 floter (漂浮) → 船難後漂浮在海上的殘骸"
+  },
+  {
+    "word": "flounder",
+    "pos": "v.",
+    "meaning": "掙扎、笨拙地行動",
+    "example": "The new employee floundered without any proper training.",
+    "roots": "可能混合 founder (沉沒失敗) 與 blunder (犯錯) → 費力掙扎而進展緩慢"
+  },
+  {
+    "word": "flourish",
+    "pos": "v.",
+    "meaning": "茂盛、繁榮；(炫耀性地)揮動",
+    "example": "The local economy flourished after the new trade agreement.",
+    "roots": "源自拉丁文 florere (開花，flos 花) → 如花朵般繁盛"
+  },
+  {
+    "word": "flout",
+    "pos": "v.",
+    "meaning": "公然藐視、蔑視(規則)",
+    "example": "The company openly flouted safety regulations to cut costs.",
+    "roots": "可能源自中古英文 flouten (吹笛嘲弄) → 公然嘲弄、不理會"
+  },
+  {
+    "word": "fluctuate",
+    "pos": "v.",
+    "meaning": "波動、變動",
+    "example": "Stock prices fluctuated wildly throughout the trading day.",
+    "roots": "源自拉丁文 fluctuare (像波浪般起伏，fluctus 波浪) → 忽上忽下地變動"
+  },
+  {
+    "word": "fluency",
+    "pos": "n.",
+    "meaning": "流利、流暢",
+    "example": "Years of practice gave her remarkable fluency in Mandarin.",
+    "roots": "源自拉丁文 fluere (流動) → 如流水般順暢"
+  },
+  {
+    "word": "fluent",
+    "pos": "adj.",
+    "meaning": "流利的、流暢的",
+    "example": "He became fluent in Spanish after living in Madrid for a year.",
+    "roots": "同 fluency 字源 (fluere，流動) → 表達順暢無阻"
+  },
+  {
+    "word": "fluke",
+    "pos": "n.",
+    "meaning": "僥倖、意外的成功",
+    "example": "Winning the lottery twice was pure fluke.",
+    "roots": "源自撞球術語，指意外進球，字源不確定 → 純屬運氣的意外"
+  },
+  {
+    "word": "fluster",
+    "pos": "v.",
+    "meaning": "使慌亂",
+    "example": "The unexpected question flustered the usually composed spokesperson.",
+    "roots": "可能源自古北歐語 flaustr (匆忙) → 使人手忙腳亂"
+  },
+  {
+    "word": "flux",
+    "pos": "n.",
+    "meaning": "不斷變動、變遷",
+    "example": "The company's strategy has been in a state of constant flux.",
+    "roots": "源自拉丁文 fluere (流動) → 持續流動變化的狀態"
+  },
+  {
+    "word": "foible",
+    "pos": "n.",
+    "meaning": "小缺點、小毛病",
+    "example": "Everyone has their own little foibles and quirks.",
+    "roots": "源自古法文 feble (虛弱，即 feeble 的變體) → 性格上較弱的一面"
+  },
+  {
+    "word": "foil",
+    "pos": "v.",
+    "meaning": "挫敗、阻撓",
+    "example": "The security guards foiled the robbery attempt.",
+    "roots": "源自古法文 fuler (踩踏)，引申為擊敗、挫敗對手 → 使計畫落空"
+  },
+  {
+    "word": "folly",
+    "pos": "n.",
+    "meaning": "愚蠢(的行為)",
+    "example": "Investing his entire savings in one stock was pure folly.",
+    "roots": "源自古法文 folie (瘋狂，fol 傻子) → 愚蠢的行為或決定"
+  },
+  {
+    "word": "foment",
+    "pos": "v.",
+    "meaning": "煽動、挑起",
+    "example": "The propaganda was designed to foment unrest among the population.",
+    "roots": "源自拉丁文 fomentare (敷熱、溫暖) → 加溫助長，引申為煽動"
+  },
+  {
+    "word": "foolhardy",
+    "pos": "adj.",
+    "meaning": "有勇無謀的、魯莽的",
+    "example": "It was foolhardy to attempt the climb without proper equipment.",
+    "roots": "fool (傻瓜) + hardy (勇敢的) → 有勇無謀的莽撞"
+  },
+  {
+    "word": "foppish",
+    "pos": "adj.",
+    "meaning": "(男子)過分講究衣著的、紈袴的",
+    "example": "The foppish young lord spent hours choosing his outfit.",
+    "roots": "fop (紈袴子弟，字源不詳) + -ish (形容詞後綴) → 像紈袴子弟般的"
+  },
+  {
+    "word": "forage",
+    "pos": "v.",
+    "meaning": "搜尋(食物)、覓食",
+    "example": "The children foraged in the forest for berries and mushrooms.",
+    "roots": "源自古法文 fourrage (飼料，fuerre 乾草) → 四處尋找食物"
+  },
+  {
+    "word": "foray",
+    "pos": "n.",
+    "meaning": "突襲；短暫涉足",
+    "example": "The company made a brief foray into the smartphone market.",
+    "roots": "源自古法文 forrer (掠奪) → 短暫的侵入或嘗試"
+  },
+  {
+    "word": "forbear",
+    "pos": "v.",
+    "meaning": "忍耐、克制",
+    "example": "She forbore from commenting on his obvious mistake.",
+    "roots": "for- (完全) + bear (承受) → 完全忍住不做某事"
+  },
+  {
+    "word": "forbearance",
+    "pos": "n.",
+    "meaning": "忍耐、克制",
+    "example": "The teacher showed great forbearance with the disruptive student.",
+    "roots": "同 forbear 字源 → 忍耐的能力或行為"
+  },
+  {
+    "word": "forbidding",
+    "pos": "adj.",
+    "meaning": "令人望而生畏的",
+    "example": "The castle's forbidding walls discouraged any would-be intruders.",
+    "roots": "forbid (禁止) 的分詞形 → 使人不敢靠近的"
+  },
+  {
+    "word": "foreboding",
+    "pos": "n.",
+    "meaning": "不祥的預感",
+    "example": "A sense of foreboding filled her as she opened the letter.",
+    "roots": "fore- (預先) + boding (預兆，bode 預示) → 事先感受到的不祥預兆"
+  },
+  {
+    "word": "forensic",
+    "pos": "adj.",
+    "meaning": "法庭的、鑑識的",
+    "example": "Forensic evidence linked the suspect to the crime scene.",
+    "roots": "源自拉丁文 forensis (公開的、法庭的，forum 廣場) → 與法庭、公開辯論相關的"
+  },
+  {
+    "word": "foreshadow",
+    "pos": "v.",
+    "meaning": "預示、暗示",
+    "example": "The gloomy weather foreshadowed the tragedy to come.",
+    "roots": "fore- (預先) + shadow (影子) → 提前投下陰影，暗示未來"
+  },
+  {
+    "word": "forestall",
+    "pos": "v.",
+    "meaning": "預先阻止、搶先阻止",
+    "example": "The company forestalled a hostile takeover by buying back its shares.",
+    "roots": "fore- (預先) + stall (阻止，源自古英文 steall，位置) → 搶先占位以阻止"
+  },
+  {
+    "word": "forfeit",
+    "pos": "v.",
+    "meaning": "喪失、被沒收",
+    "example": "He forfeited his deposit by canceling the reservation too late.",
+    "roots": "源自古法文 forfait (罪過，越界的行為，for- 超出 + fait 做) → 因違規而失去"
+  },
+  {
+    "word": "forge",
+    "pos": "v.",
+    "meaning": "偽造；鍛造、逐步建立",
+    "example": "He was arrested for trying to forge official documents.",
+    "roots": "源自拉丁文 fabricare (製造) → 打造出來，引申為偽造"
+  },
+  {
+    "word": "forgo",
+    "pos": "v.",
+    "meaning": "放棄、捨棄",
+    "example": "She decided to forgo dessert to save room for dinner.",
+    "roots": "for- (放棄) + go (源自古英文 gan，去) → 放棄不做"
+  },
+  {
+    "word": "formidable",
+    "pos": "adj.",
+    "meaning": "令人敬畏的、難以應付的",
+    "example": "The chess champion proved to be a formidable opponent.",
+    "roots": "源自拉丁文 formidare (畏懼) → 令人畏懼的強大對手"
+  },
+  {
+    "word": "formulaic",
+    "pos": "adj.",
+    "meaning": "公式化的、老套的",
+    "example": "Critics dismissed the sequel as formulaic and uninspired.",
+    "roots": "formula (公式) + -ic (形容詞後綴) → 依循固定公式的"
+  },
+  {
+    "word": "forsake",
+    "pos": "v.",
+    "meaning": "拋棄、遺棄",
+    "example": "He vowed never to forsake his friends in times of trouble.",
+    "roots": "for- (完全) + sake (源自古英文 sacan，爭論、放棄) → 徹底棄之不顧"
+  },
+  {
+    "word": "forswear",
+    "pos": "v.",
+    "meaning": "發誓放棄",
+    "example": "She forswore alcohol after the accident.",
+    "roots": "for- (放棄) + swear (發誓) → 發誓不再做某事"
+  },
+  {
+    "word": "forte",
+    "pos": "n.",
+    "meaning": "專長、擅長之事",
+    "example": "Public speaking has never been his forte.",
+    "roots": "源自法文 fort (強的，拉丁文 fortis) → 最強的一項能力"
+  },
+  {
+    "word": "forthright",
+    "pos": "adj.",
+    "meaning": "直率的、坦白的",
+    "example": "Her forthright criticism, while blunt, was appreciated by the team.",
+    "roots": "forth (向前) + right (正直的) → 直接了當、毫不拐彎抹角"
+  },
+  {
+    "word": "fortify",
+    "pos": "v.",
+    "meaning": "加強、強化",
+    "example": "The city fortified its defenses in anticipation of the siege.",
+    "roots": "fort (源自拉丁文 fortis，強的) + -ify (使…) → 使更堅固強大"
+  },
+  {
+    "word": "fortitude",
+    "pos": "n.",
+    "meaning": "堅忍、剛毅",
+    "example": "She faced the diagnosis with remarkable fortitude.",
+    "roots": "同 fortify 字源 (fortis，強的) → 內在堅強的力量"
+  },
+  {
+    "word": "fortuitous",
+    "pos": "adj.",
+    "meaning": "偶然的、幸運的",
+    "example": "Their meeting was entirely fortuitous, not planned at all.",
+    "roots": "源自拉丁文 fors (機運) → 出於偶然機運的"
+  },
+  {
+    "word": "foster",
+    "pos": "v.",
+    "meaning": "培養、促進",
+    "example": "The program is designed to foster creativity in young children.",
+    "roots": "源自古英文 fostrian (餵養、養育) → 扶植、幫助成長"
+  },
+  {
+    "word": "founder",
+    "pos": "v.",
+    "meaning": "(船)沉沒；(計畫)失敗",
+    "example": "The negotiations foundered over disagreements about pricing.",
+    "roots": "源自拉丁文 fundus (底部) → 沉到底部，引申為徹底失敗"
+  },
+  {
+    "word": "fracas",
+    "pos": "n.",
+    "meaning": "喧鬧的爭吵、混戰",
+    "example": "A fracas broke out among fans after the controversial call.",
+    "roots": "源自義大利文 fracassare (打碎、粉碎) → 吵鬧的衝突"
+  },
+  {
+    "word": "fractious",
+    "pos": "adj.",
+    "meaning": "易怒的、難駕馭的",
+    "example": "The fractious committee could not agree on even basic procedures.",
+    "roots": "源自拉丁文 frangere (打破) → 容易破裂、鬧脾氣的"
+  },
+  {
+    "word": "fragmentary",
+    "pos": "adj.",
+    "meaning": "片段的、不完整的",
+    "example": "Historians must piece together the past from fragmentary records.",
+    "roots": "fragment (碎片，同 fractious 字源 frangere，打破) + -ary (形容詞後綴) → 呈碎片狀的"
+  },
+  {
+    "word": "frailty",
+    "pos": "n.",
+    "meaning": "脆弱、虛弱",
+    "example": "Old age brought physical frailty but not a weakened spirit.",
+    "roots": "frail (虛弱的，源自拉丁文 fragilis) + -ty (名詞後綴) → 脆弱的狀態"
+  },
+  {
+    "word": "fraternal",
+    "pos": "adj.",
+    "meaning": "兄弟的、手足的",
+    "example": "The two nations signed a treaty of fraternal cooperation.",
+    "roots": "源自拉丁文 frater (兄弟) → 如兄弟般的情誼"
+  },
+  {
+    "word": "fraternize",
+    "pos": "v.",
+    "meaning": "(與敵人等)友好往來、稱兄道弟",
+    "example": "Soldiers were forbidden to fraternize with the local population.",
+    "roots": "同 fraternal 字源 (frater，兄弟) → 以兄弟之姿交往"
+  },
+  {
+    "word": "fraudulent",
+    "pos": "adj.",
+    "meaning": "詐欺的、欺詐的",
+    "example": "The company was fined for fraudulent accounting practices.",
+    "roots": "fraud (詐欺，源自拉丁文 fraus) + -ulent (充滿…的) → 充滿欺騙性質的"
+  },
+  {
+    "word": "fraught",
+    "pos": "adj.",
+    "meaning": "充滿(問題、危險等)的",
+    "example": "The negotiations were fraught with tension from the very start.",
+    "roots": "源自中古荷蘭文 vracht (貨物、裝載) → 裝滿(某種情緒或狀況)的"
+  },
+  {
+    "word": "freewheeling",
+    "pos": "adj.",
+    "meaning": "隨心所欲的、不受約束的",
+    "example": "His freewheeling lifestyle contrasted sharply with his sister's rigid schedule.",
+    "roots": "free (自由的) + wheeling (輪子空轉不受阻) → 像自由轉動的輪子般不受拘束"
+  },
+  {
+    "word": "frenetic",
+    "pos": "adj.",
+    "meaning": "狂熱的、瘋狂忙亂的",
+    "example": "The kitchen was a scene of frenetic activity just before the dinner rush.",
+    "roots": "源自希臘文 phrenitis (腦炎、瘋狂，phren 心智) → 瘋狂忙亂的狀態"
+  },
+  {
+    "word": "frenzied",
+    "pos": "adj.",
+    "meaning": "狂亂的",
+    "example": "Frenzied shoppers rushed through the doors on Black Friday.",
+    "roots": "同 frenzy 字源 → 陷入瘋狂狀態的"
+  },
+  {
+    "word": "frenzy",
+    "pos": "n.",
+    "meaning": "狂熱、狂亂",
+    "example": "News of the discovery sent the scientific community into a frenzy.",
+    "roots": "源自古法文 frenesie，同 frenetic 字源 (希臘文 phren，心智) → 心智失控的狀態"
+  },
+  {
+    "word": "fresco",
+    "pos": "n.",
+    "meaning": "壁畫(濕壁畫技法)",
+    "example": "The chapel's ceiling is decorated with a magnificent fresco.",
+    "roots": "源自義大利文 fresco (新鮮的)，指趁灰泥未乾時作畫 → 濕壁畫"
+  },
+  {
+    "word": "fret",
+    "pos": "v.",
+    "meaning": "煩惱、焦慮",
+    "example": "There's no need to fret over such a minor mistake.",
+    "roots": "源自古英文 fretan (吞食)，引申為心被憂慮啃噬 → 因憂慮而煩躁"
+  },
+  {
+    "word": "friable",
+    "pos": "adj.",
+    "meaning": "易碎的、易成粉末的",
+    "example": "The friable rock crumbled easily under the geologist's hammer.",
+    "roots": "源自拉丁文 friare (弄碎) → 容易碎裂成粉的"
+  },
+  {
+    "word": "frigid",
+    "pos": "adj.",
+    "meaning": "嚴寒的、冷淡的",
+    "example": "Their once-warm relationship had turned frigid over the years.",
+    "roots": "源自拉丁文 frigidus (寒冷的) → 溫度或態度上的冷淡"
+  },
+  {
+    "word": "frigidity",
+    "pos": "n.",
+    "meaning": "寒冷、冷淡",
+    "example": "The frigidity of the reception made it clear she wasn't welcome.",
+    "roots": "同 frigid 字源 → 冷淡的狀態"
+  },
+  {
+    "word": "frisky",
+    "pos": "adj.",
+    "meaning": "活潑好動的、嬉鬧的",
+    "example": "The frisky puppy chased its tail around the yard.",
+    "roots": "源自古法文 frisque (活潑的) → 精力充沛、愛嬉鬧的"
+  },
+  {
+    "word": "frivolity",
+    "pos": "n.",
+    "meaning": "輕浮、輕佻",
+    "example": "The wedding was a welcome moment of frivolity after months of hard work.",
+    "roots": "同 frivolous 字源 (拉丁文 frivolus，微不足道的) → 不嚴肅、輕浮的性質"
+  },
+  {
+    "word": "frivolous",
+    "pos": "adj.",
+    "meaning": "輕浮的、不重要的",
+    "example": "The judge dismissed the lawsuit as frivolous.",
+    "roots": "源自拉丁文 frivolus (瑣碎的、無價值的) → 缺乏嚴肅意義的"
+  },
+  {
+    "word": "frolic",
+    "pos": "v.",
+    "meaning": "嬉戲、玩耍",
+    "example": "Children frolicked in the fountain on the hot summer day.",
+    "roots": "源自荷蘭文 vrolijk (快樂的) → 歡快地玩耍"
+  },
+  {
+    "word": "frond",
+    "pos": "n.",
+    "meaning": "(蕨類、棕櫚的)葉片",
+    "example": "Palm fronds swayed gently in the tropical breeze.",
+    "roots": "源自拉丁文 frons (樹葉) → 羊齒或棕櫚類植物的大葉"
+  },
+  {
+    "word": "frowzy",
+    "pos": "adj.",
+    "meaning": "(人或地方)邋遢的、悶臭的",
+    "example": "The frowzy old apartment hadn't been cleaned in months.",
+    "roots": "字源不詳，可能與 frowsty (悶臭的) 相關 → 骯髒邋遢、氣味不佳的"
+  },
+  {
+    "word": "frugal",
+    "pos": "adj.",
+    "meaning": "節儉的",
+    "example": "Growing up poor taught her to be frugal with money.",
+    "roots": "源自拉丁文 frux (果實、收穫) → 珍惜收穫、節省使用"
+  },
+  {
+    "word": "frugality",
+    "pos": "n.",
+    "meaning": "節儉",
+    "example": "The couple's frugality allowed them to retire early.",
+    "roots": "同 frugal 字源 → 節儉的美德"
+  },
+  {
+    "word": "fruition",
+    "pos": "n.",
+    "meaning": "實現、成果",
+    "example": "Years of planning finally came to fruition when the museum opened.",
+    "roots": "源自拉丁文 frui (享受、獲得果實) → 努力開花結果"
+  },
+  {
+    "word": "frustrate",
+    "pos": "v.",
+    "meaning": "使受挫、挫敗",
+    "example": "Bureaucratic delays frustrated the project's timeline.",
+    "roots": "源自拉丁文 frustra (徒勞地) → 使努力落空"
+  },
+  {
+    "word": "fugacious",
+    "pos": "adj.",
+    "meaning": "短暫易逝的",
+    "example": "Fame proved fugacious, fading almost as quickly as it had arrived.",
+    "roots": "源自拉丁文 fugere (逃跑、逃離) → 如逃逸般轉瞬即逝"
+  },
+  {
+    "word": "fugitive",
+    "pos": "n.",
+    "meaning": "逃亡者",
+    "example": "The fugitive was captured three days after escaping prison.",
+    "roots": "同 fugacious 字源 (fugere，逃跑) → 逃跑中的人"
+  },
+  {
+    "word": "fulcrum",
+    "pos": "n.",
+    "meaning": "支點；關鍵",
+    "example": "The senator became the fulcrum around which the debate turned.",
+    "roots": "源自拉丁文 fulcire (支撐) → 槓桿的支撐點"
+  },
+  {
+    "word": "fulminate",
+    "pos": "v.",
+    "meaning": "猛烈抨擊、怒斥",
+    "example": "The columnist fulminated against government corruption every week.",
+    "roots": "源自拉丁文 fulmen (閃電) → 如閃電般猛烈爆發言辭"
+  },
+  {
+    "word": "fulsome",
+    "pos": "adj.",
+    "meaning": "(讚美等)過分的、諂媚的",
+    "example": "His fulsome praise of the boss made colleagues uncomfortable.",
+    "roots": "full (滿) + -some (充滿…的) → 過度充盈到令人反感"
+  },
+  {
+    "word": "fumble",
+    "pos": "v.",
+    "meaning": "笨拙地摸索、搞砸",
+    "example": "He fumbled with his keys in the dark.",
+    "roots": "源自古北歐語 falma (摸索) → 笨手笨腳地處理"
+  },
+  {
+    "word": "fume",
+    "pos": "v.",
+    "meaning": "冒煙；發怒",
+    "example": "She fumed silently after being passed over for the promotion.",
+    "roots": "源自拉丁文 fumus (煙) → 怒氣如煙般冒出"
+  },
+  {
+    "word": "fumigate",
+    "pos": "v.",
+    "meaning": "煙燻消毒",
+    "example": "The exterminators fumigated the building to eliminate the infestation.",
+    "roots": "同 fume 字源 (fumus，煙) + -igate (使…) → 用煙燻的方式消毒"
+  },
+  {
+    "word": "functionary",
+    "pos": "n.",
+    "meaning": "(尤指官僚體系中的)官員、辦事員",
+    "example": "A low-level functionary processed the paperwork without any real authority.",
+    "roots": "function (職能) + -ary (…的人) → 執行特定職能的官員"
+  },
+  {
+    "word": "furbish",
+    "pos": "v.",
+    "meaning": "擦亮、翻新",
+    "example": "The old mansion was furbished before being sold.",
+    "roots": "源自古法文 forbir (磨亮) → 使煥然一新"
+  },
+  {
+    "word": "furor",
+    "pos": "n.",
+    "meaning": "群情激憤、喧然大波",
+    "example": "The controversial remark sparked a furor on social media.",
+    "roots": "源自拉丁文 furere (發狂) → 群眾激憤如狂的狀態"
+  },
+  {
+    "word": "furrow",
+    "pos": "v.",
+    "meaning": "(眉頭)皺起；犁出溝紋",
+    "example": "Worry furrowed his brow as he read the letter.",
+    "roots": "源自古英文 furh (犁溝) → 田間的溝紋，引申為皺紋"
+  },
+  {
+    "word": "furtive",
+    "pos": "adj.",
+    "meaning": "偷偷摸摸的、鬼鬼祟祟的",
+    "example": "She cast a furtive glance at her phone during the meeting.",
+    "roots": "源自拉丁文 fur (小偷) → 如小偷般鬼祟的"
+  },
+  {
+    "word": "fustian",
+    "pos": "n.",
+    "meaning": "誇大浮誇的言辭",
+    "example": "The speech was full of fustian that meant little in practice.",
+    "roots": "源自埃及地名 Fustat 產的一種粗布，引申為華而不實的言辭 → 虛浮誇張的言語"
+  },
+  {
+    "word": "fusty",
+    "pos": "adj.",
+    "meaning": "發霉的、陳腐守舊的",
+    "example": "The fusty old library smelled of dust and old paper.",
+    "roots": "源自古法文 fust (木桶)，指酒桶的霉味 → 陳舊發霉的氣味或觀念"
+  },
+  {
+    "word": "futile",
+    "pos": "adj.",
+    "meaning": "徒勞的、無效的",
+    "example": "Their attempts to revive the failing business proved futile.",
+    "roots": "源自拉丁文 futilis (易漏的容器，引申無用) → 白費力氣的"
+  },
+  {
+    "word": "futility",
+    "pos": "n.",
+    "meaning": "徒勞、無用",
+    "example": "He was overwhelmed by a sense of futility after the project's collapse.",
+    "roots": "同 futile 字源 → 徒勞無功的狀態"
+  },
+  {
+    "word": "gaffe",
+    "pos": "n.",
+    "meaning": "失言、失禮之舉",
+    "example": "The politician's gaffe was replayed endlessly on the news.",
+    "roots": "源自法文 gaffe (船鉤，俚語指笨拙錯誤) → 尷尬的失誤"
+  },
+  {
+    "word": "gainsay",
+    "pos": "v.",
+    "meaning": "否認、反駁",
+    "example": "No one dared to gainsay the general's orders.",
+    "roots": "gain- (古英文 gegn，反對) + say (說) → 說反對的話"
+  },
+  {
+    "word": "gall",
+    "pos": "v.",
+    "meaning": "激怒、使惱火",
+    "example": "It galled him to admit that his rival had been right all along.",
+    "roots": "源自古英文 gealla (膽汁)，引申為苦澀、令人惱怒 → 使人如嘗膽汁般惱火"
+  },
+  {
+    "word": "galvanize",
+    "pos": "v.",
+    "meaning": "刺激、激勵(採取行動)",
+    "example": "The tragedy galvanized the community into demanding reform.",
+    "roots": "源自科學家 Galvani 的姓氏，其發現電流可使蛙腿抽動 → 通電般瞬間激起行動"
+  },
+  {
+    "word": "gambit",
+    "pos": "n.",
+    "meaning": "(西洋棋)開局讓子；策略性的先手",
+    "example": "Her resignation was seen as a political gambit to gain public sympathy.",
+    "roots": "源自義大利文 gambetto (絆倒對手的腿)，西洋棋術語 → 為取得優勢而先作的犧牲或行動"
+  },
+  {
+    "word": "gambol",
+    "pos": "v.",
+    "meaning": "蹦蹦跳跳、嬉戲",
+    "example": "Lambs gamboled in the spring meadow.",
+    "roots": "源自古法文 gambade (跳躍，gambe 腿) → 用腿蹦跳嬉戲"
+  },
+  {
+    "word": "gamut",
+    "pos": "n.",
+    "meaning": "全部範圍",
+    "example": "The exhibition covers the entire gamut of the artist's career.",
+    "roots": "源自中世紀音樂術語 gamma ut (音階的第一個音) → 音階的整個範圍，引申為全部範圍"
+  },
+  {
+    "word": "garble",
+    "pos": "v.",
+    "meaning": "曲解、混淆(訊息)",
+    "example": "The message was garbled during transmission and made no sense.",
+    "roots": "源自阿拉伯文 gharbala (篩選)，經義大利文轉為扭曲訊息之意 → 篩選過程中訊息被扭曲"
+  },
+  {
+    "word": "garish",
+    "pos": "adj.",
+    "meaning": "俗豔的、過分鮮豔的",
+    "example": "The garish neon sign clashed with the quiet, historic street.",
+    "roots": "可能源自古北歐語 gaurr (粗俗) → 花俏俗氣、刺眼"
+  },
+  {
+    "word": "garner",
+    "pos": "v.",
+    "meaning": "收集、獲得",
+    "example": "The film garnered critical acclaim at the festival.",
+    "roots": "源自拉丁文 granum (穀粒)，本義指穀倉儲糧 → 累積收集(讚譽、資源等)"
+  },
+  {
+    "word": "garrulous",
+    "pos": "adj.",
+    "meaning": "喋喋不休的、多話的",
+    "example": "The garrulous cab driver talked nonstop for the entire ride.",
+    "roots": "源自拉丁文 garrire (嘮叨、喋喋不休) → 說個不停的"
+  },
+  {
+    "word": "gauche",
+    "pos": "adj.",
+    "meaning": "笨拙的、不得體的",
+    "example": "Bringing up salary at dinner was considered rather gauche.",
+    "roots": "源自法文 gauche (左邊的)，過去左手常被視為笨拙不吉 → 舉止笨拙不得體"
+  },
+  {
+    "word": "gaudy",
+    "pos": "adj.",
+    "meaning": "俗豔的、花俏的",
+    "example": "She wore a gaudy necklace covered in oversized fake gems.",
+    "roots": "源自拉丁文 gaudium (歡樂)，經演變帶有俗麗之意 → 過分華麗俗氣"
+  },
+  {
+    "word": "gaunt",
+    "pos": "adj.",
+    "meaning": "憔悴的、瘦削的",
+    "example": "After the illness, his face looked gaunt and hollow.",
+    "roots": "字源不詳，可能源自古法文 → 因病或飢餓而消瘦"
+  },
+  {
+    "word": "gawky",
+    "pos": "adj.",
+    "meaning": "(尤指青少年)笨手笨腳的、姿態彆扭的",
+    "example": "The gawky teenager tripped over his own feet on stage.",
+    "roots": "源自方言 gawk (呆看)，引申為笨拙 → 動作生硬不協調"
+  },
+  {
+    "word": "genial",
+    "pos": "adj.",
+    "meaning": "和藹可親的、友善的",
+    "example": "Our genial host made everyone feel welcome.",
+    "roots": "源自拉丁文 genialis (歡樂的，genius 守護神) → 令人愉快、和善的"
+  },
+  {
+    "word": "genteel",
+    "pos": "adj.",
+    "meaning": "(過分)講究禮儀的、假斯文的",
+    "example": "She maintained a genteel manner even in the most stressful situations.",
+    "roots": "源自法文 gentil (高貴的)，同 gentle 字源 → 刻意表現出的高雅"
+  },
+  {
+    "word": "gentility",
+    "pos": "n.",
+    "meaning": "(講究)高雅、上流風範",
+    "example": "The old mansion still exuded an air of faded gentility.",
+    "roots": "同 genteel 字源 → 高雅風範的狀態"
+  },
+  {
+    "word": "genuflect",
+    "pos": "v.",
+    "meaning": "屈膝下跪(尤指表示敬意)",
+    "example": "Worshippers genuflected before the altar.",
+    "roots": "genu (拉丁文，膝蓋) + flect (彎曲，flectere) → 彎曲膝蓋以示敬意"
+  },
+  {
+    "word": "germane",
+    "pos": "adj.",
+    "meaning": "切題的、相關的",
+    "example": "Please keep your comments germane to the topic at hand.",
+    "roots": "源自拉丁文 germanus (同胞的、密切相關的) → 與主題密切相關的"
+  },
+  {
+    "word": "germinal",
+    "pos": "adj.",
+    "meaning": "萌芽階段的、初期的",
+    "example": "The theory was still in its germinal stage when the professor died.",
+    "roots": "germ (胚芽，拉丁文 germen) + -al (形容詞後綴) → 處於萌芽初期的"
+  },
+  {
+    "word": "germinate",
+    "pos": "v.",
+    "meaning": "發芽、萌生",
+    "example": "The seeds began to germinate after a week of steady rain.",
+    "roots": "同 germinal 字源 (germen，胚芽) → 種子開始生長"
+  },
+  {
+    "word": "gerontocracy",
+    "pos": "n.",
+    "meaning": "老人政治、老人統治的政體",
+    "example": "Critics argued that the party had become a gerontocracy, out of touch with younger voters.",
+    "roots": "希臘文 geron (老人) + -cracy (統治) → 由老年人主導的統治"
+  },
+  {
+    "word": "gerrymander",
+    "pos": "v.",
+    "meaning": "(為政治利益)不公平劃分選區",
+    "example": "The state legislature was accused of gerrymandering districts to favor the ruling party.",
+    "roots": "源自政治家 Elbridge Gerry 的姓氏 + salamander (蠑螈，因選區形狀似蠑螈) → 惡意操縱選區劃分"
+  },
+  {
+    "word": "gesticulate",
+    "pos": "v.",
+    "meaning": "(說話時)比手畫腳",
+    "example": "He gesticulated wildly as he described the near-accident.",
+    "roots": "源自拉丁文 gesticulari (做手勢，gestus 姿勢) → 用誇張手勢表達"
+  },
+  {
+    "word": "ghastly",
+    "pos": "adj.",
+    "meaning": "可怕的、駭人的",
+    "example": "The battlefield was a ghastly sight after the fighting ended.",
+    "roots": "源自古英文 gæstan (使驚駭)，與 ghost (鬼) 同源 → 如鬼魅般令人恐懼"
+  },
+  {
+    "word": "ghoulish",
+    "pos": "adj.",
+    "meaning": "陰森的、以恐怖事物為樂的",
+    "example": "The tabloid took a ghoulish interest in the details of the murder.",
+    "roots": "ghoul (食屍鬼，源自阿拉伯文 ghul) + -ish (形容詞後綴) → 如食屍鬼般病態陰森"
+  },
+  {
+    "word": "gibberish",
+    "pos": "n.",
+    "meaning": "胡言亂語",
+    "example": "Without his glasses, the tiny print looked like gibberish.",
+    "roots": "擬聲詞，模仿含糊不清的說話聲 → 無意義的話語"
+  },
+  {
+    "word": "gibe",
+    "pos": "v.",
+    "meaning": "嘲弄、譏諷",
+    "example": "His classmates gibed at him for his old-fashioned clothes.",
+    "roots": "源自古法文 giber (搖晃、玩弄)，引申為嘲笑 → 語帶嘲諷地取笑"
+  },
+  {
+    "word": "giddy",
+    "pos": "adj.",
+    "meaning": "頭暈的；興奮輕浮的",
+    "example": "She felt giddy with excitement on her wedding day.",
+    "roots": "源自古英文 gydig (被神附身、瘋狂的) → 因興奮或旋轉而暈眩"
+  },
+  {
+    "word": "gild",
+    "pos": "v.",
+    "meaning": "鍍金；美化(掩飾缺點)",
+    "example": "Politicians often gild their records before an election.",
+    "roots": "源自古英文 gyldan，與 gold (金) 同源 → 表面鍍上黃金，引申粉飾"
+  },
+  {
+    "word": "gingerly",
+    "pos": "adv.",
+    "meaning": "小心翼翼地",
+    "example": "She gingerly stepped over the broken glass.",
+    "roots": "源自古法文 gensor (優雅的)，引申小心謹慎的動作 → 謹慎細膩地行動"
+  },
+  {
+    "word": "gist",
+    "pos": "n.",
+    "meaning": "要旨、主旨",
+    "example": "Just give me the gist of the report; I don't need every detail.",
+    "roots": "源自法文 gist (位於，gésir 躺)，法律用語指案件核心所在 → 事情的核心所在"
+  },
+  {
+    "word": "glacial",
+    "pos": "adj.",
+    "meaning": "冰河的；冷淡的、極慢的",
+    "example": "The negotiations proceeded at a glacial pace.",
+    "roots": "源自拉丁文 glacies (冰) → 如冰河般緩慢或冷淡"
+  },
+  {
+    "word": "glare",
+    "pos": "v.",
+    "meaning": "怒目而視",
+    "example": "She glared at him across the room in silent anger.",
+    "roots": "源自中古英文 glaren (發光、瞪視) → 目光如強光般刺人"
+  },
+  {
+    "word": "glaze",
+    "pos": "v.",
+    "meaning": "(眼神)變呆滯；上釉",
+    "example": "His eyes began to glaze over during the long lecture.",
+    "roots": "源自 glass (玻璃) 的變體 → 覆上一層如玻璃般的光滑表面"
+  },
+  {
+    "word": "glean",
+    "pos": "v.",
+    "meaning": "(辛苦地)蒐集(資訊、事實)",
+    "example": "Investigators gleaned important clues from the scattered evidence.",
+    "roots": "源自古法文 glener (拾取遺落的穀穗) → 一點一滴地收集"
+  },
+  {
+    "word": "glib",
+    "pos": "adj.",
+    "meaning": "油腔滑調的、口若懸河卻不真誠的",
+    "example": "His glib excuses failed to convince the judge.",
+    "roots": "源自古荷蘭文 glibberich (滑溜的) → 說話滑溜、不加思索"
+  },
+  {
+    "word": "glimmer",
+    "pos": "n.",
+    "meaning": "微光；一絲(希望等)",
+    "example": "A glimmer of hope remained despite the grim diagnosis.",
+    "roots": "源自中古荷蘭文 glimmen (發微光) → 微弱閃爍的光或跡象"
+  },
+  {
+    "word": "glisten",
+    "pos": "v.",
+    "meaning": "閃閃發光(尤指濕潤表面)",
+    "example": "Dew glistened on the grass in the morning sun.",
+    "roots": "源自古英文 glisnian (發光) → 濕潤或光滑表面反光"
+  },
+  {
+    "word": "glitch",
+    "pos": "n.",
+    "meaning": "小故障、小問題",
+    "example": "A technical glitch delayed the launch by several hours.",
+    "roots": "可能源自意第緒語 glitshen (滑動) → 系統中滑落出的小差錯"
+  },
+  {
+    "word": "gloat",
+    "pos": "v.",
+    "meaning": "幸災樂禍、沾沾自喜",
+    "example": "He couldn't resist gloating over his rival's defeat.",
+    "roots": "源自古北歐語 glotta (露齒而笑) → 得意地竊笑"
+  },
+  {
+    "word": "gloss",
+    "pos": "v.",
+    "meaning": "掩飾(缺點)、輕描淡寫帶過",
+    "example": "The report glossed over the project's serious budget overruns.",
+    "roots": "源自拉丁文 glossa (難字註解)，引申表面修飾 → 用表面說明掩蓋問題"
+  },
+  {
+    "word": "glower",
+    "pos": "v.",
+    "meaning": "怒視、瞪視",
+    "example": "He glowered at the referee after the controversial call.",
+    "roots": "源自中古英文 gloren (瞪眼) → 帶怒意地盯視"
+  },
+  {
+    "word": "glut",
+    "pos": "n.",
+    "meaning": "供過於求、過剩",
+    "example": "A glut of oil on the market caused prices to plummet.",
+    "roots": "源自拉丁文 gluttire (吞食) → 過量供應如被填滿"
+  },
+  {
+    "word": "glutinous",
+    "pos": "adj.",
+    "meaning": "黏性的、糯性的",
+    "example": "Glutinous rice is commonly used in Asian desserts.",
+    "roots": "源自拉丁文 gluten (膠、黏質) → 具黏性的"
+  },
+  {
+    "word": "gluttonous",
+    "pos": "adj.",
+    "meaning": "貪吃的、暴食的",
+    "example": "His gluttonous eating habits eventually led to health problems.",
+    "roots": "源自拉丁文 gluttire (吞食) → 貪婪進食的"
+  },
+  {
+    "word": "gnarled",
+    "pos": "adj.",
+    "meaning": "(樹木等)多節瘤的、扭曲的",
+    "example": "The old oak's gnarled branches twisted in every direction.",
+    "roots": "gnarl (瘤結，可能源自 knurl) → 因生長扭曲而多節瘤"
+  },
+  {
+    "word": "goad",
+    "pos": "v.",
+    "meaning": "刺激、驅使",
+    "example": "His friends goaded him into trying the extreme roller coaster.",
+    "roots": "源自古英文 gad (尖刺，用以驅趕牲畜) → 用刺激手段驅使行動"
+  },
+  {
+    "word": "gorge",
+    "pos": "v.",
+    "meaning": "狼吞虎嚥",
+    "example": "The hikers gorged themselves on berries they found along the trail.",
+    "roots": "源自古法文 gorge (喉嚨) → 塞滿喉嚨般大吃"
+  },
+  {
+    "word": "gossamer",
+    "pos": "adj.",
+    "meaning": "輕薄如蛛絲的",
+    "example": "The bride wore a gown of gossamer silk.",
+    "roots": "源自中古英文 gosesomer (鵝毛時節)，指秋天蛛絲飄浮的季節 → 如蛛絲般輕盈細薄"
+  },
+  {
+    "word": "gouge",
+    "pos": "v.",
+    "meaning": "挖出、鑿出；(俚)敲詐",
+    "example": "Thieves gouged the lock out of the door with a crowbar.",
+    "roots": "源自晚期拉丁文 gubia (鑿子) → 用鑿子挖出，引申強取"
+  },
+  {
+    "word": "gourmand",
+    "pos": "n.",
+    "meaning": "講究美食者、老饕(略帶貪吃意味)",
+    "example": "As a gourmand, he could never resist a second helping.",
+    "roots": "源自古法文 gourmant → 熱衷於美食甚至貪吃的人"
+  },
+  {
+    "word": "grandeur",
+    "pos": "n.",
+    "meaning": "壯麗、宏偉",
+    "example": "The grandeur of the ancient cathedral left visitors speechless.",
+    "roots": "grand (宏大的，拉丁文 grandis) + -eur (名詞後綴) → 宏大壯麗的性質"
+  },
+  {
+    "word": "grandiloquent",
+    "pos": "adj.",
+    "meaning": "(言辭)誇張浮誇的",
+    "example": "The politician's grandiloquent speech promised more than he could deliver.",
+    "roots": "grandi (宏大) + loqu (說，拉丁文 loqui) → 說話誇張浮誇"
+  },
+  {
+    "word": "grandiose",
+    "pos": "adj.",
+    "meaning": "誇大的、鋪張的",
+    "example": "His grandiose plans for the company rarely came to fruition.",
+    "roots": "同 grandiloquent 字源 (grandis，宏大的) → 過分宏大不切實際的"
+  },
+  {
+    "word": "grandstand",
+    "pos": "v.",
+    "meaning": "譁眾取寵、賣弄",
+    "example": "The senator was accused of grandstanding for the cameras rather than debating substance.",
+    "roots": "grand (大) + stand (看台) → 對著看台觀眾表演，引申故意作秀"
+  },
+  {
+    "word": "grapple",
+    "pos": "v.",
+    "meaning": "扭打；努力應付(難題)",
+    "example": "The government has struggled to grapple with the economic crisis.",
+    "roots": "源自古法文 grapil (鉤子) → 像用鉤子纏鬥般搏鬥或應付"
+  },
+  {
+    "word": "grate",
+    "pos": "v.",
+    "meaning": "使惱怒；磨損",
+    "example": "His constant complaining began to grate on everyone's nerves.",
+    "roots": "源自古法文 grater (刮、磨) → 摩擦刺激，引申使人惱怒"
+  },
+  {
+    "word": "gratify",
+    "pos": "v.",
+    "meaning": "使滿足、使高興",
+    "example": "It gratified her to see her students succeed.",
+    "roots": "源自拉丁文 gratus (令人愉悅的) + -ify (使…) → 使人感到愉悅滿足"
+  },
+  {
+    "word": "gratis",
+    "pos": "adv.",
+    "meaning": "免費地",
+    "example": "Drinks were served gratis to all the guests.",
+    "roots": "源自拉丁文 gratia (恩惠) → 出於恩惠、不收費的"
+  },
+  {
+    "word": "gratuitous",
+    "pos": "adj.",
+    "meaning": "無端的、不必要的",
+    "example": "The film was criticized for its gratuitous violence.",
+    "roots": "同 gratis 字源 (gratia，恩惠)，引申「不需付出代價的」→「無正當理由的」"
+  },
+  {
+    "word": "gravitas",
+    "pos": "n.",
+    "meaning": "莊重、威嚴",
+    "example": "The elder statesman brought gravitas to the ceremony.",
+    "roots": "源自拉丁文 gravis (沉重的) → 舉止沉穩帶來的莊重感"
+  },
+  {
+    "word": "gregarious",
+    "pos": "adj.",
+    "meaning": "群居的、好社交的",
+    "example": "As a gregarious person, she thrived at large parties.",
+    "roots": "源自拉丁文 grex (群、畜群) → 喜歡群聚、社交的"
+  },
+  {
+    "word": "grievance",
+    "pos": "n.",
+    "meaning": "不滿、委屈、申訴",
+    "example": "Workers filed a formal grievance over unsafe conditions.",
+    "roots": "同 grievous 字源 (拉丁文 gravis，沉重的) → 感到沉重不滿的事"
+  },
+  {
+    "word": "grievous",
+    "pos": "adj.",
+    "meaning": "嚴重的、令人痛心的",
+    "example": "He suffered a grievous injury in the accident.",
+    "roots": "源自拉丁文 gravis (沉重的) → 帶來沉重傷害或痛苦的"
+  },
+  {
+    "word": "grimace",
+    "pos": "v.",
+    "meaning": "做鬼臉、扭曲面容(表痛苦或厭惡)",
+    "example": "She grimaced at the bitter taste of the medicine.",
+    "roots": "源自古法文 grimace，可能與 grim (嚴峻的) 相關 → 因不適而扭曲表情"
+  },
+  {
+    "word": "grisly",
+    "pos": "adj.",
+    "meaning": "令人毛骨悚然的、恐怖的",
+    "example": "Investigators uncovered grisly details at the crime scene.",
+    "roots": "源自古英文 grislic (令人恐懼的) → 引發恐懼戰慄的"
+  },
+  {
+    "word": "grotesque",
+    "pos": "adj.",
+    "meaning": "怪誕的、荒誕可怕的",
+    "example": "The statue's grotesque features were meant to ward off evil spirits.",
+    "roots": "源自義大利文 grottesca (洞穴風格的裝飾藝術，grotta 洞穴) → 如洞穴壁畫般奇形怪狀"
+  },
+  {
+    "word": "grouse",
+    "pos": "v.",
+    "meaning": "抱怨、發牢騷",
+    "example": "Employees groused about the lack of raises this year.",
+    "roots": "字源不詳 → 不停地小聲抱怨"
+  },
+  {
+    "word": "grovel",
+    "pos": "v.",
+    "meaning": "卑躬屈膝、匍匐",
+    "example": "He groveled before the king, begging for mercy.",
+    "roots": "源自古北歐語 grufa (面朝下趴著) → 匍匐在地表示卑屈"
+  },
+  {
+    "word": "grudging",
+    "pos": "adj.",
+    "meaning": "勉強的、不情願的",
+    "example": "She gave a grudging apology, clearly not meaning it.",
+    "roots": "grudge (怨恨，源自古法文 grouchier，抱怨) + -ing (形容詞後綴) → 心懷不甘地做出的"
+  },
+  {
+    "word": "gruesome",
+    "pos": "adj.",
+    "meaning": "令人毛骨悚然的、恐怖的",
+    "example": "The horror movie was full of gruesome special effects.",
+    "roots": "源自方言 grue (顫抖恐懼) + -some (令人…的) → 使人不寒而慄的"
+  },
+  {
+    "word": "gruff",
+    "pos": "adj.",
+    "meaning": "(聲音、態度)粗魯的、粗聲粗氣的",
+    "example": "Despite his gruff exterior, he was known for his kindness.",
+    "roots": "源自古荷蘭文 grof (粗糙的) → 態度或聲音粗糙不客氣"
+  },
+  {
+    "word": "guile",
+    "pos": "n.",
+    "meaning": "狡詐、詭計",
+    "example": "She used guile rather than force to achieve her goals.",
+    "roots": "源自古法文 guile (欺騙) → 狡猾欺瞞的手段"
+  },
+  {
+    "word": "guileless",
+    "pos": "adj.",
+    "meaning": "不狡詐的、天真無邪的",
+    "example": "The guileless child had no idea he was being deceived.",
+    "roots": "guile (狡詐) + -less (無) → 缺乏狡詐、純真的"
+  },
+  {
+    "word": "guise",
+    "pos": "n.",
+    "meaning": "偽裝、外表",
+    "example": "The scam operated under the guise of a charity organization.",
+    "roots": "源自古法文 guise (方式、樣貌) → 表面呈現的樣貌，常帶欺騙意味"
+  },
+  {
+    "word": "gullible",
+    "pos": "adj.",
+    "meaning": "易受騙的",
+    "example": "Con artists prey on gullible tourists.",
+    "roots": "源自 gull (哄騙，字源不詳的動詞) + -ible (易於…的) → 容易被哄騙的"
+  },
+  {
+    "word": "gusto",
+    "pos": "n.",
+    "meaning": "熱情、興致",
+    "example": "She threw herself into the project with tremendous gusto.",
+    "roots": "源自義大利文 gusto (品味，拉丁文 gustus) → 帶著濃厚興致享受地做"
+  },
+  {
+    "word": "guttural",
+    "pos": "adj.",
+    "meaning": "喉音的；粗嘎的",
+    "example": "He spoke in a low, guttural voice.",
+    "roots": "源自拉丁文 guttur (喉嚨) → 從喉嚨發出的低沉聲音"
+  },
+  {
+    "word": "gyrate",
+    "pos": "v.",
+    "meaning": "旋轉、迴旋",
+    "example": "The dancer gyrated to the pounding rhythm of the music.",
+    "roots": "源自拉丁文 gyrus (圓圈，源自希臘文 gyros) → 繞圈旋轉"
+  },
+  {
+    "word": "habituate",
+    "pos": "v.",
+    "meaning": "使習慣於",
+    "example": "Workers gradually habituated themselves to the night shift schedule.",
+    "roots": "源自拉丁文 habituare (habitus，狀態、習慣) → 使進入某種習慣狀態"
+  },
+  {
+    "word": "hackneyed",
+    "pos": "adj.",
+    "meaning": "陳腐的、老掉牙的",
+    "example": "The novel relied on hackneyed phrases and predictable plot twists.",
+    "roots": "源自 hackney (供出租的馬)，過度使用而疲乏 → 被過度使用而失去新意的"
+  },
+  {
+    "word": "haggard",
+    "pos": "adj.",
+    "meaning": "憔悴的、面容枯槁的",
+    "example": "After days without sleep, he looked utterly haggard.",
+    "roots": "源自古法文 hagard，本指未馴化的獵鷹 → 引申為狂野憔悴的面容"
+  },
+  {
+    "word": "haggle",
+    "pos": "v.",
+    "meaning": "討價還價",
+    "example": "Tourists are expected to haggle over prices in the market.",
+    "roots": "源自蘇格蘭方言 hag (砍)，引申反覆爭執 → 為價格反覆爭論"
+  },
+  {
+    "word": "halcyon",
+    "pos": "adj.",
+    "meaning": "平靜安寧的、太平的(常指過去)",
+    "example": "She often reminisced about the halcyon days of her youth.",
+    "roots": "源自希臘神話翠鳥 halkyon，傳說牠在海面築巢時海面會平靜 → 象徵風平浪靜的美好時光"
+  },
+  {
+    "word": "hale",
+    "pos": "adj.",
+    "meaning": "(尤指老年人)強健的",
+    "example": "Despite his age, grandfather remained hale and hearty.",
+    "roots": "源自古英文 hal (健康的)，與 whole (完整的) 同源 → 身體完好強健的"
+  },
+  {
+    "word": "hallow",
+    "pos": "v.",
+    "meaning": "使神聖化、尊崇",
+    "example": "The battlefield was hallowed ground for veterans of the war.",
+    "roots": "源自古英文 halgian (使神聖，holy 同源) → 使變得神聖"
+  },
+  {
+    "word": "hallowed",
+    "pos": "adj.",
+    "meaning": "神聖的、受尊崇的",
+    "example": "Few dared to challenge the university's hallowed traditions.",
+    "roots": "同 hallow 字源 → 被視為神聖不可侵犯的"
+  },
+  {
+    "word": "hallucinate",
+    "pos": "v.",
+    "meaning": "產生幻覺",
+    "example": "The high fever caused him to hallucinate vividly.",
+    "roots": "源自拉丁文 hallucinari (神遊、幻想) → 心智脫離現實產生幻象"
+  },
+  {
+    "word": "hallucination",
+    "pos": "n.",
+    "meaning": "幻覺",
+    "example": "The patient reported auditory hallucinations after the medication.",
+    "roots": "同 hallucinate 字源 → 幻覺的現象"
+  },
+  {
+    "word": "hamper",
+    "pos": "v.",
+    "meaning": "妨礙、阻礙",
+    "example": "Heavy snow hampered rescue efforts throughout the region.",
+    "roots": "源自中古英文 hamperen，字源不詳，可能與 hamper (箱籠) 相關 → 像被箱籠困住般受阻"
+  },
+  {
+    "word": "hamstring",
+    "pos": "v.",
+    "meaning": "使殘廢、使無法正常運作",
+    "example": "Budget cuts have hamstrung the department's ability to function.",
+    "roots": "ham (大腿後側) + string (肌腱)，原指割斷腿筋使人跛足 → 徹底削弱行動能力"
+  },
+  {
+    "word": "hangdog",
+    "pos": "adj.",
+    "meaning": "羞愧的、垂頭喪氣的",
+    "example": "He wore a hangdog expression after being caught lying.",
+    "roots": "hang (吊) + dog (狗)，指像被懲罰的狗垂著頭 → 一副做錯事而羞愧的樣子"
+  },
+  {
+    "word": "haphazard",
+    "pos": "adj.",
+    "meaning": "隨意的、雜亂無章的",
+    "example": "The files were stored in a haphazard manner with no clear system.",
+    "roots": "hap (運氣，源自古北歐語 happ) + hazard (機運) → 全憑機運、毫無規劃的"
+  },
+  {
+    "word": "hapless",
+    "pos": "adj.",
+    "meaning": "不幸的、倒楣的",
+    "example": "The hapless intern accidentally deleted the entire database.",
+    "roots": "hap (運氣) + -less (無) → 缺乏好運的"
+  },
+  {
+    "word": "harangue",
+    "pos": "n.",
+    "meaning": "長篇說教、痛斥",
+    "example": "The coach launched into a harangue about the team's lack of effort.",
+    "roots": "源自義大利文 aringa (公開演說)，源自日耳曼語 hring (集會圈) → 對群眾發表的激烈長篇演說"
+  },
+  {
+    "word": "harass",
+    "pos": "v.",
+    "meaning": "騷擾、煩擾",
+    "example": "Employees who harass coworkers face immediate dismissal.",
+    "roots": "源自古法文 harer (煽動狗攻擊) → 不斷挑釁、騷擾"
+  },
+  {
+    "word": "harbinger",
+    "pos": "n.",
+    "meaning": "先兆、預兆",
+    "example": "The robin's return is often seen as a harbinger of spring.",
+    "roots": "源自古法文 herberge (住所)，原指為軍隊先行安排住宿的人 → 先行到達、預示後續事物的人或事"
+  },
+  {
+    "word": "harridan",
+    "pos": "n.",
+    "meaning": "兇悍嘮叨的老婦",
+    "example": "The old harridan next door constantly complained about the neighborhood children.",
+    "roots": "源自法文 haridelle (瘦弱的老馬) → 引申為兇悍難纏的婦人"
+  },
+  {
+    "word": "harrow",
+    "pos": "v.",
+    "meaning": "使痛苦、折磨(常用被動 harrowed)",
+    "example": "The survivors were harrowed by memories of the disaster.",
+    "roots": "源自古英文 hergian (掠奪、蹂躪)，也指農具耙 → 如耙地般深深刺痛心靈"
+  },
+  {
+    "word": "harrowing",
+    "pos": "adj.",
+    "meaning": "令人痛苦不安的",
+    "example": "She recounted a harrowing tale of survival at sea.",
+    "roots": "同 harrow 字源 → 使人極度痛苦不安的"
+  },
+  {
+    "word": "harry",
+    "pos": "v.",
+    "meaning": "不斷騷擾、侵擾",
+    "example": "Enemy raiders harried the villages along the border.",
+    "roots": "源自古英文 hergian，同 harrow 字源 → 反覆侵擾攻擊"
+  },
+  {
+    "word": "haughty",
+    "pos": "adj.",
+    "meaning": "高傲的、傲慢的",
+    "example": "Her haughty attitude alienated most of her coworkers.",
+    "roots": "源自古法文 haut (高的，拉丁文 altus) → 自視甚高、傲慢的"
+  },
+  {
+    "word": "havoc",
+    "pos": "n.",
+    "meaning": "大破壞、浩劫",
+    "example": "The hurricane wreaked havoc across the coastal towns.",
+    "roots": "源自古法文 havot (掠奪)，軍事術語「crier havot」下令掠奪 → 全面性的破壞混亂"
+  },
+  {
+    "word": "headstrong",
+    "pos": "adj.",
+    "meaning": "剛愎自用的、固執己見的",
+    "example": "The headstrong young manager refused to listen to any advice.",
+    "roots": "head (頭、意志) + strong (強的) → 意志強硬到聽不進他人意見"
+  },
+  {
+    "word": "heartrending",
+    "pos": "adj.",
+    "meaning": "令人心碎的",
+    "example": "The documentary told a heartrending story of loss and resilience.",
+    "roots": "heart (心) + rend (撕裂，古英文 rendan) → 撕裂人心般令人悲痛"
+  },
+  {
+    "word": "heckle",
+    "pos": "v.",
+    "meaning": "(在公開場合)起鬨、故意刁難",
+    "example": "Protesters heckled the speaker throughout his address.",
+    "roots": "源自蘇格蘭方言 heckle (梳理亞麻的梳子)，引申刁難挑剔 → 用尖銳問題或喊叫刁難"
+  },
+  {
+    "word": "hector",
+    "pos": "v.",
+    "meaning": "欺凌、恐嚇",
+    "example": "He hectored his employees into working overtime without pay.",
+    "roots": "源自荷馬史詩人物 Hector (赫克托爾)，後轉為「恃強欺人者」之意 → 以威嚇方式對待他人"
+  },
+  {
+    "word": "hedonism",
+    "pos": "n.",
+    "meaning": "享樂主義",
+    "example": "Critics accused the celebrity culture of promoting empty hedonism.",
+    "roots": "希臘文 hedone (快樂) + -ism (主義) → 以追求快樂為人生目標的思想"
+  },
+  {
+    "word": "hedonist",
+    "pos": "n.",
+    "meaning": "享樂主義者",
+    "example": "As a self-proclaimed hedonist, he spent lavishly on fine dining.",
+    "roots": "同 hedonism 字源 → 奉行享樂主義的人"
+  },
+  {
+    "word": "hedonistic",
+    "pos": "adj.",
+    "meaning": "享樂主義的",
+    "example": "Their hedonistic lifestyle left little room for long-term planning.",
+    "roots": "同 hedonism 字源 → 具享樂主義色彩的"
+  },
+  {
+    "word": "hegemony",
+    "pos": "n.",
+    "meaning": "霸權、支配地位",
+    "example": "The two superpowers competed for hegemony in the region.",
+    "roots": "希臘文 hegemonia (領導權，hegemon 領袖) → 主導支配的地位"
+  },
+  {
+    "word": "heinous",
+    "pos": "adj.",
+    "meaning": "極其邪惡的、可憎的",
+    "example": "The court sentenced him for committing a heinous crime.",
+    "roots": "源自古法文 haineus (可恨的，haine 恨) → 令人憎惡至極的"
+  },
+  {
+    "word": "herculean",
+    "pos": "adj.",
+    "meaning": "需要巨大力量的、艱鉅的",
+    "example": "Rebuilding the city after the war was a herculean task.",
+    "roots": "源自希臘神話大力士 Heracles (赫拉克勒斯) → 如大力士般艱鉅的任務"
+  },
+  {
+    "word": "heresy",
+    "pos": "n.",
+    "meaning": "異端邪說",
+    "example": "His theories were dismissed as heresy by the scientific establishment of his time.",
+    "roots": "源自希臘文 hairesis (選擇、派別) → 偏離正統教義的選擇"
+  },
+  {
+    "word": "heretic",
+    "pos": "n.",
+    "meaning": "異端分子",
+    "example": "He was burned at the stake as a heretic.",
+    "roots": "同 heresy 字源 → 持異端信仰的人"
+  },
+  {
+    "word": "heretical",
+    "pos": "adj.",
+    "meaning": "異端的",
+    "example": "Questioning the king's authority was considered a heretical act.",
+    "roots": "同 heresy 字源 → 具異端性質的"
+  },
+  {
+    "word": "heretofore",
+    "pos": "adv.",
+    "meaning": "迄今、直到此時",
+    "example": "The treaty granted rights heretofore denied to the minority group.",
+    "roots": "here (此) + to (到) + fore (之前) → 直到現在為止"
+  },
+  {
+    "word": "hermetic",
+    "pos": "adj.",
+    "meaning": "密封的；深奧難懂的",
+    "example": "The lab used hermetic seals to keep the samples uncontaminated.",
+    "roots": "源自希臘神秘學人物 Hermes Trismegistus，其密術強調封閉性 → 完全密封或封閉的"
+  },
+  {
+    "word": "hermit",
+    "pos": "n.",
+    "meaning": "隱士",
+    "example": "He lived like a hermit, avoiding all contact with society.",
+    "roots": "源自希臘文 eremos (荒野的) → 獨居於荒僻之地的人"
+  },
+  {
+    "word": "heterodox",
+    "pos": "adj.",
+    "meaning": "非正統的、異端的",
+    "example": "Her heterodox economic views made her unpopular among mainstream economists.",
+    "roots": "hetero- (不同) + doxa (希臘文，意見) → 與正統意見不同的"
+  },
+  {
+    "word": "heterodoxy",
+    "pos": "n.",
+    "meaning": "非正統、異端",
+    "example": "The church condemned any signs of heterodoxy among its clergy.",
+    "roots": "同 heterodox 字源 → 非正統的立場或狀態"
+  },
+  {
+    "word": "heterogeneous",
+    "pos": "adj.",
+    "meaning": "異質的、由不同成分組成的",
+    "example": "The committee was a heterogeneous mix of scientists, lawyers, and artists.",
+    "roots": "hetero- (不同) + genos (希臘文，種類) → 由不同種類組成的"
+  },
+  {
+    "word": "hew",
+    "pos": "v.",
+    "meaning": "砍、劈；遵循",
+    "example": "The settlers hewed logs to build their cabins.",
+    "roots": "源自古英文 heawan (砍) → 用力砍劈"
+  },
+  {
+    "word": "hiatus",
+    "pos": "n.",
+    "meaning": "中斷、間隔",
+    "example": "After a five-year hiatus, the band announced a reunion tour.",
+    "roots": "源自拉丁文 hiare (張開) → 裂開的空隙，引申中斷"
+  },
+  {
+    "word": "hibernate",
+    "pos": "v.",
+    "meaning": "冬眠；蟄伏",
+    "example": "Bears hibernate through the coldest months of winter.",
+    "roots": "源自拉丁文 hibernus (冬天的) → 度過冬天的休眠狀態"
+  },
+  {
+    "word": "hidebound",
+    "pos": "adj.",
+    "meaning": "頑固守舊的、思想僵化的",
+    "example": "The hidebound bureaucracy resisted every attempt at reform.",
+    "roots": "hide (獸皮) + bound (綁緊)，原指牛因缺乏養分而皮貼骨 → 引申思想僵硬緊縮"
+  },
+  {
+    "word": "hieroglyphic",
+    "pos": "adj.",
+    "meaning": "象形文字的",
+    "example": "Scholars spent decades deciphering the hieroglyphic inscriptions.",
+    "roots": "希臘文 hieros (神聖的) + glyphe (雕刻) → 古埃及的神聖雕刻文字"
+  },
+  {
+    "word": "highbrow",
+    "pos": "adj.",
+    "meaning": "高雅的、知識分子取向的",
+    "example": "The festival featured everything from highbrow opera to street performances.",
+    "roots": "high (高) + brow (額頭)，源自面相學說額頭高者較有智慧 → 迎合高雅品味的"
+  },
+  {
+    "word": "hirsute",
+    "pos": "adj.",
+    "meaning": "多毛的",
+    "example": "The hirsute mountain man hadn't shaved in months.",
+    "roots": "源自拉丁文 hirsutus (多毛的、粗糙的) → 體毛濃密的"
+  },
+  {
+    "word": "histrionic",
+    "pos": "adj.",
+    "meaning": "誇張做作的、演戲般的",
+    "example": "Her histrionic reaction to the minor setback seemed excessive.",
+    "roots": "源自拉丁文 histrio (演員) → 如演員般誇張表演的"
+  },
+  {
+    "word": "hoard",
+    "pos": "v.",
+    "meaning": "囤積、貯藏",
+    "example": "Fearing shortages, panicked shoppers began to hoard supplies.",
+    "roots": "源自古英文 hord (寶藏、儲藏物) → 秘密大量囤積"
+  },
+  {
+    "word": "hoary",
+    "pos": "adj.",
+    "meaning": "灰白的(頭髮)；古老的",
+    "example": "The hoary old professor had taught at the university for fifty years.",
+    "roots": "源自古英文 har (灰白的) → 因年老而髮白，引申古老"
+  },
+  {
+    "word": "hoax",
+    "pos": "n.",
+    "meaning": "騙局、惡作劇",
+    "example": "The viral video turned out to be an elaborate hoax.",
+    "roots": "可能源自 hocus (變戲法，hocus pocus 的縮略) → 精心設計的騙局"
+  },
+  {
+    "word": "hodgepodge",
+    "pos": "n.",
+    "meaning": "大雜燴、混雜物",
+    "example": "The museum's collection is a hodgepodge of items from different eras.",
+    "roots": "源自古法文 hochepot (搖動的鍋，指燉煮各種食材) → 各種東西混雜在一起"
+  },
+  {
+    "word": "homage",
+    "pos": "n.",
+    "meaning": "敬意、致敬",
+    "example": "The film pays homage to classic detective stories.",
+    "roots": "源自古法文 hommage (效忠，home 人)，封建時代臣屬對領主的效忠禮 → 表達尊崇之意"
+  },
+  {
+    "word": "homily",
+    "pos": "n.",
+    "meaning": "說教、訓誡",
+    "example": "The professor's homily on hard work bored most of the students.",
+    "roots": "源自希臘文 homilia (講道、談話) → 帶有道德教訓意味的講話"
+  },
+  {
+    "word": "homogeneous",
+    "pos": "adj.",
+    "meaning": "同質的、由相同成分組成的",
+    "example": "The study assumed a homogeneous population, which skewed the results.",
+    "roots": "homo- (相同) + genos (希臘文，種類) → 由相同種類組成的"
+  },
+  {
+    "word": "hone",
+    "pos": "v.",
+    "meaning": "磨練、磨利",
+    "example": "She honed her negotiation skills over years of practice.",
+    "roots": "源自古英文 han (磨刀石) → 用磨石磨利，引申精進技能"
+  },
+  {
+    "word": "hoodwink",
+    "pos": "v.",
+    "meaning": "欺騙、矇騙",
+    "example": "Investors were hoodwinked by the company's falsified reports.",
+    "roots": "hood (頭罩) + wink (眨眼)，原指蒙住眼睛 → 蒙蔽視線加以欺騙"
+  },
+  {
+    "word": "horde",
+    "pos": "n.",
+    "meaning": "一大群(人)、遊牧部落",
+    "example": "Hordes of tourists descended on the small village every summer.",
+    "roots": "源自突厥語 ordu (營帳、部落)，經俄語傳入 → 成群移動的人群"
+  },
+  {
+    "word": "hospitable",
+    "pos": "adj.",
+    "meaning": "好客的；(環境)適宜的",
+    "example": "The climate here is not hospitable to most tropical plants.",
+    "roots": "源自拉丁文 hospes (主人、客人) → 樂於接待、適合居留的"
+  },
+  {
+    "word": "hovel",
+    "pos": "n.",
+    "meaning": "簡陋破舊的小屋",
+    "example": "The refugees were forced to live in a cramped hovel.",
+    "roots": "字源不詳，中古英文已出現，原指簡陋棚屋 → 破敗擁擠的居所"
+  },
+  {
+    "word": "hubris",
+    "pos": "n.",
+    "meaning": "傲慢、狂妄自大",
+    "example": "His hubris ultimately led to his downfall.",
+    "roots": "源自希臘文 hybris (過度的驕傲，常招致神譴) → 招致毀滅的極端傲慢"
+  },
+  {
+    "word": "humdrum",
+    "pos": "adj.",
+    "meaning": "單調乏味的",
+    "example": "She longed to escape her humdrum office job.",
+    "roots": "hum (嗡嗡聲) + drum (鼓聲的重複)，擬聲疊字表單調重複 → 平淡無奇、一成不變的"
+  },
+  {
+    "word": "husbandry",
+    "pos": "n.",
+    "meaning": "(農牧業的)經營管理；節儉",
+    "example": "Good animal husbandry practices improved the farm's yields.",
+    "roots": "husband (源自古北歐語 husbondi，管理家業的人) + -ry (名詞後綴) → 妥善管理資源(尤指農牧)"
+  },
+  {
+    "word": "hyperbole",
+    "pos": "n.",
+    "meaning": "誇張法",
+    "example": "Saying he was starving to death was clearly hyperbole.",
+    "roots": "希臘文 hyper- (超過) + bole (投擲，ballein) → 誇張到超出實際的說法"
+  },
+  {
+    "word": "hypercritical",
+    "pos": "adj.",
+    "meaning": "過分挑剔的、吹毛求疵的",
+    "example": "His hypercritical boss found fault with every report he submitted.",
+    "roots": "hyper- (過度) + critical (批判的) → 批評到過度的程度"
+  },
+  {
+    "word": "hypochondriac",
+    "pos": "n.",
+    "meaning": "疑病症患者",
+    "example": "The hypochondriac convinced himself every headache was a brain tumor.",
+    "roots": "源自希臘文 hypochondria (肋骨下方的部位，古人認為該處是憂鬱情緒之源) → 過度擔憂自身健康的人"
+  },
+  {
+    "word": "hypocrisy",
+    "pos": "n.",
+    "meaning": "偽善",
+    "example": "Critics pointed out the hypocrisy of preaching austerity while living lavishly.",
+    "roots": "源自希臘文 hypokrisis (演戲、假裝，hypokrites 演員) → 表裡不一的偽裝"
+  },
+  {
+    "word": "hypocritical",
+    "pos": "adj.",
+    "meaning": "偽善的",
+    "example": "It would be hypocritical of him to criticize others for something he does himself.",
+    "roots": "同 hypocrisy 字源 → 具偽善性質的"
+  }
+]
