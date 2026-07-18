@@ -4,11 +4,13 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { HomeScreen } from '../screens/HomeScreen';
 import { PracticeScreen } from '../screens/PracticeScreen';
 import { StatsScreen } from '../screens/StatsScreen';
+import { ExcludedScreen } from '../screens/ExcludedScreen';
 
 export type RootStackParamList = {
   Home: undefined;
   Practice: { direction: 'en-zh' | 'zh-en' };
   Stats: undefined;
+  Excluded: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -20,6 +22,7 @@ export function RootNavigator() {
         <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'GRE 單字' }} />
         <Stack.Screen name="Practice" component={PracticeScreen} options={{ title: '練習' }} />
         <Stack.Screen name="Stats" component={StatsScreen} options={{ title: '統計' }} />
+        <Stack.Screen name="Excluded" component={ExcludedScreen} options={{ title: '回收桶' }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

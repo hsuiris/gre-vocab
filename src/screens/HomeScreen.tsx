@@ -4,7 +4,7 @@ import { useFocusEffect } from '@react-navigation/native';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/RootNavigator';
 import { words } from '../data/words';
-import { getAllProgress, getHeatmap } from '../lib/storage';
+import { getAllProgress, getHeatmap, getExcludedWords } from '../lib/storage';
 import { isDue } from '../lib/leitner';
 import { Heatmap } from '../components/Heatmap';
 import { todayStr } from '../lib/date';
@@ -19,9 +19,15 @@ export function HomeScreen({ navigation }: Props) {
     useCallback(() => {
       let active = true;
       (async () => {
-        const [progress, heat] = await Promise.all([getAllProgress(), getHeatmap()]);
+        const [progress, heat, excluded] = await Promise.all([
+          getAllProgress(),
+          getHeatmap(),
+          getExcludedWords(),
+        ]);
+        const excludedSet = new Set(excluded);
         const today = todayStr();
         const due = words.filter((w) => {
+          if (excludedSet.has(w.word)) return false;
           const p = progress[w.word];
           return !p || isDue(p, today);
         }).length;

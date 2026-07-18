@@ -8,9 +8,10 @@ type Props = {
   direction: 'en-zh' | 'zh-en';
   choices: string[];
   onResult: (knewIt: boolean) => void;
+  onExclude: () => void;
 };
 
-export function MultipleChoiceCard({ entry, direction, choices, onResult }: Props) {
+export function MultipleChoiceCard({ entry, direction, choices, onResult, onExclude }: Props) {
   const [selected, setSelected] = useState<string | null>(null);
   const [expanded, setExpanded] = useState(false);
 
@@ -46,6 +47,13 @@ export function MultipleChoiceCard({ entry, direction, choices, onResult }: Prop
   return (
     <View style={styles.container}>
       <View style={styles.card}>
+        <Pressable
+          style={styles.excludeBtn}
+          onPress={onExclude}
+          hitSlop={12}
+        >
+          <Text style={styles.excludeBtnText}>🗑️</Text>
+        </Pressable>
         <Text style={styles.question}>{question}</Text>
       </View>
 
@@ -94,6 +102,7 @@ export function MultipleChoiceCard({ entry, direction, choices, onResult }: Prop
 const styles = StyleSheet.create({
   container: { alignItems: 'center', padding: 16 },
   card: {
+    position: 'relative',
     width: 300,
     minHeight: 100,
     borderRadius: 12,
@@ -106,6 +115,8 @@ const styles = StyleSheet.create({
     shadowRadius: 8,
     elevation: 3,
   },
+  excludeBtn: { position: 'absolute', top: 8, right: 8 },
+  excludeBtnText: { fontSize: 16 },
   question: { fontSize: 26, fontWeight: '600', textAlign: 'center' },
   options: { width: 300, marginTop: 16, gap: 10 },
   option: {

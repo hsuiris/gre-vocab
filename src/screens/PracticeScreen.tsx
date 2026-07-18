@@ -3,7 +3,13 @@ import { View, Text, StyleSheet } from 'react-native';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/RootNavigator';
 import { words, WordEntry } from '../data/words';
-import { getAllProgress, saveWordProgress, incrementHeatmapToday } from '../lib/storage';
+import {
+  getAllProgress,
+  saveWordProgress,
+  incrementHeatmapToday,
+  getExcludedWords,
+  excludeWord,
+} from '../lib/storage';
 import { initialProgress, isDue, reviewWord } from '../lib/leitner';
 import { todayStr } from '../lib/date';
 import { buildChoices } from '../lib/quiz';
@@ -25,9 +31,11 @@ export function PracticeScreen({ route }: Props) {
 
   useEffect(() => {
     (async () => {
-      const progress = await getAllProgress();
+      const [progress, excluded] = await Promise.all([getAllProgress(), getExcludedWords()]);
+      const excludedSet = new Set(excluded);
       const today = todayStr();
       const due = words.filter((w) => {
+        if (excludedSet.has(w.word)) return false;
         const p = progress[w.word];
         return !p || isDue(p, today);
       });
@@ -54,6 +62,19 @@ export function PracticeScreen({ route }: Props) {
     }
   }
 
+  async function handleExclude() {
+    // Shares processingRef with handleResult: only one action can advance
+    // the card at a time, whether it's answering or excluding.
+    if (processingRef.current) return;
+    processingRef.current = true;
+    try {
+      await excludeWord(queue[index].word);
+      setIndex((i) => i + 1);
+    } finally {
+      processingRef.current = false;
+    }
+  }
+
   if (!loaded) {
     return (
       <View style={styles.center}>
@@ -73,7 +94,14 @@ export function PracticeScreen({ route }: Props) {
   return (
     <View style={styles.container}>
       <Text style={styles.progress}>{index + 1} / {queue.length}</Text>
-      <MultipleChoiceCard key={queue[index].word} entry={queue[index]} direction={direction} choices={choices} onResult={handleResult} />
+      <MultipleChoiceCard
+        key={queue[index].word}
+        entry={queue[index]}
+        direction={direction}
+        choices={choices}
+        onResult={handleResult}
+        onExclude={handleExclude}
+      />
     </View>
   );
 }
