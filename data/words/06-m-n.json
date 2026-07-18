@@ -1,0 +1,1507 @@
+[
+  {
+    "word": "macabre",
+    "pos": "adj.",
+    "meaning": "恐怖的、死亡氣氛的",
+    "example": "The horror film was filled with macabre imagery of graveyards and skeletons.",
+    "roots": "源自法文 macabre，可能與中世紀「死亡之舞」(danse macabre) 傳說有關 → 令人聯想到死亡的恐怖氛圍"
+  },
+  {
+    "word": "macerate",
+    "pos": "v.",
+    "meaning": "浸軟、泡軟；使消瘦",
+    "example": "The chef let the fruit macerate in sugar and liqueur overnight.",
+    "roots": "源自拉丁文 macerare，使變軟、使消瘦 → 長時間浸泡使組織軟化"
+  },
+  {
+    "word": "machiavellian",
+    "pos": "adj.",
+    "meaning": "權謀的、為達目的不擇手段的",
+    "example": "The advisor's machiavellian tactics won the election but cost him many former allies.",
+    "roots": "源自義大利政治思想家 Niccolò Machiavelli，著有《君王論》主張權術治國 → 引申為工於心計、不擇手段"
+  },
+  {
+    "word": "machination",
+    "pos": "n.",
+    "meaning": "陰謀、詭計(常用複數)",
+    "example": "The senator's downfall was the result of years of political machinations.",
+    "roots": "machin (機器、裝置，源自拉丁文 machina) + -ation (名詞後綴) → 如機器般精心策劃的陰謀"
+  },
+  {
+    "word": "macrocosm",
+    "pos": "n.",
+    "meaning": "宏觀世界、大宇宙",
+    "example": "The novel uses one family's struggles as a microcosm that mirrors the macrocosm of society.",
+    "roots": "macro- (大，源自希臘文 makros) + cosm (世界，源自希臘文 kosmos) → 廣大的整體世界"
+  },
+  {
+    "word": "maculate",
+    "pos": "adj./v.",
+    "meaning": "有斑點的；弄髒",
+    "example": "The old manuscript's pages were maculate with ink stains and mold.",
+    "roots": "macul (斑點，源自拉丁文 macula) + -ate (形容詞/動詞後綴) → 帶有斑點、玷污的狀態，與 immaculate（無瑕的）相對"
+  },
+  {
+    "word": "madcap",
+    "pos": "adj.",
+    "meaning": "魯莽衝動的、行事輕率的",
+    "example": "The film follows the madcap adventures of two roommates who decide to drive across the country overnight.",
+    "roots": "mad (瘋狂的) + cap (頭腦，引申自 head) → 頭腦發狂般行事衝動"
+  },
+  {
+    "word": "maelstrom",
+    "pos": "n.",
+    "meaning": "大漩渦；混亂動盪的局面",
+    "example": "The country was plunged into a maelstrom of political violence after the coup.",
+    "roots": "源自荷蘭文 malen (旋轉) + stroom (水流) → 猛烈旋轉的水流，引申為混亂漩渦"
+  },
+  {
+    "word": "magisterial",
+    "pos": "adj.",
+    "meaning": "有權威的、威嚴專斷的",
+    "example": "The professor spoke with a magisterial confidence that discouraged any interruption.",
+    "roots": "magister (老師、長官，源自拉丁文) + -ial (形容詞後綴) → 具有長官般權威氣勢的"
+  },
+  {
+    "word": "magnanimity",
+    "pos": "n.",
+    "meaning": "寬宏大量、氣度恢弘",
+    "example": "He accepted his rival's apology with remarkable magnanimity.",
+    "roots": "magn (大，拉丁文 magnus) + anim (心靈，拉丁文 animus) + -ity (名詞後綴) → 心胸廣大的胸襟"
+  },
+  {
+    "word": "magnanimous",
+    "pos": "adj.",
+    "meaning": "寬宏大量的、慷慨大度的",
+    "example": "In victory, the coach was magnanimous, praising the losing team's effort.",
+    "roots": "同 magnanimity 字源 → 心胸寬大、不計較的"
+  },
+  {
+    "word": "magnate",
+    "pos": "n.",
+    "meaning": "(工商界的)巨頭、大亨",
+    "example": "The shipping magnate donated millions to build the new harbor.",
+    "roots": "magn (大，拉丁文 magnus) + -ate (名詞後綴，表人) → 事業龐大的重要人物"
+  },
+  {
+    "word": "magniloquent",
+    "pos": "adj.",
+    "meaning": "誇大其辭的、言辭浮誇的",
+    "example": "The politician's magniloquent speech promised much but explained little.",
+    "roots": "magn (大，拉丁文 magnus) + loqu (說話，拉丁文 loqui) + -ent (形容詞後綴) → 說話誇張、大言不慚"
+  },
+  {
+    "word": "maim",
+    "pos": "v.",
+    "meaning": "使殘廢、重創",
+    "example": "The landmine maimed dozens of villagers before it was finally removed.",
+    "roots": "源自古法文 mahaignier，使殘缺 → 造成永久性肢體損傷"
+  },
+  {
+    "word": "malaise",
+    "pos": "n.",
+    "meaning": "(身體或社會的)不適、隱隱的不安感",
+    "example": "A general malaise settled over the economy as unemployment continued to rise.",
+    "roots": "mal- (不好，法文 mal) + aise (舒適，法文 aise) → 缺乏舒適感的隱約不適"
+  },
+  {
+    "word": "malapert",
+    "pos": "adj.",
+    "meaning": "魯莽無禮的、放肆的",
+    "example": "The malapert intern openly contradicted the CEO in the meeting.",
+    "roots": "mal- (壞，拉丁文 malus) + apert (熟練的，源自古法文 apert) → 放肆到近乎無禮的熟稔"
+  },
+  {
+    "word": "malapropism",
+    "pos": "n.",
+    "meaning": "(可笑地)誤用發音相近的詞語",
+    "example": "Her malapropism, saying 'a wolf in cheap clothing' instead of 'sheep's clothing,' made everyone laugh.",
+    "roots": "源自戲劇人物 Mrs. Malaprop，取自法文 mal à propos (不恰當) → 用字不恰當造成的笑話"
+  },
+  {
+    "word": "malapropos",
+    "pos": "adj./adv.",
+    "meaning": "不合時宜的、不恰當的",
+    "example": "His malapropos joke at the funeral drew uncomfortable stares.",
+    "roots": "mal- (不好) + à propos (法文，恰當、切題) → 不切題、不恰當的"
+  },
+  {
+    "word": "malcontent",
+    "pos": "n./adj.",
+    "meaning": "心懷不滿的人；不滿的",
+    "example": "A handful of malcontents tried to disrupt the annual shareholders' meeting.",
+    "roots": "mal- (壞，拉丁文 malus) + content (滿足) → 心中不滿足的人"
+  },
+  {
+    "word": "malediction",
+    "pos": "n.",
+    "meaning": "詛咒、咒罵",
+    "example": "The old woman muttered a malediction against the men who had cheated her.",
+    "roots": "male- (壞，拉丁文 male) + dict (說，拉丁文 dicere) → 說出惡毒的話語，與 benediction(祝福) 相對"
+  },
+  {
+    "word": "malefactor",
+    "pos": "n.",
+    "meaning": "罪犯、作惡者",
+    "example": "The sheriff vowed to track down every malefactor responsible for the town's unrest.",
+    "roots": "male- (壞，拉丁文 male) + fact (做，拉丁文 facere) + -or (名詞後綴，表人) → 做壞事的人"
+  },
+  {
+    "word": "maleficent",
+    "pos": "adj.",
+    "meaning": "有害的、作惡的、邪惡的",
+    "example": "The story's maleficent sorceress cursed the kingdom with eternal winter.",
+    "roots": "male- (壞) + fic (做，拉丁文 facere) + -ent (形容詞後綴) → 造成傷害的、行惡的"
+  },
+  {
+    "word": "malevolent",
+    "pos": "adj.",
+    "meaning": "惡意的、心懷惡意的",
+    "example": "The novel's malevolent villain delights in the suffering of others.",
+    "roots": "male- (壞) + vol (意願，拉丁文 velle) + -ent (形容詞後綴) → 心懷惡意、意圖傷人的"
+  },
+  {
+    "word": "malfeasance",
+    "pos": "n.",
+    "meaning": "(尤指公職人員的)不法行為、瀆職",
+    "example": "The audit uncovered years of financial malfeasance by senior officials.",
+    "roots": "mal- (壞) + feas (做，源自古法文 faisance) + -ance (名詞後綴) → 不當作為的行為"
+  },
+  {
+    "word": "malign",
+    "pos": "v./adj.",
+    "meaning": "誹謗、中傷；邪惡的、有害的",
+    "example": "The tabloids maligned the actress with baseless rumors.",
+    "roots": "mal- (壞，拉丁文 malus) + gn (生，拉丁文 gignere) → 帶有惡意的言語傷害"
+  },
+  {
+    "word": "malignant",
+    "pos": "adj.",
+    "meaning": "惡性的(如腫瘤)；惡毒的",
+    "example": "Doctors were relieved to find the tumor was benign, not malignant.",
+    "roots": "同 malign 字源 + -ant (形容詞後綴) → 帶有害性、會擴散的惡意"
+  },
+  {
+    "word": "malinger",
+    "pos": "v.",
+    "meaning": "裝病以逃避工作或責任",
+    "example": "The soldier was accused of malingering to avoid returning to the front lines.",
+    "roots": "mal- (壞) + 源自法文 malingre (瘦弱的) → 假裝病弱以逃避義務"
+  },
+  {
+    "word": "malleable",
+    "pos": "adj.",
+    "meaning": "(金屬)可塑的、有延展性的；(人)易受影響的",
+    "example": "Gold is prized for being highly malleable, and children's minds are equally malleable.",
+    "roots": "mall (槌子，拉丁文 malleus) + -able (可…的) → 可以用槌子敲打成形的"
+  },
+  {
+    "word": "malodorous",
+    "pos": "adj.",
+    "meaning": "惡臭的",
+    "example": "The malodorous swamp gas made the hikers cover their noses.",
+    "roots": "mal- (壞) + odor (氣味，拉丁文 odor) + -ous (形容詞後綴) → 散發難聞氣味的"
+  },
+  {
+    "word": "mandarin",
+    "pos": "n.",
+    "meaning": "(舊時中國)高官；有影響力的高階官員或艱澀難懂的官僚用語",
+    "example": "The report was written in impenetrable mandarin that few outside the ministry could understand.",
+    "roots": "源自葡萄牙文 mandarim，指中國清朝官員 → 引申為高階官僚或其難懂的公文用語"
+  },
+  {
+    "word": "maniacal",
+    "pos": "adj.",
+    "meaning": "瘋狂的、狂熱的",
+    "example": "The villain let out a maniacal laugh as his plan came together.",
+    "roots": "mania (瘋狂，希臘文 mania) + -acal (形容詞後綴) → 帶有癲狂性質的"
+  },
+  {
+    "word": "manifest",
+    "pos": "v./adj.",
+    "meaning": "顯露、表明；明顯的",
+    "example": "Her anxiety began to manifest itself in sleepless nights and constant worry.",
+    "roots": "mani (手，拉丁文 manus) + fest (打擊、抓取) → 用手可觸及般清楚顯現"
+  },
+  {
+    "word": "manifestation",
+    "pos": "n.",
+    "meaning": "表明、顯現(的事物)",
+    "example": "The riots were seen as a manifestation of long-standing economic frustration.",
+    "roots": "同 manifest 字源 + -ation (名詞後綴) → 顯現出來的具體徵象"
+  },
+  {
+    "word": "manifesto",
+    "pos": "n.",
+    "meaning": "宣言、聲明(尤指政治性的)",
+    "example": "The new party released a manifesto outlining its plans for tax reform.",
+    "roots": "同 manifest 字源，源自義大利文 manifestare → 公開清楚宣告的文告"
+  },
+  {
+    "word": "manifold",
+    "pos": "adj.",
+    "meaning": "多方面的、種類繁多的",
+    "example": "The city's manifold problems, from traffic to pollution, required a comprehensive plan.",
+    "roots": "many (多) + fold (層、種) → 有許多層面、種類的"
+  },
+  {
+    "word": "mannered",
+    "pos": "adj.",
+    "meaning": "矯揉造作的、不自然的",
+    "example": "Critics found the actor's mannered delivery distracting rather than convincing.",
+    "roots": "manner (方式、風格) + -ed (形容詞後綴) → 刻意講究風格而顯得不自然"
+  },
+  {
+    "word": "mar",
+    "pos": "v.",
+    "meaning": "損壞、破壞(外觀或完美)",
+    "example": "A single scratch marred the otherwise flawless surface of the painting.",
+    "roots": "源自古英文 merran，妨礙、破壞 → 使原本完好的事物出現瑕疵"
+  },
+  {
+    "word": "marshal",
+    "pos": "v.",
+    "meaning": "整頓、調動(資源、論點等)",
+    "example": "The lawyer carefully marshaled her evidence before presenting the case to the jury.",
+    "roots": "源自古法文 mareschal，統帥、管馬人 → 如統帥般有系統地整理調度"
+  },
+  {
+    "word": "martinet",
+    "pos": "n.",
+    "meaning": "軍紀嚴明的人、要求嚴苛的人",
+    "example": "The new drill sergeant was a martinet who tolerated no deviation from the rules.",
+    "roots": "源自法國將軍 Jean Martinet 之姓氏，以嚴格訓練軍隊聞名 → 引申為要求極嚴格之人"
+  },
+  {
+    "word": "masquerade",
+    "pos": "n./v.",
+    "meaning": "偽裝、假面舞會；偽裝、冒充",
+    "example": "The con artist masqueraded as a wealthy investor to gain his victims' trust.",
+    "roots": "mask (面具) + -erade (源自義大利文 -erata) → 戴著面具般的偽裝行為"
+  },
+  {
+    "word": "masticate",
+    "pos": "v.",
+    "meaning": "咀嚼",
+    "example": "Dentists recommend chewing slowly so food is properly masticated before swallowing.",
+    "roots": "源自拉丁文 masticare，咀嚼 → 用牙齒磨碎食物的動作"
+  },
+  {
+    "word": "matriculate",
+    "pos": "v.",
+    "meaning": "(被大學)錄取、入學",
+    "example": "After years of preparation, she finally matriculated at her dream university.",
+    "roots": "matricula (名冊，拉丁文，matrix 的指小詞) + -ate (動詞後綴) → 把名字登記入學校名冊"
+  },
+  {
+    "word": "maudlin",
+    "pos": "adj.",
+    "meaning": "感情脆弱的、多愁善感到可笑的",
+    "example": "After a few drinks, he became maudlin and started weeping about old friendships.",
+    "roots": "源自聖經人物 Mary Magdalene（抹大拉的馬利亞），畫像常淚眼汪汪 → 引申為過度傷感、愛哭的"
+  },
+  {
+    "word": "maunder",
+    "pos": "v.",
+    "meaning": "漫無目的地說話或閒逛",
+    "example": "The old man tended to maunder on about his youth whenever anyone would listen.",
+    "roots": "字源不確定，可能與 meander(蜿蜒) 有關 → 言語或行動缺乏明確方向地徘徊"
+  },
+  {
+    "word": "mausoleum",
+    "pos": "n.",
+    "meaning": "陵墓、大型墓室",
+    "example": "The emperor's mausoleum took decades to build and housed thousands of terracotta soldiers.",
+    "roots": "源自 Mausolus（古代卡里亞國王），其陵墓為古代七大奇蹟之一 → 引申指宏偉的墓室"
+  },
+  {
+    "word": "maverick",
+    "pos": "n./adj.",
+    "meaning": "特立獨行的人；標新立異的",
+    "example": "As a young senator, she was known as a maverick who refused to follow party lines.",
+    "roots": "源自美國牧場主 Samuel Maverick，其未烙印的牛隻四處遊走 → 引申為不受拘束、獨立行事的人"
+  },
+  {
+    "word": "mawkish",
+    "pos": "adj.",
+    "meaning": "過度感傷的、矯情的",
+    "example": "The film's mawkish ending felt manipulative rather than genuinely moving.",
+    "roots": "源自古北歐文 mathkr (蛆蟲，引申為令人作嘔) + -ish (形容詞後綴) → 感傷到令人反感的程度"
+  },
+  {
+    "word": "maxim",
+    "pos": "n.",
+    "meaning": "格言、箴言",
+    "example": "\"Honesty is the best policy\" is a maxim she lived by throughout her career.",
+    "roots": "源自拉丁文 maxima (propositio)，最大的命題 → 濃縮為簡短通用真理的原則"
+  },
+  {
+    "word": "meager",
+    "pos": "adj.",
+    "meaning": "貧乏的、微薄的",
+    "example": "The refugees survived on a meager ration of rice and water each day.",
+    "roots": "源自拉丁文 macer，瘦的 → 量少而不足的、瘦削的"
+  },
+  {
+    "word": "mealy-mouthed",
+    "pos": "adj.",
+    "meaning": "說話拐彎抹角的、不敢直言的",
+    "example": "Instead of giving a mealy-mouthed non-answer, the CEO should admit the product failed.",
+    "roots": "mealy (粉狀的、含糊的) + mouthed (用嘴的) → 說話含糊其辭、不夠坦率"
+  },
+  {
+    "word": "meander",
+    "pos": "v.",
+    "meaning": "蜿蜒而流；漫無目的地閒逛",
+    "example": "The river meanders through the valley before finally reaching the sea.",
+    "roots": "源自古希臘小亞細亞的 Maeander 河，以曲折聞名 → 曲折前行、無固定方向"
+  },
+  {
+    "word": "meddlesome",
+    "pos": "adj.",
+    "meaning": "愛管閒事的",
+    "example": "The meddlesome neighbor kept offering unsolicited advice about how to raise our children.",
+    "roots": "meddle (干涉、干預，源自古法文 medler 混合) + -some (形容詞後綴) → 老愛插手他人事務的"
+  },
+  {
+    "word": "mediocre",
+    "pos": "adj.",
+    "meaning": "平庸的、平凡的",
+    "example": "The restaurant's reviews were mediocre at best, praising the decor but panning the food.",
+    "roots": "medi (中間，拉丁文 medius) + ocris (山，拉丁文) → 位於半山腰，引申為不高不低的平庸"
+  },
+  {
+    "word": "mediocrity",
+    "pos": "n.",
+    "meaning": "平庸、庸碌之人",
+    "example": "The board refused to settle for mediocrity and demanded bold innovation from the new CEO.",
+    "roots": "同 mediocre 字源 + -ity (名詞後綴) → 平庸的狀態或平庸之人"
+  },
+  {
+    "word": "medley",
+    "pos": "n.",
+    "meaning": "混雜、混合物",
+    "example": "The buffet offered a medley of dishes from different regional cuisines.",
+    "roots": "源自古法文 medlee，混合 → 各種元素混雜在一起的組合"
+  },
+  {
+    "word": "melancholy",
+    "pos": "adj./n.",
+    "meaning": "憂鬱的、令人悲傷的；憂鬱",
+    "example": "A melancholy mood settled over the town after the old theater finally closed.",
+    "roots": "melan- (黑，希臘文 melas) + choly (膽汁，希臘文 khole) → 古代體液學說中「黑膽汁」過多導致憂鬱"
+  },
+  {
+    "word": "melee",
+    "pos": "n.",
+    "meaning": "混戰、混亂的人群",
+    "example": "A melee broke out among fans after the referee's controversial call.",
+    "roots": "源自法文 mêlée，混合、混戰 → 多人混雜纏鬥的混亂場面"
+  },
+  {
+    "word": "meliorate",
+    "pos": "v.",
+    "meaning": "改善、改良",
+    "example": "New irrigation techniques helped meliorate the harsh conditions of the drought-stricken farmland.",
+    "roots": "melior (更好，拉丁文 melior) + -ate (動詞後綴) → 使變得更好"
+  },
+  {
+    "word": "mellifluous",
+    "pos": "adj.",
+    "meaning": "(聲音)柔美流暢的",
+    "example": "The radio host's mellifluous voice made even the traffic report sound soothing.",
+    "roots": "mell (蜂蜜，拉丁文 mel) + flu (流動，拉丁文 fluere) → 如蜂蜜般流暢甜美"
+  },
+  {
+    "word": "melodrama",
+    "pos": "n.",
+    "meaning": "情節誇張的戲劇、灑狗血的情節",
+    "example": "The soap opera's plot twists veered into pure melodrama by the final episode.",
+    "roots": "melo- (音樂，希臘文 melos) + drama (戲劇) → 配樂誇張渲染情緒的通俗劇"
+  },
+  {
+    "word": "mendacious",
+    "pos": "adj.",
+    "meaning": "不真實的、撒謊的",
+    "example": "The witness gave a mendacious account of the accident to protect her friend.",
+    "roots": "mend (缺陷，拉丁文 mendax) + -acious (形容詞後綴，多…的) → 充滿謊言的"
+  },
+  {
+    "word": "mendacity",
+    "pos": "n.",
+    "meaning": "虛假、說謊(的習性)",
+    "example": "The journalist's investigation exposed years of corporate mendacity.",
+    "roots": "同 mendacious 字源 + -ity (名詞後綴) → 慣於說謊的性質"
+  },
+  {
+    "word": "mendicant",
+    "pos": "adj./n.",
+    "meaning": "行乞的；乞丐、托缽僧",
+    "example": "Mendicant monks traveled from village to village, relying on alms for food.",
+    "roots": "mend (缺陷、乞討，拉丁文 mendicus 貧窮的) + -ant (形容詞後綴) → 依靠乞討維生的"
+  },
+  {
+    "word": "menial",
+    "pos": "adj.",
+    "meaning": "低賤的、不需技巧的(工作)",
+    "example": "He started his career doing menial tasks like sweeping floors before working his way up.",
+    "roots": "源自古法文 meiny，家僕 → 如僕役所做的低下瑣碎工作"
+  },
+  {
+    "word": "mephitic",
+    "pos": "adj.",
+    "meaning": "惡臭的、有毒的(氣體)",
+    "example": "A mephitic odor rose from the stagnant water in the abandoned mine shaft.",
+    "roots": "源自拉丁文 mephitis，(火山、沼氣散發的)惡臭 → 帶有毒害性質的臭氣"
+  },
+  {
+    "word": "mercantile",
+    "pos": "adj.",
+    "meaning": "商業的、貿易的",
+    "example": "The city's wealth was built on centuries of mercantile trade with distant ports.",
+    "roots": "merc (交易、貨物，拉丁文 merx) + -antile (形容詞後綴) → 與買賣交易相關的"
+  },
+  {
+    "word": "mercenary",
+    "pos": "adj./n.",
+    "meaning": "唯利是圖的；雇傭兵",
+    "example": "His mercenary motives became obvious when he switched sides for a higher salary.",
+    "roots": "merc (報酬、交易，拉丁文 merces) + -enary (形容詞後綴) → 只為報酬行事的"
+  },
+  {
+    "word": "mercurial",
+    "pos": "adj.",
+    "meaning": "善變的、喜怒無常的",
+    "example": "The chef's mercurial temper made the kitchen staff nervous around him.",
+    "roots": "源自羅馬神 Mercury（水星、信使神），以行動迅速多變著稱 → 引申為情緒或性情反覆不定"
+  },
+  {
+    "word": "meretricious",
+    "pos": "adj.",
+    "meaning": "華而不實的、俗艷的",
+    "example": "The mansion's meretricious décor, all gold trim and no taste, failed to impress the critics.",
+    "roots": "源自拉丁文 meretrix，妓女 → 表面誘人但實則庸俗、不真誠的"
+  },
+  {
+    "word": "meridian",
+    "pos": "n./adj.",
+    "meaning": "頂點、全盛期(比喻用法)；子午線的",
+    "example": "By the 1960s, the studio had reached the meridian of its creative influence.",
+    "roots": "meri- (中間，拉丁文 medius) + di (日，拉丁文 dies) → 太陽行至正中最高點，引申為事業的頂點"
+  },
+  {
+    "word": "meritorious",
+    "pos": "adj.",
+    "meaning": "值得讚賞的、有功勞的",
+    "example": "The soldier received a medal for his meritorious service during the crisis.",
+    "roots": "merit (功績，拉丁文 meritum) + -orious (形容詞後綴) → 值得獲得表彰的"
+  },
+  {
+    "word": "mesmerize",
+    "pos": "v.",
+    "meaning": "使著迷、使入迷",
+    "example": "The audience was mesmerized by the dancer's flawless performance.",
+    "roots": "源自 Franz Mesmer，18世紀提倡「動物磁力說」催眠術的醫師 → 引申為使人如受催眠般著迷"
+  },
+  {
+    "word": "metamorphosis",
+    "pos": "n.",
+    "meaning": "變形、蛻變",
+    "example": "The caterpillar's metamorphosis into a butterfly fascinated the young students.",
+    "roots": "meta- (變化，希臘文) + morph (形狀，希臘文 morphe) → 形態上的徹底轉變"
+  },
+  {
+    "word": "metaphysical",
+    "pos": "adj.",
+    "meaning": "形而上學的、抽象玄妙的",
+    "example": "The poem raises metaphysical questions about the nature of time and existence.",
+    "roots": "meta- (之後、超越) + physical (物理的、有形的) → 探討超越物質世界的抽象議題"
+  },
+  {
+    "word": "meteoric",
+    "pos": "adj.",
+    "meaning": "(比喻)如流星般迅速耀眼的",
+    "example": "The startup's meteoric rise to a billion-dollar valuation stunned even its founders.",
+    "roots": "meteor (流星，希臘文 meteoros 懸在空中的) + -ic (形容詞後綴) → 如流星般短暫燦爛、速度驚人"
+  },
+  {
+    "word": "meticulous",
+    "pos": "adj.",
+    "meaning": "一絲不苟的、極為仔細的",
+    "example": "The surgeon's meticulous preparation left nothing to chance.",
+    "roots": "met (恐懼，拉丁文 metus) + -iculous (形容詞後綴) → 原意為因恐懼出錯而極度小心"
+  },
+  {
+    "word": "metier",
+    "pos": "n.",
+    "meaning": "拿手本領、行業",
+    "example": "Negotiation, not public speaking, was truly her metier.",
+    "roots": "源自法文 métier，職業、行業(源自拉丁文 ministerium 職務) → 一個人最擅長發揮的專業領域"
+  },
+  {
+    "word": "mettle",
+    "pos": "n.",
+    "meaning": "勇氣、鬥志、氣概",
+    "example": "The rescue tested the young firefighter's mettle in ways his training never had.",
+    "roots": "為 metal 的變體字 → 引申指人內在如金屬般堅韌的性格"
+  },
+  {
+    "word": "mettlesome",
+    "pos": "adj.",
+    "meaning": "精神抖擻的、勇敢有活力的",
+    "example": "The mettlesome young colt refused to back down even from the largest horses in the pasture.",
+    "roots": "mettle (勇氣) + -some (形容詞後綴) → 充滿勇氣與活力的"
+  },
+  {
+    "word": "miasma",
+    "pos": "n.",
+    "meaning": "瘴氣、令人不快的氛圍",
+    "example": "A miasma of suspicion hung over the office after the report of missing funds.",
+    "roots": "源自希臘文 miasma，污染、玷污 → 引申為瀰漫不散的有害或不祥氣息"
+  },
+  {
+    "word": "microcosm",
+    "pos": "n.",
+    "meaning": "縮影、小世界",
+    "example": "The small fishing village became a microcosm of the larger economic crisis facing the nation.",
+    "roots": "micro- (小，希臘文 mikros) + cosm (世界，希臘文 kosmos) → 濃縮呈現大世界的小型縮影"
+  },
+  {
+    "word": "mien",
+    "pos": "n.",
+    "meaning": "風度、神態、儀態",
+    "example": "The general's calm mien reassured the troops even as the battle raged nearby.",
+    "roots": "源自古法文 mine，面容、表情 → 由外表舉止透露出的氣質"
+  },
+  {
+    "word": "milieu",
+    "pos": "n.",
+    "meaning": "環境、氛圍(尤指社會或文化背景)",
+    "example": "The novelist captured the milieu of 1920s Paris with remarkable precision.",
+    "roots": "源自法文 milieu，中間、環境 (mi- 中間 + lieu 地方) → 一個人所處的社會文化環境"
+  },
+  {
+    "word": "mimetic",
+    "pos": "adj.",
+    "meaning": "模仿的、擬態的",
+    "example": "The insect's mimetic coloring allows it to blend seamlessly with tree bark.",
+    "roots": "mim (模仿，希臘文 mimos) + -etic (形容詞後綴) → 具有模仿他物特徵的性質"
+  },
+  {
+    "word": "mimic",
+    "pos": "v./n.",
+    "meaning": "模仿、戲仿；模仿者",
+    "example": "The comedian could mimic almost any celebrity's voice with uncanny accuracy.",
+    "roots": "源自希臘文 mimos，模仿者、演員 → 刻意模仿他人言行舉止"
+  },
+  {
+    "word": "minaret",
+    "pos": "n.",
+    "meaning": "(清真寺的)喚拜塔、尖塔",
+    "example": "The city's skyline was dotted with the slender minarets of centuries-old mosques.",
+    "roots": "源自阿拉伯文 manara，燈塔 → 清真寺旁供宣禮員呼喚祈禱的高塔"
+  },
+  {
+    "word": "minatory",
+    "pos": "adj.",
+    "meaning": "威脅的、恫嚇的",
+    "example": "The general issued a minatory warning to any nation considering an attack.",
+    "roots": "min (威脅，拉丁文 minari) + -atory (形容詞後綴) → 帶有威脅意味的"
+  },
+  {
+    "word": "mincing",
+    "pos": "adj.",
+    "meaning": "裝腔作勢的、扭捏作態的(尤指走路或說話)",
+    "example": "He crossed the room with a mincing step that seemed almost theatrical.",
+    "roots": "mince (切碎；小步走) + -ing (形容詞後綴) → 步伐或言語刻意做作、瑣細"
+  },
+  {
+    "word": "minion",
+    "pos": "n.",
+    "meaning": "奴才、走狗、卑屈的隨從",
+    "example": "The tyrant surrounded himself with minions who never dared question his orders.",
+    "roots": "源自法文 mignon，寵臣、可愛的人 → 引申為卑屈依附權力者的隨從"
+  },
+  {
+    "word": "minuscule",
+    "pos": "adj.",
+    "meaning": "極小的、微不足道的",
+    "example": "The odds of winning the lottery are minuscule, yet people keep playing.",
+    "roots": "min (小，拉丁文 minor) + -uscule (指小詞後綴) → 非常微小的"
+  },
+  {
+    "word": "minute",
+    "pos": "adj.",
+    "meaning": "極小的、細微的",
+    "example": "The jeweler examined the gem for minute flaws invisible to the naked eye.",
+    "roots": "源自拉丁文 minutus，minuere (使變小) 的過去分詞 → 小到近乎難以察覺的"
+  },
+  {
+    "word": "minutiae",
+    "pos": "n.",
+    "meaning": "細節、瑣事(常用複數)",
+    "example": "The manager was famous for obsessing over minutiae, right down to the font used on receipts.",
+    "roots": "同 minute/minuscule 字源，拉丁文 minutia → 極其細小的事項"
+  },
+  {
+    "word": "mirage",
+    "pos": "n.",
+    "meaning": "海市蜃樓、幻象",
+    "example": "The exhausted travelers thought they saw an oasis, but it turned out to be a mirage.",
+    "roots": "源自法文 mirage，mirer (映照、注視) → 光線折射造成的視覺幻象"
+  },
+  {
+    "word": "mire",
+    "pos": "n./v.",
+    "meaning": "泥沼、困境；使陷入泥沼",
+    "example": "The negotiations became mired in bureaucratic delays and endless paperwork.",
+    "roots": "源自古北歐文 myrr，沼澤 → 陷入濕軟泥地，引申為陷入困境"
+  },
+  {
+    "word": "mirth",
+    "pos": "n.",
+    "meaning": "歡樂、歡笑",
+    "example": "The clown's antics filled the children's party with mirth and laughter.",
+    "roots": "源自古英文 myrgth，愉快 → 由歡愉心情引發的笑聲"
+  },
+  {
+    "word": "misanthrope",
+    "pos": "n.",
+    "meaning": "厭世者、憤世嫉俗者",
+    "example": "The old hermit had become a misanthrope, avoiding all contact with the villagers below.",
+    "roots": "mis(o)- (憎恨，希臘文 misein) + anthrop (人，希臘文 anthropos) → 憎恨人類的人"
+  },
+  {
+    "word": "misanthropic",
+    "pos": "adj.",
+    "meaning": "厭世的、憤世嫉俗的",
+    "example": "His misanthropic outlook made it hard for him to trust anyone's good intentions.",
+    "roots": "同 misanthrope 字源 + -ic (形容詞後綴) → 帶有厭惡人類傾向的"
+  },
+  {
+    "word": "misapprehend",
+    "pos": "v.",
+    "meaning": "誤解、誤會",
+    "example": "The committee misapprehended the proposal and rejected it based on a misunderstanding.",
+    "roots": "mis- (錯誤) + apprehend (理解、掌握，拉丁文 apprehendere) → 錯誤地理解"
+  },
+  {
+    "word": "misbegotten",
+    "pos": "adj.",
+    "meaning": "考慮不周的、拙劣構思的；私生的(古義)",
+    "example": "The misbegotten plan to cut costs ended up damaging the company's reputation instead.",
+    "roots": "mis- (錯誤) + begotten (beget 的過去分詞，生育) → 從一開始就構思錯誤而生的"
+  },
+  {
+    "word": "miscellany",
+    "pos": "n.",
+    "meaning": "雜集、大雜燴",
+    "example": "The attic was filled with a miscellany of old photographs, letters, and broken furniture.",
+    "roots": "miscell (混合，拉丁文 miscellus) + -any (名詞後綴) → 各種不同事物混雜的集合"
+  },
+  {
+    "word": "misconstrue",
+    "pos": "v.",
+    "meaning": "曲解、誤解",
+    "example": "Her blunt feedback was misconstrued as an insult rather than helpful criticism.",
+    "roots": "mis- (錯誤) + construe (解釋，拉丁文 construere) → 錯誤地解釋他人言行"
+  },
+  {
+    "word": "miscreant",
+    "pos": "n.",
+    "meaning": "惡棍、歹徒",
+    "example": "The sheriff rounded up the miscreants who had been terrorizing the town.",
+    "roots": "mis- (錯誤) + creant (相信，拉丁文 credere) → 原指異教徒，引申為不守規範的惡徒"
+  },
+  {
+    "word": "misfeasance",
+    "pos": "n.",
+    "meaning": "(合法行為的)不當執行、失職",
+    "example": "The lawsuit accused the contractor of misfeasance for performing the repairs so carelessly.",
+    "roots": "mis- (錯誤) + feasance (做，源自古法文 faisance) → 把原本合法的事做得不當"
+  },
+  {
+    "word": "misgiving",
+    "pos": "n.",
+    "meaning": "疑慮、擔心(常用複數)",
+    "example": "Despite her misgivings about the risky investment, she decided to proceed.",
+    "roots": "mis- (錯誤、不安) + giving (給予) → 內心給出的不安預感"
+  },
+  {
+    "word": "mishmash",
+    "pos": "n.",
+    "meaning": "大雜燴、混雜物",
+    "example": "The proposal was a mishmash of ideas borrowed from several competing plans.",
+    "roots": "疊字結構，重複 mash (搗碎混合物) → 隨意混雜在一起的東西"
+  },
+  {
+    "word": "misnomer",
+    "pos": "n.",
+    "meaning": "用詞不當、名稱誤用",
+    "example": "Calling the koala a \"bear\" is a misnomer, since it is actually a marsupial.",
+    "roots": "mis- (錯誤) + nomer (名字，拉丁文 nominare) → 錯誤或不恰當的稱呼"
+  },
+  {
+    "word": "misogyny",
+    "pos": "n.",
+    "meaning": "厭女、對女性的憎恨或偏見",
+    "example": "The novel's plot exposes the deep-rooted misogyny of the era's legal system.",
+    "roots": "mis(o)- (憎恨，希臘文 misein) + gyn (女性，希臘文 gyne) → 憎恨或輕視女性"
+  },
+  {
+    "word": "misprize",
+    "pos": "v.",
+    "meaning": "輕視、低估其價值",
+    "example": "Historians once misprized the artist's work, dismissing it as merely decorative.",
+    "roots": "mis- (錯誤) + prize (重視，古法文 preisier) → 錯誤地低估價值"
+  },
+  {
+    "word": "misrepresent",
+    "pos": "v.",
+    "meaning": "歪曲、誤傳",
+    "example": "The advertisement misrepresented the product's effectiveness, leading to a lawsuit.",
+    "roots": "mis- (錯誤) + represent (呈現，拉丁文 repraesentare) → 不正確地呈現事實"
+  },
+  {
+    "word": "missive",
+    "pos": "n.",
+    "meaning": "書信、公文(尤指正式或冗長的)",
+    "example": "The ambassador received a lengthy missive detailing the new trade terms.",
+    "roots": "miss (送出，拉丁文 mittere) + -ive (名詞後綴) → 被送出的正式書信"
+  },
+  {
+    "word": "mitigate",
+    "pos": "v.",
+    "meaning": "減輕、緩和",
+    "example": "The company installed sound barriers to mitigate noise pollution for nearby residents.",
+    "roots": "miti (溫和，拉丁文 mitis) + gate (使...，拉丁文 agere) → 使變得溫和、減輕程度"
+  },
+  {
+    "word": "mnemonic",
+    "pos": "adj./n.",
+    "meaning": "幫助記憶的；記憶術、口訣",
+    "example": "Students often use a mnemonic like \"Every Good Boy Does Fine\" to remember musical notes.",
+    "roots": "源自希臘文 mnemonikos，記憶的(mneme 記憶) → 幫助記住資訊的技巧"
+  },
+  {
+    "word": "modicum",
+    "pos": "n.",
+    "meaning": "少量、些許",
+    "example": "Even a modicum of effort would have prevented this embarrassing mistake.",
+    "roots": "源自拉丁文 modicus，適度的(modus 尺度) → 少量、適度的分量"
+  },
+  {
+    "word": "modish",
+    "pos": "adj.",
+    "meaning": "時髦的、流行的",
+    "example": "The boutique was known for its modish, if somewhat overpriced, clothing.",
+    "roots": "mod (方式、時尚，法文 mode) + -ish (形容詞後綴) → 符合當下時尚潮流的"
+  },
+  {
+    "word": "modulate",
+    "pos": "v.",
+    "meaning": "調整(音調、強弱)；使有變化",
+    "example": "The therapist taught him to modulate his voice instead of shouting during arguments.",
+    "roots": "modul (小尺度，拉丁文 modulus) + -ate (動詞後綴) → 依尺度調整強弱或音調"
+  },
+  {
+    "word": "mogul",
+    "pos": "n.",
+    "meaning": "大亨、有權勢的重要人物",
+    "example": "The media mogul built his empire from a single local newspaper.",
+    "roots": "源自波斯文/蒙兀兒帝國 Mughal → 引申為擁有龐大權力與財富的人物"
+  },
+  {
+    "word": "moiety",
+    "pos": "n.",
+    "meaning": "一半、部分",
+    "example": "The estate was divided so that each heir received an equal moiety of the property.",
+    "roots": "源自拉丁文 medietas，中間、一半(medius 中間) → 整體中被劃分出的一部分"
+  },
+  {
+    "word": "moil",
+    "pos": "v./n.",
+    "meaning": "辛苦勞動；混亂",
+    "example": "The miners moiled underground for twelve hours a day with little pay.",
+    "roots": "源自古法文 moillier，弄濕(引申指在泥濘中辛苦工作) → 費力而混亂地勞動"
+  },
+  {
+    "word": "mollify",
+    "pos": "v.",
+    "meaning": "安撫、平息(怒氣)",
+    "example": "The manager tried to mollify the angry customer by offering a full refund.",
+    "roots": "moll (柔軟，拉丁文 mollis) + -ify (使...) → 使強硬的情緒變得柔和"
+  },
+  {
+    "word": "mollycoddle",
+    "pos": "v.",
+    "meaning": "溺愛、過度呵護",
+    "example": "Critics argued that mollycoddling students with easy grades left them unprepared for real challenges.",
+    "roots": "molly (源自 Moll，女性小名，引申柔弱) + coddle (嬌養、溺愛) → 過度嬌慣照顧"
+  },
+  {
+    "word": "molt",
+    "pos": "v.",
+    "meaning": "(動物)蛻皮、換毛",
+    "example": "Snakes molt their skin several times a year as they grow.",
+    "roots": "源自拉丁文 mutare，改變 → 週期性地脫去舊皮毛以換新"
+  },
+  {
+    "word": "monastic",
+    "pos": "adj.",
+    "meaning": "修道院的、僧侶的；(比喻)苦修的",
+    "example": "He gave up his career for a monastic life of prayer and simplicity.",
+    "roots": "mon(o)- (單獨，希臘文 monos) + -astic (形容詞後綴) → 獨自遠離塵世修行的生活方式"
+  },
+  {
+    "word": "monochromatic",
+    "pos": "adj.",
+    "meaning": "單色的",
+    "example": "The gallery's latest exhibit featured monochromatic paintings in shades of gray.",
+    "roots": "mono- (單一，希臘文) + chrom (顏色，希臘文 khroma) + -atic (形容詞後綴) → 只有一種色調的"
+  },
+  {
+    "word": "monolithic",
+    "pos": "adj.",
+    "meaning": "巨石般龐大單一的、鐵板一塊的",
+    "example": "The party was not the monolithic bloc it appeared to be; deep divisions simmered beneath the surface.",
+    "roots": "mono- (單一) + lith (石頭，希臘文 lithos) → 如單一巨石般龐大且不可分割"
+  },
+  {
+    "word": "monomania",
+    "pos": "n.",
+    "meaning": "偏執狂、單一偏執",
+    "example": "His monomania about winning the award consumed every aspect of his life.",
+    "roots": "mono- (單一) + mania (瘋狂，希臘文) → 只對單一事物過度執著的病態心理"
+  },
+  {
+    "word": "monotonous",
+    "pos": "adj.",
+    "meaning": "單調的、乏味的",
+    "example": "The assembly line job was monotonous, requiring the same motion thousands of times a day.",
+    "roots": "mono- (單一) + ton (音調，希臘文 tonos) → 聲調或節奏一成不變而令人厭倦"
+  },
+  {
+    "word": "moot",
+    "pos": "adj./v.",
+    "meaning": "有爭議的、無實際意義的；提出討論",
+    "example": "Once the deadline passed, the question of who would lead the project became moot.",
+    "roots": "源自古英文 mot，集會、辯論 → 原指提交公開辯論的議題，引申為懸而未決或已無意義"
+  },
+  {
+    "word": "morass",
+    "pos": "n.",
+    "meaning": "沼澤地；(比喻)困境、泥淖",
+    "example": "The peace talks became bogged down in a morass of conflicting demands.",
+    "roots": "源自荷蘭文 moeras，沼澤 → 難以脫身的濕地，引申為複雜難解的困境"
+  },
+  {
+    "word": "moratorium",
+    "pos": "n.",
+    "meaning": "(法定的)暫停、延期償付",
+    "example": "The government declared a moratorium on evictions during the economic crisis.",
+    "roots": "mora (延遲，拉丁文) + -torium (名詞後綴，表場所或行為) → 正式宣告的延緩、暫停期"
+  },
+  {
+    "word": "morbid",
+    "pos": "adj.",
+    "meaning": "病態的、對死亡病痛過度著迷的",
+    "example": "He had a morbid fascination with true crime stories and unsolved murders.",
+    "roots": "morb (疾病，拉丁文 morbus) + -id (形容詞後綴) → 帶有病態、不健康傾向的"
+  },
+  {
+    "word": "mordant",
+    "pos": "adj.",
+    "meaning": "尖酸刻薄的、諷刺辛辣的",
+    "example": "The critic was known for his mordant wit, sparing no author from his sharp pen.",
+    "roots": "mord (咬，拉丁文 mordere) + -ant (形容詞後綴) → 言辭如咬噬般尖銳"
+  },
+  {
+    "word": "mores",
+    "pos": "n.",
+    "meaning": "(某社會的)風俗習慣、道德觀念",
+    "example": "The anthropologist spent years studying the mores of the isolated island community.",
+    "roots": "源自拉丁文 mos/mores，習慣、風俗 → 一個群體共同遵守的行為規範"
+  },
+  {
+    "word": "moribund",
+    "pos": "adj.",
+    "meaning": "垂死的、即將消亡的",
+    "example": "The once-thriving industry had become moribund as demand shifted overseas.",
+    "roots": "mori (死，拉丁文 mori) + -bund (形容詞後綴，表傾向) → 正走向死亡的"
+  },
+  {
+    "word": "morose",
+    "pos": "adj.",
+    "meaning": "陰鬱的、悶悶不樂的",
+    "example": "After losing the championship, the team's captain grew morose and withdrawn.",
+    "roots": "源自拉丁文 morosus，任性乖僻的(源自 mos 習性) → 因固執情緒而顯得陰沉不悅"
+  },
+  {
+    "word": "morsel",
+    "pos": "n.",
+    "meaning": "一小塊(食物)、少量",
+    "example": "She savored every morsel of the rich chocolate cake.",
+    "roots": "mors (咬一口，拉丁文 morsus) + -el (指小詞後綴) → 一口大小的量"
+  },
+  {
+    "word": "mortify",
+    "pos": "v.",
+    "meaning": "使極度尷尬、使深感羞辱",
+    "example": "She was mortified when her phone rang loudly during the moment of silence.",
+    "roots": "mort (死，拉丁文 mors) + -ify (使...) → 使人羞愧到如同精神死亡般難堪"
+  },
+  {
+    "word": "mote",
+    "pos": "n.",
+    "meaning": "微粒、塵埃",
+    "example": "A single mote of dust drifted through the beam of sunlight.",
+    "roots": "源自古英文 mot，微粒 → 極細小的顆粒物"
+  },
+  {
+    "word": "moth-eaten",
+    "pos": "adj.",
+    "meaning": "破舊過時的、蟲蛀的",
+    "example": "The professor's moth-eaten theories had long been discredited by newer research.",
+    "roots": "moth (蛾) + eaten (吃掉，eat 的過去分詞) → 被蛾蟲蛀壞般破舊過時"
+  },
+  {
+    "word": "motley",
+    "pos": "adj.",
+    "meaning": "混雜的、各式各樣的",
+    "example": "The rescue team was a motley crew of volunteers, retired soldiers, and local fishermen.",
+    "roots": "源自中古英文 motley，雜色布料 → 由各種不同元素混雜組成的"
+  },
+  {
+    "word": "mottled",
+    "pos": "adj.",
+    "meaning": "斑駁的、有雜色斑點的",
+    "example": "The old wall was mottled with patches of moss and peeling paint.",
+    "roots": "源自 motley (混雜的色彩) 演變而來 → 表面帶有不規則色斑的"
+  },
+  {
+    "word": "muckrake",
+    "pos": "v.",
+    "meaning": "揭發醜聞、挖掘弊端",
+    "example": "The reporter built her career muckraking corruption in city hall.",
+    "roots": "muck (糞土、污穢) + rake (耙子、耙掃) → 如耙起糞堆般挖掘出隱藏的醜聞"
+  },
+  {
+    "word": "muddle",
+    "pos": "v./n.",
+    "meaning": "使混亂、搞糊塗；混亂狀態",
+    "example": "The new instructions only muddled the volunteers further instead of clarifying the process.",
+    "roots": "源自中古荷蘭文 moddelen，在泥中攪動 → 攪成一團混亂"
+  },
+  {
+    "word": "mulish",
+    "pos": "adj.",
+    "meaning": "固執的、頑固如騾子的",
+    "example": "No amount of evidence could shake his mulish refusal to change his opinion.",
+    "roots": "mule (騾子，以固執聞名) + -ish (形容詞後綴) → 如騾子般不聽勸的"
+  },
+  {
+    "word": "multifarious",
+    "pos": "adj.",
+    "meaning": "多種多樣的、形形色色的",
+    "example": "The organization's multifarious activities range from disaster relief to education funding.",
+    "roots": "multi- (多，拉丁文) + fari (種類，拉丁文 varius 的變體) → 具有許多不同種類的"
+  },
+  {
+    "word": "multiplicity",
+    "pos": "n.",
+    "meaning": "多樣性、繁多",
+    "example": "The committee had to consider a multiplicity of viewpoints before reaching a decision.",
+    "roots": "multi- (多) + plic (摺疊，拉丁文 plicare) + -ity (名詞後綴) → 層層摺疊般的眾多樣態"
+  },
+  {
+    "word": "multitudinous",
+    "pos": "adj.",
+    "meaning": "眾多的、數量龐大的",
+    "example": "The museum's multitudinous artifacts span thousands of years of human history.",
+    "roots": "multitud (眾多，拉丁文 multitudo) + -inous (形容詞後綴) → 數量極為龐大的"
+  },
+  {
+    "word": "mundane",
+    "pos": "adj.",
+    "meaning": "世俗的、平凡乏味的",
+    "example": "Between global tours, the rock star still had to deal with mundane chores like grocery shopping.",
+    "roots": "mund (世界，拉丁文 mundus) + -ane (形容詞後綴) → 屬於塵世日常、缺乏新奇感的"
+  },
+  {
+    "word": "munificent",
+    "pos": "adj.",
+    "meaning": "慷慨的、大方的",
+    "example": "The university library was built thanks to a munificent donation from an anonymous alumnus.",
+    "roots": "muni (禮物，拉丁文 munus) + fic (做，拉丁文 facere) → 大方給予禮物的"
+  },
+  {
+    "word": "murky",
+    "pos": "adj.",
+    "meaning": "黑暗的、混濁不清的",
+    "example": "The company's murky accounting practices raised red flags with regulators.",
+    "roots": "源自古英文 mirce，黑暗的 → 缺乏清晰度、令人難以看透的"
+  },
+  {
+    "word": "murmur",
+    "pos": "v./n.",
+    "meaning": "低聲說、喃喃自語；低語聲",
+    "example": "The audience began to murmur among themselves as the speaker fell silent.",
+    "roots": "源自拉丁文 murmur，擬聲詞，模擬低沉的聲音 → 輕柔而模糊的說話聲"
+  },
+  {
+    "word": "muse",
+    "pos": "v./n.",
+    "meaning": "沉思、冥想；靈感女神、創作靈感來源",
+    "example": "She would often muse over the choices that had brought her to this point, sitting quietly by the window.",
+    "roots": "源自希臘神話中主管藝術與科學的九位繆思女神 Muses → 引申為沉思或帶來靈感之物"
+  },
+  {
+    "word": "muster",
+    "pos": "v./n.",
+    "meaning": "召集、鼓起(勇氣等)；集合",
+    "example": "It took all the courage she could muster to speak up in front of the board.",
+    "roots": "源自拉丁文 monstrare，展示 → 召集人員或力量以展現出來"
+  },
+  {
+    "word": "mutable",
+    "pos": "adj.",
+    "meaning": "易變的、可改變的",
+    "example": "Public opinion on the issue proved highly mutable, shifting dramatically within a single year.",
+    "roots": "mut (改變，拉丁文 mutare) + -able (可…的) → 容易發生變化的性質"
+  },
+  {
+    "word": "mutineer",
+    "pos": "n.",
+    "meaning": "叛變者、譁變者",
+    "example": "The captain was thrown overboard by the mutineers who seized control of the ship.",
+    "roots": "mutin (叛亂，源自古法文 mutin) + -eer (名詞後綴，表人) → 發起叛變的人"
+  },
+  {
+    "word": "mutinous",
+    "pos": "adj.",
+    "meaning": "叛變的、反抗的",
+    "example": "The crew grew mutinous after weeks without pay or fresh supplies.",
+    "roots": "同 mutineer 字源 + -ous (形容詞後綴) → 帶有叛亂傾向的"
+  },
+  {
+    "word": "mutiny",
+    "pos": "n./v.",
+    "meaning": "叛變、譁變",
+    "example": "The sailors staged a mutiny after months of brutal treatment by their captain.",
+    "roots": "源自古法文 mutin，叛亂的(拉丁文 movere 移動、騷動) → 集體反抗上級的行動"
+  },
+  {
+    "word": "myopia",
+    "pos": "n.",
+    "meaning": "近視；(比喻)眼光短淺",
+    "example": "Critics accused the company's leadership of myopia for ignoring long-term environmental risks.",
+    "roots": "my- (閉合，希臘文 myein) + op (眼睛，希臘文 ops) → 視野被侷限，引申為缺乏遠見"
+  },
+  {
+    "word": "myopic",
+    "pos": "adj.",
+    "meaning": "近視的；目光短淺的",
+    "example": "The myopic focus on quarterly profits led the firm to neglect crucial long-term research.",
+    "roots": "同 myopia 字源 + -ic (形容詞後綴) → 只看見眼前、缺乏遠見的"
+  },
+  {
+    "word": "myriad",
+    "pos": "adj./n.",
+    "meaning": "無數的；大量、無數",
+    "example": "The city at night was illuminated by a myriad of lights stretching to the horizon.",
+    "roots": "源自希臘文 myrias，一萬 → 引申為數量多到難以計算的"
+  },
+  {
+    "word": "mystify",
+    "pos": "v.",
+    "meaning": "使困惑、使費解",
+    "example": "The sudden disappearance of the artifact mystified even the museum's most experienced curators.",
+    "roots": "myst (神秘，希臘文 mystes) + -ify (使...) → 使人陷入如謎團般的困惑"
+  },
+  {
+    "word": "mystique",
+    "pos": "n.",
+    "meaning": "神秘感、神秘氛圍",
+    "example": "The reclusive author's refusal to give interviews only added to her mystique.",
+    "roots": "myst (神秘，希臘文 mystes) + -ique (名詞後綴，源自法文) → 圍繞人或事物的神秘氣息"
+  },
+  {
+    "word": "nadir",
+    "pos": "n.",
+    "meaning": "最低點、谷底",
+    "example": "Losing the championship game marked the nadir of the team's otherwise successful season.",
+    "roots": "源自阿拉伯文 nazir，相對的點 → 天文學指與天頂相對的最低點，引申為境況最糟之時"
+  },
+  {
+    "word": "narcissism",
+    "pos": "n.",
+    "meaning": "自戀、自我陶醉",
+    "example": "His constant need for praise revealed a deep vein of narcissism beneath his charm.",
+    "roots": "源自希臘神話美少年 Narcissus，因愛戀自己水中倒影而死 → 過度自我迷戀的心理"
+  },
+  {
+    "word": "narcissist",
+    "pos": "n.",
+    "meaning": "自戀者",
+    "example": "Colleagues quickly learned that the new director was a narcissist who dismissed any credit but his own.",
+    "roots": "同 narcissism 字源 + -ist (名詞後綴，表人) → 過度自戀的人"
+  },
+  {
+    "word": "narcotic",
+    "pos": "n./adj.",
+    "meaning": "麻醉藥、麻醉性的",
+    "example": "The lecture's droning tone had a narcotic effect on the drowsy students.",
+    "roots": "narc (使麻木，希臘文 narke) + -otic (形容詞後綴) → 使人麻木、昏沉的"
+  },
+  {
+    "word": "nascent",
+    "pos": "adj.",
+    "meaning": "初生的、萌芽的",
+    "example": "Investors were eager to fund the nascent technology before it matured into a major industry.",
+    "roots": "nasc (出生，拉丁文 nasci) + -ent (形容詞後綴) → 剛開始出現、發展的"
+  },
+  {
+    "word": "natter",
+    "pos": "v./n.",
+    "meaning": "閒聊、絮叨",
+    "example": "The two old friends nattered on about the neighborhood gossip for hours.",
+    "roots": "源自擬聲詞，模擬持續碎念的聲音 → 漫無目的、瑣碎的閒談"
+  },
+  {
+    "word": "natty",
+    "pos": "adj.",
+    "meaning": "整潔漂亮的、時髦的(尤指穿著)",
+    "example": "The old gentleman always appeared in a natty suit with a matching pocket square.",
+    "roots": "可能源自 neat (整潔的) 的變體 → 衣著整齊講究的"
+  },
+  {
+    "word": "nausea",
+    "pos": "n.",
+    "meaning": "噁心、作嘔感",
+    "example": "The rough sea voyage left half the passengers battling nausea for hours.",
+    "roots": "源自希臘文 nausia，暈船(naus 船) → 因暈眩而產生的作嘔感"
+  },
+  {
+    "word": "nauseate",
+    "pos": "v.",
+    "meaning": "使噁心、使厭惡",
+    "example": "The graphic description of the surgery nauseated several members of the audience.",
+    "roots": "同 nausea 字源 + -ate (動詞後綴) → 使人產生強烈的反胃或厭惡感"
+  },
+  {
+    "word": "nebbish",
+    "pos": "n.",
+    "meaning": "懦弱平庸之人、無足輕重的小人物",
+    "example": "In the film, the awkward nebbish unexpectedly becomes the hero who saves the day.",
+    "roots": "源自意第緒語 nebekh，可憐的 → 指軟弱、毫不起眼的人"
+  },
+  {
+    "word": "nebulous",
+    "pos": "adj.",
+    "meaning": "模糊不清的、朦朧的",
+    "example": "The company's nebulous mission statement failed to give employees any real direction.",
+    "roots": "nebul (雲霧，拉丁文 nebula) + -ous (形容詞後綴) → 如雲霧般模糊不清的"
+  },
+  {
+    "word": "necessitous",
+    "pos": "adj.",
+    "meaning": "貧困的、匱乏的",
+    "example": "The charity focused its efforts on the most necessitous families in the region.",
+    "roots": "necess (必需，拉丁文 necesse) + -itous (形容詞後綴) → 連基本必需品都缺乏的"
+  },
+  {
+    "word": "nefarious",
+    "pos": "adj.",
+    "meaning": "邪惡的、違法的",
+    "example": "The detective slowly uncovered the nefarious scheme behind the string of robberies.",
+    "roots": "ne- (不) + fas (神聖法則，拉丁文) + -arious (形容詞後綴) → 違反神聖法則的、極為邪惡的"
+  },
+  {
+    "word": "negligence",
+    "pos": "n.",
+    "meaning": "疏忽、粗心大意",
+    "example": "The hospital was sued for negligence after the medication error harmed a patient.",
+    "roots": "neg- (不) + leg (選擇、留意，拉丁文 legere) + -ence (名詞後綴) → 未加留意而導致的疏失"
+  },
+  {
+    "word": "negligible",
+    "pos": "adj.",
+    "meaning": "微不足道的、可忽略的",
+    "example": "The difference in performance between the two engines was negligible.",
+    "roots": "同 negligence 字源 + -ible (可…的) → 小到可以被忽略不計的"
+  },
+  {
+    "word": "nemesis",
+    "pos": "n.",
+    "meaning": "宿敵、剋星；(不可避免的)報應",
+    "example": "The chess champion finally faced his nemesis, the only player who had ever defeated him.",
+    "roots": "源自希臘神話復仇女神 Nemesis，懲罰傲慢者 → 引申為無法擺脫的對手或報應"
+  },
+  {
+    "word": "neologism",
+    "pos": "n.",
+    "meaning": "新詞、新造語",
+    "example": "\"Selfie\" was once a neologism before it became a standard entry in dictionaries.",
+    "roots": "neo- (新，希臘文) + log (詞語，希臘文 logos) + -ism (名詞後綴) → 新創造出的詞彙"
+  },
+  {
+    "word": "neophyte",
+    "pos": "n.",
+    "meaning": "初學者、新手",
+    "example": "As a neophyte in the field, she relied heavily on her mentor's guidance.",
+    "roots": "neo- (新，希臘文) + phyte (被種植的，希臘文 phyton) → 剛被栽種、初入門的人"
+  },
+  {
+    "word": "nepenthe",
+    "pos": "n.",
+    "meaning": "忘憂藥、能解除悲傷的東西",
+    "example": "In the poem, the narrator seeks a nepenthe to numb the grief of losing his love.",
+    "roots": "ne- (不) + penthos (悲傷，希臘文) → 能消除悲傷痛苦的靈藥，源自荷馬史詩"
+  },
+  {
+    "word": "nepotism",
+    "pos": "n.",
+    "meaning": "裙帶關係、任人唯親",
+    "example": "The mayor was accused of nepotism after appointing his nephew to a senior position.",
+    "roots": "源自拉丁文 nepos，姪子、孫子 → 因偏袒親屬而任用私人"
+  },
+  {
+    "word": "nescience",
+    "pos": "n.",
+    "meaning": "無知、不知",
+    "example": "His nescience of local customs led to several embarrassing missteps during the trip.",
+    "roots": "同 nescient 字源 + -ence (名詞後綴) → 缺乏知識的狀態"
+  },
+  {
+    "word": "nescient",
+    "pos": "adj.",
+    "meaning": "無知的、缺乏知識的",
+    "example": "The report was written by someone seemingly nescient of even the most basic facts of the case.",
+    "roots": "ne- (不) + sci (知道，拉丁文 scire) + -ent (形容詞後綴) → 對某事完全不知情的"
+  },
+  {
+    "word": "nettle",
+    "pos": "v.",
+    "meaning": "使惱怒、使煩躁",
+    "example": "Her constant interruptions nettled the professor throughout the entire lecture.",
+    "roots": "源自古英文 netele，一種帶刺會螫人的植物「蕁麻」 → 如被蕁麻刺到般引發不快"
+  },
+  {
+    "word": "nettlesome",
+    "pos": "adj.",
+    "meaning": "棘手的、令人惱怒的",
+    "example": "The merger raised several nettlesome legal questions that took months to resolve.",
+    "roots": "nettle (蕁麻、使惱怒) + -some (形容詞後綴) → 如荊棘般令人困擾的"
+  },
+  {
+    "word": "nexus",
+    "pos": "n.",
+    "meaning": "連結、關聯核心",
+    "example": "The city has long served as a nexus of trade between East and West.",
+    "roots": "源自拉丁文 nexus，nectere (連結) 的過去分詞 → 事物之間的連結點或核心"
+  },
+  {
+    "word": "niggardly",
+    "pos": "adj.",
+    "meaning": "吝嗇的、小氣的",
+    "example": "Despite his enormous wealth, he was niggardly even about small household expenses.",
+    "roots": "源自古北歐文 hnøggr，吝嗇的 + -ly (形容詞後綴) → 過度節省、不願花費的"
+  },
+  {
+    "word": "niggle",
+    "pos": "v.",
+    "meaning": "為小事煩惱、吹毛求疵",
+    "example": "A small doubt continued to niggle at her long after she had signed the contract.",
+    "roots": "可能源自斯堪地那維亞語，意指瑣碎地擺弄 → 為不重要的細節而困擾"
+  },
+  {
+    "word": "niggling",
+    "pos": "adj.",
+    "meaning": "瑣碎但揮之不去的、令人隱隱不安的",
+    "example": "He couldn't shake the niggling suspicion that something in the contract had been altered.",
+    "roots": "niggle (為小事煩惱) + -ing (形容詞後綴) → 持續存在、揮之不去的細微困擾"
+  },
+  {
+    "word": "nihilism",
+    "pos": "n.",
+    "meaning": "虛無主義",
+    "example": "The philosopher's nihilism led him to reject any claim of inherent meaning or value in life.",
+    "roots": "nihil (虛無，拉丁文，什麼都沒有) + -ism (名詞後綴，表主義) → 主張一切價值與意義皆不存在的思想"
+  },
+  {
+    "word": "nimbus",
+    "pos": "n.",
+    "meaning": "光環、雲氣氛圍",
+    "example": "The old portrait depicted the saint with a golden nimbus surrounding her head.",
+    "roots": "源自拉丁文 nimbus，雲、雨雲 → 引申為環繞人物周圍的光輝或氛圍"
+  },
+  {
+    "word": "nocturnal",
+    "pos": "adj.",
+    "meaning": "夜間的、夜行性的",
+    "example": "Owls are nocturnal hunters, most active after the sun goes down.",
+    "roots": "noct (夜晚，拉丁文 nox) + -urnal (形容詞後綴) → 與夜晚相關、在夜間活動的"
+  },
+  {
+    "word": "noisome",
+    "pos": "adj.",
+    "meaning": "惡臭的、有害的",
+    "example": "A noisome smell drifted from the garbage left uncollected in the summer heat.",
+    "roots": "noy (使討厭，源自 annoy) + -some (形容詞後綴) → 令人不快、氣味難聞的"
+  },
+  {
+    "word": "nomadic",
+    "pos": "adj.",
+    "meaning": "游牧的、流浪的",
+    "example": "The tribe led a nomadic existence, following the herds across the grasslands each season.",
+    "roots": "nomad (游牧民族，希臘文 nomas 放牧) + -ic (形容詞後綴) → 隨牧群遷徙、無固定居所的"
+  },
+  {
+    "word": "nomenclature",
+    "pos": "n.",
+    "meaning": "命名法、術語系統",
+    "example": "Scientists follow a strict nomenclature when naming newly discovered species.",
+    "roots": "nomen (名字，拉丁文) + clatura (呼叫，拉丁文 calare) → 一套系統化的命名規則"
+  },
+  {
+    "word": "nominal",
+    "pos": "adj.",
+    "meaning": "名義上的、有名無實的；(金額)微不足道的",
+    "example": "He remained the nominal head of the company, though his son made all the real decisions.",
+    "roots": "nomin (名字，拉丁文 nomen) + -al (形容詞後綴) → 只存在於名義上的"
+  },
+  {
+    "word": "nonchalance",
+    "pos": "n.",
+    "meaning": "冷漠、若無其事、漫不經心",
+    "example": "She answered the reporters' questions with an air of practiced nonchalance.",
+    "roots": "non- (不) + chal (使熱，拉丁文 calere) + -ance (名詞後綴) → 不動聲色、毫不熱切的態度"
+  },
+  {
+    "word": "nonchalant",
+    "pos": "adj.",
+    "meaning": "冷漠的、滿不在乎的",
+    "example": "He remained nonchalant even as the deadline loomed just hours away.",
+    "roots": "同 nonchalance 字源 → 表現出漠不關心、毫不緊張的樣子"
+  },
+  {
+    "word": "noncommittal",
+    "pos": "adj.",
+    "meaning": "不表態的、含糊其辭的",
+    "example": "When asked about the merger, the CEO gave only a noncommittal shrug.",
+    "roots": "non- (不) + committal (承諾、表態，源自 commit) → 不願明確表態或承諾的"
+  },
+  {
+    "word": "nondescript",
+    "pos": "adj.",
+    "meaning": "平凡無奇的、難以描述特徵的",
+    "example": "The spy blended into the crowd wearing a nondescript gray coat.",
+    "roots": "non- (不) + descript (被描述的，拉丁文 describere) → 平凡到沒有值得一提的特徵"
+  },
+  {
+    "word": "nonentity",
+    "pos": "n.",
+    "meaning": "無足輕重的人、不重要的存在",
+    "example": "He went from being a nonentity in the company to leading its most important division.",
+    "roots": "non- (不) + entity (實體、存在，拉丁文 ens) → 缺乏存在感、無關緊要之人"
+  },
+  {
+    "word": "nonfeasance",
+    "pos": "n.",
+    "meaning": "(應盡義務的)不作為、失職",
+    "example": "The board was criticized for nonfeasance in failing to address the safety complaints for years.",
+    "roots": "non- (不) + feasance (做，源自古法文 faisance) → 該做而未做的失職行為"
+  },
+  {
+    "word": "nonpareil",
+    "pos": "adj./n.",
+    "meaning": "無與倫比的；獨一無二的人或物",
+    "example": "As a violinist, she was considered a nonpareil, unmatched by any of her contemporaries.",
+    "roots": "non- (不) + pareil (相等的，法文，源自拉丁文 par) → 找不到與之相等者"
+  },
+  {
+    "word": "nonplus",
+    "pos": "v.",
+    "meaning": "使困惑不知所措",
+    "example": "The unexpected question completely nonplussed the usually eloquent spokesperson.",
+    "roots": "源自拉丁文 non plus，不能更多、無法再進一步 → 陷入不知如何應對的窘境"
+  },
+  {
+    "word": "normative",
+    "pos": "adj.",
+    "meaning": "規範性的、訂定標準的",
+    "example": "The study shifted from describing behavior to making normative claims about how people should act.",
+    "roots": "norm (規範，拉丁文 norma) + -ative (形容詞後綴) → 用來設立標準或規則的"
+  },
+  {
+    "word": "nostrum",
+    "pos": "n.",
+    "meaning": "萬靈丹、江湖秘方(常含貶義)",
+    "example": "The politician offered simple nostrums for problems that actually required years of careful reform.",
+    "roots": "源自拉丁文 nostrum，「我們的」(暗指自家配方) → 未經證實卻號稱萬能的藥方或解方"
+  },
+  {
+    "word": "notional",
+    "pos": "adj.",
+    "meaning": "假設的、非真實存在的；空想的",
+    "example": "The company's projected profits remained purely notional until the product actually launched.",
+    "roots": "notion (概念、想法，拉丁文 notio) + -al (形容詞後綴) → 僅存在於構想中、尚未實現的"
+  },
+  {
+    "word": "notorious",
+    "pos": "adj.",
+    "meaning": "臭名昭著的、惡名遠播的",
+    "example": "The city's most notorious criminal was finally captured after a decade on the run.",
+    "roots": "not (知道，拉丁文 notus) + -orious (形容詞後綴) → 因惡行而廣為人知的"
+  },
+  {
+    "word": "novitiate",
+    "pos": "n.",
+    "meaning": "見習期、初學者身分(尤指宗教修行)",
+    "example": "She spent two years in the novitiate before formally taking her vows as a nun.",
+    "roots": "nov (新，拉丁文 novus) + -itiate (名詞後綴) → 剛開始學習、身分尚新的階段"
+  },
+  {
+    "word": "noxious",
+    "pos": "adj.",
+    "meaning": "有害的、有毒的",
+    "example": "The factory released noxious fumes that forced nearby residents to evacuate.",
+    "roots": "nox (傷害，拉丁文 noxa) + -ious (形容詞後綴) → 對健康或環境造成傷害的"
+  },
+  {
+    "word": "nub",
+    "pos": "n.",
+    "meaning": "核心、要點、癥結",
+    "example": "The nub of the argument was whether the company had acted in good faith.",
+    "roots": "源自 knob (突起、節點) 的變體 → 引申指問題或討論的核心重點"
+  },
+  {
+    "word": "nubile",
+    "pos": "adj.",
+    "meaning": "(女子)已達適婚年齡的、性感有魅力的",
+    "example": "In the novel's antiquated language, the heroine is described as a nubile young woman ready for marriage.",
+    "roots": "源自拉丁文 nubere，出嫁 → 已到可以結婚年齡的"
+  },
+  {
+    "word": "nugatory",
+    "pos": "adj.",
+    "meaning": "無價值的、無效的",
+    "example": "Without enforcement, the new regulation remained nugatory, changing nothing in practice.",
+    "roots": "nugat (瑣事、玩笑，拉丁文 nugari) + -ory (形容詞後綴) → 微不足道、無實際效力的"
+  },
+  {
+    "word": "nullify",
+    "pos": "v.",
+    "meaning": "使無效、廢除",
+    "example": "The Supreme Court's ruling nullified the state law as unconstitutional.",
+    "roots": "null (無、零，拉丁文 nullus) + -ify (使...) → 使原有效力歸零"
+  },
+  {
+    "word": "numinous",
+    "pos": "adj.",
+    "meaning": "神聖的、令人敬畏的、神秘的",
+    "example": "Standing inside the ancient cathedral, she felt a numinous sense of something far greater than herself.",
+    "roots": "numen (神性、神意，拉丁文) + -inous (形容詞後綴) → 帶有超自然、令人敬畏的神聖氣息"
+  }
+]
