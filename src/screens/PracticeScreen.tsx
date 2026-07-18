@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { words, WordEntry } from '../data/words';
 import { getAllProgress, saveWordProgress, incrementHeatmapToday } from '../lib/storage';
@@ -11,6 +11,7 @@ export function PracticeScreen({ route }: any) {
   const [queue, setQueue] = useState<WordEntry[]>([]);
   const [index, setIndex] = useState(0);
   const [loaded, setLoaded] = useState(false);
+  const processingRef = useRef(false);
 
   useEffect(() => {
     (async () => {
@@ -27,14 +28,20 @@ export function PracticeScreen({ route }: any) {
   }, []);
 
   async function handleResult(knewIt: boolean) {
-    const entry = queue[index];
-    const today = todayStr();
-    const progress = await getAllProgress();
-    const current = progress[entry.word] ?? initialProgress(today);
-    const updated = reviewWord(current, knewIt, today);
-    await saveWordProgress(entry.word, updated);
-    await incrementHeatmapToday(today);
-    setIndex((i) => i + 1);
+    if (processingRef.current) return;
+    processingRef.current = true;
+    try {
+      const entry = queue[index];
+      const today = todayStr();
+      const progress = await getAllProgress();
+      const current = progress[entry.word] ?? initialProgress(today);
+      const updated = reviewWord(current, knewIt, today);
+      await saveWordProgress(entry.word, updated);
+      await incrementHeatmapToday(today);
+      setIndex((i) => i + 1);
+    } finally {
+      processingRef.current = false;
+    }
   }
 
   if (!loaded) {
