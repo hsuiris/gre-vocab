@@ -1,0 +1,1192 @@
+[
+  {
+    "word": "quagmire",
+    "pos": "n.",
+    "meaning": "泥沼、困境",
+    "example": "The peace talks became a political quagmire with no clear resolution in sight.",
+    "roots": "quag (沼澤，源自古英文 cwabban 搖晃的濕地) + mire (泥沼) → 陷入難以脫身的泥濘困境"
+  },
+  {
+    "word": "quaint",
+    "pos": "adj.",
+    "meaning": "古雅有趣的、老式而別緻的",
+    "example": "The village was full of quaint little shops and cobblestone streets.",
+    "roots": "源自古法文 cointe（聰明的、優雅的），源自拉丁文 cognitus（已知的）→ 引申為別具風味的舊式優雅"
+  },
+  {
+    "word": "qualm",
+    "pos": "n.",
+    "meaning": "良心不安、疑慮",
+    "example": "She felt a qualm about lying to her best friend.",
+    "roots": "字源不確定，一說源自古英文 cwealm（痛苦、災禍），中世紀演變為身體或良心上突如其來的不適感"
+  },
+  {
+    "word": "quandary",
+    "pos": "n.",
+    "meaning": "進退兩難的困境",
+    "example": "He was in a quandary about whether to accept the job offer or stay with his family.",
+    "roots": "字源不明，十六世紀始見於英語，可能與拉丁文 quando（何時）的訛用有關，表示令人猶豫不決的處境"
+  },
+  {
+    "word": "quash",
+    "pos": "v.",
+    "meaning": "撤銷、鎮壓",
+    "example": "The court moved to quash the previous ruling on procedural grounds.",
+    "roots": "源自古法文 quasser（打碎、廢除），源自拉丁文 quassare（搖碎）→ 徹底打破、使無效"
+  },
+  {
+    "word": "quaver",
+    "pos": "v.",
+    "meaning": "（聲音）顫抖",
+    "example": "Her voice began to quaver as she recounted the tragic events.",
+    "roots": "源自中世紀英文 quaven（顫抖），與 quake（震動）同源 → 聲音或身體不由自主地顫動"
+  },
+  {
+    "word": "quell",
+    "pos": "v.",
+    "meaning": "平息、鎮壓",
+    "example": "Troops were sent in to quell the riots downtown.",
+    "roots": "源自古英文 cwellan（殺死、消滅）→ 引申為徹底壓制、使平息"
+  },
+  {
+    "word": "querulous",
+    "pos": "adj.",
+    "meaning": "愛抱怨的、好發牢騷的",
+    "example": "The querulous old man complained about everything from the weather to the service.",
+    "roots": "quer- (抱怨，源自拉丁文 queri) + -ulous (充滿...的形容詞後綴) → 充滿抱怨情緒的"
+  },
+  {
+    "word": "quibble",
+    "pos": "v.",
+    "meaning": "為小事爭論、吹毛求疵",
+    "example": "The lawyers began to quibble over the precise wording of the contract.",
+    "roots": "源自 quib（拉丁文 qui bus 的戲謔用法，指詭辯的小論點）→ 為無關緊要的細節做無謂爭論"
+  },
+  {
+    "word": "quiescent",
+    "pos": "adj.",
+    "meaning": "靜止的、不活動的",
+    "example": "The volcano has remained quiescent for over a century.",
+    "roots": "qui- (安靜，源自拉丁文 quiescere 休息) + -escent (逐漸...的後綴) → 逐漸歸於平靜的狀態"
+  },
+  {
+    "word": "quintessence",
+    "pos": "n.",
+    "meaning": "精髓、典型",
+    "example": "Her performance was the quintessence of grace and precision.",
+    "roots": "quint- (第五，拉丁文 quintus) + essence (本質) → 中世紀哲學認為「第五元素」是萬物最純粹的本質"
+  },
+  {
+    "word": "quintessential",
+    "pos": "adj.",
+    "meaning": "典型的、最完美體現的",
+    "example": "He was the quintessential gentleman, always polite and well-dressed.",
+    "roots": "同 quintessence 字源 + -ial (形容詞後綴) → 具備事物最純粹本質的"
+  },
+  {
+    "word": "quixotic",
+    "pos": "adj.",
+    "meaning": "不切實際的、堂吉訶德式理想主義的",
+    "example": "Their quixotic plan to end world hunger within a year was doomed from the start.",
+    "roots": "源自小說人物 Don Quixote（唐吉訶德）之名 + -ic (形容詞後綴) → 如唐吉訶德般空想而不切實際"
+  },
+  {
+    "word": "quizzical",
+    "pos": "adj.",
+    "meaning": "疑惑的、詢問般的（表情）",
+    "example": "She gave him a quizzical look when he mentioned the surprise party.",
+    "roots": "quiz (考問、疑問) + -ical (形容詞後綴) → 帶著疑問神情的"
+  },
+  {
+    "word": "quotidian",
+    "pos": "adj.",
+    "meaning": "每日的、平凡的",
+    "example": "He grew tired of the quotidian routine of his office job.",
+    "roots": "源自拉丁文 quotidianus（每日的），quot（多少）+ dies（日子）→ 每天發生、平淡無奇的"
+  },
+  {
+    "word": "rabid",
+    "pos": "adj.",
+    "meaning": "狂熱的、患狂犬病的",
+    "example": "The senator faced rabid criticism from both sides of the aisle.",
+    "roots": "源自拉丁文 rabidus（瘋狂的），rabere（發狂）→ 引申為狂熱失控的（如狂犬病般失控）"
+  },
+  {
+    "word": "raconteur",
+    "pos": "n.",
+    "meaning": "善於說故事的人",
+    "example": "As a natural raconteur, he could turn even a mundane trip to the store into a captivating tale.",
+    "roots": "源自法文 raconteur，raconter（敘述）→ 善於講述故事的人"
+  },
+  {
+    "word": "raillery",
+    "pos": "n.",
+    "meaning": "善意的取笑、戲謔",
+    "example": "The team's raillery kept spirits high even during the toughest practices.",
+    "roots": "源自法文 railler（嘲弄、取笑）→ 帶著善意的調侃言語"
+  },
+  {
+    "word": "raiment",
+    "pos": "n.",
+    "meaning": "衣著、服飾（文學用語）",
+    "example": "The queen appeared before the court in regal raiment of silk and gold.",
+    "roots": "源自古法文 areement，簡化自 arrayment（裝束）→ 身上所穿的服飾"
+  },
+  {
+    "word": "rakish",
+    "pos": "adj.",
+    "meaning": "放蕩不羈的、瀟灑不羈的",
+    "example": "He wore his hat at a rakish angle that suggested a carefree, mischievous personality.",
+    "roots": "rake (放蕩子，指生活不檢點的男子) + -ish (形容詞後綴，具有...特質的) → 帶有放蕩子氣質的"
+  },
+  {
+    "word": "rambunctious",
+    "pos": "adj.",
+    "meaning": "喧鬧的、難以控制的",
+    "example": "The rambunctious puppy knocked over the lamp while chasing its tail.",
+    "roots": "字源不完全確定，可能是 robustious（粗野的）的變體，與 rumbustious 同源 → 形容精力旺盛、喧鬧難馴的"
+  },
+  {
+    "word": "ramification",
+    "pos": "n.",
+    "meaning": "（通常複數）後果、影響、分支",
+    "example": "The company failed to consider the ramifications of laying off half its workforce.",
+    "roots": "ramus (拉丁文，樹枝) + -fication (使...化的名詞後綴) → 如樹枝般分岔延伸出的後續效應"
+  },
+  {
+    "word": "rampant",
+    "pos": "adj.",
+    "meaning": "猖獗的、蔓延失控的",
+    "example": "Corruption was rampant throughout the government agency.",
+    "roots": "源自古法文 ramper（爬行、直立），原指獅子等動物後腳站立的兇猛姿態 → 引申為不受控制地蔓延"
+  },
+  {
+    "word": "ramshackle",
+    "pos": "adj.",
+    "meaning": "搖搖欲墜的、破舊的",
+    "example": "They spent the summer renovating a ramshackle old farmhouse.",
+    "roots": "推測與 ransack（翻箱倒櫃、搜劫）演變相關 → 形容像被翻找洗劫過般凌亂破敗的建築"
+  },
+  {
+    "word": "rancid",
+    "pos": "adj.",
+    "meaning": "（油脂等）腐臭變質的",
+    "example": "The butter had gone rancid after being left out of the fridge for a week.",
+    "roots": "源自拉丁文 rancidus（發臭的、變質的）→ 油脂類食物變質產生的臭味"
+  },
+  {
+    "word": "rancor",
+    "pos": "n.",
+    "meaning": "深仇、怨恨",
+    "example": "Despite losing the election, she showed no rancor toward her opponent.",
+    "roots": "源自拉丁文 rancor（陳腐、腐臭），與 rancid 同源 → 心中積存已久、如發酵般的怨恨"
+  },
+  {
+    "word": "rancorous",
+    "pos": "adj.",
+    "meaning": "充滿怨恨的",
+    "example": "The rancorous divorce proceedings dragged on for years.",
+    "roots": "rancor + -ous (形容詞後綴，充滿...的) → 充滿深仇怨恨的"
+  },
+  {
+    "word": "rankle",
+    "pos": "v.",
+    "meaning": "（長期）使耿耿於懷、引起怨恨",
+    "example": "The insult still rankled him years after it was spoken.",
+    "roots": "源自古法文 draoncle（小蛇、潰瘍），原指傷口潰爛化膿 → 引申為怨恨在心中持續發作"
+  },
+  {
+    "word": "ransack",
+    "pos": "v.",
+    "meaning": "洗劫、徹底搜刮",
+    "example": "Burglars had ransacked the house, leaving drawers overturned everywhere.",
+    "roots": "源自古諾斯語 rannsaka，rann（房子）+ saka（搜尋）→ 徹底翻找搜刮房屋"
+  },
+  {
+    "word": "rapacious",
+    "pos": "adj.",
+    "meaning": "貪婪的、掠奪成性的",
+    "example": "The rapacious developer bought up the entire block to build a shopping mall.",
+    "roots": "源自拉丁文 rapax（掠奪的），rapere（抓取、搶奪）→ 如猛禽般貪婪掠奪的"
+  },
+  {
+    "word": "rapacity",
+    "pos": "n.",
+    "meaning": "貪婪、掠奪成性",
+    "example": "The rapacity of the invading army left the countryside stripped bare.",
+    "roots": "同 rapacious 字源 + -ity (名詞後綴) → 貪婪掠奪的性質"
+  },
+  {
+    "word": "rapprochement",
+    "pos": "n.",
+    "meaning": "（國家間）和解、關係恢復",
+    "example": "The two nations reached a rapprochement after decades of hostility.",
+    "roots": "源自法文 rapprochement，rapprocher（使靠近），re- (再次) + approcher (接近) → 使雙方關係重新靠近"
+  },
+  {
+    "word": "rapt",
+    "pos": "adj.",
+    "meaning": "全神貫注的、入迷的",
+    "example": "The children listened with rapt attention as the storyteller began his tale.",
+    "roots": "源自拉丁文 raptus（被抓走、被攜走，rapere 的過去分詞）→ 心神彷彿被完全攫取、投入的"
+  },
+  {
+    "word": "rarefied",
+    "pos": "adj.",
+    "meaning": "稀薄的；（圈子、氛圍）少數精英的",
+    "example": "Only a handful of scholars operate in the rarefied world of ancient manuscript restoration.",
+    "roots": "rare (稀少的) + -fy (使...化) + -ed (形容詞後綴) → 使變得稀薄、少數精英才能觸及的"
+  },
+  {
+    "word": "ratify",
+    "pos": "v.",
+    "meaning": "（正式）批准、認可",
+    "example": "The senate voted to ratify the new trade agreement.",
+    "roots": "rat- (拉丁文 ratus，已確定的) + -ify (使...化) → 使協議正式生效"
+  },
+  {
+    "word": "ratiocination",
+    "pos": "n.",
+    "meaning": "邏輯推理（過程）",
+    "example": "The detective's solution relied on careful ratiocination rather than sudden intuition.",
+    "roots": "ratio (拉丁文，理性、計算) + -cinate + -ion (名詞後綴) → 依循理性邏輯逐步推導的過程"
+  },
+  {
+    "word": "rationalize",
+    "pos": "v.",
+    "meaning": "合理化、文過飾非",
+    "example": "He tried to rationalize his decision to quit by claiming the job was beneath him.",
+    "roots": "rational (理性的) + -ize (動詞化後綴) → 為未必合理的行為尋找看似合理的解釋"
+  },
+  {
+    "word": "raucous",
+    "pos": "adj.",
+    "meaning": "喧鬧刺耳的",
+    "example": "Raucous laughter erupted from the back of the bar.",
+    "roots": "源自拉丁文 raucus（沙啞的、嘶啞的）→ 聲音粗嘎刺耳、喧鬧的"
+  },
+  {
+    "word": "ravage",
+    "pos": "v.",
+    "meaning": "蹂躪、嚴重破壞",
+    "example": "The hurricane ravaged the coastal town, leaving few buildings standing.",
+    "roots": "源自法文 ravager，源自拉丁文 rapere（搶奪）→ 如掠奪般大肆破壞"
+  },
+  {
+    "word": "ravenous",
+    "pos": "adj.",
+    "meaning": "極度飢餓的、貪婪的",
+    "example": "After the long hike, the campers were ravenous and devoured everything in sight.",
+    "roots": "源自古法文 ravineux，raviner（掠奪），與 ravage 同源 → 飢餓到彷彿要掠奪食物的程度"
+  },
+  {
+    "word": "raze",
+    "pos": "v.",
+    "meaning": "夷平、徹底摧毀",
+    "example": "The old stadium was razed to make way for a new shopping complex.",
+    "roots": "源自古法文 raser（刮平），拉丁文 radere（刮、剃）→ 從根基處刮除、剷平"
+  },
+  {
+    "word": "reactionary",
+    "pos": "adj.",
+    "meaning": "反動的、極端保守的",
+    "example": "The reactionary faction fought to reverse every reform the previous government had made.",
+    "roots": "re- (反、回) + action (行動) + -ary (形容詞後綴) → 對改革做出反向抵抗的"
+  },
+  {
+    "word": "rebarbative",
+    "pos": "adj.",
+    "meaning": "令人反感的、討厭的",
+    "example": "His rebarbative manner made it difficult for colleagues to work with him.",
+    "roots": "源自法文 rébarbatif，源自古法文 rebarber（以鬍鬚相對抗，barbe 為鬍鬚）→ 引申為態度強硬令人反感"
+  },
+  {
+    "word": "rebuff",
+    "pos": "v.",
+    "meaning": "斷然拒絕",
+    "example": "She rebuffed his offer of help without a word of thanks.",
+    "roots": "re- (反) + buff (源自古法文 bufe，打擊) → 以強硬態度回擊、拒絕"
+  },
+  {
+    "word": "rebuke",
+    "pos": "v.",
+    "meaning": "斥責、譴責",
+    "example": "The teacher rebuked the students for talking during the exam.",
+    "roots": "re- (加強) + buke (源自古法文 buschier，砍伐) → 以言語重重打擊、責備"
+  },
+  {
+    "word": "rebut",
+    "pos": "v.",
+    "meaning": "反駁、駁斥",
+    "example": "The scientist rebutted the claims made in the controversial study.",
+    "roots": "re- (回) + but (源自古法文 boter，頂撞、推) → 以論證回頂對方的說法"
+  },
+  {
+    "word": "rebuttal",
+    "pos": "n.",
+    "meaning": "反駁、駁斥",
+    "example": "The defense attorney offered a strong rebuttal to the prosecution's argument.",
+    "roots": "rebut + -tal (名詞後綴) → 反駁的言論或行動"
+  },
+  {
+    "word": "recalcitrant",
+    "pos": "adj.",
+    "meaning": "頑固不服從的、難駕馭的",
+    "example": "The recalcitrant mule refused to move no matter how hard they pulled.",
+    "roots": "re- (向後) + calcitrare (拉丁文，用腳跟踢) → 像動物踢腿抵抗般不服管教"
+  },
+  {
+    "word": "recant",
+    "pos": "v.",
+    "meaning": "公開撤回（言論、信仰）",
+    "example": "Under pressure from the church, Galileo was forced to recant his theory.",
+    "roots": "re- (收回) + cantare (拉丁文，唱、宣告) → 收回先前公開宣告的言論"
+  },
+  {
+    "word": "recapitulate",
+    "pos": "v.",
+    "meaning": "概述、扼要重述",
+    "example": "Let me recapitulate the main points before we move to the next topic.",
+    "roots": "re- (再次) + capitulum (拉丁文，小標題，源自 caput 頭) → 依重點再次條列敘述"
+  },
+  {
+    "word": "recidivism",
+    "pos": "n.",
+    "meaning": "（罪犯）累犯、再犯",
+    "example": "The program was designed to reduce recidivism among young offenders.",
+    "roots": "re- (再) + cidere (拉丁文 cadere 跌落的變體) + -ism (名詞後綴) → 一再跌回犯罪行為的傾向"
+  },
+  {
+    "word": "reciprocate",
+    "pos": "v.",
+    "meaning": "回報、互惠",
+    "example": "She reciprocated his kindness by helping him move into his new apartment.",
+    "roots": "源自拉丁文 reciprocus（往復的），re- (向後) + pro- (向前) → 一來一往地回應對方"
+  },
+  {
+    "word": "recluse",
+    "pos": "n.",
+    "meaning": "隱士、遁世者",
+    "example": "After the scandal, the once-famous actress became a recluse, rarely leaving her home.",
+    "roots": "re- (加強) + claudere (拉丁文，關閉) → 將自己完全封閉隔絕於世的人"
+  },
+  {
+    "word": "reclusive",
+    "pos": "adj.",
+    "meaning": "隱居的、遁世的",
+    "example": "The reclusive author hadn't given an interview in over twenty years.",
+    "roots": "同 recluse 字源 + -ive (形容詞後綴) → 傾向隱居避世的"
+  },
+  {
+    "word": "recoil",
+    "pos": "v.",
+    "meaning": "（因驚恐、厭惡而）畏縮、退縮",
+    "example": "She recoiled in disgust at the sight of the rotting food.",
+    "roots": "re- (向後) + coil (源自古法文 coillir，收集、捲起) → 身體像彈簧般向後彈開躲避"
+  },
+  {
+    "word": "recompense",
+    "pos": "n.",
+    "meaning": "報酬、賠償",
+    "example": "The victims received financial recompense for their losses.",
+    "roots": "re- (回) + compensare (拉丁文，補償，源自 com- 共同 + pensare 秤量) → 以等值之物回報損失"
+  },
+  {
+    "word": "reconcile",
+    "pos": "v.",
+    "meaning": "使和解、調和（矛盾）",
+    "example": "It took years for the estranged brothers to reconcile.",
+    "roots": "re- (再次) + conciliare (拉丁文，使聯合，源自 concilium 會議) → 使雙方再度聚合、和好"
+  },
+  {
+    "word": "recondite",
+    "pos": "adj.",
+    "meaning": "深奧難懂的、鮮為人知的",
+    "example": "The professor's lecture was so recondite that few students could follow it.",
+    "roots": "re- (加強) + condere (拉丁文，隱藏、埋藏) → 隱藏得極深、非常人能理解的"
+  },
+  {
+    "word": "reconnaissance",
+    "pos": "n.",
+    "meaning": "偵察、勘察",
+    "example": "The pilots were sent on a reconnaissance mission to assess enemy positions.",
+    "roots": "源自法文 reconnaissance，reconnaître（辨認），re- (再) + connaître (認識) → 為了解情況而事先探查"
+  },
+  {
+    "word": "recrimination",
+    "pos": "n.",
+    "meaning": "（通常複數）互相指責",
+    "example": "The failed merger led to bitter recriminations between the two companies' executives.",
+    "roots": "re- (回) + criminare (拉丁文，控訴，源自 crimen 罪行) → 以指控回擊對方的指控"
+  },
+  {
+    "word": "recrudescence",
+    "pos": "n.",
+    "meaning": "（疾病、問題等）復發、再度爆發",
+    "example": "Health officials warned of a possible recrudescence of the disease after the flood.",
+    "roots": "re- (再次) + crudescere (拉丁文，變得猛烈，源自 crudus 生的、未成熟的) → 潛伏後再度猛烈發作"
+  },
+  {
+    "word": "rectify",
+    "pos": "v.",
+    "meaning": "矯正、改正",
+    "example": "The company promised to rectify the billing error immediately.",
+    "roots": "rect- (拉丁文 rectus，正直的) + -ify (使...化) → 使恢復正確、端正"
+  },
+  {
+    "word": "rectitude",
+    "pos": "n.",
+    "meaning": "正直、廉正",
+    "example": "His moral rectitude earned him the respect of everyone in the community.",
+    "roots": "rect- (正直的) + -itude (名詞後綴，性質、狀態) → 端正不苟的品格"
+  },
+  {
+    "word": "recumbent",
+    "pos": "adj.",
+    "meaning": "躺臥的、斜倚的",
+    "example": "The patient remained in a recumbent position throughout the examination.",
+    "roots": "re- (向後) + cumbere (拉丁文，躺臥) → 向後躺臥的姿勢"
+  },
+  {
+    "word": "recuperate",
+    "pos": "v.",
+    "meaning": "恢復（健康、體力）",
+    "example": "She went to the countryside to recuperate after her surgery.",
+    "roots": "源自拉丁文 recuperare（重新獲得），re- (再) + capere (拿、取) → 重新取回失去的健康或體力"
+  },
+  {
+    "word": "redact",
+    "pos": "v.",
+    "meaning": "編輯、刪改（文件，尤指刪除機密內容）",
+    "example": "Several paragraphs of the report were redacted before it was released to the public.",
+    "roots": "源自拉丁文 redactus，red- (回) + agere (驅使、做) → 將文件重新整理、刪改後定稿"
+  },
+  {
+    "word": "redolent",
+    "pos": "adj.",
+    "meaning": "芳香的；令人聯想起...的",
+    "example": "The kitchen was redolent of freshly baked bread.",
+    "roots": "re- (加強) + olere (拉丁文，散發氣味) → 氣味濃烈到令人聯想起某事物"
+  },
+  {
+    "word": "redoubtable",
+    "pos": "adj.",
+    "meaning": "令人敬畏的、強勁的（對手）",
+    "example": "She was a redoubtable opponent at the negotiating table.",
+    "roots": "re- (加強) + douter (古法文，懼怕，源自拉丁文 dubitare) → 令人心生敬畏懼怕的"
+  },
+  {
+    "word": "redress",
+    "pos": "v.",
+    "meaning": "糾正、賠償",
+    "example": "The lawsuit sought to redress the damages caused by the factory's pollution.",
+    "roots": "re- (再) + dresser (古法文，整理、扶正) → 使事情重新回歸公正"
+  },
+  {
+    "word": "redundant",
+    "pos": "adj.",
+    "meaning": "冗餘的、多餘的",
+    "example": "The report was full of redundant phrases that added nothing to the argument.",
+    "roots": "red- (再次) + undare (拉丁文，波動、氾濫，源自 unda 波浪) → 像潮水般過量氾濫、超出所需的"
+  },
+  {
+    "word": "refractory",
+    "pos": "adj.",
+    "meaning": "難駕馭的、頑固的；（疾病）難治的",
+    "example": "The refractory patient refused to follow the doctor's orders.",
+    "roots": "re- (向後) + frangere (拉丁文，打斷、折斷) → 不斷抵抗、拒絕被折服的"
+  },
+  {
+    "word": "refulgent",
+    "pos": "adj.",
+    "meaning": "燦爛輝煌的",
+    "example": "The refulgent chandelier cast a dazzling light across the ballroom.",
+    "roots": "re- (加強) + fulgere (拉丁文，發光) → 光芒四射、極其耀眼的"
+  },
+  {
+    "word": "refute",
+    "pos": "v.",
+    "meaning": "駁倒、反駁（並證明錯誤）",
+    "example": "The new evidence completely refuted the defendant's alibi.",
+    "roots": "源自拉丁文 refutare（擊退、反駁），re- (回) + futare (擊打) → 以證據擊退對方的論點"
+  },
+  {
+    "word": "regale",
+    "pos": "v.",
+    "meaning": "使歡樂、款待（以故事、美食）",
+    "example": "He regaled the guests with tales of his travels through South America.",
+    "roots": "源自法文 régaler，源自古法文 gale（歡樂）→ 以娛樂或美食使人愉悅"
+  },
+  {
+    "word": "regimen",
+    "pos": "n.",
+    "meaning": "（飲食、運動等）養生法、療程",
+    "example": "Her daily regimen includes an hour of yoga and a strict diet.",
+    "roots": "源自拉丁文 regimen（統治、指導），regere（統治、引導）→ 有系統地規範生活作息的方法"
+  },
+  {
+    "word": "reify",
+    "pos": "v.",
+    "meaning": "使（抽象概念）具體化",
+    "example": "The artist sought to reify the abstract notion of grief through sculpture.",
+    "roots": "re- (源自拉丁文 res，事物) + -fy (使...化) → 使抽象事物變得具體真實"
+  },
+  {
+    "word": "reiterate",
+    "pos": "v.",
+    "meaning": "反覆強調、重申",
+    "example": "The manager reiterated the importance of meeting the deadline.",
+    "roots": "re- (再) + iterare (拉丁文，重複，源自 iterum 再一次) → 再三重複陳述以加強語氣"
+  },
+  {
+    "word": "rejoinder",
+    "pos": "n.",
+    "meaning": "（機智的）回答、反駁",
+    "example": "Her witty rejoinder left the heckler speechless.",
+    "roots": "re- (回) + joindre (古法文，連接，源自拉丁文 jungere) → 緊接對方話語而做出的回應"
+  },
+  {
+    "word": "relegate",
+    "pos": "v.",
+    "meaning": "使降級、貶謫",
+    "example": "The team was relegated to the lower division after a disastrous season.",
+    "roots": "re- (回、離) + legare (拉丁文，派遣、委託) → 將人或事物打發到較次要的位置"
+  },
+  {
+    "word": "relent",
+    "pos": "v.",
+    "meaning": "（態度）軟化、讓步",
+    "example": "After hours of pleading, her father finally relented and let her go to the party.",
+    "roots": "re- (回) + lentus (拉丁文，柔軟的、緩慢的) → 態度逐漸鬆軟下來"
+  },
+  {
+    "word": "relinquish",
+    "pos": "v.",
+    "meaning": "放棄、交出（權利、職位）",
+    "example": "The aging king was reluctant to relinquish control of the kingdom.",
+    "roots": "re- (加強) + linquere (拉丁文，留下、離開) → 徹底放手、留下不再持有"
+  },
+  {
+    "word": "relish",
+    "pos": "v.",
+    "meaning": "津津有味地享受",
+    "example": "She relished the opportunity to prove her critics wrong.",
+    "roots": "源自古法文 relais（殘留的美味），re- (再) + laisser (留下) → 對美好事物餘味無窮地享受"
+  },
+  {
+    "word": "reminiscent",
+    "pos": "adj.",
+    "meaning": "令人回想起、有...風味的",
+    "example": "The old house's decor was reminiscent of a bygone era.",
+    "roots": "re- (再) + minisci (拉丁文，記得) → 再次喚起記憶、令人聯想"
+  },
+  {
+    "word": "remiss",
+    "pos": "adj.",
+    "meaning": "玩忽職守的、疏忽的",
+    "example": "It would be remiss of me not to mention the risks involved.",
+    "roots": "re- (向後) + mittere (拉丁文，放、送) → 該盡的責任被鬆懈地放掉"
+  },
+  {
+    "word": "remit",
+    "pos": "n.",
+    "meaning": "職權範圍、職責",
+    "example": "Deciding on the budget falls outside the committee's remit.",
+    "roots": "re- (回) + mittere (拉丁文，送、放) → 被送回、交付出去的職責範圍"
+  },
+  {
+    "word": "remonstrance",
+    "pos": "n.",
+    "meaning": "抗議、諫言",
+    "example": "The workers submitted a formal remonstrance against the new policy.",
+    "roots": "re- (加強) + monstrare (拉丁文，展示、指出) → 強烈指出不滿的正式表達"
+  },
+  {
+    "word": "remonstrate",
+    "pos": "v.",
+    "meaning": "抗議、諫諍",
+    "example": "Employees remonstrated with management over the sudden pay cuts.",
+    "roots": "同 remonstrance 字源 + -ate (動詞後綴) → 提出強烈的異議"
+  },
+  {
+    "word": "remuneration",
+    "pos": "n.",
+    "meaning": "報酬、薪酬",
+    "example": "The consultant received generous remuneration for her services.",
+    "roots": "re- (回) + munerare (拉丁文，給予禮物，源自 munus 禮物、職責) → 以報酬回饋所付出的勞務"
+  },
+  {
+    "word": "rend",
+    "pos": "v.",
+    "meaning": "（用力）撕裂、扯開",
+    "example": "A cry of anguish seemed to rend the silence of the night.",
+    "roots": "源自古英文 rendan（撕裂）→ 猛烈地將某物撕開"
+  },
+  {
+    "word": "rendezvous",
+    "pos": "n.",
+    "meaning": "（約定的）會面、約會地點",
+    "example": "The spies arranged a secret rendezvous at the old train station.",
+    "roots": "源自法文 rendez-vous（字面意為「呈現你自己」），rendre（呈現）+ vous（你）→ 依約前往會面的地點"
+  },
+  {
+    "word": "renegade",
+    "pos": "adj.",
+    "meaning": "叛變的、變節的",
+    "example": "The renegade officer defected to the enemy side after years of service.",
+    "roots": "re- (加強) + negare (拉丁文，否認) → 徹底否認原先信仰、陣營的"
+  },
+  {
+    "word": "renege",
+    "pos": "v.",
+    "meaning": "違背（承諾）、食言",
+    "example": "The supplier reneged on the contract at the last minute.",
+    "roots": "re- (加強) + negare (拉丁文，否認) → 事後否認先前的承諾"
+  },
+  {
+    "word": "renounce",
+    "pos": "v.",
+    "meaning": "正式放棄、宣布斷絕",
+    "example": "He renounced his citizenship after moving abroad permanently.",
+    "roots": "re- (加強) + nuntiare (拉丁文，宣告) → 公開宣布放棄某事物"
+  },
+  {
+    "word": "renowned",
+    "pos": "adj.",
+    "meaning": "著名的、聞名的",
+    "example": "She is a renowned surgeon with decades of experience.",
+    "roots": "re- (加強) + nomen (拉丁文，名字) → 名聲被反覆傳頌而遠播的"
+  },
+  {
+    "word": "reparation",
+    "pos": "n.",
+    "meaning": "（通常複數）賠償",
+    "example": "The defeated nation was forced to pay heavy reparations after the war.",
+    "roots": "re- (再) + parare (拉丁文，準備、修復) → 修復所造成損害的補償行為"
+  },
+  {
+    "word": "repartee",
+    "pos": "n.",
+    "meaning": "機智的應答、鬥嘴",
+    "example": "The two comedians engaged in a rapid-fire repartee that had the audience roaring.",
+    "roots": "源自法文 repartie，repartir（快速回擊）→ 靈敏機智的對答"
+  },
+  {
+    "word": "repellent",
+    "pos": "adj.",
+    "meaning": "令人厭惡的、排斥的",
+    "example": "The stench from the dumpster was utterly repellent.",
+    "roots": "re- (向後) + pellere (拉丁文，推) → 使人想向後推開躲避的"
+  },
+  {
+    "word": "repercussion",
+    "pos": "n.",
+    "meaning": "（通常複數）間接後果、影響",
+    "example": "The decision to cut funding had serious repercussions for the entire department.",
+    "roots": "re- (再) + percutere (拉丁文，敲擊，per- 貫穿 + quatere 搖動) → 像回音般反彈延續的後續效應"
+  },
+  {
+    "word": "repine",
+    "pos": "v.",
+    "meaning": "抱怨不滿、悶悶不樂",
+    "example": "Instead of repining over his misfortune, he set to work rebuilding his business.",
+    "roots": "re- (加強) + pine (悲嘆、憔悴，源自古英文 pinian 受苦) → 長久地心懷不滿、悲嘆"
+  },
+  {
+    "word": "replete",
+    "pos": "adj.",
+    "meaning": "充滿的、豐富的",
+    "example": "The museum's archive is replete with rare historical documents.",
+    "roots": "re- (加強) + plere (拉丁文，填滿) → 填得滿滿的、充盈的"
+  },
+  {
+    "word": "repose",
+    "pos": "n.",
+    "meaning": "休息、安寧",
+    "example": "After the exhausting climb, they found a moment of repose beneath the trees.",
+    "roots": "re- (加強) + pausare (拉丁文，停止，源自 pausa 停頓) → 完全停下來休息安寧"
+  },
+  {
+    "word": "repository",
+    "pos": "n.",
+    "meaning": "儲藏處、寶庫",
+    "example": "The library serves as a repository of centuries of local history.",
+    "roots": "re- (回) + ponere (拉丁文，放置) → 東西被存放收藏之處"
+  },
+  {
+    "word": "reprehensible",
+    "pos": "adj.",
+    "meaning": "應受譴責的、可恥的",
+    "example": "His reprehensible behavior at the party embarrassed the entire family.",
+    "roots": "re- (加強) + prehendere (拉丁文，抓住) → 應被抓住問責、可受譴責的"
+  },
+  {
+    "word": "reprieve",
+    "pos": "n.",
+    "meaning": "緩刑、暫緩",
+    "example": "The condemned man received a last-minute reprieve from the governor.",
+    "roots": "源自古法文 repreuver 的轉義用法，後專指暫緩執行刑罰 → 暫時撤回原定的懲罰"
+  },
+  {
+    "word": "reprimand",
+    "pos": "v.",
+    "meaning": "嚴厲斥責",
+    "example": "The officer was reprimanded for failing to follow protocol.",
+    "roots": "源自法文 réprimande，源自拉丁文 reprimere（壓制，re- 回 + premere 壓）→ 以言語壓制、責備對方"
+  },
+  {
+    "word": "reprisal",
+    "pos": "n.",
+    "meaning": "報復（行動）",
+    "example": "The village suffered brutal reprisals after the uprising was crushed.",
+    "roots": "源自古法文 reprisaille，源自拉丁文 reprehendere（重新抓取）→ 以牙還牙的報復行動"
+  },
+  {
+    "word": "reproach",
+    "pos": "n.",
+    "meaning": "責備、非難",
+    "example": "She looked at him with a mixture of disappointment and reproach.",
+    "roots": "re- (回) + prope (拉丁文，靠近) → 將對方的過錯拉近檢視並責備"
+  },
+  {
+    "word": "reprobate",
+    "pos": "n.",
+    "meaning": "品行不端的人",
+    "example": "The old reprobate had spent his entire inheritance on gambling and drink.",
+    "roots": "re- (相反) + probare (拉丁文，證明、認可) → 未能通過道德檢驗、被否定的人"
+  },
+  {
+    "word": "reprove",
+    "pos": "v.",
+    "meaning": "責備、告誡",
+    "example": "The coach reproved the players for their lack of discipline during practice.",
+    "roots": "re- (回) + probare (拉丁文，證明、檢驗) → 對其行為表達否定的評判"
+  },
+  {
+    "word": "repudiate",
+    "pos": "v.",
+    "meaning": "拒絕承認、否認",
+    "example": "The senator repudiated the extremist views attributed to him.",
+    "roots": "源自拉丁文 repudiare（拒絕、休妻），re- (回) + pudere (感到羞恥) → 因不齒而正式拒絕、斷絕關係"
+  },
+  {
+    "word": "repudiation",
+    "pos": "n.",
+    "meaning": "拒絕、否認",
+    "example": "His public repudiation of the scandal did little to restore his reputation.",
+    "roots": "同 repudiate 字源 + -ion (名詞後綴) → 公開拒絕承認的行為"
+  },
+  {
+    "word": "repugnant",
+    "pos": "adj.",
+    "meaning": "令人厭惡的、格格不入的",
+    "example": "The idea of cheating on the exam was repugnant to her.",
+    "roots": "re- (相反) + pugnare (拉丁文，戰鬥) → 引起強烈牴觸、令人反感的"
+  },
+  {
+    "word": "requisite",
+    "pos": "adj.",
+    "meaning": "必需的",
+    "example": "A valid passport is a requisite document for international travel.",
+    "roots": "re- (加強) + quaerere (拉丁文，尋求) → 事先必須尋求具備的條件"
+  },
+  {
+    "word": "requite",
+    "pos": "v.",
+    "meaning": "報答、回報（尤指恩情或傷害）",
+    "example": "He vowed to requite her kindness a hundredfold.",
+    "roots": "re- (回) + quite (源自古法文 quiter，使自由、償還) → 以對等的行為回報對方"
+  },
+  {
+    "word": "rescind",
+    "pos": "v.",
+    "meaning": "撤銷、廢除（法律、協議）",
+    "example": "The board voted to rescind the controversial policy after public outcry.",
+    "roots": "re- (回) + scindere (拉丁文，切割) → 將原本訂定的規則切除、作廢"
+  },
+  {
+    "word": "resolute",
+    "pos": "adj.",
+    "meaning": "堅決的、意志堅定的",
+    "example": "Despite the setbacks, she remained resolute in pursuing her goal.",
+    "roots": "re- (加強) + solvere (拉丁文，鬆開、解決) → 已徹底解決猶豫、態度堅定不移"
+  },
+  {
+    "word": "resounding",
+    "pos": "adj.",
+    "meaning": "響亮的；（勝利、失敗）徹底的",
+    "example": "The proposal was met with a resounding rejection from the board.",
+    "roots": "re- (再) + sonare (拉丁文，發聲) + -ing (形容詞後綴) → 聲響一再迴盪，引申為程度極其顯著的"
+  },
+  {
+    "word": "respite",
+    "pos": "n.",
+    "meaning": "（暫時的）喘息、緩解",
+    "example": "The ceasefire offered a brief respite from years of fighting.",
+    "roots": "源自古法文 respit，源自拉丁文 respectus（回顧、考慮）→ 暫時停下來喘口氣的時刻"
+  },
+  {
+    "word": "resplendent",
+    "pos": "adj.",
+    "meaning": "燦爛奪目的、輝煌的",
+    "example": "The cathedral was resplendent with gold and stained glass.",
+    "roots": "re- (加強) + splendere (拉丁文，發光) → 光彩四射、極為耀眼的"
+  },
+  {
+    "word": "restitution",
+    "pos": "n.",
+    "meaning": "歸還、賠償",
+    "example": "The court ordered the company to make restitution to the affected families.",
+    "roots": "re- (回) + statuere (拉丁文，設立、放置) → 將原本的損失或財物歸還原位"
+  },
+  {
+    "word": "restive",
+    "pos": "adj.",
+    "meaning": "焦躁不安的、難以控制的",
+    "example": "The restive crowd grew impatient as the delay dragged on.",
+    "roots": "源自古法文 rester（停留），原指馬匹拒絕前進而焦躁 → 引申為靜不下來、躁動的"
+  },
+  {
+    "word": "resuscitate",
+    "pos": "v.",
+    "meaning": "使甦醒、使復甦",
+    "example": "Paramedics worked to resuscitate the patient after his heart stopped.",
+    "roots": "re- (再) + suscitare (拉丁文，喚起，源自 sub- 由下 + citare 召喚) → 重新喚起生命跡象"
+  },
+  {
+    "word": "retaliate",
+    "pos": "v.",
+    "meaning": "報復、反擊",
+    "example": "The company retaliated against the whistleblower by cutting her hours.",
+    "roots": "re- (回) + talio (拉丁文，同態報復，即以牙還牙原則) → 以相同方式回擊對方"
+  },
+  {
+    "word": "retentive",
+    "pos": "adj.",
+    "meaning": "記憶力強的、有保持力的",
+    "example": "Her retentive memory allowed her to recall entire passages verbatim.",
+    "roots": "re- (向後、保持) + tenere (拉丁文，握住) → 能長久握住、保持記憶的"
+  },
+  {
+    "word": "reticence",
+    "pos": "n.",
+    "meaning": "沉默寡言、緘默",
+    "example": "His reticence about his past only fueled speculation among his colleagues.",
+    "roots": "re- (加強) + tacere (拉丁文，沉默) → 傾向保持沉默的性格"
+  },
+  {
+    "word": "reticent",
+    "pos": "adj.",
+    "meaning": "沉默寡言的、有所保留的",
+    "example": "She remained reticent about the details of her diagnosis.",
+    "roots": "同 reticence 字源 + -ent (形容詞後綴) → 話少而有所保留的"
+  },
+  {
+    "word": "retinue",
+    "pos": "n.",
+    "meaning": "（隨行的）侍從、隨員",
+    "example": "The visiting dignitary arrived with a large retinue of aides and bodyguards.",
+    "roots": "源自古法文 retenue，retenir（保留、隨侍，源自拉丁文 retinere）→ 被留在身邊隨行的一群人"
+  },
+  {
+    "word": "retiring",
+    "pos": "adj.",
+    "meaning": "靦腆的、不愛拋頭露面的",
+    "example": "Despite his fame, the author remained a shy, retiring figure who avoided interviews.",
+    "roots": "re- (向後) + tirer (古法文，拉、抽) + -ing (形容詞後綴) → 傾向向後退避、不愛出風頭的"
+  },
+  {
+    "word": "retort",
+    "pos": "v.",
+    "meaning": "反唇相譏、頂嘴回應",
+    "example": "\"I never asked for your opinion,\" she retorted sharply.",
+    "roots": "re- (回) + torquere (拉丁文，扭轉) → 將對方的話扭轉回擊"
+  },
+  {
+    "word": "retract",
+    "pos": "v.",
+    "meaning": "撤回、收回（言論）",
+    "example": "The newspaper was forced to retract its false claims about the politician.",
+    "roots": "re- (回) + trahere (拉丁文，拉) → 把已說出的話拉回、收回"
+  },
+  {
+    "word": "retrench",
+    "pos": "v.",
+    "meaning": "削減開支、縮減",
+    "example": "The struggling firm had to retrench its operations to survive the downturn.",
+    "roots": "re- (再) + trencher (古法文，切割) → 再次削去多餘的部分以節省"
+  },
+  {
+    "word": "retribution",
+    "pos": "n.",
+    "meaning": "（應得的）報應、懲罰",
+    "example": "He feared swift retribution for betraying his former partners.",
+    "roots": "re- (回) + tribuere (拉丁文，給予、分配) → 將應得的懲罰分配回加害者身上"
+  },
+  {
+    "word": "retrograde",
+    "pos": "adj.",
+    "meaning": "倒退的、逆行的",
+    "example": "Critics called the new policy a retrograde step that undid decades of progress.",
+    "roots": "retro- (向後) + gradi (拉丁文，行走) → 朝反方向走、退步的"
+  },
+  {
+    "word": "retrospective",
+    "pos": "adj.",
+    "meaning": "回顧的、追溯既往的",
+    "example": "The museum held a retrospective exhibition of the artist's fifty-year career.",
+    "roots": "retro- (向後) + spicere (拉丁文，看) → 回頭審視過去的"
+  },
+  {
+    "word": "revel",
+    "pos": "v.",
+    "meaning": "狂歡；沉醉於",
+    "example": "The team reveled in their unexpected victory long into the night.",
+    "roots": "源自古法文 reveler（喧鬧狂歡），源自拉丁文 rebellare（造反）→ 放縱地享受、狂歡"
+  },
+  {
+    "word": "revelry",
+    "pos": "n.",
+    "meaning": "狂歡作樂",
+    "example": "The streets were filled with music and revelry during the festival.",
+    "roots": "同 revel 字源 + -ry (名詞後綴) → 狂歡熱鬧的場面"
+  },
+  {
+    "word": "reverberate",
+    "pos": "v.",
+    "meaning": "（聲音）迴盪、產生持續影響",
+    "example": "The explosion's sound reverberated through the entire valley.",
+    "roots": "re- (再、反覆) + verberare (拉丁文，鞭打，源自 verber 鞭子) → 聲音像被反覆抽打般迴盪不絕"
+  },
+  {
+    "word": "revere",
+    "pos": "v.",
+    "meaning": "崇敬、敬畏",
+    "example": "The villagers revere the old oak tree as a symbol of resilience.",
+    "roots": "re- (加強) + vereri (拉丁文，敬畏) → 帶著深深敬意看待"
+  },
+  {
+    "word": "reverence",
+    "pos": "n.",
+    "meaning": "崇敬、敬意",
+    "example": "The students listened to the retired general speak with quiet reverence.",
+    "roots": "同 revere 字源 + -ence (名詞後綴) → 深深敬畏的心情"
+  },
+  {
+    "word": "reverent",
+    "pos": "adj.",
+    "meaning": "恭敬的、虔誠的",
+    "example": "She bowed her head in reverent silence before the memorial.",
+    "roots": "同 revere 字源 + -ent (形容詞後綴) → 懷著敬意的"
+  },
+  {
+    "word": "reverie",
+    "pos": "n.",
+    "meaning": "幻想、遐思",
+    "example": "He was pulled from his reverie by the sound of the phone ringing.",
+    "roots": "源自古法文 reverie（狂野、譫妄），源自 rever（做夢、遊蕩）→ 沉浸於幻想中忘卻現實"
+  },
+  {
+    "word": "revile",
+    "pos": "v.",
+    "meaning": "辱罵、痛斥",
+    "example": "The dictator was reviled by historians for his brutal policies.",
+    "roots": "re- (加強) + vil (低賤的，源自拉丁文 vilis) → 以卑劣之詞痛加辱罵"
+  },
+  {
+    "word": "revoke",
+    "pos": "v.",
+    "meaning": "撤銷、廢止",
+    "example": "Her driver's license was revoked after the third violation.",
+    "roots": "re- (回) + vocare (拉丁文，召喚) → 把先前給予的召回、撤銷"
+  },
+  {
+    "word": "revulsion",
+    "pos": "n.",
+    "meaning": "（強烈的）厭惡、反感",
+    "example": "She felt a wave of revulsion at the sight of the crime scene.",
+    "roots": "re- (向後) + vellere (拉丁文，拉扯) → 內心被猛然拉開、產生強烈排斥感"
+  },
+  {
+    "word": "rhapsodic",
+    "pos": "adj.",
+    "meaning": "狂喜的、熱情洋溢的",
+    "example": "Critics were rhapsodic about the young pianist's debut performance.",
+    "roots": "源自希臘文 rhapsoidia（吟遊史詩），rhaptein（縫合）+ oide（歌曲）→ 情感激昂、如史詩吟唱般熱烈的"
+  },
+  {
+    "word": "ribald",
+    "pos": "adj.",
+    "meaning": "粗俗下流的（笑話、言語）",
+    "example": "The sailors traded ribald jokes as they worked the deck.",
+    "roots": "源自古法文 ribaud（放蕩之人）→ 帶有粗俗、猥褻意味的"
+  },
+  {
+    "word": "rife",
+    "pos": "adj.",
+    "meaning": "盛行的、充斥的",
+    "example": "Rumors were rife throughout the office after the sudden resignation.",
+    "roots": "源自古英文 ryfe（普遍的、常見的）→ 廣泛流行、充斥各處的"
+  },
+  {
+    "word": "rigmarole",
+    "pos": "n.",
+    "meaning": "繁瑣冗長的程序、囉唆的話",
+    "example": "Getting a visa involved an exhausting rigmarole of paperwork and interviews.",
+    "roots": "源自中世紀英文 ragman roll（一種文字遊戲的紙卷清單）→ 演變為冗長瑣碎的無意義過程"
+  },
+  {
+    "word": "riotous",
+    "pos": "adj.",
+    "meaning": "喧鬧狂歡的、暴亂的",
+    "example": "The comedy show had the audience in riotous laughter all night.",
+    "roots": "riot (暴動、喧鬧) + -ous (形容詞後綴) → 充滿失控喧鬧氣氛的"
+  },
+  {
+    "word": "risible",
+    "pos": "adj.",
+    "meaning": "可笑的、荒謬的",
+    "example": "His excuse for being late was frankly risible.",
+    "roots": "源自拉丁文 risibilis，ridere（笑）→ 引人發笑、荒謬可笑的"
+  },
+  {
+    "word": "risque",
+    "pos": "adj.",
+    "meaning": "（言語、笑話）略帶猥褻的、大膽的",
+    "example": "The comedian's risque jokes made some audience members uncomfortable.",
+    "roots": "源自法文 risqué（冒險的），risquer（冒險）→ 遊走在得體邊緣、帶點冒犯風險的"
+  },
+  {
+    "word": "rococo",
+    "pos": "adj.",
+    "meaning": "洛可可風格的、過度繁複裝飾的",
+    "example": "The palace's rococo interior was covered in gilded scrollwork and pastel murals.",
+    "roots": "源自法文 rocaille（貝殼、假山裝飾）→ 十八世紀盛行的華麗繁複裝飾風格"
+  },
+  {
+    "word": "roil",
+    "pos": "v.",
+    "meaning": "使混濁、擾亂、激怒",
+    "example": "The scandal roiled the normally calm political establishment.",
+    "roots": "源自古法文 rouiller（生鏽、使混濁），源自拉丁文 robigo（鐵鏽）→ 攪動使原本平靜的變得混亂"
+  },
+  {
+    "word": "rollicking",
+    "pos": "adj.",
+    "meaning": "歡鬧的、興高采烈的",
+    "example": "The novel is a rollicking adventure story full of humor and mishap.",
+    "roots": "字源不完全確定，可能揉合 romp（嬉鬧）與 frolic（嬉戲）而成 → 形容歡快熱鬧、無拘無束的氣氛"
+  },
+  {
+    "word": "roseate",
+    "pos": "adj.",
+    "meaning": "玫瑰色的；過度樂觀的",
+    "example": "His roseate predictions for the economy proved wildly optimistic.",
+    "roots": "rose (玫瑰) + -ate (形容詞後綴，具...性質的) → 如玫瑰般粉紅美好，引申為過度美化、樂觀的"
+  },
+  {
+    "word": "rote",
+    "pos": "n.",
+    "meaning": "死記硬背、機械式記憶",
+    "example": "The students learned the multiplication tables by rote.",
+    "roots": "源自中世紀英文 rote，字源不確定，可能與拉丁文 rota（輪子）有關，暗示反覆循環的機械式重複"
+  },
+  {
+    "word": "rotund",
+    "pos": "adj.",
+    "meaning": "圓胖的；（聲音）渾厚洪亮的",
+    "example": "The rotund innkeeper greeted every guest with a hearty laugh.",
+    "roots": "源自拉丁文 rotundus（圓形的），rota（輪子）→ 形狀或聲音圓潤飽滿的"
+  },
+  {
+    "word": "rouse",
+    "pos": "v.",
+    "meaning": "喚醒、激起（情緒）",
+    "example": "The coach's speech was enough to rouse the team from their slump.",
+    "roots": "源自獵鷹術語，指鳥類抖動羽毛準備行動 → 引申為喚起、激發行動力"
+  },
+  {
+    "word": "rousing",
+    "pos": "adj.",
+    "meaning": "激動人心的、令人振奮的",
+    "example": "The general delivered a rousing speech before the final battle.",
+    "roots": "同 rouse 字源 + -ing (形容詞後綴) → 能有效喚起熱情鬥志的"
+  },
+  {
+    "word": "rout",
+    "pos": "n.",
+    "meaning": "潰敗、慘敗",
+    "example": "The home team suffered a humiliating rout, losing by forty points.",
+    "roots": "源自古法文 route（擊潰的軍隊，源自拉丁文 rupta，破碎的），rumpere（打破）→ 敵軍潰散崩潰的局面"
+  },
+  {
+    "word": "rove",
+    "pos": "v.",
+    "meaning": "漫遊、流浪",
+    "example": "As a young sailor, he roved from port to port with no fixed home.",
+    "roots": "源自中世紀英文 roven，可能與射箭術語（隨意瞄準）有關，後引申為四處漫遊"
+  },
+  {
+    "word": "rubric",
+    "pos": "n.",
+    "meaning": "（評分）準則、類別標題",
+    "example": "The essay was graded according to a detailed rubric covering clarity, evidence, and structure.",
+    "roots": "源自拉丁文 rubrica（紅色顏料，用於標示法律條文標題），ruber（紅色）→ 原指用紅字標出的規則標題，引申為分類準則"
+  },
+  {
+    "word": "rudimentary",
+    "pos": "adj.",
+    "meaning": "基本的、粗淺的、未發展完全的",
+    "example": "The clinic had only rudimentary medical equipment to treat the wounded.",
+    "roots": "rudi- (拉丁文 rudis，未加工的) + -mentary (形容詞後綴) → 尚處於未經雕琢的初步階段"
+  },
+  {
+    "word": "rueful",
+    "pos": "adj.",
+    "meaning": "懊悔的、自嘲的",
+    "example": "He gave a rueful smile when he realized he'd locked his keys in the car again.",
+    "roots": "源自古英文 hreow（悲傷、懊悔）+ -ful (充滿...的後綴) → 帶著懊悔情緒的"
+  },
+  {
+    "word": "ruffian",
+    "pos": "n.",
+    "meaning": "惡棍、暴徒",
+    "example": "A gang of ruffians harassed shopkeepers along the waterfront.",
+    "roots": "源自義大利文 ruffiano（皮條客、惡棍），常與 rough（粗暴）聯想 → 行為粗暴野蠻之人"
+  },
+  {
+    "word": "ruffle",
+    "pos": "v.",
+    "meaning": "弄亂、擾亂（平靜）",
+    "example": "The unexpected question seemed to ruffle even the composed spokesperson.",
+    "roots": "源自中世紀低地德文 ruffelen（起皺）→ 使原本平順的表面或心情產生波動"
+  },
+  {
+    "word": "ruinous",
+    "pos": "adj.",
+    "meaning": "招致毀滅的、災難性的",
+    "example": "The company's ruinous investment strategy led to its bankruptcy within a year.",
+    "roots": "ruin (毀滅、廢墟) + -ous (形容詞後綴) → 導致毀滅性後果的"
+  },
+  {
+    "word": "ruminate",
+    "pos": "v.",
+    "meaning": "沉思、反覆思考",
+    "example": "She spent the evening ruminating on the choices that had led her to this point.",
+    "roots": "源自拉丁文 ruminari（反芻），原指牛隻反芻咀嚼 → 引申為反覆咀嚼思考同一件事"
+  },
+  {
+    "word": "ruse",
+    "pos": "n.",
+    "meaning": "詭計、計謀",
+    "example": "The escape was merely a ruse to distract the guards.",
+    "roots": "源自古法文 ruse（詭計），ruser（躲避、耍花招）→ 用以欺瞞他人的手段"
+  },
+  {
+    "word": "rustic",
+    "pos": "adj.",
+    "meaning": "鄉村風格的、質樸的",
+    "example": "They chose a rustic barn as the venue for their wedding.",
+    "roots": "源自拉丁文 rusticus（鄉村的），rus（鄉間）→ 具有鄉村質樸風味的"
+  }
+]
