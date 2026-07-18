@@ -5,6 +5,9 @@ import {
   getHeatmap,
   incrementHeatmapToday,
   resetAllProgress,
+  getExcludedWords,
+  excludeWord,
+  restoreWord,
 } from '../src/lib/storage';
 
 beforeEach(async () => {
@@ -28,10 +31,36 @@ test('incrementHeatmapToday accumulates counts per date', async () => {
   expect(heat['2026-07-18']).toBe(2);
 });
 
-test('resetAllProgress clears both progress and heatmap', async () => {
+test('resetAllProgress clears progress, heatmap, and excluded words', async () => {
   await saveWordProgress('abate', { box: 2, nextReviewDate: '2026-07-20' });
   await incrementHeatmapToday('2026-07-18');
+  await excludeWord('abate');
   await resetAllProgress();
   expect(await getAllProgress()).toEqual({});
   expect(await getHeatmap()).toEqual({});
+  expect(await getExcludedWords()).toEqual([]);
+});
+
+test('getExcludedWords returns empty array when nothing saved', async () => {
+  expect(await getExcludedWords()).toEqual([]);
+});
+
+test('excludeWord adds a word so getExcludedWords includes it', async () => {
+  await excludeWord('abate');
+  expect(await getExcludedWords()).toEqual(['abate']);
+});
+
+test('excludeWord is idempotent and does not create duplicate entries', async () => {
+  await excludeWord('abate');
+  await excludeWord('abate');
+  expect(await getExcludedWords()).toEqual(['abate']);
+});
+
+test('restoreWord removes a previously excluded word', async () => {
+  await excludeWord('abate');
+  await excludeWord('cogent');
+  await restoreWord('abate');
+  const excluded = await getExcludedWords();
+  expect(excluded).not.toContain('abate');
+  expect(excluded).toContain('cogent');
 });

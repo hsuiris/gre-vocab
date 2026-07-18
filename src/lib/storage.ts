@@ -3,6 +3,7 @@ import { WordProgress } from './leitner';
 
 const PROGRESS_KEY = 'gre-vocab:progress';
 const HEATMAP_KEY = 'gre-vocab:heatmap';
+const EXCLUDED_KEY = 'gre-vocab:excluded';
 
 type ProgressMap = Record<string, WordProgress>;
 type HeatmapMap = Record<string, number>;
@@ -29,6 +30,27 @@ export async function incrementHeatmapToday(today: string): Promise<void> {
   await AsyncStorage.setItem(HEATMAP_KEY, JSON.stringify(map));
 }
 
+export async function getExcludedWords(): Promise<string[]> {
+  const raw = await AsyncStorage.getItem(EXCLUDED_KEY);
+  return raw ? JSON.parse(raw) : [];
+}
+
+export async function excludeWord(word: string): Promise<void> {
+  const excluded = await getExcludedWords();
+  if (!excluded.includes(word)) {
+    excluded.push(word);
+    await AsyncStorage.setItem(EXCLUDED_KEY, JSON.stringify(excluded));
+  }
+}
+
+export async function restoreWord(word: string): Promise<void> {
+  const excluded = await getExcludedWords();
+  const filtered = excluded.filter((w) => w !== word);
+  await AsyncStorage.setItem(EXCLUDED_KEY, JSON.stringify(filtered));
+}
+
 export async function resetAllProgress(): Promise<void> {
-  await AsyncStorage.multiRemove([PROGRESS_KEY, HEATMAP_KEY]);
+  // "reset all progress" means a fresh start end-to-end, so excluded words
+  // (a rotation preference, not Leitner state) are cleared too.
+  await AsyncStorage.multiRemove([PROGRESS_KEY, HEATMAP_KEY, EXCLUDED_KEY]);
 }
