@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
   },
   excludeBtn: { position: 'absolute', top: 8, right: 8 },
   excludeBtnText: { fontSize: 16 },
-  question: { fontSize: 26, fontWeight: '600', textAlign: 'center', paddingRight: 40 },
+  question: { fontSize: 26, fontWeight: '600', textAlign: 'center', paddingHorizontal: 40 },
   options: { width: 300, marginTop: 16, gap: 10 },
   option: {
     backgroundColor: '#fff',
