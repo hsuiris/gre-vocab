@@ -73,7 +73,7 @@ export function PracticeScreen({ route }: Props) {
   return (
     <View style={styles.container}>
       <Text style={styles.progress}>{index + 1} / {queue.length}</Text>
-      <MultipleChoiceCard entry={queue[index]} direction={direction} choices={choices} onResult={handleResult} />
+      <MultipleChoiceCard key={queue[index].word} entry={queue[index]} direction={direction} choices={choices} onResult={handleResult} />
     </View>
   );
 }
