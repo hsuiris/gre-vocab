@@ -47,6 +47,7 @@ export function MultipleChoiceCard({ entry, direction, choices, onResult, onExcl
   return (
     <View style={styles.container}>
       <View style={styles.card}>
+        <Text style={styles.question}>{question}</Text>
         <Pressable
           style={styles.excludeBtn}
           onPress={onExclude}
@@ -54,7 +55,6 @@ export function MultipleChoiceCard({ entry, direction, choices, onResult, onExcl
         >
           <Text style={styles.excludeBtnText}>🗑️</Text>
         </Pressable>
-        <Text style={styles.question}>{question}</Text>
       </View>
 
       <View style={styles.options}>
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
   },
   excludeBtn: { position: 'absolute', top: 8, right: 8 },
   excludeBtnText: { fontSize: 16 },
-  question: { fontSize: 26, fontWeight: '600', textAlign: 'center' },
+  question: { fontSize: 26, fontWeight: '600', textAlign: 'center', paddingRight: 40 },
   options: { width: 300, marginTop: 16, gap: 10 },
   option: {
     backgroundColor: '#fff',
