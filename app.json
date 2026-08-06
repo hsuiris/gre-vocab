@@ -1,13 +1,18 @@
 {
   "expo": {
-    "name": "gre-vocab",
+    "name": "GRE單字",
     "slug": "gre-vocab",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.xuyunqin.grevocab",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "用於讓你上傳或更換個人大頭貼。"
+      }
     },
     "android": {
       "adaptiveIcon": {

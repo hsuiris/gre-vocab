@@ -3,6 +3,7 @@ import { View, Text, Pressable, StyleSheet, FlatList } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import { words, WordEntry } from '../data/words';
 import { getExcludedWords, restoreWord } from '../lib/storage';
+import { colors } from '../theme';
 
 export function ExcludedScreen() {
   const [excluded, setExcluded] = useState<WordEntry[]>([]);
@@ -26,13 +27,18 @@ export function ExcludedScreen() {
 
   return (
     <View style={styles.container}>
+      <Text style={styles.eyebrow}>太簡單的字</Text>
       <Text style={styles.title}>回收桶</Text>
       {excluded.length === 0 ? (
-        <Text style={styles.empty}>目前沒有標記太簡單的字</Text>
+        <View style={styles.emptyCard}>
+          <Text style={styles.emptyTitle}>現在很乾淨</Text>
+          <Text style={styles.empty}>目前沒有標記太簡單的字</Text>
+        </View>
       ) : (
         <FlatList
           data={excluded}
           keyExtractor={(item) => item.word}
+          contentContainerStyle={styles.list}
           renderItem={({ item }) => (
             <View style={styles.row}>
               <View style={styles.rowText}>
@@ -51,20 +57,26 @@ export function ExcludedScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 20, paddingTop: 60 },
-  title: { fontSize: 22, fontWeight: '700', marginBottom: 16 },
-  empty: { color: '#555', marginTop: 24, textAlign: 'center' },
+  container: { flex: 1, backgroundColor: colors.page, padding: 20 },
+  eyebrow: { color: colors.green, fontSize: 14, fontWeight: '900' },
+  title: { color: colors.ink, fontSize: 32, fontWeight: '900', marginTop: 4, marginBottom: 16 },
+  emptyCard: { backgroundColor: colors.surface, borderRadius: 24, padding: 24, borderWidth: 1, borderColor: colors.line },
+  emptyTitle: { color: colors.ink, fontSize: 20, fontWeight: '900', textAlign: 'center' },
+  empty: { color: colors.muted, marginTop: 8, textAlign: 'center', fontWeight: '700' },
+  list: { gap: 10, paddingBottom: 24 },
   row: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingVertical: 12,
-    borderBottomWidth: 1,
-    borderBottomColor: '#eee',
+    backgroundColor: colors.surface,
+    padding: 16,
+    borderRadius: 22,
+    borderWidth: 1,
+    borderColor: colors.line,
   },
   rowText: { flex: 1, marginRight: 12 },
-  word: { fontSize: 16, fontWeight: '600' },
-  meaning: { color: '#555', marginTop: 2 },
-  restoreButton: { backgroundColor: '#3949ab', paddingVertical: 8, paddingHorizontal: 16, borderRadius: 8 },
-  restoreText: { color: '#fff', fontWeight: '600' },
+  word: { color: colors.ink, fontSize: 17, fontWeight: '900' },
+  meaning: { color: colors.muted, marginTop: 4, fontWeight: '700' },
+  restoreButton: { backgroundColor: colors.blueSoft, paddingVertical: 10, paddingHorizontal: 16, borderRadius: 16 },
+  restoreText: { color: colors.blue, fontWeight: '900' },
 });

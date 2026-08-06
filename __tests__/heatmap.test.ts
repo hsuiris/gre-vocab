@@ -1,7 +1,7 @@
 import { colorForCount } from '../src/components/Heatmap';
 
 test('zero count is the empty color', () => {
-  expect(colorForCount(0)).toBe('#ebedf0');
+  expect(colorForCount(0)).toBe('#d9e9ec');
 });
 
 test('higher counts map to darker greens', () => {

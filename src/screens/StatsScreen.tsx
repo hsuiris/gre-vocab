@@ -5,6 +5,7 @@ import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/RootNavigator';
 import { words } from '../data/words';
 import { getAllProgress, resetAllProgress, getExcludedWords } from '../lib/storage';
+import { colors } from '../theme';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Stats'>;
 
@@ -52,14 +53,34 @@ export function StatsScreen({ navigation }: Props) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>統計</Text>
-      <Text>尚未開始：{newCount} 字</Text>
-      {boxCounts.map((count, i) => (
-        <Text key={i}>盒子 {i + 1}：{count} 字</Text>
-      ))}
-      <Pressable style={styles.linkButton} onPress={() => navigation.navigate('Excluded')}>
-        <Text style={styles.linkText}>已標記太簡單：{excludedCount} 字</Text>
+      <Text style={styles.eyebrow}>複習狀態</Text>
+      <Text style={styles.title}>你的單字庫</Text>
+
+      <View style={styles.summary}>
+        <Text style={styles.summaryCount}>{newCount}</Text>
+        <Text style={styles.summaryLabel}>尚未開始的字</Text>
+      </View>
+
+      <View style={styles.list}>
+        {boxCounts.map((count, i) => (
+          <Pressable key={i} style={styles.row} onPress={() => navigation.navigate('BoxWords', { box: i + 1 })}>
+            <View>
+              <Text style={styles.rowTitle}>盒子 {i + 1}</Text>
+              <Text style={styles.rowMeta}>{[1, 2, 4, 7, 14][i]} 天後再見</Text>
+            </View>
+            <Text style={styles.rowCount}>{count}</Text>
+          </Pressable>
+        ))}
+      </View>
+
+      <Pressable style={styles.linkCard} onPress={() => navigation.navigate('Excluded')}>
+        <View>
+          <Text style={styles.rowTitle}>已標記太簡單</Text>
+          <Text style={styles.rowMeta}>暫時不排進複習</Text>
+        </View>
+        <Text style={styles.rowCount}>{excludedCount}</Text>
       </Pressable>
+
       <Pressable style={styles.resetButton} onPress={handleReset}>
         <Text style={styles.resetText}>重置所有進度</Text>
       </Pressable>
@@ -68,10 +89,36 @@ export function StatsScreen({ navigation }: Props) {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 20, paddingTop: 60 },
-  title: { fontSize: 22, fontWeight: '700', marginBottom: 16 },
-  linkButton: { marginTop: 16, alignItems: 'center' },
-  linkText: { color: '#3949ab' },
-  resetButton: { marginTop: 24, backgroundColor: '#c62828', padding: 12, borderRadius: 8, alignItems: 'center' },
-  resetText: { color: '#fff', fontWeight: '600' },
+  container: { flex: 1, backgroundColor: colors.page, padding: 20, gap: 14 },
+  eyebrow: { color: colors.green, fontSize: 14, fontWeight: '900' },
+  title: { color: colors.ink, fontSize: 32, fontWeight: '900', marginBottom: 4 },
+  summary: { backgroundColor: colors.tint, borderRadius: 28, padding: 24 },
+  summaryCount: { color: colors.ink, fontSize: 48, fontWeight: '900' },
+  summaryLabel: { color: colors.muted, fontSize: 16, fontWeight: '800', marginTop: 4 },
+  list: { backgroundColor: colors.surface, borderRadius: 24, borderWidth: 1, borderColor: colors.line, overflow: 'hidden' },
+  row: {
+    minHeight: 72,
+    paddingHorizontal: 18,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    borderBottomWidth: 1,
+    borderBottomColor: colors.line,
+  },
+  rowTitle: { color: colors.ink, fontSize: 16, fontWeight: '900' },
+  rowMeta: { color: colors.muted, fontSize: 13, fontWeight: '700', marginTop: 4 },
+  rowCount: { color: colors.blue, fontSize: 24, fontWeight: '900' },
+  linkCard: {
+    backgroundColor: colors.surface,
+    borderRadius: 24,
+    borderWidth: 1,
+    borderColor: colors.line,
+    minHeight: 76,
+    paddingHorizontal: 18,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  resetButton: { marginTop: 8, backgroundColor: colors.redSoft, padding: 15, borderRadius: 22, alignItems: 'center' },
+  resetText: { color: colors.red, fontWeight: '900' },
 });

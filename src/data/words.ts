@@ -5,6 +5,7 @@ export type WordEntry = {
   pos: string;
   meaning: string;
   example: string;
+  exampleZh?: string;
   roots: string;
 };
 

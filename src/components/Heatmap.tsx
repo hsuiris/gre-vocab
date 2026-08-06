@@ -1,14 +1,15 @@
 import React from 'react';
 import { View, ScrollView, StyleSheet } from 'react-native';
+import { colors } from '../theme';
 
 type Props = { heatmap: Record<string, number>; weeks?: number };
 
 export function colorForCount(count: number): string {
-  if (count === 0) return '#ebedf0';
-  if (count < 5) return '#c6e48b';
-  if (count < 15) return '#7bc96f';
-  if (count < 30) return '#239a3b';
-  return '#196127';
+  if (count === 0) return '#d9e9ec';
+  if (count < 5) return '#bdeee2';
+  if (count < 15) return '#66d9bd';
+  if (count < 30) return colors.green;
+  return '#08765a';
 }
 
 function toDateStr(d: Date): string {
@@ -49,6 +50,6 @@ export function Heatmap({ heatmap, weeks = 16 }: Props) {
 const styles = StyleSheet.create({
   scroll: { marginVertical: 12 },
   grid: { flexDirection: 'row' },
-  column: { marginRight: 3 },
-  cell: { width: 12, height: 12, borderRadius: 2, marginBottom: 3 },
+  column: { marginRight: 4 },
+  cell: { width: 13, height: 13, borderRadius: 4, marginBottom: 4 },
 });
