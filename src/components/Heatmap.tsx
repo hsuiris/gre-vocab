@@ -4,12 +4,14 @@ import { colors } from '../theme';
 
 type Props = { heatmap: Record<string, number>; weeks?: number };
 
+// A macaron ramp in the page's own pink, deepening with the day's count. Each
+// step must be darker than the last or the heatmap stops reading as a scale.
 export function colorForCount(count: number): string {
-  if (count === 0) return '#d9e9ec';
-  if (count < 5) return '#bdeee2';
-  if (count < 15) return '#66d9bd';
-  if (count < 30) return colors.green;
-  return '#08765a';
+  if (count === 0) return '#f7e9ed';
+  if (count < 5) return colors.pink;
+  if (count < 15) return '#f0aec1';
+  if (count < 30) return '#e08aa4';
+  return '#c56283';
 }
 
 function toDateStr(d: Date): string {

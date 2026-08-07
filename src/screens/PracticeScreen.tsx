@@ -298,7 +298,7 @@ const styles = StyleSheet.create({
   topRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
   progress: { color: colors.muted, fontWeight: '900', fontSize: 15 },
   track: { height: 8, borderRadius: 4, backgroundColor: colors.line, overflow: 'hidden' },
-  fill: { height: 8, borderRadius: 4, backgroundColor: colors.green },
+  fill: { height: 8, borderRadius: 4, backgroundColor: colors.blueInk },
   panelButton: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -312,7 +312,7 @@ const styles = StyleSheet.create({
   },
   panelButtonText: { color: colors.ink, fontWeight: '900', fontSize: 13 },
   panelBadge: {
-    color: colors.surface,
+    color: colors.redInk,
     backgroundColor: colors.red,
     fontSize: 11,
     fontWeight: '900',
@@ -350,5 +350,5 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
     paddingHorizontal: 26,
   },
-  donePanelButtonText: { color: colors.surface, fontWeight: '900', fontSize: 16 },
+  donePanelButtonText: { color: colors.blueInk, fontWeight: '900', fontSize: 16 },
 });

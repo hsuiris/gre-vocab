@@ -1,8 +1,8 @@
-import { colors } from '../src/theme';
+import { colors, slabEdge } from '../src/theme';
 
-// A low-saturation palette is one bad hex away from unreadable, and nothing in
-// a render test would catch it. These are the pairs the screens actually put
-// together; every one must clear WCAG AA for normal text.
+// A pastel palette is one bad hex away from unreadable, and nothing in a render
+// test would catch it. These are the pairs the screens actually put together;
+// every one must clear WCAG AA for normal text.
 const AA = 4.5; // WCAG AA for normal text
 const AA_UI = 3.0; // WCAG AA for a control's own shape, which carries no text
 
@@ -21,43 +21,53 @@ function contrast(a: string, b: string): number {
   return (light + 0.05) / (dark + 0.05);
 }
 
-const PAIRS: [keyof typeof colors, keyof typeof colors][] = [
+type Token = keyof typeof colors;
+
+// Body text and headings, wherever they land.
+const NEUTRAL: [Token, Token][] = [
   ['ink', 'page'],
   ['ink', 'surface'],
   ['ink', 'tint'],
-  ['muted', 'surface'],
   ['muted', 'page'],
+  ['muted', 'surface'],
   ['muted', 'tint'],
-  ['surface', 'blue'],
-  ['surface', 'red'],
-  ['surface', 'green'],
-  ['blue', 'surface'],
-  ['blue', 'blueSoft'],
-  ['blue', 'tint'],
-  ['red', 'redSoft'],
-  ['red', 'surface'],
-  ['yellowInk', 'surface'],
-  ['yellowInk', 'page'],
-  ['surface', 'yellowInk'], // the only yellow that may sit behind text
 ];
 
+// Each pastel carries its own ink; nothing here is lettered in white, because
+// at this lightness white text washes out.
+const HUES = ['pink', 'blue', 'yellow', 'green', 'red'] as const;
+
 describe('palette contrast', () => {
-  it.each(PAIRS)('%s on %s clears AA', (fg, bg) => {
+  it.each(NEUTRAL)('%s on %s clears AA', (fg, bg) => {
     expect(contrast(colors[fg], colors[bg])).toBeGreaterThanOrEqual(AA);
   });
 
-  // greenSoft is only ever a switch track, so it holds no text — the bar is
-  // the one for a control's own shape. Putting green text on it would need a
-  // greenSoft indistinguishable from white, since green sits right at the AA
-  // line against white already.
-  it('the green switch thumb stays visible on its track', () => {
-    expect(contrast(colors.green, colors.greenSoft)).toBeGreaterThanOrEqual(AA_UI);
+  it.each(HUES)('%sInk is readable on its own pastel, on white and on the page', (hue) => {
+    const ink = colors[`${hue}Ink` as Token];
+    expect(contrast(ink, colors[hue])).toBeGreaterThanOrEqual(AA);
+    expect(contrast(ink, colors.surface)).toBeGreaterThanOrEqual(AA);
+    expect(contrast(ink, colors.page)).toBeGreaterThanOrEqual(AA);
   });
 
-  // Bright yellow is unreadable under white text and too close to the page
-  // under dark text, which is why nothing fills a surface with it. If a future
-  // edit reaches for `colors.yellow` as a background, this is the reminder.
-  it('bright yellow is unusable as a surface, in either direction', () => {
-    expect(contrast(colors.surface, colors.yellow)).toBeLessThan(AA);
+  it.each(HUES)('body ink still reads on a %s fill', (hue) => {
+    expect(contrast(colors.ink, colors[hue])).toBeGreaterThanOrEqual(AA);
+  });
+
+  // The lip is what makes a button look pressable. Too close to its own fill
+  // and the slab flattens into a plain rectangle.
+  it.each(HUES)('the %s slab lip is distinguishable from its fill', (hue) => {
+    expect(contrast(colors[hue], slabEdge[hue])).toBeGreaterThanOrEqual(1.2);
+  });
+
+  // White text is the failure mode this palette is built to avoid. If a future
+  // edit letters a pastel button in white, this is the reminder why not.
+  it.each(HUES)('white text on a %s fill would fail, which is why none exists', (hue) => {
+    expect(contrast(colors.surface, colors[hue])).toBeLessThan(AA);
+  });
+
+  // greenSoft is gone; the switch track is the pastel itself. It holds no text,
+  // so the bar is the one for a control's own shape.
+  it('the green switch thumb stays visible on its track', () => {
+    expect(contrast(colors.greenInk, colors.green)).toBeGreaterThanOrEqual(AA_UI);
   });
 });

@@ -60,7 +60,7 @@ export function ExcludedScreen() {
 
 const styles = StyleSheet.create({
   container: { ...centered, flex: 1, backgroundColor: colors.page, padding: 20 },
-  eyebrow: { color: colors.blue, fontSize: 14, fontWeight: '900' },
+  eyebrow: { color: colors.blueInk, fontSize: 14, fontWeight: '900' },
   title: { color: colors.ink, fontSize: 32, fontWeight: '900', marginTop: 4, marginBottom: 16 },
   emptyCard: {
     backgroundColor: colors.surface,
@@ -86,6 +86,6 @@ const styles = StyleSheet.create({
   rowText: { flex: 1, marginRight: 12 },
   word: { color: colors.ink, fontSize: 17, fontWeight: '900' },
   meaning: { color: colors.muted, marginTop: 4, fontWeight: '700' },
-  restoreButton: { backgroundColor: colors.blueSoft, paddingVertical: 10, paddingHorizontal: 16, borderRadius: 16 },
-  restoreText: { color: colors.blue, fontWeight: '900' },
+  restoreButton: { backgroundColor: colors.blue, paddingVertical: 10, paddingHorizontal: 16, borderRadius: 16 },
+  restoreText: { color: colors.blueInk, fontWeight: '900' },
 });

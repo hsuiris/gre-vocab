@@ -507,7 +507,7 @@ function SettingSwitch({ title, meta, value, onValueChange }: SwitchProps) {
       <Switch
         value={value}
         onValueChange={onValueChange}
-        trackColor={{ false: colors.line, true: colors.greenSoft }}
+        trackColor={{ false: colors.line, true: colors.green }}
         thumbColor={value ? colors.green : colors.surface}
       />
     </View>
@@ -535,7 +535,7 @@ function SettingLink({ title, meta, onPress }: LinkProps) {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.page },
   content: { ...centered, padding: 20, paddingBottom: 40, gap: 16 },
-  eyebrow: { color: colors.blue, fontSize: 14, fontWeight: '900' },
+  eyebrow: { color: colors.blueInk, fontSize: 14, fontWeight: '900' },
   accountCard: {
     backgroundColor: colors.surface,
     borderRadius: 24,
@@ -554,7 +554,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginRight: 14,
   },
-  avatarText: { color: colors.blue, fontSize: 26, fontWeight: '900' },
+  avatarText: { color: colors.blueInk, fontSize: 26, fontWeight: '900' },
   avatarImage: { width: 54, height: 54, borderRadius: 27 },
   accountText: { flex: 1 },
   accountName: { color: colors.ink, fontSize: 18, fontWeight: '900' },
@@ -569,8 +569,8 @@ const styles = StyleSheet.create({
   },
   pencilIcon: { width: 23, height: 23, resizeMode: 'contain' },
   voiceHint: { color: colors.muted, fontSize: 13, fontWeight: '700', lineHeight: 19, padding: 18, paddingBottom: 4 },
-  voiceCheck: { color: colors.green, fontSize: 18, fontWeight: '900' },
-  voicePlay: { color: colors.blue, fontSize: 14, fontWeight: '900' },
+  voiceCheck: { color: colors.greenInk, fontSize: 18, fontWeight: '900' },
+  voicePlay: { color: colors.blueInk, fontSize: 14, fontWeight: '900' },
   sectionTitle: { color: colors.muted, fontSize: 13, fontWeight: '900', marginBottom: 8, marginLeft: 4 },
   panel: { backgroundColor: colors.surface, borderRadius: 24, borderWidth: 1, borderColor: colors.line, overflow: 'hidden' },
   goalBox: { padding: 18, gap: 14 },
@@ -601,9 +601,9 @@ const styles = StyleSheet.create({
   unitPill: { minWidth: 38, borderRadius: 11, alignItems: 'center', justifyContent: 'center' },
   unitPillActive: { backgroundColor: colors.blue },
   unitText: { color: colors.muted, fontWeight: '900' },
-  unitTextActive: { color: colors.surface },
-  goalPreview: { backgroundColor: colors.blueSoft, borderRadius: 18, paddingHorizontal: 14, paddingVertical: 12 },
-  goalPreviewText: { color: colors.blue, fontSize: 15, fontWeight: '900' },
+  unitTextActive: { color: colors.blueInk },
+  goalPreview: { backgroundColor: colors.blue, borderRadius: 18, paddingHorizontal: 14, paddingVertical: 12 },
+  goalPreviewText: { color: colors.blueInk, fontSize: 15, fontWeight: '900' },
   row: {
     minHeight: 84,
     paddingHorizontal: 18,
@@ -619,8 +619,8 @@ const styles = StyleSheet.create({
   rowMeta: { color: colors.muted, fontSize: 13, lineHeight: 18, fontWeight: '700', marginTop: 6 },
   chevron: { color: colors.muted, fontSize: 30, fontWeight: '300' },
   version: { color: colors.muted, fontSize: 14, fontWeight: '900' },
-  error: { color: colors.red, fontWeight: '900', lineHeight: 20 },
-  success: { color: colors.green, fontWeight: '900', lineHeight: 20 },
+  error: { color: colors.redInk, fontWeight: '900', lineHeight: 20 },
+  success: { color: colors.greenInk, fontWeight: '900', lineHeight: 20 },
   changesCard: {
     backgroundColor: colors.surface,
     borderRadius: 24,
@@ -632,16 +632,16 @@ const styles = StyleSheet.create({
   changesTitle: { color: colors.ink, fontSize: 16, fontWeight: '900' },
   changeItem: { color: colors.muted, fontSize: 13, fontWeight: '700', lineHeight: 19 },
   actions: { flexDirection: 'row', gap: 10, marginTop: 8 },
-  cancelButton: { flex: 1, backgroundColor: colors.redSoft, borderRadius: 18, paddingVertical: 13, alignItems: 'center' },
-  cancelText: { color: colors.red, fontWeight: '900' },
+  cancelButton: { flex: 1, backgroundColor: colors.red, borderRadius: 18, paddingVertical: 13, alignItems: 'center' },
+  cancelText: { color: colors.redInk, fontWeight: '900' },
   saveButton: { flex: 1, backgroundColor: colors.blue, borderRadius: 18, paddingVertical: 13, alignItems: 'center' },
-  saveText: { color: colors.surface, fontWeight: '900' },
+  saveText: { color: colors.blueInk, fontWeight: '900' },
   modalContainer: { flex: 1, backgroundColor: colors.page },
   modalContent: { padding: 20, paddingBottom: 40, gap: 16 },
   modalHeader: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
   modalTitle: { color: colors.ink, fontSize: 22, fontWeight: '900' },
   doneButton: { backgroundColor: colors.blue, borderRadius: 18, paddingHorizontal: 16, paddingVertical: 10 },
-  doneText: { color: colors.surface, fontWeight: '900' },
+  doneText: { color: colors.blueInk, fontWeight: '900' },
   avatarEditor: {
     backgroundColor: colors.surface,
     borderRadius: 24,
@@ -657,13 +657,13 @@ const styles = StyleSheet.create({
     height: 96,
     borderRadius: 48,
     backgroundColor: colors.tint,
-    color: colors.blue,
+    color: colors.blueInk,
     fontSize: 42,
     fontWeight: '900',
     textAlign: 'center',
     lineHeight: 96,
   },
-  avatarEditorMeta: { color: colors.blue, fontSize: 14, fontWeight: '900' },
+  avatarEditorMeta: { color: colors.blueInk, fontSize: 14, fontWeight: '900' },
   field: {
     backgroundColor: colors.surface,
     borderRadius: 24,
@@ -693,8 +693,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
-  googleButton: { backgroundColor: colors.blueSoft, borderRadius: 18, paddingHorizontal: 16, paddingVertical: 10 },
-  googleButtonActive: { backgroundColor: colors.blueSoft },
-  googleButtonText: { color: colors.blue, fontWeight: '900' },
-  googleButtonTextActive: { color: colors.blue },
+  googleButton: { backgroundColor: colors.blue, borderRadius: 18, paddingHorizontal: 16, paddingVertical: 10 },
+  googleButtonActive: { backgroundColor: colors.blue },
+  googleButtonText: { color: colors.blueInk, fontWeight: '900' },
+  googleButtonTextActive: { color: colors.blueInk },
 });

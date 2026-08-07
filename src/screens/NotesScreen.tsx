@@ -103,7 +103,7 @@ export function NotesScreen() {
 
 const styles = StyleSheet.create({
   container: { ...centered, flex: 1, backgroundColor: colors.page, padding: 20 },
-  eyebrow: { color: colors.blue, fontSize: 14, fontWeight: '900' },
+  eyebrow: { color: colors.blueInk, fontSize: 14, fontWeight: '900' },
   title: { color: colors.ink, fontSize: 32, fontWeight: '900', marginTop: 4, marginBottom: 16 },
   emptyCard: {
     backgroundColor: colors.surface,
@@ -120,8 +120,8 @@ const styles = StyleSheet.create({
   rowHead: { flexDirection: 'row', alignItems: 'center', gap: 10 },
   date: { color: colors.ink, fontSize: 17, fontWeight: '900' },
   mode: {
-    color: colors.blue,
-    backgroundColor: colors.blueSoft,
+    color: colors.blueInk,
+    backgroundColor: colors.blue,
     fontSize: 12,
     fontWeight: '900',
     borderRadius: 10,
@@ -150,13 +150,13 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     alignItems: 'center',
   },
-  saveText: { color: colors.surface, fontWeight: '900' },
+  saveText: { color: colors.blueInk, fontWeight: '900' },
   deleteBtn: {
     ...slab(slabEdge.line),
-    backgroundColor: colors.redSoft,
+    backgroundColor: colors.red,
     borderRadius: 16,
     paddingVertical: 12,
     paddingHorizontal: 20,
   },
-  deleteText: { color: colors.red, fontWeight: '900' },
+  deleteText: { color: colors.redInk, fontWeight: '900' },
 });

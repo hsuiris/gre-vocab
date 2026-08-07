@@ -107,8 +107,8 @@ const styles = StyleSheet.create({
   wordText: { flex: 1, paddingRight: 12 },
   word: { color: colors.ink, fontSize: 18, fontWeight: '900' },
   meaning: { color: colors.muted, fontSize: 14, lineHeight: 20, fontWeight: '700', marginTop: 4 },
-  deleteButton: { backgroundColor: colors.redSoft, borderRadius: 16, paddingHorizontal: 12, paddingVertical: 9 },
-  deleteText: { color: colors.red, fontWeight: '900' },
+  deleteButton: { backgroundColor: colors.red, borderRadius: 16, paddingHorizontal: 12, paddingVertical: 9 },
+  deleteText: { color: colors.redInk, fontWeight: '900' },
   boxes: { flexDirection: 'row', gap: 8, marginTop: 14 },
   boxButton: {
     flex: 1,
@@ -120,5 +120,5 @@ const styles = StyleSheet.create({
   },
   boxButtonActive: { backgroundColor: colors.blue },
   boxButtonText: { color: colors.muted, fontWeight: '900' },
-  boxButtonTextActive: { color: colors.surface },
+  boxButtonTextActive: { color: colors.blueInk },
 });

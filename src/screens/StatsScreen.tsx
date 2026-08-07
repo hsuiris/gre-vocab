@@ -90,7 +90,7 @@ export function StatsScreen({ navigation }: Props) {
 
 const styles = StyleSheet.create({
   container: { ...centered, flex: 1, backgroundColor: colors.page, padding: 20, gap: 14 },
-  eyebrow: { color: colors.blue, fontSize: 14, fontWeight: '900' },
+  eyebrow: { color: colors.blueInk, fontSize: 14, fontWeight: '900' },
   title: { color: colors.ink, fontSize: 32, fontWeight: '900', marginBottom: 4 },
   summary: { backgroundColor: colors.tint, borderRadius: 28, padding: 24 },
   summaryCount: { color: colors.ink, fontSize: 48, fontWeight: '900' },
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
   },
   rowTitle: { color: colors.ink, fontSize: 16, fontWeight: '900' },
   rowMeta: { color: colors.muted, fontSize: 13, fontWeight: '700', marginTop: 4 },
-  rowCount: { color: colors.blue, fontSize: 24, fontWeight: '900' },
+  rowCount: { color: colors.blueInk, fontSize: 24, fontWeight: '900' },
   linkCard: {
     backgroundColor: colors.surface,
     borderRadius: 24,
@@ -119,6 +119,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
   },
-  resetButton: { marginTop: 8, backgroundColor: colors.redSoft, padding: 15, borderRadius: 22, alignItems: 'center' },
-  resetText: { color: colors.red, fontWeight: '900' },
+  resetButton: { marginTop: 8, backgroundColor: colors.red, padding: 15, borderRadius: 22, alignItems: 'center' },
+  resetText: { color: colors.redInk, fontWeight: '900' },
 });

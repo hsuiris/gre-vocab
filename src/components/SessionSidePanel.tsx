@@ -100,8 +100,8 @@ const styles = StyleSheet.create({
   headerTitle: { color: colors.ink, fontSize: 17, fontWeight: '900' },
   headerHint: { color: colors.muted, fontSize: 12, fontWeight: '700' },
   count: {
-    color: colors.red,
-    backgroundColor: colors.redSoft,
+    color: colors.redInk,
+    backgroundColor: colors.red,
     fontWeight: '900',
     fontSize: 13,
     minWidth: 28,
@@ -117,8 +117,8 @@ const styles = StyleSheet.create({
   row: { backgroundColor: colors.page, borderRadius: 18, padding: 13 },
   rowHead: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   badgeWrong: {
-    color: colors.red,
-    backgroundColor: colors.redSoft,
+    color: colors.redInk,
+    backgroundColor: colors.red,
     fontWeight: '900',
     fontSize: 11,
     borderRadius: 9,
@@ -160,6 +160,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   saveBtnOff: { backgroundColor: colors.page, borderBottomColor: slabEdge.line },
-  saveText: { color: colors.surface, fontWeight: '900', fontSize: 15 },
+  saveText: { color: colors.blueInk, fontWeight: '900', fontSize: 15 },
   saveTextOff: { color: colors.muted },
 });

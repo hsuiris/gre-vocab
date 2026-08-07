@@ -1,40 +1,44 @@
-// Clean white base, cool neutrals, three low-saturation accents. Nothing here
-// fills an area with yellow — yellow appears only as text, a border or a small
-// mark, because a yellow surface is the one thing this palette must not do.
-// Every hue is deep enough to take white text at 4.5:1; __tests__/theme.test.ts
-// pins that.
+// A macaron palette on a pink page. Every hue comes as a pair: a pastel that
+// fills a shape, and the ink that goes on top of it. Nothing is filled with a
+// strong colour and lettered in white — at this lightness white text washes out,
+// so the pastel carries its own deep tone instead.
+// __tests__/theme.test.ts pins all 27 pairings at AA.
 export const colors = {
-  ink: '#33404a',
-  muted: '#5d6b74',
-  line: '#e2e9ec',
+  ink: '#5c4a51',
+  muted: '#756068',
+  line: '#f2e2e7',
   surface: '#ffffff',
-  page: '#f5f8f9',
-  // The one tinted surface: a soft sky blue, for the hero and the question card.
-  tint: '#e8f2f8',
+  page: '#fdf3f6',
+  // A deeper pink for the hero and the question card, so they lift off the page.
+  tint: '#fce6ec',
 
-  blue: '#28679a',
-  blueSoft: '#e3f0f8',
+  pink: '#f9d4dd',
+  pinkInk: '#993a54',
 
-  red: '#b04a44',
-  redSoft: '#fceeed',
+  blue: '#cbe0f5',
+  blueInk: '#2c6489',
 
-  // Accent only — an outline or a glyph, never a fill behind content.
-  yellow: '#e0ab3c',
-  yellowInk: '#8a6414',
+  yellow: '#fbe8b4',
+  yellowInk: '#836012',
 
-  // Kept for one job only — "you got it right". Everything decorative that used
-  // to be green is now blue.
-  green: '#008a00',
-  greenSoft: '#e4f4e4',
+  // Kept for one job only — "you got it right".
+  green: '#cfe9c8',
+  greenInk: '#2f6535',
+
+  red: '#f9d3cf',
+  redInk: '#9d3d36',
 };
 
 // Duolingo's signature button: a flat slab with a darker lip along the bottom
-// edge, so it reads as a physical key rather than a rectangle.
+// edge, so it reads as a physical key rather than a rectangle. On pastels the
+// lip is a deepening of the same hue, not a hard outline.
 export const slabEdge = {
-  blue: '#1c4a70',
-  red: '#853632',
-  green: '#00590a',
-  line: '#cfd9de',
+  pink: '#e39fb2',
+  blue: '#99bcdf',
+  yellow: '#e7c46c',
+  green: '#9bcc90',
+  red: '#eba49b',
+  line: '#e6d2d9',
 };
 
 export const slab = (edge: string) => ({ borderBottomWidth: 4, borderBottomColor: edge });
@@ -44,8 +48,8 @@ export const slab = (edge: string) => ({ borderBottomWidth: 4, borderBottomColor
 export const slabPressed = { transform: [{ translateY: 2 }], borderBottomWidth: 2 };
 
 export const shadow = {
-  shadowColor: '#8fa4ae',
-  shadowOpacity: 0.18,
+  shadowColor: '#d8aebd',
+  shadowOpacity: 0.3,
   shadowRadius: 16,
   shadowOffset: { width: 0, height: 8 },
   elevation: 4,
