@@ -5,7 +5,7 @@ import { WordEntry } from '../data/words';
 import { getRelation } from '../data/relations';
 import type { AppSettings } from '../lib/storage';
 import { speakWord } from '../lib/speech';
-import { colors } from '../theme';
+import { colors, slab, slabEdge } from '../theme';
 
 type Props = {
   entry: WordEntry;
@@ -276,15 +276,15 @@ const styles = StyleSheet.create({
   },
   excludeBtnText: { color: colors.red, fontSize: 12, fontWeight: '900' },
   unsureBtn: {
-    backgroundColor: colors.orangeSoft,
+    backgroundColor: colors.yellowSoft,
     borderRadius: 14,
     paddingHorizontal: 10,
     paddingVertical: 7,
   },
-  unsureBtnOn: { backgroundColor: colors.orange },
-  unsureBtnText: { color: colors.orange, fontSize: 12, fontWeight: '900' },
-  unsureBtnTextOn: { color: colors.surface },
-  modeLabel: { color: colors.green, fontSize: 13, fontWeight: '900', marginBottom: 10 },
+  unsureBtnOn: { backgroundColor: colors.yellow },
+  unsureBtnText: { color: colors.yellowInk, fontSize: 12, fontWeight: '900' },
+  unsureBtnTextOn: { color: colors.ink },
+  modeLabel: { color: colors.blue, fontSize: 13, fontWeight: '900', marginBottom: 10 },
   question: { color: colors.ink, fontSize: 26, fontWeight: '900', textAlign: 'center', paddingHorizontal: 34 },
   cloze: { color: colors.ink, fontSize: 20, fontWeight: '800', lineHeight: 28, textAlign: 'center' },
   options: { width: '100%', maxWidth: 760, marginTop: 16, gap: 10 },
@@ -292,12 +292,13 @@ const styles = StyleSheet.create({
     backgroundColor: colors.page,
     borderWidth: 1,
     borderColor: colors.line,
+    ...slab(slabEdge.line),
     borderRadius: 20,
     paddingVertical: 15,
     paddingHorizontal: 18,
   },
-  optionCorrect: { backgroundColor: colors.green, borderColor: colors.green },
-  optionWrong: { backgroundColor: colors.red, borderColor: colors.red },
+  optionCorrect: { backgroundColor: colors.green, borderColor: colors.green, ...slab(slabEdge.green) },
+  optionWrong: { backgroundColor: colors.red, borderColor: colors.red, ...slab(slabEdge.red) },
   // Was 0.5, but the unpicked options now carry example sentences worth reading.
   optionDisabled: { opacity: 0.8 },
   optionText: { fontSize: 16, color: colors.ink, fontWeight: '700', textAlign: 'center' },
@@ -317,7 +318,7 @@ const styles = StyleSheet.create({
   },
   optionSoundIcon: { width: 15, height: 15 },
   optionSoundText: { color: colors.blue, fontSize: 13, fontWeight: '900' },
-  optionPos: { color: colors.green, fontSize: 12, fontWeight: '900' },
+  optionPos: { color: colors.yellowInk, fontSize: 12, fontWeight: '900' },
   optionPosFeedback: { color: colors.surface, fontSize: 12, fontWeight: '900' },
   optionExample: { color: colors.ink, fontSize: 13, lineHeight: 19, textAlign: 'center', marginTop: 8, fontStyle: 'italic' },
   optionExampleFeedback: {
@@ -329,6 +330,7 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
   },
   nextBtn: {
+    ...slab(slabEdge.blue),
     marginTop: 18,
     backgroundColor: colors.blue,
     paddingVertical: 14,
@@ -348,7 +350,13 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: '800',
   },
-  submitBtn: { backgroundColor: colors.blue, borderRadius: 20, paddingVertical: 14, alignItems: 'center' },
+  submitBtn: {
+    ...slab(slabEdge.blue),
+    backgroundColor: colors.blue,
+    borderRadius: 20,
+    paddingVertical: 14,
+    alignItems: 'center',
+  },
   submitText: { color: colors.surface, fontWeight: '900' },
   correctText: { color: colors.green, fontWeight: '900', textAlign: 'center', fontSize: 16 },
   wrongText: { color: colors.red, fontWeight: '900', textAlign: 'center', fontSize: 16 },
@@ -365,6 +373,6 @@ const styles = StyleSheet.create({
   },
   detailLabel: { color: colors.ink, fontWeight: '900', marginTop: 10 },
   detailText: { color: colors.muted, lineHeight: 21, marginTop: 4 },
-  highlightWord: { color: colors.orange, fontWeight: '900' },
+  highlightWord: { color: colors.yellowInk, fontWeight: '900' },
   translationText: { color: colors.ink, lineHeight: 21, marginTop: 8, fontWeight: '700' },
 });

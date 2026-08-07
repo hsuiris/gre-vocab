@@ -8,7 +8,7 @@ import { getAllProgress, getHeatmap, getExcludedWords } from '../lib/storage';
 import { Heatmap } from '../components/Heatmap';
 import { PetCompanion } from '../components/PetCompanion';
 import { todayStr } from '../lib/date';
-import { colors, shadow, centered } from '../theme';
+import { colors, shadow, centered, slab, slabEdge } from '../theme';
 import { buildPracticeQueue, PracticeOrder } from '../lib/practiceQueue';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
@@ -184,11 +184,12 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     overflow: 'hidden',
   },
-  eyebrow: { color: colors.green, fontSize: 14, fontWeight: '800', marginBottom: 8 },
+  eyebrow: { color: colors.blue, fontSize: 14, fontWeight: '800', marginBottom: 8 },
   title: { color: colors.ink, fontSize: 28, fontWeight: '900', lineHeight: 34, maxWidth: 270 },
   due: { color: colors.muted, fontSize: 17, fontWeight: '700', marginTop: 10 },
   card: {
     ...shadow,
+    ...slab(slabEdge.line),
     backgroundColor: colors.surface,
     borderRadius: 24,
     padding: 20,
@@ -219,18 +220,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  letterChipActive: { backgroundColor: colors.green },
+  letterChipActive: { backgroundColor: colors.blue },
   letterText: { color: colors.muted, fontWeight: '900' },
   letterTextActive: { color: colors.surface },
   clearButton: {
     alignSelf: 'flex-start',
     marginTop: 12,
-    backgroundColor: colors.greenSoft,
+    backgroundColor: colors.yellowSoft,
     borderRadius: 16,
     paddingHorizontal: 12,
     paddingVertical: 8,
   },
-  clearButtonText: { color: colors.green, fontWeight: '900' },
+  clearButtonText: { color: colors.yellowInk, fontWeight: '900' },
   rangeActions: { flexDirection: 'row', gap: 10, marginTop: 12 },
   rangeButton: { flex: 1, backgroundColor: colors.blueSoft, borderRadius: 16, paddingVertical: 10, alignItems: 'center' },
   rangeButtonText: { color: colors.blue, fontWeight: '900' },

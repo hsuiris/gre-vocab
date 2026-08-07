@@ -90,7 +90,7 @@ export function StatsScreen({ navigation }: Props) {
 
 const styles = StyleSheet.create({
   container: { ...centered, flex: 1, backgroundColor: colors.page, padding: 20, gap: 14 },
-  eyebrow: { color: colors.green, fontSize: 14, fontWeight: '900' },
+  eyebrow: { color: colors.blue, fontSize: 14, fontWeight: '900' },
   title: { color: colors.ink, fontSize: 32, fontWeight: '900', marginBottom: 4 },
   summary: { backgroundColor: colors.tint, borderRadius: 28, padding: 24 },
   summaryCount: { color: colors.ink, fontSize: 48, fontWeight: '900' },

@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  boxButtonActive: { backgroundColor: colors.green },
+  boxButtonActive: { backgroundColor: colors.blue },
   boxButtonText: { color: colors.muted, fontWeight: '900' },
   boxButtonTextActive: { color: colors.surface },
 });

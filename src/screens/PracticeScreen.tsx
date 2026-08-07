@@ -23,7 +23,7 @@ import { buildChoices } from '../lib/quiz';
 import { buildPracticeQueue } from '../lib/practiceQueue';
 import { MultipleChoiceCard } from '../components/MultipleChoiceCard';
 import { SessionSidePanel, MarkedWord } from '../components/SessionSidePanel';
-import { colors } from '../theme';
+import { colors, slab, slabEdge } from '../theme';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Practice'>;
 
@@ -314,6 +314,7 @@ const styles = StyleSheet.create({
   doneTitle: { color: colors.ink, fontSize: 22, fontWeight: '900', textAlign: 'center' },
   doneMeta: { color: colors.muted, fontSize: 15, fontWeight: '700', marginTop: 8, textAlign: 'center' },
   donePanelButton: {
+    ...slab(slabEdge.blue),
     marginTop: 20,
     backgroundColor: colors.blue,
     borderRadius: 22,

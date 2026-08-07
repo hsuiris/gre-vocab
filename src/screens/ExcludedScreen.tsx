@@ -58,7 +58,7 @@ export function ExcludedScreen() {
 
 const styles = StyleSheet.create({
   container: { ...centered, flex: 1, backgroundColor: colors.page, padding: 20 },
-  eyebrow: { color: colors.green, fontSize: 14, fontWeight: '900' },
+  eyebrow: { color: colors.blue, fontSize: 14, fontWeight: '900' },
   title: { color: colors.ink, fontSize: 32, fontWeight: '900', marginTop: 4, marginBottom: 16 },
   emptyCard: { backgroundColor: colors.surface, borderRadius: 24, padding: 24, borderWidth: 1, borderColor: colors.line },
   emptyTitle: { color: colors.ink, fontSize: 20, fontWeight: '900', textAlign: 'center' },

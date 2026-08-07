@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react';
 import { View, Text, Pressable, FlatList, TextInput, StyleSheet } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import { getNotes, saveNote, deleteNote, StudyNote } from '../lib/storage';
-import { colors, centered } from '../theme';
+import { colors, centered, slab, slabEdge } from '../theme';
 
 export function NotesScreen() {
   const [notes, setNotes] = useState<StudyNote[]>([]);
@@ -101,7 +101,7 @@ export function NotesScreen() {
 
 const styles = StyleSheet.create({
   container: { ...centered, flex: 1, backgroundColor: colors.page, padding: 20 },
-  eyebrow: { color: colors.green, fontSize: 14, fontWeight: '900' },
+  eyebrow: { color: colors.blue, fontSize: 14, fontWeight: '900' },
   title: { color: colors.ink, fontSize: 32, fontWeight: '900', marginTop: 4, marginBottom: 16 },
   emptyCard: { backgroundColor: colors.surface, borderRadius: 24, padding: 24, borderWidth: 1, borderColor: colors.line },
   emptyTitle: { color: colors.ink, fontSize: 20, fontWeight: '900', textAlign: 'center' },
@@ -111,8 +111,8 @@ const styles = StyleSheet.create({
   rowHead: { flexDirection: 'row', alignItems: 'center', gap: 10 },
   date: { color: colors.ink, fontSize: 17, fontWeight: '900' },
   mode: {
-    color: colors.green,
-    backgroundColor: colors.greenSoft,
+    color: colors.yellowInk,
+    backgroundColor: colors.yellowSoft,
     fontSize: 12,
     fontWeight: '900',
     borderRadius: 10,
@@ -133,8 +133,21 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   actions: { flexDirection: 'row', gap: 10, marginTop: 10 },
-  saveBtn: { flex: 1, backgroundColor: colors.blue, borderRadius: 16, paddingVertical: 12, alignItems: 'center' },
+  saveBtn: {
+    ...slab(slabEdge.blue),
+    flex: 1,
+    backgroundColor: colors.blue,
+    borderRadius: 16,
+    paddingVertical: 12,
+    alignItems: 'center',
+  },
   saveText: { color: colors.surface, fontWeight: '900' },
-  deleteBtn: { backgroundColor: colors.redSoft, borderRadius: 16, paddingVertical: 12, paddingHorizontal: 20 },
+  deleteBtn: {
+    ...slab(slabEdge.line),
+    backgroundColor: colors.redSoft,
+    borderRadius: 16,
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+  },
   deleteText: { color: colors.red, fontWeight: '900' },
 });

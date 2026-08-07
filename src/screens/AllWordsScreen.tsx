@@ -3,7 +3,7 @@ import { View, Text, Pressable, TextInput, FlatList, StyleSheet } from 'react-na
 import { useFocusEffect } from '@react-navigation/native';
 import { words, WordEntry } from '../data/words';
 import { speakSequence, stopSpeaking } from '../lib/speech';
-import { colors, centered } from '../theme';
+import { colors, centered, slab, slabEdge } from '../theme';
 
 // Fixed so getItemLayout can exist, which is what lets the A-Z strip and the
 // player jump straight to a row in a 3000-item list without measuring it.
@@ -222,6 +222,7 @@ const styles = StyleSheet.create({
   listWrap: { flex: 1, flexDirection: 'row', gap: 4 },
   listContent: { paddingBottom: 4 },
   row: {
+    // CARD_HEIGHT already counts the 4pt lip, so getItemLayout stays right.
     height: CARD_HEIGHT,
     marginBottom: ROW_GAP,
     justifyContent: 'center',
@@ -229,14 +230,15 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     borderWidth: 1,
     borderColor: colors.line,
+    ...slab(slabEdge.line),
     paddingHorizontal: 16,
   },
-  rowActive: { backgroundColor: colors.tint, borderColor: colors.green },
+  rowActive: { backgroundColor: colors.tint, borderColor: colors.yellow, borderBottomColor: slabEdge.yellow },
   rowTop: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   word: { color: colors.ink, fontSize: 18, fontWeight: '900' },
   pos: {
-    color: colors.green,
-    backgroundColor: colors.greenSoft,
+    color: colors.yellowInk,
+    backgroundColor: colors.yellowSoft,
     fontSize: 11,
     fontWeight: '900',
     borderRadius: 9,
@@ -244,7 +246,7 @@ const styles = StyleSheet.create({
     paddingVertical: 3,
     overflow: 'hidden',
   },
-  marker: { color: colors.green, fontSize: 11, fontWeight: '900' },
+  marker: { color: colors.blue, fontSize: 11, fontWeight: '900' },
   meaning: { color: colors.muted, fontSize: 14, fontWeight: '700', marginTop: 5 },
   example: { color: colors.ink, fontSize: 12.5, fontStyle: 'italic', marginTop: 6 },
   strip: { width: 20, justifyContent: 'center', alignItems: 'center' },
@@ -269,6 +271,7 @@ const styles = StyleSheet.create({
   stepBtn: { paddingHorizontal: 4 },
   stepText: { color: colors.ink, fontSize: 22 },
   playBtn: {
+    ...slab(slabEdge.blue),
     width: 54,
     height: 54,
     borderRadius: 27,

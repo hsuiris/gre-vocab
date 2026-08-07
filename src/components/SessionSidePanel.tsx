@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, Pressable, ScrollView, TextInput, StyleSheet } from 'react-native';
 import { WordEntry } from '../data/words';
 import { speakWord } from '../lib/speech';
-import { colors } from '../theme';
+import { colors, slab, slabEdge } from '../theme';
 
 // "wrong" lands here on its own when an answer is missed; "unsure" is the star
 // on the card, for the ones guessed right without really knowing them.
@@ -127,8 +127,8 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   badgeUnsure: {
-    color: colors.orange,
-    backgroundColor: colors.orangeSoft,
+    color: colors.yellowInk,
+    backgroundColor: colors.yellowSoft,
     fontWeight: '900',
     fontSize: 11,
     borderRadius: 9,
@@ -150,8 +150,14 @@ const styles = StyleSheet.create({
     lineHeight: 22,
     fontWeight: '600',
   },
-  saveBtn: { backgroundColor: colors.blue, borderRadius: 18, paddingVertical: 13, alignItems: 'center' },
-  saveBtnOff: { backgroundColor: colors.page },
+  saveBtn: {
+    ...slab(slabEdge.blue),
+    backgroundColor: colors.blue,
+    borderRadius: 18,
+    paddingVertical: 13,
+    alignItems: 'center',
+  },
+  saveBtnOff: { backgroundColor: colors.page, borderBottomColor: slabEdge.line },
   saveText: { color: colors.surface, fontWeight: '900', fontSize: 15 },
   saveTextOff: { color: colors.muted },
 });
