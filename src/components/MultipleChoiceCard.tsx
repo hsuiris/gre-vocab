@@ -231,11 +231,11 @@ export function MultipleChoiceCard({
 }
 
 const styles = StyleSheet.create({
-  container: { alignItems: 'center', padding: 18 },
+  container: { width: '100%', alignItems: 'center', paddingHorizontal: 22, paddingVertical: 18 },
   card: {
     position: 'relative',
     width: '100%',
-    maxWidth: 380,
+    maxWidth: 760,
     minHeight: 164,
     borderRadius: 26,
     // Tinted, not white: the whole answer area now sits on a white panel, so a
@@ -287,7 +287,7 @@ const styles = StyleSheet.create({
   modeLabel: { color: colors.green, fontSize: 13, fontWeight: '900', marginBottom: 10 },
   question: { color: colors.ink, fontSize: 26, fontWeight: '900', textAlign: 'center', paddingHorizontal: 34 },
   cloze: { color: colors.ink, fontSize: 20, fontWeight: '800', lineHeight: 28, textAlign: 'center' },
-  options: { width: '100%', maxWidth: 380, marginTop: 16, gap: 10 },
+  options: { width: '100%', maxWidth: 760, marginTop: 16, gap: 10 },
   option: {
     backgroundColor: colors.page,
     borderWidth: 1,
@@ -336,7 +336,7 @@ const styles = StyleSheet.create({
     borderRadius: 22,
   },
   nextBtnText: { color: colors.surface, fontWeight: '900', fontSize: 16 },
-  typingBox: { width: '100%', maxWidth: 380, marginTop: 16, gap: 10 },
+  typingBox: { width: '100%', maxWidth: 760, marginTop: 16, gap: 10 },
   input: {
     backgroundColor: colors.page,
     borderWidth: 1,
@@ -356,7 +356,7 @@ const styles = StyleSheet.create({
   detail: {
     marginTop: 14,
     width: '100%',
-    maxWidth: 380,
+    maxWidth: 760,
     backgroundColor: colors.page,
     borderRadius: 24,
     padding: 18,

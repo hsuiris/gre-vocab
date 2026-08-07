@@ -36,6 +36,8 @@ export function PracticeScreen({ route }: Props) {
   const mode = route.params?.mode ?? 'choice';
   const { width } = useWindowDimensions();
   const wide = width >= WIDE_AT;
+  // Breathing room down both sides so the panels never touch the screen edge.
+  const gutter = wide ? 36 : 16;
   const [queue, setQueue] = useState<WordEntry[]>([]);
   const [settings, setSettings] = useState<AppSettings>(defaultSettings);
   const [index, setIndex] = useState(0);
@@ -173,7 +175,7 @@ export function PracticeScreen({ route }: Props) {
 
   return (
     <View style={styles.screen}>
-      <View style={styles.topBar}>
+      <View style={[styles.topBar, { paddingHorizontal: gutter }]}>
         <View style={styles.topRow}>
           <Text style={styles.progress}>
             {Math.min(index + 1, queue.length)} / {queue.length}
@@ -190,7 +192,7 @@ export function PracticeScreen({ route }: Props) {
         </View>
       </View>
 
-      <View style={wide ? styles.bodyWide : styles.body}>
+      <View style={[wide ? styles.bodyWide : styles.body, { paddingHorizontal: gutter }]}>
         <ScrollView
           style={styles.quizPanel}
           contentContainerStyle={styles.quizContent}
@@ -251,7 +253,7 @@ const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: colors.page },
   center: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: colors.page, padding: 24 },
   centerText: { color: colors.muted, fontWeight: '700' },
-  topBar: { paddingHorizontal: 18, paddingTop: 12, gap: 8 },
+  topBar: { paddingTop: 14, gap: 8 },
   topRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
   progress: { color: colors.muted, fontWeight: '900', fontSize: 15 },
   track: { height: 8, borderRadius: 4, backgroundColor: colors.line, overflow: 'hidden' },
@@ -278,10 +280,10 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     paddingVertical: 2,
   },
-  body: { flex: 1, padding: 14 },
+  body: { flex: 1, paddingVertical: 14 },
   // Roughly 55/45. The answer area stays the largest block, but the panel is
   // wide enough to read a full example sentence without wrapping to four lines.
-  bodyWide: { flex: 1, flexDirection: 'row', padding: 14, gap: 14 },
+  bodyWide: { flex: 1, flexDirection: 'row', paddingVertical: 14, paddingBottom: 22, gap: 22 },
   quizPanel: {
     flex: 1.2,
     backgroundColor: colors.surface,
@@ -290,7 +292,9 @@ const styles = StyleSheet.create({
     borderColor: colors.line,
   },
   quizContent: { paddingVertical: 8, paddingBottom: 32, alignItems: 'center' },
-  sideColumn: { flex: 1, maxWidth: 460 },
+  // No maxWidth: a clamped flex child leaves dead space beside it instead of
+  // handing the slack back to the answer column.
+  sideColumn: { flex: 1 },
   modalRow: { flex: 1, flexDirection: 'row', backgroundColor: 'rgba(18,33,50,0.35)' },
   scrim: { flex: 1 },
   modalPanel: { width: '88%', maxWidth: 420, padding: 12 },
