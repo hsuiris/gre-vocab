@@ -275,15 +275,19 @@ const styles = StyleSheet.create({
     paddingVertical: 7,
   },
   excludeBtnText: { color: colors.red, fontSize: 12, fontWeight: '900' },
+  // Outlined, then filled with the dark gold when on: yellow is the one colour
+  // this palette never spreads across a surface.
   unsureBtn: {
-    backgroundColor: colors.yellowSoft,
+    backgroundColor: colors.surface,
+    borderWidth: 1.5,
+    borderColor: colors.yellow,
     borderRadius: 14,
     paddingHorizontal: 10,
-    paddingVertical: 7,
+    paddingVertical: 6,
   },
-  unsureBtnOn: { backgroundColor: colors.yellow },
+  unsureBtnOn: { backgroundColor: colors.yellowInk, borderColor: colors.yellowInk },
   unsureBtnText: { color: colors.yellowInk, fontSize: 12, fontWeight: '900' },
-  unsureBtnTextOn: { color: colors.ink },
+  unsureBtnTextOn: { color: colors.surface },
   modeLabel: { color: colors.blue, fontSize: 13, fontWeight: '900', marginBottom: 10 },
   question: { color: colors.ink, fontSize: 26, fontWeight: '900', textAlign: 'center', paddingHorizontal: 34 },
   cloze: { color: colors.ink, fontSize: 20, fontWeight: '800', lineHeight: 28, textAlign: 'center' },

@@ -24,20 +24,21 @@ const PAIRS: [keyof typeof colors, keyof typeof colors][] = [
   ['ink', 'page'],
   ['ink', 'surface'],
   ['ink', 'tint'],
-  ['ink', 'yellow'], // solid yellow only ever carries ink, never white
   ['muted', 'surface'],
   ['muted', 'page'],
+  ['muted', 'tint'],
   ['surface', 'blue'],
   ['surface', 'red'],
   ['surface', 'green'],
   ['blue', 'surface'],
   ['blue', 'blueSoft'],
+  ['blue', 'tint'],
   ['red', 'redSoft'],
   ['red', 'surface'],
   ['green', 'greenSoft'],
   ['yellowInk', 'surface'],
-  ['yellowInk', 'yellowSoft'],
-  ['yellowInk', 'tint'],
+  ['yellowInk', 'page'],
+  ['surface', 'yellowInk'], // the only yellow that may sit behind text
 ];
 
 describe('palette contrast', () => {
@@ -45,7 +46,10 @@ describe('palette contrast', () => {
     expect(contrast(colors[fg], colors[bg])).toBeGreaterThanOrEqual(AA);
   });
 
-  it('never puts white on yellow — that pair is the classic failure', () => {
+  // Bright yellow is unreadable under white text and too close to the page
+  // under dark text, which is why nothing fills a surface with it. If a future
+  // edit reaches for `colors.yellow` as a background, this is the reminder.
+  it('bright yellow is unusable as a surface, in either direction', () => {
     expect(contrast(colors.surface, colors.yellow)).toBeLessThan(AA);
   });
 });

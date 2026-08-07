@@ -111,8 +111,8 @@ const styles = StyleSheet.create({
   rowHead: { flexDirection: 'row', alignItems: 'center', gap: 10 },
   date: { color: colors.ink, fontSize: 17, fontWeight: '900' },
   mode: {
-    color: colors.yellowInk,
-    backgroundColor: colors.yellowSoft,
+    color: colors.blue,
+    backgroundColor: colors.blueSoft,
     fontSize: 12,
     fontWeight: '900',
     borderRadius: 10,
