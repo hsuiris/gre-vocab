@@ -41,3 +41,7 @@ yarn-error.*
 /android
 ._*
 __MACOSX/
+
+# Python bytecode from scripts/
+__pycache__/
+*.pyc
