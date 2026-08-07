@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { View, Text, Pressable, ScrollView, StyleSheet } from 'react-native';
+import { View, Text, Pressable, ScrollView, StyleSheet, Image } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { QuizMode, RootStackParamList } from '../navigation/RootNavigator';
@@ -7,12 +7,38 @@ import { words } from '../data/words';
 import { getAllProgress, getHeatmap, getExcludedWords } from '../lib/storage';
 import { Heatmap } from '../components/Heatmap';
 import { Mascot } from '../components/Mascot';
+import { ANIMALS, AnimalName } from '../components/mascots';
 import { todayStr } from '../lib/date';
 import { colors, shadow, centered, slab, slabEdge, slabPressed } from '../theme';
 import { buildPracticeQueue, PracticeOrder } from '../lib/practiceQueue';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
 const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+
+// One animal per row, so the menu reads as a line-up of characters rather than
+// eight identical rectangles.
+function MenuCard({
+  pet,
+  title,
+  meta,
+  onPress,
+}: {
+  pet: AnimalName;
+  title: string;
+  meta?: string;
+  onPress: () => void;
+}) {
+  return (
+    <Pressable style={({ pressed }) => [styles.card, pressed && slabPressed]} onPress={onPress}>
+      <Image source={ANIMALS[pet]} style={styles.cardPet} resizeMode="contain" />
+      <View style={styles.cardText}>
+        <Text style={styles.cardTitle}>{title}</Text>
+        {meta && <Text style={styles.cardMeta}>{meta}</Text>}
+      </View>
+      <Text style={styles.arrow}>›</Text>
+    </Pressable>
+  );
+}
 
 export function HomeScreen({ navigation }: Props) {
   const [dueCount, setDueCount] = useState(0);
@@ -110,55 +136,14 @@ export function HomeScreen({ navigation }: Props) {
         </View>
       </View>
 
-      <Pressable style={({ pressed }) => [styles.card, pressed && slabPressed]} onPress={() => navigation.navigate('AllWords')}>
-        <View>
-          <Text style={styles.cardTitle}>單字總覽</Text>
-          <Text style={styles.cardMeta}>{words.length} 個字 · 可以按播放讓它自己唸</Text>
-        </View>
-        <Text style={styles.arrow}>›</Text>
-      </Pressable>
-      <Pressable style={({ pressed }) => [styles.card, pressed && slabPressed]} onPress={() => start('en-zh', 'choice')}>
-        <View>
-          <Text style={styles.cardTitle}>英文選中文意思</Text>
-        </View>
-        <Text style={styles.arrow}>›</Text>
-      </Pressable>
-      <Pressable style={({ pressed }) => [styles.card, pressed && slabPressed]} onPress={() => start('zh-en', 'choice')}>
-        <View>
-          <Text style={styles.cardTitle}>中文選英文單字</Text>
-        </View>
-        <Text style={styles.arrow}>›</Text>
-      </Pressable>
-      <Pressable style={({ pressed }) => [styles.card, pressed && slabPressed]} onPress={() => start('zh-en', 'cloze')}>
-        <View>
-          <Text style={styles.cardTitle}>句子填空</Text>
-        </View>
-        <Text style={styles.arrow}>›</Text>
-      </Pressable>
-      <Pressable style={({ pressed }) => [styles.card, pressed && slabPressed]} onPress={() => start('zh-en', 'typing')}>
-        <View>
-          <Text style={styles.cardTitle}>手寫單字</Text>
-        </View>
-        <Text style={styles.arrow}>›</Text>
-      </Pressable>
-      <Pressable style={({ pressed }) => [styles.card, pressed && slabPressed]} onPress={startWrongReview}>
-        <View>
-          <Text style={styles.cardTitle}>複習錯題</Text>
-        </View>
-        <Text style={styles.arrow}>›</Text>
-      </Pressable>
-      <Pressable style={({ pressed }) => [styles.card, pressed && slabPressed]} onPress={() => navigation.navigate('Relations')}>
-        <View>
-          <Text style={styles.cardTitle}>近義／反義詞</Text>
-        </View>
-        <Text style={styles.arrow}>›</Text>
-      </Pressable>
-      <Pressable style={({ pressed }) => [styles.card, pressed && slabPressed]} onPress={() => navigation.navigate('Notes')}>
-        <View>
-          <Text style={styles.cardTitle}>筆記庫</Text>
-        </View>
-        <Text style={styles.arrow}>›</Text>
-      </Pressable>
+      <MenuCard pet="cat" title="單字總覽" meta={`${words.length} 個字 · 可以按播放讓它自己唸`} onPress={() => navigation.navigate('AllWords')} />
+      <MenuCard pet="shiba" title="英文選中文意思" onPress={() => start('en-zh', 'choice')} />
+      <MenuCard pet="rabbit" title="中文選英文單字" onPress={() => start('zh-en', 'choice')} />
+      <MenuCard pet="penguin" title="句子填空" onPress={() => start('zh-en', 'cloze')} />
+      <MenuCard pet="chick" title="手寫單字" onPress={() => start('zh-en', 'typing')} />
+      <MenuCard pet="hamster" title="複習錯題" onPress={startWrongReview} />
+      <MenuCard pet="elephant" title="近義／反義詞" onPress={() => navigation.navigate('Relations')} />
+      <MenuCard pet="pig" title="筆記庫" onPress={() => navigation.navigate('Notes')} />
 
       <View style={styles.panel}>
         <View style={styles.panelHeader}>
@@ -201,6 +186,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: colors.line,
   },
+  cardPet: { width: 54, height: 54, marginRight: 14 },
+  cardText: { flex: 1 },
   cardTitle: { color: colors.ink, fontSize: 20, fontWeight: '900' },
   cardMeta: { color: colors.muted, fontSize: 13, fontWeight: '700', marginTop: 5 },
   arrow: { color: colors.ink, fontSize: 34, fontWeight: '300' },

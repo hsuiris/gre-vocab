@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Animated, Easing, Image, StyleSheet, Text, View, ViewStyle } from 'react-native';
+import { GIRL } from './mascots';
 import { colors } from '../theme';
 
 export type Mood = 'idle' | 'happy' | 'sad';
@@ -11,9 +12,9 @@ type Props = {
   style?: ViewStyle;
 };
 
-// One drawing, three moods. There is only ever a single pose to work with, so
-// the character is animated rather than redrawn: a hop reads as delight and a
-// shake reads as sympathy without needing a second asset.
+// A drawn pose per mood, plus motion on top of it: the hop lands with the
+// arms-up artwork and the shake runs under the worried one, so the drawing and
+// the animation say the same thing.
 export function Mascot({ mood = 'idle', message, size = 128, style }: Props) {
   const breathe = useRef(new Animated.Value(0)).current;
   const react = useRef(new Animated.Value(0)).current;
@@ -84,7 +85,7 @@ export function Mascot({ mood = 'idle', message, size = 128, style }: Props) {
           </Animated.View>
         )}
         <Animated.Image
-          source={require('../../assets/pet-companion.png')}
+          source={GIRL[mood]}
           style={[{ width: size, height: size }, { transform }]}
           resizeMode="contain"
         />

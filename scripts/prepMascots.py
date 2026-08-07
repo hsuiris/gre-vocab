@@ -1,0 +1,158 @@
+"""Turn the raw ChatGPT mascot art into sprites the app can actually use.
+
+Run:  python3 scripts/prepMascots.py
+In:   assets/mascots/raw/*.png
+Out:  assets/mascots/*.png
+
+Three things go wrong with generated sticker art, and this fixes all three:
+
+1. The background remover punched holes THROUGH the character. On the girl
+   sheet her face is alpha 0 and her hair sits at alpha 190, so on anything but
+   a white screen she shows up as a ghost. Flood-filling from the corners finds
+   the real background; everything the flood cannot reach is the character and
+   gets flattened onto white at full opacity.
+2. That same removal drained the warmth out of her hair, leaving it grey-olive.
+   Olive pixels are re-mapped onto a chestnut ramp that keeps the original
+   shading.
+3. Every drawing floats in a mostly empty 1024px canvas. Cropping to the
+   subject means a sprite rendered at 120pt is 120pt of character, not 30pt of
+   character and a lot of nothing.
+"""
+
+from collections import deque
+from pathlib import Path
+
+from PIL import Image
+
+ROOT = Path(__file__).resolve().parent.parent
+RAW = ROOT / "assets" / "mascots" / "raw"
+OUT = ROOT / "assets" / "mascots"
+
+TRANSPARENT = 8  # alpha at or below this counts as background
+OUT_SIZE = 512  # plenty for a 150pt sprite on a 3x screen
+PAD = 0.04  # breathing room around the subject, as a fraction of its size
+
+
+def solidify(im: Image.Image) -> Image.Image:
+    """Make the character fully opaque and the true background fully clear."""
+    im = im.convert("RGBA")
+    w, h = im.size
+    px = im.load()
+
+    # Flood from all four corners. Only genuine background is reachable; a
+    # transparent face is walled in by the character's outline.
+    outside = bytearray(w * h)
+    queue = deque()
+    for start in ((0, 0), (w - 1, 0), (0, h - 1), (w - 1, h - 1)):
+        x, y = start
+        if px[x, y][3] <= TRANSPARENT and not outside[y * w + x]:
+            outside[y * w + x] = 1
+            queue.append(start)
+    while queue:
+        x, y = queue.popleft()
+        for nx, ny in ((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)):
+            if 0 <= nx < w and 0 <= ny < h and not outside[ny * w + nx]:
+                if px[nx, ny][3] <= TRANSPARENT:
+                    outside[ny * w + nx] = 1
+                    queue.append((nx, ny))
+
+    for y in range(h):
+        row = y * w
+        for x in range(w):
+            r, g, b, a = px[x, y]
+            if outside[row + x]:
+                px[x, y] = (0, 0, 0, 0)
+            elif a < 255:
+                # Composite over white, which is what the artwork assumed.
+                blend = a / 255
+                px[x, y] = (
+                    round(r * blend + 255 * (1 - blend)),
+                    round(g * blend + 255 * (1 - blend)),
+                    round(b * blend + 255 * (1 - blend)),
+                    255,
+                )
+    return im
+
+
+def warm_hair(im: Image.Image) -> Image.Image:
+    """Re-map the drained olive hair onto chestnut, shading and all.
+
+    Only olive qualifies: red and green close together, blue clearly lower,
+    mid luminance. The blue dress (blue highest), the white skin and cat (no
+    channel spread) and the near-black shoes (too dark) are all left alone.
+    """
+    px = im.load()
+    w, h = im.size
+    for y in range(h):
+        for x in range(w):
+            r, g, b, a = px[x, y]
+            if a == 0:
+                continue
+            if abs(r - g) < 25 and r - b >= 10 and 70 <= r <= 215:
+                lum = 0.299 * r + 0.587 * g + 0.114 * b
+                px[x, y] = (
+                    min(255, round(lum * 1.16)),
+                    min(255, round(lum * 0.80)),
+                    min(255, round(lum * 0.58)),
+                    a,
+                )
+    return im
+
+
+def columns_with_content(im: Image.Image) -> list[tuple[int, int]]:
+    """Column ranges holding a subject, so a multi-pose sheet can be split."""
+    alpha = im.getchannel("A")
+    w, h = im.size
+    filled = [any(alpha.getpixel((x, y)) > 0 for y in range(0, h, 4)) for x in range(w)]
+    spans, start = [], None
+    for x, has in enumerate(filled):
+        if has and start is None:
+            start = x
+        elif not has and start is not None:
+            spans.append((start, x))
+            start = None
+    if start is not None:
+        spans.append((start, w))
+    # Ignore stray specks; a real pose is a wide band.
+    return [s for s in spans if s[1] - s[0] > w * 0.08]
+
+
+def crop_to_subject(im: Image.Image) -> Image.Image:
+    """Trim the empty canvas, then centre the subject on a square."""
+    box = im.getchannel("A").getbbox()
+    if box is None:
+        return im
+    im = im.crop(box)
+    side = round(max(im.size) * (1 + PAD * 2))
+    canvas = Image.new("RGBA", (side, side), (0, 0, 0, 0))
+    canvas.paste(im, ((side - im.width) // 2, (side - im.height) // 2))
+    return canvas.resize((OUT_SIZE, OUT_SIZE), Image.LANCZOS)
+
+
+def save(im: Image.Image, name: str) -> None:
+    path = OUT / f"{name}.png"
+    crop_to_subject(im).save(path, optimize=True)
+    print(f"  {path.relative_to(ROOT)}")
+
+
+def main() -> None:
+    sheet_path = RAW / "chibi-girl-poses.png"
+    if sheet_path.exists():
+        print("girl sheet:")
+        sheet = warm_hair(solidify(Image.open(sheet_path)))
+        spans = columns_with_content(sheet)
+        names = ["girl-idle", "girl-happy", "girl-sad"]
+        if len(spans) != len(names):
+            raise SystemExit(f"expected {len(names)} poses on the sheet, found {len(spans)}")
+        for (left, right), name in zip(spans, names):
+            save(sheet.crop((left, 0, right, sheet.height)), name)
+
+    print("animals:")
+    for path in sorted(RAW.glob("*.png")):
+        if path.name == sheet_path.name:
+            continue
+        save(solidify(Image.open(path)), path.stem)
+
+
+if __name__ == "__main__":
+    main()
