@@ -5,7 +5,7 @@ import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/RootNavigator';
 import { words } from '../data/words';
 import { getAllProgress, resetAllProgress, getExcludedWords } from '../lib/storage';
-import { colors } from '../theme';
+import { colors, centered } from '../theme';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Stats'>;
 
@@ -89,7 +89,7 @@ export function StatsScreen({ navigation }: Props) {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: colors.page, padding: 20, gap: 14 },
+  container: { ...centered, flex: 1, backgroundColor: colors.page, padding: 20, gap: 14 },
   eyebrow: { color: colors.green, fontSize: 14, fontWeight: '900' },
   title: { color: colors.ink, fontSize: 32, fontWeight: '900', marginBottom: 4 },
   summary: { backgroundColor: colors.tint, borderRadius: 28, padding: 24 },

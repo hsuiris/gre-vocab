@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, Pressable, StyleSheet, TextInput, Image } from 'react-native';
 import type { QuizMode } from '../navigation/RootNavigator';
 import { WordEntry } from '../data/words';
+import { getRelation } from '../data/relations';
 import type { AppSettings } from '../lib/storage';
 import { speakWord } from '../lib/speech';
 import { colors, shadow } from '../theme';
@@ -11,13 +12,43 @@ type Props = {
   direction: 'en-zh' | 'zh-en';
   mode: QuizMode;
   choices: string[];
-  choiceAnswers: Record<string, string>;
+  choiceEntries: Record<string, WordEntry>;
   settings: AppSettings;
   onResult: (knewIt: boolean) => void;
   onExclude: () => void;
+  onMarkUnsure: () => void;
+  unsure: boolean;
 };
 
-export function MultipleChoiceCard({ entry, direction, mode, choices, choiceAnswers, settings, onResult, onExclude }: Props) {
+// words.json stores parts of speech as "v." or "n./adj."; spell them out so the
+// grammar hint reads as Chinese rather than dictionary shorthand.
+const POS_ZH: Record<string, string> = {
+  'n.': '名詞',
+  'v.': '動詞',
+  'adj.': '形容詞',
+  'adv.': '副詞',
+  'conj.': '連接詞',
+};
+
+function posLabel(pos: string): string {
+  return pos
+    .split('/')
+    .map((p) => POS_ZH[p.trim()] ?? p.trim())
+    .join('／');
+}
+
+export function MultipleChoiceCard({
+  entry,
+  direction,
+  mode,
+  choices,
+  choiceEntries,
+  settings,
+  onResult,
+  onExclude,
+  onMarkUnsure,
+  unsure,
+}: Props) {
   const [selected, setSelected] = useState<string | null>(null);
   const [typed, setTyped] = useState('');
   const [expanded, setExpanded] = useState(false);
@@ -60,6 +91,38 @@ export function MultipleChoiceCard({ entry, direction, mode, choices, choiceAnsw
     return styles.optionText;
   }
 
+  // Every option, right or wrong, gets its own speaker button plus grammar and
+  // example, so a revealed card teaches four words instead of one.
+  function renderOptionDetail(choice: string) {
+    const info = choiceEntries[choice];
+    if (!info) return null;
+    const feedback = choice === correctAnswer || choice === selected;
+    const syn = getRelation(info.word).syn.slice(0, 3);
+    // When the option text is already the Chinese meaning, repeating it is noise.
+    const gloss = choice === info.word ? info.meaning : null;
+    return (
+      <View style={styles.optionDetail}>
+        <View style={styles.optionMetaRow}>
+          <Pressable style={styles.optionSound} onPress={() => speakWord(info.word)} hitSlop={8}>
+            <Image source={require('../../assets/speaker-icon.png')} style={styles.optionSoundIcon} />
+            <Text style={styles.optionSoundText}>{info.word}</Text>
+          </Pressable>
+          <Text style={feedback ? styles.optionPosFeedback : styles.optionPos}>{posLabel(info.pos)}</Text>
+        </View>
+        {gloss && <Text style={feedback ? styles.optionMetaFeedback : styles.optionMeta}>{gloss}</Text>}
+        {syn.length > 0 && (
+          <Text style={feedback ? styles.optionMetaFeedback : styles.optionMeta}>≈ {syn.join('、')}</Text>
+        )}
+        <Pressable onPress={() => speakWord(info.example)}>
+          <Text style={feedback ? styles.optionExampleFeedback : styles.optionExample}>{info.example}</Text>
+        </Pressable>
+        {info.exampleZh && (
+          <Text style={feedback ? styles.optionMetaFeedback : styles.optionMeta}>{info.exampleZh}</Text>
+        )}
+      </View>
+    );
+  }
+
   function renderHighlightedExample() {
     const escaped = entry.word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     const parts = entry.example.split(new RegExp(`(${escaped})`, 'i'));
@@ -74,6 +137,15 @@ export function MultipleChoiceCard({ entry, direction, mode, choices, choiceAnsw
     <View style={styles.container}>
       <View style={styles.card}>
         <View style={styles.cardActions}>
+          <Pressable
+            style={[styles.unsureBtn, unsure && styles.unsureBtnOn]}
+            onPress={onMarkUnsure}
+            hitSlop={8}
+          >
+            <Text style={[styles.unsureBtnText, unsure && styles.unsureBtnTextOn]}>
+              {unsure ? '★ 不熟' : '☆ 不熟'}
+            </Text>
+          </Pressable>
           <Pressable style={styles.excludeBtn} onPress={onExclude} hitSlop={8}>
             <Text style={styles.excludeBtnText}>太簡單</Text>
           </Pressable>
@@ -121,18 +193,11 @@ export function MultipleChoiceCard({ entry, direction, mode, choices, choiceAnsw
       ) : (
         <View style={styles.options}>
           {choices.map((choice) => (
-            <Pressable
-              key={choice}
-              style={optionStyle(choice)}
-              onPress={() => handleSelect(choice)}
-              disabled={answered}
-            >
+            // Not `disabled` when answered: handleSelect already ignores late
+            // taps, and a disabled parent would swallow the sound buttons.
+            <Pressable key={choice} style={optionStyle(choice)} onPress={() => handleSelect(choice)}>
               <Text style={optionTextStyle(choice)}>{choice}</Text>
-              {answered && settings.autoShowChoiceAnswers && choiceAnswers[choice] && (
-                <Text style={choice === correctAnswer || choice === selected ? styles.optionMetaFeedback : styles.optionMeta}>
-                  {choiceAnswers[choice]}
-                </Text>
-              )}
+              {answered && settings.autoShowChoiceAnswers && renderOptionDetail(choice)}
             </Pressable>
           ))}
         </View>
@@ -178,8 +243,18 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     paddingHorizontal: 26,
+    // Clears the action row on top and the speaker button at the bottom, so a
+    // three-line question can never run underneath either of them.
+    paddingVertical: 52,
   },
-  cardActions: { position: 'absolute', top: 14, right: 14 },
+  cardActions: {
+    position: 'absolute',
+    top: 14,
+    left: 14,
+    right: 14,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
   soundBtn: {
     position: 'absolute',
     right: 14,
@@ -199,8 +274,17 @@ const styles = StyleSheet.create({
     paddingVertical: 7,
   },
   excludeBtnText: { color: colors.red, fontSize: 12, fontWeight: '900' },
+  unsureBtn: {
+    backgroundColor: colors.orangeSoft,
+    borderRadius: 14,
+    paddingHorizontal: 10,
+    paddingVertical: 7,
+  },
+  unsureBtnOn: { backgroundColor: colors.orange },
+  unsureBtnText: { color: colors.orange, fontSize: 12, fontWeight: '900' },
+  unsureBtnTextOn: { color: colors.surface },
   modeLabel: { color: colors.green, fontSize: 13, fontWeight: '900', marginBottom: 10 },
-  question: { color: colors.ink, fontSize: 34, fontWeight: '900', textAlign: 'center', paddingHorizontal: 34 },
+  question: { color: colors.ink, fontSize: 26, fontWeight: '900', textAlign: 'center', paddingHorizontal: 34 },
   cloze: { color: colors.ink, fontSize: 20, fontWeight: '800', lineHeight: 28, textAlign: 'center' },
   options: { width: '100%', maxWidth: 360, marginTop: 18, gap: 10 },
   option: {
@@ -213,11 +297,36 @@ const styles = StyleSheet.create({
   },
   optionCorrect: { backgroundColor: colors.green, borderColor: colors.green },
   optionWrong: { backgroundColor: colors.red, borderColor: colors.red },
-  optionDisabled: { opacity: 0.5 },
+  // Was 0.5, but the unpicked options now carry example sentences worth reading.
+  optionDisabled: { opacity: 0.8 },
   optionText: { fontSize: 16, color: colors.ink, fontWeight: '700', textAlign: 'center' },
   optionTextFeedback: { color: '#fff', fontWeight: '600' },
   optionMeta: { color: colors.muted, fontSize: 13, fontWeight: '700', textAlign: 'center', marginTop: 5 },
   optionMetaFeedback: { color: colors.surface, fontSize: 13, fontWeight: '800', textAlign: 'center', marginTop: 5 },
+  optionDetail: { marginTop: 10, alignItems: 'center' },
+  optionMetaRow: { flexDirection: 'row', alignItems: 'center', gap: 8 },
+  optionSound: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    backgroundColor: colors.surface,
+    borderRadius: 999,
+    paddingHorizontal: 10,
+    paddingVertical: 6,
+  },
+  optionSoundIcon: { width: 15, height: 15 },
+  optionSoundText: { color: colors.blue, fontSize: 13, fontWeight: '900' },
+  optionPos: { color: colors.green, fontSize: 12, fontWeight: '900' },
+  optionPosFeedback: { color: colors.surface, fontSize: 12, fontWeight: '900' },
+  optionExample: { color: colors.ink, fontSize: 13, lineHeight: 19, textAlign: 'center', marginTop: 8, fontStyle: 'italic' },
+  optionExampleFeedback: {
+    color: colors.surface,
+    fontSize: 13,
+    lineHeight: 19,
+    textAlign: 'center',
+    marginTop: 8,
+    fontStyle: 'italic',
+  },
   nextBtn: {
     marginTop: 18,
     backgroundColor: colors.blue,

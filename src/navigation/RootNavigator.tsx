@@ -8,6 +8,9 @@ import { StatsScreen } from '../screens/StatsScreen';
 import { ExcludedScreen } from '../screens/ExcludedScreen';
 import { SettingsScreen } from '../screens/SettingsScreen';
 import { BoxWordsScreen } from '../screens/BoxWordsScreen';
+import { RelationsScreen } from '../screens/RelationsScreen';
+import { AllWordsScreen } from '../screens/AllWordsScreen';
+import { NotesScreen } from '../screens/NotesScreen';
 import { colors } from '../theme';
 import { PracticeOrder } from '../lib/practiceQueue';
 
@@ -19,6 +22,9 @@ export type RootStackParamList = {
   Stats: undefined;
   Excluded: undefined;
   Settings: undefined;
+  Relations: undefined;
+  AllWords: undefined;
+  Notes: undefined;
   BoxWords: { box: number };
 };
 
@@ -52,6 +58,9 @@ export function RootNavigator() {
         <Stack.Screen name="Stats" component={StatsScreen} options={{ title: '統計' }} />
         <Stack.Screen name="Excluded" component={ExcludedScreen} options={{ title: '回收桶' }} />
         <Stack.Screen name="Settings" component={SettingsScreen} options={{ title: '設定' }} />
+        <Stack.Screen name="Relations" component={RelationsScreen} options={{ title: '近義／反義詞' }} />
+        <Stack.Screen name="AllWords" component={AllWordsScreen} options={{ title: '單字總覽' }} />
+        <Stack.Screen name="Notes" component={NotesScreen} options={{ title: '筆記庫' }} />
         <Stack.Screen
           name="BoxWords"
           component={BoxWordsScreen}

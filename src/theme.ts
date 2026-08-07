@@ -22,3 +22,6 @@ export const shadow = {
   shadowOffset: { width: 0, height: 10 },
   elevation: 4,
 };
+
+// ponytail: browsers are wide, phones aren't. One max-width clamp beats per-screen breakpoints.
+export const centered = { width: '100%' as const, maxWidth: 720, alignSelf: 'center' as const };

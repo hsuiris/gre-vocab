@@ -3,7 +3,7 @@ import { View, Text, Pressable, StyleSheet, FlatList } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import { words, WordEntry } from '../data/words';
 import { getExcludedWords, restoreWord } from '../lib/storage';
-import { colors } from '../theme';
+import { colors, centered } from '../theme';
 
 export function ExcludedScreen() {
   const [excluded, setExcluded] = useState<WordEntry[]>([]);
@@ -57,7 +57,7 @@ export function ExcludedScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: colors.page, padding: 20 },
+  container: { ...centered, flex: 1, backgroundColor: colors.page, padding: 20 },
   eyebrow: { color: colors.green, fontSize: 14, fontWeight: '900' },
   title: { color: colors.ink, fontSize: 32, fontWeight: '900', marginTop: 4, marginBottom: 16 },
   emptyCard: { backgroundColor: colors.surface, borderRadius: 24, padding: 24, borderWidth: 1, borderColor: colors.line },

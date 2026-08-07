@@ -3,7 +3,7 @@
     "name": "GRE單字",
     "slug": "gre-vocab",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
@@ -25,6 +25,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "62741826-10d0-4cf0-bda5-7671256eeae9"
+      }
     }
   }
 }

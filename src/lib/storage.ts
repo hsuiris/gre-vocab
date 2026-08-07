@@ -6,9 +6,21 @@ const HEATMAP_KEY = 'gre-vocab:heatmap';
 const EXCLUDED_KEY = 'gre-vocab:excluded';
 const SETTINGS_KEY = 'gre-vocab:settings';
 const WRONG_KEY = 'gre-vocab:wrong';
+const NOTES_KEY = 'gre-vocab:notes';
 
 type ProgressMap = Record<string, WordProgress>;
 type HeatmapMap = Record<string, number>;
+
+// One note per practice session, not per word: a session is what the user
+// actually sits down and finishes, so that's the unit worth filing.
+export type StudyNote = {
+  id: string;
+  date: string;
+  mode: string;
+  total: number;
+  wrongCount: number;
+  text: string;
+};
 export type AppSettings = {
   displayName: string;
   accountEmail: string;
@@ -20,6 +32,7 @@ export type AppSettings = {
   googleLinked: boolean;
   autoShowDetails: boolean;
   autoShowChoiceAnswers: boolean;
+  voiceId: string | null;
   reviewNotifications: boolean;
   streakNotifications: boolean;
 };
@@ -35,6 +48,7 @@ export const defaultSettings: AppSettings = {
   googleLinked: false,
   autoShowDetails: false,
   autoShowChoiceAnswers: true,
+  voiceId: null,
   reviewNotifications: false,
   streakNotifications: false,
 };
@@ -102,6 +116,24 @@ export async function addWrongWord(word: string): Promise<void> {
 export async function removeWrongWord(word: string): Promise<void> {
   const wrong = await getWrongWords();
   await AsyncStorage.setItem(WRONG_KEY, JSON.stringify(wrong.filter((w) => w !== word)));
+}
+
+export async function getNotes(): Promise<StudyNote[]> {
+  const raw = await AsyncStorage.getItem(NOTES_KEY);
+  return raw ? JSON.parse(raw) : [];
+}
+
+export async function saveNote(note: StudyNote): Promise<void> {
+  const notes = await getNotes();
+  const at = notes.findIndex((n) => n.id === note.id);
+  if (at >= 0) notes[at] = note;
+  else notes.unshift(note); // newest first, so the list needs no sorting
+  await AsyncStorage.setItem(NOTES_KEY, JSON.stringify(notes));
+}
+
+export async function deleteNote(id: string): Promise<void> {
+  const notes = await getNotes();
+  await AsyncStorage.setItem(NOTES_KEY, JSON.stringify(notes.filter((n) => n.id !== id)));
 }
 
 export async function getSettings(): Promise<AppSettings> {

@@ -7,7 +7,7 @@ import { words, WordEntry } from '../data/words';
 import { addDays, INTERVAL_DAYS } from '../lib/leitner';
 import { getAllProgress, removeWordProgress, saveWordProgress } from '../lib/storage';
 import { todayStr } from '../lib/date';
-import { colors } from '../theme';
+import { colors, centered } from '../theme';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'BoxWords'>;
 
@@ -91,7 +91,7 @@ export function BoxWordsScreen({ route }: Props) {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: colors.page, padding: 20 },
+  container: { ...centered, flex: 1, backgroundColor: colors.page, padding: 20 },
   list: { gap: 12, paddingBottom: 28 },
   emptyCard: {
     backgroundColor: colors.surface,

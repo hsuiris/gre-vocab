@@ -8,7 +8,7 @@ import { getAllProgress, getHeatmap, getExcludedWords } from '../lib/storage';
 import { Heatmap } from '../components/Heatmap';
 import { PetCompanion } from '../components/PetCompanion';
 import { todayStr } from '../lib/date';
-import { colors, shadow } from '../theme';
+import { colors, shadow, centered } from '../theme';
 import { buildPracticeQueue, PracticeOrder } from '../lib/practiceQueue';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
@@ -140,6 +140,25 @@ export function HomeScreen({ navigation }: Props) {
         </View>
         <Text style={styles.arrow}>›</Text>
       </Pressable>
+      <Pressable style={styles.card} onPress={() => navigation.navigate('Relations')}>
+        <View>
+          <Text style={styles.cardTitle}>近義／反義詞</Text>
+        </View>
+        <Text style={styles.arrow}>›</Text>
+      </Pressable>
+      <Pressable style={styles.card} onPress={() => navigation.navigate('AllWords')}>
+        <View>
+          <Text style={styles.cardTitle}>單字總覽</Text>
+          <Text style={styles.cardMeta}>{words.length} 個字 · 可以按播放讓它自己唸</Text>
+        </View>
+        <Text style={styles.arrow}>›</Text>
+      </Pressable>
+      <Pressable style={styles.card} onPress={() => navigation.navigate('Notes')}>
+        <View>
+          <Text style={styles.cardTitle}>筆記庫</Text>
+        </View>
+        <Text style={styles.arrow}>›</Text>
+      </Pressable>
 
       <View style={styles.panel}>
         <View style={styles.panelHeader}>
@@ -156,7 +175,7 @@ export function HomeScreen({ navigation }: Props) {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.page },
-  content: { padding: 20, paddingBottom: 36, gap: 14 },
+  content: { ...centered, padding: 20, paddingBottom: 36, gap: 14 },
   hero: {
     backgroundColor: colors.tint,
     borderRadius: 30,
@@ -181,6 +200,7 @@ const styles = StyleSheet.create({
     borderColor: colors.line,
   },
   cardTitle: { color: colors.ink, fontSize: 20, fontWeight: '900' },
+  cardMeta: { color: colors.muted, fontSize: 13, fontWeight: '700', marginTop: 5 },
   arrow: { color: colors.ink, fontSize: 34, fontWeight: '300' },
   panel: { backgroundColor: colors.surface, borderRadius: 24, padding: 18, borderWidth: 1, borderColor: colors.line },
   panelHeader: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },

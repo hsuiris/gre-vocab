@@ -1,11 +1,12 @@
-import React, { useCallback, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Alert, Image, Modal, Pressable, ScrollView, StyleSheet, Switch, Text, TextInput, View } from 'react-native';
 import { useFocusEffect, usePreventRemove } from '@react-navigation/native';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import * as ImagePicker from 'expo-image-picker';
 import type { RootStackParamList } from '../navigation/RootNavigator';
 import { AppSettings, defaultSettings, formatGoal, getSettings, saveSettings } from '../lib/storage';
-import { colors } from '../theme';
+import { autoVoice, listEnglishVoices, setPreferredVoice, speakWord } from '../lib/speech';
+import { colors, centered } from '../theme';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Settings'>;
 type PasswordDraft = { current: string; next: string; confirm: string };
@@ -17,6 +18,7 @@ export function SettingsScreen({ navigation }: Props) {
   const [draft, setDraft] = useState<AppSettings>(defaultSettings);
   const [passwordDraft, setPasswordDraft] = useState<PasswordDraft>({ current: '', next: '', confirm: '' });
   const [accountOpen, setAccountOpen] = useState(false);
+  const [voices, setVoices] = useState<{ id: string; name: string }[]>([]);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
 
@@ -34,6 +36,12 @@ export function SettingsScreen({ navigation }: Props) {
       };
     }, [])
   );
+
+  useEffect(() => {
+    listEnglishVoices().then(setVoices);
+  }, []);
+
+  const autoName = voices.find((v) => v.id === autoVoice())?.name ?? '偵測中…';
 
   const changes = useMemo(
     () => describeChanges(saved, draft, passwordDraft),
@@ -218,6 +226,35 @@ export function SettingsScreen({ navigation }: Props) {
           />
         </Section>
 
+        <Section title="發音">
+          <Text style={styles.voiceHint}>
+            點一下試聽，選你覺得最像真人的那個。名字有 Enhanced／Premium／Natural 的通常最自然。
+            {voices.length === 0 ? '\n這個瀏覽器沒有回報任何英文語音，改用 Safari 或 Edge 試試。' : ''}
+          </Text>
+          <VoiceRow
+            name="自動選擇"
+            meta={`程式自己挑，目前挑到：${autoName}`}
+            selected={draft.voiceId === null}
+            onPress={() => {
+              updateDraft({ ...draft, voiceId: null });
+              setPreferredVoice(null);
+              speakWord('The deluge washed out the bridge before dawn.');
+            }}
+          />
+          {voices.map((v) => (
+            <VoiceRow
+              key={v.id}
+              name={v.name}
+              selected={draft.voiceId === v.id}
+              onPress={() => {
+                updateDraft({ ...draft, voiceId: v.id });
+                setPreferredVoice(v.id);
+                speakWord('The deluge washed out the bridge before dawn.');
+              }}
+            />
+          ))}
+        </Section>
+
         <Section title="資料">
           <SettingLink title="學習統計" meta="查看盒子分布與已排除字數。" onPress={() => navigation.navigate('Stats')} />
           <SettingLink title="太簡單的字" meta="管理被移出複習佇列的單字。" onPress={() => navigation.navigate('Excluded')} />
@@ -279,6 +316,7 @@ function describeChanges(saved: AppSettings, draft: AppSettings, passwordDraft: 
   if (saved.streakNotifications !== draft.streakNotifications) changes.push(`連續學習提醒：${draft.streakNotifications ? '開啟' : '關閉'}`);
   if (saved.autoShowDetails !== draft.autoShowDetails) changes.push(`自動顯示詳細解釋：${draft.autoShowDetails ? '開啟' : '關閉'}`);
   if (saved.autoShowChoiceAnswers !== draft.autoShowChoiceAnswers) changes.push(`顯示其他選項答案：${draft.autoShowChoiceAnswers ? '開啟' : '關閉'}`);
+  if (saved.voiceId !== draft.voiceId) changes.push('發音語音已更換');
   return changes;
 }
 
@@ -438,6 +476,20 @@ function Section({ title, children }: SectionProps) {
   );
 }
 
+type VoiceRowProps = { name: string; meta?: string; selected: boolean; onPress: () => void };
+
+function VoiceRow({ name, meta, selected, onPress }: VoiceRowProps) {
+  return (
+    <Pressable style={styles.row} onPress={onPress}>
+      <View style={styles.rowText}>
+        <Text style={styles.rowTitle}>{name}</Text>
+        {meta ? <Text style={styles.rowMeta}>{meta}</Text> : null}
+      </View>
+      <Text style={selected ? styles.voiceCheck : styles.voicePlay}>{selected ? '✓' : '▶'}</Text>
+    </Pressable>
+  );
+}
+
 type SwitchProps = {
   title: string;
   meta: string;
@@ -482,7 +534,7 @@ function SettingLink({ title, meta, onPress }: LinkProps) {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.page },
-  content: { padding: 20, paddingBottom: 40, gap: 16 },
+  content: { ...centered, padding: 20, paddingBottom: 40, gap: 16 },
   eyebrow: { color: colors.green, fontSize: 14, fontWeight: '900' },
   accountCard: {
     backgroundColor: colors.surface,
@@ -516,6 +568,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   pencilIcon: { width: 23, height: 23, resizeMode: 'contain' },
+  voiceHint: { color: colors.muted, fontSize: 13, fontWeight: '700', lineHeight: 19, padding: 18, paddingBottom: 4 },
+  voiceCheck: { color: colors.green, fontSize: 18, fontWeight: '900' },
+  voicePlay: { color: colors.blue, fontSize: 14, fontWeight: '900' },
   sectionTitle: { color: colors.muted, fontSize: 13, fontWeight: '900', marginBottom: 8, marginLeft: 4 },
   panel: { backgroundColor: colors.surface, borderRadius: 24, borderWidth: 1, borderColor: colors.line, overflow: 'hidden' },
   goalBox: { padding: 18, gap: 14 },
