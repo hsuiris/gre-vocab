@@ -3,7 +3,8 @@ import { colors } from '../src/theme';
 // A low-saturation palette is one bad hex away from unreadable, and nothing in
 // a render test would catch it. These are the pairs the screens actually put
 // together; every one must clear WCAG AA for normal text.
-const AA = 4.5;
+const AA = 4.5; // WCAG AA for normal text
+const AA_UI = 3.0; // WCAG AA for a control's own shape, which carries no text
 
 function channel(value: number): number {
   const v = value / 255;
@@ -35,7 +36,6 @@ const PAIRS: [keyof typeof colors, keyof typeof colors][] = [
   ['blue', 'tint'],
   ['red', 'redSoft'],
   ['red', 'surface'],
-  ['green', 'greenSoft'],
   ['yellowInk', 'surface'],
   ['yellowInk', 'page'],
   ['surface', 'yellowInk'], // the only yellow that may sit behind text
@@ -44,6 +44,14 @@ const PAIRS: [keyof typeof colors, keyof typeof colors][] = [
 describe('palette contrast', () => {
   it.each(PAIRS)('%s on %s clears AA', (fg, bg) => {
     expect(contrast(colors[fg], colors[bg])).toBeGreaterThanOrEqual(AA);
+  });
+
+  // greenSoft is only ever a switch track, so it holds no text — the bar is
+  // the one for a control's own shape. Putting green text on it would need a
+  // greenSoft indistinguishable from white, since green sits right at the AA
+  // line against white already.
+  it('the green switch thumb stays visible on its track', () => {
+    expect(contrast(colors.green, colors.greenSoft)).toBeGreaterThanOrEqual(AA_UI);
   });
 
   // Bright yellow is unreadable under white text and too close to the page

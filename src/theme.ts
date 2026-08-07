@@ -24,8 +24,8 @@ export const colors = {
 
   // Kept for one job only — "you got it right". Everything decorative that used
   // to be green is now blue.
-  green: '#35754a',
-  greenSoft: '#ecf6ef',
+  green: '#008a00',
+  greenSoft: '#e4f4e4',
 };
 
 // Duolingo's signature button: a flat slab with a darker lip along the bottom
@@ -33,7 +33,7 @@ export const colors = {
 export const slabEdge = {
   blue: '#1c4a70',
   red: '#853632',
-  green: '#255338',
+  green: '#00590a',
   line: '#cfd9de',
 };
 
