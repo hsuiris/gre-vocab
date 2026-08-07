@@ -1,15 +1,22 @@
-// A macaron palette on a pink page. Every hue comes as a pair: a pastel that
-// fills a shape, and the ink that goes on top of it. Nothing is filled with a
-// strong colour and lettered in white — at this lightness white text washes out,
-// so the pastel carries its own deep tone instead.
-// __tests__/theme.test.ts pins all 27 pairings at AA.
+// A macaron palette. Every hue comes as a pair: a pastel that fills a shape,
+// and the ink that goes on top of it. Nothing is filled with a strong colour
+// and lettered in white — at this lightness white text washes out, which is
+// what made a saturated palette feel hard.
+// __tests__/theme.test.ts pins every pairing at AA.
 export const colors = {
   ink: '#5c4a51',
   muted: '#756068',
-  line: '#f2e2e7',
+  line: '#f0e2e6',
   surface: '#ffffff',
-  page: '#fdf3f6',
-  // A deeper pink for the hero and the question card, so they lift off the page.
+  // Barely off-white, with just enough warmth to keep the pink accents at home.
+  // White cards still read as raised because `line` and the shadow are pinker
+  // than the page is.
+  page: '#faf7f8',
+  // Recessed areas inside a white card — option buttons, text fields, list
+  // rows. These cannot use `page`: on a near-white page that would make them
+  // invisible against the card they sit in.
+  inset: '#f6eef1',
+  // Pink for the hero and the question card, so they lift off the page.
   tint: '#fce6ec',
 
   pink: '#f9d4dd',

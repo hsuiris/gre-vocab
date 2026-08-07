@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
   preview: { color: colors.ink, marginTop: 8, lineHeight: 21, fontWeight: '600' },
   input: {
     marginTop: 10,
-    backgroundColor: colors.page,
+    backgroundColor: colors.inset,
     borderRadius: 16,
     padding: 12,
     minHeight: 120,

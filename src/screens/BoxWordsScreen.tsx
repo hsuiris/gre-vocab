@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
     flex: 1,
     height: 34,
     borderRadius: 17,
-    backgroundColor: colors.page,
+    backgroundColor: colors.inset,
     alignItems: 'center',
     justifyContent: 'center',
   },

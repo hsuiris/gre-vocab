@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
   list: { flex: 1 },
   listContent: { gap: 10, paddingBottom: 4 },
   empty: { color: colors.muted, fontWeight: '700', textAlign: 'center', paddingVertical: 28, lineHeight: 22 },
-  row: { backgroundColor: colors.page, borderRadius: 18, padding: 13 },
+  row: { backgroundColor: colors.inset, borderRadius: 18, padding: 13 },
   rowHead: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   badgeWrong: {
     color: colors.redInk,
@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
   example: { color: colors.ink, fontSize: 13, lineHeight: 19, marginTop: 6, fontStyle: 'italic' },
   input: {
     flex: 1,
-    backgroundColor: colors.page,
+    backgroundColor: colors.inset,
     borderRadius: 18,
     padding: 14,
     minHeight: 96,
@@ -159,7 +159,7 @@ const styles = StyleSheet.create({
     paddingVertical: 13,
     alignItems: 'center',
   },
-  saveBtnOff: { backgroundColor: colors.page, borderBottomColor: slabEdge.line },
+  saveBtnOff: { backgroundColor: colors.inset, borderBottomColor: slabEdge.line },
   saveText: { color: colors.blueInk, fontWeight: '900', fontSize: 15 },
   saveTextOff: { color: colors.muted },
 });

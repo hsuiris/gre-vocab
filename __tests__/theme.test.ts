@@ -28,9 +28,11 @@ const NEUTRAL: [Token, Token][] = [
   ['ink', 'page'],
   ['ink', 'surface'],
   ['ink', 'tint'],
+  ['ink', 'inset'],
   ['muted', 'page'],
   ['muted', 'surface'],
   ['muted', 'tint'],
+  ['muted', 'inset'],
 ];
 
 // Each pastel carries its own ink; nothing here is lettered in white, because
@@ -69,5 +71,17 @@ describe('palette contrast', () => {
   // so the bar is the one for a control's own shape.
   it('the green switch thumb stays visible on its track', () => {
     expect(contrast(colors.greenInk, colors.green)).toBeGreaterThanOrEqual(AA_UI);
+  });
+
+  // The page is near-white, so these three barely differ in lightness and it
+  // would be easy to collapse them by accident. Each still has to be its own
+  // step: a recessed field must show against the card it sits in, and a card
+  // must show against the page.
+  it('page, card and recessed field stay three distinct surfaces', () => {
+    const step = 1.05;
+    expect(contrast(colors.inset, colors.surface)).toBeGreaterThanOrEqual(step);
+    expect(contrast(colors.line, colors.page)).toBeGreaterThanOrEqual(step);
+    expect(colors.page).not.toBe(colors.surface);
+    expect(colors.page).not.toBe(colors.inset);
   });
 });

@@ -320,7 +320,7 @@ const styles = StyleSheet.create({
   cloze: { color: colors.ink, fontSize: 20, fontWeight: '800', lineHeight: 28, textAlign: 'center' },
   options: { width: '100%', maxWidth: 760, marginTop: 16, gap: 10 },
   option: {
-    backgroundColor: colors.page,
+    backgroundColor: colors.inset,
     borderWidth: 1,
     borderColor: colors.line,
     ...slab(slabEdge.line),
@@ -371,7 +371,7 @@ const styles = StyleSheet.create({
   nextBtnText: { color: colors.blueInk, fontWeight: '900', fontSize: 16 },
   typingBox: { width: '100%', maxWidth: 760, marginTop: 16, gap: 10 },
   input: {
-    backgroundColor: colors.page,
+    backgroundColor: colors.inset,
     borderWidth: 1,
     borderColor: colors.line,
     borderRadius: 20,
@@ -396,7 +396,7 @@ const styles = StyleSheet.create({
     marginTop: 14,
     width: '100%',
     maxWidth: 760,
-    backgroundColor: colors.page,
+    backgroundColor: colors.inset,
     borderRadius: 24,
     padding: 18,
     borderWidth: 1,
