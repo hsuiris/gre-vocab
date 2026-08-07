@@ -39,6 +39,10 @@ export const slabEdge = {
 
 export const slab = (edge: string) => ({ borderBottomWidth: 4, borderBottomColor: edge });
 
+// Pair with slab(): pressing squashes the lip and drops the face onto it, which
+// is what makes the button feel like a real key going down.
+export const slabPressed = { transform: [{ translateY: 2 }], borderBottomWidth: 2 };
+
 export const shadow = {
   shadowColor: '#8fa4ae',
   shadowOpacity: 0.18,

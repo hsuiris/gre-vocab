@@ -3,7 +3,7 @@ import { View, Text, Pressable, TextInput, FlatList, StyleSheet } from 'react-na
 import { useFocusEffect } from '@react-navigation/native';
 import { words, WordEntry } from '../data/words';
 import { speakSequence, stopSpeaking } from '../lib/speech';
-import { colors, centered, slab, slabEdge } from '../theme';
+import { colors, centered, slab, slabEdge, slabPressed } from '../theme';
 
 // Fixed so getItemLayout can exist, which is what lets the A-Z strip and the
 // player jump straight to a row in a 3000-item list without measuring it.
@@ -136,7 +136,10 @@ export function AllWordsScreen() {
           renderItem={({ item, index }) => {
             const active = index === current;
             return (
-              <Pressable style={[styles.row, active && styles.rowActive]} onPress={() => playAt(index)}>
+              <Pressable
+                style={({ pressed }) => [styles.row, active && styles.rowActive, pressed && slabPressed]}
+                onPress={() => playAt(index)}
+              >
                 <View style={styles.rowTop}>
                   <Text style={styles.word} numberOfLines={1}>
                     {item.word}
@@ -187,7 +190,11 @@ export function AllWordsScreen() {
             <Pressable style={styles.stepBtn} onPress={() => step(-1)} hitSlop={8}>
               <Text style={styles.stepText}>⏮</Text>
             </Pressable>
-            <Pressable style={styles.playBtn} onPress={() => (playing ? stop() : playAt(current))} hitSlop={8}>
+            <Pressable
+              style={({ pressed }) => [styles.playBtn, pressed && slabPressed]}
+              onPress={() => (playing ? stop() : playAt(current))}
+              hitSlop={8}
+            >
               <Text style={styles.playText}>{playing ? '⏸' : '▶'}</Text>
             </Pressable>
             <Pressable style={styles.stepBtn} onPress={() => step(1)} hitSlop={8}>

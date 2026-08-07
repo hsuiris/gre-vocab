@@ -3,6 +3,7 @@ import { View, Text, Pressable, StyleSheet, FlatList } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import { words, WordEntry } from '../data/words';
 import { getExcludedWords, restoreWord } from '../lib/storage';
+import { Mascot } from '../components/Mascot';
 import { colors, centered } from '../theme';
 
 export function ExcludedScreen() {
@@ -31,6 +32,7 @@ export function ExcludedScreen() {
       <Text style={styles.title}>回收桶</Text>
       {excluded.length === 0 ? (
         <View style={styles.emptyCard}>
+          <Mascot size={112} message="一個字都沒丟掉" />
           <Text style={styles.emptyTitle}>現在很乾淨</Text>
           <Text style={styles.empty}>目前沒有標記太簡單的字</Text>
         </View>
@@ -60,8 +62,15 @@ const styles = StyleSheet.create({
   container: { ...centered, flex: 1, backgroundColor: colors.page, padding: 20 },
   eyebrow: { color: colors.blue, fontSize: 14, fontWeight: '900' },
   title: { color: colors.ink, fontSize: 32, fontWeight: '900', marginTop: 4, marginBottom: 16 },
-  emptyCard: { backgroundColor: colors.surface, borderRadius: 24, padding: 24, borderWidth: 1, borderColor: colors.line },
-  emptyTitle: { color: colors.ink, fontSize: 20, fontWeight: '900', textAlign: 'center' },
+  emptyCard: {
+    backgroundColor: colors.surface,
+    borderRadius: 24,
+    padding: 24,
+    borderWidth: 1,
+    borderColor: colors.line,
+    alignItems: 'center',
+  },
+  emptyTitle: { color: colors.ink, fontSize: 20, fontWeight: '900', textAlign: 'center', marginTop: 10 },
   empty: { color: colors.muted, marginTop: 8, textAlign: 'center', fontWeight: '700' },
   list: { gap: 10, paddingBottom: 24 },
   row: {

@@ -1,5 +1,15 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { View, Text, ScrollView, StyleSheet, Pressable, Modal, useWindowDimensions } from 'react-native';
+import {
+  View,
+  Text,
+  ScrollView,
+  StyleSheet,
+  Pressable,
+  Modal,
+  Animated,
+  Easing,
+  useWindowDimensions,
+} from 'react-native';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/RootNavigator';
 import { words, WordEntry } from '../data/words';
@@ -23,13 +33,22 @@ import { buildChoices } from '../lib/quiz';
 import { buildPracticeQueue } from '../lib/practiceQueue';
 import { MultipleChoiceCard } from '../components/MultipleChoiceCard';
 import { SessionSidePanel, MarkedWord } from '../components/SessionSidePanel';
-import { colors, slab, slabEdge } from '../theme';
+import { Mascot, Mood } from '../components/Mascot';
+import { colors, slab, slabEdge, slabPressed } from '../theme';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Practice'>;
 
 // Below this the screen is a phone held upright: there is no room for a real
 // second column, so the panel becomes a slide-over instead.
 const WIDE_AT = 700;
+
+// Picked per answer so the same line never lands twice in a row.
+const CHEERS = ['答對了！', '好棒！', '就是這個！', '記住了耶', '很有感覺喔'];
+const CONSOLES = ['沒關係，記起來就好', '這個字比較難', '下次一定行', '再看一次例句', '錯過的更容易記住'];
+
+function pick(lines: string[], seed: number): string {
+  return lines[seed % lines.length];
+}
 
 export function PracticeScreen({ route }: Props) {
   const direction: 'en-zh' | 'zh-en' = route.params?.direction ?? 'en-zh';
@@ -46,7 +65,9 @@ export function PracticeScreen({ route }: Props) {
   const [note, setNote] = useState('');
   const [noteSaved, setNoteSaved] = useState(false);
   const [panelOpen, setPanelOpen] = useState(false);
+  const [mood, setMood] = useState<Mood>('idle');
   const processingRef = useRef(false);
+  const barFill = useRef(new Animated.Value(0)).current;
   // Fixed at mount so re-saving edits the same note instead of piling up a new
   // one every tap.
   const noteIdRef = useRef(`${todayStr()}-${Date.now()}`);
@@ -85,6 +106,17 @@ export function PracticeScreen({ route }: Props) {
     })();
   }, [route.params?.letters, route.params?.order, route.params?.wrongOnly]);
 
+  // The bar slides to the new percentage instead of snapping, which is most of
+  // what makes finishing a card feel like progress rather than a state change.
+  useEffect(() => {
+    Animated.timing(barFill, {
+      toValue: queue.length === 0 ? 0 : Math.min(index, queue.length) / queue.length,
+      duration: 420,
+      easing: Easing.out(Easing.cubic),
+      useNativeDriver: false, // animating width, which the native driver can't do
+    }).start();
+  }, [index, queue.length, barFill]);
+
   // A word shows up once. A miss outranks a self-reported "unsure", so a wrong
   // answer can upgrade an existing star but never the other way round.
   function mark(entry: WordEntry, reason: MarkedWord['reason']) {
@@ -113,6 +145,7 @@ export function PracticeScreen({ route }: Props) {
       await (knewIt ? removeWrongWord(entry.word) : addWrongWord(entry.word));
       if (!knewIt) mark(entry, 'wrong');
       await incrementHeatmapToday(today);
+      setMood('idle'); // the next card starts with a calm mascot
       setIndex((i) => i + 1);
     } finally {
       processingRef.current = false;
@@ -171,7 +204,10 @@ export function PracticeScreen({ route }: Props) {
   const done = index >= queue.length;
   const current = done ? null : queue[index];
   const currentUnsure = current ? marked.some((m) => m.entry.word === current.word) : false;
-  const progressPct = queue.length === 0 ? 0 : Math.round((Math.min(index, queue.length) / queue.length) * 100);
+  const barWidth = barFill.interpolate({ inputRange: [0, 1], outputRange: ['0%', '100%'] });
+  const wrongCount = marked.filter((m) => m.reason === 'wrong').length;
+  const mascotLine =
+    mood === 'happy' ? pick(CHEERS, index) : mood === 'sad' ? pick(CONSOLES, index) : '慢慢來，我陪你';
 
   return (
     <View style={styles.screen}>
@@ -188,7 +224,7 @@ export function PracticeScreen({ route }: Props) {
           )}
         </View>
         <View style={styles.track}>
-          <View style={[styles.fill, { width: `${progressPct}%` }]} />
+          <Animated.View style={[styles.fill, { width: barWidth }]} />
         </View>
       </View>
 
@@ -201,31 +237,38 @@ export function PracticeScreen({ route }: Props) {
         >
           {done ? (
             <View style={styles.doneCard}>
-              <Text style={styles.doneMark}>✓</Text>
-              <Text style={styles.doneTitle}>今天的複習都完成了！</Text>
+              <Mascot mood="happy" size={150} message="今天的份做完了！" />
+              <Text style={styles.doneTitle}>辛苦了</Text>
               <Text style={styles.doneMeta}>
-                {queue.length} 題 · 錯 {marked.filter((m) => m.reason === 'wrong').length} 題
+                {queue.length} 題 · 錯 {wrongCount} 題
               </Text>
               {!wide && (
-                <Pressable style={styles.donePanelButton} onPress={() => setPanelOpen(true)}>
+                <Pressable
+                  style={({ pressed }) => [styles.donePanelButton, pressed && slabPressed]}
+                  onPress={() => setPanelOpen(true)}
+                >
                   <Text style={styles.donePanelButtonText}>看錯題 · 寫筆記</Text>
                 </Pressable>
               )}
             </View>
           ) : (
-            <MultipleChoiceCard
-              key={`${mode}-${current!.word}`}
-              entry={current!}
-              direction={direction}
-              mode={mode}
-              choices={choices}
-              choiceEntries={choiceEntries}
-              settings={settings}
-              onResult={handleResult}
-              onExclude={handleExclude}
-              onMarkUnsure={() => mark(current!, 'unsure')}
-              unsure={currentUnsure}
-            />
+            <>
+              <MultipleChoiceCard
+                key={`${mode}-${current!.word}`}
+                entry={current!}
+                direction={direction}
+                mode={mode}
+                choices={choices}
+                choiceEntries={choiceEntries}
+                settings={settings}
+                onResult={handleResult}
+                onAnswered={(correct) => setMood(correct ? 'happy' : 'sad')}
+                onExclude={handleExclude}
+                onMarkUnsure={() => mark(current!, 'unsure')}
+                unsure={currentUnsure}
+              />
+              <Mascot mood={mood} message={mascotLine} size={104} style={styles.quizMascot} />
+            </>
           )}
         </ScrollView>
 
@@ -298,20 +341,9 @@ const styles = StyleSheet.create({
   modalRow: { flex: 1, flexDirection: 'row', backgroundColor: 'rgba(18,33,50,0.35)' },
   scrim: { flex: 1 },
   modalPanel: { width: '88%', maxWidth: 420, padding: 12 },
-  doneCard: { alignItems: 'center', paddingTop: 40, paddingHorizontal: 24 },
-  doneMark: {
-    width: 76,
-    height: 76,
-    borderRadius: 38,
-    backgroundColor: colors.greenSoft,
-    color: colors.green,
-    fontSize: 44,
-    fontWeight: '900',
-    textAlign: 'center',
-    lineHeight: 76,
-    marginBottom: 18,
-  },
-  doneTitle: { color: colors.ink, fontSize: 22, fontWeight: '900', textAlign: 'center' },
+  quizMascot: { marginTop: 22 },
+  doneCard: { alignItems: 'center', paddingTop: 32, paddingHorizontal: 24 },
+  doneTitle: { color: colors.ink, fontSize: 22, fontWeight: '900', textAlign: 'center', marginTop: 12 },
   doneMeta: { color: colors.muted, fontSize: 15, fontWeight: '700', marginTop: 8, textAlign: 'center' },
   donePanelButton: {
     ...slab(slabEdge.blue),

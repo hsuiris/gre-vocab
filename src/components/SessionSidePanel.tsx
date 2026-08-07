@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, Pressable, ScrollView, TextInput, StyleSheet } from 'react-native';
 import { WordEntry } from '../data/words';
 import { speakWord } from '../lib/speech';
-import { colors, slab, slabEdge } from '../theme';
+import { colors, slab, slabEdge, slabPressed } from '../theme';
 
 // "wrong" lands here on its own when an answer is missed; "unsure" is the star
 // on the card, for the ones guessed right without really knowing them.
@@ -71,7 +71,7 @@ export function SessionSidePanel({ marked, note, onChangeNote, onSaveNote, saved
           style={styles.input}
         />
         <Pressable
-          style={[styles.saveBtn, !canSave && styles.saveBtnOff]}
+          style={({ pressed }) => [styles.saveBtn, !canSave && styles.saveBtnOff, pressed && canSave && slabPressed]}
           onPress={onSaveNote}
           disabled={!canSave}
         >

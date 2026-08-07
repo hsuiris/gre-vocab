@@ -16,6 +16,14 @@ jest.mock('@react-navigation/native', () => ({
     require('react').useEffect(callback, [callback]),
 }));
 
+// The real mascot runs an endless breathing animation. These tests are about
+// what the screens say, not how the character moves, and a live Animated.loop
+// keeps firing timers long after the assertions finish.
+jest.mock('../src/components/Mascot', () => ({
+  Mascot: ({ message }: { message?: string }) =>
+    message ? require('react').createElement(require('react-native').Text, null, message) : null,
+}));
+
 import { SessionSidePanel } from '../src/components/SessionSidePanel';
 import { AllWordsScreen } from '../src/screens/AllWordsScreen';
 import { NotesScreen } from '../src/screens/NotesScreen';
@@ -25,9 +33,18 @@ import { words } from '../src/data/words';
 
 const AsyncStorage = require('@react-native-async-storage/async-storage');
 
+const mounted: renderer.ReactTestRenderer[] = [];
+
 beforeEach(async () => {
   mockSpeak.mockClear();
   await AsyncStorage.clear();
+});
+
+// Leaving trees mounted leaks every effect they started into the next test.
+afterEach(async () => {
+  await act(async () => {
+    mounted.splice(0).forEach((tree) => tree.unmount());
+  });
 });
 
 // react-test-renderer hands out null refs, and VirtualizedList calls scrollTo on
@@ -67,6 +84,7 @@ async function mount(element: React.ReactElement) {
     // act, or React warns about the update afterwards.
     await new Promise((resolve) => setTimeout(resolve, 0));
   });
+  mounted.push(tree);
   return tree;
 }
 

@@ -6,9 +6,9 @@ import type { QuizMode, RootStackParamList } from '../navigation/RootNavigator';
 import { words } from '../data/words';
 import { getAllProgress, getHeatmap, getExcludedWords } from '../lib/storage';
 import { Heatmap } from '../components/Heatmap';
-import { PetCompanion } from '../components/PetCompanion';
+import { Mascot } from '../components/Mascot';
 import { todayStr } from '../lib/date';
-import { colors, shadow, centered, slab, slabEdge } from '../theme';
+import { colors, shadow, centered, slab, slabEdge, slabPressed } from '../theme';
 import { buildPracticeQueue, PracticeOrder } from '../lib/practiceQueue';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
@@ -60,7 +60,7 @@ export function HomeScreen({ navigation }: Props) {
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
       <View style={styles.hero}>
-        <PetCompanion message={'一天一天\n往目標邁進'} />
+        <Mascot message={'一天一天\n往目標邁進'} size={124} style={styles.heroPet} />
         <Text style={styles.eyebrow}>今日複習</Text>
         <Text style={styles.title} numberOfLines={1} adjustsFontSizeToFit>
           把 GRE 單字照顧好
@@ -110,50 +110,50 @@ export function HomeScreen({ navigation }: Props) {
         </View>
       </View>
 
-      <Pressable style={styles.card} onPress={() => navigation.navigate('AllWords')}>
+      <Pressable style={({ pressed }) => [styles.card, pressed && slabPressed]} onPress={() => navigation.navigate('AllWords')}>
         <View>
           <Text style={styles.cardTitle}>單字總覽</Text>
           <Text style={styles.cardMeta}>{words.length} 個字 · 可以按播放讓它自己唸</Text>
         </View>
         <Text style={styles.arrow}>›</Text>
       </Pressable>
-      <Pressable style={styles.card} onPress={() => start('en-zh', 'choice')}>
+      <Pressable style={({ pressed }) => [styles.card, pressed && slabPressed]} onPress={() => start('en-zh', 'choice')}>
         <View>
           <Text style={styles.cardTitle}>英文選中文意思</Text>
         </View>
         <Text style={styles.arrow}>›</Text>
       </Pressable>
-      <Pressable style={styles.card} onPress={() => start('zh-en', 'choice')}>
+      <Pressable style={({ pressed }) => [styles.card, pressed && slabPressed]} onPress={() => start('zh-en', 'choice')}>
         <View>
           <Text style={styles.cardTitle}>中文選英文單字</Text>
         </View>
         <Text style={styles.arrow}>›</Text>
       </Pressable>
-      <Pressable style={styles.card} onPress={() => start('zh-en', 'cloze')}>
+      <Pressable style={({ pressed }) => [styles.card, pressed && slabPressed]} onPress={() => start('zh-en', 'cloze')}>
         <View>
           <Text style={styles.cardTitle}>句子填空</Text>
         </View>
         <Text style={styles.arrow}>›</Text>
       </Pressable>
-      <Pressable style={styles.card} onPress={() => start('zh-en', 'typing')}>
+      <Pressable style={({ pressed }) => [styles.card, pressed && slabPressed]} onPress={() => start('zh-en', 'typing')}>
         <View>
           <Text style={styles.cardTitle}>手寫單字</Text>
         </View>
         <Text style={styles.arrow}>›</Text>
       </Pressable>
-      <Pressable style={styles.card} onPress={startWrongReview}>
+      <Pressable style={({ pressed }) => [styles.card, pressed && slabPressed]} onPress={startWrongReview}>
         <View>
           <Text style={styles.cardTitle}>複習錯題</Text>
         </View>
         <Text style={styles.arrow}>›</Text>
       </Pressable>
-      <Pressable style={styles.card} onPress={() => navigation.navigate('Relations')}>
+      <Pressable style={({ pressed }) => [styles.card, pressed && slabPressed]} onPress={() => navigation.navigate('Relations')}>
         <View>
           <Text style={styles.cardTitle}>近義／反義詞</Text>
         </View>
         <Text style={styles.arrow}>›</Text>
       </Pressable>
-      <Pressable style={styles.card} onPress={() => navigation.navigate('Notes')}>
+      <Pressable style={({ pressed }) => [styles.card, pressed && slabPressed]} onPress={() => navigation.navigate('Notes')}>
         <View>
           <Text style={styles.cardTitle}>筆記庫</Text>
         </View>
@@ -184,6 +184,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     overflow: 'hidden',
   },
+  heroPet: { position: 'absolute', right: -6, top: 40 },
   eyebrow: { color: colors.blue, fontSize: 14, fontWeight: '800', marginBottom: 8 },
   title: { color: colors.ink, fontSize: 28, fontWeight: '900', lineHeight: 34, maxWidth: 270 },
   due: { color: colors.muted, fontSize: 17, fontWeight: '700', marginTop: 10 },

@@ -5,7 +5,7 @@ import { WordEntry } from '../data/words';
 import { getRelation } from '../data/relations';
 import type { AppSettings } from '../lib/storage';
 import { speakWord } from '../lib/speech';
-import { colors, slab, slabEdge } from '../theme';
+import { colors, slab, slabEdge, slabPressed } from '../theme';
 
 type Props = {
   entry: WordEntry;
@@ -15,6 +15,9 @@ type Props = {
   choiceEntries: Record<string, WordEntry>;
   settings: AppSettings;
   onResult: (knewIt: boolean) => void;
+  // Fires the instant an answer is picked, not when the card advances, so the
+  // mascot can react while the result is still on screen.
+  onAnswered: (correct: boolean) => void;
   onExclude: () => void;
   onMarkUnsure: () => void;
   unsure: boolean;
@@ -45,6 +48,7 @@ export function MultipleChoiceCard({
   choiceEntries,
   settings,
   onResult,
+  onAnswered,
   onExclude,
   onMarkUnsure,
   unsure,
@@ -58,20 +62,27 @@ export function MultipleChoiceCard({
   const answered = selected !== null;
   const blankedExample = entry.example.replace(new RegExp(entry.word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i'), '_____');
 
+  function isCorrect(answer: string) {
+    return answer.trim().toLowerCase() === correctAnswer.toLowerCase();
+  }
+
   function handleSelect(choice: string) {
     if (answered) return; // locked after first tap
     setSelected(choice);
+    onAnswered(isCorrect(choice));
     if (settings.autoShowDetails) setExpanded(true);
   }
 
   function handleTypingSubmit() {
     if (answered) return;
-    setSelected(typed.trim());
+    const answer = typed.trim();
+    setSelected(answer);
+    onAnswered(isCorrect(answer));
     if (settings.autoShowDetails) setExpanded(true);
   }
 
   function handleNext() {
-    const knewIt = selected?.trim().toLowerCase() === correctAnswer.toLowerCase();
+    const knewIt = isCorrect(selected ?? '');
     setSelected(null);
     setTyped('');
     setExpanded(false);
@@ -79,10 +90,15 @@ export function MultipleChoiceCard({
   }
 
   function optionStyle(choice: string) {
-    if (!answered) return styles.option;
-    if (choice === correctAnswer) return [styles.option, styles.optionCorrect];
-    if (choice === selected) return [styles.option, styles.optionWrong];
-    return [styles.option, styles.optionDisabled];
+    return ({ pressed }: { pressed: boolean }) => {
+      // Only an unanswered option can be pressed down; once locked, the key
+      // staying put is the feedback.
+      const press = pressed && !answered ? slabPressed : null;
+      if (!answered) return [styles.option, press];
+      if (choice === correctAnswer) return [styles.option, styles.optionCorrect];
+      if (choice === selected) return [styles.option, styles.optionWrong];
+      return [styles.option, styles.optionDisabled];
+    };
   }
 
   function optionTextStyle(choice: string) {
@@ -180,7 +196,7 @@ export function MultipleChoiceCard({
             onSubmitEditing={handleTypingSubmit}
           />
           {!answered && (
-            <Pressable style={styles.submitBtn} onPress={handleTypingSubmit}>
+            <Pressable style={({ pressed }) => [styles.submitBtn, pressed && slabPressed]} onPress={handleTypingSubmit}>
               <Text style={styles.submitText}>送出</Text>
             </Pressable>
           )}
@@ -204,7 +220,7 @@ export function MultipleChoiceCard({
       )}
 
       {answered && (
-        <Pressable style={styles.nextBtn} onPress={handleNext}>
+        <Pressable style={({ pressed }) => [styles.nextBtn, pressed && slabPressed]} onPress={handleNext}>
           <Text style={styles.nextBtnText}>下一題</Text>
         </Pressable>
       )}

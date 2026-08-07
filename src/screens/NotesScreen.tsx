@@ -2,7 +2,8 @@ import React, { useCallback, useState } from 'react';
 import { View, Text, Pressable, FlatList, TextInput, StyleSheet } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import { getNotes, saveNote, deleteNote, StudyNote } from '../lib/storage';
-import { colors, centered, slab, slabEdge } from '../theme';
+import { Mascot } from '../components/Mascot';
+import { colors, centered, slab, slabEdge, slabPressed } from '../theme';
 
 export function NotesScreen() {
   const [notes, setNotes] = useState<StudyNote[]>([]);
@@ -48,6 +49,7 @@ export function NotesScreen() {
       <Text style={styles.title}>筆記庫</Text>
       {notes.length === 0 ? (
         <View style={styles.emptyCard}>
+          <Mascot size={112} message="這裡還空空的" />
           <Text style={styles.emptyTitle}>還沒有筆記</Text>
           <Text style={styles.empty}>練習時在右邊的筆記區寫字，按「存到筆記庫」就會出現在這裡</Text>
         </View>
@@ -77,10 +79,10 @@ export function NotesScreen() {
                       style={styles.input}
                     />
                     <View style={styles.actions}>
-                      <Pressable style={styles.saveBtn} onPress={() => handleSave(item)}>
+                      <Pressable style={({ pressed }) => [styles.saveBtn, pressed && slabPressed]} onPress={() => handleSave(item)}>
                         <Text style={styles.saveText}>儲存</Text>
                       </Pressable>
-                      <Pressable style={styles.deleteBtn} onPress={() => handleDelete(item.id)}>
+                      <Pressable style={({ pressed }) => [styles.deleteBtn, pressed && slabPressed]} onPress={() => handleDelete(item.id)}>
                         <Text style={styles.deleteText}>刪除</Text>
                       </Pressable>
                     </View>
@@ -103,8 +105,15 @@ const styles = StyleSheet.create({
   container: { ...centered, flex: 1, backgroundColor: colors.page, padding: 20 },
   eyebrow: { color: colors.blue, fontSize: 14, fontWeight: '900' },
   title: { color: colors.ink, fontSize: 32, fontWeight: '900', marginTop: 4, marginBottom: 16 },
-  emptyCard: { backgroundColor: colors.surface, borderRadius: 24, padding: 24, borderWidth: 1, borderColor: colors.line },
-  emptyTitle: { color: colors.ink, fontSize: 20, fontWeight: '900', textAlign: 'center' },
+  emptyCard: {
+    backgroundColor: colors.surface,
+    borderRadius: 24,
+    padding: 24,
+    borderWidth: 1,
+    borderColor: colors.line,
+    alignItems: 'center',
+  },
+  emptyTitle: { color: colors.ink, fontSize: 20, fontWeight: '900', textAlign: 'center', marginTop: 10 },
   empty: { color: colors.muted, marginTop: 8, textAlign: 'center', fontWeight: '700', lineHeight: 22 },
   list: { gap: 10, paddingBottom: 24 },
   row: { backgroundColor: colors.surface, padding: 16, borderRadius: 22, borderWidth: 1, borderColor: colors.line },
