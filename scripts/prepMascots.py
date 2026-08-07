@@ -40,7 +40,31 @@ SKIN = (250, 222, 202)
 SOCK_LINE = 0.74
 
 
-def chroma_key(im: Image.Image, tolerance: int = 60) -> Image.Image:
+KEY_SOLID = 60  # at this distance from the key colour a pixel is pure background
+KEY_EDGE = 200  # beyond this it is pure character; between the two it is an edge
+
+
+def despill(r: int, g: int, b: int, key: tuple[int, int, int]) -> tuple[int, int, int]:
+    """Drain leftover key colour from a pixel without touching real colours.
+
+    Magenta spill shows up as red AND blue both running well above green. Her
+    coral blush keeps blue below green and her open mouth keeps red far ahead of
+    blue, so neither trips this.
+    """
+    channels = [r, g, b]
+    high = [i for i, v in enumerate(key) if v > 127]  # magenta keys on red+blue
+    low = [i for i in range(3) if i not in high]
+    if not low:
+        return r, g, b
+    floor = min(channels[i] for i in low)
+    if min(channels[i] for i in high) - floor <= 40:
+        return r, g, b
+    for i in high:
+        channels[i] = min(channels[i], floor + 40)
+    return channels[0], channels[1], channels[2]
+
+
+def chroma_key(im: Image.Image) -> Image.Image:
     """Cut a solid-colour background out, keeping the character untouched.
 
     This is the path to prefer. Art generated straight onto transparency loses
@@ -48,42 +72,50 @@ def chroma_key(im: Image.Image, tolerance: int = 60) -> Image.Image:
     blush, the line between a thigh and a sock — and no amount of repair brings
     those back, because the pixels are simply gone. Art generated on a solid
     colour that appears nowhere in the character keeps all of it.
+
+    The cut is soft: an antialiased edge pixel is part background, so it becomes
+    part transparent rather than being kept whole (a coloured halo) or dropped
+    whole (a jagged outline).
     """
     im = im.convert("RGBA")
     w, h = im.size
     px = im.load()
     key = px[0, 0][:3]
 
-    near = bytearray(w * h)
-    for y in range(h):
-        row = y * w
-        for x in range(w):
-            r, g, b, _ = px[x, y]
-            if abs(r - key[0]) + abs(g - key[1]) + abs(b - key[2]) <= tolerance:
-                near[row + x] = 1
+    def distance(x: int, y: int) -> int:
+        r, g, b, _ = px[x, y]
+        return abs(r - key[0]) + abs(g - key[1]) + abs(b - key[2])
 
     # Flood from the corners so a background-coloured detail inside the
-    # character (a blue ribbon on a blue key) is never cut out.
-    queue = deque()
+    # character is never cut out. Edge pixels are walkable, so the flood reaches
+    # right up to the outline.
     background = bytearray(w * h)
+    queue = deque()
     for x, y in ((0, 0), (w - 1, 0), (0, h - 1), (w - 1, h - 1)):
-        if near[y * w + x] and not background[y * w + x]:
+        if distance(x, y) < KEY_EDGE and not background[y * w + x]:
             background[y * w + x] = 1
             queue.append((x, y))
     while queue:
         x, y = queue.popleft()
         for nx, ny in ((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)):
-            if 0 <= nx < w and 0 <= ny < h and near[ny * w + nx] and not background[ny * w + nx]:
-                background[ny * w + nx] = 1
-                queue.append((nx, ny))
+            if 0 <= nx < w and 0 <= ny < h and not background[ny * w + nx]:
+                if distance(nx, ny) < KEY_EDGE:
+                    background[ny * w + nx] = 1
+                    queue.append((nx, ny))
 
     for y in range(h):
         row = y * w
         for x in range(w):
-            if background[row + x]:
+            r, g, b, _ = px[x, y]
+            if not background[row + x]:
+                px[x, y] = (*despill(r, g, b, key), 255)
+                continue
+            d = distance(x, y)
+            if d <= KEY_SOLID:
                 px[x, y] = (0, 0, 0, 0)
             else:
-                px[x, y] = (*px[x, y][:3], 255)
+                coverage = (d - KEY_SOLID) / (KEY_EDGE - KEY_SOLID)
+                px[x, y] = (*despill(r, g, b, key), round(coverage * 255))
     return im
 
 
