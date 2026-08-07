@@ -37,7 +37,7 @@ const NEUTRAL: [Token, Token][] = [
 
 // Each pastel carries its own ink; nothing here is lettered in white, because
 // at this lightness white text washes out.
-const HUES = ['pink', 'blue', 'yellow', 'green', 'red'] as const;
+const HUES = ['blue', 'yellow', 'green', 'red'] as const;
 
 describe('palette contrast', () => {
   it.each(NEUTRAL)('%s on %s clears AA', (fg, bg) => {

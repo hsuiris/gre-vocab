@@ -9,8 +9,13 @@ function luminance(hex: string): number {
   return 0.2126 * channel((n >> 16) & 255) + 0.7152 * channel((n >> 8) & 255) + 0.0722 * channel(n & 255);
 }
 
-test('zero count is the empty color', () => {
-  expect(colorForCount(0)).toBe('#f7e9ed');
+// Pinning the exact hex only broke on every palette change without catching
+// anything. What matters is that an empty day reads as empty: barely darker
+// than the card it sits on.
+test('an empty day is the lightest step and nearly disappears', () => {
+  const empty = luminance(colorForCount(0));
+  expect(empty).toBeGreaterThan(luminance(colorForCount(1)));
+  expect(empty).toBeGreaterThan(0.8); // white is 1.0
 });
 
 // The old version of this test only counted distinct colours, and so it kept
