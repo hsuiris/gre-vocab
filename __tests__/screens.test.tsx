@@ -95,11 +95,18 @@ describe('SessionSidePanel', () => {
       <SessionSidePanel marked={[]} note="   " onChangeNote={() => {}} onSaveNote={onSaveNote} saved={false} />
     );
     expect(pressableWith(tree, '存到筆記庫').props.disabled).toBe(true);
-    expect(readable(tree.root)).toContain('全對，這裡先空著');
+    expect(readable(tree.root)).toContain('答錯或標記「不熟」的字會收在這裡');
   });
 });
 
 describe('AllWordsScreen', () => {
+  it('shows the meaning and the example sentence on every row', async () => {
+    const tree = await mount(<AllWordsScreen />);
+    const row = readable(pressableWith(tree, words[0].word));
+    expect(row).toContain(words[0].meaning);
+    expect(row).toContain(words[0].example);
+  });
+
   it('plays the word and then its example when a row is tapped', async () => {
     const tree = await mount(<AllWordsScreen />);
     const row = pressableWith(tree, words[0].word);
@@ -124,8 +131,8 @@ describe('PracticeScreen', () => {
     const tree = await mount(practice());
     const shown = readable(tree.root);
     expect(shown).toContain('1 / ');
-    expect(shown).toContain('錯題 · 不熟');
-    expect(shown).toContain('全對，這裡先空著');
+    expect(shown).toContain('錯題庫');
+    expect(shown).toContain('答錯或標記「不熟」的字會收在這裡');
   });
 
   it('files a starred word into the panel with its meaning and example', async () => {

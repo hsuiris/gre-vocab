@@ -5,7 +5,7 @@ import { WordEntry } from '../data/words';
 import { getRelation } from '../data/relations';
 import type { AppSettings } from '../lib/storage';
 import { speakWord } from '../lib/speech';
-import { colors, shadow } from '../theme';
+import { colors } from '../theme';
 
 type Props = {
   entry: WordEntry;
@@ -233,13 +233,14 @@ export function MultipleChoiceCard({
 const styles = StyleSheet.create({
   container: { alignItems: 'center', padding: 18 },
   card: {
-    ...shadow,
     position: 'relative',
     width: '100%',
-    maxWidth: 360,
+    maxWidth: 380,
     minHeight: 164,
-    borderRadius: 30,
-    backgroundColor: colors.surface,
+    borderRadius: 26,
+    // Tinted, not white: the whole answer area now sits on a white panel, so a
+    // white question card would have nothing to stand out against.
+    backgroundColor: colors.tint,
     justifyContent: 'center',
     alignItems: 'center',
     paddingHorizontal: 26,
@@ -286,9 +287,9 @@ const styles = StyleSheet.create({
   modeLabel: { color: colors.green, fontSize: 13, fontWeight: '900', marginBottom: 10 },
   question: { color: colors.ink, fontSize: 26, fontWeight: '900', textAlign: 'center', paddingHorizontal: 34 },
   cloze: { color: colors.ink, fontSize: 20, fontWeight: '800', lineHeight: 28, textAlign: 'center' },
-  options: { width: '100%', maxWidth: 360, marginTop: 18, gap: 10 },
+  options: { width: '100%', maxWidth: 380, marginTop: 16, gap: 10 },
   option: {
-    backgroundColor: colors.surface,
+    backgroundColor: colors.page,
     borderWidth: 1,
     borderColor: colors.line,
     borderRadius: 20,
@@ -335,9 +336,9 @@ const styles = StyleSheet.create({
     borderRadius: 22,
   },
   nextBtnText: { color: colors.surface, fontWeight: '900', fontSize: 16 },
-  typingBox: { width: '100%', maxWidth: 360, marginTop: 18, gap: 10 },
+  typingBox: { width: '100%', maxWidth: 380, marginTop: 16, gap: 10 },
   input: {
-    backgroundColor: colors.surface,
+    backgroundColor: colors.page,
     borderWidth: 1,
     borderColor: colors.line,
     borderRadius: 20,
@@ -355,8 +356,8 @@ const styles = StyleSheet.create({
   detail: {
     marginTop: 14,
     width: '100%',
-    maxWidth: 360,
-    backgroundColor: colors.surface,
+    maxWidth: 380,
+    backgroundColor: colors.page,
     borderRadius: 24,
     padding: 18,
     borderWidth: 1,

@@ -192,7 +192,7 @@ export function PracticeScreen({ route }: Props) {
 
       <View style={wide ? styles.bodyWide : styles.body}>
         <ScrollView
-          style={styles.quizColumn}
+          style={styles.quizPanel}
           contentContainerStyle={styles.quizContent}
           keyboardShouldPersistTaps="handled"
           showsVerticalScrollIndicator={false}
@@ -278,14 +278,22 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     paddingVertical: 2,
   },
-  body: { flex: 1 },
-  bodyWide: { flex: 1, flexDirection: 'row', paddingHorizontal: 18, paddingTop: 10, paddingBottom: 18, gap: 14 },
-  quizColumn: { flex: 1 },
-  quizContent: { paddingBottom: 40, alignItems: 'center' },
-  sideColumn: { width: 320 },
+  body: { flex: 1, padding: 14 },
+  // Roughly 55/45. The answer area stays the largest block, but the panel is
+  // wide enough to read a full example sentence without wrapping to four lines.
+  bodyWide: { flex: 1, flexDirection: 'row', padding: 14, gap: 14 },
+  quizPanel: {
+    flex: 1.2,
+    backgroundColor: colors.surface,
+    borderRadius: 28,
+    borderWidth: 1,
+    borderColor: colors.line,
+  },
+  quizContent: { paddingVertical: 8, paddingBottom: 32, alignItems: 'center' },
+  sideColumn: { flex: 1, maxWidth: 460 },
   modalRow: { flex: 1, flexDirection: 'row', backgroundColor: 'rgba(18,33,50,0.35)' },
   scrim: { flex: 1 },
-  modalPanel: { width: '82%', maxWidth: 360, padding: 10 },
+  modalPanel: { width: '88%', maxWidth: 420, padding: 12 },
   doneCard: { alignItems: 'center', paddingTop: 40, paddingHorizontal: 24 },
   doneMark: {
     width: 76,

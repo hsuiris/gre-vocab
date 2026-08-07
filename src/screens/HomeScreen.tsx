@@ -110,6 +110,13 @@ export function HomeScreen({ navigation }: Props) {
         </View>
       </View>
 
+      <Pressable style={styles.card} onPress={() => navigation.navigate('AllWords')}>
+        <View>
+          <Text style={styles.cardTitle}>單字總覽</Text>
+          <Text style={styles.cardMeta}>{words.length} 個字 · 可以按播放讓它自己唸</Text>
+        </View>
+        <Text style={styles.arrow}>›</Text>
+      </Pressable>
       <Pressable style={styles.card} onPress={() => start('en-zh', 'choice')}>
         <View>
           <Text style={styles.cardTitle}>英文選中文意思</Text>
@@ -143,13 +150,6 @@ export function HomeScreen({ navigation }: Props) {
       <Pressable style={styles.card} onPress={() => navigation.navigate('Relations')}>
         <View>
           <Text style={styles.cardTitle}>近義／反義詞</Text>
-        </View>
-        <Text style={styles.arrow}>›</Text>
-      </Pressable>
-      <Pressable style={styles.card} onPress={() => navigation.navigate('AllWords')}>
-        <View>
-          <Text style={styles.cardTitle}>單字總覽</Text>
-          <Text style={styles.cardMeta}>{words.length} 個字 · 可以按播放讓它自己唸</Text>
         </View>
         <Text style={styles.arrow}>›</Text>
       </Pressable>

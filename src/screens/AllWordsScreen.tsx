@@ -7,7 +7,10 @@ import { colors, centered } from '../theme';
 
 // Fixed so getItemLayout can exist, which is what lets the A-Z strip and the
 // player jump straight to a row in a 3000-item list without measuring it.
-const ROW_HEIGHT = 62;
+// Card height plus the gap below it.
+const CARD_HEIGHT = 96;
+const ROW_GAP = 10;
+const ROW_HEIGHT = CARD_HEIGHT + ROW_GAP;
 const RATES = [0.75, 1, 1.25];
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
@@ -103,15 +106,23 @@ export function AllWordsScreen() {
 
   return (
     <View style={styles.container}>
-      <TextInput
-        value={query}
-        onChangeText={handleQuery}
-        placeholder="搜尋單字或中文意思"
-        placeholderTextColor={colors.muted}
-        autoCapitalize="none"
-        autoCorrect={false}
-        style={styles.search}
-      />
+      <View style={styles.searchBar}>
+        <Text style={styles.searchIcon}>🔍</Text>
+        <TextInput
+          value={query}
+          onChangeText={handleQuery}
+          placeholder="搜尋單字或中文意思"
+          placeholderTextColor={colors.muted}
+          autoCapitalize="none"
+          autoCorrect={false}
+          style={styles.search}
+        />
+        {query.length > 0 && (
+          <Pressable onPress={() => handleQuery('')} hitSlop={8}>
+            <Text style={styles.clear}>✕</Text>
+          </Pressable>
+        )}
+      </View>
 
       <View style={styles.listWrap}>
         <FlatList
@@ -120,27 +131,34 @@ export function AllWordsScreen() {
           keyExtractor={(item) => item.word}
           getItemLayout={(_, index) => ({ length: ROW_HEIGHT, offset: ROW_HEIGHT * index, index })}
           contentContainerStyle={styles.listContent}
-          initialNumToRender={20}
-          renderItem={({ item, index }) => (
-            <Pressable
-              style={[styles.row, index === current && styles.rowActive]}
-              onPress={() => playAt(index)}
-            >
-              <Text style={styles.marker}>{index === current && playing ? '▶' : ''}</Text>
-              <Text style={styles.word} numberOfLines={1}>
-                {item.word}
-              </Text>
-              <Text style={styles.meaning} numberOfLines={1}>
-                {item.meaning}
-              </Text>
-            </Pressable>
-          )}
+          initialNumToRender={12}
+          showsVerticalScrollIndicator={false}
+          renderItem={({ item, index }) => {
+            const active = index === current;
+            return (
+              <Pressable style={[styles.row, active && styles.rowActive]} onPress={() => playAt(index)}>
+                <View style={styles.rowTop}>
+                  <Text style={styles.word} numberOfLines={1}>
+                    {item.word}
+                  </Text>
+                  <Text style={styles.pos}>{item.pos}</Text>
+                  {active && playing && <Text style={styles.marker}>▶ 播放中</Text>}
+                </View>
+                <Text style={styles.meaning} numberOfLines={1}>
+                  {item.meaning}
+                </Text>
+                <Text style={styles.example} numberOfLines={1}>
+                  {item.example}
+                </Text>
+              </Pressable>
+            );
+          }}
         />
         <View style={styles.strip}>
           {ALPHABET.map((letter) => {
             const at = letterStarts[letter];
             return (
-              <Pressable key={letter} onPress={() => at !== undefined && scrollTo(at)} hitSlop={4}>
+              <Pressable key={letter} onPress={() => at !== undefined && scrollTo(at)} hitSlop={3}>
                 <Text style={at === undefined ? styles.stripLetterOff : styles.stripLetter}>{letter}</Text>
               </Pressable>
             );
@@ -149,27 +167,37 @@ export function AllWordsScreen() {
       </View>
 
       <View style={styles.player}>
+        <View style={styles.nowRow}>
+          <Text style={styles.nowWord} numberOfLines={1}>
+            {currentEntry ? currentEntry.word : '沒有符合的單字'}
+          </Text>
+          <Text style={styles.nowCount}>
+            {filtered.length > 0 ? `${current + 1} / ${filtered.length}` : ''}
+          </Text>
+        </View>
+        {currentEntry && (
+          <Text style={styles.nowMeaning} numberOfLines={1}>
+            {currentEntry.meaning}
+          </Text>
+        )}
         <View style={styles.controls}>
-          <Pressable style={styles.stepBtn} onPress={() => step(-1)} hitSlop={6}>
-            <Text style={styles.stepText}>⏮</Text>
-          </Pressable>
-          <Pressable
-            style={styles.playBtn}
-            onPress={() => (playing ? stop() : playAt(current))}
-            hitSlop={6}
-          >
-            <Text style={styles.playText}>{playing ? '⏸' : '▶'}</Text>
-          </Pressable>
-          <Pressable style={styles.stepBtn} onPress={() => step(1)} hitSlop={6}>
-            <Text style={styles.stepText}>⏭</Text>
-          </Pressable>
+          {/* Balances the rate pill so the transport stays optically centred. */}
+          <View style={styles.ratePlaceholder} />
+          <View style={styles.transport}>
+            <Pressable style={styles.stepBtn} onPress={() => step(-1)} hitSlop={8}>
+              <Text style={styles.stepText}>⏮</Text>
+            </Pressable>
+            <Pressable style={styles.playBtn} onPress={() => (playing ? stop() : playAt(current))} hitSlop={8}>
+              <Text style={styles.playText}>{playing ? '⏸' : '▶'}</Text>
+            </Pressable>
+            <Pressable style={styles.stepBtn} onPress={() => step(1)} hitSlop={8}>
+              <Text style={styles.stepText}>⏭</Text>
+            </Pressable>
+          </View>
           <Pressable style={styles.rateBtn} onPress={cycleRate}>
             <Text style={styles.rateText}>{rate.toFixed(2).replace(/0$/, '')}×</Text>
           </Pressable>
         </View>
-        <Text style={styles.nowPlaying} numberOfLines={1}>
-          {currentEntry ? `${currentEntry.word} · ${current + 1} / ${filtered.length}` : '沒有符合的單字'}
-        </Text>
       </View>
     </View>
   );
@@ -177,63 +205,84 @@ export function AllWordsScreen() {
 
 const styles = StyleSheet.create({
   container: { ...centered, flex: 1, backgroundColor: colors.page, padding: 16, gap: 12 },
-  search: {
+  searchBar: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
     backgroundColor: colors.surface,
     borderRadius: 20,
     borderWidth: 1,
     borderColor: colors.line,
     paddingVertical: 12,
     paddingHorizontal: 16,
-    color: colors.ink,
-    fontSize: 16,
-    fontWeight: '700',
   },
-  listWrap: { flex: 1, flexDirection: 'row' },
-  listContent: { paddingBottom: 8 },
+  searchIcon: { fontSize: 15 },
+  search: { flex: 1, color: colors.ink, fontSize: 16, fontWeight: '700' },
+  clear: { color: colors.muted, fontSize: 15, fontWeight: '900' },
+  listWrap: { flex: 1, flexDirection: 'row', gap: 4 },
+  listContent: { paddingBottom: 4 },
   row: {
-    height: ROW_HEIGHT,
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-    paddingHorizontal: 14,
-    borderRadius: 18,
+    height: CARD_HEIGHT,
+    marginBottom: ROW_GAP,
+    justifyContent: 'center',
+    backgroundColor: colors.surface,
+    borderRadius: 20,
+    borderWidth: 1,
+    borderColor: colors.line,
+    paddingHorizontal: 16,
   },
-  rowActive: { backgroundColor: colors.tint },
-  marker: { width: 14, color: colors.green, fontSize: 12, fontWeight: '900' },
-  word: { width: 130, color: colors.ink, fontSize: 16, fontWeight: '900' },
-  meaning: { flex: 1, color: colors.muted, fontSize: 14, fontWeight: '700' },
-  strip: { width: 22, justifyContent: 'center', alignItems: 'center' },
+  rowActive: { backgroundColor: colors.tint, borderColor: colors.green },
+  rowTop: { flexDirection: 'row', alignItems: 'center', gap: 8 },
+  word: { color: colors.ink, fontSize: 18, fontWeight: '900' },
+  pos: {
+    color: colors.green,
+    backgroundColor: colors.greenSoft,
+    fontSize: 11,
+    fontWeight: '900',
+    borderRadius: 9,
+    paddingHorizontal: 7,
+    paddingVertical: 3,
+    overflow: 'hidden',
+  },
+  marker: { color: colors.green, fontSize: 11, fontWeight: '900' },
+  meaning: { color: colors.muted, fontSize: 14, fontWeight: '700', marginTop: 5 },
+  example: { color: colors.ink, fontSize: 12.5, fontStyle: 'italic', marginTop: 6 },
+  strip: { width: 20, justifyContent: 'center', alignItems: 'center' },
   stripLetter: { color: colors.blue, fontSize: 10, fontWeight: '900', paddingVertical: 1 },
   stripLetterOff: { color: colors.line, fontSize: 10, fontWeight: '900', paddingVertical: 1 },
   player: {
     backgroundColor: colors.surface,
-    borderRadius: 24,
+    borderRadius: 26,
     borderWidth: 1,
     borderColor: colors.line,
-    paddingVertical: 12,
-    paddingHorizontal: 16,
-    gap: 6,
+    paddingVertical: 14,
+    paddingHorizontal: 18,
+    gap: 4,
   },
-  controls: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 18 },
-  stepBtn: { paddingHorizontal: 6 },
+  nowRow: { flexDirection: 'row', alignItems: 'baseline', justifyContent: 'space-between', gap: 10 },
+  nowWord: { flex: 1, color: colors.ink, fontSize: 19, fontWeight: '900' },
+  nowCount: { color: colors.muted, fontSize: 13, fontWeight: '900' },
+  nowMeaning: { color: colors.muted, fontSize: 13, fontWeight: '700' },
+  controls: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: 8 },
+  transport: { flexDirection: 'row', alignItems: 'center', gap: 22 },
+  ratePlaceholder: { width: 58 },
+  stepBtn: { paddingHorizontal: 4 },
   stepText: { color: colors.ink, fontSize: 22 },
   playBtn: {
-    width: 52,
-    height: 52,
-    borderRadius: 26,
+    width: 54,
+    height: 54,
+    borderRadius: 27,
     backgroundColor: colors.blue,
     alignItems: 'center',
     justifyContent: 'center',
   },
   playText: { color: colors.surface, fontSize: 22 },
   rateBtn: {
-    position: 'absolute',
-    right: 0,
+    width: 58,
+    alignItems: 'center',
     backgroundColor: colors.blueSoft,
     borderRadius: 14,
-    paddingHorizontal: 12,
-    paddingVertical: 7,
+    paddingVertical: 8,
   },
   rateText: { color: colors.blue, fontWeight: '900', fontSize: 13 },
-  nowPlaying: { color: colors.muted, fontWeight: '900', fontSize: 13, textAlign: 'center' },
 });
