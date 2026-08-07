@@ -137,6 +137,34 @@ describe('speakWord', () => {
   });
 });
 
+// The bug this guards: a mobile browser answers the first getVoices() with an
+// empty list and fills it in a moment later. A single lookup at startup left
+// the phone with no English voice, so English words were read by whatever the
+// system language was.
+describe('a voice list that arrives late', () => {
+  it('is picked up, so a phone stops reading English with the system voice', async () => {
+    const { speakWord, listEnglishVoices } = await ready([]);
+
+    speakWord('abject');
+    expect(mockSpeak).toHaveBeenCalledWith('abject', expect.objectContaining({ voice: undefined }));
+
+    // The browser populates the list; the next lookup finds it.
+    mockGetVoices.mockResolvedValue(MACOS_VOICES);
+    await listEnglishVoices();
+
+    mockSpeak.mockClear();
+    speakWord('abject');
+    expect(mockSpeak).toHaveBeenCalledWith('abject', expect.objectContaining({ voice: 'Samantha-id' }));
+  });
+
+  it('reports the voices once they exist, rather than an empty picker', async () => {
+    const { listEnglishVoices } = await ready([]);
+    mockGetVoices.mockResolvedValue(MACOS_VOICES);
+    const names = (await listEnglishVoices()).map((v) => v.name);
+    expect(names).toContain('Samantha');
+  });
+});
+
 describe('speakSequence', () => {
   it('reads each part in order and reports done only after the last', async () => {
     const { speakSequence } = await ready(MACOS_VOICES);

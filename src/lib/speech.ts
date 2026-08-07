@@ -1,4 +1,5 @@
 import * as Speech from 'expo-speech';
+import { Platform } from 'react-native';
 
 // macOS ships joke voices — Albert, Bahh, Boing, Bubbles, Zarvox — all tagged
 // en-US, and they sort to the very top of the voice list. "First en-US voice"
@@ -64,20 +65,44 @@ export function pickVoice(voices: { identifier: string; name?: string; language?
 }
 
 // On web, `language: 'en-US'` is only a hint — Safari ignores it and reads with
-// whatever the system default is, which on a Chinese-locale Mac mangles every
-// English word. Pinning a real voice is what makes the pronunciation right.
-let englishVoice: string | undefined;
+// whatever the system default is, which on a Chinese-locale device mangles
+// every English word. Pinning a real voice is what makes the pronunciation
+// right.
+type Voice = { identifier: string; name?: string; language?: string };
 
-// Browsers populate the voice list a moment after load, so ask now and the
-// answer is cached long before the first tap.
-void Speech.getAvailableVoicesAsync()
-  .then((voices) => {
+let englishVoice: string | undefined;
+let knownVoices: Voice[] = [];
+
+// Asking once is not enough. A mobile browser answers the first call with an
+// empty list and fills it in a moment later, so a single lookup at startup
+// leaves a phone with no English voice at all — which is exactly how English
+// words end up read by a Chinese system voice.
+async function refreshVoices(): Promise<Voice[]> {
+  const voices = await Speech.getAvailableVoicesAsync().catch(() => [] as Voice[]);
+  if (voices.length > 0) {
+    knownVoices = voices;
     englishVoice = pickVoice(voices);
-  })
-  .catch(() => {
-    // No voice list available: fall through to the browser default rather than
-    // leaving the button dead.
-  });
+  }
+  return knownVoices;
+}
+
+void refreshVoices();
+
+if (Platform.OS === 'web') {
+  const synth = (globalThis as { speechSynthesis?: EventTarget }).speechSynthesis;
+  // The event browsers fire once the list is ready.
+  synth?.addEventListener?.('voiceschanged', () => void refreshVoices());
+
+  // Belt and braces: some browsers populate the list without ever firing the
+  // event. Poll briefly at startup so the first tap already has a voice, then
+  // stop — this must not become a permanent timer.
+  void (async () => {
+    for (let attempt = 0; attempt < 8; attempt++) {
+      if ((await refreshVoices()).length > 0) return;
+      await new Promise((resolve) => setTimeout(resolve, 250));
+    }
+  })();
+}
 
 // Auto-detection can only guess from voice names, and browsers disagree about
 // what they expose — Chrome hides some macOS downloads that Safari lists. An
@@ -89,7 +114,12 @@ export function setPreferredVoice(id: string | null | undefined): void {
 }
 
 export function activeVoice(): string | undefined {
-  return chosenVoice ?? englishVoice;
+  const voice = chosenVoice ?? englishVoice;
+  // Speaking has to start inside the tap that asked for it — iOS blocks speech
+  // that begins later — so this cannot await. Kick off a lookup instead, and
+  // the next tap has a voice.
+  if (!voice) void refreshVoices();
+  return voice;
 }
 
 export function autoVoice(): string | undefined {
@@ -97,7 +127,13 @@ export function autoVoice(): string | undefined {
 }
 
 export async function listEnglishVoices(): Promise<{ id: string; name: string }[]> {
-  const voices = await Speech.getAvailableVoicesAsync().catch(() => []);
+  let voices = await refreshVoices();
+  // Opening settings on a phone can still beat the browser to the list, and an
+  // empty picker looks like the feature is missing rather than still loading.
+  for (let attempt = 0; attempt < 6 && voices.length === 0; attempt++) {
+    await new Promise((resolve) => setTimeout(resolve, 200));
+    voices = await refreshVoices();
+  }
   return voices
     .filter((v) => v.language?.toLowerCase().startsWith('en'))
     .map((v) => ({ id: v.identifier, name: v.name ?? v.identifier }))
