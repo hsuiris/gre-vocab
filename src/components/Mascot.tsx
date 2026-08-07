@@ -16,29 +16,9 @@ type Props = {
 // arms-up artwork and the shake runs under the worried one, so the drawing and
 // the animation say the same thing.
 export function Mascot({ mood = 'idle', message, size = 128, style }: Props) {
-  const breathe = useRef(new Animated.Value(0)).current;
+  // Only reacts. An idle loop is movement in the corner of the eye while
+  // someone is trying to read a word, which is the last thing this screen needs.
   const react = useRef(new Animated.Value(0)).current;
-
-  useEffect(() => {
-    const loop = Animated.loop(
-      Animated.sequence([
-        Animated.timing(breathe, {
-          toValue: 1,
-          duration: 1700,
-          easing: Easing.inOut(Easing.sin),
-          useNativeDriver: true,
-        }),
-        Animated.timing(breathe, {
-          toValue: 0,
-          duration: 1700,
-          easing: Easing.inOut(Easing.sin),
-          useNativeDriver: true,
-        }),
-      ])
-    );
-    loop.start();
-    return () => loop.stop();
-  }, [breathe]);
 
   useEffect(() => {
     if (mood === 'idle') return;
@@ -51,7 +31,6 @@ export function Mascot({ mood = 'idle', message, size = 128, style }: Props) {
     }).start();
   }, [mood, react]);
 
-  const bob = breathe.interpolate({ inputRange: [0, 1], outputRange: [0, -6] });
   const hop = react.interpolate({ inputRange: [0, 0.25, 0.5, 0.75, 1], outputRange: [0, -30, -2, -10, 0] });
   const shake = react.interpolate({ inputRange: [0, 0.2, 0.4, 0.6, 0.8, 1], outputRange: [0, -9, 9, -6, 3, 0] });
   // Sparks fly out on a hop and are gone by the time the character lands.
@@ -59,11 +38,7 @@ export function Mascot({ mood = 'idle', message, size = 128, style }: Props) {
   const sparkFade = react.interpolate({ inputRange: [0, 0.25, 0.8], outputRange: [0, 1, 0], extrapolate: 'clamp' });
 
   const transform =
-    mood === 'happy'
-      ? [{ translateY: Animated.add(bob, hop) }]
-      : mood === 'sad'
-        ? [{ translateX: shake }, { translateY: bob }]
-        : [{ translateY: bob }];
+    mood === 'happy' ? [{ translateY: hop }] : mood === 'sad' ? [{ translateX: shake }] : [];
 
   return (
     <View style={[styles.wrap, style]}>

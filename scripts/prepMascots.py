@@ -32,9 +32,20 @@ TRANSPARENT = 8  # alpha at or below this counts as background
 OUT_SIZE = 512  # plenty for a 150pt sprite on a 3x screen
 PAD = 0.04  # breathing room around the subject, as a fraction of its size
 
+SKIN = (250, 222, 202)
+# Face, arms and hands were erased along with the background, and so were the
+# white knee socks. Measured on the source sheet, every skin hole starts above
+# 74% of the figure's height and every sock hole starts below it, so one line
+# separates "paint this skin" from "leave this white".
+SOCK_LINE = 0.74
 
-def solidify(im: Image.Image) -> Image.Image:
-    """Make the character fully opaque and the true background fully clear."""
+
+def solidify(im: Image.Image, skin: bool = False) -> Image.Image:
+    """Make the character fully opaque and the true background fully clear.
+
+    With ``skin`` set, holes the flood cannot reach are painted as skin rather
+    than left white — everything below SOCK_LINE stays white, being socks.
+    """
     im = im.convert("RGBA")
     w, h = im.size
     px = im.load()
@@ -56,12 +67,23 @@ def solidify(im: Image.Image) -> Image.Image:
                     outside[ny * w + nx] = 1
                     queue.append((nx, ny))
 
+    skin_rows = set()
+    if skin:
+        body = [y for y in range(h) if any(not outside[y * w + x] for x in range(w))]
+        if body:
+            top, bottom = body[0], body[-1]
+            cutoff = top + (bottom - top) * SOCK_LINE
+            skin_rows = {y for y in range(h) if y < cutoff}
+
     for y in range(h):
         row = y * w
         for x in range(w):
             r, g, b, a = px[x, y]
             if outside[row + x]:
                 px[x, y] = (0, 0, 0, 0)
+            elif a <= TRANSPARENT:
+                # An erased part of the character, not a colour to recover.
+                px[x, y] = (*SKIN, 255) if y in skin_rows else (255, 255, 255, 255)
             elif a < 255:
                 # Composite over white, which is what the artwork assumed.
                 blend = a / 255
@@ -139,7 +161,7 @@ def main() -> None:
     sheet_path = RAW / "chibi-girl-poses.png"
     if sheet_path.exists():
         print("girl sheet:")
-        sheet = warm_hair(solidify(Image.open(sheet_path)))
+        sheet = warm_hair(solidify(Image.open(sheet_path), skin=True))
         spans = columns_with_content(sheet)
         names = ["girl-idle", "girl-happy", "girl-sad"]
         if len(spans) != len(names):

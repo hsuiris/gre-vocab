@@ -41,10 +41,9 @@ it('survives every mood change without remounting', async () => {
   await unmount(tree);
 });
 
-// The breathing loop runs forever by design. If unmount did not stop it, this
-// suite would keep firing timers after Jest tears the environment down — which
-// is exactly the hang this test exists to catch.
-it('stops its idle animation when unmounted', async () => {
+// She only moves in response to an answer. An animation still running while
+// idle would fire timers forever, which once hung this whole suite.
+it('is completely still when idle, and leaves nothing running after unmount', async () => {
   const tree = await mount(<Mascot />);
   await unmount(tree);
   await act(async () => {

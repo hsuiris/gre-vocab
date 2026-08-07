@@ -252,23 +252,21 @@ export function PracticeScreen({ route }: Props) {
               )}
             </View>
           ) : (
-            <>
-              <MultipleChoiceCard
-                key={`${mode}-${current!.word}`}
-                entry={current!}
-                direction={direction}
-                mode={mode}
-                choices={choices}
-                choiceEntries={choiceEntries}
-                settings={settings}
-                onResult={handleResult}
-                onAnswered={(correct) => setMood(correct ? 'happy' : 'sad')}
-                onExclude={handleExclude}
-                onMarkUnsure={() => mark(current!, 'unsure')}
-                unsure={currentUnsure}
-              />
-              <Mascot mood={mood} message={mascotLine} size={104} style={styles.quizMascot} />
-            </>
+            <MultipleChoiceCard
+              key={`${mode}-${current!.word}`}
+              entry={current!}
+              direction={direction}
+              mode={mode}
+              choices={choices}
+              choiceEntries={choiceEntries}
+              settings={settings}
+              onResult={handleResult}
+              onAnswered={(correct) => setMood(correct ? 'happy' : 'sad')}
+              onExclude={handleExclude}
+              onMarkUnsure={() => mark(current!, 'unsure')}
+              unsure={currentUnsure}
+              mascot={<Mascot mood={mood} message={mascotLine} size={104} />}
+            />
           )}
         </ScrollView>
 
@@ -341,7 +339,6 @@ const styles = StyleSheet.create({
   modalRow: { flex: 1, flexDirection: 'row', backgroundColor: 'rgba(18,33,50,0.35)' },
   scrim: { flex: 1 },
   modalPanel: { width: '88%', maxWidth: 420, padding: 12 },
-  quizMascot: { marginTop: 22 },
   doneCard: { alignItems: 'center', paddingTop: 32, paddingHorizontal: 24 },
   doneTitle: { color: colors.ink, fontSize: 22, fontWeight: '900', textAlign: 'center', marginTop: 12 },
   doneMeta: { color: colors.muted, fontSize: 15, fontWeight: '700', marginTop: 8, textAlign: 'center' },

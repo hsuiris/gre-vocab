@@ -21,6 +21,9 @@ type Props = {
   onExclude: () => void;
   onMarkUnsure: () => void;
   unsure: boolean;
+  // Rendered beside the question. Passed in rather than built here so the
+  // screen stays the one place that knows how the last answer went.
+  mascot?: React.ReactNode;
 };
 
 // words.json stores parts of speech as "v." or "n./adj."; spell them out so the
@@ -52,6 +55,7 @@ export function MultipleChoiceCard({
   onExclude,
   onMarkUnsure,
   unsure,
+  mascot,
 }: Props) {
   const [selected, setSelected] = useState<string | null>(null);
   const [typed, setTyped] = useState('');
@@ -169,17 +173,22 @@ export function MultipleChoiceCard({
         <Pressable style={styles.soundBtn} onPress={() => speakWord(entry.word)} hitSlop={8}>
           <Image source={require('../../assets/speaker-icon.png')} style={styles.soundIcon} />
         </Pressable>
-        {mode === 'cloze' ? (
-          <>
-            <Text style={styles.modeLabel}>選出最適合填入句子的單字</Text>
-            <Text style={styles.cloze}>{blankedExample}</Text>
-          </>
-        ) : (
-          <>
-            <Text style={styles.modeLabel}>{mode === 'typing' ? '請輸入英文單字' : '選出正確答案'}</Text>
-            <Text style={styles.question}>{question}</Text>
-          </>
-        )}
+        <View style={styles.cardRow}>
+          {mascot}
+          <View style={styles.cardTextCol}>
+            {mode === 'cloze' ? (
+              <>
+                <Text style={styles.modeLabel}>選出最適合填入句子的單字</Text>
+                <Text style={styles.cloze}>{blankedExample}</Text>
+              </>
+            ) : (
+              <>
+                <Text style={styles.modeLabel}>{mode === 'typing' ? '請輸入英文單字' : '選出正確答案'}</Text>
+                <Text style={styles.question}>{question}</Text>
+              </>
+            )}
+          </View>
+        </View>
       </View>
 
       {mode === 'typing' ? (
@@ -304,8 +313,10 @@ const styles = StyleSheet.create({
   unsureBtnOn: { backgroundColor: colors.yellowInk, borderColor: colors.yellowInk },
   unsureBtnText: { color: colors.yellowInk, fontSize: 12, fontWeight: '900' },
   unsureBtnTextOn: { color: colors.surface },
+  cardRow: { flexDirection: 'row', alignItems: 'center', gap: 12 },
+  cardTextCol: { flex: 1, alignItems: 'center' },
   modeLabel: { color: colors.blue, fontSize: 13, fontWeight: '900', marginBottom: 10 },
-  question: { color: colors.ink, fontSize: 26, fontWeight: '900', textAlign: 'center', paddingHorizontal: 34 },
+  question: { color: colors.ink, fontSize: 26, fontWeight: '900', textAlign: 'center' },
   cloze: { color: colors.ink, fontSize: 20, fontWeight: '800', lineHeight: 28, textAlign: 'center' },
   options: { width: '100%', maxWidth: 760, marginTop: 16, gap: 10 },
   option: {
