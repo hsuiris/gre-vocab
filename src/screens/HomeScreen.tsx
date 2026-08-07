@@ -86,11 +86,9 @@ export function HomeScreen({ navigation }: Props) {
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
       <View style={styles.hero}>
-        <Mascot message={'一天一天\n往目標邁進'} size={124} style={styles.heroPet} />
+        <Mascot message={'一天一天\n往目標邁進'} size={172} />
         <Text style={styles.eyebrow}>今日複習</Text>
-        <Text style={styles.title} numberOfLines={1} adjustsFontSizeToFit>
-          把 GRE 單字照顧好
-        </Text>
+        <Text style={styles.title}>把 GRE 單字照顧好</Text>
         <Text style={styles.due}>{dueCount} 個字正在等你</Text>
       </View>
 
@@ -161,18 +159,19 @@ export function HomeScreen({ navigation }: Props) {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.page },
   content: { ...centered, padding: 20, paddingBottom: 36, gap: 14 },
+  // She leads the page rather than hiding in a corner, so everything below her
+  // is centred to match.
   hero: {
     backgroundColor: colors.tint,
     borderRadius: 30,
-    padding: 24,
-    minHeight: 210,
-    justifyContent: 'flex-start',
-    overflow: 'hidden',
+    paddingHorizontal: 24,
+    paddingTop: 22,
+    paddingBottom: 26,
+    alignItems: 'center',
   },
-  heroPet: { position: 'absolute', right: -6, top: 40 },
-  eyebrow: { color: colors.blue, fontSize: 14, fontWeight: '800', marginBottom: 8 },
-  title: { color: colors.ink, fontSize: 28, fontWeight: '900', lineHeight: 34, maxWidth: 270 },
-  due: { color: colors.muted, fontSize: 17, fontWeight: '700', marginTop: 10 },
+  eyebrow: { color: colors.blue, fontSize: 14, fontWeight: '800', marginTop: 14 },
+  title: { color: colors.ink, fontSize: 28, fontWeight: '900', lineHeight: 34, marginTop: 6, textAlign: 'center' },
+  due: { color: colors.muted, fontSize: 17, fontWeight: '700', marginTop: 8, textAlign: 'center' },
   card: {
     ...shadow,
     ...slab(slabEdge.line),

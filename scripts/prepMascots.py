@@ -40,6 +40,60 @@ SKIN = (250, 222, 202)
 SOCK_LINE = 0.74
 
 
+def chroma_key(im: Image.Image, tolerance: int = 60) -> Image.Image:
+    """Cut a solid-colour background out, keeping the character untouched.
+
+    This is the path to prefer. Art generated straight onto transparency loses
+    whatever inside the character resembled the background — mouth interiors,
+    blush, the line between a thigh and a sock — and no amount of repair brings
+    those back, because the pixels are simply gone. Art generated on a solid
+    colour that appears nowhere in the character keeps all of it.
+    """
+    im = im.convert("RGBA")
+    w, h = im.size
+    px = im.load()
+    key = px[0, 0][:3]
+
+    near = bytearray(w * h)
+    for y in range(h):
+        row = y * w
+        for x in range(w):
+            r, g, b, _ = px[x, y]
+            if abs(r - key[0]) + abs(g - key[1]) + abs(b - key[2]) <= tolerance:
+                near[row + x] = 1
+
+    # Flood from the corners so a background-coloured detail inside the
+    # character (a blue ribbon on a blue key) is never cut out.
+    queue = deque()
+    background = bytearray(w * h)
+    for x, y in ((0, 0), (w - 1, 0), (0, h - 1), (w - 1, h - 1)):
+        if near[y * w + x] and not background[y * w + x]:
+            background[y * w + x] = 1
+            queue.append((x, y))
+    while queue:
+        x, y = queue.popleft()
+        for nx, ny in ((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)):
+            if 0 <= nx < w and 0 <= ny < h and near[ny * w + nx] and not background[ny * w + nx]:
+                background[ny * w + nx] = 1
+                queue.append((nx, ny))
+
+    for y in range(h):
+        row = y * w
+        for x in range(w):
+            if background[row + x]:
+                px[x, y] = (0, 0, 0, 0)
+            else:
+                px[x, y] = (*px[x, y][:3], 255)
+    return im
+
+
+def mostly_opaque(im: Image.Image) -> bool:
+    """True when the art arrived on a solid background rather than alpha."""
+    alpha = im.convert("RGBA").getchannel("A")
+    lo, hi = alpha.getextrema()
+    return lo > 8  # nothing transparent anywhere
+
+
 def solidify(im: Image.Image, skin: bool = False) -> Image.Image:
     """Make the character fully opaque and the true background fully clear.
 
@@ -157,11 +211,20 @@ def save(im: Image.Image, name: str) -> None:
     print(f"  {path.relative_to(ROOT)}")
 
 
+def prepare(path: Path, girl: bool = False) -> Image.Image:
+    """Clean one source image, whichever way it was produced."""
+    im = Image.open(path)
+    if mostly_opaque(im):
+        return chroma_key(im)  # solid-background art: nothing to repair
+    im = solidify(im, skin=girl)
+    return warm_hair(im) if girl else im
+
+
 def main() -> None:
     sheet_path = RAW / "chibi-girl-poses.png"
     if sheet_path.exists():
         print("girl sheet:")
-        sheet = warm_hair(solidify(Image.open(sheet_path), skin=True))
+        sheet = prepare(sheet_path, girl=True)
         spans = columns_with_content(sheet)
         names = ["girl-idle", "girl-happy", "girl-sad"]
         if len(spans) != len(names):
@@ -173,7 +236,7 @@ def main() -> None:
     for path in sorted(RAW.glob("*.png")):
         if path.name == sheet_path.name:
             continue
-        save(solidify(Image.open(path)), path.stem)
+        save(prepare(path), path.stem)
 
 
 if __name__ == "__main__":
