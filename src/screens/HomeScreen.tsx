@@ -140,7 +140,7 @@ export function HomeScreen({ navigation }: Props) {
       <MenuCard pet="penguin" title="句子填空" onPress={() => start('zh-en', 'cloze')} />
       <MenuCard pet="chick" title="手寫單字" onPress={() => start('zh-en', 'typing')} />
       <MenuCard pet="hamster" title="複習錯題" onPress={startWrongReview} />
-      <MenuCard pet="elephant" title="近義／反義詞" onPress={() => navigation.navigate('Relations')} />
+      <MenuCard pet="elephant" title="照意思找字" onPress={() => navigation.navigate('Relations')} />
       <MenuCard pet="pig" title="筆記庫" onPress={() => navigation.navigate('Notes')} />
 
       <View style={styles.panel}>

@@ -58,7 +58,7 @@ export function RootNavigator() {
         <Stack.Screen name="Stats" component={StatsScreen} options={{ title: '統計' }} />
         <Stack.Screen name="Excluded" component={ExcludedScreen} options={{ title: '回收桶' }} />
         <Stack.Screen name="Settings" component={SettingsScreen} options={{ title: '設定' }} />
-        <Stack.Screen name="Relations" component={RelationsScreen} options={{ title: '近義／反義詞' }} />
+        <Stack.Screen name="Relations" component={RelationsScreen} options={{ title: '照意思找字' }} />
         <Stack.Screen name="AllWords" component={AllWordsScreen} options={{ title: '單字總覽' }} />
         <Stack.Screen name="Notes" component={NotesScreen} options={{ title: '筆記庫' }} />
         <Stack.Screen
