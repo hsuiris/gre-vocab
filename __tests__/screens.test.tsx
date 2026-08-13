@@ -128,6 +128,19 @@ describe('AllWordsScreen', () => {
     expect(row).toContain(words[0].example);
   });
 
+  it('drops a swiped word into the recycle bin and out of the list', async () => {
+    const tree = await mount(<AllWordsScreen />);
+    expect(readable(tree.root)).toContain(words[0].word);
+
+    const row = tree.root
+      .findAll((node) => typeof node.props.onRemove === 'function')
+      .find((node) => readable(node).includes(words[0].word))!;
+    await act(async () => row.props.onRemove());
+
+    expect(await getExcludedWords()).toContain(words[0].word);
+    expect(readable(tree.root)).not.toContain(words[0].word);
+  });
+
   it('plays the word and then its example when a row is tapped', async () => {
     const tree = await mount(<AllWordsScreen />);
     const row = pressableWith(tree, words[0].word);

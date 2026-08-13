@@ -140,7 +140,7 @@ export function RelationsScreen() {
           setTimeout(() => scrollTo(index), 80);
         }}
         renderItem={({ item: { entry, rel } }) => (
-          <SwipeToRemove label="丟進回收桶 →" onRemove={() => handleRemove(entry.word)}>
+          <SwipeToRemove label="← 丟進回收桶" onRemove={() => handleRemove(entry.word)}>
           <View style={styles.card}>
             <Pressable style={styles.head} onPress={() => speakWord(entry.word)}>
               <Text style={styles.word}>{entry.word}</Text>

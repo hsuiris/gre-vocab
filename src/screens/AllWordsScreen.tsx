@@ -4,6 +4,8 @@ import { useFocusEffect } from '@react-navigation/native';
 import { words, WordEntry } from '../data/words';
 import { speakSequence, stopSpeaking } from '../lib/speech';
 import { AlphabetIndex, letterStarts } from '../components/AlphabetIndex';
+import { SwipeToRemove } from '../components/SwipeToRemove';
+import { excludeWord, getExcludedWords } from '../lib/storage';
 import { colors, centered, slab, slabEdge, slabPressed } from '../theme';
 
 // Rows size themselves to their example sentence. A fixed height would let
@@ -27,11 +29,21 @@ export function AllWordsScreen() {
   const rateRef = useRef(1);
   const dataRef = useRef<WordEntry[]>(words);
 
+  const [excluded, setExcluded] = useState<Set<string>>(new Set());
+
+  // Reloaded on focus so a word restored from the recycle bin reappears here.
+  useFocusEffect(
+    useCallback(() => {
+      getExcludedWords().then((list) => setExcluded(new Set(list)));
+    }, [])
+  );
+
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    if (!q) return words;
-    return words.filter((w) => w.word.toLowerCase().includes(q) || w.meaning.includes(q));
-  }, [query]);
+    const kept = excluded.size ? words.filter((w) => !excluded.has(w.word)) : words;
+    if (!q) return kept;
+    return kept.filter((w) => w.word.toLowerCase().includes(q) || w.meaning.includes(q));
+  }, [query, excluded]);
   dataRef.current = filtered;
 
   const starts = useMemo(() => letterStarts(filtered, (w) => w.word), [filtered]);
@@ -70,6 +82,15 @@ export function AllWordsScreen() {
     },
     [scrollTo, stop]
   );
+
+  async function handleRemove(word: string) {
+    // Every index the player holds points into the old list, so stop rather
+    // than let it carry on reading from a shifted position.
+    stop();
+    await excludeWord(word);
+    setExcluded((current) => new Set(current).add(word));
+    setCurrent(0);
+  }
 
   function handleQuery(text: string) {
     // The index the player is on means nothing once the list underneath changes.
@@ -138,22 +159,24 @@ export function AllWordsScreen() {
           renderItem={({ item, index }) => {
             const active = index === current;
             return (
-              <Pressable
-                style={({ pressed }) => [styles.row, active && styles.rowActive, pressed && slabPressed]}
-                onPress={() => playAt(index)}
-              >
-                <View style={styles.rowTop}>
-                  <Text style={styles.word} numberOfLines={1}>
-                    {item.word}
+              <SwipeToRemove label="← 丟進回收桶" onRemove={() => handleRemove(item.word)}>
+                <Pressable
+                  style={({ pressed }) => [styles.row, active && styles.rowActive, pressed && slabPressed]}
+                  onPress={() => playAt(index)}
+                >
+                  <View style={styles.rowTop}>
+                    <Text style={styles.word} numberOfLines={1}>
+                      {item.word}
+                    </Text>
+                    <Text style={styles.pos}>{item.pos}</Text>
+                    {active && playing && <Text style={styles.marker}>▶ 播放中</Text>}
+                  </View>
+                  <Text style={styles.meaning} numberOfLines={1}>
+                    {item.meaning}
                   </Text>
-                  <Text style={styles.pos}>{item.pos}</Text>
-                  {active && playing && <Text style={styles.marker}>▶ 播放中</Text>}
-                </View>
-                <Text style={styles.meaning} numberOfLines={1}>
-                  {item.meaning}
-                </Text>
-                <Text style={styles.example}>{item.example}</Text>
-              </Pressable>
+                  <Text style={styles.example}>{item.example}</Text>
+                </Pressable>
+              </SwipeToRemove>
             );
           }}
         />
