@@ -34,7 +34,7 @@ import { buildPracticeQueue } from '../lib/practiceQueue';
 import { MultipleChoiceCard } from '../components/MultipleChoiceCard';
 import { SessionSidePanel, MarkedWord } from '../components/SessionSidePanel';
 import { Mascot, Mood } from '../components/Mascot';
-import { colors, slab, slabEdge, slabPressed } from '../theme';
+import { colors, shadow, slab, slabEdge, slabPressed } from '../theme';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Practice'>;
 
@@ -68,6 +68,9 @@ export function PracticeScreen({ route }: Props) {
   const [mood, setMood] = useState<Mood>('idle');
   const processingRef = useRef(false);
   const barFill = useRef(new Animated.Value(0)).current;
+  // Words already scored this session, so stepping back and forth cannot
+  // record the same answer twice.
+  const scoredRef = useRef(new Set<string>());
   // Fixed at mount so re-saving edits the same note instead of piling up a new
   // one every tap.
   const noteIdRef = useRef(`${todayStr()}-${Date.now()}`);
@@ -137,19 +140,33 @@ export function PracticeScreen({ route }: Props) {
     processingRef.current = true;
     try {
       const entry = queue[index];
-      const today = todayStr();
-      const progress = await getAllProgress();
-      const current = progress[entry.word] ?? initialProgress(today);
-      const updated = reviewWord(current, knewIt, today);
-      await saveWordProgress(entry.word, updated);
-      await (knewIt ? removeWrongWord(entry.word) : addWrongWord(entry.word));
-      if (!knewIt) mark(entry, 'wrong');
-      await incrementHeatmapToday(today);
-      setMood('idle'); // the next card starts with a calm mascot
-      setIndex((i) => i + 1);
+      // Stepping back and answering again must not score the same card twice —
+      // it would advance the Leitner box a second time and double the day's
+      // heatmap count.
+      if (!scoredRef.current.has(entry.word)) {
+        scoredRef.current.add(entry.word);
+        const today = todayStr();
+        const progress = await getAllProgress();
+        const current = progress[entry.word] ?? initialProgress(today);
+        const updated = reviewWord(current, knewIt, today);
+        await saveWordProgress(entry.word, updated);
+        await (knewIt ? removeWrongWord(entry.word) : addWrongWord(entry.word));
+        if (!knewIt) mark(entry, 'wrong');
+        await incrementHeatmapToday(today);
+      }
+      goTo(index + 1);
     } finally {
       processingRef.current = false;
     }
+  }
+
+  // Answering is not the only way to move: the arrows pinned to the screen
+  // edges step through the queue without making the reader scroll to the
+  // bottom of a long revealed card to find "next".
+  function goTo(next: number) {
+    if (next < 0 || next > queue.length) return;
+    setMood('idle'); // a fresh card starts with a calm mascot
+    setIndex(next);
   }
 
   async function handleExclude() {
@@ -159,7 +176,7 @@ export function PracticeScreen({ route }: Props) {
     processingRef.current = true;
     try {
       await excludeWord(queue[index].word);
-      setIndex((i) => i + 1);
+      goTo(index + 1);
     } finally {
       processingRef.current = false;
     }
@@ -273,6 +290,30 @@ export function PracticeScreen({ route }: Props) {
         {wide && <View style={styles.sideColumn}>{panel()}</View>}
       </View>
 
+      {/* Pinned to the edges rather than placed after the options: a revealed
+          card is long, and hunting for "next" at the bottom of it every time is
+          the whole complaint. */}
+      {index > 0 && (
+        <Pressable
+          style={({ pressed }) => [styles.stepArrow, styles.stepLeft, pressed && styles.stepArrowDown]}
+          onPress={() => goTo(index - 1)}
+          hitSlop={10}
+          accessibilityLabel="上一題"
+        >
+          <Text style={styles.stepArrowText}>‹</Text>
+        </Pressable>
+      )}
+      {!done && (
+        <Pressable
+          style={({ pressed }) => [styles.stepArrow, styles.stepRight, pressed && styles.stepArrowDown]}
+          onPress={() => goTo(index + 1)}
+          hitSlop={10}
+          accessibilityLabel="下一題"
+        >
+          <Text style={styles.stepArrowText}>›</Text>
+        </Pressable>
+      )}
+
       {!wide && (
         <Modal
           visible={panelOpen}
@@ -336,6 +377,23 @@ const styles = StyleSheet.create({
   // No maxWidth: a clamped flex child leaves dead space beside it instead of
   // handing the slack back to the answer column.
   sideColumn: { flex: 1 },
+  stepArrow: {
+    position: 'absolute',
+    top: '46%',
+    width: 40,
+    height: 56,
+    borderRadius: 20,
+    backgroundColor: colors.surface,
+    borderWidth: 1,
+    borderColor: colors.line,
+    alignItems: 'center',
+    justifyContent: 'center',
+    ...shadow,
+  },
+  stepArrowDown: { backgroundColor: colors.blue },
+  stepLeft: { left: 4 },
+  stepRight: { right: 4 },
+  stepArrowText: { color: colors.blueInk, fontSize: 30, lineHeight: 34, fontWeight: '400' },
   modalRow: { flex: 1, flexDirection: 'row', backgroundColor: 'rgba(18,33,50,0.35)' },
   scrim: { flex: 1 },
   modalPanel: { width: '88%', maxWidth: 420, padding: 12 },

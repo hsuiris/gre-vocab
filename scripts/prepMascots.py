@@ -225,8 +225,55 @@ def columns_with_content(im: Image.Image) -> list[tuple[int, int]]:
     return [s for s in spans if s[1] - s[0] > w * 0.08]
 
 
+def largest_shape(im: Image.Image) -> Image.Image:
+    """Erase everything except the biggest connected shape.
+
+    Sprites cut by hand out of a grid sheet keep a sliver of the neighbour at
+    the edge. A sliver is invisible on its own but it widens the bounding box,
+    so the crop below centres on the pair and the animal ends up small and
+    off-centre. Every source here is a single subject — the girl and the cat on
+    her head are one connected shape — so the largest blob is the subject and
+    anything else is debris.
+    """
+    w, h = im.size
+    px = im.load()
+    seen = bytearray(w * h)
+    best: list[tuple[int, int]] = []
+    for sy in range(h):
+        for sx in range(w):
+            if seen[sy * w + sx] or px[sx, sy][3] <= TRANSPARENT:
+                continue
+            cells = []
+            queue = deque([(sx, sy)])
+            seen[sy * w + sx] = 1
+            while queue:
+                x, y = queue.popleft()
+                cells.append((x, y))
+                for nx, ny in ((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)):
+                    if 0 <= nx < w and 0 <= ny < h and not seen[ny * w + nx]:
+                        if px[nx, ny][3] > TRANSPARENT:
+                            seen[ny * w + nx] = 1
+                            queue.append((nx, ny))
+            if len(cells) > len(best):
+                best = cells
+
+    keep = bytearray(w * h)
+    for x, y in best:
+        keep[y * w + x] = 1
+    dropped = 0
+    for y in range(h):
+        for x in range(w):
+            if not keep[y * w + x] and px[x, y][3] > 0:
+                px[x, y] = (0, 0, 0, 0)
+                dropped += 1
+    if dropped:
+        print(f"    dropped {dropped}px of stray shapes")
+    return im
+
+
 def crop_to_subject(im: Image.Image) -> Image.Image:
     """Trim the empty canvas, then centre the subject on a square."""
+    im = largest_shape(im)
     box = im.getchannel("A").getbbox()
     if box is None:
         return im

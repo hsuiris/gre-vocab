@@ -5,12 +5,12 @@ import { words, WordEntry } from '../data/words';
 import { speakSequence, stopSpeaking } from '../lib/speech';
 import { colors, centered, slab, slabEdge, slabPressed } from '../theme';
 
-// Fixed so getItemLayout can exist, which is what lets the A-Z strip and the
-// player jump straight to a row in a 3000-item list without measuring it.
-// Card height plus the gap below it.
-const CARD_HEIGHT = 96;
+// Rows size themselves to their example sentence. A fixed height would let
+// getItemLayout jump straight to any row, but examples run to 114 characters
+// and a fixed height clips them — so the list measures as it goes and
+// onScrollToIndexFailed covers the jumps.
 const ROW_GAP = 10;
-const ROW_HEIGHT = CARD_HEIGHT + ROW_GAP;
+const ESTIMATED_ROW = 116; // only a starting guess for a jump into unmeasured rows
 const RATES = [0.75, 1, 1.25];
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
@@ -129,10 +129,19 @@ export function AllWordsScreen() {
           ref={listRef}
           data={filtered}
           keyExtractor={(item) => item.word}
-          getItemLayout={(_, index) => ({ length: ROW_HEIGHT, offset: ROW_HEIGHT * index, index })}
           contentContainerStyle={styles.listContent}
           initialNumToRender={12}
           showsVerticalScrollIndicator={false}
+          // Rows are measured, not calculated, so a jump to a far letter lands
+          // on a row the list has never laid out. Approximate, then ask again
+          // once it has caught up.
+          onScrollToIndexFailed={({ index, averageItemLength }) => {
+            listRef.current?.scrollToOffset({
+              offset: (averageItemLength || ESTIMATED_ROW) * index,
+              animated: false,
+            });
+            setTimeout(() => scrollTo(index), 80);
+          }}
           renderItem={({ item, index }) => {
             const active = index === current;
             return (
@@ -150,9 +159,7 @@ export function AllWordsScreen() {
                 <Text style={styles.meaning} numberOfLines={1}>
                   {item.meaning}
                 </Text>
-                <Text style={styles.example} numberOfLines={1}>
-                  {item.example}
-                </Text>
+                <Text style={styles.example}>{item.example}</Text>
               </Pressable>
             );
           }}
@@ -229,9 +236,8 @@ const styles = StyleSheet.create({
   listWrap: { flex: 1, flexDirection: 'row', gap: 4 },
   listContent: { paddingBottom: 4 },
   row: {
-    // CARD_HEIGHT already counts the 4pt lip, so getItemLayout stays right.
-    height: CARD_HEIGHT,
     marginBottom: ROW_GAP,
+    paddingVertical: 12,
     justifyContent: 'center',
     backgroundColor: colors.surface,
     borderRadius: 20,
@@ -255,7 +261,7 @@ const styles = StyleSheet.create({
   },
   marker: { color: colors.blueInk, fontSize: 11, fontWeight: '900' },
   meaning: { color: colors.muted, fontSize: 14, fontWeight: '700', marginTop: 5 },
-  example: { color: colors.ink, fontSize: 12.5, fontStyle: 'italic', marginTop: 6 },
+  example: { color: colors.ink, fontSize: 12.5, lineHeight: 18, fontStyle: 'italic', marginTop: 6 },
   strip: { width: 20, justifyContent: 'center', alignItems: 'center' },
   stripLetter: { color: colors.blueInk, fontSize: 10, fontWeight: '900', paddingVertical: 1 },
   stripLetterOff: { color: colors.line, fontSize: 10, fontWeight: '900', paddingVertical: 1 },

@@ -28,7 +28,8 @@ import { SessionSidePanel } from '../src/components/SessionSidePanel';
 import { AllWordsScreen } from '../src/screens/AllWordsScreen';
 import { NotesScreen } from '../src/screens/NotesScreen';
 import { PracticeScreen } from '../src/screens/PracticeScreen';
-import { getNotes, saveNote } from '../src/lib/storage';
+import { getNotes, saveNote, getHeatmap } from '../src/lib/storage';
+import { todayStr } from '../src/lib/date';
 import { words } from '../src/data/words';
 
 const AsyncStorage = require('@react-native-async-storage/async-storage');
@@ -160,6 +161,37 @@ describe('PracticeScreen', () => {
     const shown = readable(tree.root);
     expect(shown).toContain(words[0].meaning);
     expect(shown).toContain(words[0].example);
+  });
+
+  it('the edge arrows move through the queue without scoring anything', async () => {
+    const tree = await mount(practice());
+    expect(readable(tree.root)).toContain('1 / ');
+
+    await act(async () => pressableWith(tree, '›').props.onPress());
+    expect(readable(tree.root)).toContain('2 / ');
+
+    await act(async () => pressableWith(tree, '‹').props.onPress());
+    expect(readable(tree.root)).toContain('1 / ');
+
+    // Skipping past a word is not the same as reviewing it.
+    expect(await getHeatmap()).toEqual({});
+  });
+
+  // Stepping back is only safe if re-answering is a no-op. Otherwise a word's
+  // Leitner box advances twice and the day's count is inflated by wandering.
+  it('answering the same word again after stepping back does not score it twice', async () => {
+    const tree = await mount(practice());
+    const answer = words[0].meaning;
+
+    await act(async () => pressableWith(tree, answer).props.onPress());
+    await act(async () => pressableWith(tree, '下一題').props.onPress());
+    expect(await getHeatmap()).toEqual({ [todayStr()]: 1 });
+
+    await act(async () => pressableWith(tree, '‹').props.onPress());
+    await act(async () => pressableWith(tree, answer).props.onPress());
+    await act(async () => pressableWith(tree, '下一題').props.onPress());
+
+    expect(await getHeatmap()).toEqual({ [todayStr()]: 1 });
   });
 
   it('saves the session note to the notes library', async () => {
