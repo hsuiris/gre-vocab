@@ -1,11 +1,13 @@
-import React, { useMemo, useState } from 'react';
+import React, { useCallback, useMemo, useRef, useState } from 'react';
 import { View, Text, TextInput, Pressable, FlatList, StyleSheet } from 'react-native';
 import { words } from '../data/words';
 import { getRelation } from '../data/relations';
 import { speakWord } from '../lib/speech';
+import { AlphabetIndex, letterStarts } from '../components/AlphabetIndex';
 import { colors, centered } from '../theme';
 
 const meanings = new Map(words.map((w) => [w.word.toLowerCase(), w.meaning]));
+const ESTIMATED_CARD = 220; // only a starting guess for a jump into unmeasured cards
 
 function Chip({ word, tone }: { word: string; tone: 'syn' | 'ant' }) {
   const meaning = meanings.get(word.toLowerCase());
@@ -44,6 +46,12 @@ function Group({ label, tone, related }: { label: string; tone: 'syn' | 'ant'; r
 export function RelationsScreen() {
   const [query, setQuery] = useState('');
   const [antonymsOnly, setAntonymsOnly] = useState(false);
+  const listRef = useRef<FlatList<{ entry: (typeof words)[number]; rel: ReturnType<typeof getRelation> }>>(null);
+  const rowCount = useRef(0);
+
+  const scrollTo = useCallback((at: number) => {
+    if (at < rowCount.current) listRef.current?.scrollToIndex({ index: at, viewPosition: 0 });
+  }, []);
 
   const rows = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -57,6 +65,9 @@ export function RelationsScreen() {
     }
     return result;
   }, [query, antonymsOnly]);
+  rowCount.current = rows.length;
+
+  const starts = useMemo(() => letterStarts(rows, (r) => r.entry.word), [rows]);
 
   return (
     <View style={styles.container}>
@@ -83,12 +94,23 @@ export function RelationsScreen() {
         </View>
       </View>
 
+      <View style={styles.listWrap}>
       <FlatList
+        ref={listRef}
         data={rows}
         keyExtractor={({ entry }) => entry.word}
         contentContainerStyle={styles.list}
         keyboardShouldPersistTaps="handled"
         ListEmptyComponent={<Text style={styles.empty}>沒有符合的單字。</Text>}
+        // Cards vary in height with how many related words they carry, so the
+        // list cannot calculate where a far letter is until it has laid it out.
+        onScrollToIndexFailed={({ index, averageItemLength }) => {
+          listRef.current?.scrollToOffset({
+            offset: (averageItemLength || ESTIMATED_CARD) * index,
+            animated: false,
+          });
+          setTimeout(() => scrollTo(index), 80);
+        }}
         renderItem={({ item: { entry, rel } }) => (
           <View style={styles.card}>
             <Pressable style={styles.head} onPress={() => speakWord(entry.word)}>
@@ -102,6 +124,8 @@ export function RelationsScreen() {
           </View>
         )}
       />
+        <AlphabetIndex starts={starts} onJump={scrollTo} />
+      </View>
     </View>
   );
 }
@@ -136,6 +160,7 @@ const styles = StyleSheet.create({
   filterText: { color: colors.muted, fontWeight: '900' },
   filterTextActive: { color: colors.blueInk },
   count: { color: colors.muted, fontWeight: '700', fontSize: 13 },
+  listWrap: { flex: 1, flexDirection: 'row' },
   list: { ...centered, paddingHorizontal: 16, paddingBottom: 36, gap: 12 },
   empty: { color: colors.muted, fontWeight: '700', textAlign: 'center', marginTop: 40 },
   card: {

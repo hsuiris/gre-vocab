@@ -3,6 +3,7 @@ import { View, Text, Pressable, TextInput, FlatList, StyleSheet } from 'react-na
 import { useFocusEffect } from '@react-navigation/native';
 import { words, WordEntry } from '../data/words';
 import { speakSequence, stopSpeaking } from '../lib/speech';
+import { AlphabetIndex, letterStarts } from '../components/AlphabetIndex';
 import { colors, centered, slab, slabEdge, slabPressed } from '../theme';
 
 // Rows size themselves to their example sentence. A fixed height would let
@@ -12,7 +13,6 @@ import { colors, centered, slab, slabEdge, slabPressed } from '../theme';
 const ROW_GAP = 10;
 const ESTIMATED_ROW = 116; // only a starting guess for a jump into unmeasured rows
 const RATES = [0.75, 1, 1.25];
-const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
 export function AllWordsScreen() {
   const [query, setQuery] = useState('');
@@ -34,14 +34,7 @@ export function AllWordsScreen() {
   }, [query]);
   dataRef.current = filtered;
 
-  const letterStarts = useMemo(() => {
-    const starts: Record<string, number> = {};
-    filtered.forEach((w, i) => {
-      const letter = w.word[0].toUpperCase();
-      if (starts[letter] === undefined) starts[letter] = i;
-    });
-    return starts;
-  }, [filtered]);
+  const starts = useMemo(() => letterStarts(filtered, (w) => w.word), [filtered]);
 
   const stop = useCallback(() => {
     playingRef.current = false;
@@ -164,16 +157,7 @@ export function AllWordsScreen() {
             );
           }}
         />
-        <View style={styles.strip}>
-          {ALPHABET.map((letter) => {
-            const at = letterStarts[letter];
-            return (
-              <Pressable key={letter} onPress={() => at !== undefined && scrollTo(at)} hitSlop={3}>
-                <Text style={at === undefined ? styles.stripLetterOff : styles.stripLetter}>{letter}</Text>
-              </Pressable>
-            );
-          })}
-        </View>
+        <AlphabetIndex starts={starts} onJump={scrollTo} />
       </View>
 
       <View style={styles.player}>
@@ -262,9 +246,6 @@ const styles = StyleSheet.create({
   marker: { color: colors.blueInk, fontSize: 11, fontWeight: '900' },
   meaning: { color: colors.muted, fontSize: 14, fontWeight: '700', marginTop: 5 },
   example: { color: colors.ink, fontSize: 12.5, lineHeight: 18, fontStyle: 'italic', marginTop: 6 },
-  strip: { width: 20, justifyContent: 'center', alignItems: 'center' },
-  stripLetter: { color: colors.blueInk, fontSize: 10, fontWeight: '900', paddingVertical: 1 },
-  stripLetterOff: { color: colors.line, fontSize: 10, fontWeight: '900', paddingVertical: 1 },
   player: {
     backgroundColor: colors.surface,
     borderRadius: 26,
