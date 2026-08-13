@@ -29,8 +29,8 @@ import { AllWordsScreen } from '../src/screens/AllWordsScreen';
 import { NotesScreen } from '../src/screens/NotesScreen';
 import { PracticeScreen } from '../src/screens/PracticeScreen';
 import { RelationsScreen } from '../src/screens/RelationsScreen';
-import { getRelation } from '../src/data/relations';
-import { getNotes, saveNote, getHeatmap, getExcludedWords } from '../src/lib/storage';
+import { concepts } from '../src/data/concepts';
+import { getNotes, saveNote, getHeatmap, getExcludedWords, excludeWord } from '../src/lib/storage';
 import { todayStr } from '../src/lib/date';
 import { words } from '../src/data/words';
 
@@ -225,28 +225,40 @@ describe('PracticeScreen', () => {
 });
 
 describe('RelationsScreen', () => {
-  const withRelations = words.find((w) => getRelation(w.word).syn.length > 0)!;
+  const concept = concepts[0];
+  // Asserting a word is *gone* needs one that is not a fragment of another word
+  // on the list, or "abhor" keeps testing positive inside "abhorrent".
+  const standalone = concept.words.find(
+    ({ w }) => !words.some((other) => other.word !== w && other.word.includes(w))
+  )!.w;
 
-  it('reads a related word aloud when its chip is tapped', async () => {
+  const open = (tree: renderer.ReactTestRenderer) =>
+    act(async () => pressableWith(tree, concept.zh).props.onPress());
+
+  it('previews a concept with its strongest word before it is opened', async () => {
     const tree = await mount(<RelationsScreen />);
-    const related = getRelation(withRelations.word).syn[0];
+    const shown = readable(tree.root);
 
-    await act(async () => pressableWith(tree, related).props.onPress());
-
-    expect(mockSpeak).toHaveBeenCalledWith(related, expect.objectContaining({ language: 'en-US' }));
+    expect(shown).toContain(concept.zh);
+    expect(shown).toContain(concept.words[0].w);
   });
 
-  it('drops a swiped word into the recycle bin and out of the list', async () => {
+  it('reads a word aloud once its concept is opened', async () => {
     const tree = await mount(<RelationsScreen />);
-    expect(readable(tree.root)).toContain(withRelations.word);
+    // Shut, the words are plain chips. Only an open card makes them tappable.
+    await open(tree);
 
-    const card = tree.root
-      .findAll((node) => typeof node.props.onRemove === 'function')
-      .find((node) => readable(node).includes(withRelations.word))!;
-    await act(async () => card.props.onRemove());
+    await act(async () => pressableWith(tree, standalone).props.onPress());
 
-    expect(await getExcludedWords()).toContain(withRelations.word);
-    expect(readable(tree.root)).not.toContain(withRelations.word);
+    expect(mockSpeak).toHaveBeenCalledWith(standalone, expect.objectContaining({ language: 'en-US' }));
+  });
+
+  it('leaves a binned word out of the concept it belonged to', async () => {
+    await excludeWord(standalone);
+    const tree = await mount(<RelationsScreen />);
+    await open(tree);
+
+    expect(readable(tree.root)).not.toContain(standalone);
   });
 });
 

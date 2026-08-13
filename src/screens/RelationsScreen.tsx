@@ -1,68 +1,101 @@
-import React, { useCallback, useMemo, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { View, Text, TextInput, Pressable, FlatList, StyleSheet } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import { words } from '../data/words';
-import { getRelation } from '../data/relations';
+import { concepts, bandOf, BAND_LABEL, type Band, type Concept, type ConceptWord } from '../data/concepts';
 import { speakWord } from '../lib/speech';
-import { AlphabetIndex, letterStarts } from '../components/AlphabetIndex';
-import { SwipeToRemove } from '../components/SwipeToRemove';
-import { excludeWord, getExcludedWords } from '../lib/storage';
+import { getExcludedWords } from '../lib/storage';
 import { colors, centered } from '../theme';
 
 const meanings = new Map(words.map((w) => [w.word.toLowerCase(), w.meaning]));
-const ESTIMATED_CARD = 220; // only a starting guess for a jump into unmeasured cards
+const BANDS: Band[] = ['strong', 'mid', 'weak'];
+const PREVIEW = 6;
+const ESTIMATED_CARD = 150; // only a starting guess for a jump into unmeasured cards
 
-function Chip({ word, tone }: { word: string; tone: 'syn' | 'ant' }) {
-  const meaning = meanings.get(word.toLowerCase());
+const zhOf = (id: string | null) => concepts.find((c) => c.id === id)?.zh;
+
+// Tapping a word reads it aloud. Hearing "abhor" and "dislike" back to back is
+// most of what teaches the gap between them, which is the whole point of a
+// screen that sorts by strength.
+function WordRow({ w }: { w: string }) {
   return (
-    // Every related word reads aloud too. Hearing "abate" next to "subside" is
-    // most of what makes the pair stick, and a silent chip looks broken beside
-    // a headword that speaks.
-    <Pressable
-      style={({ pressed }) => [
-        styles.chip,
-        tone === 'ant' ? styles.chipAnt : styles.chipSyn,
-        pressed && styles.chipPressed,
-      ]}
-      onPress={() => speakWord(word)}
-    >
-      <Text style={[styles.chipWord, tone === 'ant' && styles.chipWordAnt]}>{word}</Text>
-      {/* A chip only carries a gloss when the related word is on the study
-          list too — WordNet reaches well beyond the 3192 words here. */}
-      {meaning && <Text style={styles.chipMeaning}>{meaning}</Text>}
+    <Pressable style={({ pressed }) => [styles.row, pressed && styles.rowPressed]} onPress={() => speakWord(w)}>
+      <Text style={styles.rowWord}>{w}</Text>
+      <Text style={styles.rowMeaning} numberOfLines={1}>
+        {meanings.get(w.toLowerCase())}
+      </Text>
     </Pressable>
   );
 }
 
-// The label sits at one end of its row and the count at the other, so each
-// group announces its own size instead of leaving the line half empty.
-function Group({ label, tone, related }: { label: string; tone: 'syn' | 'ant'; related: string[] }) {
+function ConceptCard({
+  concept,
+  words: list,
+  open,
+  onToggle,
+  onJump,
+}: {
+  concept: Concept;
+  words: ConceptWord[];
+  open: boolean;
+  onToggle: () => void;
+  onJump: (id: string) => void;
+}) {
+  const oppositeZh = zhOf(concept.opposite);
   return (
-    <>
-      <View style={styles.groupHead}>
-        <Text style={styles.groupLabel}>{label}</Text>
-        <Text style={styles.groupCount}>{related.length}</Text>
-      </View>
-      {related.length ? (
-        <View style={styles.chips}>
-          {related.map((w) => (
-            <Chip key={`${tone}-${w}`} word={w} tone={tone} />
-          ))}
-        </View>
-      ) : (
-        <Text style={styles.none}>尚無{label}</Text>
+    <View style={styles.card}>
+      {/* Name at one end, count at the other, so the head fills its width
+          instead of bunching against the left edge. */}
+      <Pressable style={styles.head} onPress={onToggle}>
+        <Text style={styles.zh}>{concept.zh}</Text>
+        <Text style={styles.count}>
+          {list.length} 字 {open ? '▾' : '▸'}
+        </Text>
+      </Pressable>
+
+      {oppositeZh && (
+        <Pressable style={styles.opposite} onPress={() => onJump(concept.opposite!)}>
+          <Text style={styles.oppositeText}>⇄ 相反：{oppositeZh}</Text>
+        </Pressable>
       )}
-    </>
+
+      {open ? (
+        BANDS.map((band) => {
+          const inBand = list.filter((x) => bandOf(x.lv) === band);
+          if (!inBand.length) return null;
+          return (
+            <View key={band}>
+              <Text style={styles.band}>{BAND_LABEL[band]}</Text>
+              {inBand.map(({ w }) => (
+                <WordRow key={w} w={w} />
+              ))}
+            </View>
+          );
+        })
+      ) : (
+        // Collapsed, the card shows only the strongest few words as bare chips.
+        // A concept averages around 45 words; opening all of them by default
+        // buries every other concept below one screenful of scrolling.
+        <View style={styles.chips}>
+          {list.slice(0, PREVIEW).map(({ w }) => (
+            <Text key={w} style={styles.chip}>
+              {w}
+            </Text>
+          ))}
+          {list.length > PREVIEW && <Text style={styles.more}>+{list.length - PREVIEW}</Text>}
+        </View>
+      )}
+    </View>
   );
 }
 
 export function RelationsScreen() {
   const [query, setQuery] = useState('');
-  const [antonymsOnly, setAntonymsOnly] = useState(false);
-  const listRef = useRef<FlatList<{ entry: (typeof words)[number]; rel: ReturnType<typeof getRelation> }>>(null);
-  const rowCount = useRef(0);
-
+  const [oppositesOnly, setOppositesOnly] = useState(false);
+  const [open, setOpen] = useState<Set<string>>(new Set());
   const [excluded, setExcluded] = useState<Set<string>>(new Set());
+  const [pendingJump, setPendingJump] = useState<string | null>(null);
+  const listRef = useRef<FlatList<{ concept: Concept; words: ConceptWord[] }>>(null);
 
   // Reloaded on focus so a word restored from the recycle bin comes back here.
   useFocusEffect(
@@ -71,31 +104,54 @@ export function RelationsScreen() {
     }, [])
   );
 
-  const scrollTo = useCallback((at: number) => {
-    if (at < rowCount.current) listRef.current?.scrollToIndex({ index: at, viewPosition: 0 });
-  }, []);
-
-  async function handleRemove(word: string) {
-    await excludeWord(word);
-    setExcluded((current) => new Set(current).add(word));
-  }
-
   const rows = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    const result = [];
-    for (const entry of words) {
-      if (excluded.has(entry.word)) continue;
-      const rel = getRelation(entry.word);
-      if (!rel.syn.length && !rel.ant.length) continue;
-      if (antonymsOnly && !rel.ant.length) continue;
-      if (q && !entry.word.toLowerCase().includes(q) && !entry.meaning.includes(query.trim())) continue;
-      result.push({ entry, rel });
+    const q = query.trim();
+    const lower = q.toLowerCase();
+    const result: { concept: Concept; words: ConceptWord[] }[] = [];
+    for (const concept of concepts) {
+      if (oppositesOnly && !concept.opposite) continue;
+      const kept = concept.words.filter(({ w }) => !excluded.has(w));
+      if (!kept.length) continue;
+      if (
+        q &&
+        !concept.zh.includes(q) &&
+        !kept.some(({ w }) => w.toLowerCase().includes(lower) || meanings.get(w.toLowerCase())?.includes(q))
+      ) {
+        continue;
+      }
+      result.push({ concept, words: kept });
     }
     return result;
-  }, [query, antonymsOnly, excluded]);
-  rowCount.current = rows.length;
+  }, [query, oppositesOnly, excluded]);
 
-  const starts = useMemo(() => letterStarts(rows, (r) => r.entry.word), [rows]);
+  // A search already narrows the list to a few cards, so leaving them shut
+  // would hide the very word that was searched for.
+  const searching = query.trim().length > 0;
+
+  function jumpTo(id: string) {
+    setQuery('');
+    setOppositesOnly(false);
+    setOpen((current) => new Set(current).add(id));
+    setPendingJump(id);
+  }
+
+  // The scroll waits for the cleared filters to produce their new rows, so the
+  // index it lands on is the one the list is actually rendering.
+  useEffect(() => {
+    if (!pendingJump) return;
+    const at = rows.findIndex((r) => r.concept.id === pendingJump);
+    if (at >= 0) listRef.current?.scrollToIndex({ index: at, viewPosition: 0 });
+    setPendingJump(null);
+  }, [pendingJump, rows]);
+
+  function toggle(id: string) {
+    setOpen((current) => {
+      const next = new Set(current);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  }
 
   return (
     <View style={styles.container}>
@@ -103,7 +159,7 @@ export function RelationsScreen() {
         <TextInput
           value={query}
           onChangeText={setQuery}
-          placeholder="搜尋單字或中文意思"
+          placeholder="搜尋概念或單字，例如「討厭」或 abhor"
           placeholderTextColor={colors.muted}
           autoCapitalize="none"
           autoCorrect={false}
@@ -113,49 +169,41 @@ export function RelationsScreen() {
             stacking against the left edge with the right half left empty. */}
         <View style={styles.toolbarRow}>
           <Pressable
-            style={[styles.filter, antonymsOnly && styles.filterActive]}
-            onPress={() => setAntonymsOnly((v) => !v)}
+            style={[styles.filter, oppositesOnly && styles.filterActive]}
+            onPress={() => setOppositesOnly((v) => !v)}
           >
-            <Text style={[styles.filterText, antonymsOnly && styles.filterTextActive]}>只看有反義詞</Text>
+            <Text style={[styles.filterText, oppositesOnly && styles.filterTextActive]}>只看有相反概念</Text>
           </Pressable>
-          <Text style={styles.count}>{rows.length} 個字</Text>
+          <Text style={styles.total}>{rows.length} 個概念</Text>
         </View>
       </View>
 
-      <View style={styles.listWrap}>
       <FlatList
         ref={listRef}
         data={rows}
-        keyExtractor={({ entry }) => entry.word}
+        keyExtractor={({ concept }) => concept.id}
         contentContainerStyle={styles.list}
         keyboardShouldPersistTaps="handled"
-        ListEmptyComponent={<Text style={styles.empty}>沒有符合的單字。</Text>}
-        // Cards vary in height with how many related words they carry, so the
-        // list cannot calculate where a far letter is until it has laid it out.
+        ListEmptyComponent={<Text style={styles.empty}>沒有符合的概念。</Text>}
+        // An open card is many times the height of a shut one, so the list
+        // cannot work out where a far card sits until it has laid it out.
         onScrollToIndexFailed={({ index, averageItemLength }) => {
           listRef.current?.scrollToOffset({
             offset: (averageItemLength || ESTIMATED_CARD) * index,
             animated: false,
           });
-          setTimeout(() => scrollTo(index), 80);
+          setTimeout(() => setPendingJump(rows[index]?.concept.id ?? null), 80);
         }}
-        renderItem={({ item: { entry, rel } }) => (
-          <SwipeToRemove label="← 丟進回收桶" onRemove={() => handleRemove(entry.word)}>
-          <View style={styles.card}>
-            <Pressable style={styles.head} onPress={() => speakWord(entry.word)}>
-              <Text style={styles.word}>{entry.word}</Text>
-              <Text style={styles.pos}>{entry.pos}</Text>
-            </Pressable>
-            <Text style={styles.meaning}>{entry.meaning}</Text>
-
-            <Group label="近義詞" tone="syn" related={rel.syn} />
-            <Group label="反義詞" tone="ant" related={rel.ant} />
-          </View>
-          </SwipeToRemove>
+        renderItem={({ item: { concept, words: list } }) => (
+          <ConceptCard
+            concept={concept}
+            words={list}
+            open={searching || open.has(concept.id)}
+            onToggle={() => toggle(concept.id)}
+            onJump={jumpTo}
+          />
         )}
       />
-        <AlphabetIndex starts={starts} onJump={scrollTo} />
-      </View>
     </View>
   );
 }
@@ -189,8 +237,7 @@ const styles = StyleSheet.create({
   filterActive: { backgroundColor: colors.blue, borderColor: colors.blue },
   filterText: { color: colors.muted, fontWeight: '900' },
   filterTextActive: { color: colors.blueInk },
-  count: { color: colors.muted, fontWeight: '700', fontSize: 13 },
-  listWrap: { flex: 1, flexDirection: 'row' },
+  total: { color: colors.muted, fontWeight: '700', fontSize: 13 },
   list: { ...centered, paddingHorizontal: 16, paddingBottom: 36, gap: 12 },
   empty: { color: colors.muted, fontWeight: '700', textAlign: 'center', marginTop: 40 },
   card: {
@@ -200,37 +247,37 @@ const styles = StyleSheet.create({
     borderColor: colors.line,
     padding: 18,
   },
-  // Word at one end, part of speech at the other, so the card head fills its
-  // width instead of bunching everything against the left.
   head: { flexDirection: 'row', alignItems: 'baseline', justifyContent: 'space-between', gap: 8 },
-  word: { color: colors.ink, fontSize: 22, fontWeight: '900' },
-  pos: {
-    color: colors.blueInk,
-    backgroundColor: colors.blue,
-    fontSize: 12,
+  zh: { color: colors.ink, fontSize: 22, fontWeight: '900' },
+  count: { color: colors.muted, fontWeight: '900', fontSize: 13 },
+  opposite: { alignSelf: 'flex-start', marginTop: 8 },
+  oppositeText: {
+    color: colors.redInk,
+    backgroundColor: colors.red,
+    fontSize: 13,
     fontWeight: '900',
-    borderRadius: 9,
-    paddingHorizontal: 8,
-    paddingVertical: 3,
+    borderRadius: 12,
+    paddingHorizontal: 10,
+    paddingVertical: 4,
     overflow: 'hidden',
   },
-  meaning: { color: colors.ink, fontSize: 15, fontWeight: '700', marginTop: 4 },
-  groupHead: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    marginTop: 14,
-    marginBottom: 8,
+  band: { color: colors.muted, fontWeight: '900', fontSize: 12, marginTop: 14, marginBottom: 2 },
+  // Word left, gloss right: the eye runs down one column of English while the
+  // Chinese stays available, which is how the strength ladder stays readable.
+  row: { flexDirection: 'row', alignItems: 'baseline', gap: 10, paddingVertical: 6 },
+  rowPressed: { opacity: 0.6 },
+  rowWord: { color: colors.ink, fontSize: 16, fontWeight: '900' },
+  rowMeaning: { color: colors.muted, fontSize: 13, fontWeight: '700', flexShrink: 1 },
+  chips: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginTop: 12 },
+  chip: {
+    backgroundColor: colors.blue,
+    color: colors.blueInk,
+    fontWeight: '900',
+    fontSize: 14,
+    borderRadius: 14,
+    paddingHorizontal: 11,
+    paddingVertical: 6,
+    overflow: 'hidden',
   },
-  groupLabel: { color: colors.ink, fontWeight: '900' },
-  groupCount: { color: colors.muted, fontWeight: '900', fontSize: 13 },
-  none: { color: colors.muted, fontWeight: '700', fontSize: 13 },
-  chips: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
-  chip: { borderRadius: 16, paddingHorizontal: 12, paddingVertical: 8 },
-  chipPressed: { opacity: 0.6 },
-  chipSyn: { backgroundColor: colors.blue },
-  chipAnt: { backgroundColor: colors.red },
-  chipWord: { color: colors.blueInk, fontWeight: '900', fontSize: 15 },
-  chipWordAnt: { color: colors.redInk },
-  chipMeaning: { color: colors.muted, fontWeight: '700', fontSize: 12, marginTop: 2 },
+  more: { color: colors.muted, fontWeight: '900', fontSize: 13, alignSelf: 'center' },
 });
