@@ -28,7 +28,9 @@ import { SessionSidePanel } from '../src/components/SessionSidePanel';
 import { AllWordsScreen } from '../src/screens/AllWordsScreen';
 import { NotesScreen } from '../src/screens/NotesScreen';
 import { PracticeScreen } from '../src/screens/PracticeScreen';
-import { getNotes, saveNote, getHeatmap } from '../src/lib/storage';
+import { RelationsScreen } from '../src/screens/RelationsScreen';
+import { getRelation } from '../src/data/relations';
+import { getNotes, saveNote, getHeatmap, getExcludedWords } from '../src/lib/storage';
 import { todayStr } from '../src/lib/date';
 import { words } from '../src/data/words';
 
@@ -206,6 +208,32 @@ describe('PracticeScreen', () => {
     expect(saved[0].text).toBe('ab- 開頭幾乎都是負面的');
     expect(saved[0].mode).toBe('英選中');
     expect(readable(tree.root)).toContain('已存到筆記庫 ✓');
+  });
+});
+
+describe('RelationsScreen', () => {
+  const withRelations = words.find((w) => getRelation(w.word).syn.length > 0)!;
+
+  it('reads a related word aloud when its chip is tapped', async () => {
+    const tree = await mount(<RelationsScreen />);
+    const related = getRelation(withRelations.word).syn[0];
+
+    await act(async () => pressableWith(tree, related).props.onPress());
+
+    expect(mockSpeak).toHaveBeenCalledWith(related, expect.objectContaining({ language: 'en-US' }));
+  });
+
+  it('drops a swiped word into the recycle bin and out of the list', async () => {
+    const tree = await mount(<RelationsScreen />);
+    expect(readable(tree.root)).toContain(withRelations.word);
+
+    const card = tree.root
+      .findAll((node) => typeof node.props.onRemove === 'function')
+      .find((node) => readable(node).includes(withRelations.word))!;
+    await act(async () => card.props.onRemove());
+
+    expect(await getExcludedWords()).toContain(withRelations.word);
+    expect(readable(tree.root)).not.toContain(withRelations.word);
   });
 });
 

@@ -1,9 +1,12 @@
 import React, { useCallback, useMemo, useRef, useState } from 'react';
 import { View, Text, TextInput, Pressable, FlatList, StyleSheet } from 'react-native';
+import { useFocusEffect } from '@react-navigation/native';
 import { words } from '../data/words';
 import { getRelation } from '../data/relations';
 import { speakWord } from '../lib/speech';
 import { AlphabetIndex, letterStarts } from '../components/AlphabetIndex';
+import { SwipeToRemove } from '../components/SwipeToRemove';
+import { excludeWord, getExcludedWords } from '../lib/storage';
 import { colors, centered } from '../theme';
 
 const meanings = new Map(words.map((w) => [w.word.toLowerCase(), w.meaning]));
@@ -12,12 +15,22 @@ const ESTIMATED_CARD = 220; // only a starting guess for a jump into unmeasured 
 function Chip({ word, tone }: { word: string; tone: 'syn' | 'ant' }) {
   const meaning = meanings.get(word.toLowerCase());
   return (
-    <View style={[styles.chip, tone === 'ant' ? styles.chipAnt : styles.chipSyn]}>
+    // Every related word reads aloud too. Hearing "abate" next to "subside" is
+    // most of what makes the pair stick, and a silent chip looks broken beside
+    // a headword that speaks.
+    <Pressable
+      style={({ pressed }) => [
+        styles.chip,
+        tone === 'ant' ? styles.chipAnt : styles.chipSyn,
+        pressed && styles.chipPressed,
+      ]}
+      onPress={() => speakWord(word)}
+    >
       <Text style={[styles.chipWord, tone === 'ant' && styles.chipWordAnt]}>{word}</Text>
       {/* A chip only carries a gloss when the related word is on the study
           list too — WordNet reaches well beyond the 3192 words here. */}
       {meaning && <Text style={styles.chipMeaning}>{meaning}</Text>}
-    </View>
+    </Pressable>
   );
 }
 
@@ -49,14 +62,29 @@ export function RelationsScreen() {
   const listRef = useRef<FlatList<{ entry: (typeof words)[number]; rel: ReturnType<typeof getRelation> }>>(null);
   const rowCount = useRef(0);
 
+  const [excluded, setExcluded] = useState<Set<string>>(new Set());
+
+  // Reloaded on focus so a word restored from the recycle bin comes back here.
+  useFocusEffect(
+    useCallback(() => {
+      getExcludedWords().then((list) => setExcluded(new Set(list)));
+    }, [])
+  );
+
   const scrollTo = useCallback((at: number) => {
     if (at < rowCount.current) listRef.current?.scrollToIndex({ index: at, viewPosition: 0 });
   }, []);
+
+  async function handleRemove(word: string) {
+    await excludeWord(word);
+    setExcluded((current) => new Set(current).add(word));
+  }
 
   const rows = useMemo(() => {
     const q = query.trim().toLowerCase();
     const result = [];
     for (const entry of words) {
+      if (excluded.has(entry.word)) continue;
       const rel = getRelation(entry.word);
       if (!rel.syn.length && !rel.ant.length) continue;
       if (antonymsOnly && !rel.ant.length) continue;
@@ -64,7 +92,7 @@ export function RelationsScreen() {
       result.push({ entry, rel });
     }
     return result;
-  }, [query, antonymsOnly]);
+  }, [query, antonymsOnly, excluded]);
   rowCount.current = rows.length;
 
   const starts = useMemo(() => letterStarts(rows, (r) => r.entry.word), [rows]);
@@ -112,6 +140,7 @@ export function RelationsScreen() {
           setTimeout(() => scrollTo(index), 80);
         }}
         renderItem={({ item: { entry, rel } }) => (
+          <SwipeToRemove label="丟進回收桶 →" onRemove={() => handleRemove(entry.word)}>
           <View style={styles.card}>
             <Pressable style={styles.head} onPress={() => speakWord(entry.word)}>
               <Text style={styles.word}>{entry.word}</Text>
@@ -122,6 +151,7 @@ export function RelationsScreen() {
             <Group label="近義詞" tone="syn" related={rel.syn} />
             <Group label="反義詞" tone="ant" related={rel.ant} />
           </View>
+          </SwipeToRemove>
         )}
       />
         <AlphabetIndex starts={starts} onJump={scrollTo} />
@@ -197,6 +227,7 @@ const styles = StyleSheet.create({
   none: { color: colors.muted, fontWeight: '700', fontSize: 13 },
   chips: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
   chip: { borderRadius: 16, paddingHorizontal: 12, paddingVertical: 8 },
+  chipPressed: { opacity: 0.6 },
   chipSyn: { backgroundColor: colors.blue },
   chipAnt: { backgroundColor: colors.red },
   chipWord: { color: colors.blueInk, fontWeight: '900', fontSize: 15 },
