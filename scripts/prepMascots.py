@@ -30,7 +30,10 @@ OUT = ROOT / "assets" / "mascots"
 
 TRANSPARENT = 8  # alpha at or below this counts as background
 OUT_SIZE = 512  # plenty for a 150pt sprite on a 3x screen
-PAD = 0.04  # breathing room around the subject, as a fraction of its size
+# Breathing room around the subject, as a fraction of its longest side. At 0.04
+# a 54pt menu icon had a 1.6pt margin, which reads as the drawing being clipped
+# even though nothing is actually cut off.
+PAD = 0.10
 
 SKIN = (250, 222, 202)
 # Face, arms and hands were erased along with the background, and so were the
@@ -286,7 +289,14 @@ def crop_to_subject(im: Image.Image) -> Image.Image:
 
 def save(im: Image.Image, name: str) -> None:
     path = OUT / f"{name}.png"
-    crop_to_subject(im).save(path, optimize=True)
+    sprite = crop_to_subject(im)
+    box = sprite.getchannel("A").getbbox()
+    if box:
+        w, h = sprite.size
+        margin = min(box[0] / w, (w - box[2]) / w, box[1] / h, (h - box[3]) / h)
+        if margin < PAD / (1 + PAD * 2) * 0.9:
+            raise SystemExit(f"{name}: only {margin:.1%} margin, the drawing will look clipped")
+    sprite.save(path, optimize=True)
     print(f"  {path.relative_to(ROOT)}")
 
 

@@ -185,7 +185,9 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: colors.line,
   },
-  cardPet: { width: 54, height: 54, marginRight: 14 },
+  // Sized so the animal itself still reads at ~50pt now that each sprite
+  // carries a margin of its own.
+  cardPet: { width: 62, height: 62, marginRight: 12 },
   cardText: { flex: 1 },
   cardTitle: { color: colors.ink, fontSize: 20, fontWeight: '900' },
   cardMeta: { color: colors.muted, fontSize: 13, fontWeight: '700', marginTop: 5 },
