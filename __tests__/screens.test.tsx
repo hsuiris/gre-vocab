@@ -30,7 +30,15 @@ import { NotesScreen } from '../src/screens/NotesScreen';
 import { PracticeScreen } from '../src/screens/PracticeScreen';
 import { RelationsScreen } from '../src/screens/RelationsScreen';
 import { concepts } from '../src/data/concepts';
-import { getNotes, saveNote, getHeatmap, getExcludedWords, excludeWord } from '../src/lib/storage';
+import {
+  getNotes,
+  saveNote,
+  getHeatmap,
+  getExcludedWords,
+  excludeWord,
+  getAllProgress,
+  getWrongWords,
+} from '../src/lib/storage';
 import { todayStr } from '../src/lib/date';
 import { words } from '../src/data/words';
 
@@ -190,6 +198,35 @@ describe('PracticeScreen', () => {
 
     // Skipping past a word is not the same as reviewing it.
     expect(await getHeatmap()).toEqual({});
+  });
+
+  // The arrow is the only "next" visible without scrolling past a revealed
+  // card, so it is what actually gets pressed after answering. Treating that as
+  // a skip loses the answer: no Leitner box, no wrong pile, no heatmap.
+  it('scores an answered card when the edge arrow is what moves it on', async () => {
+    const tree = await mount(practice());
+
+    await act(async () => pressableWith(tree, words[0].meaning).props.onPress());
+    await act(async () => pressableWith(tree, '›').props.onPress());
+
+    expect(await getAllProgress()).toHaveProperty(words[0].word);
+    expect(await getHeatmap()).toEqual({ [todayStr()]: 1 });
+  });
+
+  it('files a wrong answer into the review pile when the arrow moves it on', async () => {
+    const tree = await mount(practice());
+    const glosses = new Set(words.map((w) => w.meaning));
+    const distractor = tree.root
+      .findAll((node) => typeof node.props.onPress === 'function')
+      .find((p) => {
+        const text = readable(p).trim();
+        return glosses.has(text) && text !== words[0].meaning;
+      })!;
+
+    await act(async () => distractor.props.onPress());
+    await act(async () => pressableWith(tree, '›').props.onPress());
+
+    expect(await getWrongWords()).toContain(words[0].word);
   });
 
   // Stepping back is only safe if re-answering is a no-op. Otherwise a word's

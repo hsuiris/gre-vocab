@@ -71,6 +71,11 @@ export function PracticeScreen({ route }: Props) {
   // Words already scored this session, so stepping back and forth cannot
   // record the same answer twice.
   const scoredRef = useRef(new Set<string>());
+  // How the card on screen was answered, recorded the moment an option is
+  // tapped. The edge arrows are the only "next" reachable without scrolling
+  // past a revealed card, so leaving by one of them has to bank the answer
+  // rather than treat an answered card as skipped.
+  const pendingRef = useRef<{ word: string; correct: boolean } | null>(null);
   // Fixed at mount so re-saving edits the same note instead of piling up a new
   // one every tap.
   const noteIdRef = useRef(`${todayStr()}-${Date.now()}`);
@@ -135,29 +140,43 @@ export function PracticeScreen({ route }: Props) {
     });
   }
 
-  async function handleResult(knewIt: boolean) {
+  async function score(entry: WordEntry, knewIt: boolean) {
+    // Stepping back and answering again must not score the same card twice —
+    // it would advance the Leitner box a second time and double the day's
+    // heatmap count.
+    if (scoredRef.current.has(entry.word)) return;
+    scoredRef.current.add(entry.word);
+    const today = todayStr();
+    const progress = await getAllProgress();
+    const current = progress[entry.word] ?? initialProgress(today);
+    const updated = reviewWord(current, knewIt, today);
+    await saveWordProgress(entry.word, updated);
+    await (knewIt ? removeWrongWord(entry.word) : addWrongWord(entry.word));
+    if (!knewIt) mark(entry, 'wrong');
+    await incrementHeatmapToday(today);
+  }
+
+  // Every way off a card goes through here, so an answer is banked once and
+  // exactly once no matter which control moved the queue. An untouched card
+  // still records nothing: skipping past a word is not reviewing it.
+  async function leaveCard(next: number) {
     if (processingRef.current) return;
     processingRef.current = true;
     try {
-      const entry = queue[index];
-      // Stepping back and answering again must not score the same card twice —
-      // it would advance the Leitner box a second time and double the day's
-      // heatmap count.
-      if (!scoredRef.current.has(entry.word)) {
-        scoredRef.current.add(entry.word);
-        const today = todayStr();
-        const progress = await getAllProgress();
-        const current = progress[entry.word] ?? initialProgress(today);
-        const updated = reviewWord(current, knewIt, today);
-        await saveWordProgress(entry.word, updated);
-        await (knewIt ? removeWrongWord(entry.word) : addWrongWord(entry.word));
-        if (!knewIt) mark(entry, 'wrong');
-        await incrementHeatmapToday(today);
+      const pending = pendingRef.current;
+      if (pending && queue[index]?.word === pending.word) {
+        await score(queue[index], pending.correct);
       }
-      goTo(index + 1);
+      goTo(next);
     } finally {
       processingRef.current = false;
     }
+  }
+
+  async function handleResult(knewIt: boolean) {
+    const entry = queue[index];
+    if (entry) pendingRef.current = { word: entry.word, correct: knewIt };
+    await leaveCard(index + 1);
   }
 
   // Answering is not the only way to move: the arrows pinned to the screen
@@ -165,6 +184,7 @@ export function PracticeScreen({ route }: Props) {
   // bottom of a long revealed card to find "next".
   function goTo(next: number) {
     if (next < 0 || next > queue.length) return;
+    pendingRef.current = null; // the next card has not been answered yet
     setMood('idle'); // a fresh card starts with a calm mascot
     setIndex(next);
   }
@@ -278,7 +298,10 @@ export function PracticeScreen({ route }: Props) {
               choiceEntries={choiceEntries}
               settings={settings}
               onResult={handleResult}
-              onAnswered={(correct) => setMood(correct ? 'happy' : 'sad')}
+              onAnswered={(correct) => {
+                pendingRef.current = { word: current!.word, correct };
+                setMood(correct ? 'happy' : 'sad');
+              }}
               onExclude={handleExclude}
               onMarkUnsure={() => mark(current!, 'unsure')}
               unsure={currentUnsure}
@@ -296,7 +319,7 @@ export function PracticeScreen({ route }: Props) {
       {index > 0 && (
         <Pressable
           style={({ pressed }) => [styles.stepArrow, styles.stepLeft, pressed && styles.stepArrowDown]}
-          onPress={() => goTo(index - 1)}
+          onPress={() => leaveCard(index - 1)}
           hitSlop={10}
           accessibilityLabel="上一題"
         >
@@ -306,7 +329,7 @@ export function PracticeScreen({ route }: Props) {
       {!done && (
         <Pressable
           style={({ pressed }) => [styles.stepArrow, styles.stepRight, pressed && styles.stepArrowDown]}
-          onPress={() => goTo(index + 1)}
+          onPress={() => leaveCard(index + 1)}
           hitSlop={10}
           accessibilityLabel="下一題"
         >
