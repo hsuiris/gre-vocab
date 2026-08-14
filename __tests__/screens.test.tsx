@@ -27,6 +27,7 @@ jest.mock('../src/components/Mascot', () => ({
 import { SessionSidePanel } from '../src/components/SessionSidePanel';
 import { AllWordsScreen } from '../src/screens/AllWordsScreen';
 import { NotesScreen } from '../src/screens/NotesScreen';
+import { HomeScreen } from '../src/screens/HomeScreen';
 import { PracticeScreen } from '../src/screens/PracticeScreen';
 import { RelationsScreen } from '../src/screens/RelationsScreen';
 import { concepts } from '../src/data/concepts';
@@ -38,6 +39,7 @@ import {
   excludeWord,
   getAllProgress,
   getWrongWords,
+  incrementHeatmapToday,
 } from '../src/lib/storage';
 import { todayStr } from '../src/lib/date';
 import { words } from '../src/data/words';
@@ -296,6 +298,30 @@ describe('RelationsScreen', () => {
     await open(tree);
 
     expect(readable(tree.root)).not.toContain(standalone);
+  });
+});
+
+describe('HomeScreen', () => {
+  const home = () =>
+    React.createElement(HomeScreen, {
+      navigation: { navigate: jest.fn() },
+    } as unknown as React.ComponentProps<typeof HomeScreen>);
+
+  // readable() joins one <Text> per run, so the badge's three lines come back
+  // as one phrase and the count cannot be confused with the 3192 on the page.
+  it('counts nothing on a day with no practice yet', async () => {
+    const tree = await mount(home());
+    expect(readable(tree.root)).toContain('今天背了 0 個字');
+  });
+
+  it('shows how many words today already covered', async () => {
+    await incrementHeatmapToday(todayStr());
+    await incrementHeatmapToday(todayStr());
+    await incrementHeatmapToday(todayStr());
+
+    const tree = await mount(home());
+
+    expect(readable(tree.root)).toContain('今天背了 3 個字');
   });
 });
 

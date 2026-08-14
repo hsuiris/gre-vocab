@@ -86,7 +86,16 @@ export function HomeScreen({ navigation }: Props) {
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
       <View style={styles.hero}>
-        <Mascot message={'一天一天\n往目標邁進'} size={172} />
+        {/* Wraps rather than squeezes: with her speech bubble she is already
+            190 wide, which leaves a narrow phone no room for a second column. */}
+        <View style={styles.heroRow}>
+          <Mascot message={'一天一天\n往目標邁進'} size={172} />
+          <View style={styles.today}>
+            <Text style={styles.todayLabel}>今天背了</Text>
+            <Text style={styles.todayCount}>{heatmap[todayStr()] ?? 0}</Text>
+            <Text style={styles.todayLabel}>個字</Text>
+          </View>
+        </View>
         <Text style={styles.eyebrow}>今日複習</Text>
         <Text style={styles.title}>把 GRE 單字照顧好</Text>
         <Text style={styles.due}>{dueCount} 個字正在等你</Text>
@@ -169,6 +178,21 @@ const styles = StyleSheet.create({
     paddingBottom: 26,
     alignItems: 'center',
   },
+  heroRow: { flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', gap: 14 },
+  // White on the tinted hero, so the day's tally reads as a counter sitting
+  // beside her rather than another line of the headline.
+  today: {
+    backgroundColor: colors.surface,
+    borderRadius: 22,
+    borderWidth: 1,
+    borderColor: colors.line,
+    paddingHorizontal: 18,
+    paddingVertical: 14,
+    minWidth: 96,
+    alignItems: 'center',
+  },
+  todayLabel: { color: colors.muted, fontSize: 12, fontWeight: '900' },
+  todayCount: { color: colors.blueInk, fontSize: 34, fontWeight: '900', lineHeight: 40, marginVertical: 2 },
   eyebrow: { color: colors.blueInk, fontSize: 14, fontWeight: '800', marginTop: 14 },
   title: { color: colors.ink, fontSize: 28, fontWeight: '900', lineHeight: 34, marginTop: 6, textAlign: 'center' },
   due: { color: colors.muted, fontSize: 17, fontWeight: '700', marginTop: 8, textAlign: 'center' },
