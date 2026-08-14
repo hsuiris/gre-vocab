@@ -103,6 +103,16 @@ async function mount(element: React.ReactElement) {
 
 const entry = (word: string) => words.find((w) => w.word === word)!;
 
+// The row wraps the corner button, so matching on the ✕ glyph would find the
+// row first. The label is on the button and nowhere else.
+function cross(tree: renderer.ReactTestRenderer, word: string): ReactTestInstance {
+  const found = tree.root.findAll(
+    (node) => node.props.accessibilityLabel === `把 ${word} 丟進回收桶` && typeof node.props.onPress === 'function'
+  );
+  if (!found.length) throw new Error(`no remove button for "${word}"`);
+  return found[0];
+}
+
 describe('SessionSidePanel', () => {
   it('lists a wrong answer with its meaning and example', async () => {
     const tree = await mount(
@@ -138,17 +148,22 @@ describe('AllWordsScreen', () => {
     expect(row).toContain(words[0].example);
   });
 
-  it('drops a swiped word into the recycle bin and out of the list', async () => {
+  it('bins a word from the cross in its corner', async () => {
     const tree = await mount(<AllWordsScreen />);
     expect(readable(tree.root)).toContain(words[0].word);
 
-    const row = tree.root
-      .findAll((node) => typeof node.props.onRemove === 'function')
-      .find((node) => readable(node).includes(words[0].word))!;
-    await act(async () => row.props.onRemove());
+    await act(async () => cross(tree, words[0].word).props.onPress());
 
     expect(await getExcludedWords()).toContain(words[0].word);
     expect(readable(tree.root)).not.toContain(words[0].word);
+  });
+
+  it('bins without starting the word playing', async () => {
+    const tree = await mount(<AllWordsScreen />);
+
+    await act(async () => cross(tree, words[0].word).props.onPress());
+
+    expect(mockSpeak).not.toHaveBeenCalled();
   });
 
   it('plays the word and then its example when a row is tapped', async () => {

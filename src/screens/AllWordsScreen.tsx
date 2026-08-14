@@ -4,7 +4,6 @@ import { useFocusEffect } from '@react-navigation/native';
 import { words, WordEntry } from '../data/words';
 import { speakSequence, stopSpeaking } from '../lib/speech';
 import { AlphabetIndex, letterStarts } from '../components/AlphabetIndex';
-import { SwipeToRemove } from '../components/SwipeToRemove';
 import { excludeWord, getExcludedWords } from '../lib/storage';
 import { colors, centered, slab, slabEdge, slabPressed } from '../theme';
 
@@ -159,24 +158,33 @@ export function AllWordsScreen() {
           renderItem={({ item, index }) => {
             const active = index === current;
             return (
-              <SwipeToRemove label="← 丟進回收桶" onRemove={() => handleRemove(item.word)}>
-                <Pressable
-                  style={({ pressed }) => [styles.row, active && styles.rowActive, pressed && slabPressed]}
-                  onPress={() => playAt(index)}
-                >
-                  <View style={styles.rowTop}>
-                    <Text style={styles.word} numberOfLines={1}>
-                      {item.word}
-                    </Text>
-                    <Text style={styles.pos}>{item.pos}</Text>
-                    {active && playing && <Text style={styles.marker}>▶ 播放中</Text>}
-                  </View>
-                  <Text style={styles.meaning} numberOfLines={1}>
-                    {item.meaning}
+              <Pressable
+                style={({ pressed }) => [styles.row, active && styles.rowActive, pressed && slabPressed]}
+                onPress={() => playAt(index)}
+              >
+                <View style={styles.rowTop}>
+                  <Text style={styles.word} numberOfLines={1}>
+                    {item.word}
                   </Text>
-                  <Text style={styles.example}>{item.example}</Text>
+                  <Text style={styles.pos}>{item.pos}</Text>
+                  {active && playing && <Text style={styles.marker}>▶ 播放中</Text>}
+                </View>
+                <Text style={styles.meaning} numberOfLines={1}>
+                  {item.meaning}
+                </Text>
+                <Text style={styles.example}>{item.example}</Text>
+                {/* Nested inside the row on purpose: the touch responder hands
+                    the press to the innermost button, so binning a word never
+                    starts it playing. */}
+                <Pressable
+                  style={({ pressed }) => [styles.remove, pressed && styles.removePressed]}
+                  onPress={() => handleRemove(item.word)}
+                  hitSlop={10}
+                  accessibilityLabel={`把 ${item.word} 丟進回收桶`}
+                >
+                  <Text style={styles.removeText}>✕</Text>
                 </Pressable>
-              </SwipeToRemove>
+              </Pressable>
             );
           }}
         />
@@ -254,7 +262,23 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
   },
   rowActive: { backgroundColor: colors.blue, borderColor: slabEdge.blue, borderBottomColor: slabEdge.blue },
-  rowTop: { flexDirection: 'row', alignItems: 'center', gap: 8 },
+  // Clears the corner button, so a long word never runs underneath it.
+  rowTop: { flexDirection: 'row', alignItems: 'center', gap: 8, paddingRight: 26 },
+  // Red is what this palette already uses for "remove", and a filled circle
+  // reads as a button at a glance — the swipe it replaces was invisible.
+  remove: {
+    position: 'absolute',
+    top: 8,
+    right: 8,
+    width: 26,
+    height: 26,
+    borderRadius: 13,
+    backgroundColor: colors.red,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  removePressed: { backgroundColor: slabEdge.red },
+  removeText: { color: colors.redInk, fontSize: 13, fontWeight: '900' },
   word: { color: colors.ink, fontSize: 18, fontWeight: '900' },
   pos: {
     color: colors.blueInk,
