@@ -5,11 +5,15 @@ import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/RootNavigator';
 import { words } from '../data/words';
 import { getAllProgress, resetAllProgress, getExcludedWords } from '../lib/storage';
-import { colors, centered } from '../theme';
+import { GlassFill } from '../components/Glass';
+import { centered } from '../theme';
+import type { Theme } from '../theme';
+import { useStyles, useTheme } from '../lib/useTheme';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Stats'>;
 
 export function StatsScreen({ navigation }: Props) {
+  const styles = useStyles(makeStyles);
   const [boxCounts, setBoxCounts] = useState<number[]>([0, 0, 0, 0, 0]);
   const [newCount, setNewCount] = useState(0);
   const [excludedCount, setExcludedCount] = useState(0);
@@ -57,11 +61,13 @@ export function StatsScreen({ navigation }: Props) {
       <Text style={styles.title}>你的單字庫</Text>
 
       <View style={styles.summary}>
+        <GlassFill intensity={28} />
         <Text style={styles.summaryCount}>{newCount}</Text>
         <Text style={styles.summaryLabel}>尚未開始的字</Text>
       </View>
 
       <View style={styles.list}>
+        <GlassFill />
         {boxCounts.map((count, i) => (
           <Pressable key={i} style={styles.row} onPress={() => navigation.navigate('BoxWords', { box: i + 1 })}>
             <View>
@@ -74,6 +80,7 @@ export function StatsScreen({ navigation }: Props) {
       </View>
 
       <Pressable style={styles.linkCard} onPress={() => navigation.navigate('Excluded')}>
+        <GlassFill />
         <View>
           <Text style={styles.rowTitle}>已標記太簡單</Text>
           <Text style={styles.rowMeta}>暫時不排進複習</Text>
@@ -88,14 +95,14 @@ export function StatsScreen({ navigation }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
-  container: { ...centered, flex: 1, backgroundColor: colors.page, padding: 20, gap: 14 },
-  eyebrow: { color: colors.blueInk, fontSize: 14, fontWeight: '900' },
-  title: { color: colors.ink, fontSize: 32, fontWeight: '900', marginBottom: 4 },
-  summary: { backgroundColor: colors.tint, borderRadius: 28, padding: 24 },
-  summaryCount: { color: colors.ink, fontSize: 48, fontWeight: '900' },
-  summaryLabel: { color: colors.muted, fontSize: 16, fontWeight: '800', marginTop: 4 },
-  list: { backgroundColor: colors.surface, borderRadius: 24, borderWidth: 1, borderColor: colors.line, overflow: 'hidden' },
+const makeStyles = (t: Theme) => StyleSheet.create({
+  container: { ...centered, flex: 1, padding: 20, gap: 14 },
+  eyebrow: { color: t.colors.blueInk, fontSize: 14, fontWeight: '900' },
+  title: { color: t.colors.ink, fontSize: 32, fontWeight: '900', marginBottom: 4 },
+  summary: { ...t.pane(28), ...t.glassShadow, padding: 24 },
+  summaryCount: { color: t.colors.ink, fontSize: 48, fontWeight: '900' },
+  summaryLabel: { color: t.colors.muted, fontSize: 16, fontWeight: '800', marginTop: 4 },
+  list: { ...t.pane(24), ...t.glassShadow },
   row: {
     minHeight: 72,
     paddingHorizontal: 18,
@@ -103,22 +110,20 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     borderBottomWidth: 1,
-    borderBottomColor: colors.line,
+    borderBottomColor: t.glass.edge,
   },
-  rowTitle: { color: colors.ink, fontSize: 16, fontWeight: '900' },
-  rowMeta: { color: colors.muted, fontSize: 13, fontWeight: '700', marginTop: 4 },
-  rowCount: { color: colors.blueInk, fontSize: 24, fontWeight: '900' },
+  rowTitle: { color: t.colors.ink, fontSize: 16, fontWeight: '900' },
+  rowMeta: { color: t.colors.muted, fontSize: 13, fontWeight: '700', marginTop: 4 },
+  rowCount: { color: t.colors.blueInk, fontSize: 24, fontWeight: '900' },
   linkCard: {
-    backgroundColor: colors.surface,
-    borderRadius: 24,
-    borderWidth: 1,
-    borderColor: colors.line,
+    ...t.pane(24),
+    ...t.glassShadow,
     minHeight: 76,
     paddingHorizontal: 18,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
   },
-  resetButton: { marginTop: 8, backgroundColor: colors.red, padding: 15, borderRadius: 22, alignItems: 'center' },
-  resetText: { color: colors.redInk, fontWeight: '900' },
+  resetButton: { marginTop: 8, backgroundColor: t.colors.red, padding: 15, borderRadius: 22, alignItems: 'center' },
+  resetText: { color: t.colors.redInk, fontWeight: '900' },
 });

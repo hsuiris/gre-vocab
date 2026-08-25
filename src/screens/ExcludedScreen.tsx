@@ -4,9 +4,13 @@ import { useFocusEffect } from '@react-navigation/native';
 import { words, WordEntry } from '../data/words';
 import { getExcludedWords, restoreWord } from '../lib/storage';
 import { Mascot } from '../components/Mascot';
-import { colors, centered } from '../theme';
+import { GlassFill } from '../components/Glass';
+import { centered } from '../theme';
+import type { Theme } from '../theme';
+import { useStyles, useTheme } from '../lib/useTheme';
 
 export function ExcludedScreen() {
+  const styles = useStyles(makeStyles);
   const [excluded, setExcluded] = useState<WordEntry[]>([]);
 
   const load = useCallback(async () => {
@@ -28,13 +32,14 @@ export function ExcludedScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.eyebrow}>太簡單的字</Text>
-      <Text style={styles.title}>回收桶</Text>
+      <Text style={styles.eyebrow}>標成太簡單的字</Text>
+      <Text style={styles.title}>已熟悉字庫</Text>
       {excluded.length === 0 ? (
         <View style={styles.emptyCard}>
+          <GlassFill />
           <Mascot size={112} message="一個字都沒丟掉" />
           <Text style={styles.emptyTitle}>現在很乾淨</Text>
-          <Text style={styles.empty}>目前沒有標記太簡單的字</Text>
+          <Text style={styles.empty}>目前還沒有標成太簡單的字</Text>
         </View>
       ) : (
         <FlatList
@@ -58,34 +63,27 @@ export function ExcludedScreen() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: { ...centered, flex: 1, backgroundColor: colors.page, padding: 20 },
-  eyebrow: { color: colors.blueInk, fontSize: 14, fontWeight: '900' },
-  title: { color: colors.ink, fontSize: 32, fontWeight: '900', marginTop: 4, marginBottom: 16 },
-  emptyCard: {
-    backgroundColor: colors.surface,
-    borderRadius: 24,
-    padding: 24,
-    borderWidth: 1,
-    borderColor: colors.line,
-    alignItems: 'center',
-  },
-  emptyTitle: { color: colors.ink, fontSize: 20, fontWeight: '900', textAlign: 'center', marginTop: 10 },
-  empty: { color: colors.muted, marginTop: 8, textAlign: 'center', fontWeight: '700' },
+const makeStyles = (t: Theme) => StyleSheet.create({
+  container: { ...centered, flex: 1, padding: 20 },
+  eyebrow: { color: t.colors.blueInk, fontSize: 14, fontWeight: '900' },
+  title: { color: t.colors.ink, fontSize: 32, fontWeight: '900', marginTop: 4, marginBottom: 16 },
+  emptyCard: { ...t.pane(24), ...t.glassShadow, padding: 24, alignItems: 'center' },
+  emptyTitle: { color: t.colors.ink, fontSize: 20, fontWeight: '900', textAlign: 'center', marginTop: 10 },
+  empty: { color: t.colors.muted, marginTop: 8, textAlign: 'center', fontWeight: '700' },
   list: { gap: 10, paddingBottom: 24 },
   row: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    backgroundColor: colors.surface,
+    backgroundColor: t.glass.solid,
     padding: 16,
     borderRadius: 22,
     borderWidth: 1,
-    borderColor: colors.line,
+    borderColor: t.glass.edge,
   },
   rowText: { flex: 1, marginRight: 12 },
-  word: { color: colors.ink, fontSize: 17, fontWeight: '900' },
-  meaning: { color: colors.muted, marginTop: 4, fontWeight: '700' },
-  restoreButton: { backgroundColor: colors.blue, paddingVertical: 10, paddingHorizontal: 16, borderRadius: 16 },
-  restoreText: { color: colors.blueInk, fontWeight: '900' },
+  word: { color: t.colors.ink, fontSize: 17, fontWeight: '900' },
+  meaning: { color: t.colors.muted, marginTop: 4, fontWeight: '700' },
+  restoreButton: { backgroundColor: t.colors.blue, paddingVertical: 10, paddingHorizontal: 16, borderRadius: 16 },
+  restoreText: { color: t.colors.blueInk, fontWeight: '900' },
 });

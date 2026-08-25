@@ -126,6 +126,54 @@ export function autoVoice(): string | undefined {
   return englishVoice;
 }
 
+// Three is a choice; fifteen is a catalogue nobody listens through.
+const MAX_VOICES = 3;
+
+// Every system reports a dozen or more English voices and most of them are the
+// compact ones — recorded syllables glued together, which is the flat robotic
+// reading. Rank what is installed by the same signals pickVoice() trusts and
+// keep only the best few, so the picker is a shortlist worth trying rather than
+// everything the operating system happens to ship.
+export function curateVoices(voices: Voice[]): { id: string; name: string }[] {
+  const english = voices.filter((v) => v.language?.toLowerCase().startsWith('en'));
+  const usable = english.filter((v) => !NOVELTY.has((v.name ?? '').trim().toLowerCase()));
+
+  const ranked = usable
+    .map((v) => {
+      const name = (v.name ?? v.identifier).trim();
+      const lower = name.toLowerCase();
+      const tier = QUALITY_TIERS.findIndex((t) => lower.includes(t));
+      const known = PREFERRED.findIndex((p) => lower.startsWith(p));
+      // Neither a neural voice nor a reader anyone recommends: that is a
+      // compact voice, and compact is the sound being complained about.
+      if (tier < 0 && known < 0) return null;
+      return { id: v.identifier, name, score: (tier < 0 ? 99 : tier) * 100 + (known < 0 ? 99 : known) };
+    })
+    .filter(Boolean) as { id: string; name: string; score: number }[];
+
+  ranked.sort((a, b) => a.score - b.score || a.name.localeCompare(b.name));
+
+  // One row per reader, not one per quality variant: "Samantha" and
+  // "Samantha (Enhanced)" are the same person twice, and the better one sorts
+  // first, so the plain variant is the one dropped.
+  const seen = new Set<string>();
+  const best: { id: string; name: string }[] = [];
+  for (const { id, name } of ranked) {
+    const reader = name.toLowerCase().replace(/\s*\(.*\)\s*$/, '');
+    if (seen.has(reader)) continue;
+    seen.add(reader);
+    best.push({ id, name });
+    if (best.length === MAX_VOICES) break;
+  }
+
+  // A system with nothing recognisable still needs something to offer, or the
+  // picker looks broken rather than picky.
+  if (best.length === 0) {
+    return usable.slice(0, MAX_VOICES).map((v) => ({ id: v.identifier, name: v.name ?? v.identifier }));
+  }
+  return best;
+}
+
 export async function listEnglishVoices(): Promise<{ id: string; name: string }[]> {
   let voices = await refreshVoices();
   // Opening settings on a phone can still beat the browser to the list, and an
@@ -134,10 +182,7 @@ export async function listEnglishVoices(): Promise<{ id: string; name: string }[
     await new Promise((resolve) => setTimeout(resolve, 200));
     voices = await refreshVoices();
   }
-  return voices
-    .filter((v) => v.language?.toLowerCase().startsWith('en'))
-    .map((v) => ({ id: v.identifier, name: v.name ?? v.identifier }))
-    .sort((a, b) => a.name.localeCompare(b.name));
+  return curateVoices(voices);
 }
 
 // A single word wants full speed; a sentence read at full speed runs its

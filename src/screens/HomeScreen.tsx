@@ -1,36 +1,38 @@
 import React, { useCallback, useState } from 'react';
-import { View, Text, Pressable, ScrollView, StyleSheet, Image } from 'react-native';
+import { View, Text, Pressable, ScrollView, StyleSheet } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
-import type { QuizMode, RootStackParamList } from '../navigation/RootNavigator';
+import type { RootStackParamList } from '../navigation/RootNavigator';
 import { words } from '../data/words';
-import { getAllProgress, getHeatmap, getExcludedWords } from '../lib/storage';
+import { getAllProgress, getHeatmap, getExcludedWords, getLastQuiz } from '../lib/storage';
+import type { LastQuiz } from '../lib/storage';
 import { Heatmap } from '../components/Heatmap';
 import { Mascot } from '../components/Mascot';
-import { ANIMALS, AnimalName } from '../components/mascots';
+import { GlassFill } from '../components/Glass';
 import { todayStr } from '../lib/date';
-import { colors, shadow, centered, slab, slabEdge, slabPressed } from '../theme';
-import { buildPracticeQueue, PracticeOrder } from '../lib/practiceQueue';
+import { centered } from '../theme';
+import type { Theme } from '../theme';
+import { useStyles, useTheme } from '../lib/useTheme';
+import { buildPracticeQueue } from '../lib/practiceQueue';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
-const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
 
-// One animal per row, so the menu reads as a line-up of characters rather than
-// eight identical rectangles.
-function MenuCard({
-  pet,
-  title,
-  meta,
-  onPress,
-}: {
-  pet: AnimalName;
-  title: string;
-  meta?: string;
-  onPress: () => void;
-}) {
+// The five ways to practise, in one list so the "carry on where you left off"
+// card can name a saved quiz without re-deriving its title.
+const QUIZZES: LastQuiz[] = [
+  { label: '英文選中文意思', direction: 'en-zh', mode: 'choice' },
+  { label: '中文選英文單字', direction: 'zh-en', mode: 'choice' },
+  { label: '句子填空', direction: 'zh-en', mode: 'cloze' },
+  { label: '單字拼寫', direction: 'zh-en', mode: 'typing' },
+  { label: '複習錯題', direction: 'zh-en', mode: 'choice', wrongOnly: true },
+];
+
+function MenuCard({ title, meta, onPress }: { title: string; meta?: string; onPress: () => void }) {
+  const styles = useStyles(makeStyles);
+  const theme = useTheme();
   return (
-    <Pressable style={({ pressed }) => [styles.card, pressed && slabPressed]} onPress={onPress}>
-      <Image source={ANIMALS[pet]} style={styles.cardPet} resizeMode="contain" />
+    <Pressable style={({ pressed }) => [styles.card, pressed && theme.slabPressed]} onPress={onPress}>
+      <GlassFill fill={theme.glass.pane} />
       <View style={styles.cardText}>
         <Text style={styles.cardTitle}>{title}</Text>
         {meta && <Text style={styles.cardMeta}>{meta}</Text>}
@@ -41,213 +43,184 @@ function MenuCard({
 }
 
 export function HomeScreen({ navigation }: Props) {
+  const styles = useStyles(makeStyles);
+  const theme = useTheme();
   const [dueCount, setDueCount] = useState(0);
   const [heatmap, setHeatmap] = useState<Record<string, number>>({});
-  const [order, setOrder] = useState<PracticeOrder>('alphabetical');
-  const [letters, setLetters] = useState<string[]>([]);
+  const [last, setLast] = useState<LastQuiz | null>(null);
 
   useFocusEffect(
     useCallback(() => {
       let active = true;
       (async () => {
-        const [progress, heat, excluded] = await Promise.all([
+        const [progress, heat, excluded, lastQuiz] = await Promise.all([
           getAllProgress(),
           getHeatmap(),
           getExcludedWords(),
+          getLastQuiz(),
         ]);
         const today = todayStr();
-        const due = buildPracticeQueue(words, progress, excluded, today, { letters }).length;
+        const due = buildPracticeQueue(words, progress, excluded, today).length;
         if (active) {
           setDueCount(due);
           setHeatmap(heat);
+          setLast(lastQuiz);
         }
       })();
       return () => {
         active = false;
       };
-    }, [letters])
+    }, [])
   );
 
-  function toggleLetter(letter: string) {
-    setLetters((current) =>
-      current.includes(letter) ? current.filter((l) => l !== letter) : [...current, letter].sort()
-    );
+  // Picking a quiz no longer starts one. Range and order belong to the quiz you
+  // chose, not to the home screen, so the setup page asks for them next — and
+  // it is what saves the quiz once you actually begin.
+  //
+  // Reviewing mistakes is the exception: the pile IS the range, so there is
+  // nothing to pick. That one opens straight onto the list of words.
+  function openSetup(quiz: LastQuiz) {
+    navigation.navigate(quiz.wrongOnly ? 'WrongWords' : 'QuizSetup', { quiz });
   }
 
-  function start(direction: 'en-zh' | 'zh-en', mode: QuizMode) {
-    navigation.navigate('Practice', { direction, order, letters, mode });
+  // The saved quiz already carries the range it was started with, so carrying
+  // on means going straight to the cards.
+  function resume(quiz: LastQuiz) {
+    navigation.navigate('Practice', {
+      direction: quiz.direction,
+      mode: quiz.mode,
+      wrongOnly: quiz.wrongOnly,
+      order: quiz.order,
+      letters: quiz.letters,
+      limit: quiz.limit,
+    });
   }
 
-  function startWrongReview() {
-    navigation.navigate('Practice', { direction: 'zh-en', order, letters, mode: 'choice', wrongOnly: true });
-  }
-
-  const letterLabel = letters.length === 0 ? '全部字母' : letters.join(', ').toUpperCase();
   return (
-    <ScrollView style={styles.container} contentContainerStyle={styles.content}>
-      <View style={styles.hero}>
-        {/* Wraps rather than squeezes: with her speech bubble she is already
+    <View style={styles.screen}>
+      <ScrollView style={styles.container} contentContainerStyle={styles.content}>
+        <View style={styles.hero}>
+          <GlassFill intensity={28} />
+          {/* Wraps rather than squeezes: with her speech bubble she is already
             190 wide, which leaves a narrow phone no room for a second column. */}
-        <View style={styles.heroRow}>
-          <Mascot message={'一天一天\n往目標邁進'} size={172} />
-          <View style={styles.today}>
-            <Text style={styles.todayLabel}>今天背了</Text>
-            <Text style={styles.todayCount}>{heatmap[todayStr()] ?? 0}</Text>
-            <Text style={styles.todayLabel}>個字</Text>
+          <View style={styles.heroRow}>
+            <Mascot message={'一天一天\n往目標邁進'} size={172} />
+            <View style={styles.today}>
+              <GlassFill fill={theme.glass.pane} />
+              <Text style={styles.todayLabel}>今天背了</Text>
+              <Text style={styles.todayCount}>{heatmap[todayStr()] ?? 0}</Text>
+              <Text style={styles.todayLabel}>個字</Text>
+            </View>
           </View>
+          <Text style={styles.eyebrow}>今日複習</Text>
+          <Text style={styles.title}>把 GRE 單字照顧好</Text>
+          <Text style={styles.due}>{dueCount} 個字正在等你</Text>
         </View>
-        <Text style={styles.eyebrow}>今日複習</Text>
-        <Text style={styles.title}>把 GRE 單字照顧好</Text>
-        <Text style={styles.due}>{dueCount} 個字正在等你</Text>
-      </View>
 
-      <View style={styles.panel}>
-        <Text style={styles.panelTitle}>範圍與順序</Text>
-        <View style={styles.segment}>
-          <Pressable
-            style={[styles.segmentButton, order === 'alphabetical' && styles.segmentButtonActive]}
-            onPress={() => setOrder('alphabetical')}
-          >
-            <Text style={[styles.segmentText, order === 'alphabetical' && styles.segmentTextActive]}>A-Z 順序</Text>
+        {/* One tap back into whatever was practised last, so the usual case
+          never means scrolling past the range picker to find the same row. */}
+        {last && (
+          <Pressable style={({ pressed }) => [styles.resume, pressed && theme.slabPressed]} onPress={() => resume(last)}>
+            <GlassFill intensity={40} fill="rgba(214,230,243,0.62)" />
+            <View style={styles.cardText}>
+              <Text style={styles.resumeLabel}>接著上次</Text>
+              <Text style={styles.resumeTitle}>{last.label}</Text>
+            </View>
+            <Text style={styles.resumeGo}>開始</Text>
           </Pressable>
-          <Pressable
-            style={[styles.segmentButton, order === 'shuffle' && styles.segmentButtonActive]}
-            onPress={() => setOrder('shuffle')}
-          >
-            <Text style={[styles.segmentText, order === 'shuffle' && styles.segmentTextActive]}>跳著背</Text>
-          </Pressable>
-        </View>
-        <View style={styles.letters}>
-          {alphabet.map((letter) => (
-            <Pressable
-              key={letter}
-              style={[styles.letterChip, letters.includes(letter) && styles.letterChipActive]}
-              onPress={() => toggleLetter(letter)}
-            >
-              <Text style={[styles.letterText, letters.includes(letter) && styles.letterTextActive]}>
-                {letter.toUpperCase()}
-              </Text>
+        )}
+
+        <MenuCard
+          title="單字總覽"
+          meta={`${words.length} 個字 · 可以按播放讓它自己唸`}
+          onPress={() => navigation.navigate('AllWords')}
+        />
+        {QUIZZES.map((quiz) => (
+          <MenuCard key={quiz.label} title={quiz.label} onPress={() => openSetup(quiz)} />
+        ))}
+        <MenuCard title="近義詞與反義詞" onPress={() => navigation.navigate('Relations')} />
+        <MenuCard title="筆記庫" onPress={() => navigation.navigate('Notes')} />
+
+        <View style={styles.panel}>
+          <GlassFill />
+          <View style={styles.panelHeader}>
+            <Text style={styles.panelTitle}>學習節奏</Text>
+            <Pressable style={styles.statsButton} onPress={() => navigation.navigate('Stats')}>
+              <Text style={styles.statsButtonText}>統計</Text>
             </Pressable>
-          ))}
+          </View>
+          <Heatmap heatmap={heatmap} />
         </View>
-        <Pressable style={styles.clearButton} onPress={() => setLetters([])}>
-          <Text style={styles.clearButtonText}>{letterLabel}</Text>
-        </Pressable>
-        <View style={styles.rangeActions}>
-          <Pressable style={styles.rangeButton} onPress={() => setLetters(alphabet)}>
-            <Text style={styles.rangeButtonText}>全選</Text>
-          </Pressable>
-          <Pressable style={styles.rangeButton} onPress={() => setLetters([])}>
-            <Text style={styles.rangeButtonText}>取消所選</Text>
-          </Pressable>
-        </View>
-      </View>
-
-      <MenuCard pet="cat" title="單字總覽" meta={`${words.length} 個字 · 可以按播放讓它自己唸`} onPress={() => navigation.navigate('AllWords')} />
-      <MenuCard pet="shiba" title="英文選中文意思" onPress={() => start('en-zh', 'choice')} />
-      <MenuCard pet="rabbit" title="中文選英文單字" onPress={() => start('zh-en', 'choice')} />
-      <MenuCard pet="penguin" title="句子填空" onPress={() => start('zh-en', 'cloze')} />
-      <MenuCard pet="chick" title="手寫單字" onPress={() => start('zh-en', 'typing')} />
-      <MenuCard pet="hamster" title="複習錯題" onPress={startWrongReview} />
-      <MenuCard pet="elephant" title="照意思找字" onPress={() => navigation.navigate('Relations')} />
-      <MenuCard pet="pig" title="筆記庫" onPress={() => navigation.navigate('Notes')} />
-
-      <View style={styles.panel}>
-        <View style={styles.panelHeader}>
-          <Text style={styles.panelTitle}>學習節奏</Text>
-          <Pressable style={styles.statsButton} onPress={() => navigation.navigate('Stats')}>
-            <Text style={styles.statsButtonText}>統計</Text>
-          </Pressable>
-        </View>
-        <Heatmap heatmap={heatmap} />
-      </View>
-    </ScrollView>
+      </ScrollView>
+    </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: colors.page },
+const makeStyles = (t: Theme) => StyleSheet.create({
+  screen: { flex: 1 },
+  container: { flex: 1, backgroundColor: 'transparent' },
   content: { ...centered, padding: 20, paddingBottom: 36, gap: 14 },
   // She leads the page rather than hiding in a corner, so everything below her
   // is centred to match.
   hero: {
-    backgroundColor: colors.tint,
-    borderRadius: 30,
+    ...t.pane(30),
+    ...t.glassShadow,
     paddingHorizontal: 24,
     paddingTop: 22,
     paddingBottom: 26,
     alignItems: 'center',
   },
   heroRow: { flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', gap: 14 },
-  // White on the tinted hero, so the day's tally reads as a counter sitting
-  // beside her rather than another line of the headline.
+  // A brighter pane on the hero's own glass, so the day's tally reads as a
+  // counter sitting beside her rather than another line of the headline.
   today: {
-    backgroundColor: colors.surface,
-    borderRadius: 22,
-    borderWidth: 1,
-    borderColor: colors.line,
+    ...t.pane(22),
     paddingHorizontal: 18,
     paddingVertical: 14,
     minWidth: 96,
     alignItems: 'center',
   },
-  todayLabel: { color: colors.muted, fontSize: 12, fontWeight: '900' },
-  todayCount: { color: colors.blueInk, fontSize: 34, fontWeight: '900', lineHeight: 40, marginVertical: 2 },
-  eyebrow: { color: colors.blueInk, fontSize: 14, fontWeight: '800', marginTop: 14 },
-  title: { color: colors.ink, fontSize: 28, fontWeight: '900', lineHeight: 34, marginTop: 6, textAlign: 'center' },
-  due: { color: colors.muted, fontSize: 17, fontWeight: '700', marginTop: 8, textAlign: 'center' },
+  todayLabel: { color: t.colors.muted, fontSize: 12, fontWeight: '900' },
+  todayCount: { color: t.colors.blueInk, fontSize: 34, fontWeight: '900', lineHeight: 40, marginVertical: 2 },
+  eyebrow: { color: t.colors.blueInk, fontSize: 14, fontWeight: '800', marginTop: 14 },
+  title: { color: t.colors.ink, fontSize: 28, fontWeight: '900', lineHeight: 34, marginTop: 6, textAlign: 'center' },
+  due: { color: t.colors.muted, fontSize: 17, fontWeight: '700', marginTop: 8, textAlign: 'center' },
+  resume: {
+    ...t.pane(24),
+    ...t.glassShadow,
+    padding: 18,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  resumeLabel: { color: t.colors.blueInk, fontSize: 13, fontWeight: '900' },
+  resumeTitle: { color: t.colors.ink, fontSize: 20, fontWeight: '900', marginTop: 4 },
+  resumeGo: {
+    color: t.colors.blueInk,
+    fontSize: 15,
+    fontWeight: '900',
+    backgroundColor: t.glass.solid,
+    borderRadius: 999,
+    paddingHorizontal: 16,
+    paddingVertical: 9,
+    overflow: 'hidden',
+  },
   card: {
-    ...shadow,
-    ...slab(slabEdge.line),
-    backgroundColor: colors.surface,
-    borderRadius: 24,
+    ...t.pane(24),
+    ...t.glassShadow,
     padding: 20,
     minHeight: 84,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    borderWidth: 1,
-    borderColor: colors.line,
   },
-  // Sized so the animal itself still reads at ~50pt now that each sprite
-  // carries a margin of its own.
-  cardPet: { width: 62, height: 62, marginRight: 12 },
   cardText: { flex: 1 },
-  cardTitle: { color: colors.ink, fontSize: 20, fontWeight: '900' },
-  cardMeta: { color: colors.muted, fontSize: 13, fontWeight: '700', marginTop: 5 },
-  arrow: { color: colors.ink, fontSize: 34, fontWeight: '300' },
-  panel: { backgroundColor: colors.surface, borderRadius: 24, padding: 18, borderWidth: 1, borderColor: colors.line },
+  cardTitle: { color: t.colors.ink, fontSize: 20, fontWeight: '900' },
+  cardMeta: { color: t.colors.muted, fontSize: 13, fontWeight: '700', marginTop: 5 },
+  arrow: { color: t.colors.ink, fontSize: 34, fontWeight: '300' },
+  panel: { ...t.pane(24), ...t.glassShadow, padding: 18 },
   panelHeader: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
-  panelTitle: { color: colors.ink, fontSize: 18, fontWeight: '900' },
-  segment: { flexDirection: 'row', backgroundColor: colors.inset, borderRadius: 18, padding: 4, marginTop: 14 },
-  segmentButton: { flex: 1, alignItems: 'center', borderRadius: 14, paddingVertical: 11 },
-  segmentButtonActive: { backgroundColor: colors.blue },
-  segmentText: { color: colors.muted, fontWeight: '900' },
-  segmentTextActive: { color: colors.blueInk },
-  letters: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginTop: 14 },
-  letterChip: {
-    width: 36,
-    height: 36,
-    borderRadius: 18,
-    backgroundColor: colors.inset,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  letterChipActive: { backgroundColor: colors.blue },
-  letterText: { color: colors.muted, fontWeight: '900' },
-  letterTextActive: { color: colors.blueInk },
-  clearButton: {
-    alignSelf: 'flex-start',
-    marginTop: 12,
-    backgroundColor: colors.blue,
-    borderRadius: 16,
-    paddingHorizontal: 12,
-    paddingVertical: 8,
-  },
-  clearButtonText: { color: colors.blueInk, fontWeight: '900' },
-  rangeActions: { flexDirection: 'row', gap: 10, marginTop: 12 },
-  rangeButton: { flex: 1, backgroundColor: colors.blue, borderRadius: 16, paddingVertical: 10, alignItems: 'center' },
-  rangeButtonText: { color: colors.blueInk, fontWeight: '900' },
-  statsButton: { backgroundColor: colors.blue, borderRadius: 16, paddingHorizontal: 14, paddingVertical: 8 },
-  statsButtonText: { color: colors.blueInk, fontWeight: '900' },
+  panelTitle: { color: t.colors.ink, fontSize: 18, fontWeight: '900' },
+  statsButton: { backgroundColor: t.colors.blue, borderRadius: 16, paddingHorizontal: 14, paddingVertical: 8 },
+  statsButtonText: { color: t.colors.blueInk, fontWeight: '900' },
 });

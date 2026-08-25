@@ -2,7 +2,9 @@ import React from 'react';
 import { View, Text, Pressable, ScrollView, TextInput, StyleSheet } from 'react-native';
 import { WordEntry } from '../data/words';
 import { speakWord } from '../lib/speech';
-import { colors, slab, slabEdge, slabPressed } from '../theme';
+import { GlassFill } from './Glass';
+import type { Theme } from '../theme';
+import { useStyles, useTheme } from '../lib/useTheme';
 
 // "wrong" lands here on its own when an answer is missed; "unsure" is the star
 // on the card, for the ones guessed right without really knowing them.
@@ -20,10 +22,13 @@ type Props = {
 // Two separate cards, not one panel with a rule down the middle: the wrong
 // answers and the note are different things and the layout should say so.
 export function SessionSidePanel({ marked, note, onChangeNote, onSaveNote, saved, onClose }: Props) {
+  const styles = useStyles(makeStyles);
+  const theme = useTheme();
   const canSave = note.trim().length > 0;
   return (
     <View style={styles.stack}>
       <View style={styles.card}>
+        <GlassFill />
         <View style={styles.header}>
           <Text style={styles.headerTitle}>錯題庫</Text>
           <View style={styles.headerRight}>
@@ -50,6 +55,7 @@ export function SessionSidePanel({ marked, note, onChangeNote, onSaveNote, saved
                 </View>
                 <Text style={styles.meaning}>{entry.meaning}</Text>
                 <Text style={styles.example}>{entry.example}</Text>
+                {entry.exampleZh && <Text style={styles.exampleZh}>{entry.exampleZh}</Text>}
               </Pressable>
             ))
           )}
@@ -57,6 +63,7 @@ export function SessionSidePanel({ marked, note, onChangeNote, onSaveNote, saved
       </View>
 
       <View style={styles.card}>
+        <GlassFill />
         <View style={styles.header}>
           <Text style={styles.headerTitle}>筆記</Text>
           <Text style={styles.headerHint}>這一場想記什麼都可以</Text>
@@ -67,11 +74,11 @@ export function SessionSidePanel({ marked, note, onChangeNote, onSaveNote, saved
           multiline
           textAlignVertical="top"
           placeholder="例：ab- 開頭的字幾乎都是負面的…"
-          placeholderTextColor={colors.muted}
+          placeholderTextColor={theme.colors.muted}
           style={styles.input}
         />
         <Pressable
-          style={({ pressed }) => [styles.saveBtn, !canSave && styles.saveBtnOff, pressed && canSave && slabPressed]}
+          style={({ pressed }) => [styles.saveBtn, !canSave && styles.saveBtnOff, pressed && canSave && theme.slabPressed]}
           onPress={onSaveNote}
           disabled={!canSave}
         >
@@ -84,24 +91,16 @@ export function SessionSidePanel({ marked, note, onChangeNote, onSaveNote, saved
   );
 }
 
-const styles = StyleSheet.create({
+const makeStyles = (t: Theme) => StyleSheet.create({
   stack: { flex: 1, gap: 14 },
-  card: {
-    flex: 1,
-    backgroundColor: colors.surface,
-    borderRadius: 28,
-    borderWidth: 1,
-    borderColor: colors.line,
-    padding: 16,
-    gap: 10,
-  },
+  card: { ...t.pane(28), ...t.glassShadow, flex: 1, padding: 16, gap: 10 },
   header: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
   headerRight: { flexDirection: 'row', alignItems: 'center', gap: 8 },
-  headerTitle: { color: colors.ink, fontSize: 17, fontWeight: '900' },
-  headerHint: { color: colors.muted, fontSize: 12, fontWeight: '700' },
+  headerTitle: { color: t.colors.ink, fontSize: 17, fontWeight: '900' },
+  headerHint: { color: t.colors.muted, fontSize: 12, fontWeight: '700' },
   count: {
-    color: colors.redInk,
-    backgroundColor: colors.red,
+    color: t.colors.redInk,
+    backgroundColor: t.colors.red,
     fontWeight: '900',
     fontSize: 13,
     minWidth: 28,
@@ -110,15 +109,15 @@ const styles = StyleSheet.create({
     paddingVertical: 4,
   },
   closeBtn: { width: 28, height: 28, alignItems: 'center', justifyContent: 'center' },
-  closeText: { color: colors.muted, fontWeight: '900', fontSize: 15 },
-  list: { flex: 1 },
+  closeText: { color: t.colors.muted, fontWeight: '900', fontSize: 15 },
+  list: { flex: 1, backgroundColor: 'transparent' },
   listContent: { gap: 10, paddingBottom: 4 },
-  empty: { color: colors.muted, fontWeight: '700', textAlign: 'center', paddingVertical: 28, lineHeight: 22 },
-  row: { backgroundColor: colors.inset, borderRadius: 18, padding: 13 },
+  empty: { color: t.colors.muted, fontWeight: '700', textAlign: 'center', paddingVertical: 28, lineHeight: 22 },
+  row: { backgroundColor: t.glass.solid, borderRadius: 18, padding: 13, borderWidth: 1, borderColor: t.glass.edge },
   rowHead: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   badgeWrong: {
-    color: colors.redInk,
-    backgroundColor: colors.red,
+    color: t.colors.redInk,
+    backgroundColor: t.colors.red,
     fontWeight: '900',
     fontSize: 11,
     borderRadius: 9,
@@ -127,10 +126,10 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   badgeUnsure: {
-    color: colors.yellowInk,
-    backgroundColor: colors.surface,
+    color: t.colors.yellowInk,
+    backgroundColor: t.glass.solid,
     borderWidth: 1,
-    borderColor: colors.yellow,
+    borderColor: t.colors.yellow,
     fontWeight: '900',
     fontSize: 11,
     borderRadius: 9,
@@ -138,28 +137,29 @@ const styles = StyleSheet.create({
     paddingVertical: 2,
     overflow: 'hidden',
   },
-  word: { color: colors.ink, fontSize: 17, fontWeight: '900' },
-  meaning: { color: colors.muted, fontWeight: '700', fontSize: 14, marginTop: 6 },
-  example: { color: colors.ink, fontSize: 13, lineHeight: 19, marginTop: 6, fontStyle: 'italic' },
+  word: { color: t.colors.ink, fontSize: 17, fontWeight: '900' },
+  meaning: { color: t.colors.muted, fontWeight: '700', fontSize: 14, marginTop: 6 },
+  example: { color: t.colors.ink, fontSize: 13, lineHeight: 19, marginTop: 6, fontStyle: 'italic' },
+  exampleZh: { color: t.colors.muted, fontSize: 12.5, lineHeight: 19, marginTop: 3 },
   input: {
     flex: 1,
-    backgroundColor: colors.inset,
+    backgroundColor: t.glass.solid,
     borderRadius: 18,
     padding: 14,
     minHeight: 96,
-    color: colors.ink,
+    color: t.colors.ink,
     fontSize: 15,
     lineHeight: 22,
     fontWeight: '600',
   },
   saveBtn: {
-    ...slab(slabEdge.blue),
-    backgroundColor: colors.blue,
+    ...t.slab(t.slabEdge.blue),
+    backgroundColor: t.colors.blue,
     borderRadius: 18,
     paddingVertical: 13,
     alignItems: 'center',
   },
-  saveBtnOff: { backgroundColor: colors.inset, borderBottomColor: slabEdge.line },
-  saveText: { color: colors.blueInk, fontWeight: '900', fontSize: 15 },
-  saveTextOff: { color: colors.muted },
+  saveBtnOff: { backgroundColor: t.glass.fillThin, borderBottomColor: t.slabEdge.line },
+  saveText: { color: t.colors.blueInk, fontWeight: '900', fontSize: 15 },
+  saveTextOff: { color: t.colors.muted },
 });

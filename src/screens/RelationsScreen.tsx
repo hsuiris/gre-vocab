@@ -1,101 +1,74 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 import { View, Text, TextInput, Pressable, FlatList, StyleSheet } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+import type { RootStackParamList } from '../navigation/RootNavigator';
 import { words } from '../data/words';
 import { concepts, bandOf, BAND_LABEL, type Band, type Concept, type ConceptWord } from '../data/concepts';
-import { speakWord } from '../lib/speech';
 import { getExcludedWords } from '../lib/storage';
-import { colors, centered } from '../theme';
+import { centered } from '../theme';
+import type { Theme } from '../theme';
+import { useStyles, useTheme } from '../lib/useTheme';
+
+type Props = NativeStackScreenProps<RootStackParamList, 'Relations'>;
 
 const meanings = new Map(words.map((w) => [w.word.toLowerCase(), w.meaning]));
 const BANDS: Band[] = ['strong', 'mid', 'weak'];
-const PREVIEW = 6;
-const ESTIMATED_CARD = 150; // only a starting guess for a jump into unmeasured cards
 
 const zhOf = (id: string | null) => concepts.find((c) => c.id === id)?.zh;
 
-// Tapping a word reads it aloud. Hearing "abhor" and "dislike" back to back is
-// most of what teaches the gap between them, which is the whole point of a
-// screen that sorts by strength.
-function WordRow({ w }: { w: string }) {
-  return (
-    <Pressable style={({ pressed }) => [styles.row, pressed && styles.rowPressed]} onPress={() => speakWord(w)}>
-      <Text style={styles.rowWord}>{w}</Text>
-      <Text style={styles.rowMeaning} numberOfLines={1}>
-        {meanings.get(w.toLowerCase())}
-      </Text>
-    </Pressable>
-  );
+// One representative word per strength, so a shut card teaches the ladder
+// instead of listing six English words with nothing to tell them apart.
+function ladderOf(list: ConceptWord[]): { band: Band; w: string }[] {
+  return BANDS.map((band) => {
+    const first = list.find((x) => bandOf(x.lv) === band);
+    return first ? { band, w: first.w } : null;
+  }).filter(Boolean) as { band: Band; w: string }[];
 }
 
 function ConceptCard({
   concept,
   words: list,
-  open,
-  onToggle,
-  onJump,
+  onOpen,
 }: {
   concept: Concept;
   words: ConceptWord[];
-  open: boolean;
-  onToggle: () => void;
-  onJump: (id: string) => void;
+  onOpen: () => void;
 }) {
+  const styles = useStyles(makeStyles);
   const oppositeZh = zhOf(concept.opposite);
   return (
-    <View style={styles.card}>
-      {/* Name at one end, count at the other, so the head fills its width
-          instead of bunching against the left edge. */}
-      <Pressable style={styles.head} onPress={onToggle}>
+    <Pressable style={({ pressed }) => [styles.card, pressed && styles.cardPressed]} onPress={onOpen}>
+      <View style={styles.head}>
         <Text style={styles.zh}>{concept.zh}</Text>
-        <Text style={styles.count}>
-          {list.length} 字 {open ? '▾' : '▸'}
-        </Text>
-      </Pressable>
+        <Text style={styles.count}>{list.length} 字 ›</Text>
+      </View>
+      {oppositeZh && <Text style={styles.opposite}>⇄ 相反：{oppositeZh}</Text>}
 
-      {oppositeZh && (
-        <Pressable style={styles.opposite} onPress={() => onJump(concept.opposite!)}>
-          <Text style={styles.oppositeText}>⇄ 相反：{oppositeZh}</Text>
-        </Pressable>
-      )}
-
-      {open ? (
-        BANDS.map((band) => {
-          const inBand = list.filter((x) => bandOf(x.lv) === band);
-          if (!inBand.length) return null;
-          return (
-            <View key={band}>
-              <Text style={styles.band}>{BAND_LABEL[band]}</Text>
-              {inBand.map(({ w }) => (
-                <WordRow key={w} w={w} />
-              ))}
-            </View>
-          );
-        })
-      ) : (
-        // Collapsed, the card shows only the strongest few words as bare chips.
-        // A concept averages around 45 words; opening all of them by default
-        // buries every other concept below one screenful of scrolling.
-        <View style={styles.chips}>
-          {list.slice(0, PREVIEW).map(({ w }) => (
-            <Text key={w} style={styles.chip}>
-              {w}
+      {/* The strength label is a single character in its own column, so the
+          English lines up down the page and nothing is wrapped in a badge. */}
+      <View style={styles.ladder}>
+        {ladderOf(list).map(({ band, w }) => (
+          <View key={band} style={styles.rung}>
+            <Text style={styles.rungBand}>{BAND_LABEL[band]}</Text>
+            <View style={styles.rungRule} />
+            <Text style={styles.rungWord}>{w}</Text>
+            <Text style={styles.rungMeaning} numberOfLines={1}>
+              {meanings.get(w.toLowerCase())}
             </Text>
-          ))}
-          {list.length > PREVIEW && <Text style={styles.more}>+{list.length - PREVIEW}</Text>}
-        </View>
-      )}
-    </View>
+          </View>
+        ))}
+      </View>
+    </Pressable>
   );
 }
 
-export function RelationsScreen() {
+export function RelationsScreen({ navigation }: Props) {
+  const styles = useStyles(makeStyles);
+  const theme = useTheme();
   const [query, setQuery] = useState('');
   const [oppositesOnly, setOppositesOnly] = useState(false);
-  const [open, setOpen] = useState<Set<string>>(new Set());
   const [excluded, setExcluded] = useState<Set<string>>(new Set());
-  const [pendingJump, setPendingJump] = useState<string | null>(null);
-  const listRef = useRef<FlatList<{ concept: Concept; words: ConceptWord[] }>>(null);
 
   // Reloaded on focus so a word restored from the recycle bin comes back here.
   useFocusEffect(
@@ -124,35 +97,6 @@ export function RelationsScreen() {
     return result;
   }, [query, oppositesOnly, excluded]);
 
-  // A search already narrows the list to a few cards, so leaving them shut
-  // would hide the very word that was searched for.
-  const searching = query.trim().length > 0;
-
-  function jumpTo(id: string) {
-    setQuery('');
-    setOppositesOnly(false);
-    setOpen((current) => new Set(current).add(id));
-    setPendingJump(id);
-  }
-
-  // The scroll waits for the cleared filters to produce their new rows, so the
-  // index it lands on is the one the list is actually rendering.
-  useEffect(() => {
-    if (!pendingJump) return;
-    const at = rows.findIndex((r) => r.concept.id === pendingJump);
-    if (at >= 0) listRef.current?.scrollToIndex({ index: at, viewPosition: 0 });
-    setPendingJump(null);
-  }, [pendingJump, rows]);
-
-  function toggle(id: string) {
-    setOpen((current) => {
-      const next = new Set(current);
-      if (next.has(id)) next.delete(id);
-      else next.add(id);
-      return next;
-    });
-  }
-
   return (
     <View style={styles.container}>
       <View style={styles.toolbar}>
@@ -160,7 +104,7 @@ export function RelationsScreen() {
           value={query}
           onChangeText={setQuery}
           placeholder="搜尋概念或單字，例如「討厭」或 abhor"
-          placeholderTextColor={colors.muted}
+          placeholderTextColor={theme.colors.muted}
           autoCapitalize="none"
           autoCorrect={false}
           style={styles.input}
@@ -179,28 +123,16 @@ export function RelationsScreen() {
       </View>
 
       <FlatList
-        ref={listRef}
         data={rows}
         keyExtractor={({ concept }) => concept.id}
         contentContainerStyle={styles.list}
         keyboardShouldPersistTaps="handled"
         ListEmptyComponent={<Text style={styles.empty}>沒有符合的概念。</Text>}
-        // An open card is many times the height of a shut one, so the list
-        // cannot work out where a far card sits until it has laid it out.
-        onScrollToIndexFailed={({ index, averageItemLength }) => {
-          listRef.current?.scrollToOffset({
-            offset: (averageItemLength || ESTIMATED_CARD) * index,
-            animated: false,
-          });
-          setTimeout(() => setPendingJump(rows[index]?.concept.id ?? null), 80);
-        }}
         renderItem={({ item: { concept, words: list } }) => (
           <ConceptCard
             concept={concept}
             words={list}
-            open={searching || open.has(concept.id)}
-            onToggle={() => toggle(concept.id)}
-            onJump={jumpTo}
+            onOpen={() => navigation.navigate('Concept', { id: concept.id })}
           />
         )}
       />
@@ -208,76 +140,50 @@ export function RelationsScreen() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: colors.page },
+const makeStyles = (t: Theme) => StyleSheet.create({
+  container: { flex: 1 },
   // Same width and alignment as the list below it, so the two do not disagree
   // about where the page edge is.
   toolbar: { ...centered, padding: 16, gap: 10 },
   toolbarRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 12 },
   input: {
-    backgroundColor: colors.surface,
+    backgroundColor: t.glass.solid,
     borderWidth: 1,
-    borderColor: colors.line,
-    borderRadius: 20,
-    paddingVertical: 13,
+    borderColor: t.glass.edge,
+    borderRadius: 22,
+    paddingVertical: 14,
     paddingHorizontal: 18,
-    color: colors.ink,
+    color: t.colors.ink,
     fontSize: 16,
     fontWeight: '700',
   },
   filter: {
     alignSelf: 'flex-start',
-    backgroundColor: colors.surface,
+    backgroundColor: t.glass.solid,
     borderWidth: 1,
-    borderColor: colors.line,
-    borderRadius: 16,
-    paddingHorizontal: 14,
-    paddingVertical: 8,
+    borderColor: t.glass.edge,
+    borderRadius: 999,
+    paddingHorizontal: 16,
+    paddingVertical: 9,
   },
-  filterActive: { backgroundColor: colors.blue, borderColor: colors.blue },
-  filterText: { color: colors.muted, fontWeight: '900' },
-  filterTextActive: { color: colors.blueInk },
-  total: { color: colors.muted, fontWeight: '700', fontSize: 13 },
-  list: { ...centered, paddingHorizontal: 16, paddingBottom: 36, gap: 12 },
-  empty: { color: colors.muted, fontWeight: '700', textAlign: 'center', marginTop: 40 },
-  card: {
-    backgroundColor: colors.surface,
-    borderRadius: 24,
-    borderWidth: 1,
-    borderColor: colors.line,
-    padding: 18,
-  },
+  filterActive: { backgroundColor: t.colors.blue, borderColor: t.colors.blue },
+  filterText: { color: t.colors.muted, fontWeight: '900' },
+  filterTextActive: { color: t.colors.blueInk },
+  total: { color: t.colors.muted, fontWeight: '700', fontSize: 13 },
+  list: { ...centered, paddingHorizontal: 16, paddingBottom: 36, gap: 14 },
+  empty: { color: t.colors.muted, fontWeight: '700', textAlign: 'center', marginTop: 40 },
+  card: { ...t.pane(26), ...t.glassShadow, backgroundColor: t.glass.solid, paddingHorizontal: 20, paddingVertical: 18 },
+  cardPressed: { opacity: 0.72 },
   head: { flexDirection: 'row', alignItems: 'baseline', justifyContent: 'space-between', gap: 8 },
-  zh: { color: colors.ink, fontSize: 22, fontWeight: '900' },
-  count: { color: colors.muted, fontWeight: '900', fontSize: 13 },
-  opposite: { alignSelf: 'flex-start', marginTop: 8 },
-  oppositeText: {
-    color: colors.redInk,
-    backgroundColor: colors.red,
-    fontSize: 13,
-    fontWeight: '900',
-    borderRadius: 12,
-    paddingHorizontal: 10,
-    paddingVertical: 4,
-    overflow: 'hidden',
-  },
-  band: { color: colors.muted, fontWeight: '900', fontSize: 12, marginTop: 14, marginBottom: 2 },
-  // Word left, gloss right: the eye runs down one column of English while the
-  // Chinese stays available, which is how the strength ladder stays readable.
-  row: { flexDirection: 'row', alignItems: 'baseline', gap: 10, paddingVertical: 6 },
-  rowPressed: { opacity: 0.6 },
-  rowWord: { color: colors.ink, fontSize: 16, fontWeight: '900' },
-  rowMeaning: { color: colors.muted, fontSize: 13, fontWeight: '700', flexShrink: 1 },
-  chips: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginTop: 12 },
-  chip: {
-    backgroundColor: colors.blue,
-    color: colors.blueInk,
-    fontWeight: '900',
-    fontSize: 14,
-    borderRadius: 14,
-    paddingHorizontal: 11,
-    paddingVertical: 6,
-    overflow: 'hidden',
-  },
-  more: { color: colors.muted, fontWeight: '900', fontSize: 13, alignSelf: 'center' },
+  zh: { color: t.colors.ink, fontSize: 23, fontWeight: '900', letterSpacing: 0.5 },
+  count: { color: t.colors.muted, fontWeight: '800', fontSize: 13 },
+  opposite: { color: t.colors.muted, fontSize: 13, fontWeight: '700', marginTop: 6 },
+  ladder: { marginTop: 14, gap: 9 },
+  rung: { flexDirection: 'row', alignItems: 'baseline', gap: 11 },
+  rungBand: { color: t.colors.blueInk, fontSize: 13, fontWeight: '900', width: 15 },
+  // A hairline standing in for the notebook's margin rule, so the eye has one
+  // straight edge to run the English down.
+  rungRule: { width: 1, alignSelf: 'stretch', backgroundColor: t.colors.line },
+  rungWord: { color: t.colors.ink, fontSize: 16, fontWeight: '900', minWidth: 92 },
+  rungMeaning: { color: t.colors.muted, fontSize: 13, fontWeight: '700', flexShrink: 1 },
 });

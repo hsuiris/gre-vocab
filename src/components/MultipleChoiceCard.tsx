@@ -5,7 +5,10 @@ import { WordEntry } from '../data/words';
 import { getRelation } from '../data/relations';
 import type { AppSettings } from '../lib/storage';
 import { speakWord } from '../lib/speech';
-import { colors, slab, slabEdge, slabPressed } from '../theme';
+import { posLabel } from '../lib/pos';
+import { GlassFill } from './Glass';
+import type { Theme } from '../theme';
+import { useStyles, useTheme } from '../lib/useTheme';
 
 type Props = {
   entry: WordEntry;
@@ -16,32 +19,16 @@ type Props = {
   settings: AppSettings;
   onResult: (knewIt: boolean) => void;
   // Fires the instant an answer is picked, not when the card advances, so the
-  // mascot can react while the result is still on screen.
+  // screen can bank the answer while the result is still on screen.
   onAnswered: (correct: boolean) => void;
   onExclude: () => void;
   onMarkUnsure: () => void;
   unsure: boolean;
-  // Rendered beside the question. Passed in rather than built here so the
-  // screen stays the one place that knows how the last answer went.
-  mascot?: React.ReactNode;
 };
 
-// words.json stores parts of speech as "v." or "n./adj."; spell them out so the
-// grammar hint reads as Chinese rather than dictionary shorthand.
-const POS_ZH: Record<string, string> = {
-  'n.': '名詞',
-  'v.': '動詞',
-  'adj.': '形容詞',
-  'adv.': '副詞',
-  'conj.': '連接詞',
-};
-
-function posLabel(pos: string): string {
-  return pos
-    .split('/')
-    .map((p) => POS_ZH[p.trim()] ?? p.trim())
-    .join('／');
-}
+// Each option is labelled like an exam paper. Four is the most buildChoices
+// ever returns, so the list never runs out of letters.
+const OPTION_KEYS = 'ABCD';
 
 export function MultipleChoiceCard({
   entry,
@@ -55,15 +42,16 @@ export function MultipleChoiceCard({
   onExclude,
   onMarkUnsure,
   unsure,
-  mascot,
 }: Props) {
+  const styles = useStyles(makeStyles);
+  const theme = useTheme();
   const [selected, setSelected] = useState<string | null>(null);
   const [typed, setTyped] = useState('');
-  const [expanded, setExpanded] = useState(false);
 
   const question = mode === 'choice' && direction === 'en-zh' ? entry.word : entry.meaning;
   const correctAnswer = mode === 'choice' && direction === 'en-zh' ? entry.meaning : entry.word;
   const answered = selected !== null;
+  const gotIt = answered && isCorrect(selected!);
   const blankedExample = entry.example.replace(new RegExp(entry.word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i'), '_____');
 
   function isCorrect(answer: string) {
@@ -74,7 +62,6 @@ export function MultipleChoiceCard({
     if (answered) return; // locked after first tap
     setSelected(choice);
     onAnswered(isCorrect(choice));
-    if (settings.autoShowDetails) setExpanded(true);
   }
 
   function handleTypingSubmit() {
@@ -82,14 +69,12 @@ export function MultipleChoiceCard({
     const answer = typed.trim();
     setSelected(answer);
     onAnswered(isCorrect(answer));
-    if (settings.autoShowDetails) setExpanded(true);
   }
 
   function handleNext() {
     const knewIt = isCorrect(selected ?? '');
     setSelected(null);
     setTyped('');
-    setExpanded(false);
     onResult(knewIt);
   }
 
@@ -97,12 +82,20 @@ export function MultipleChoiceCard({
     return ({ pressed }: { pressed: boolean }) => {
       // Only an unanswered option can be pressed down; once locked, the key
       // staying put is the feedback.
-      const press = pressed && !answered ? slabPressed : null;
+      const press = pressed && !answered ? styles.optionPressed : null;
       if (!answered) return [styles.option, press];
       if (choice === correctAnswer) return [styles.option, styles.optionCorrect];
       if (choice === selected) return [styles.option, styles.optionWrong];
       return [styles.option, styles.optionDisabled];
     };
+  }
+
+  // Each option is its own pane of glass, tinted by how it turned out.
+  function optionFill(choice: string) {
+    if (!answered) return theme.glass.pane;
+    if (choice === correctAnswer) return 'rgba(214,233,210,0.8)';
+    if (choice === selected) return 'rgba(245,219,216,0.8)';
+    return theme.glass.fillThin;
   }
 
   function optionTextStyle(choice: string) {
@@ -111,9 +104,32 @@ export function MultipleChoiceCard({
     return styles.optionText;
   }
 
-  // Every option, right or wrong, gets its own speaker button plus grammar and
-  // example, so a revealed card teaches four words instead of one.
+  function optionKeyLabel(choice: string, index: number) {
+    if (!answered) return OPTION_KEYS[index] ?? '•';
+    if (choice === correctAnswer) return '✓';
+    if (choice === selected) return '✗';
+    return OPTION_KEYS[index] ?? '•';
+  }
+
+  function optionKeyStyle(choice: string) {
+    if (!answered) return styles.optionKey;
+    if (choice === correctAnswer) return [styles.optionKey, styles.optionKeyCorrect];
+    if (choice === selected) return [styles.optionKey, styles.optionKeyWrong];
+    return styles.optionKey;
+  }
+
+  function optionKeyTextStyle(choice: string) {
+    if (!answered) return styles.optionKeyText;
+    if (choice === correctAnswer) return [styles.optionKeyText, styles.optionKeyTextCorrect];
+    if (choice === selected) return [styles.optionKeyText, styles.optionKeyTextWrong];
+    return styles.optionKeyText;
+  }
+
+  // The wrong options get their own speaker button plus grammar and example, so
+  // a revealed card teaches four words instead of one. The right one doesn't:
+  // its entry is already spelled out at the top of the card.
   function renderOptionDetail(choice: string) {
+    if (choice === correctAnswer) return null;
     const info = choiceEntries[choice];
     if (!info) return null;
     const feedback = choice === correctAnswer || choice === selected;
@@ -156,6 +172,7 @@ export function MultipleChoiceCard({
   return (
     <View style={styles.container}>
       <View style={styles.card}>
+        <GlassFill intensity={30} />
         <View style={styles.cardActions}>
           <Pressable
             style={[styles.unsureBtn, unsure && styles.unsureBtnOn]}
@@ -166,30 +183,60 @@ export function MultipleChoiceCard({
               {unsure ? '★ 不熟' : '☆ 不熟'}
             </Text>
           </Pressable>
-          <Pressable style={styles.excludeBtn} onPress={onExclude} hitSlop={8}>
-            <Text style={styles.excludeBtnText}>太簡單</Text>
+          <Pressable
+            style={({ pressed }) => [styles.excludeBtn, pressed && styles.excludeBtnPressed]}
+            onPress={onExclude}
+            hitSlop={10}
+            accessibilityLabel="這個字太簡單"
+          >
+            <Text style={styles.excludeBtnText}>✕</Text>
           </Pressable>
         </View>
-        <Pressable style={styles.soundBtn} onPress={() => speakWord(entry.word)} hitSlop={8}>
-          <Image source={require('../../assets/speaker-icon.png')} style={styles.soundIcon} />
-        </Pressable>
-        <View style={styles.cardRow}>
-          {mascot}
-          <View style={styles.cardTextCol}>
-            {mode === 'cloze' ? (
-              <>
-                <Text style={styles.modeLabel}>選出最適合填入句子的單字</Text>
-                <Text style={styles.cloze}>{blankedExample}</Text>
-              </>
-            ) : (
-              <>
-                <Text style={styles.modeLabel}>{mode === 'typing' ? '請輸入英文單字' : '選出正確答案'}</Text>
-                <Text style={styles.question}>{question}</Text>
-              </>
-            )}
+
+        {answered ? (
+          // The word and its explanation replace the question the moment an
+          // answer lands: the answer is what you came here to read, so it sits
+          // at the top of the card instead of at the bottom of the page.
+          <View style={styles.answerBody}>
+            <Text style={gotIt ? styles.verdictRight : styles.verdictWrong}>{gotIt ? '答對了' : '答錯了'}</Text>
+            <Pressable style={styles.answerWordRow} onPress={() => speakWord(entry.word)} hitSlop={8}>
+              <Text style={styles.answerWord}>{entry.word}</Text>
+              <Image source={require('../../assets/speaker-icon.png')} style={styles.answerSoundIcon} />
+            </Pressable>
+            <Text style={styles.answerPos}>{posLabel(entry.pos)}</Text>
+            <Text style={styles.answerMeaning}>{entry.meaning}</Text>
+
+            <View style={styles.explain}>
+              <Text style={styles.explainLabel}>範例句</Text>
+              <Pressable onPress={() => speakWord(entry.example)}>
+                <Text style={styles.explainText}>{renderHighlightedExample()}</Text>
+              </Pressable>
+              <Text style={styles.explainZh}>{entry.exampleZh ?? '中文翻譯待補'}</Text>
+              <Text style={styles.explainLabel}>字根字尾</Text>
+              <Text style={styles.explainText}>{entry.roots}</Text>
+            </View>
           </View>
-        </View>
+        ) : mode === 'cloze' ? (
+          <View style={styles.questionBody}>
+            <Text style={styles.modeLabel}>選出最適合填入句子的單字</Text>
+            <Text style={styles.cloze}>{blankedExample}</Text>
+          </View>
+        ) : (
+          <View style={styles.questionBody}>
+            <Text style={styles.modeLabel}>{mode === 'typing' ? '請輸入英文單字' : '選出正確答案'}</Text>
+            <Text style={styles.question}>{question}</Text>
+            <Pressable style={styles.soundBtn} onPress={() => speakWord(entry.word)} hitSlop={8}>
+              <Image source={require('../../assets/speaker-icon.png')} style={styles.soundIcon} />
+            </Pressable>
+          </View>
+        )}
       </View>
+
+      {answered && (
+        <Pressable style={({ pressed }) => [styles.nextBtn, pressed && theme.slabPressed]} onPress={handleNext}>
+          <Text style={styles.nextBtnText}>下一題</Text>
+        </Pressable>
+      )}
 
       {mode === 'typing' ? (
         <View style={styles.typingBox}>
@@ -200,78 +247,55 @@ export function MultipleChoiceCard({
             autoCapitalize="none"
             autoCorrect={false}
             placeholder="在這裡輸入單字"
-            placeholderTextColor={colors.muted}
+            placeholderTextColor={theme.colors.muted}
             style={styles.input}
             onSubmitEditing={handleTypingSubmit}
           />
           {!answered && (
-            <Pressable style={({ pressed }) => [styles.submitBtn, pressed && slabPressed]} onPress={handleTypingSubmit}>
+            <Pressable style={({ pressed }) => [styles.submitBtn, pressed && theme.slabPressed]} onPress={handleTypingSubmit}>
               <Text style={styles.submitText}>送出</Text>
             </Pressable>
           )}
-          {answered && (
-            <Text style={selected?.trim().toLowerCase() === correctAnswer.toLowerCase() ? styles.correctText : styles.wrongText}>
-              正解：{correctAnswer}
-            </Text>
-          )}
+          {answered && !gotIt && <Text style={styles.wrongText}>你寫的：{selected || '（空白）'}</Text>}
         </View>
       ) : (
         <View style={styles.options}>
-          {choices.map((choice) => (
+          {choices.map((choice, index) => (
             // Not `disabled` when answered: handleSelect already ignores late
             // taps, and a disabled parent would swallow the sound buttons.
             <Pressable key={choice} style={optionStyle(choice)} onPress={() => handleSelect(choice)}>
-              <Text style={optionTextStyle(choice)}>{choice}</Text>
+              <GlassFill intensity={26} fill={optionFill(choice)} />
+              <View style={styles.optionRow}>
+                <View style={optionKeyStyle(choice)}>
+                  <Text style={optionKeyTextStyle(choice)}>{optionKeyLabel(choice, index)}</Text>
+                </View>
+                <Text style={optionTextStyle(choice)}>{choice}</Text>
+              </View>
               {answered && settings.autoShowChoiceAnswers && renderOptionDetail(choice)}
             </Pressable>
           ))}
         </View>
       )}
-
-      {answered && (
-        <Pressable style={({ pressed }) => [styles.nextBtn, pressed && slabPressed]} onPress={handleNext}>
-          <Text style={styles.nextBtnText}>下一題</Text>
-        </Pressable>
-      )}
-
-      {answered && (
-        <>
-          <Pressable onPress={() => setExpanded(!expanded)}>
-            <Text style={styles.detailToggle}>{expanded ? '收起詳情' : '查看詳情'}</Text>
-          </Pressable>
-
-          {expanded && (
-            <View style={styles.detail}>
-              <Text style={styles.detailLabel}>範例句</Text>
-              <Text style={styles.detailText}>{renderHighlightedExample()}</Text>
-              <Text style={styles.translationText}>{entry.exampleZh ?? '中文翻譯待補'}</Text>
-              <Text style={styles.detailLabel}>字根字尾</Text>
-              <Text style={styles.detailText}>{entry.roots}</Text>
-            </View>
-          )}
-        </>
-      )}
     </View>
   );
 }
 
-const styles = StyleSheet.create({
+const makeStyles = (t: Theme) => StyleSheet.create({
   container: { width: '100%', alignItems: 'center', paddingHorizontal: 22, paddingVertical: 18 },
   card: {
+    ...t.pane(26),
+    ...t.glassShadow,
     position: 'relative',
     width: '100%',
     maxWidth: 760,
     minHeight: 164,
-    borderRadius: 26,
-    // Tinted, not white: the whole answer area now sits on a white panel, so a
-    // white question card would have nothing to stand out against.
-    backgroundColor: colors.tint,
     justifyContent: 'center',
     alignItems: 'center',
     paddingHorizontal: 26,
-    // Clears the action row on top and the speaker button at the bottom, so a
-    // three-line question can never run underneath either of them.
-    paddingVertical: 52,
+    // Clears the action row pinned to the top of the card, so a three-line
+    // question can never run underneath it.
+    paddingTop: 54,
+    paddingBottom: 26,
   },
   cardActions: {
     position: 'absolute',
@@ -281,129 +305,165 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
+  questionBody: { width: '100%', alignItems: 'center' },
   soundBtn: {
-    position: 'absolute',
-    right: 14,
-    bottom: 14,
+    marginTop: 16,
     width: 36,
     height: 36,
-    backgroundColor: colors.blue,
+    backgroundColor: t.colors.blue,
     borderRadius: 18,
     alignItems: 'center',
     justifyContent: 'center',
   },
   soundIcon: { width: 21, height: 21 },
-  excludeBtn: {
-    backgroundColor: colors.red,
-    borderRadius: 14,
-    paddingHorizontal: 10,
-    paddingVertical: 7,
-  },
-  excludeBtnText: { color: colors.redInk, fontSize: 12, fontWeight: '900' },
+  // A bare cross, no pink pill: the sheet it opens is what explains the word
+  // is going to the familiar list, so the button itself needs no label.
+  excludeBtn: { paddingHorizontal: 6, paddingVertical: 2 },
+  excludeBtnPressed: { opacity: 0.5 },
+  excludeBtnText: { color: t.colors.redInk, fontSize: 19, fontWeight: '900' },
   // Outlined, then filled with the dark gold when on: yellow is the one colour
   // this palette never spreads across a surface.
   unsureBtn: {
-    backgroundColor: colors.surface,
+    backgroundColor: t.glass.solid,
     borderWidth: 1.5,
-    borderColor: slabEdge.yellow,
+    borderColor: t.slabEdge.yellow,
     borderRadius: 14,
     paddingHorizontal: 10,
     paddingVertical: 6,
   },
-  unsureBtnOn: { backgroundColor: colors.yellow, borderColor: colors.yellowInk },
-  unsureBtnText: { color: colors.yellowInk, fontSize: 12, fontWeight: '900' },
-  unsureBtnTextOn: { color: colors.yellowInk },
-  cardRow: { flexDirection: 'row', alignItems: 'center', gap: 12 },
-  cardTextCol: { flex: 1, alignItems: 'center' },
-  modeLabel: { color: colors.blueInk, fontSize: 13, fontWeight: '900', marginBottom: 10 },
-  question: { color: colors.ink, fontSize: 26, fontWeight: '900', textAlign: 'center' },
-  cloze: { color: colors.ink, fontSize: 20, fontWeight: '800', lineHeight: 28, textAlign: 'center' },
-  options: { width: '100%', maxWidth: 760, marginTop: 16, gap: 10 },
-  option: {
-    backgroundColor: colors.inset,
-    borderWidth: 1,
-    borderColor: colors.line,
-    ...slab(slabEdge.line),
-    borderRadius: 20,
-    paddingVertical: 15,
-    paddingHorizontal: 18,
+  unsureBtnOn: { backgroundColor: t.colors.yellow, borderColor: t.colors.yellowInk },
+  unsureBtnText: { color: t.colors.yellowInk, fontSize: 12, fontWeight: '900' },
+  unsureBtnTextOn: { color: t.colors.yellowInk },
+  modeLabel: { color: t.colors.blueInk, fontSize: 13, fontWeight: '900', marginBottom: 10 },
+  question: { color: t.colors.ink, fontSize: 26, fontWeight: '900', textAlign: 'center' },
+  cloze: { color: t.colors.ink, fontSize: 20, fontWeight: '800', lineHeight: 28, textAlign: 'center' },
+  answerBody: { width: '100%', alignItems: 'center' },
+  verdictRight: { color: t.colors.greenInk, fontSize: 13, fontWeight: '900' },
+  verdictWrong: { color: t.colors.redInk, fontSize: 13, fontWeight: '900' },
+  answerWordRow: { flexDirection: 'row', alignItems: 'center', gap: 8, marginTop: 6 },
+  answerWord: { color: t.colors.ink, fontSize: 30, fontWeight: '900', textAlign: 'center' },
+  answerSoundIcon: { width: 20, height: 20 },
+  answerPos: { color: t.colors.yellowInk, fontSize: 13, fontWeight: '900', marginTop: 6 },
+  answerMeaning: { color: t.colors.ink, fontSize: 19, fontWeight: '800', marginTop: 4, textAlign: 'center' },
+  explain: {
+    width: '100%',
+    marginTop: 16,
+    paddingTop: 14,
+    borderTopWidth: 1,
+    borderTopColor: t.glass.edge,
   },
-  optionCorrect: { backgroundColor: colors.green, borderColor: slabEdge.green, ...slab(slabEdge.green) },
-  optionWrong: { backgroundColor: colors.red, borderColor: slabEdge.red, ...slab(slabEdge.red) },
-  // Was 0.5, but the unpicked options now carry example sentences worth reading.
-  optionDisabled: { opacity: 0.8 },
-  optionText: { fontSize: 16, color: colors.ink, fontWeight: '700', textAlign: 'center' },
-  optionTextFeedback: { color: colors.ink, fontWeight: '800' },
-  optionMeta: { color: colors.muted, fontSize: 13, fontWeight: '700', textAlign: 'center', marginTop: 5 },
-  optionMetaFeedback: { color: colors.ink, fontSize: 13, fontWeight: '800', textAlign: 'center', marginTop: 5 },
-  optionDetail: { marginTop: 10, alignItems: 'center' },
+  explainLabel: { color: t.colors.ink, fontWeight: '900', marginTop: 10, fontSize: 13 },
+  explainText: { color: t.colors.muted, lineHeight: 21, marginTop: 4 },
+  explainZh: { color: t.colors.ink, lineHeight: 21, marginTop: 6, fontWeight: '700' },
+  highlightWord: { color: t.colors.yellowInk, fontWeight: '900' },
+  options: { width: '100%', maxWidth: 760, marginTop: 16, gap: 12 },
+  // A white hairline over a near-white page is no outline at all, which is why
+  // these used to read as text floating on the background. The frame is now an
+  // edge you can see all the way round, plus the slab lip, so an option looks
+  // like a key waiting to be pressed.
+  // The border has to be the same width the whole way round. A thicker bottom
+  // lip on top of a large radius is what was drawing those straight overshoots
+  // past the ends of the capsule: the corner cannot blend two widths, so it
+  // gives up and squares off. Depth comes from the t.shadow instead.
+  //
+  // 34 is over half a resting option's height, so it clamps to a true capsule;
+  // an answered option grows to hold its example and settles into a rounded
+  // rectangle rather than a lens.
+  option: {
+    ...t.pane(34),
+    ...t.softShadow,
+    borderWidth: 1.5,
+    borderColor: t.slabEdge.blue,
+    paddingVertical: 15,
+    paddingHorizontal: 22,
+  },
+  // No lip to squash, so pressing sinks the whole key a hair instead.
+  optionPressed: { transform: [{ translateY: 1 }], opacity: 0.88 },
+  optionCorrect: { borderColor: t.slabEdge.green },
+  optionWrong: { borderColor: t.slabEdge.red },
+  // Was 0.5, but the unpicked options now carry example sentences worth
+  // reading. Their edge goes quiet instead: only the two that decided the
+  // question keep a coloured frame.
+  optionDisabled: { opacity: 0.85, borderColor: t.slabEdge.line },
+  optionRow: { flexDirection: 'row', alignItems: 'center', gap: 13 },
+  // A lettered key on the left gives every row the same place to start reading
+  // from, and once answered it is where the ✓ or ✗ lands.
+  optionKey: {
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    backgroundColor: t.glass.solid,
+    borderWidth: 1.5,
+    borderColor: t.slabEdge.blue,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  optionKeyCorrect: { backgroundColor: t.colors.green, borderColor: t.slabEdge.green },
+  optionKeyWrong: { backgroundColor: t.colors.red, borderColor: t.slabEdge.red },
+  optionKeyText: { color: t.colors.blueInk, fontSize: 15, fontWeight: '900' },
+  optionKeyTextCorrect: { color: t.colors.greenInk },
+  optionKeyTextWrong: { color: t.colors.redInk },
+  optionText: { flex: 1, fontSize: 16, color: t.colors.ink, fontWeight: '700' },
+  optionTextFeedback: { color: t.colors.ink, fontWeight: '800' },
+  optionMeta: { color: t.colors.muted, fontSize: 13, fontWeight: '700', marginTop: 5 },
+  optionMetaFeedback: { color: t.colors.ink, fontSize: 13, fontWeight: '800', marginTop: 5 },
+  // Indented to clear the lettered key, so the detail lines up under the
+  // option's own text rather than under its badge.
+  optionDetail: { marginTop: 10, paddingLeft: 45 },
   optionMetaRow: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   optionSound: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 6,
-    backgroundColor: colors.surface,
+    backgroundColor: t.glass.solid,
     borderRadius: 999,
     paddingHorizontal: 10,
     paddingVertical: 6,
   },
   optionSoundIcon: { width: 15, height: 15 },
-  optionSoundText: { color: colors.blueInk, fontSize: 13, fontWeight: '900' },
-  optionPos: { color: colors.yellowInk, fontSize: 12, fontWeight: '900' },
-  optionPosFeedback: { color: colors.ink, fontSize: 12, fontWeight: '900' },
-  optionExample: { color: colors.ink, fontSize: 13, lineHeight: 19, textAlign: 'center', marginTop: 8, fontStyle: 'italic' },
+  optionSoundText: { color: t.colors.blueInk, fontSize: 13, fontWeight: '900' },
+  optionPos: { color: t.colors.yellowInk, fontSize: 12, fontWeight: '900' },
+  optionPosFeedback: { color: t.colors.ink, fontSize: 12, fontWeight: '900' },
+  optionExample: { color: t.colors.ink, fontSize: 13, lineHeight: 19, marginTop: 8, fontStyle: 'italic' },
   optionExampleFeedback: {
-    color: colors.ink,
+    color: t.colors.ink,
     fontSize: 13,
     lineHeight: 19,
-    textAlign: 'center',
     marginTop: 8,
     fontStyle: 'italic',
   },
+  // Directly under the card, not under the options: after reading the
+  // explanation the way on is the next thing your thumb reaches.
   nextBtn: {
-    ...slab(slabEdge.blue),
-    marginTop: 18,
-    backgroundColor: colors.blue,
+    ...t.slab(t.slabEdge.blue),
+    marginTop: 14,
+    backgroundColor: t.colors.blue,
     paddingVertical: 14,
     paddingHorizontal: 28,
     borderRadius: 22,
   },
-  nextBtnText: { color: colors.blueInk, fontWeight: '900', fontSize: 16 },
+  nextBtnText: { color: t.colors.blueInk, fontWeight: '900', fontSize: 16 },
   typingBox: { width: '100%', maxWidth: 760, marginTop: 16, gap: 10 },
   input: {
-    backgroundColor: colors.inset,
+    backgroundColor: t.glass.solid,
+    // A white edge on a near-white fill draws nothing. This is the one field
+    // you type into, so it gets a real hairline to sit inside.
     borderWidth: 1,
-    borderColor: colors.line,
+    borderColor: t.slabEdge.line,
     borderRadius: 20,
     paddingVertical: 14,
     paddingHorizontal: 18,
-    color: colors.ink,
+    color: t.colors.ink,
     fontSize: 20,
     fontWeight: '800',
   },
   submitBtn: {
-    ...slab(slabEdge.blue),
-    backgroundColor: colors.blue,
+    ...t.slab(t.slabEdge.blue),
+    backgroundColor: t.colors.blue,
     borderRadius: 20,
     paddingVertical: 14,
     alignItems: 'center',
   },
-  submitText: { color: colors.blueInk, fontWeight: '900' },
-  correctText: { color: colors.greenInk, fontWeight: '900', textAlign: 'center', fontSize: 16 },
-  wrongText: { color: colors.redInk, fontWeight: '900', textAlign: 'center', fontSize: 16 },
-  detailToggle: { marginTop: 18, color: colors.blueInk, fontWeight: '900' },
-  detail: {
-    marginTop: 14,
-    width: '100%',
-    maxWidth: 760,
-    backgroundColor: colors.inset,
-    borderRadius: 24,
-    padding: 18,
-    borderWidth: 1,
-    borderColor: colors.line,
-  },
-  detailLabel: { color: colors.ink, fontWeight: '900', marginTop: 10 },
-  detailText: { color: colors.muted, lineHeight: 21, marginTop: 4 },
-  highlightWord: { color: colors.yellowInk, fontWeight: '900' },
-  translationText: { color: colors.ink, lineHeight: 21, marginTop: 8, fontWeight: '700' },
+  submitText: { color: t.colors.blueInk, fontWeight: '900' },
+  wrongText: { color: t.colors.redInk, fontWeight: '900', textAlign: 'center', fontSize: 16 },
 });

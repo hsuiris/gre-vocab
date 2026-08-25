@@ -1,8 +1,9 @@
-import { colors, slabEdge } from '../src/theme';
+import { themeList, type Palette, type SlabEdge, type Theme } from '../src/theme';
 
 // A pastel palette is one bad hex away from unreadable, and nothing in a render
 // test would catch it. These are the pairs the screens actually put together;
-// every one must clear WCAG AA for normal text.
+// every one must clear WCAG AA for normal text — in EVERY theme, so a second
+// look cannot ship worse than the first.
 const AA = 4.5; // WCAG AA for normal text
 const AA_UI = 3.0; // WCAG AA for a control's own shape, which carries no text
 
@@ -21,10 +22,8 @@ function contrast(a: string, b: string): number {
   return (light + 0.05) / (dark + 0.05);
 }
 
-type Token = keyof typeof colors;
-
 // Body text and headings, wherever they land.
-const NEUTRAL: [Token, Token][] = [
+const NEUTRAL: [keyof Palette, keyof Palette][] = [
   ['ink', 'page'],
   ['ink', 'surface'],
   ['ink', 'tint'],
@@ -36,16 +35,19 @@ const NEUTRAL: [Token, Token][] = [
 ];
 
 // Each pastel carries its own ink; nothing here is lettered in white, because
-// at this lightness white text washes out.
+// at these lightnesses white text washes out.
 const HUES = ['blue', 'yellow', 'green', 'red'] as const;
 
-describe('palette contrast', () => {
+describe.each(themeList.map((t) => [t.name, t] as [string, Theme]))('%s palette', (_name, theme) => {
+  const colors = theme.colors;
+  const slabEdge = theme.slabEdge;
+
   it.each(NEUTRAL)('%s on %s clears AA', (fg, bg) => {
     expect(contrast(colors[fg], colors[bg])).toBeGreaterThanOrEqual(AA);
   });
 
   it.each(HUES)('%sInk is readable on its own pastel, on white and on the page', (hue) => {
-    const ink = colors[`${hue}Ink` as Token];
+    const ink = colors[`${hue}Ink` as keyof Palette];
     expect(contrast(ink, colors[hue])).toBeGreaterThanOrEqual(AA);
     expect(contrast(ink, colors.surface)).toBeGreaterThanOrEqual(AA);
     expect(contrast(ink, colors.page)).toBeGreaterThanOrEqual(AA);
@@ -58,7 +60,7 @@ describe('palette contrast', () => {
   // The lip is what makes a button look pressable. Too close to its own fill
   // and the slab flattens into a plain rectangle.
   it.each(HUES)('the %s slab lip is distinguishable from its fill', (hue) => {
-    expect(contrast(colors[hue], slabEdge[hue])).toBeGreaterThanOrEqual(1.2);
+    expect(contrast(colors[hue], slabEdge[hue as keyof SlabEdge])).toBeGreaterThanOrEqual(1.2);
   });
 
   // White text is the failure mode this palette is built to avoid. If a future
@@ -67,16 +69,13 @@ describe('palette contrast', () => {
     expect(contrast(colors.surface, colors[hue])).toBeLessThan(AA);
   });
 
-  // greenSoft is gone; the switch track is the pastel itself. It holds no text,
-  // so the bar is the one for a control's own shape.
   it('the green switch thumb stays visible on its track', () => {
     expect(contrast(colors.greenInk, colors.green)).toBeGreaterThanOrEqual(AA_UI);
   });
 
-  // The page is near-white, so these three barely differ in lightness and it
-  // would be easy to collapse them by accident. Each still has to be its own
-  // step: a recessed field must show against the card it sits in, and a card
-  // must show against the page.
+  // The page is light, so these three barely differ and it would be easy to
+  // collapse them by accident. Each still has to be its own step: a recessed
+  // field must show against the card it sits in, and a card against the page.
   it('page, card and recessed field stay three distinct surfaces', () => {
     const step = 1.05;
     expect(contrast(colors.inset, colors.surface)).toBeGreaterThanOrEqual(step);

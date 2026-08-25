@@ -4,8 +4,12 @@ import { useFocusEffect } from '@react-navigation/native';
 import { words, WordEntry } from '../data/words';
 import { speakSequence, stopSpeaking } from '../lib/speech';
 import { AlphabetIndex, letterStarts } from '../components/AlphabetIndex';
-import { excludeWord, getExcludedWords } from '../lib/storage';
-import { colors, centered, slab, slabEdge, slabPressed } from '../theme';
+import { excludeWord, getExcludedWords, getSettings, saveSettings, defaultSettings } from '../lib/storage';
+import type { AppSettings } from '../lib/storage';
+import { ConfirmBin } from '../components/ConfirmBin';
+import { centered } from '../theme';
+import type { Theme } from '../theme';
+import { useStyles, useTheme } from '../lib/useTheme';
 
 // Rows size themselves to their example sentence. A fixed height would let
 // getItemLayout jump straight to any row, but examples run to 114 characters
@@ -16,7 +20,10 @@ const ESTIMATED_ROW = 116; // only a starting guess for a jump into unmeasured r
 const RATES = [0.75, 1, 1.25];
 
 export function AllWordsScreen() {
+  const styles = useStyles(makeStyles);
+  const theme = useTheme();
   const [query, setQuery] = useState('');
+  const [letter, setLetter] = useState<string | null>(null);
   const [playing, setPlaying] = useState(false);
   const [current, setCurrent] = useState(0);
   const [rate, setRate] = useState(1);
@@ -29,23 +36,37 @@ export function AllWordsScreen() {
   const dataRef = useRef<WordEntry[]>(words);
 
   const [excluded, setExcluded] = useState<Set<string>>(new Set());
+  const [settings, setSettings] = useState<AppSettings>(defaultSettings);
+  // The word waiting on an answer from the confirm sheet.
+  const [pending, setPending] = useState<string | null>(null);
 
   // Reloaded on focus so a word restored from the recycle bin reappears here.
   useFocusEffect(
     useCallback(() => {
       getExcludedWords().then((list) => setExcluded(new Set(list)));
+      getSettings().then(setSettings);
     }, [])
   );
 
-  const filtered = useMemo(() => {
+  // Everything the search and the recycle bin leave behind. The letter rail
+  // narrows this further, but it is what decides which letters exist at all.
+  const base = useMemo(() => {
     const q = query.trim().toLowerCase();
     const kept = excluded.size ? words.filter((w) => !excluded.has(w.word)) : words;
     if (!q) return kept;
     return kept.filter((w) => w.word.toLowerCase().includes(q) || w.meaning.includes(q));
   }, [query, excluded]);
+
+  // Picking a letter shows that letter, rather than scrolling to it. Scrolling
+  // 3192 unmeasured rows to reach W meant the list rendered its way there in
+  // front of you; showing only W is instant and cannot land in the wrong place.
+  const filtered = useMemo(
+    () => (letter ? base.filter((w) => w.word[0]?.toUpperCase() === letter) : base),
+    [base, letter]
+  );
   dataRef.current = filtered;
 
-  const starts = useMemo(() => letterStarts(filtered, (w) => w.word), [filtered]);
+  const starts = useMemo(() => letterStarts(base, (w) => w.word), [base]);
 
   const stop = useCallback(() => {
     playingRef.current = false;
@@ -56,8 +77,16 @@ export function AllWordsScreen() {
   // Leaving the screen must silence it — expo-speech keeps reading otherwise.
   useFocusEffect(useCallback(() => stop, [stop]));
 
-  const scrollTo = useCallback((at: number) => {
-    if (at < dataRef.current.length) listRef.current?.scrollToIndex({ index: at, viewPosition: 0.5 });
+  // Where the last requested jump wanted the row to land, so the retry below
+  // repeats the same jump rather than a centred one.
+  const viewRef = useRef(0.5);
+
+  // Never animated. Animating a jump from A to W scrolls the list through three
+  // thousand rows on screen, which is what made a letter tap take so long.
+  const scrollTo = useCallback((at: number, viewPosition = 0.5) => {
+    if (at >= dataRef.current.length) return;
+    viewRef.current = viewPosition;
+    listRef.current?.scrollToIndex({ index: at, viewPosition, animated: false });
   }, []);
 
   const playAt = useCallback(
@@ -82,6 +111,24 @@ export function AllWordsScreen() {
     [scrollTo, stop]
   );
 
+  // A cross asks first, unless the reader has ticked it off in the sheet.
+  function askRemove(word: string) {
+    if (settings.confirmBeforeBin) setPending(word);
+    else handleRemove(word);
+  }
+
+  async function confirmRemove(dontAskAgain: boolean) {
+    const word = pending;
+    setPending(null);
+    if (!word) return;
+    if (dontAskAgain) {
+      const next = { ...settings, confirmBeforeBin: false };
+      setSettings(next);
+      await saveSettings(next);
+    }
+    await handleRemove(word);
+  }
+
   async function handleRemove(word: string) {
     // Every index the player holds points into the old list, so stop rather
     // than let it carry on reading from a shifted position.
@@ -95,7 +142,16 @@ export function AllWordsScreen() {
     // The index the player is on means nothing once the list underneath changes.
     stop();
     setQuery(text);
+    setLetter(null);
     setCurrent(0);
+  }
+
+  function pickLetter(next: string | null) {
+    if (next === letter) return;
+    stop();
+    setLetter(next);
+    setCurrent(0);
+    listRef.current?.scrollToOffset({ offset: 0, animated: false });
   }
 
   function step(delta: number) {
@@ -125,7 +181,7 @@ export function AllWordsScreen() {
           value={query}
           onChangeText={handleQuery}
           placeholder="搜尋單字或中文意思"
-          placeholderTextColor={colors.muted}
+          placeholderTextColor={theme.colors.muted}
           autoCapitalize="none"
           autoCorrect={false}
           style={styles.search}
@@ -136,6 +192,15 @@ export function AllWordsScreen() {
           </Pressable>
         )}
       </View>
+
+      {letter && (
+        <Pressable style={styles.letterChip} onPress={() => pickLetter(null)}>
+          <Text style={styles.letterChipText}>
+            {letter} 開頭 · {filtered.length} 個字
+          </Text>
+          <Text style={styles.letterChipClear}>✕</Text>
+        </Pressable>
+      )}
 
       <View style={styles.listWrap}>
         <FlatList
@@ -153,13 +218,13 @@ export function AllWordsScreen() {
               offset: (averageItemLength || ESTIMATED_ROW) * index,
               animated: false,
             });
-            setTimeout(() => scrollTo(index), 80);
+            setTimeout(() => scrollTo(index, viewRef.current), 80);
           }}
           renderItem={({ item, index }) => {
             const active = index === current;
             return (
               <Pressable
-                style={({ pressed }) => [styles.row, active && styles.rowActive, pressed && slabPressed]}
+                style={({ pressed }) => [styles.row, active && styles.rowActive, pressed && theme.slabPressed]}
                 onPress={() => playAt(index)}
               >
                 <View style={styles.rowTop}>
@@ -167,20 +232,21 @@ export function AllWordsScreen() {
                     {item.word}
                   </Text>
                   <Text style={styles.pos}>{item.pos}</Text>
-                  {active && playing && <Text style={styles.marker}>▶ 播放中</Text>}
+                  {active && playing && <Text style={styles.marker}>播放中</Text>}
                 </View>
                 <Text style={styles.meaning} numberOfLines={1}>
                   {item.meaning}
                 </Text>
                 <Text style={styles.example}>{item.example}</Text>
+                {item.exampleZh && <Text style={styles.exampleZh}>{item.exampleZh}</Text>}
                 {/* Nested inside the row on purpose: the touch responder hands
                     the press to the innermost button, so binning a word never
                     starts it playing. */}
                 <Pressable
                   style={({ pressed }) => [styles.remove, pressed && styles.removePressed]}
-                  onPress={() => handleRemove(item.word)}
+                  onPress={() => askRemove(item.word)}
                   hitSlop={10}
-                  accessibilityLabel={`把 ${item.word} 丟進回收桶`}
+                  accessibilityLabel={`把 ${item.word} 移到已熟悉字庫`}
                 >
                   <Text style={styles.removeText}>✕</Text>
                 </Pressable>
@@ -188,7 +254,7 @@ export function AllWordsScreen() {
             );
           }}
         />
-        <AlphabetIndex starts={starts} onJump={scrollTo} />
+        <AlphabetIndex starts={starts} selected={letter} onPick={pickLetter} />
       </View>
 
       <View style={styles.player}>
@@ -209,18 +275,27 @@ export function AllWordsScreen() {
           {/* Balances the rate pill so the transport stays optically centred. */}
           <View style={styles.ratePlaceholder} />
           <View style={styles.transport}>
-            <Pressable style={styles.stepBtn} onPress={() => step(-1)} hitSlop={8}>
-              <Text style={styles.stepText}>⏮</Text>
+            <Pressable style={styles.stepBtn} onPress={() => step(-1)} hitSlop={8} accessibilityLabel="上一個字">
+              <Text style={styles.stepText}>‹</Text>
             </Pressable>
             <Pressable
-              style={({ pressed }) => [styles.playBtn, pressed && slabPressed]}
+              style={({ pressed }) => [styles.playBtn, pressed && theme.slabPressed]}
               onPress={() => (playing ? stop() : playAt(current))}
               hitSlop={8}
             >
-              <Text style={styles.playText}>{playing ? '⏸' : '▶'}</Text>
+              {/* Drawn, not typed: a play glyph renders as a colour emoji on
+                  some platforms and as a bare triangle on others. */}
+              {playing ? (
+                <View style={styles.pauseIcon}>
+                  <View style={styles.pauseBar} />
+                  <View style={styles.pauseBar} />
+                </View>
+              ) : (
+                <View style={styles.playIcon} />
+              )}
             </Pressable>
-            <Pressable style={styles.stepBtn} onPress={() => step(1)} hitSlop={8}>
-              <Text style={styles.stepText}>⏭</Text>
+            <Pressable style={styles.stepBtn} onPress={() => step(1)} hitSlop={8} accessibilityLabel="下一個字">
+              <Text style={styles.stepText}>›</Text>
             </Pressable>
           </View>
           <Pressable style={styles.rateBtn} onPress={cycleRate}>
@@ -228,61 +303,93 @@ export function AllWordsScreen() {
           </Pressable>
         </View>
       </View>
+
+      {pending && (
+        <ConfirmBin
+          message="確定要刪除這個單字，移到已熟悉的單字表中嗎？"
+          note={`「${pending}」會收進設定頁的「已熟悉字庫」，隨時可以放回來。`}
+          onCancel={() => setPending(null)}
+          onConfirm={confirmRemove}
+        />
+      )}
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: { ...centered, flex: 1, backgroundColor: colors.page, padding: 16, gap: 12 },
+const makeStyles = (t: Theme) => StyleSheet.create({
+  container: { ...centered, flex: 1, padding: 16, gap: 12 },
   searchBar: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 10,
-    backgroundColor: colors.surface,
+    backgroundColor: t.glass.solid,
     borderRadius: 20,
     borderWidth: 1,
-    borderColor: colors.line,
+    borderColor: t.glass.edge,
     paddingVertical: 12,
     paddingHorizontal: 16,
   },
   searchIcon: { fontSize: 15 },
-  search: { flex: 1, color: colors.ink, fontSize: 16, fontWeight: '700' },
-  clear: { color: colors.muted, fontSize: 15, fontWeight: '900' },
+  search: { flex: 1, color: t.colors.ink, fontSize: 16, fontWeight: '700' },
+  clear: { color: t.colors.muted, fontSize: 15, fontWeight: '900' },
+  letterChip: {
+    alignSelf: 'flex-start',
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    backgroundColor: t.colors.blue,
+    borderRadius: 999,
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+  },
+  letterChipText: { color: t.colors.blueInk, fontWeight: '900', fontSize: 13 },
+  letterChipClear: { color: t.colors.blueInk, fontWeight: '900', fontSize: 13 },
   listWrap: { flex: 1, flexDirection: 'row', gap: 4 },
   listContent: { paddingBottom: 4 },
   row: {
     marginBottom: ROW_GAP,
     paddingVertical: 12,
     justifyContent: 'center',
-    backgroundColor: colors.surface,
+    backgroundColor: t.glass.solid,
     borderRadius: 20,
     borderWidth: 1,
-    borderColor: colors.line,
-    ...slab(slabEdge.line),
+    borderColor: t.glass.edge,
+    ...t.slab(t.slabEdge.line),
     paddingHorizontal: 16,
   },
-  rowActive: { backgroundColor: colors.blue, borderColor: slabEdge.blue, borderBottomColor: slabEdge.blue },
+  // Selected is an outline, not a fill. A saturated block swallowed the row it
+  // was meant to point at; a coloured rim plus a bar down the left edge marks
+  // the same row and still lets the word be the loudest thing in it. The bar
+  // eats exactly the padding it adds, so nothing shifts when a row lights up.
+  rowActive: {
+    backgroundColor: t.colors.surface,
+    borderColor: t.slabEdge.blue,
+    borderBottomColor: t.slabEdge.blue,
+    borderLeftWidth: 5,
+    borderLeftColor: t.slabEdge.blue,
+    paddingLeft: 12,
+  },
   // Clears the corner button, so a long word never runs underneath it.
   rowTop: { flexDirection: 'row', alignItems: 'center', gap: 8, paddingRight: 26 },
   // Red is what this palette already uses for "remove", and a filled circle
   // reads as a button at a glance — the swipe it replaces was invisible.
+  // Just the cross, no disc behind it: a pink pill in every row's corner was
+  // reading as a badge rather than as something to press.
   remove: {
     position: 'absolute',
-    top: 8,
-    right: 8,
-    width: 26,
-    height: 26,
-    borderRadius: 13,
-    backgroundColor: colors.red,
+    top: 6,
+    right: 6,
+    width: 28,
+    height: 28,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  removePressed: { backgroundColor: slabEdge.red },
-  removeText: { color: colors.redInk, fontSize: 13, fontWeight: '900' },
-  word: { color: colors.ink, fontSize: 18, fontWeight: '900' },
+  removePressed: { opacity: 0.5 },
+  removeText: { color: t.colors.redInk, fontSize: 17, fontWeight: '900' },
+  word: { color: t.colors.ink, fontSize: 18, fontWeight: '900' },
   pos: {
-    color: colors.blueInk,
-    backgroundColor: colors.blue,
+    color: t.colors.blueInk,
+    backgroundColor: t.colors.blue,
     fontSize: 11,
     fontWeight: '900',
     borderRadius: 9,
@@ -290,43 +397,59 @@ const styles = StyleSheet.create({
     paddingVertical: 3,
     overflow: 'hidden',
   },
-  marker: { color: colors.blueInk, fontSize: 11, fontWeight: '900' },
-  meaning: { color: colors.muted, fontSize: 14, fontWeight: '700', marginTop: 5 },
-  example: { color: colors.ink, fontSize: 12.5, lineHeight: 18, fontStyle: 'italic', marginTop: 6 },
+  marker: { color: t.colors.blueInk, fontSize: 11, fontWeight: '900' },
+  meaning: { color: t.colors.muted, fontSize: 14, fontWeight: '700', marginTop: 5 },
+  example: { color: t.colors.ink, fontSize: 12.5, lineHeight: 18, fontStyle: 'italic', marginTop: 6 },
+  // Upright and quieter than the English above it, so the pair reads as a
+  // sentence and its translation rather than as two sentences.
+  exampleZh: { color: t.colors.muted, fontSize: 12, lineHeight: 18, marginTop: 3 },
   player: {
-    backgroundColor: colors.surface,
+    backgroundColor: t.glass.solid,
     borderRadius: 26,
     borderWidth: 1,
-    borderColor: colors.line,
+    borderColor: t.glass.edge,
     paddingVertical: 14,
     paddingHorizontal: 18,
     gap: 4,
   },
   nowRow: { flexDirection: 'row', alignItems: 'baseline', justifyContent: 'space-between', gap: 10 },
-  nowWord: { flex: 1, color: colors.ink, fontSize: 19, fontWeight: '900' },
-  nowCount: { color: colors.muted, fontSize: 13, fontWeight: '900' },
-  nowMeaning: { color: colors.muted, fontSize: 13, fontWeight: '700' },
+  nowWord: { flex: 1, color: t.colors.ink, fontSize: 19, fontWeight: '900' },
+  nowCount: { color: t.colors.muted, fontSize: 13, fontWeight: '900' },
+  nowMeaning: { color: t.colors.muted, fontSize: 13, fontWeight: '700' },
   controls: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: 8 },
   transport: { flexDirection: 'row', alignItems: 'center', gap: 22 },
   ratePlaceholder: { width: 58 },
-  stepBtn: { paddingHorizontal: 4 },
-  stepText: { color: colors.ink, fontSize: 22 },
+  stepBtn: { width: 40, height: 40, borderRadius: 20, alignItems: 'center', justifyContent: 'center' },
+  stepText: { color: t.colors.blueInk, fontSize: 30, lineHeight: 34, fontWeight: '400' },
   playBtn: {
-    ...slab(slabEdge.blue),
+    ...t.slab(t.slabEdge.blue),
     width: 54,
     height: 54,
     borderRadius: 27,
-    backgroundColor: colors.blue,
+    backgroundColor: t.colors.blue,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  playText: { color: colors.blueInk, fontSize: 22 },
+  // A triangle built from borders, so it is the same shape on every device.
+  playIcon: {
+    width: 0,
+    height: 0,
+    borderTopWidth: 10,
+    borderBottomWidth: 10,
+    borderLeftWidth: 17,
+    borderTopColor: 'transparent',
+    borderBottomColor: 'transparent',
+    borderLeftColor: t.colors.blueInk,
+    marginLeft: 5, // a triangle looks off-centre when its box is centred
+  },
+  pauseIcon: { flexDirection: 'row', gap: 5 },
+  pauseBar: { width: 5, height: 18, borderRadius: 3, backgroundColor: t.colors.blueInk },
   rateBtn: {
     width: 58,
     alignItems: 'center',
-    backgroundColor: colors.blue,
+    backgroundColor: t.colors.blue,
     borderRadius: 14,
     paddingVertical: 8,
   },
-  rateText: { color: colors.blueInk, fontWeight: '900', fontSize: 13 },
+  rateText: { color: t.colors.blueInk, fontWeight: '900', fontSize: 13 },
 });

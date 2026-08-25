@@ -3,9 +3,14 @@ import { View, Text, Pressable, FlatList, TextInput, StyleSheet } from 'react-na
 import { useFocusEffect } from '@react-navigation/native';
 import { getNotes, saveNote, deleteNote, StudyNote } from '../lib/storage';
 import { Mascot } from '../components/Mascot';
-import { colors, centered, slab, slabEdge, slabPressed } from '../theme';
+import { GlassFill } from '../components/Glass';
+import { centered } from '../theme';
+import type { Theme } from '../theme';
+import { useStyles, useTheme } from '../lib/useTheme';
 
 export function NotesScreen() {
+  const styles = useStyles(makeStyles);
+  const theme = useTheme();
   const [notes, setNotes] = useState<StudyNote[]>([]);
   const [openId, setOpenId] = useState<string | null>(null);
   const [draft, setDraft] = useState('');
@@ -49,6 +54,7 @@ export function NotesScreen() {
       <Text style={styles.title}>筆記庫</Text>
       {notes.length === 0 ? (
         <View style={styles.emptyCard}>
+          <GlassFill />
           <Mascot size={112} message="這裡還空空的" />
           <Text style={styles.emptyTitle}>還沒有筆記</Text>
           <Text style={styles.empty}>練習時在右邊的筆記區寫字，按「存到筆記庫」就會出現在這裡</Text>
@@ -79,10 +85,10 @@ export function NotesScreen() {
                       style={styles.input}
                     />
                     <View style={styles.actions}>
-                      <Pressable style={({ pressed }) => [styles.saveBtn, pressed && slabPressed]} onPress={() => handleSave(item)}>
+                      <Pressable style={({ pressed }) => [styles.saveBtn, pressed && theme.slabPressed]} onPress={() => handleSave(item)}>
                         <Text style={styles.saveText}>儲存</Text>
                       </Pressable>
-                      <Pressable style={({ pressed }) => [styles.deleteBtn, pressed && slabPressed]} onPress={() => handleDelete(item.id)}>
+                      <Pressable style={({ pressed }) => [styles.deleteBtn, pressed && theme.slabPressed]} onPress={() => handleDelete(item.id)}>
                         <Text style={styles.deleteText}>刪除</Text>
                       </Pressable>
                     </View>
@@ -101,62 +107,57 @@ export function NotesScreen() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: { ...centered, flex: 1, backgroundColor: colors.page, padding: 20 },
-  eyebrow: { color: colors.blueInk, fontSize: 14, fontWeight: '900' },
-  title: { color: colors.ink, fontSize: 32, fontWeight: '900', marginTop: 4, marginBottom: 16 },
-  emptyCard: {
-    backgroundColor: colors.surface,
-    borderRadius: 24,
-    padding: 24,
-    borderWidth: 1,
-    borderColor: colors.line,
-    alignItems: 'center',
-  },
-  emptyTitle: { color: colors.ink, fontSize: 20, fontWeight: '900', textAlign: 'center', marginTop: 10 },
-  empty: { color: colors.muted, marginTop: 8, textAlign: 'center', fontWeight: '700', lineHeight: 22 },
+const makeStyles = (t: Theme) => StyleSheet.create({
+  container: { ...centered, flex: 1, padding: 20 },
+  eyebrow: { color: t.colors.blueInk, fontSize: 14, fontWeight: '900' },
+  title: { color: t.colors.ink, fontSize: 32, fontWeight: '900', marginTop: 4, marginBottom: 16 },
+  emptyCard: { ...t.pane(24), ...t.glassShadow, padding: 24, alignItems: 'center' },
+  emptyTitle: { color: t.colors.ink, fontSize: 20, fontWeight: '900', textAlign: 'center', marginTop: 10 },
+  empty: { color: t.colors.muted, marginTop: 8, textAlign: 'center', fontWeight: '700', lineHeight: 22 },
   list: { gap: 10, paddingBottom: 24 },
-  row: { backgroundColor: colors.surface, padding: 16, borderRadius: 22, borderWidth: 1, borderColor: colors.line },
+  // A list row keeps a plain translucent fill: one BlurView per row is a real
+  // cost on a long list, and the wash behind it already reads as t.glass.
+  row: { backgroundColor: t.glass.solid, padding: 16, borderRadius: 22, borderWidth: 1, borderColor: t.glass.edge },
   rowHead: { flexDirection: 'row', alignItems: 'center', gap: 10 },
-  date: { color: colors.ink, fontSize: 17, fontWeight: '900' },
+  date: { color: t.colors.ink, fontSize: 17, fontWeight: '900' },
   mode: {
-    color: colors.blueInk,
-    backgroundColor: colors.blue,
+    color: t.colors.blueInk,
+    backgroundColor: t.colors.blue,
     fontSize: 12,
     fontWeight: '900',
     borderRadius: 10,
     paddingHorizontal: 8,
     paddingVertical: 3,
   },
-  meta: { color: colors.muted, fontWeight: '700', fontSize: 13, marginTop: 5 },
-  preview: { color: colors.ink, marginTop: 8, lineHeight: 21, fontWeight: '600' },
+  meta: { color: t.colors.muted, fontWeight: '700', fontSize: 13, marginTop: 5 },
+  preview: { color: t.colors.ink, marginTop: 8, lineHeight: 21, fontWeight: '600' },
   input: {
     marginTop: 10,
-    backgroundColor: colors.inset,
+    backgroundColor: t.glass.solid,
     borderRadius: 16,
     padding: 12,
     minHeight: 120,
-    color: colors.ink,
+    color: t.colors.ink,
     fontSize: 15,
     lineHeight: 22,
     fontWeight: '600',
   },
   actions: { flexDirection: 'row', gap: 10, marginTop: 10 },
   saveBtn: {
-    ...slab(slabEdge.blue),
+    ...t.slab(t.slabEdge.blue),
     flex: 1,
-    backgroundColor: colors.blue,
+    backgroundColor: t.colors.blue,
     borderRadius: 16,
     paddingVertical: 12,
     alignItems: 'center',
   },
-  saveText: { color: colors.blueInk, fontWeight: '900' },
+  saveText: { color: t.colors.blueInk, fontWeight: '900' },
   deleteBtn: {
-    ...slab(slabEdge.line),
-    backgroundColor: colors.red,
+    ...t.slab(t.slabEdge.line),
+    backgroundColor: t.colors.red,
     borderRadius: 16,
     paddingVertical: 12,
     paddingHorizontal: 20,
   },
-  deleteText: { color: colors.redInk, fontWeight: '900' },
+  deleteText: { color: t.colors.redInk, fontWeight: '900' },
 });

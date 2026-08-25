@@ -6,7 +6,9 @@ import * as ImagePicker from 'expo-image-picker';
 import type { RootStackParamList } from '../navigation/RootNavigator';
 import { AppSettings, defaultSettings, formatGoal, getSettings, saveSettings } from '../lib/storage';
 import { autoVoice, listEnglishVoices, setPreferredVoice, speakWord } from '../lib/speech';
-import { colors, centered } from '../theme';
+import { centered } from '../theme';
+import type { Theme } from '../theme';
+import { useStyles, useTheme } from '../lib/useTheme';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Settings'>;
 type PasswordDraft = { current: string; next: string; confirm: string };
@@ -14,6 +16,7 @@ type PasswordDraft = { current: string; next: string; confirm: string };
 const pencilIcon = require('../../assets/pencil-icon.png');
 
 export function SettingsScreen({ navigation }: Props) {
+  const styles = useStyles(makeStyles);
   const [saved, setSaved] = useState<AppSettings>(defaultSettings);
   const [draft, setDraft] = useState<AppSettings>(defaultSettings);
   const [passwordDraft, setPasswordDraft] = useState<PasswordDraft>({ current: '', next: '', confirm: '' });
@@ -213,12 +216,6 @@ export function SettingsScreen({ navigation }: Props) {
 
         <Section title="練習">
           <SettingSwitch
-            title="答題後自動顯示詳細解釋"
-            meta="答完就展開範例句、中文翻譯與字根。"
-            value={draft.autoShowDetails}
-            onValueChange={(value) => updateDraft({ ...draft, autoShowDetails: value })}
-          />
-          <SettingSwitch
             title="答題後顯示其他選項答案"
             meta="選英文時會一起看到其他選項的中文意思。"
             value={draft.autoShowChoiceAnswers}
@@ -228,7 +225,7 @@ export function SettingsScreen({ navigation }: Props) {
 
         <Section title="發音">
           <Text style={styles.voiceHint}>
-            點一下試聽，選你覺得最像真人的那個。名字有 Enhanced／Premium／Natural 的通常最自然。
+            只留下這台裝置上音質最好的幾個，機械音的都濾掉了。點一下試聽，選你覺得最像真人的那個。
             {voices.length === 0 ? '\n這個瀏覽器沒有回報任何英文語音，改用 Safari 或 Edge 試試。' : ''}
           </Text>
           <VoiceRow
@@ -257,7 +254,7 @@ export function SettingsScreen({ navigation }: Props) {
 
         <Section title="資料">
           <SettingLink title="學習統計" meta="查看盒子分布與已排除字數。" onPress={() => navigation.navigate('Stats')} />
-          <SettingLink title="太簡單的字" meta="管理被移出複習佇列的單字。" onPress={() => navigation.navigate('Excluded')} />
+          <SettingLink title="已熟悉字庫" meta="管理標成太簡單、被移出複習佇列的單字。" onPress={() => navigation.navigate('Excluded')} />
         </Section>
 
         <Section title="關於">
@@ -314,7 +311,6 @@ function describeChanges(saved: AppSettings, draft: AppSettings, passwordDraft: 
   if (passwordDraft.current || passwordDraft.next || passwordDraft.confirm) changes.push('帳號密碼將更新');
   if (saved.reviewNotifications !== draft.reviewNotifications) changes.push(`複習提醒：${draft.reviewNotifications ? '開啟' : '關閉'}`);
   if (saved.streakNotifications !== draft.streakNotifications) changes.push(`連續學習提醒：${draft.streakNotifications ? '開啟' : '關閉'}`);
-  if (saved.autoShowDetails !== draft.autoShowDetails) changes.push(`自動顯示詳細解釋：${draft.autoShowDetails ? '開啟' : '關閉'}`);
   if (saved.autoShowChoiceAnswers !== draft.autoShowChoiceAnswers) changes.push(`顯示其他選項答案：${draft.autoShowChoiceAnswers ? '開啟' : '關閉'}`);
   if (saved.voiceId !== draft.voiceId) changes.push('發音語音已更換');
   return changes;
@@ -337,6 +333,8 @@ function AccountEditor({
   onChange: (settings: AppSettings) => void;
   onPasswordChange: (draft: PasswordDraft) => void;
 }) {
+  const styles = useStyles(makeStyles);
+  const theme = useTheme();
   return (
     <Modal visible={visible} animationType="slide" presentationStyle="pageSheet" onRequestClose={onClose}>
       <ScrollView style={styles.modalContainer} contentContainerStyle={styles.modalContent}>
@@ -363,7 +361,7 @@ function AccountEditor({
             maxLength={24}
             style={styles.input}
             placeholder="輸入顯示名稱"
-            placeholderTextColor={colors.muted}
+            placeholderTextColor={theme.colors.muted}
           />
         </Field>
 
@@ -375,7 +373,7 @@ function AccountEditor({
             autoCapitalize="none"
             style={styles.input}
             placeholder="name@example.com"
-            placeholderTextColor={colors.muted}
+            placeholderTextColor={theme.colors.muted}
           />
         </Field>
 
@@ -386,7 +384,7 @@ function AccountEditor({
             secureTextEntry
             style={styles.input}
             placeholder="目前密碼"
-            placeholderTextColor={colors.muted}
+            placeholderTextColor={theme.colors.muted}
           />
           <TextInput
             value={passwordDraft.next}
@@ -394,7 +392,7 @@ function AccountEditor({
             secureTextEntry
             style={styles.input}
             placeholder="新密碼"
-            placeholderTextColor={colors.muted}
+            placeholderTextColor={theme.colors.muted}
           />
           <TextInput
             value={passwordDraft.confirm}
@@ -402,7 +400,7 @@ function AccountEditor({
             secureTextEntry
             style={styles.input}
             placeholder="再次輸入新密碼"
-            placeholderTextColor={colors.muted}
+            placeholderTextColor={theme.colors.muted}
           />
         </Field>
 
@@ -426,6 +424,7 @@ function AccountEditor({
 }
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
+  const styles = useStyles(makeStyles);
   return (
     <View style={styles.field}>
       <Text style={styles.fieldLabel}>{label}</Text>
@@ -435,6 +434,7 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
 }
 
 function NumberInput({ value, onChange, wide = false }: { value: number; onChange: (value: number) => void; wide?: boolean }) {
+  const styles = useStyles(makeStyles);
   return (
     <TextInput
       value={String(value)}
@@ -447,6 +447,7 @@ function NumberInput({ value, onChange, wide = false }: { value: number; onChang
 }
 
 function UnitToggle({ value, onChange }: { value: AppSettings['goalUnit']; onChange: (value: AppSettings['goalUnit']) => void }) {
+  const styles = useStyles(makeStyles);
   return (
     <View style={styles.unitToggle}>
       {(['week', 'day'] as const).map((unit) => (
@@ -468,6 +469,7 @@ type SectionProps = {
 };
 
 function Section({ title, children }: SectionProps) {
+  const styles = useStyles(makeStyles);
   return (
     <View>
       <Text style={styles.sectionTitle}>{title}</Text>
@@ -479,6 +481,7 @@ function Section({ title, children }: SectionProps) {
 type VoiceRowProps = { name: string; meta?: string; selected: boolean; onPress: () => void };
 
 function VoiceRow({ name, meta, selected, onPress }: VoiceRowProps) {
+  const styles = useStyles(makeStyles);
   return (
     <Pressable style={styles.row} onPress={onPress}>
       <View style={styles.rowText}>
@@ -498,6 +501,8 @@ type SwitchProps = {
 };
 
 function SettingSwitch({ title, meta, value, onValueChange }: SwitchProps) {
+  const styles = useStyles(makeStyles);
+  const theme = useTheme();
   return (
     <View style={styles.row}>
       <View style={styles.rowText}>
@@ -507,8 +512,13 @@ function SettingSwitch({ title, meta, value, onValueChange }: SwitchProps) {
       <Switch
         value={value}
         onValueChange={onValueChange}
-        trackColor={{ false: colors.line, true: colors.green }}
-        thumbColor={value ? colors.green : colors.surface}
+        // On was a green thumb on a green track: one green lozenge, and no way
+        // to read which end the knob was at. Every pastel in this palette
+        // carries its own ink, so the knob borrows it — a dark green dot on
+        // pale green says "on" by shape as well as by colour.
+        trackColor={{ false: theme.colors.line, true: theme.colors.green }}
+        thumbColor={value ? theme.colors.greenInk : theme.colors.surface}
+        ios_backgroundColor={theme.slabEdge.line}
       />
     </View>
   );
@@ -521,6 +531,7 @@ type LinkProps = {
 };
 
 function SettingLink({ title, meta, onPress }: LinkProps) {
+  const styles = useStyles(makeStyles);
   return (
     <Pressable style={styles.row} onPress={onPress}>
       <View style={styles.rowText}>
@@ -532,15 +543,15 @@ function SettingLink({ title, meta, onPress }: LinkProps) {
   );
 }
 
-const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: colors.page },
+const makeStyles = (t: Theme) => StyleSheet.create({
+  container: { flex: 1 },
   content: { ...centered, padding: 20, paddingBottom: 40, gap: 16 },
-  eyebrow: { color: colors.blueInk, fontSize: 14, fontWeight: '900' },
+  eyebrow: { color: t.colors.blueInk, fontSize: 14, fontWeight: '900' },
   accountCard: {
-    backgroundColor: colors.surface,
+    backgroundColor: t.glass.solid,
     borderRadius: 24,
     borderWidth: 1,
-    borderColor: colors.line,
+    borderColor: t.glass.edge,
     padding: 18,
     flexDirection: 'row',
     alignItems: 'center',
@@ -549,39 +560,39 @@ const styles = StyleSheet.create({
     width: 54,
     height: 54,
     borderRadius: 27,
-    backgroundColor: colors.tint,
+    backgroundColor: t.colors.tint,
     alignItems: 'center',
     justifyContent: 'center',
     marginRight: 14,
   },
-  avatarText: { color: colors.blueInk, fontSize: 26, fontWeight: '900' },
+  avatarText: { color: t.colors.blueInk, fontSize: 26, fontWeight: '900' },
   avatarImage: { width: 54, height: 54, borderRadius: 27 },
   accountText: { flex: 1 },
-  accountName: { color: colors.ink, fontSize: 18, fontWeight: '900' },
-  accountMeta: { color: colors.muted, fontSize: 13, fontWeight: '700', marginTop: 4 },
+  accountName: { color: t.colors.ink, fontSize: 18, fontWeight: '900' },
+  accountMeta: { color: t.colors.muted, fontSize: 13, fontWeight: '700', marginTop: 4 },
   iconButton: {
     width: 42,
     height: 42,
     borderRadius: 21,
-    backgroundColor: colors.inset,
+    backgroundColor: t.colors.inset,
     alignItems: 'center',
     justifyContent: 'center',
   },
   pencilIcon: { width: 23, height: 23, resizeMode: 'contain' },
-  voiceHint: { color: colors.muted, fontSize: 13, fontWeight: '700', lineHeight: 19, padding: 18, paddingBottom: 4 },
-  voiceCheck: { color: colors.greenInk, fontSize: 18, fontWeight: '900' },
-  voicePlay: { color: colors.blueInk, fontSize: 14, fontWeight: '900' },
-  sectionTitle: { color: colors.muted, fontSize: 13, fontWeight: '900', marginBottom: 8, marginLeft: 4 },
-  panel: { backgroundColor: colors.surface, borderRadius: 24, borderWidth: 1, borderColor: colors.line, overflow: 'hidden' },
+  voiceHint: { color: t.colors.muted, fontSize: 13, fontWeight: '700', lineHeight: 19, padding: 18, paddingBottom: 4 },
+  voiceCheck: { color: t.colors.greenInk, fontSize: 18, fontWeight: '900' },
+  voicePlay: { color: t.colors.blueInk, fontSize: 14, fontWeight: '900' },
+  sectionTitle: { color: t.colors.muted, fontSize: 13, fontWeight: '900', marginBottom: 8, marginLeft: 4 },
+  panel: { backgroundColor: t.glass.solid, borderRadius: 24, borderWidth: 1, borderColor: t.glass.edge, overflow: 'hidden' },
   goalBox: { padding: 18, gap: 14 },
   goalSentence: { flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', gap: 6 },
-  goalWord: { color: colors.ink, fontSize: 18, fontWeight: '900' },
+  goalWord: { color: t.colors.ink, fontSize: 18, fontWeight: '900' },
   inlineNumber: {
     minWidth: 46,
     height: 36,
     borderRadius: 14,
-    backgroundColor: colors.inset,
-    color: colors.ink,
+    backgroundColor: t.colors.inset,
+    color: t.colors.ink,
     fontSize: 18,
     fontWeight: '900',
     textAlign: 'center',
@@ -592,18 +603,18 @@ const styles = StyleSheet.create({
   unitToggle: {
     height: 36,
     borderRadius: 14,
-    backgroundColor: colors.inset,
+    backgroundColor: t.colors.inset,
     flexDirection: 'row',
     alignSelf: 'flex-start',
     marginHorizontal: 4,
     padding: 3,
   },
   unitPill: { minWidth: 38, borderRadius: 11, alignItems: 'center', justifyContent: 'center' },
-  unitPillActive: { backgroundColor: colors.blue },
-  unitText: { color: colors.muted, fontWeight: '900' },
-  unitTextActive: { color: colors.blueInk },
-  goalPreview: { backgroundColor: colors.blue, borderRadius: 18, paddingHorizontal: 14, paddingVertical: 12 },
-  goalPreviewText: { color: colors.blueInk, fontSize: 15, fontWeight: '900' },
+  unitPillActive: { backgroundColor: t.colors.blue },
+  unitText: { color: t.colors.muted, fontWeight: '900' },
+  unitTextActive: { color: t.colors.blueInk },
+  goalPreview: { backgroundColor: t.colors.blue, borderRadius: 18, paddingHorizontal: 14, paddingVertical: 12 },
+  goalPreviewText: { color: t.colors.blueInk, fontSize: 15, fontWeight: '900' },
   row: {
     minHeight: 84,
     paddingHorizontal: 18,
@@ -612,41 +623,41 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     borderBottomWidth: 1,
-    borderBottomColor: colors.line,
+    borderBottomColor: t.glass.edge,
   },
   rowText: { flex: 1, paddingRight: 16 },
-  rowTitle: { color: colors.ink, fontSize: 16, fontWeight: '900' },
-  rowMeta: { color: colors.muted, fontSize: 13, lineHeight: 18, fontWeight: '700', marginTop: 6 },
-  chevron: { color: colors.muted, fontSize: 30, fontWeight: '300' },
-  version: { color: colors.muted, fontSize: 14, fontWeight: '900' },
-  error: { color: colors.redInk, fontWeight: '900', lineHeight: 20 },
-  success: { color: colors.greenInk, fontWeight: '900', lineHeight: 20 },
+  rowTitle: { color: t.colors.ink, fontSize: 16, fontWeight: '900' },
+  rowMeta: { color: t.colors.muted, fontSize: 13, lineHeight: 18, fontWeight: '700', marginTop: 6 },
+  chevron: { color: t.colors.muted, fontSize: 30, fontWeight: '300' },
+  version: { color: t.colors.muted, fontSize: 14, fontWeight: '900' },
+  error: { color: t.colors.redInk, fontWeight: '900', lineHeight: 20 },
+  success: { color: t.colors.greenInk, fontWeight: '900', lineHeight: 20 },
   changesCard: {
-    backgroundColor: colors.surface,
+    backgroundColor: t.glass.solid,
     borderRadius: 24,
     borderWidth: 1,
-    borderColor: colors.line,
+    borderColor: t.glass.edge,
     padding: 18,
     gap: 8,
   },
-  changesTitle: { color: colors.ink, fontSize: 16, fontWeight: '900' },
-  changeItem: { color: colors.muted, fontSize: 13, fontWeight: '700', lineHeight: 19 },
+  changesTitle: { color: t.colors.ink, fontSize: 16, fontWeight: '900' },
+  changeItem: { color: t.colors.muted, fontSize: 13, fontWeight: '700', lineHeight: 19 },
   actions: { flexDirection: 'row', gap: 10, marginTop: 8 },
-  cancelButton: { flex: 1, backgroundColor: colors.red, borderRadius: 18, paddingVertical: 13, alignItems: 'center' },
-  cancelText: { color: colors.redInk, fontWeight: '900' },
-  saveButton: { flex: 1, backgroundColor: colors.blue, borderRadius: 18, paddingVertical: 13, alignItems: 'center' },
-  saveText: { color: colors.blueInk, fontWeight: '900' },
-  modalContainer: { flex: 1, backgroundColor: colors.page },
+  cancelButton: { flex: 1, backgroundColor: t.colors.red, borderRadius: 18, paddingVertical: 13, alignItems: 'center' },
+  cancelText: { color: t.colors.redInk, fontWeight: '900' },
+  saveButton: { flex: 1, backgroundColor: t.colors.blue, borderRadius: 18, paddingVertical: 13, alignItems: 'center' },
+  saveText: { color: t.colors.blueInk, fontWeight: '900' },
+  modalContainer: { flex: 1, backgroundColor: t.colors.page },
   modalContent: { padding: 20, paddingBottom: 40, gap: 16 },
   modalHeader: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
-  modalTitle: { color: colors.ink, fontSize: 22, fontWeight: '900' },
-  doneButton: { backgroundColor: colors.blue, borderRadius: 18, paddingHorizontal: 16, paddingVertical: 10 },
-  doneText: { color: colors.blueInk, fontWeight: '900' },
+  modalTitle: { color: t.colors.ink, fontSize: 22, fontWeight: '900' },
+  doneButton: { backgroundColor: t.colors.blue, borderRadius: 18, paddingHorizontal: 16, paddingVertical: 10 },
+  doneText: { color: t.colors.blueInk, fontWeight: '900' },
   avatarEditor: {
-    backgroundColor: colors.surface,
+    backgroundColor: t.glass.solid,
     borderRadius: 24,
     borderWidth: 1,
-    borderColor: colors.line,
+    borderColor: t.glass.edge,
     padding: 20,
     alignItems: 'center',
     gap: 10,
@@ -656,45 +667,45 @@ const styles = StyleSheet.create({
     width: 96,
     height: 96,
     borderRadius: 48,
-    backgroundColor: colors.tint,
-    color: colors.blueInk,
+    backgroundColor: t.colors.tint,
+    color: t.colors.blueInk,
     fontSize: 42,
     fontWeight: '900',
     textAlign: 'center',
     lineHeight: 96,
   },
-  avatarEditorMeta: { color: colors.blueInk, fontSize: 14, fontWeight: '900' },
+  avatarEditorMeta: { color: t.colors.blueInk, fontSize: 14, fontWeight: '900' },
   field: {
-    backgroundColor: colors.surface,
+    backgroundColor: t.glass.solid,
     borderRadius: 24,
     borderWidth: 1,
-    borderColor: colors.line,
+    borderColor: t.glass.edge,
     padding: 16,
     gap: 10,
   },
-  fieldLabel: { color: colors.muted, fontSize: 13, fontWeight: '900' },
+  fieldLabel: { color: t.colors.muted, fontSize: 13, fontWeight: '900' },
   input: {
     minHeight: 48,
-    backgroundColor: colors.inset,
+    backgroundColor: t.colors.inset,
     borderRadius: 16,
-    color: colors.ink,
+    color: t.colors.ink,
     fontSize: 16,
     fontWeight: '800',
     paddingHorizontal: 14,
   },
   googleCard: {
     minHeight: 84,
-    backgroundColor: colors.surface,
+    backgroundColor: t.glass.solid,
     borderRadius: 24,
     borderWidth: 1,
-    borderColor: colors.line,
+    borderColor: t.glass.edge,
     paddingHorizontal: 18,
     paddingVertical: 16,
     flexDirection: 'row',
     alignItems: 'center',
   },
-  googleButton: { backgroundColor: colors.blue, borderRadius: 18, paddingHorizontal: 16, paddingVertical: 10 },
-  googleButtonActive: { backgroundColor: colors.blue },
-  googleButtonText: { color: colors.blueInk, fontWeight: '900' },
-  googleButtonTextActive: { color: colors.blueInk },
+  googleButton: { backgroundColor: t.colors.blue, borderRadius: 18, paddingHorizontal: 16, paddingVertical: 10 },
+  googleButtonActive: { backgroundColor: t.colors.blue },
+  googleButtonText: { color: t.colors.blueInk, fontWeight: '900' },
+  googleButtonTextActive: { color: t.colors.blueInk },
 });

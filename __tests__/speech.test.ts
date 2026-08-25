@@ -212,3 +212,37 @@ describe('speakSequence', () => {
     expect(onDone).toHaveBeenCalledTimes(1);
   });
 });
+
+describe('curateVoices', () => {
+  const curateVoices = (voices: { identifier: string; name: string; language: string }[]) =>
+    loadSpeech([]).curateVoices(voices);
+  const v = (name: string, language = 'en-US') => ({ identifier: name, name, language });
+
+  it('keeps only the best few readers, not everything the system ships', () => {
+    const picked = curateVoices([
+      v('Zarvox'),
+      v('Samantha'),
+      v('Samantha (Enhanced)'),
+      v('Nicky (Compact)'),
+      v('Alex'),
+      v('Microsoft Aria Online (Natural)'),
+      v('婉婷', 'zh-TW'),
+    ]);
+
+    expect(picked).toHaveLength(3);
+    // Neural first, then the readers worth recommending.
+    expect(picked[0].name).toBe('Microsoft Aria Online (Natural)');
+    // The same reader twice is one row, and it is the better variant that stays.
+    expect(picked.map((p) => p.name)).toContain('Samantha (Enhanced)');
+    expect(picked.map((p) => p.name)).not.toContain('Samantha');
+    // Novelty, compact and non-English are all out.
+    expect(picked.map((p) => p.name)).not.toContain('Zarvox');
+    expect(picked.map((p) => p.name)).not.toContain('Nicky (Compact)');
+    expect(picked.map((p) => p.name)).not.toContain('婉婷');
+  });
+
+  it('still offers something when nothing on the device is recognisable', () => {
+    const picked = curateVoices([v('en-GB-Wavenet-Q'), v('Voice 2'), v('Voice 3'), v('Voice 4')]);
+    expect(picked).toHaveLength(3);
+  });
+});

@@ -39,3 +39,11 @@ test('wrong-only queue ignores due dates but keeps letter filters', () => {
   );
   expect(queue.map((w) => w.word)).toEqual(['rancor']);
 });
+
+test('limit caps the queue, and shuffles before cutting', () => {
+  const capped = buildPracticeQueue(pool, {}, [], '2026-07-19', { limit: 2 });
+  expect(capped.map((w) => w.word)).toEqual(['abate', 'garrulous']);
+
+  const shuffled = buildPracticeQueue(pool, {}, [], '2026-07-19', { order: 'shuffle', limit: 2 }, () => 0);
+  expect(shuffled.map((w) => w.word)).toEqual(['garrulous', 'gregarious']);
+});

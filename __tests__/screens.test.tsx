@@ -29,8 +29,11 @@ import { AllWordsScreen } from '../src/screens/AllWordsScreen';
 import { NotesScreen } from '../src/screens/NotesScreen';
 import { HomeScreen } from '../src/screens/HomeScreen';
 import { PracticeScreen } from '../src/screens/PracticeScreen';
+import { QuizSetupScreen } from '../src/screens/QuizSetupScreen';
+import { WrongWordsScreen } from '../src/screens/WrongWordsScreen';
 import { RelationsScreen } from '../src/screens/RelationsScreen';
-import { concepts } from '../src/data/concepts';
+import { ConceptScreen } from '../src/screens/ConceptScreen';
+import { concepts, bandOf } from '../src/data/concepts';
 import {
   getNotes,
   saveNote,
@@ -39,7 +42,11 @@ import {
   excludeWord,
   getAllProgress,
   getWrongWords,
+  addWrongWord,
+  getLastQuiz,
+  saveLastQuiz,
   incrementHeatmapToday,
+  getSettings,
 } from '../src/lib/storage';
 import { todayStr } from '../src/lib/date';
 import { words } from '../src/data/words';
@@ -103,11 +110,21 @@ async function mount(element: React.ReactElement) {
 
 const entry = (word: string) => words.find((w) => w.word === word)!;
 
+// The confirm sheet's backdrop wraps its buttons and is pressable itself, so
+// matching on text would find the backdrop first. Labels are unique.
+function byLabel(tree: renderer.ReactTestRenderer, label: string): ReactTestInstance {
+  const found = tree.root.findAll(
+    (node) => node.props.accessibilityLabel === label && typeof node.props.onPress === 'function'
+  );
+  if (!found.length) throw new Error(`no pressable labelled "${label}"`);
+  return found[0];
+}
+
 // The row wraps the corner button, so matching on the ✕ glyph would find the
 // row first. The label is on the button and nowhere else.
 function cross(tree: renderer.ReactTestRenderer, word: string): ReactTestInstance {
   const found = tree.root.findAll(
-    (node) => node.props.accessibilityLabel === `把 ${word} 丟進回收桶` && typeof node.props.onPress === 'function'
+    (node) => node.props.accessibilityLabel === `把 ${word} 移到已熟悉字庫` && typeof node.props.onPress === 'function'
   );
   if (!found.length) throw new Error(`no remove button for "${word}"`);
   return found[0];
@@ -148,20 +165,50 @@ describe('AllWordsScreen', () => {
     expect(row).toContain(words[0].example);
   });
 
-  it('bins a word from the cross in its corner', async () => {
+  it('asks before it bins, and bins once confirmed', async () => {
     const tree = await mount(<AllWordsScreen />);
     expect(readable(tree.root)).toContain(words[0].word);
 
     await act(async () => cross(tree, words[0].word).props.onPress());
 
+    // The cross only opens the question; nothing is binned yet.
+    expect(readable(tree.root)).toContain('確定要刪除這個單字，移到已熟悉的單字表中嗎？');
+    expect(await getExcludedWords()).not.toContain(words[0].word);
+
+    await act(async () => byLabel(tree, '確定').props.onPress());
+
     expect(await getExcludedWords()).toContain(words[0].word);
     expect(readable(tree.root)).not.toContain(words[0].word);
+  });
+
+  it('keeps the word when the question is cancelled', async () => {
+    const tree = await mount(<AllWordsScreen />);
+
+    await act(async () => cross(tree, words[0].word).props.onPress());
+    await act(async () => byLabel(tree, '取消').props.onPress());
+
+    expect(await getExcludedWords()).not.toContain(words[0].word);
+    expect(readable(tree.root)).toContain(words[0].word);
+  });
+
+  it('stops asking once "不要再詢問" is ticked', async () => {
+    const tree = await mount(<AllWordsScreen />);
+
+    await act(async () => cross(tree, words[0].word).props.onPress());
+    await act(async () => byLabel(tree, '不要再詢問').props.onPress());
+    await act(async () => byLabel(tree, '確定').props.onPress());
+    expect((await getSettings()).confirmBeforeBin).toBe(false);
+
+    // The next cross bins straight away.
+    await act(async () => cross(tree, words[1].word).props.onPress());
+    expect(await getExcludedWords()).toContain(words[1].word);
   });
 
   it('bins without starting the word playing', async () => {
     const tree = await mount(<AllWordsScreen />);
 
     await act(async () => cross(tree, words[0].word).props.onPress());
+    await act(async () => byLabel(tree, '確定').props.onPress());
 
     expect(mockSpeak).not.toHaveBeenCalled();
   });
@@ -203,6 +250,19 @@ describe('PracticeScreen', () => {
     expect(shown).toContain(words[0].example);
   });
 
+  it('the 太簡單 cross asks first, and says where the word is going', async () => {
+    const tree = await mount(practice());
+
+    await act(async () => byLabel(tree, '這個字太簡單').props.onPress());
+    const shown = readable(tree.root);
+    expect(shown).toContain('確定要刪除，或移到太簡單的字庫中嗎？');
+    expect(shown).toContain('已熟悉字庫');
+    expect(await getExcludedWords()).toHaveLength(0);
+
+    await act(async () => byLabel(tree, '確定').props.onPress());
+    expect(await getExcludedWords()).toHaveLength(1);
+  });
+
   it('the edge arrows move through the queue without scoring anything', async () => {
     const tree = await mount(practice());
     expect(readable(tree.root)).toContain('1 / ');
@@ -236,8 +296,10 @@ describe('PracticeScreen', () => {
     const distractor = tree.root
       .findAll((node) => typeof node.props.onPress === 'function')
       .find((p) => {
-        const text = readable(p).trim();
-        return glosses.has(text) && text !== words[0].meaning;
+        // The lettered key sits in front of the option now, so the gloss is the
+        // tail of the row rather than the whole of it.
+        const gloss = readable(p).trim().replace(/^[A-D\u2713\u2717]\s+/, '');
+        return glosses.has(gloss) && gloss !== words[0].meaning;
       })!;
 
     await act(async () => distractor.props.onPress());
@@ -263,6 +325,23 @@ describe('PracticeScreen', () => {
     expect(await getHeatmap()).toEqual({ [todayStr()]: 1 });
   });
 
+  // The explanation used to live at the very bottom, behind a toggle. It is
+  // what the reader came for, so it now replaces the question the moment an
+  // answer lands.
+  it('replaces the question with the word and its explanation the moment an answer lands', async () => {
+    const tree = await mount(practice());
+    expect(readable(tree.root)).not.toContain(words[0].roots);
+
+    await act(async () => pressableWith(tree, words[0].meaning).props.onPress());
+
+    const shown = readable(tree.root);
+    expect(shown).toContain(words[0].word);
+    expect(shown).toContain(words[0].roots);
+    expect(shown).toContain(words[0].exampleZh!);
+    // No hunting for a "查看詳情" toggle any more.
+    expect(shown).not.toContain('查看詳情');
+  });
+
   it('saves the session note to the notes library', async () => {
     const tree = await mount(practice());
     await act(async () => {
@@ -280,27 +359,60 @@ describe('PracticeScreen', () => {
 
 describe('RelationsScreen', () => {
   const concept = concepts[0];
+  const relations = (navigate = jest.fn()) =>
+    React.createElement(RelationsScreen, {
+      navigation: { navigate },
+    } as unknown as React.ComponentProps<typeof RelationsScreen>);
+
+  // The card is now a strength ladder: one word per band, not six loose chips.
+  it('previews a concept as one word per strength, not a wall of them', async () => {
+    const tree = await mount(relations());
+    const shown = readable(tree.root);
+    const strongest = concept.words.find((x) => bandOf(x.lv) === 'strong') ?? concept.words[0];
+
+    expect(shown).toContain(concept.zh);
+    expect(shown).toContain(strongest.w);
+    // Three rungs at most, however many words the concept actually holds.
+    const onCard = concept.words.filter(({ w }) => shown.includes(w)).length;
+    expect(onCard).toBeLessThanOrEqual(3);
+  });
+
+  it('opens a concept on its own page rather than unfolding in the list', async () => {
+    const navigate = jest.fn();
+    const tree = await mount(relations(navigate));
+
+    await act(async () => pressableWith(tree, concept.zh).props.onPress());
+
+    expect(navigate).toHaveBeenCalledWith('Concept', { id: concept.id });
+  });
+});
+
+describe('ConceptScreen', () => {
+  const concept = concepts[0];
   // Asserting a word is *gone* needs one that is not a fragment of another word
   // on the list, or "abhor" keeps testing positive inside "abhorrent".
   const standalone = concept.words.find(
     ({ w }) => !words.some((other) => other.word !== w && other.word.includes(w))
   )!.w;
 
-  const open = (tree: renderer.ReactTestRenderer) =>
-    act(async () => pressableWith(tree, concept.zh).props.onPress());
+  const page = (navigate = jest.fn()) =>
+    React.createElement(ConceptScreen, {
+      navigation: { navigate, push: navigate },
+      route: { params: { id: concept.id } },
+    } as unknown as React.ComponentProps<typeof ConceptScreen>);
 
-  it('previews a concept with its strongest word before it is opened', async () => {
-    const tree = await mount(<RelationsScreen />);
+  it('writes every word up as a note, with its meaning spelt out', async () => {
+    const tree = await mount(page());
     const shown = readable(tree.root);
+    const entry = words.find((w) => w.word === standalone)!;
 
     expect(shown).toContain(concept.zh);
-    expect(shown).toContain(concept.words[0].w);
+    expect(shown).toContain(standalone);
+    expect(shown).toContain(entry.meaning);
   });
 
-  it('reads a word aloud once its concept is opened', async () => {
-    const tree = await mount(<RelationsScreen />);
-    // Shut, the words are plain chips. Only an open card makes them tappable.
-    await open(tree);
+  it('reads a word aloud when its entry is tapped', async () => {
+    const tree = await mount(page());
 
     await act(async () => pressableWith(tree, standalone).props.onPress());
 
@@ -309,8 +421,7 @@ describe('RelationsScreen', () => {
 
   it('leaves a binned word out of the concept it belonged to', async () => {
     await excludeWord(standalone);
-    const tree = await mount(<RelationsScreen />);
-    await open(tree);
+    const tree = await mount(page());
 
     expect(readable(tree.root)).not.toContain(standalone);
   });
@@ -329,6 +440,58 @@ describe('HomeScreen', () => {
     expect(readable(tree.root)).toContain('今天背了 0 個字');
   });
 
+  // Range and order are the quiz's business, not the home screen's, so picking
+  // one asks for them before any card appears.
+  it('sends a picked quiz to the setup page instead of straight into the cards', async () => {
+    const navigate = jest.fn();
+    const tree = await mount(
+      React.createElement(HomeScreen, {
+        navigation: { navigate },
+      } as unknown as React.ComponentProps<typeof HomeScreen>)
+    );
+
+    await act(async () => pressableWith(tree, '句子填空').props.onPress());
+
+    expect(navigate).toHaveBeenCalledWith('QuizSetup', { quiz: expect.objectContaining({ mode: 'cloze' }) });
+    // Nothing is saved until the session actually begins.
+    expect(await getLastQuiz()).toBeNull();
+  });
+
+  it('opens the mistake pile straight onto its word list, with no range to pick', async () => {
+    const navigate = jest.fn();
+    const tree = await mount(
+      React.createElement(HomeScreen, {
+        navigation: { navigate },
+      } as unknown as React.ComponentProps<typeof HomeScreen>)
+    );
+
+    await act(async () => pressableWith(tree, '複習錯題').props.onPress());
+
+    expect(navigate).toHaveBeenCalledWith('WrongWords', { quiz: expect.objectContaining({ wrongOnly: true }) });
+  });
+
+  it('offers a one-tap way back into the quiz that was started last', async () => {
+    const fresh = await mount(home());
+    expect(readable(fresh.root)).not.toContain('接著上次');
+
+    await saveLastQuiz({ direction: 'zh-en', mode: 'cloze', label: '句子填空', order: 'shuffle', letters: ['a'] });
+    const navigate = jest.fn();
+    const tree = await mount(
+      React.createElement(HomeScreen, {
+        navigation: { navigate },
+      } as unknown as React.ComponentProps<typeof HomeScreen>)
+    );
+
+    expect(readable(tree.root)).toContain('接著上次');
+    await act(async () => pressableWith(tree, '接著上次').props.onPress());
+
+    // Straight to the cards, with the range it was started with.
+    expect(navigate).toHaveBeenCalledWith(
+      'Practice',
+      expect.objectContaining({ order: 'shuffle', letters: ['a'] })
+    );
+  });
+
   it('shows how many words today already covered', async () => {
     await incrementHeatmapToday(todayStr());
     await incrementHeatmapToday(todayStr());
@@ -337,6 +500,75 @@ describe('HomeScreen', () => {
     const tree = await mount(home());
 
     expect(readable(tree.root)).toContain('今天背了 3 個字');
+  });
+});
+
+describe('WrongWordsScreen', () => {
+  const quiz = { direction: 'zh-en', mode: 'choice', wrongOnly: true, label: '複習錯題' };
+  const screen = (navigate = jest.fn()) =>
+    React.createElement(WrongWordsScreen, {
+      navigation: { navigate },
+      route: { params: { quiz } },
+    } as unknown as React.ComponentProps<typeof WrongWordsScreen>);
+
+  // The pile is its own range, so this screen skips the setup page entirely:
+  // read the list, then test yourself on exactly what is on it.
+  it('lists what is still wrong and tests you on it without asking for a range', async () => {
+    await addWrongWord(words[0].word);
+    const navigate = jest.fn();
+    const tree = await mount(screen(navigate));
+
+    expect(readable(tree.root)).toContain(words[0].word);
+    await act(async () => pressableWith(tree, '開始測驗').props.onPress());
+
+    expect(navigate).toHaveBeenCalledWith('Practice', expect.objectContaining({ wrongOnly: true }));
+    expect(await getLastQuiz()).toMatchObject({ label: '複習錯題' });
+  });
+
+  it('drops a word from the pile once you say you have learnt it', async () => {
+    await addWrongWord(words[0].word);
+    const tree = await mount(screen());
+
+    await act(async () => pressableWith(tree, '已學會').props.onPress());
+
+    expect(await getWrongWords()).toEqual([]);
+    expect(readable(tree.root)).toContain('目前沒有錯題');
+  });
+
+  it('offers no test when there is nothing wrong to retake', async () => {
+    const tree = await mount(screen());
+
+    const shown = readable(tree.root);
+    expect(shown).toContain('目前沒有錯題');
+    expect(shown).not.toContain('開始測驗');
+  });
+});
+
+describe('QuizSetupScreen', () => {
+  const setup = (navigate = jest.fn()) =>
+    React.createElement(QuizSetupScreen, {
+      navigation: { navigate },
+      route: { params: { quiz: { direction: 'en-zh', mode: 'choice', label: '英文選中文意思' } } },
+    } as unknown as React.ComponentProps<typeof QuizSetupScreen>);
+
+  it('says what the chosen quiz will ask before anything starts', async () => {
+    const tree = await mount(setup());
+    expect(readable(tree.root)).toContain('看英文單字，選出正確的中文意思');
+  });
+
+  it('carries the range and order into the session, and remembers both', async () => {
+    const navigate = jest.fn();
+    const tree = await mount(setup(navigate));
+
+    await act(async () => pressableWith(tree, '跳著背').props.onPress());
+    await act(async () => pressableWith(tree, 'B').props.onPress());
+    await act(async () => pressableWith(tree, '開始練習').props.onPress());
+
+    expect(navigate).toHaveBeenCalledWith(
+      'Practice',
+      expect.objectContaining({ order: 'shuffle', letters: ['b'] })
+    );
+    expect(await getLastQuiz()).toMatchObject({ label: '英文選中文意思', order: 'shuffle', letters: ['b'] });
   });
 });
 

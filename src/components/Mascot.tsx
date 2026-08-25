@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import { Animated, Easing, Image, StyleSheet, Text, View, ViewStyle } from 'react-native';
 import { GIRL } from './mascots';
-import { colors } from '../theme';
+import type { Theme } from '../theme';
+import { useStyles, useTheme } from '../lib/useTheme';
 
 export type Mood = 'idle' | 'happy' | 'sad';
 
@@ -16,6 +17,7 @@ type Props = {
 // arms-up artwork and the shake runs under the worried one, so the drawing and
 // the animation say the same thing.
 export function Mascot({ mood = 'idle', message, size = 128, style }: Props) {
+  const styles = useStyles(makeStyles);
   // Only reacts. An idle loop is movement in the corner of the eye while
   // someone is trying to read a word, which is the last thing this screen needs.
   const react = useRef(new Animated.Value(0)).current;
@@ -69,19 +71,19 @@ export function Mascot({ mood = 'idle', message, size = 128, style }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const makeStyles = (t: Theme) => StyleSheet.create({
   wrap: { alignItems: 'center' },
   bubble: {
-    backgroundColor: colors.surface,
+    backgroundColor: t.colors.surface,
     borderRadius: 16,
     borderWidth: 1,
-    borderColor: colors.line,
+    borderColor: t.colors.line,
     paddingHorizontal: 12,
     paddingVertical: 7,
     marginBottom: 8,
     maxWidth: 190,
   },
-  bubbleText: { color: colors.ink, fontSize: 12, fontWeight: '900', lineHeight: 17, textAlign: 'center' },
+  bubbleText: { color: t.colors.ink, fontSize: 12, fontWeight: '900', lineHeight: 17, textAlign: 'center' },
   // A little notch under the bubble, rotated so it points at the character.
   bubbleTail: {
     position: 'absolute',
@@ -89,15 +91,15 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     width: 10,
     height: 10,
-    backgroundColor: colors.surface,
+    backgroundColor: t.colors.surface,
     borderRightWidth: 1,
     borderBottomWidth: 1,
-    borderColor: colors.line,
+    borderColor: t.colors.line,
     transform: [{ rotate: '45deg' }],
   },
   sparks: { ...StyleSheet.absoluteFillObject, alignItems: 'center', justifyContent: 'center' },
-  spark: { position: 'absolute', width: 9, height: 9, borderRadius: 5, backgroundColor: colors.yellow },
+  spark: { position: 'absolute', width: 9, height: 9, borderRadius: 5, backgroundColor: t.colors.yellow },
   sparkTop: { top: '6%' },
-  sparkLeft: { left: '4%', top: '32%', backgroundColor: colors.blue },
-  sparkRight: { right: '4%', top: '26%', backgroundColor: colors.red },
+  sparkLeft: { left: '4%', top: '32%', backgroundColor: t.colors.blue },
+  sparkRight: { right: '4%', top: '26%', backgroundColor: t.colors.red },
 });
