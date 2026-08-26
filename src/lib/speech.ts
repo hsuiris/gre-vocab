@@ -1,3 +1,4 @@
+import { createAudioPlayer } from 'expo-audio';
 import * as Speech from 'expo-speech';
 import { Platform } from 'react-native';
 
@@ -104,85 +105,15 @@ if (Platform.OS === 'web') {
   })();
 }
 
-// Auto-detection can only guess from voice names, and browsers disagree about
-// what they expose — Chrome hides some macOS downloads that Safari lists. An
-// explicit choice always wins, so a wrong guess is one tap away from fixed.
-let chosenVoice: string | undefined;
-
-export function setPreferredVoice(id: string | null | undefined): void {
-  chosenVoice = id ?? undefined;
-}
-
-export function activeVoice(): string | undefined {
-  const voice = chosenVoice ?? englishVoice;
+// The engine only speaks now when a recording is missing, so there is nothing
+// for anyone to choose: the reading people actually hear is Ava either way.
+// This picks the least-bad voice on the device for that fallback.
+function activeVoice(): string | undefined {
   // Speaking has to start inside the tap that asked for it — iOS blocks speech
   // that begins later — so this cannot await. Kick off a lookup instead, and
   // the next tap has a voice.
-  if (!voice) void refreshVoices();
-  return voice;
-}
-
-export function autoVoice(): string | undefined {
+  if (!englishVoice) void refreshVoices();
   return englishVoice;
-}
-
-// Three is a choice; fifteen is a catalogue nobody listens through.
-const MAX_VOICES = 3;
-
-// Every system reports a dozen or more English voices and most of them are the
-// compact ones — recorded syllables glued together, which is the flat robotic
-// reading. Rank what is installed by the same signals pickVoice() trusts and
-// keep only the best few, so the picker is a shortlist worth trying rather than
-// everything the operating system happens to ship.
-export function curateVoices(voices: Voice[]): { id: string; name: string }[] {
-  const english = voices.filter((v) => v.language?.toLowerCase().startsWith('en'));
-  const usable = english.filter((v) => !NOVELTY.has((v.name ?? '').trim().toLowerCase()));
-
-  const ranked = usable
-    .map((v) => {
-      const name = (v.name ?? v.identifier).trim();
-      const lower = name.toLowerCase();
-      const tier = QUALITY_TIERS.findIndex((t) => lower.includes(t));
-      const known = PREFERRED.findIndex((p) => lower.startsWith(p));
-      // Neither a neural voice nor a reader anyone recommends: that is a
-      // compact voice, and compact is the sound being complained about.
-      if (tier < 0 && known < 0) return null;
-      return { id: v.identifier, name, score: (tier < 0 ? 99 : tier) * 100 + (known < 0 ? 99 : known) };
-    })
-    .filter(Boolean) as { id: string; name: string; score: number }[];
-
-  ranked.sort((a, b) => a.score - b.score || a.name.localeCompare(b.name));
-
-  // One row per reader, not one per quality variant: "Samantha" and
-  // "Samantha (Enhanced)" are the same person twice, and the better one sorts
-  // first, so the plain variant is the one dropped.
-  const seen = new Set<string>();
-  const best: { id: string; name: string }[] = [];
-  for (const { id, name } of ranked) {
-    const reader = name.toLowerCase().replace(/\s*\(.*\)\s*$/, '');
-    if (seen.has(reader)) continue;
-    seen.add(reader);
-    best.push({ id, name });
-    if (best.length === MAX_VOICES) break;
-  }
-
-  // A system with nothing recognisable still needs something to offer, or the
-  // picker looks broken rather than picky.
-  if (best.length === 0) {
-    return usable.slice(0, MAX_VOICES).map((v) => ({ id: v.identifier, name: v.name ?? v.identifier }));
-  }
-  return best;
-}
-
-export async function listEnglishVoices(): Promise<{ id: string; name: string }[]> {
-  let voices = await refreshVoices();
-  // Opening settings on a phone can still beat the browser to the list, and an
-  // empty picker looks like the feature is missing rather than still loading.
-  for (let attempt = 0; attempt < 6 && voices.length === 0; attempt++) {
-    await new Promise((resolve) => setTimeout(resolve, 200));
-    voices = await refreshVoices();
-  }
-  return curateVoices(voices);
 }
 
 // A single word wants full speed; a sentence read at full speed runs its
@@ -194,43 +125,161 @@ function paceFor(text: string, rate: number): number {
   return text.trim().includes(' ') ? rate * 0.9 : rate;
 }
 
+// Every headword and every example sentence was rendered once with a neural
+// voice and ships with the app, so a phone with only compact system voices
+// still reads them properly. Web serves them out of public/audio as URLs;
+// native bundles the same folders through the generated ./recordings map.
+// Both are keyed by the headword — the example for "abandon" is "ex/abandon" —
+// so nothing has to carry a sentence's text around to find its recording.
+const IS_WEB = Platform.OS === 'web';
+
+// The recordings were named after the headword, so anything that isn't a plain
+// headword has no recording and belongs to the engine. The voice preview in
+// settings is a sentence, and that is exactly what should happen to it.
+function headword(word: string): string | null {
+  const key = word.trim().toLowerCase();
+  return /^[a-z][a-z-]*$/.test(key) ? key : null;
+}
+
+function exampleKey(word: string): string | null {
+  const key = headword(word);
+  return key && `ex/${key}`;
+}
+
+// Required lazily, not imported: the map pulls in thousands of asset modules,
+// and nothing should pay for that until the first word is actually spoken.
+let bundled: Record<string, number> | undefined;
+function bundledRecording(key: string): number | undefined {
+  if (!bundled) {
+    bundled = (require('./recordings') as { recordings: Record<string, number> }).recordings;
+  }
+  return bundled[key];
+}
+
 // Bumped by every stop and every new sequence. A pending `onDone` from the
 // previous sequence checks its own token and gives up, so pressing next twice
 // quickly can't leave two chains reading over each other.
 let sequenceToken = 0;
 
+// Whatever is making noise right now, in whichever of the two forms. Kept so a
+// stop can silence it without either branch knowing about the other.
+let playing: { stop: () => void } | undefined;
+
 export function stopSpeaking(): void {
   sequenceToken += 1;
   Speech.stop();
+  playing?.stop();
+  playing = undefined;
 }
 
-// Reads `parts` back to back — the player uses [word, example] — and calls
-// `onDone` only after the last one finishes. Chaining on `onDone` rather than a
-// timer means the gap is the engine's own sentence pause, not a guess.
-export function speakSequence(parts: string[], opts: { rate?: number; onDone?: () => void } = {}): void {
+// Starts the recording named by `key` and calls `onMiss` if there isn't one, or
+// it won't play — a missing file has to fall through to the engine rather than
+// leave the tap silent. On web `play()` also rejects when the browser refuses
+// autoplay, which is the same recovery.
+function startRecording(
+  key: string | null,
+  rate: number,
+  onDone: () => void,
+  onMiss: () => void
+): void {
+  if (!key) return onMiss();
+
+  if (IS_WEB) {
+    if (typeof Audio === 'undefined') return onMiss();
+    const audio = new Audio(`/audio/${key}.mp3`);
+    audio.playbackRate = rate;
+    playing = { stop: () => audio.pause() };
+    audio.onended = onDone;
+    audio.onerror = onMiss;
+    void audio.play().catch(onMiss);
+    return;
+  }
+
+  const source = bundledRecording(key);
+  if (source === undefined) return onMiss();
+  const player = createAudioPlayer(source);
+  player.playbackRate = rate;
+  // createAudioPlayer is the imperative API, so nothing releases the player for
+  // us: every way out of here has to remove() it or the app leaks one per tap.
+  let released = false;
+  const release = () => {
+    if (released) return;
+    released = true;
+    player.remove();
+  };
+  playing = { stop: release };
+  player.addListener('playbackStatusUpdate', (status) => {
+    if (!status.didJustFinish) return;
+    release();
+    onDone();
+  });
+  try {
+    player.play();
+  } catch {
+    release();
+    onMiss();
+  }
+}
+
+// One part of a reading: the recording when there is one, the engine otherwise.
+type Part = { key: string | null; text: string };
+
+function speakOne(part: Part, token: number, rate: number, onDone: () => void): void {
+  const engine = () => {
+    if (token !== sequenceToken) return;
+    Speech.speak(part.text, {
+      language: 'en-US',
+      voice: activeVoice(),
+      rate: paceFor(part.text, rate),
+      onDone,
+    });
+  };
+  startRecording(
+    part.key,
+    rate,
+    () => {
+      if (token === sequenceToken) onDone();
+    },
+    engine
+  );
+}
+
+function start(parts: Part[], opts: { rate?: number; onDone?: () => void }): void {
   stopSpeaking();
   const token = sequenceToken;
-  const queue = parts.filter((part) => part.trim().length > 0);
   const speakFrom = (at: number) => {
     if (token !== sequenceToken) return; // stopped, or a newer sequence took over
-    if (at >= queue.length) {
+    if (at >= parts.length) {
       opts.onDone?.();
       return;
     }
-    Speech.speak(queue[at], {
-      language: 'en-US',
-      voice: activeVoice(),
-      rate: paceFor(queue[at], opts.rate ?? 1),
-      onDone: () => speakFrom(at + 1),
-    });
+    speakOne(parts[at], token, opts.rate ?? 1, () => speakFrom(at + 1));
   };
   speakFrom(0);
 }
 
-export function speakWord(text: string): void {
+// Reads the word and then its example, calling `onDone` only after the second
+// one finishes. Chaining on each part finishing rather than a timer means the
+// gap is a real pause, not a guess.
+export function speakSequence(
+  word: string,
+  example: string,
+  opts: { rate?: number; onDone?: () => void } = {}
+): void {
+  const parts: Part[] = [{ key: headword(word), text: word }];
+  if (example.trim()) parts.push({ key: exampleKey(word), text: example });
+  start(parts, opts);
+}
+
+export function speakWord(word: string): void {
   // Web queues utterances instead of replacing them, so a second tap would
   // play the previous word first. Cancel whatever is pending — including a
-  // running speakSequence, which is why this goes through stopSpeaking.
-  stopSpeaking();
-  Speech.speak(text, { language: 'en-US', voice: activeVoice(), rate: paceFor(text, 1) });
+  // running sequence, which is why this goes through stopSpeaking.
+  start([{ key: headword(word), text: word }], {});
+}
+
+// The sentence's own text is still needed: it is what the engine reads on a
+// device the recording never reached.
+export function speakExample(word: string, text: string): void {
+  start([{ key: exampleKey(word), text }], {});
 }

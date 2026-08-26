@@ -50,10 +50,10 @@ export type AppSettings = {
   goalWordCount: number;
   googleLinked: boolean;
   autoShowChoiceAnswers: boolean;
+  autoSpeakAfterAnswer: boolean;
   // Off means a cross bins the word straight away; the confirm sheet is where
   // it gets turned off.
   confirmBeforeBin: boolean;
-  voiceId: string | null;
   reviewNotifications: boolean;
   streakNotifications: boolean;
 };
@@ -68,8 +68,8 @@ export const defaultSettings: AppSettings = {
   goalWordCount: 20,
   googleLinked: false,
   autoShowChoiceAnswers: true,
+  autoSpeakAfterAnswer: true,
   confirmBeforeBin: true,
-  voiceId: null,
   reviewNotifications: false,
   streakNotifications: false,
 };

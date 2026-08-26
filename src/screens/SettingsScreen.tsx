@@ -1,11 +1,10 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 import { Alert, Image, Modal, Pressable, ScrollView, StyleSheet, Switch, Text, TextInput, View } from 'react-native';
 import { useFocusEffect, usePreventRemove } from '@react-navigation/native';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import * as ImagePicker from 'expo-image-picker';
 import type { RootStackParamList } from '../navigation/RootNavigator';
 import { AppSettings, defaultSettings, formatGoal, getSettings, saveSettings } from '../lib/storage';
-import { autoVoice, listEnglishVoices, setPreferredVoice, speakWord } from '../lib/speech';
 import { centered } from '../theme';
 import type { Theme } from '../theme';
 import { useStyles, useTheme } from '../lib/useTheme';
@@ -21,7 +20,6 @@ export function SettingsScreen({ navigation }: Props) {
   const [draft, setDraft] = useState<AppSettings>(defaultSettings);
   const [passwordDraft, setPasswordDraft] = useState<PasswordDraft>({ current: '', next: '', confirm: '' });
   const [accountOpen, setAccountOpen] = useState(false);
-  const [voices, setVoices] = useState<{ id: string; name: string }[]>([]);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
 
@@ -39,12 +37,6 @@ export function SettingsScreen({ navigation }: Props) {
       };
     }, [])
   );
-
-  useEffect(() => {
-    listEnglishVoices().then(setVoices);
-  }, []);
-
-  const autoName = voices.find((v) => v.id === autoVoice())?.name ?? '偵測中…';
 
   const changes = useMemo(
     () => describeChanges(saved, draft, passwordDraft),
@@ -221,35 +213,12 @@ export function SettingsScreen({ navigation }: Props) {
             value={draft.autoShowChoiceAnswers}
             onValueChange={(value) => updateDraft({ ...draft, autoShowChoiceAnswers: value })}
           />
-        </Section>
-
-        <Section title="發音">
-          <Text style={styles.voiceHint}>
-            只留下這台裝置上音質最好的幾個，機械音的都濾掉了。點一下試聽，選你覺得最像真人的那個。
-            {voices.length === 0 ? '\n這個瀏覽器沒有回報任何英文語音，改用 Safari 或 Edge 試試。' : ''}
-          </Text>
-          <VoiceRow
-            name="自動選擇"
-            meta={`程式自己挑，目前挑到：${autoName}`}
-            selected={draft.voiceId === null}
-            onPress={() => {
-              updateDraft({ ...draft, voiceId: null });
-              setPreferredVoice(null);
-              speakWord('The deluge washed out the bridge before dawn.');
-            }}
+          <SettingSwitch
+            title="答題後自動唸出單字"
+            meta="答案一出來就唸一次英文。"
+            value={draft.autoSpeakAfterAnswer}
+            onValueChange={(value) => updateDraft({ ...draft, autoSpeakAfterAnswer: value })}
           />
-          {voices.map((v) => (
-            <VoiceRow
-              key={v.id}
-              name={v.name}
-              selected={draft.voiceId === v.id}
-              onPress={() => {
-                updateDraft({ ...draft, voiceId: v.id });
-                setPreferredVoice(v.id);
-                speakWord('The deluge washed out the bridge before dawn.');
-              }}
-            />
-          ))}
         </Section>
 
         <Section title="資料">
@@ -312,7 +281,7 @@ function describeChanges(saved: AppSettings, draft: AppSettings, passwordDraft: 
   if (saved.reviewNotifications !== draft.reviewNotifications) changes.push(`複習提醒：${draft.reviewNotifications ? '開啟' : '關閉'}`);
   if (saved.streakNotifications !== draft.streakNotifications) changes.push(`連續學習提醒：${draft.streakNotifications ? '開啟' : '關閉'}`);
   if (saved.autoShowChoiceAnswers !== draft.autoShowChoiceAnswers) changes.push(`顯示其他選項答案：${draft.autoShowChoiceAnswers ? '開啟' : '關閉'}`);
-  if (saved.voiceId !== draft.voiceId) changes.push('發音語音已更換');
+  if (saved.autoSpeakAfterAnswer !== draft.autoSpeakAfterAnswer) changes.push(`答題後自動唸出單字：${draft.autoSpeakAfterAnswer ? '開啟' : '關閉'}`);
   return changes;
 }
 
@@ -478,21 +447,6 @@ function Section({ title, children }: SectionProps) {
   );
 }
 
-type VoiceRowProps = { name: string; meta?: string; selected: boolean; onPress: () => void };
-
-function VoiceRow({ name, meta, selected, onPress }: VoiceRowProps) {
-  const styles = useStyles(makeStyles);
-  return (
-    <Pressable style={styles.row} onPress={onPress}>
-      <View style={styles.rowText}>
-        <Text style={styles.rowTitle}>{name}</Text>
-        {meta ? <Text style={styles.rowMeta}>{meta}</Text> : null}
-      </View>
-      <Text style={selected ? styles.voiceCheck : styles.voicePlay}>{selected ? '✓' : '▶'}</Text>
-    </Pressable>
-  );
-}
-
 type SwitchProps = {
   title: string;
   meta: string;
@@ -579,16 +533,17 @@ const makeStyles = (t: Theme) => StyleSheet.create({
     justifyContent: 'center',
   },
   pencilIcon: { width: 23, height: 23, resizeMode: 'contain' },
-  voiceHint: { color: t.colors.muted, fontSize: 13, fontWeight: '700', lineHeight: 19, padding: 18, paddingBottom: 4 },
-  voiceCheck: { color: t.colors.greenInk, fontSize: 18, fontWeight: '900' },
-  voicePlay: { color: t.colors.blueInk, fontSize: 14, fontWeight: '900' },
   sectionTitle: { color: t.colors.muted, fontSize: 13, fontWeight: '900', marginBottom: 8, marginLeft: 4 },
   panel: { backgroundColor: t.glass.solid, borderRadius: 24, borderWidth: 1, borderColor: t.glass.edge, overflow: 'hidden' },
   goalBox: { padding: 18, gap: 14 },
   goalSentence: { flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', gap: 6 },
   goalWord: { color: t.colors.ink, fontSize: 18, fontWeight: '900' },
   inlineNumber: {
-    minWidth: 46,
+    // A width, not a minWidth: on web this renders as an <input>, and an
+    // <input> carries a browser-default width that a minWidth never overrides.
+    // Left as minWidth the two boxes grew to about 180px each and shoved
+    // "個單字" off the right edge of the phone.
+    width: 56,
     height: 36,
     borderRadius: 14,
     backgroundColor: t.colors.inset,
@@ -599,7 +554,7 @@ const makeStyles = (t: Theme) => StyleSheet.create({
     paddingHorizontal: 8,
     marginHorizontal: 4,
   },
-  inlineNumberWide: { minWidth: 62 },
+  inlineNumberWide: { width: 76 },
   unitToggle: {
     height: 36,
     borderRadius: 14,

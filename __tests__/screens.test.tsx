@@ -24,6 +24,7 @@ jest.mock('../src/components/Mascot', () => ({
     message ? require('react').createElement(require('react-native').Text, null, message) : null,
 }));
 
+import { MultipleChoiceCard } from '../src/components/MultipleChoiceCard';
 import { SessionSidePanel } from '../src/components/SessionSidePanel';
 import { AllWordsScreen } from '../src/screens/AllWordsScreen';
 import { NotesScreen } from '../src/screens/NotesScreen';
@@ -47,6 +48,7 @@ import {
   saveLastQuiz,
   incrementHeatmapToday,
   getSettings,
+  defaultSettings,
 } from '../src/lib/storage';
 import { todayStr } from '../src/lib/date';
 import { words } from '../src/data/words';
@@ -592,5 +594,86 @@ describe('NotesScreen', () => {
   it('tells you where notes come from when there are none', async () => {
     const tree = await mount(<NotesScreen />);
     expect(readable(tree.root)).toContain('還沒有筆記');
+  });
+});
+
+// The one branch in reveal(): answering speaks the English word, but only while
+// the setting is on.
+describe('answer-time pronunciation', () => {
+  const card = (autoSpeakAfterAnswer: boolean) => {
+    const target = entry('abate');
+    return (
+      <MultipleChoiceCard
+        entry={target}
+        direction="en-zh"
+        mode="choice"
+        choices={[target.meaning, '增加', '維持', '拒絕']}
+        choiceEntries={{ [target.meaning]: target }}
+        settings={{ ...defaultSettings, autoSpeakAfterAnswer }}
+        onResult={() => {}}
+        onAnswered={() => {}}
+        onExclude={() => {}}
+        onMarkUnsure={() => {}}
+        unsure={false}
+      />
+    );
+  };
+
+  test('speaks the word when the setting is on', async () => {
+    const tree = await mount(card(true));
+    await act(async () => {
+      pressableWith(tree, entry('abate').meaning).props.onPress();
+    });
+    expect(mockSpeak).toHaveBeenCalledWith('abate', expect.anything());
+  });
+
+  test('stays quiet when the setting is off', async () => {
+    const tree = await mount(card(false));
+    await act(async () => {
+      pressableWith(tree, entry('abate').meaning).props.onPress();
+    });
+    expect(mockSpeak).not.toHaveBeenCalled();
+  });
+});
+
+// Hearing the English word is the answer in every mode except 英文選中文, so the
+// question's speaker button has to disappear in the other three.
+describe('pronounce button before answering', () => {
+  const soundButtons = (tree: renderer.ReactTestRenderer) =>
+    tree.root.findAll((n) => n.props.accessibilityLabel === '聽發音' && typeof n.props.onPress === 'function');
+
+  const quizCard = (mode: 'choice' | 'cloze' | 'typing', direction: 'en-zh' | 'zh-en') => {
+    const target = entry('abate');
+    return (
+      <MultipleChoiceCard
+        entry={target}
+        direction={direction}
+        mode={mode}
+        choices={[target.word, 'augment', 'sustain', 'refuse']}
+        choiceEntries={{}}
+        settings={defaultSettings}
+        onResult={() => {}}
+        onAnswered={() => {}}
+        onExclude={() => {}}
+        onMarkUnsure={() => {}}
+        unsure={false}
+      />
+    );
+  };
+
+  test('英文選中文 keeps it — the word is already on the card', async () => {
+    expect(soundButtons(await mount(quizCard('choice', 'en-zh')))).toHaveLength(1);
+  });
+
+  test('中文選英文 has none', async () => {
+    expect(soundButtons(await mount(quizCard('choice', 'zh-en')))).toHaveLength(0);
+  });
+
+  test('拼字 has none', async () => {
+    expect(soundButtons(await mount(quizCard('typing', 'zh-en')))).toHaveLength(0);
+  });
+
+  test('克漏字 has none', async () => {
+    expect(soundButtons(await mount(quizCard('cloze', 'en-zh')))).toHaveLength(0);
   });
 });

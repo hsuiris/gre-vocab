@@ -101,7 +101,7 @@ export function AllWordsScreen() {
       setCurrent(at);
       scrollTo(at);
       const entry = list[at];
-      speakSequence([entry.word, entry.example], {
+      speakSequence(entry.word, entry.example, {
         rate: rateRef.current,
         onDone: () => {
           if (playingRef.current) playAt(at + 1);

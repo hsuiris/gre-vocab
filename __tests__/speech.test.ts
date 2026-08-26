@@ -5,6 +5,16 @@ const mockSpeak = jest.fn();
 const mockStop = jest.fn();
 const mockGetVoices = jest.fn();
 
+// The native build plays the recordings out of the bundle, so both the player
+// and the generated map are replaced with versions the tests can inspect.
+const mockCreatePlayer = jest.fn();
+
+jest.mock('expo-audio', () => ({
+  createAudioPlayer: (source: number) => mockCreatePlayer(source),
+}));
+
+jest.mock('../src/lib/recordings', () => ({ recordings: { epitome: 42, 'ex/epitome': 43 } }));
+
 jest.mock('expo-speech', () => ({
   speak: (...args: unknown[]) => mockSpeak(...args),
   stop: () => mockStop(),
@@ -112,13 +122,19 @@ describe('speakWord', () => {
   it('speaks with the chosen voice', async () => {
     const { speakWord } = await ready(MACOS_VOICES);
     speakWord('abject');
-    expect(mockSpeak).toHaveBeenCalledWith('abject', { language: 'en-US', voice: 'Samantha-id', rate: 1 });
+    expect(mockSpeak).toHaveBeenCalledWith(
+      'abject',
+      expect.objectContaining({ language: 'en-US', voice: 'Samantha-id', rate: 1 })
+    );
   });
 
   it('still speaks when no English voice exists at all', async () => {
     const { speakWord } = await ready([voice('美嘉', 'zh-TW')]);
     speakWord('abject');
-    expect(mockSpeak).toHaveBeenCalledWith('abject', { language: 'en-US', voice: undefined, rate: 1 });
+    expect(mockSpeak).toHaveBeenCalledWith(
+      'abject',
+      expect.objectContaining({ language: 'en-US', voice: undefined, rate: 1 })
+    );
   });
 
   it('slows down for a sentence but not for a single word', async () => {
@@ -143,25 +159,21 @@ describe('speakWord', () => {
 // system language was.
 describe('a voice list that arrives late', () => {
   it('is picked up, so a phone stops reading English with the system voice', async () => {
-    const { speakWord, listEnglishVoices } = await ready([]);
+    const { speakWord } = await ready([]);
 
     speakWord('abject');
     expect(mockSpeak).toHaveBeenCalledWith('abject', expect.objectContaining({ voice: undefined }));
 
-    // The browser populates the list; the next lookup finds it.
+    // A tap that finds no voice asks the browser again on the way out, so the
+    // list that arrived late is in place for the tap after it.
     mockGetVoices.mockResolvedValue(MACOS_VOICES);
-    await listEnglishVoices();
+    speakWord('abject');
+    await Promise.resolve();
+    await Promise.resolve();
 
     mockSpeak.mockClear();
     speakWord('abject');
     expect(mockSpeak).toHaveBeenCalledWith('abject', expect.objectContaining({ voice: 'Samantha-id' }));
-  });
-
-  it('reports the voices once they exist, rather than an empty picker', async () => {
-    const { listEnglishVoices } = await ready([]);
-    mockGetVoices.mockResolvedValue(MACOS_VOICES);
-    const names = (await listEnglishVoices()).map((v) => v.name);
-    expect(names).toContain('Samantha');
   });
 });
 
@@ -169,7 +181,7 @@ describe('speakSequence', () => {
   it('reads each part in order and reports done only after the last', async () => {
     const { speakSequence } = await ready(MACOS_VOICES);
     const onDone = jest.fn();
-    speakSequence(['abate', 'The storm finally abated.'], { onDone });
+    speakSequence('abate', 'The storm finally abated.', { onDone });
 
     expect(mockSpeak).toHaveBeenCalledTimes(1);
     expect(mockSpeak.mock.calls[0][0]).toBe('abate');
@@ -184,7 +196,7 @@ describe('speakSequence', () => {
 
   it('scales by the chosen rate and still eases off for a sentence', async () => {
     const { speakSequence } = await ready(MACOS_VOICES);
-    speakSequence(['abate', 'The storm finally abated.'], { rate: 1.25 });
+    speakSequence('abate', 'The storm finally abated.', { rate: 1.25 });
 
     expect(mockSpeak.mock.calls[0][1]).toEqual(expect.objectContaining({ rate: 1.25 }));
     finishUtterance(0);
@@ -194,7 +206,7 @@ describe('speakSequence', () => {
   it('stops for good — a late onDone from the cancelled utterance cannot resume it', async () => {
     const { speakSequence, stopSpeaking } = await ready(MACOS_VOICES);
     const onDone = jest.fn();
-    speakSequence(['abate', 'The storm finally abated.'], { onDone });
+    speakSequence('abate', 'The storm finally abated.', { onDone });
     stopSpeaking();
     finishUtterance(0); // iOS fires the callback of the utterance it just cut off
 
@@ -205,7 +217,7 @@ describe('speakSequence', () => {
   it('skips blank parts so a word with no example still advances the player', async () => {
     const { speakSequence } = await ready(MACOS_VOICES);
     const onDone = jest.fn();
-    speakSequence(['abate', '   '], { onDone });
+    speakSequence('abate', '   ', { onDone });
     finishUtterance(0);
 
     expect(mockSpeak).toHaveBeenCalledTimes(1);
@@ -213,36 +225,187 @@ describe('speakSequence', () => {
   });
 });
 
-describe('curateVoices', () => {
-  const curateVoices = (voices: { identifier: string; name: string; language: string }[]) =>
-    loadSpeech([]).curateVoices(voices);
-  const v = (name: string, language = 'en-US') => ({ identifier: name, name, language });
+// The headwords ship as recordings so every device hears the same reading. The
+// bug this guards: a sentence, or a word whose file never made it, must still
+// come out of the engine rather than leave the tap silent.
+describe('the shipped recordings', () => {
+  const played: { src: string; rate: number }[] = [];
+  let fail = false;
+  let lastAudio: { onended?: () => void; onerror?: () => void };
 
-  it('keeps only the best few readers, not everything the system ships', () => {
-    const picked = curateVoices([
-      v('Zarvox'),
-      v('Samantha'),
-      v('Samantha (Enhanced)'),
-      v('Nicky (Compact)'),
-      v('Alex'),
-      v('Microsoft Aria Online (Natural)'),
-      v('婉婷', 'zh-TW'),
-    ]);
+  class FakeAudio {
+    onended?: () => void;
+    onerror?: () => void;
+    playbackRate = 1;
+    constructor(public src: string) {
+      lastAudio = this;
+    }
+    pause() {}
+    play() {
+      if (fail) return Promise.reject(new Error('404'));
+      played.push({ src: this.src, rate: this.playbackRate });
+      return Promise.resolve();
+    }
+  }
 
-    expect(picked).toHaveLength(3);
-    // Neural first, then the readers worth recommending.
-    expect(picked[0].name).toBe('Microsoft Aria Online (Natural)');
-    // The same reader twice is one row, and it is the better variant that stays.
-    expect(picked.map((p) => p.name)).toContain('Samantha (Enhanced)');
-    expect(picked.map((p) => p.name)).not.toContain('Samantha');
-    // Novelty, compact and non-English are all out.
-    expect(picked.map((p) => p.name)).not.toContain('Zarvox');
-    expect(picked.map((p) => p.name)).not.toContain('Nicky (Compact)');
-    expect(picked.map((p) => p.name)).not.toContain('婉婷');
+  // The recordings are only served by the web build, so the module has to be
+  // loaded as web. resetModules() hands speech.ts a fresh react-native, which
+  // is why Platform is pinned after the reset rather than once at the top.
+  async function readyOnWeb() {
+    jest.resetModules();
+    mockSpeak.mockClear();
+    mockStop.mockClear();
+    mockGetVoices.mockResolvedValue(MACOS_VOICES);
+    played.length = 0;
+    fail = false;
+    (globalThis as { Audio?: unknown }).Audio = FakeAudio;
+    (require('react-native').Platform as { OS: string }).OS = 'web';
+    const mod = require('../src/lib/speech') as typeof import('../src/lib/speech');
+    await Promise.resolve();
+    await Promise.resolve();
+    return mod;
+  }
+
+  afterAll(() => {
+    delete (globalThis as { Audio?: unknown }).Audio;
   });
 
-  it('still offers something when nothing on the device is recognisable', () => {
-    const picked = curateVoices([v('en-GB-Wavenet-Q'), v('Voice 2'), v('Voice 3'), v('Voice 4')]);
-    expect(picked).toHaveLength(3);
+  it('plays the recording for a headword instead of the engine', async () => {
+    const { speakWord } = await readyOnWeb();
+    speakWord('epitome');
+    expect(played).toEqual([{ src: '/audio/epitome.mp3', rate: 1 }]);
+    expect(mockSpeak).not.toHaveBeenCalled();
+  });
+
+  it('leaves example sentences to the engine — only headwords were recorded', async () => {
+    const { speakWord } = await readyOnWeb();
+    speakWord('The deluge washed out the bridge.');
+    expect(played).toEqual([]);
+    expect(mockSpeak).toHaveBeenCalled();
+  });
+
+  it('falls back to the engine when the file will not play', async () => {
+    const { speakWord } = await readyOnWeb();
+    fail = true;
+    speakWord('epitome');
+    await Promise.resolve();
+    await Promise.resolve();
+    expect(played).toEqual([]);
+    expect(mockSpeak).toHaveBeenCalledWith('epitome', expect.objectContaining({ rate: 1 }));
+  });
+
+  it('plays the example recording, not the engine, when the word is tapped', async () => {
+    const { speakExample } = await readyOnWeb();
+    speakExample('epitome', 'That is the epitome of style.');
+    expect(played).toEqual([{ src: '/audio/ex/epitome.mp3', rate: 1 }]);
+    expect(mockSpeak).not.toHaveBeenCalled();
+  });
+
+  it('reads the word and then its example, both from recordings', async () => {
+    const { speakSequence } = await readyOnWeb();
+    const onDone = jest.fn();
+    speakSequence('epitome', 'That is the epitome of style.', { onDone });
+    expect(played).toEqual([{ src: '/audio/epitome.mp3', rate: 1 }]);
+
+    lastAudio.onended?.();
+    expect(played[1]).toEqual({ src: '/audio/ex/epitome.mp3', rate: 1 });
+    expect(mockSpeak).not.toHaveBeenCalled();
+    expect(onDone).not.toHaveBeenCalled();
+
+    lastAudio.onended?.();
+    expect(onDone).toHaveBeenCalledTimes(1);
+  });
+
+  // The sentence's own text has to come along, because it is what the engine
+  // reads when the recording is missing. On web that shows up as the file
+  // failing to load, since a browser only finds out by asking for it.
+  it('falls back to reading the example aloud when its file will not load', async () => {
+    const { speakExample } = await readyOnWeb();
+    fail = true;
+    speakExample('abate', 'The storm finally abated.');
+    await Promise.resolve();
+    await Promise.resolve();
+    expect(played).toEqual([]);
+    expect(mockSpeak).toHaveBeenCalledWith(
+      'The storm finally abated.',
+      expect.objectContaining({ rate: 0.9 })
+    );
+  });
+});
+
+// Same promise as the web build, different plumbing: on a phone the recordings
+// come out of the app bundle rather than a URL.
+describe('the recordings on a phone', () => {
+  function fakePlayer() {
+    const player = {
+      playbackRate: 1,
+      finish: undefined as undefined | (() => void),
+      played: false,
+      removed: false,
+      addListener(_event: string, listener: (status: { didJustFinish: boolean }) => void) {
+        player.finish = () => listener({ didJustFinish: true });
+      },
+      play() {
+        player.played = true;
+      },
+      remove() {
+        player.removed = true;
+      },
+    };
+    return player;
+  }
+
+  let player: ReturnType<typeof fakePlayer>;
+
+  beforeEach(() => {
+    player = fakePlayer();
+    mockCreatePlayer.mockReset();
+    mockCreatePlayer.mockImplementation(() => player);
+  });
+
+  it('plays the bundled recording for a headword instead of the engine', async () => {
+    const { speakWord } = await ready(MACOS_VOICES);
+    speakWord('epitome');
+    expect(mockCreatePlayer).toHaveBeenCalledWith(42);
+    expect(player.played).toBe(true);
+    expect(mockSpeak).not.toHaveBeenCalled();
+  });
+
+  it('falls back to the engine for a word with no recording', async () => {
+    const { speakWord } = await ready(MACOS_VOICES);
+    speakWord('abject');
+    expect(mockCreatePlayer).not.toHaveBeenCalled();
+    expect(mockSpeak).toHaveBeenCalledWith('abject', expect.objectContaining({ rate: 1 }));
+  });
+
+  // createAudioPlayer is imperative: nothing frees the player unless we do, so
+  // an unreleased one per tap is a leak that only shows up after long use.
+  it('releases the player when the recording ends', async () => {
+    const { speakWord } = await ready(MACOS_VOICES);
+    speakWord('epitome');
+    player.finish?.();
+    expect(player.removed).toBe(true);
+  });
+
+  it('releases the player when speech is stopped part-way', async () => {
+    const { speakWord, stopSpeaking } = await ready(MACOS_VOICES);
+    speakWord('epitome');
+    stopSpeaking();
+    expect(player.removed).toBe(true);
+  });
+
+  it('reads the word and then its example, both from the bundle', async () => {
+    const { speakSequence } = await ready(MACOS_VOICES);
+    const onDone = jest.fn();
+    speakSequence('epitome', 'That is the epitome of style.', { onDone });
+    expect(mockCreatePlayer).toHaveBeenCalledWith(42);
+
+    player.finish?.();
+    expect(mockCreatePlayer).toHaveBeenLastCalledWith(43);
+    expect(mockSpeak).not.toHaveBeenCalled();
+    expect(onDone).not.toHaveBeenCalled();
+
+    player.finish?.();
+    expect(onDone).toHaveBeenCalledTimes(1);
   });
 });

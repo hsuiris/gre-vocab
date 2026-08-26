@@ -7,7 +7,7 @@ import { words } from '../data/words';
 import { concepts, bandOf, BAND_LABEL, type Band } from '../data/concepts';
 import { getRelation } from '../data/relations';
 import { getExcludedWords } from '../lib/storage';
-import { speakWord } from '../lib/speech';
+import { speakExample, speakWord } from '../lib/speech';
 import { posLabel } from '../lib/pos';
 import { centered } from '../theme';
 import type { Theme } from '../theme';
@@ -122,7 +122,7 @@ function WordNote({ word, last, excluded }: { word: string; last: boolean; exclu
         </View>
       )}
 
-      <Pressable onPress={() => speakWord(entry.example)}>
+      <Pressable onPress={() => speakExample(entry.word, entry.example)}>
         <Text style={styles.example}>{entry.example}</Text>
         {entry.exampleZh && <Text style={styles.exampleZh}>{entry.exampleZh}</Text>}
       </Pressable>

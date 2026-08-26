@@ -148,10 +148,10 @@ test('saveSettings persists settings', async () => {
     goalWordCount: 300,
     googleLinked: true,
     autoShowChoiceAnswers: false,
+    autoSpeakAfterAnswer: false,
     confirmBeforeBin: false,
     reviewNotifications: true,
     streakNotifications: false,
-    voiceId: 'com.apple.voice.enhanced.en-US.Allison',
   };
   await saveSettings(settings);
   expect(await getSettings()).toEqual(settings);

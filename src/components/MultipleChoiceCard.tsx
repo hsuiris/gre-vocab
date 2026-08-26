@@ -4,7 +4,7 @@ import type { QuizMode } from '../navigation/RootNavigator';
 import { WordEntry } from '../data/words';
 import { getRelation } from '../data/relations';
 import type { AppSettings } from '../lib/storage';
-import { speakWord } from '../lib/speech';
+import { speakExample, speakWord } from '../lib/speech';
 import { posLabel } from '../lib/pos';
 import { GlassFill } from './Glass';
 import type { Theme } from '../theme';
@@ -48,8 +48,12 @@ export function MultipleChoiceCard({
   const [selected, setSelected] = useState<string | null>(null);
   const [typed, setTyped] = useState('');
 
-  const question = mode === 'choice' && direction === 'en-zh' ? entry.word : entry.meaning;
-  const correctAnswer = mode === 'choice' && direction === 'en-zh' ? entry.meaning : entry.word;
+  // True only when the card is already showing the English word as the
+  // question. Everywhere else — 中文選英文, 拼字, 克漏字 — the word is the answer,
+  // and a card that will pronounce it on demand has given the answer away.
+  const questionIsWord = mode === 'choice' && direction === 'en-zh';
+  const question = questionIsWord ? entry.word : entry.meaning;
+  const correctAnswer = questionIsWord ? entry.meaning : entry.word;
   const answered = selected !== null;
   const gotIt = answered && isCorrect(selected!);
   const blankedExample = entry.example.replace(new RegExp(entry.word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i'), '_____');
@@ -58,17 +62,23 @@ export function MultipleChoiceCard({
     return answer.trim().toLowerCase() === correctAnswer.toLowerCase();
   }
 
+  // Both ways of answering land here. The tap or the submit that got us this
+  // far is also the user gesture a browser wants before it will speak, so this
+  // is the one moment auto-play is allowed to work on the web build.
+  function reveal(answer: string) {
+    setSelected(answer);
+    onAnswered(isCorrect(answer));
+    if (settings.autoSpeakAfterAnswer) speakWord(entry.word);
+  }
+
   function handleSelect(choice: string) {
     if (answered) return; // locked after first tap
-    setSelected(choice);
-    onAnswered(isCorrect(choice));
+    reveal(choice);
   }
 
   function handleTypingSubmit() {
     if (answered) return;
-    const answer = typed.trim();
-    setSelected(answer);
-    onAnswered(isCorrect(answer));
+    reveal(typed.trim());
   }
 
   function handleNext() {
@@ -149,7 +159,7 @@ export function MultipleChoiceCard({
         {syn.length > 0 && (
           <Text style={feedback ? styles.optionMetaFeedback : styles.optionMeta}>≈ {syn.join('、')}</Text>
         )}
-        <Pressable onPress={() => speakWord(info.example)}>
+        <Pressable onPress={() => speakExample(info.word, info.example)}>
           <Text style={feedback ? styles.optionExampleFeedback : styles.optionExample}>{info.example}</Text>
         </Pressable>
         {info.exampleZh && (
@@ -208,7 +218,7 @@ export function MultipleChoiceCard({
 
             <View style={styles.explain}>
               <Text style={styles.explainLabel}>範例句</Text>
-              <Pressable onPress={() => speakWord(entry.example)}>
+              <Pressable onPress={() => speakExample(entry.word, entry.example)}>
                 <Text style={styles.explainText}>{renderHighlightedExample()}</Text>
               </Pressable>
               <Text style={styles.explainZh}>{entry.exampleZh ?? '中文翻譯待補'}</Text>
@@ -225,9 +235,16 @@ export function MultipleChoiceCard({
           <View style={styles.questionBody}>
             <Text style={styles.modeLabel}>{mode === 'typing' ? '請輸入英文單字' : '選出正確答案'}</Text>
             <Text style={styles.question}>{question}</Text>
-            <Pressable style={styles.soundBtn} onPress={() => speakWord(entry.word)} hitSlop={8}>
-              <Image source={require('../../assets/speaker-icon.png')} style={styles.soundIcon} />
-            </Pressable>
+            {questionIsWord && (
+              <Pressable
+                style={styles.soundBtn}
+                onPress={() => speakWord(entry.word)}
+                hitSlop={8}
+                accessibilityLabel="聽發音"
+              >
+                <Image source={require('../../assets/speaker-icon.png')} style={styles.soundIcon} />
+              </Pressable>
+            )}
           </View>
         )}
       </View>
