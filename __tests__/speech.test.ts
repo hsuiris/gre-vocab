@@ -13,7 +13,9 @@ jest.mock('expo-audio', () => ({
   createAudioPlayer: (source: number) => mockCreatePlayer(source),
 }));
 
-jest.mock('../src/lib/recordings', () => ({ recordings: { epitome: 42, 'ex/epitome': 43 } }));
+jest.mock('../src/lib/recordings', () => ({
+  recordings: { epitome: 42, 'ex/epitome': 43, 'zh/epitome': 44, 'zh/ex/epitome': 45 },
+}));
 
 jest.mock('expo-speech', () => ({
   speak: (...args: unknown[]) => mockSpeak(...args),
@@ -62,6 +64,7 @@ function loadSpeech(voices: ReturnType<typeof voice>[]) {
 }
 
 const pickVoice = (voices: ReturnType<typeof voice>[]) => loadSpeech([]).pickVoice(voices);
+const pickZhVoice = (voices: ReturnType<typeof voice>[]) => loadSpeech([]).pickZhVoice(voices);
 
 async function ready(voices: ReturnType<typeof voice>[]) {
   const mod = loadSpeech(voices);
@@ -115,6 +118,20 @@ describe('pickVoice', () => {
 
   it('handles a browser that reports no voices at all', () => {
     expect(pickVoice([])).toBeUndefined();
+  });
+});
+
+describe('pickZhVoice', () => {
+  it('takes the Taiwan voice over a mainland one', () => {
+    expect(pickZhVoice([voice('Tingting', 'zh-CN'), voice('Meijia', 'zh-TW')])).toBe('Meijia-id');
+  });
+
+  it('settles for any Chinese voice when no Taiwan one is installed', () => {
+    expect(pickZhVoice([voice('Samantha', 'en-US'), voice('Tingting', 'zh-CN')])).toBe('Tingting-id');
+  });
+
+  it('returns nothing when the device has no Chinese voice at all', () => {
+    expect(pickZhVoice(MACOS_VOICES.filter((v) => v.language.startsWith('en')))).toBeUndefined();
   });
 });
 
@@ -212,6 +229,39 @@ describe('speakSequence', () => {
 
     expect(mockSpeak).toHaveBeenCalledTimes(1);
     expect(onDone).not.toHaveBeenCalled();
+  });
+
+  it('reads the meaning and the translation in Chinese, in reading order', async () => {
+    // 'abate' has no recording in the mock, so every part falls to the engine —
+    // which is where the language and the voice can be read off.
+    const { speakSequence } = await ready(MACOS_VOICES); // the list ends with 美嘉, zh-TW
+    speakSequence('abate', 'The storm finally abated.', {
+      meaning: '減輕、緩和',
+      exampleZh: '隨著夜幕降臨，暴風雨開始減弱。',
+    });
+
+    expect(mockSpeak.mock.calls[0][0]).toBe('abate');
+    finishUtterance(0);
+    expect(mockSpeak.mock.calls[1][0]).toBe('減輕、緩和');
+    expect(mockSpeak.mock.calls[1][1]).toEqual(
+      expect.objectContaining({ language: 'zh-TW', voice: '美嘉-id' })
+    );
+    finishUtterance(1);
+    expect(mockSpeak.mock.calls[2][0]).toBe('The storm finally abated.');
+    finishUtterance(2);
+    expect(mockSpeak.mock.calls[3][0]).toBe('隨著夜幕降臨，暴風雨開始減弱。');
+    // Chinese writes no spaces, so a sentence only eases off if length says so.
+    expect((mockSpeak.mock.calls[3][1] as { rate: number }).rate).toBeCloseTo(0.9);
+  });
+
+  it('drops the translation when the example itself is switched off', async () => {
+    const { speakSequence } = await ready(MACOS_VOICES);
+    const onDone = jest.fn();
+    speakSequence('abate', '', { exampleZh: '隨著夜幕降臨，暴風雨開始減弱。', onDone });
+    finishUtterance(0);
+
+    expect(mockSpeak).toHaveBeenCalledTimes(1);
+    expect(onDone).toHaveBeenCalledTimes(1);
   });
 
   it('skips blank parts so a word with no example still advances the player', async () => {
@@ -392,6 +442,28 @@ describe('the recordings on a phone', () => {
     speakWord('epitome');
     stopSpeaking();
     expect(player.removed).toBe(true);
+  });
+
+  it('plays the recorded Chinese rather than whatever voice the phone ships', async () => {
+    const { speakSequence } = await ready(MACOS_VOICES);
+    const onDone = jest.fn();
+    speakSequence('epitome', 'That is the epitome of style.', {
+      meaning: '典型、縮影',
+      exampleZh: '那就是風格的典型。',
+      onDone,
+    });
+
+    expect(mockCreatePlayer).toHaveBeenNthCalledWith(1, 42); // the word
+    player.finish?.();
+    expect(mockCreatePlayer).toHaveBeenNthCalledWith(2, 44); // its meaning, in Chinese
+    player.finish?.();
+    expect(mockCreatePlayer).toHaveBeenNthCalledWith(3, 43); // the example
+    player.finish?.();
+    expect(mockCreatePlayer).toHaveBeenNthCalledWith(4, 45); // the translation
+    player.finish?.();
+
+    expect(mockSpeak).not.toHaveBeenCalled();
+    expect(onDone).toHaveBeenCalledTimes(1);
   });
 
   it('reads the word and then its example, both from the bundle', async () => {

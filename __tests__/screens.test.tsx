@@ -226,6 +226,69 @@ describe('AllWordsScreen', () => {
     (mockSpeak.mock.calls[0][1] as { onDone: () => void }).onDone();
     expect(mockSpeak.mock.calls[1][0]).toBe(words[0].example);
   });
+
+  // The playback panel. Every option is stored, so the reader finds it the way
+  // they left it — and the player reads its choices out of a ref, because it
+  // advances from inside a speech callback long after the render.
+  async function openOptions(tree: renderer.ReactTestRenderer) {
+    await act(async () => byLabel(tree, '播放設定').props.onPress());
+  }
+
+  it('reads only the word once the example is switched off', async () => {
+    const tree = await mount(<AllWordsScreen />);
+    await openOptions(tree);
+    await act(async () => byLabel(tree, '只有單字').props.onPress());
+
+    await act(async () => pressableWith(tree, words[0].word).props.onPress());
+    expect(mockSpeak.mock.calls[0][0]).toBe(words[0].word);
+
+    // Finishing the word moves straight on to the next one, not to a sentence.
+    await act(async () => (mockSpeak.mock.calls[0][1] as { onDone: () => void }).onDone());
+    expect(mockSpeak.mock.calls[1][0]).toBe(words[1].word);
+    expect((await getSettings()).playExample).toBe(false);
+  });
+
+  it('reads the meaning in Chinese after the word when 單字＋中文 is picked', async () => {
+    const tree = await mount(<AllWordsScreen />);
+    await openOptions(tree);
+    await act(async () => byLabel(tree, '單字＋中文').props.onPress());
+
+    await act(async () => pressableWith(tree, words[0].word).props.onPress());
+    await act(async () => (mockSpeak.mock.calls[0][1] as { onDone: () => void }).onDone());
+
+    expect(mockSpeak.mock.calls[1][0]).toBe(words[0].meaning);
+    expect(mockSpeak.mock.calls[1][1]).toEqual(expect.objectContaining({ language: 'zh-TW' }));
+  });
+
+  it('reads the same word twice before moving on when 2 次 is picked', async () => {
+    const tree = await mount(<AllWordsScreen />);
+    await openOptions(tree);
+    await act(async () => byLabel(tree, '2 次').props.onPress());
+
+    // A repeat is a whole reading again — word and example, not just the word.
+    const finish = async (call: number) =>
+      act(async () => (mockSpeak.mock.calls[call][1] as { onDone: () => void }).onDone());
+
+    await act(async () => pressableWith(tree, words[0].word).props.onPress());
+    await finish(0);
+    expect(mockSpeak.mock.calls[1][0]).toBe(words[0].example);
+
+    await finish(1);
+    expect(mockSpeak.mock.calls[2][0]).toBe(words[0].word); // second time round
+    await finish(2);
+    await finish(3);
+    expect(mockSpeak.mock.calls[4][0]).toBe(words[1].word);
+  });
+
+  it('shows the loop range only once looping is turned on', async () => {
+    const tree = await mount(<AllWordsScreen />);
+    await openOptions(tree);
+    expect(readable(tree.root)).not.toContain('循環範圍');
+
+    await act(async () => byLabel(tree, '循環播放').props.onPress());
+    expect(readable(tree.root)).toContain('循環範圍');
+    expect((await getSettings()).playLoop).toBe(true);
+  });
 });
 
 describe('PracticeScreen', () => {

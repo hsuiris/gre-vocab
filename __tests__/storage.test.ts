@@ -150,6 +150,10 @@ test('saveSettings persists settings', async () => {
     autoShowChoiceAnswers: false,
     autoSpeakAfterAnswer: false,
     confirmBeforeBin: false,
+    playExample: false,
+    playChinese: true,
+    playRepeat: 3,
+    playLoop: true,
     reviewNotifications: true,
     streakNotifications: false,
   };

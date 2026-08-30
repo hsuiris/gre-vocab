@@ -10,6 +10,7 @@ import { ConfirmBin } from '../components/ConfirmBin';
 import { centered } from '../theme';
 import type { Theme } from '../theme';
 import { useStyles, useTheme } from '../lib/useTheme';
+import { nextStep, startAt, type PlayPlan } from '../lib/playback';
 
 // Rows size themselves to their example sentence. A fixed height would let
 // getItemLayout jump straight to any row, but examples run to 114 characters
@@ -18,6 +19,46 @@ import { useStyles, useTheme } from '../lib/useTheme';
 const ROW_GAP = 10;
 const ESTIMATED_ROW = 116; // only a starting guess for a jump into unmeasured rows
 const RATES = [0.75, 1, 1.25];
+const REPEATS = [1, 2, 3];
+
+// Four named readings rather than two switches to combine in your head. They
+// are still stored as the two flags underneath, because that is what decides
+// which parts get spoken.
+const CONTENTS = [
+  { label: '只有單字', example: false, chinese: false },
+  { label: '單字＋例句', example: true, chinese: false },
+  { label: '單字＋中文', example: false, chinese: true },
+  { label: '單字＋例句＋中文', example: true, chinese: true },
+];
+
+// Every choice on the playback panel is the same two-state pill.
+function Chip({
+  label,
+  on,
+  onPress,
+  a11yLabel,
+}: {
+  label: string;
+  on: boolean;
+  onPress: () => void;
+  // Only where the visible word is too short to stand alone — "開" on its own
+  // says nothing about what it turns on.
+  a11yLabel?: string;
+}) {
+  const styles = useStyles(makeStyles);
+  const theme = useTheme();
+  return (
+    <Pressable
+      style={({ pressed }) => [styles.chip, on && styles.chipOn, pressed && theme.slabPressed]}
+      onPress={onPress}
+      accessibilityRole="button"
+      accessibilityLabel={a11yLabel ?? label}
+      accessibilityState={{ selected: on }}
+    >
+      <Text style={[styles.chipText, on && styles.chipTextOn]}>{label}</Text>
+    </Pressable>
+  );
+}
 
 export function AllWordsScreen() {
   const styles = useStyles(makeStyles);
@@ -27,6 +68,11 @@ export function AllWordsScreen() {
   const [playing, setPlaying] = useState(false);
   const [current, setCurrent] = useState(0);
   const [rate, setRate] = useState(1);
+  const [showOptions, setShowOptions] = useState(false);
+  // The loop's ends, as typed. Blank means "the end of the list", so a range
+  // nobody has touched still loops everything on screen.
+  const [fromText, setFromText] = useState('');
+  const [toText, setToText] = useState('');
   const listRef = useRef<FlatList<WordEntry>>(null);
 
   // The player advances from inside a speech callback, long after the render
@@ -34,6 +80,14 @@ export function AllWordsScreen() {
   const playingRef = useRef(false);
   const rateRef = useRef(1);
   const dataRef = useRef<WordEntry[]>(words);
+  const planRef = useRef<PlayPlan>({
+    example: true,
+    chinese: false,
+    repeat: 1,
+    loop: false,
+    from: 0,
+    to: 0,
+  });
 
   const [excluded, setExcluded] = useState<Set<string>>(new Set());
   const [settings, setSettings] = useState<AppSettings>(defaultSettings);
@@ -66,6 +120,15 @@ export function AllWordsScreen() {
   );
   dataRef.current = filtered;
 
+  planRef.current = {
+    example: settings.playExample,
+    chinese: settings.playChinese,
+    repeat: settings.playRepeat,
+    loop: settings.playLoop,
+    from: Number(fromText),
+    to: Number(toText),
+  };
+
   const starts = useMemo(() => letterStarts(base, (w) => w.word), [base]);
 
   const stop = useCallback(() => {
@@ -89,8 +152,9 @@ export function AllWordsScreen() {
     listRef.current?.scrollToIndex({ index: at, viewPosition, animated: false });
   }, []);
 
+  // `pass` is which reading of this word is playing, for "唸 2 次".
   const playAt = useCallback(
-    (at: number) => {
+    (at: number, pass = 1) => {
       const list = dataRef.current;
       if (at < 0 || at >= list.length) {
         stop();
@@ -101,15 +165,29 @@ export function AllWordsScreen() {
       setCurrent(at);
       scrollTo(at);
       const entry = list[at];
-      speakSequence(entry.word, entry.example, {
+      const plan = planRef.current;
+      // The translation belongs to the sentence, so turning the example off
+      // takes its Chinese with it.
+      speakSequence(entry.word, plan.example ? entry.example : '', {
         rate: rateRef.current,
+        meaning: plan.chinese ? entry.meaning : undefined,
+        exampleZh: plan.chinese ? entry.exampleZh : undefined,
         onDone: () => {
-          if (playingRef.current) playAt(at + 1);
+          if (!playingRef.current) return;
+          const next = nextStep(at, pass, dataRef.current.length, planRef.current);
+          if (next) playAt(next.at, next.pass);
+          else stop();
         },
       });
     },
     [scrollTo, stop]
   );
+
+  function updateSettings(patch: Partial<AppSettings>) {
+    const next = { ...settings, ...patch };
+    setSettings(next);
+    void saveSettings(next);
+  }
 
   // A cross asks first, unless the reader has ticked it off in the sheet.
   function askRemove(word: string) {
@@ -144,6 +222,14 @@ export function AllWordsScreen() {
     setQuery(text);
     setLetter(null);
     setCurrent(0);
+    resetRange();
+  }
+
+  // Position 40 of "words starting with W" is not position 40 of the whole
+  // list, so a new list starts with the range wide open again.
+  function resetRange() {
+    setFromText('');
+    setToText('');
   }
 
   function pickLetter(next: string | null) {
@@ -151,6 +237,7 @@ export function AllWordsScreen() {
     stop();
     setLetter(next);
     setCurrent(0);
+    resetRange();
     listRef.current?.scrollToOffset({ offset: 0, animated: false });
   }
 
@@ -258,6 +345,79 @@ export function AllWordsScreen() {
       </View>
 
       <View style={styles.player}>
+        {showOptions && (
+          <View style={styles.options}>
+            <View style={styles.optionRow}>
+              <Text style={styles.optionLabel}>要唸什麼</Text>
+              <View style={styles.chips}>
+                {CONTENTS.map((choice) => (
+                  <Chip
+                    key={choice.label}
+                    label={choice.label}
+                    on={settings.playExample === choice.example && settings.playChinese === choice.chinese}
+                    onPress={() =>
+                      updateSettings({ playExample: choice.example, playChinese: choice.chinese })
+                    }
+                  />
+                ))}
+              </View>
+            </View>
+
+            <View style={styles.optionRow}>
+              <Text style={styles.optionLabel}>每個字唸</Text>
+              <View style={styles.chips}>
+                {REPEATS.map((n) => (
+                  <Chip
+                    key={n}
+                    label={`${n} 次`}
+                    on={settings.playRepeat === n}
+                    onPress={() => updateSettings({ playRepeat: n })}
+                  />
+                ))}
+              </View>
+            </View>
+
+            <View style={styles.optionRow}>
+              <Text style={styles.optionLabel}>循環播放</Text>
+              <View style={styles.chips}>
+                <Chip
+                  label={settings.playLoop ? '開' : '關'}
+                  a11yLabel="循環播放"
+                  on={settings.playLoop}
+                  onPress={() => updateSettings({ playLoop: !settings.playLoop })}
+                />
+              </View>
+            </View>
+
+            {settings.playLoop && (
+              <View style={styles.optionRow}>
+                <Text style={styles.optionLabel}>循環範圍</Text>
+                <View style={styles.chips}>
+                  <TextInput
+                    value={fromText}
+                    onChangeText={(t) => setFromText(t.replace(/[^0-9]/g, ''))}
+                    placeholder="1"
+                    placeholderTextColor={theme.colors.muted}
+                    keyboardType="number-pad"
+                    style={styles.rangeInput}
+                    accessibilityLabel="循環從第幾個字"
+                  />
+                  <Text style={styles.rangeDash}>到</Text>
+                  <TextInput
+                    value={toText}
+                    onChangeText={(t) => setToText(t.replace(/[^0-9]/g, ''))}
+                    placeholder={String(filtered.length)}
+                    placeholderTextColor={theme.colors.muted}
+                    keyboardType="number-pad"
+                    style={styles.rangeInput}
+                    accessibilityLabel="循環到第幾個字"
+                  />
+                  <Text style={styles.rangeHint}>個（共 {filtered.length}）</Text>
+                </View>
+              </View>
+            )}
+          </View>
+        )}
         <View style={styles.nowRow}>
           <Text style={styles.nowWord} numberOfLines={1}>
             {currentEntry ? currentEntry.word : '沒有符合的單字'}
@@ -273,14 +433,22 @@ export function AllWordsScreen() {
         )}
         <View style={styles.controls}>
           {/* Balances the rate pill so the transport stays optically centred. */}
-          <View style={styles.ratePlaceholder} />
+          <Pressable
+            style={({ pressed }) => [styles.optionsBtn, showOptions && styles.optionsBtnOn, pressed && theme.slabPressed]}
+            onPress={() => setShowOptions((open) => !open)}
+            accessibilityLabel="播放設定"
+          >
+            <Text style={[styles.optionsBtnText, showOptions && styles.optionsBtnTextOn]}>設定</Text>
+          </Pressable>
           <View style={styles.transport}>
             <Pressable style={styles.stepBtn} onPress={() => step(-1)} hitSlop={8} accessibilityLabel="上一個字">
               <Text style={styles.stepText}>‹</Text>
             </Pressable>
             <Pressable
               style={({ pressed }) => [styles.playBtn, pressed && theme.slabPressed]}
-              onPress={() => (playing ? stop() : playAt(current))}
+              onPress={() =>
+                playing ? stop() : playAt(startAt(current, filtered.length, planRef.current))
+              }
               hitSlop={8}
             >
               {/* Drawn, not typed: a play glyph renders as a colour emoji on
@@ -358,16 +526,15 @@ const makeStyles = (t: Theme) => StyleSheet.create({
     paddingHorizontal: 16,
   },
   // Selected is an outline, not a fill. A saturated block swallowed the row it
-  // was meant to point at; a coloured rim plus a bar down the left edge marks
-  // the same row and still lets the word be the loudest thing in it. The bar
-  // eats exactly the padding it adds, so nothing shifts when a row lights up.
+  // was meant to point at; a coloured rim plus a thicker slab edge underneath
+  // marks the same row and still lets the word be the loudest thing in it. The
+  // edge eats exactly the padding it adds, so nothing shifts when a row lights
+  // up — every row's shadow stays under it, never beside it.
   rowActive: {
     backgroundColor: t.colors.surface,
     borderColor: t.slabEdge.blue,
-    borderBottomColor: t.slabEdge.blue,
-    borderLeftWidth: 5,
-    borderLeftColor: t.slabEdge.blue,
-    paddingLeft: 12,
+    borderBottomWidth: 6,
+    paddingBottom: 9,
   },
   // Clears the corner button, so a long word never runs underneath it.
   rowTop: { flexDirection: 'row', alignItems: 'center', gap: 8, paddingRight: 26 },
@@ -418,7 +585,53 @@ const makeStyles = (t: Theme) => StyleSheet.create({
   nowMeaning: { color: t.colors.muted, fontSize: 13, fontWeight: '700' },
   controls: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: 8 },
   transport: { flexDirection: 'row', alignItems: 'center', gap: 22 },
-  ratePlaceholder: { width: 58 },
+  options: {
+    gap: 10,
+    paddingBottom: 12,
+    marginBottom: 4,
+    borderBottomWidth: 1,
+    borderBottomColor: t.glass.edge,
+  },
+  optionRow: { flexDirection: 'row', alignItems: 'center', gap: 10 },
+  optionLabel: { width: 66, color: t.colors.muted, fontSize: 12, fontWeight: '900' },
+  chips: { flex: 1, flexDirection: 'row', alignItems: 'center', gap: 8, flexWrap: 'wrap' },
+  chip: {
+    ...t.slab(t.slabEdge.line),
+    backgroundColor: t.colors.inset,
+    borderRadius: 12,
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+  },
+  chipOn: { ...t.slab(t.slabEdge.blue), backgroundColor: t.colors.blue },
+  chipText: { color: t.colors.muted, fontSize: 12.5, fontWeight: '900' },
+  chipTextOn: { color: t.colors.blueInk },
+  rangeInput: {
+    width: 54,
+    textAlign: 'center',
+    color: t.colors.ink,
+    fontSize: 13,
+    fontWeight: '900',
+    backgroundColor: t.colors.inset,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: t.glass.edge,
+    paddingVertical: 6,
+    paddingHorizontal: 4,
+  },
+  rangeDash: { color: t.colors.muted, fontSize: 12, fontWeight: '900' },
+  rangeHint: { color: t.colors.muted, fontSize: 11.5, fontWeight: '700' },
+  optionsBtn: {
+    width: 58,
+    alignItems: 'center',
+    backgroundColor: t.colors.inset,
+    borderRadius: 14,
+    borderWidth: 1,
+    borderColor: t.glass.edge,
+    paddingVertical: 8,
+  },
+  optionsBtnOn: { backgroundColor: t.colors.blue, borderColor: t.slabEdge.blue },
+  optionsBtnText: { color: t.colors.muted, fontWeight: '900', fontSize: 13 },
+  optionsBtnTextOn: { color: t.colors.blueInk },
   stepBtn: { width: 40, height: 40, borderRadius: 20, alignItems: 'center', justifyContent: 'center' },
   stepText: { color: t.colors.blueInk, fontSize: 30, lineHeight: 34, fontWeight: '400' },
   playBtn: {

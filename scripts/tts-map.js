@@ -8,9 +8,14 @@ const path = require('path');
 
 const words = require(path.join(__dirname, '..', 'assets', 'words.json'));
 const dir = path.join(__dirname, '..', 'public', 'audio');
-// Same keys the app asks for: the headword, and "ex/<headword>" for its
-// example sentence.
-const keys = [...words.map(({ word }) => word), ...words.map(({ word }) => `ex/${word}`)];
+// Same keys the app asks for: the headword, "ex/<headword>" for its example
+// sentence, and the Chinese pair under zh/.
+const keys = [
+  ...words.map(({ word }) => word),
+  ...words.map(({ word }) => `ex/${word}`),
+  ...words.map(({ word }) => `zh/${word}`),
+  ...words.map(({ word }) => `zh/ex/${word}`),
+];
 const have = keys.filter((key) => fs.existsSync(path.join(dir, `${key}.mp3`)));
 
 const lines = have.map((key) => `  '${key}': require('../../public/audio/${key}.mp3'),`);
