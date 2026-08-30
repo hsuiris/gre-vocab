@@ -54,13 +54,13 @@ export type AppSettings = {
   // Off means a cross bins the word straight away; the confirm sheet is where
   // it gets turned off.
   confirmBeforeBin: boolean;
-  // How the word-list player reads: which parts it says, and how it walks the
-  // list. The loop's range is not here — it counts positions in whatever the
-  // search and the letter rail have left on screen, so it dies with the screen.
+  // How the word-list player reads: which parts it says, and how many times.
+  // The loop is deliberately not here. It is a mode the reader turns on for a
+  // stretch of revision, and it means nothing without the words they ticked —
+  // which are held by the screen, so both end together.
   playExample: boolean;
   playChinese: boolean;
   playRepeat: number;
-  playLoop: boolean;
   reviewNotifications: boolean;
   streakNotifications: boolean;
 };
@@ -80,7 +80,6 @@ export const defaultSettings: AppSettings = {
   playExample: true,
   playChinese: false,
   playRepeat: 1,
-  playLoop: false,
   reviewNotifications: false,
   streakNotifications: false,
 };

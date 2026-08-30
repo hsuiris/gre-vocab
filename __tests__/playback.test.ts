@@ -1,31 +1,12 @@
-import { clampRange, nextStep, startAt, type PlayPlan } from '../src/lib/playback';
+import { nextStep, startAt, type PlayPlan } from '../src/lib/playback';
 
 const plan = (over: Partial<PlayPlan> = {}): PlayPlan => ({
   example: true,
   chinese: false,
   repeat: 1,
   loop: false,
-  from: 0,
-  to: 0,
+  ring: null,
   ...over,
-});
-
-describe('clampRange', () => {
-  it('reads blank boxes as the whole list', () => {
-    expect(clampRange(0, 0, 10)).toEqual({ from: 0, to: 9 });
-  });
-
-  it('turns what was typed into indexes, 1-based to 0-based', () => {
-    expect(clampRange(3, 5, 10)).toEqual({ from: 2, to: 4 });
-  });
-
-  it('pulls numbers past the end back onto the list', () => {
-    expect(clampRange(99, 400, 10)).toEqual({ from: 9, to: 9 });
-  });
-
-  it('still gives a range when the two ends are typed backwards', () => {
-    expect(clampRange(8, 2, 10)).toEqual({ from: 1, to: 7 });
-  });
 });
 
 describe('nextStep', () => {
@@ -40,16 +21,26 @@ describe('nextStep', () => {
     expect(nextStep(0, 2, 3, twice)).toEqual({ at: 1, pass: 1 });
   });
 
-  it('wraps back to the start of the range instead of stopping', () => {
-    const loop = plan({ loop: true, from: 2, to: 4 });
-    expect(nextStep(3, 1, 10, loop)).toEqual({ at: 1, pass: 1 }); // index 3 is the 4th word
-    expect(nextStep(1, 1, 10, loop)).toEqual({ at: 2, pass: 1 });
+  it('wraps round the whole list when nothing is ticked', () => {
+    const loop = plan({ loop: true });
+    expect(nextStep(1, 1, 3, loop)).toEqual({ at: 2, pass: 1 });
+    expect(nextStep(2, 1, 3, loop)).toEqual({ at: 0, pass: 1 });
   });
 
-  it('repeats each word inside a loop, not just the range', () => {
-    const loop = plan({ loop: true, repeat: 2, from: 1, to: 2 });
-    expect(nextStep(1, 1, 10, loop)).toEqual({ at: 1, pass: 2 });
-    expect(nextStep(1, 2, 10, loop)).toEqual({ at: 0, pass: 1 });
+  it('skips straight to the next ticked word', () => {
+    const loop = plan({ loop: true, ring: [1, 5, 8] });
+    expect(nextStep(1, 1, 20, loop)).toEqual({ at: 5, pass: 1 });
+    expect(nextStep(8, 1, 20, loop)).toEqual({ at: 1, pass: 1 }); // back to the first
+  });
+
+  it('repeats each ticked word, not just the round', () => {
+    const loop = plan({ loop: true, repeat: 2, ring: [1, 5] });
+    expect(nextStep(1, 1, 20, loop)).toEqual({ at: 1, pass: 2 });
+    expect(nextStep(1, 2, 20, loop)).toEqual({ at: 5, pass: 1 });
+  });
+
+  it('stops when the ticked words are all filtered off the screen', () => {
+    expect(nextStep(0, 1, 20, plan({ loop: true, ring: [] }))).toBeNull();
   });
 
   it('has nothing to loop when the search left no words', () => {
@@ -58,15 +49,23 @@ describe('nextStep', () => {
 });
 
 describe('startAt', () => {
-  it('joins the range at its start when play begins outside it', () => {
-    expect(startAt(0, 10, plan({ loop: true, from: 4, to: 6 }))).toBe(3);
+  it('joins the ring at the next ticked word below it', () => {
+    expect(startAt(3, 20, plan({ loop: true, ring: [1, 5, 8] }))).toBe(5);
   });
 
-  it('carries on from where the reader already is, inside the range', () => {
-    expect(startAt(4, 10, plan({ loop: true, from: 4, to: 6 }))).toBe(4);
+  it('goes back to the first ticked word when play starts past the last', () => {
+    expect(startAt(12, 20, plan({ loop: true, ring: [1, 5, 8] }))).toBe(1);
+  });
+
+  it('carries on from a word that is itself ticked', () => {
+    expect(startAt(5, 20, plan({ loop: true, ring: [1, 5, 8] }))).toBe(5);
+  });
+
+  it('has nowhere to start when nothing ticked is on screen', () => {
+    expect(startAt(0, 20, plan({ loop: true, ring: [] }))).toBe(-1);
   });
 
   it('leaves the position alone when nothing is looping', () => {
-    expect(startAt(7, 10, plan())).toBe(7);
+    expect(startAt(7, 20, plan())).toBe(7);
   });
 });

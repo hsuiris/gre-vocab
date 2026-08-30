@@ -153,7 +153,6 @@ test('saveSettings persists settings', async () => {
     playExample: false,
     playChinese: true,
     playRepeat: 3,
-    playLoop: true,
     reviewNotifications: true,
     streakNotifications: false,
   };

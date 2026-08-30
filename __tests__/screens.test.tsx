@@ -280,14 +280,70 @@ describe('AllWordsScreen', () => {
     expect(mockSpeak.mock.calls[4][0]).toBe(words[1].word);
   });
 
-  it('shows the loop range only once looping is turned on', async () => {
+  it('offers the tick boxes only once looping is turned on', async () => {
     const tree = await mount(<AllWordsScreen />);
     await openOptions(tree);
-    expect(readable(tree.root)).not.toContain('循環範圍');
+    expect(readable(tree.root)).not.toContain('循環哪些');
+    expect(() => byLabel(tree, `循環播放 ${words[0].word}`)).toThrow();
 
     await act(async () => byLabel(tree, '循環播放').props.onPress());
-    expect(readable(tree.root)).toContain('循環範圍');
-    expect((await getSettings()).playLoop).toBe(true);
+    expect(readable(tree.root)).toContain('循環哪些');
+    expect(byLabel(tree, `循環播放 ${words[0].word}`)).toBeTruthy();
+  });
+
+  // The loop is a mode for one stretch of revision, and it is nothing without
+  // the ticks, which the screen holds. Saving one without the other would come
+  // back as the whole list going round in silence.
+  it('does not remember the loop, so the screen opens with it off', async () => {
+    const first = await mount(<AllWordsScreen />);
+    await openOptions(first);
+    await act(async () => byLabel(first, '循環播放').props.onPress());
+    expect(readable(first.root)).toContain('循環哪些');
+    expect((await getSettings()) as Record<string, unknown>).not.toHaveProperty('playLoop');
+
+    const second = await mount(<AllWordsScreen />);
+    await openOptions(second);
+    expect(readable(second.root)).not.toContain('循環哪些');
+  });
+
+  // The point of ticking rather than typing two positions: the reader picks the
+  // words they recognise, and the player visits only those, round and round.
+  it('loops just the ticked words, in list order, and back to the first', async () => {
+    const tree = await mount(<AllWordsScreen />);
+    await openOptions(tree);
+    await act(async () => byLabel(tree, '只有單字').props.onPress()); // one utterance per word
+    await act(async () => byLabel(tree, '循環播放').props.onPress());
+
+    await act(async () => byLabel(tree, `循環播放 ${words[2].word}`).props.onPress());
+    await act(async () => byLabel(tree, `循環播放 ${words[4].word}`).props.onPress());
+    expect(readable(tree.root)).toContain('已勾選 2 個字');
+
+    const finish = async (call: number) =>
+      act(async () => (mockSpeak.mock.calls[call][1] as { onDone: () => void }).onDone());
+
+    await act(async () => pressableWith(tree, words[0].word).props.onPress());
+    expect(mockSpeak.mock.calls[0][0]).toBe(words[0].word);
+
+    await finish(0);
+    expect(mockSpeak.mock.calls[1][0]).toBe(words[2].word); // skips the unticked
+    await finish(1);
+    expect(mockSpeak.mock.calls[2][0]).toBe(words[4].word);
+    await finish(2);
+    expect(mockSpeak.mock.calls[3][0]).toBe(words[2].word); // round again
+  });
+
+  it('keeps what was ticked when the search changes the list underneath', async () => {
+    const tree = await mount(<AllWordsScreen />);
+    await openOptions(tree);
+    await act(async () => byLabel(tree, '循環播放').props.onPress());
+    await act(async () => byLabel(tree, `循環播放 ${words[0].word}`).props.onPress());
+
+    const search = tree.root.findByType(TextInput);
+    await act(async () => search.props.onChangeText('zzzznothing'));
+    expect(readable(tree.root)).toContain('都不在目前的清單裡');
+
+    await act(async () => search.props.onChangeText(''));
+    expect(readable(tree.root)).toContain('已勾選 1 個字');
   });
 });
 

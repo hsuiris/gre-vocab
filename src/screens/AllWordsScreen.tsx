@@ -69,10 +69,15 @@ export function AllWordsScreen() {
   const [current, setCurrent] = useState(0);
   const [rate, setRate] = useState(1);
   const [showOptions, setShowOptions] = useState(false);
-  // The loop's ends, as typed. Blank means "the end of the list", so a range
-  // nobody has touched still loops everything on screen.
-  const [fromText, setFromText] = useState('');
-  const [toText, setToText] = useState('');
+  // Not saved with the settings: a loop over words nobody has ticked yet would
+  // be the whole list going round in silence, which is not what anyone left
+  // switched on. It starts off every time, along with the ticks.
+  const [loop, setLoop] = useState(false);
+  // The words ticked for the loop. Held by word rather than by position, so a
+  // search or a letter can be changed without losing what was ticked — nobody
+  // remembers that a word was "number 40", which is what the two number boxes
+  // used to ask for.
+  const [picked, setPicked] = useState<Set<string>>(new Set());
   const listRef = useRef<FlatList<WordEntry>>(null);
 
   // The player advances from inside a speech callback, long after the render
@@ -85,8 +90,7 @@ export function AllWordsScreen() {
     chinese: false,
     repeat: 1,
     loop: false,
-    from: 0,
-    to: 0,
+    ring: null,
   });
 
   const [excluded, setExcluded] = useState<Set<string>>(new Set());
@@ -120,13 +124,22 @@ export function AllWordsScreen() {
   );
   dataRef.current = filtered;
 
+  // null while nothing is ticked, which is what makes the loop cover the whole
+  // visible list until the reader says otherwise.
+  const ring = useMemo(
+    () =>
+      picked.size === 0
+        ? null
+        : filtered.map((w, i) => (picked.has(w.word) ? i : -1)).filter((i) => i >= 0),
+    [filtered, picked]
+  );
+
   planRef.current = {
     example: settings.playExample,
     chinese: settings.playChinese,
     repeat: settings.playRepeat,
-    loop: settings.playLoop,
-    from: Number(fromText),
-    to: Number(toText),
+    loop,
+    ring,
   };
 
   const starts = useMemo(() => letterStarts(base, (w) => w.word), [base]);
@@ -183,6 +196,14 @@ export function AllWordsScreen() {
     [scrollTo, stop]
   );
 
+  function togglePicked(word: string) {
+    setPicked((current) => {
+      const next = new Set(current);
+      if (!next.delete(word)) next.add(word);
+      return next;
+    });
+  }
+
   function updateSettings(patch: Partial<AppSettings>) {
     const next = { ...settings, ...patch };
     setSettings(next);
@@ -213,6 +234,12 @@ export function AllWordsScreen() {
     stop();
     await excludeWord(word);
     setExcluded((current) => new Set(current).add(word));
+    setPicked((current) => {
+      if (!current.has(word)) return current;
+      const next = new Set(current);
+      next.delete(word);
+      return next;
+    });
     setCurrent(0);
   }
 
@@ -222,14 +249,6 @@ export function AllWordsScreen() {
     setQuery(text);
     setLetter(null);
     setCurrent(0);
-    resetRange();
-  }
-
-  // Position 40 of "words starting with W" is not position 40 of the whole
-  // list, so a new list starts with the range wide open again.
-  function resetRange() {
-    setFromText('');
-    setToText('');
   }
 
   function pickLetter(next: string | null) {
@@ -237,7 +256,6 @@ export function AllWordsScreen() {
     stop();
     setLetter(next);
     setCurrent(0);
-    resetRange();
     listRef.current?.scrollToOffset({ offset: 0, animated: false });
   }
 
@@ -315,6 +333,21 @@ export function AllWordsScreen() {
                 onPress={() => playAt(index)}
               >
                 <View style={styles.rowTop}>
+                  {/* Only while looping: the rest of the time it would be a
+                      box with nothing to do. Nested inside the row Pressable
+                      like the ✕ is, so ticking never starts the word playing. */}
+                  {loop && (
+                    <Pressable
+                      onPress={() => togglePicked(item.word)}
+                      hitSlop={10}
+                      accessibilityLabel={`循環播放 ${item.word}`}
+                      accessibilityState={{ selected: picked.has(item.word) }}
+                    >
+                      <View style={[styles.tick, picked.has(item.word) && styles.tickOn]}>
+                        {picked.has(item.word) && <Text style={styles.tickMark}>✓</Text>}
+                      </View>
+                    </Pressable>
+                  )}
                   <Text style={styles.word} numberOfLines={1}>
                     {item.word}
                   </Text>
@@ -381,38 +414,28 @@ export function AllWordsScreen() {
               <Text style={styles.optionLabel}>循環播放</Text>
               <View style={styles.chips}>
                 <Chip
-                  label={settings.playLoop ? '開' : '關'}
+                  label={loop ? '開' : '關'}
                   a11yLabel="循環播放"
-                  on={settings.playLoop}
-                  onPress={() => updateSettings({ playLoop: !settings.playLoop })}
+                  on={loop}
+                  onPress={() => setLoop((on) => !on)}
                 />
               </View>
             </View>
 
-            {settings.playLoop && (
+            {loop && (
               <View style={styles.optionRow}>
-                <Text style={styles.optionLabel}>循環範圍</Text>
+                <Text style={styles.optionLabel}>循環哪些</Text>
                 <View style={styles.chips}>
-                  <TextInput
-                    value={fromText}
-                    onChangeText={(t) => setFromText(t.replace(/[^0-9]/g, ''))}
-                    placeholder="1"
-                    placeholderTextColor={theme.colors.muted}
-                    keyboardType="number-pad"
-                    style={styles.rangeInput}
-                    accessibilityLabel="循環從第幾個字"
-                  />
-                  <Text style={styles.rangeDash}>到</Text>
-                  <TextInput
-                    value={toText}
-                    onChangeText={(t) => setToText(t.replace(/[^0-9]/g, ''))}
-                    placeholder={String(filtered.length)}
-                    placeholderTextColor={theme.colors.muted}
-                    keyboardType="number-pad"
-                    style={styles.rangeInput}
-                    accessibilityLabel="循環到第幾個字"
-                  />
-                  <Text style={styles.rangeHint}>個（共 {filtered.length}）</Text>
+                  <Text style={styles.rangeHint}>
+                    {picked.size === 0
+                      ? `在清單上勾選要循環的字（沒勾就是全部 ${filtered.length} 個）`
+                      : ring && ring.length === 0
+                        ? `勾了 ${picked.size} 個字，但都不在目前的清單裡`
+                        : `已勾選 ${picked.size} 個字`}
+                  </Text>
+                  {picked.size > 0 && (
+                    <Chip label="清除勾選" on={false} onPress={() => setPicked(new Set())} />
+                  )}
                 </View>
               </View>
             )}
@@ -605,21 +628,19 @@ const makeStyles = (t: Theme) => StyleSheet.create({
   chipOn: { ...t.slab(t.slabEdge.blue), backgroundColor: t.colors.blue },
   chipText: { color: t.colors.muted, fontSize: 12.5, fontWeight: '900' },
   chipTextOn: { color: t.colors.blueInk },
-  rangeInput: {
-    width: 54,
-    textAlign: 'center',
-    color: t.colors.ink,
-    fontSize: 13,
-    fontWeight: '900',
+  rangeHint: { flexShrink: 1, color: t.colors.muted, fontSize: 11.5, fontWeight: '700' },
+  tick: {
+    width: 21,
+    height: 21,
+    borderRadius: 7,
+    borderWidth: 2,
+    borderColor: t.slabEdge.line,
     backgroundColor: t.colors.inset,
-    borderRadius: 12,
-    borderWidth: 1,
-    borderColor: t.glass.edge,
-    paddingVertical: 6,
-    paddingHorizontal: 4,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  rangeDash: { color: t.colors.muted, fontSize: 12, fontWeight: '900' },
-  rangeHint: { color: t.colors.muted, fontSize: 11.5, fontWeight: '700' },
+  tickOn: { borderColor: t.slabEdge.blue, backgroundColor: t.colors.blue },
+  tickMark: { color: t.colors.blueInk, fontSize: 13, fontWeight: '900', lineHeight: 16 },
   optionsBtn: {
     width: 58,
     alignItems: 'center',
