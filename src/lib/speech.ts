@@ -309,9 +309,17 @@ function start(parts: Part[], opts: { rate?: number; onDone?: () => void }): voi
 export function speakSequence(
   word: string,
   example: string,
-  opts: { rate?: number; onDone?: () => void; meaning?: string; exampleZh?: string } = {}
+  opts: {
+    rate?: number;
+    onDone?: () => void;
+    meaning?: string;
+    exampleZh?: string;
+    // The word is the key every recording is found by, so it cannot be turned
+    // off by passing a blank the way the other parts are. This is its switch.
+    sayWord?: boolean;
+  } = {}
 ): void {
-  const parts: Part[] = [{ key: headword(word), text: word }];
+  const parts: Part[] = opts.sayWord === false ? [] : [{ key: headword(word), text: word }];
   if (opts.meaning?.trim())
     parts.push({ key: meaningKey(word), text: sayable(opts.meaning), zh: true });
   if (example.trim()) parts.push({ key: exampleKey(word), text: example });

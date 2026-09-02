@@ -23,7 +23,6 @@ import { BoxWordsScreen } from '../screens/BoxWordsScreen';
 import { RelationsScreen } from '../screens/RelationsScreen';
 import { ConceptScreen } from '../screens/ConceptScreen';
 import { AllWordsScreen } from '../screens/AllWordsScreen';
-import { NotesScreen } from '../screens/NotesScreen';
 import { Backdrop } from '../components/Glass';
 import type { Theme } from '../theme';
 import { useStyles, useTheme } from '../lib/useTheme';
@@ -50,7 +49,6 @@ export type RootStackParamList = {
   Relations: undefined;
   Concept: { id: string };
   AllWords: undefined;
-  Notes: undefined;
   BoxWords: { box: number };
 };
 
@@ -166,7 +164,6 @@ export function RootNavigator() {
             <Stack.Screen name="Relations" component={RelationsScreen} options={{ title: '近義詞與反義詞' }} />
             <Stack.Screen name="Concept" component={ConceptScreen} options={{ title: '概念筆記' }} />
             <Stack.Screen name="AllWords" component={AllWordsScreen} options={{ title: '單字總覽' }} />
-            <Stack.Screen name="Notes" component={NotesScreen} options={{ title: '筆記庫' }} />
             <Stack.Screen
               name="BoxWords"
               component={BoxWordsScreen}

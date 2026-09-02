@@ -139,7 +139,6 @@ export function HomeScreen({ navigation }: Props) {
           <MenuCard key={quiz.label} title={quiz.label} onPress={() => openSetup(quiz)} />
         ))}
         <MenuCard title="近義詞與反義詞" onPress={() => navigation.navigate('Relations')} />
-        <MenuCard title="筆記庫" onPress={() => navigation.navigate('Notes')} />
 
         <View style={styles.panel}>
           <GlassFill />

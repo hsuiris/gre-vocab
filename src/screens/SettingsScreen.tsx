@@ -214,11 +214,20 @@ export function SettingsScreen({ navigation }: Props) {
             onValueChange={(value) => updateDraft({ ...draft, autoShowChoiceAnswers: value })}
           />
           <SettingSwitch
-            title="答題後自動唸出單字"
-            meta="答案一出來就唸一次英文。"
+            title="出題時自動唸英文"
+            meta="「英選中」的題目一出現就唸一次，不用自己按喇叭。其他題型的答案是英文，所以不唸。"
+            value={draft.autoSpeakQuestion}
+            onValueChange={(value) => updateDraft({ ...draft, autoSpeakQuestion: value })}
+          />
+          <SettingSwitch
+            title="答題後自動唸"
+            meta="翻開解析就自動播，唸哪幾段自己勾。"
             value={draft.autoSpeakAfterAnswer}
             onValueChange={(value) => updateDraft({ ...draft, autoSpeakAfterAnswer: value })}
           />
+          {draft.autoSpeakAfterAnswer && (
+            <SpeakParts draft={draft} onChange={updateDraft} />
+          )}
         </Section>
 
         <Section title="資料">
@@ -281,7 +290,11 @@ function describeChanges(saved: AppSettings, draft: AppSettings, passwordDraft: 
   if (saved.reviewNotifications !== draft.reviewNotifications) changes.push(`複習提醒：${draft.reviewNotifications ? '開啟' : '關閉'}`);
   if (saved.streakNotifications !== draft.streakNotifications) changes.push(`連續學習提醒：${draft.streakNotifications ? '開啟' : '關閉'}`);
   if (saved.autoShowChoiceAnswers !== draft.autoShowChoiceAnswers) changes.push(`顯示其他選項答案：${draft.autoShowChoiceAnswers ? '開啟' : '關閉'}`);
-  if (saved.autoSpeakAfterAnswer !== draft.autoSpeakAfterAnswer) changes.push(`答題後自動唸出單字：${draft.autoSpeakAfterAnswer ? '開啟' : '關閉'}`);
+  if (saved.autoSpeakQuestion !== draft.autoSpeakQuestion) changes.push(`出題時自動唸英文：${draft.autoSpeakQuestion ? '開啟' : '關閉'}`);
+  if (saved.autoSpeakAfterAnswer !== draft.autoSpeakAfterAnswer) changes.push(`答題後自動唸：${draft.autoSpeakAfterAnswer ? '開啟' : '關閉'}`);
+  const partsBefore = describeSpeakParts(saved);
+  const partsAfter = describeSpeakParts(draft);
+  if (draft.autoSpeakAfterAnswer && partsBefore !== partsAfter) changes.push(`答題後唸的內容：${partsAfter}`);
   return changes;
 }
 
@@ -432,6 +445,48 @@ function UnitToggle({ value, onChange }: { value: AppSettings['goalUnit']; onCha
   );
 }
 
+// The four segments of the reading after an answer, in the order they play.
+const SPEAK_PARTS = [
+  { key: 'speakAnswerWord', label: '英文單字' },
+  { key: 'speakAnswerMeaning', label: '中文意思' },
+  { key: 'speakAnswerExample', label: '英文例句' },
+  { key: 'speakAnswerExampleZh', label: '中文翻譯' },
+] as const;
+
+function describeSpeakParts(settings: AppSettings): string {
+  const on = SPEAK_PARTS.filter((part) => settings[part.key]).map((part) => part.label);
+  return on.length > 0 ? on.join('、') : '沒有勾任何一段，等於關閉';
+}
+
+function SpeakParts({ draft, onChange }: { draft: AppSettings; onChange: (next: AppSettings) => void }) {
+  const styles = useStyles(makeStyles);
+  return (
+    <View style={styles.partsRow}>
+      {SPEAK_PARTS.map((part) => {
+        const on = draft[part.key];
+        return (
+          <Pressable
+            key={part.key}
+            style={[styles.partPill, on && styles.partPillOn]}
+            onPress={() => {
+              const next = { ...draft, [part.key]: !on };
+              // The translation is read straight after the sentence it
+              // translates, so on its own it has nothing to follow and would
+              // silently play nothing. Ticking it brings the sentence along.
+              if (part.key === 'speakAnswerExampleZh' && !on) next.speakAnswerExample = true;
+              if (part.key === 'speakAnswerExample' && on) next.speakAnswerExampleZh = false;
+              onChange(next);
+            }}
+          >
+            <Text style={[styles.partMark, on && styles.partMarkOn]}>{on ? '✓' : ''}</Text>
+            <Text style={[styles.partText, on && styles.partTextOn]}>{part.label}</Text>
+          </Pressable>
+        );
+      })}
+    </View>
+  );
+}
+
 type SectionProps = {
   title: string;
   children: React.ReactNode;
@@ -568,6 +623,36 @@ const makeStyles = (t: Theme) => StyleSheet.create({
   unitPillActive: { backgroundColor: t.colors.blue },
   unitText: { color: t.colors.muted, fontWeight: '900' },
   unitTextActive: { color: t.colors.blueInk },
+  // Sits under the switch it belongs to, inside the same panel, so the four
+  // boxes read as part of that row rather than as a setting of their own.
+  partsRow: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 8,
+    paddingHorizontal: 18,
+    paddingBottom: 18,
+    marginTop: -4,
+    borderBottomWidth: 1,
+    borderBottomColor: t.glass.edge,
+  },
+  partPill: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    backgroundColor: t.colors.inset,
+    borderWidth: 1.5,
+    borderColor: t.slabEdge.line,
+    borderRadius: 14,
+    paddingVertical: 9,
+    paddingHorizontal: 12,
+  },
+  partPillOn: { backgroundColor: t.colors.green, borderColor: t.slabEdge.green },
+  // Holds its width whether or not there is a tick in it, so ticking a box
+  // does not shuffle the row.
+  partMark: { width: 13, fontSize: 13, fontWeight: '900', color: 'transparent' },
+  partMarkOn: { color: t.colors.greenInk },
+  partText: { color: t.colors.muted, fontSize: 14, fontWeight: '900' },
+  partTextOn: { color: t.colors.greenInk },
   goalPreview: { backgroundColor: t.colors.blue, borderRadius: 18, paddingHorizontal: 14, paddingVertical: 12 },
   goalPreviewText: { color: t.colors.blueInk, fontSize: 15, fontWeight: '900' },
   row: {

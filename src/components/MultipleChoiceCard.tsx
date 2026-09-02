@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text, Pressable, StyleSheet, TextInput, Image } from 'react-native';
 import type { QuizMode } from '../navigation/RootNavigator';
 import { WordEntry } from '../data/words';
 import { getRelation } from '../data/relations';
 import type { AppSettings } from '../lib/storage';
-import { speakExample, speakWord } from '../lib/speech';
+import { speakExample, speakSequence, speakWord, stopSpeaking } from '../lib/speech';
 import { posLabel } from '../lib/pos';
 import { GlassFill } from './Glass';
 import type { Theme } from '../theme';
@@ -62,13 +62,35 @@ export function MultipleChoiceCard({
     return answer.trim().toLowerCase() === correctAnswer.toLowerCase();
   }
 
+  // The card is keyed by the word, so it mounts once per question and this
+  // runs once per question — which is why the empty dependency list is right
+  // rather than a shortcut.
+  useEffect(() => {
+    if (questionIsWord && settings.autoSpeakQuestion) speakWord(entry.word);
+    // Whatever this card started stops when it leaves, so pressing 下一題
+    // part-way through a reading never leaves it talking over the next word.
+    return stopSpeaking;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // What the revealed card reads is four tick boxes in settings. Nothing
+  // ticked has to stay silent rather than hand the player an empty run.
+  function speakAnswer() {
+    const sayWord = settings.speakAnswerWord;
+    const example = settings.speakAnswerExample ? entry.example : '';
+    const meaning = settings.speakAnswerMeaning ? entry.meaning : undefined;
+    const exampleZh = settings.speakAnswerExampleZh ? entry.exampleZh : undefined;
+    if (!sayWord && !example && !meaning) return;
+    speakSequence(entry.word, example, { sayWord, meaning, exampleZh });
+  }
+
   // Both ways of answering land here. The tap or the submit that got us this
   // far is also the user gesture a browser wants before it will speak, so this
   // is the one moment auto-play is allowed to work on the web build.
   function reveal(answer: string) {
     setSelected(answer);
     onAnswered(isCorrect(answer));
-    if (settings.autoSpeakAfterAnswer) speakWord(entry.word);
+    if (settings.autoSpeakAfterAnswer) speakAnswer();
   }
 
   function handleSelect(choice: string) {
@@ -208,7 +230,9 @@ export function MultipleChoiceCard({
           // answer lands: the answer is what you came here to read, so it sits
           // at the top of the card instead of at the bottom of the page.
           <View style={styles.answerBody}>
-            <Text style={gotIt ? styles.verdictRight : styles.verdictWrong}>{gotIt ? '答對了' : '答錯了'}</Text>
+            <Text style={[styles.verdict, gotIt ? styles.verdictRight : styles.verdictWrong]}>
+              {gotIt ? '答對了' : '答錯了'}
+            </Text>
             <Pressable style={styles.answerWordRow} onPress={() => speakWord(entry.word)} hitSlop={8}>
               <Text style={styles.answerWord}>{entry.word}</Text>
               <Image source={require('../../assets/speaker-icon.png')} style={styles.answerSoundIcon} />
@@ -355,9 +379,24 @@ const makeStyles = (t: Theme) => StyleSheet.create({
   question: { color: t.colors.ink, fontSize: 26, fontWeight: '900', textAlign: 'center' },
   cloze: { color: t.colors.ink, fontSize: 20, fontWeight: '800', lineHeight: 28, textAlign: 'center' },
   answerBody: { width: '100%', alignItems: 'center' },
-  verdictRight: { color: t.colors.greenInk, fontSize: 13, fontWeight: '900' },
-  verdictWrong: { color: t.colors.redInk, fontSize: 13, fontWeight: '900' },
-  answerWordRow: { flexDirection: 'row', alignItems: 'center', gap: 8, marginTop: 6 },
+  // Was 13px of tinted text, which on a phone read as a caption. The verdict
+  // is the first thing you look for after answering, so it is now a filled
+  // badge you cannot scroll past without seeing.
+  verdict: {
+    fontSize: 24,
+    fontWeight: '900',
+    letterSpacing: 2,
+    borderRadius: 16,
+    borderWidth: 2,
+    paddingHorizontal: 22,
+    paddingVertical: 9,
+    overflow: 'hidden',
+    textAlign: 'center',
+    marginBottom: 4,
+  },
+  verdictRight: { color: t.colors.greenInk, backgroundColor: t.colors.green, borderColor: t.slabEdge.green },
+  verdictWrong: { color: t.colors.redInk, backgroundColor: t.colors.red, borderColor: t.slabEdge.red },
+  answerWordRow: { flexDirection: 'row', alignItems: 'center', gap: 8, marginTop: 10 },
   answerWord: { color: t.colors.ink, fontSize: 30, fontWeight: '900', textAlign: 'center' },
   answerSoundIcon: { width: 20, height: 20 },
   answerPos: { color: t.colors.yellowInk, fontSize: 13, fontWeight: '900', marginTop: 6 },

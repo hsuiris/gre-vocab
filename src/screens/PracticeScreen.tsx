@@ -26,7 +26,6 @@ import {
   getWrongWords,
   addWrongWord,
   removeWrongWord,
-  saveNote,
 } from '../lib/storage';
 import type { AppSettings } from '../lib/storage';
 import { initialProgress, reviewWord } from '../lib/leitner';
@@ -61,8 +60,6 @@ export function PracticeScreen({ route }: Props) {
   const [index, setIndex] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [marked, setMarked] = useState<MarkedWord[]>([]);
-  const [note, setNote] = useState('');
-  const [noteSaved, setNoteSaved] = useState(false);
   const [panelOpen, setPanelOpen] = useState(false);
   // Open while the "太簡單" cross is waiting on an answer.
   const [askExclude, setAskExclude] = useState(false);
@@ -76,15 +73,9 @@ export function PracticeScreen({ route }: Props) {
   // past a revealed card, so leaving by one of them has to bank the answer
   // rather than treat an answered card as skipped.
   const pendingRef = useRef<{ word: string; correct: boolean } | null>(null);
-  // Fixed at mount so re-saving edits the same note instead of piling up a new
-  // one every tap.
-  const noteIdRef = useRef(`${todayStr()}-${Date.now()}`);
   // The PanResponder below is built once, so it would otherwise capture the
   // first render's index forever. It reads the step out of here instead.
   const stepRef = useRef<(delta: number) => void>(() => {});
-
-  const modeLabel =
-    mode === 'cloze' ? '句子填空' : mode === 'typing' ? '單字拼寫' : direction === 'en-zh' ? '英選中' : '中選英';
 
   const choices = useMemo(
     () => (loaded && index < queue.length && mode !== 'typing' ? buildChoices(queue[index], mode === 'cloze' ? 'zh-en' : direction, words) : []),
@@ -234,33 +225,7 @@ export function PracticeScreen({ route }: Props) {
     })
   ).current;
 
-  async function handleSaveNote() {
-    const text = note.trim();
-    if (!text) return;
-    await saveNote({
-      id: noteIdRef.current,
-      date: todayStr(),
-      mode: modeLabel,
-      total: queue.length,
-      wrongCount: marked.filter((m) => m.reason === 'wrong').length,
-      text,
-    });
-    setNoteSaved(true);
-  }
-
-  const panel = (onClose?: () => void) => (
-    <SessionSidePanel
-      marked={marked}
-      note={note}
-      onChangeNote={(text) => {
-        setNote(text);
-        setNoteSaved(false);
-      }}
-      onSaveNote={handleSaveNote}
-      saved={noteSaved}
-      onClose={onClose}
-    />
-  );
+  const panel = (onClose?: () => void) => <SessionSidePanel marked={marked} onClose={onClose} />;
 
   if (!loaded) {
     return (
@@ -291,7 +256,7 @@ export function PracticeScreen({ route }: Props) {
           </Text>
           {!wide && (
             <Pressable style={styles.panelButton} onPress={() => setPanelOpen(true)}>
-              <Text style={styles.panelButtonText}>錯題 · 筆記</Text>
+              <Text style={styles.panelButtonText}>錯題庫</Text>
               {marked.length > 0 && <Text style={styles.panelBadge}>{marked.length}</Text>}
             </Pressable>
           )}
@@ -322,7 +287,7 @@ export function PracticeScreen({ route }: Props) {
                     style={({ pressed }) => [styles.donePanelButton, pressed && theme.slabPressed]}
                     onPress={() => setPanelOpen(true)}
                   >
-                    <Text style={styles.donePanelButtonText}>看錯題 · 寫筆記</Text>
+                    <Text style={styles.donePanelButtonText}>看錯題庫</Text>
                   </Pressable>
                 )}
               </View>

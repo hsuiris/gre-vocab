@@ -264,6 +264,19 @@ describe('speakSequence', () => {
     expect(onDone).toHaveBeenCalledTimes(1);
   });
 
+  // The quiz can be told to read only the example, or only the meaning. The
+  // word still has to come along as the key its recordings are filed under.
+  it('can leave the word unread and still find the example filed under it', async () => {
+    const { speakSequence } = await ready(MACOS_VOICES);
+    const onDone = jest.fn();
+    speakSequence('abate', 'The storm finally abated.', { sayWord: false, onDone });
+
+    expect(mockSpeak).toHaveBeenCalledTimes(1);
+    expect(mockSpeak.mock.calls[0][0]).toBe('The storm finally abated.');
+    finishUtterance(0);
+    expect(onDone).toHaveBeenCalledTimes(1);
+  });
+
   it('skips blank parts so a word with no example still advances the player', async () => {
     const { speakSequence } = await ready(MACOS_VOICES);
     const onDone = jest.fn();

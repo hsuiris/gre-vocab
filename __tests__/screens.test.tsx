@@ -27,7 +27,6 @@ jest.mock('../src/components/Mascot', () => ({
 import { MultipleChoiceCard } from '../src/components/MultipleChoiceCard';
 import { SessionSidePanel } from '../src/components/SessionSidePanel';
 import { AllWordsScreen } from '../src/screens/AllWordsScreen';
-import { NotesScreen } from '../src/screens/NotesScreen';
 import { HomeScreen } from '../src/screens/HomeScreen';
 import { PracticeScreen } from '../src/screens/PracticeScreen';
 import { QuizSetupScreen } from '../src/screens/QuizSetupScreen';
@@ -36,8 +35,6 @@ import { RelationsScreen } from '../src/screens/RelationsScreen';
 import { ConceptScreen } from '../src/screens/ConceptScreen';
 import { concepts, bandOf } from '../src/data/concepts';
 import {
-  getNotes,
-  saveNote,
   getHeatmap,
   getExcludedWords,
   excludeWord,
@@ -134,27 +131,15 @@ function cross(tree: renderer.ReactTestRenderer, word: string): ReactTestInstanc
 
 describe('SessionSidePanel', () => {
   it('lists a wrong answer with its meaning and example', async () => {
-    const tree = await mount(
-      <SessionSidePanel
-        marked={[{ entry: entry('abate'), reason: 'wrong' }]}
-        note=""
-        onChangeNote={() => {}}
-        onSaveNote={() => {}}
-        saved={false}
-      />
-    );
+    const tree = await mount(<SessionSidePanel marked={[{ entry: entry('abate'), reason: 'wrong' }]} />);
     const shown = readable(tree.root);
     expect(shown).toContain('abate');
     expect(shown).toContain(entry('abate').meaning);
     expect(shown).toContain(entry('abate').example);
   });
 
-  it('keeps the save button off until something is typed', async () => {
-    const onSaveNote = jest.fn();
-    const tree = await mount(
-      <SessionSidePanel marked={[]} note="   " onChangeNote={() => {}} onSaveNote={onSaveNote} saved={false} />
-    );
-    expect(pressableWith(tree, '存到筆記庫').props.disabled).toBe(true);
+  it('says where the words will come from while it is still empty', async () => {
+    const tree = await mount(<SessionSidePanel marked={[]} />);
     expect(readable(tree.root)).toContain('答錯或標記「不熟」的字會收在這裡');
   });
 });
@@ -463,19 +448,6 @@ describe('PracticeScreen', () => {
     expect(shown).not.toContain('查看詳情');
   });
 
-  it('saves the session note to the notes library', async () => {
-    const tree = await mount(practice());
-    await act(async () => {
-      tree.root.findAllByType(TextInput)[0].props.onChangeText('ab- 開頭幾乎都是負面的');
-    });
-    await act(async () => pressableWith(tree, '存到筆記庫').props.onPress());
-
-    const saved = await getNotes();
-    expect(saved).toHaveLength(1);
-    expect(saved[0].text).toBe('ab- 開頭幾乎都是負面的');
-    expect(saved[0].mode).toBe('英選中');
-    expect(readable(tree.root)).toContain('已存到筆記庫 ✓');
-  });
 });
 
 describe('RelationsScreen', () => {
@@ -693,33 +665,12 @@ describe('QuizSetupScreen', () => {
   });
 });
 
-describe('NotesScreen', () => {
-  it('shows a saved note with its session summary', async () => {
-    await saveNote({
-      id: '2026-08-07-1',
-      date: '2026-08-07',
-      mode: '英選中',
-      total: 40,
-      wrongCount: 6,
-      text: 'ab- 開頭幾乎都是負面的',
-    });
-    const tree = await mount(<NotesScreen />);
-    const shown = readable(tree.root);
-    expect(shown).toContain('2026-08-07');
-    expect(shown).toContain('ab- 開頭幾乎都是負面的');
-    expect(shown).toContain('40 題 · 錯 6 題');
-  });
-
-  it('tells you where notes come from when there are none', async () => {
-    const tree = await mount(<NotesScreen />);
-    expect(readable(tree.root)).toContain('還沒有筆記');
-  });
-});
-
-// The one branch in reveal(): answering speaks the English word, but only while
-// the setting is on.
+// The reading that starts when the card is revealed: whether it happens at
+// all, and which of the four segments it contains.
 describe('answer-time pronunciation', () => {
-  const card = (autoSpeakAfterAnswer: boolean) => {
+  // autoSpeakQuestion off throughout: these tests are about the reveal, and a
+  // card that reads its own question first would put an extra call in the way.
+  const card = (extra: Partial<typeof defaultSettings>) => {
     const target = entry('abate');
     return (
       <MultipleChoiceCard
@@ -728,7 +679,7 @@ describe('answer-time pronunciation', () => {
         mode="choice"
         choices={[target.meaning, '增加', '維持', '拒絕']}
         choiceEntries={{ [target.meaning]: target }}
-        settings={{ ...defaultSettings, autoSpeakAfterAnswer }}
+        settings={{ ...defaultSettings, autoSpeakQuestion: false, ...extra }}
         onResult={() => {}}
         onAnswered={() => {}}
         onExclude={() => {}}
@@ -738,19 +689,111 @@ describe('answer-time pronunciation', () => {
     );
   };
 
-  test('speaks the word when the setting is on', async () => {
-    const tree = await mount(card(true));
+  const answer = async (settings: Partial<typeof defaultSettings>) => {
+    const tree = await mount(card(settings));
     await act(async () => {
       pressableWith(tree, entry('abate').meaning).props.onPress();
     });
+  };
+
+  // Nothing is recorded under jest, so every segment reaches the engine — and
+  // one segment only starts once the one before it reports done.
+  const spoken = () => {
+    const said: string[] = [];
+    for (let at = 0; at < mockSpeak.mock.calls.length; at++) {
+      said.push(mockSpeak.mock.calls[at][0] as string);
+      (mockSpeak.mock.calls[at][1] as { onDone?: () => void }).onDone?.();
+    }
+    return said;
+  };
+
+  test('speaks the word when the setting is on', async () => {
+    await answer({ autoSpeakAfterAnswer: true });
     expect(mockSpeak).toHaveBeenCalledWith('abate', expect.anything());
   });
 
   test('stays quiet when the setting is off', async () => {
-    const tree = await mount(card(false));
-    await act(async () => {
-      pressableWith(tree, entry('abate').meaning).props.onPress();
+    await answer({ autoSpeakAfterAnswer: false });
+    expect(mockSpeak).not.toHaveBeenCalled();
+  });
+
+  test('reads the word and then the example, which is what the boxes default to', async () => {
+    await answer({ autoSpeakAfterAnswer: true });
+    expect(spoken()).toEqual(['abate', entry('abate').example]);
+  });
+
+  test('reads only the segments that are ticked', async () => {
+    await answer({
+      autoSpeakAfterAnswer: true,
+      speakAnswerWord: false,
+      speakAnswerExample: false,
+      speakAnswerMeaning: true,
     });
+    expect(spoken()).toEqual([entry('abate').meaning]);
+  });
+
+  // Every box unticked has to mean silence rather than a run with nothing in
+  // it — the master switch is still on, so nothing else stops it.
+  test('stays quiet when nothing is ticked', async () => {
+    await answer({
+      autoSpeakAfterAnswer: true,
+      speakAnswerWord: false,
+      speakAnswerMeaning: false,
+      speakAnswerExample: false,
+      speakAnswerExampleZh: false,
+    });
+    expect(mockSpeak).not.toHaveBeenCalled();
+  });
+});
+
+// Reading the question out on arrival saves a tap, but only where the question
+// is the English word. In the other three modes the English IS the answer.
+describe('question-time pronunciation', () => {
+  const quizCard = (
+    mode: 'choice' | 'cloze' | 'typing',
+    direction: 'en-zh' | 'zh-en',
+    autoSpeakQuestion = true
+  ) => {
+    const target = entry('abate');
+    return (
+      <MultipleChoiceCard
+        entry={target}
+        direction={direction}
+        mode={mode}
+        choices={[target.word, 'augment', 'sustain', 'refuse']}
+        choiceEntries={{}}
+        settings={{ ...defaultSettings, autoSpeakQuestion }}
+        onResult={() => {}}
+        onAnswered={() => {}}
+        onExclude={() => {}}
+        onMarkUnsure={() => {}}
+        unsure={false}
+      />
+    );
+  };
+
+  test('英文選中文 reads the question the moment the card appears', async () => {
+    await mount(quizCard('choice', 'en-zh'));
+    expect(mockSpeak).toHaveBeenCalledWith('abate', expect.anything());
+  });
+
+  test('the setting turns it off', async () => {
+    await mount(quizCard('choice', 'en-zh', false));
+    expect(mockSpeak).not.toHaveBeenCalled();
+  });
+
+  test('中文選英文 never reads it — that would be the answer', async () => {
+    await mount(quizCard('choice', 'zh-en'));
+    expect(mockSpeak).not.toHaveBeenCalled();
+  });
+
+  test('拼字 never reads it', async () => {
+    await mount(quizCard('typing', 'zh-en'));
+    expect(mockSpeak).not.toHaveBeenCalled();
+  });
+
+  test('克漏字 never reads it', async () => {
+    await mount(quizCard('cloze', 'en-zh'));
     expect(mockSpeak).not.toHaveBeenCalled();
   });
 });
