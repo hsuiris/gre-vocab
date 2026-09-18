@@ -2,7 +2,7 @@
 
 > An offline-first GRE vocabulary app: 3,192 words, five drill modes, and 6,384 pre-recorded audio files.
 
-背 GRE 單字的 App。3192 個字、五種練習模式、119 組概念分群，全部離線。發音是事先錄好的音檔，不靠手機內建語音，飛機上也能背。
+背 GRE 單字的 App。3192 個字、五種練習模式、119 組概念分群，支援離線使用。發音是事先錄好的音檔，不靠手機內建語音，所以每個字的唸法固定，沒有網路也唸得出來。
 
 ![GRE Vocab 主要畫面](docs/screenshots/hero.png)
 
