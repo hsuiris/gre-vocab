@@ -1,17 +1,18 @@
 import React from 'react';
 import { View, ScrollView, StyleSheet } from 'react-native';
-import { colors } from '../theme';
+import { calm, type Theme } from '../theme';
+import { useStyles, useTheme } from '../lib/useTheme';
 
 type Props = { heatmap: Record<string, number>; weeks?: number };
 
-// One hue deepening with the day's count. Each step must be darker than the
-// last or the heatmap stops reading as a scale.
-export function colorForCount(count: number): string {
-  if (count === 0) return '#eef1f2';
-  if (count < 5) return colors.blue;
-  if (count < 15) return '#a8c9e2';
-  if (count < 30) return '#7aa9cd';
-  return '#4a7fa8';
+// Deepening with the day's count. A plain function, not a hook: the ramp comes
+// in as an argument so the ladder can be tested on its own.
+export function colorForCount(count: number, heat: Theme['heat'] = calm.heat): string {
+  if (count === 0) return heat[0];
+  if (count < 5) return heat[1];
+  if (count < 15) return heat[2];
+  if (count < 30) return heat[3];
+  return heat[4];
 }
 
 function toDateStr(d: Date): string {
@@ -19,6 +20,8 @@ function toDateStr(d: Date): string {
 }
 
 export function Heatmap({ heatmap, weeks = 16 }: Props) {
+  const styles = useStyles(makeStyles);
+  const theme = useTheme();
   const days: Date[] = [];
   const today = new Date();
   for (let i = weeks * 7 - 1; i >= 0; i--) {
@@ -39,7 +42,7 @@ export function Heatmap({ heatmap, weeks = 16 }: Props) {
             {col.map((d, di) => (
               <View
                 key={di}
-                style={[styles.cell, { backgroundColor: colorForCount(heatmap[toDateStr(d)] ?? 0) }]}
+                style={[styles.cell, { backgroundColor: colorForCount(heatmap[toDateStr(d)] ?? 0, theme.heat) }]}
               />
             ))}
           </View>
@@ -49,7 +52,7 @@ export function Heatmap({ heatmap, weeks = 16 }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const makeStyles = (t: Theme) => StyleSheet.create({
   scroll: { marginVertical: 12 },
   grid: { flexDirection: 'row' },
   column: { marginRight: 4 },

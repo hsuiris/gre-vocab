@@ -13,9 +13,12 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
 
-    <!-- Opens without Safari's chrome once launched from the home screen. -->
+    <!-- Opens without Safari's chrome once launched from the home screen.
+         black-translucent is what lets the page run under the clock and the
+         battery instead of starting below a white band; the top inset is then
+         paid back in RootNavigator so the header is not sitting under them. -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="GRE單字" />
     <meta name="theme-color" content="#f7f8f9" />
 

@@ -1,12 +1,13 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 import { Alert, Image, Modal, Pressable, ScrollView, StyleSheet, Switch, Text, TextInput, View } from 'react-native';
 import { useFocusEffect, usePreventRemove } from '@react-navigation/native';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import * as ImagePicker from 'expo-image-picker';
 import type { RootStackParamList } from '../navigation/RootNavigator';
 import { AppSettings, defaultSettings, formatGoal, getSettings, saveSettings } from '../lib/storage';
-import { autoVoice, listEnglishVoices, setPreferredVoice, speakWord } from '../lib/speech';
-import { colors, centered } from '../theme';
+import { centered } from '../theme';
+import type { Theme } from '../theme';
+import { useStyles, useTheme } from '../lib/useTheme';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Settings'>;
 type PasswordDraft = { current: string; next: string; confirm: string };
@@ -14,11 +15,11 @@ type PasswordDraft = { current: string; next: string; confirm: string };
 const pencilIcon = require('../../assets/pencil-icon.png');
 
 export function SettingsScreen({ navigation }: Props) {
+  const styles = useStyles(makeStyles);
   const [saved, setSaved] = useState<AppSettings>(defaultSettings);
   const [draft, setDraft] = useState<AppSettings>(defaultSettings);
   const [passwordDraft, setPasswordDraft] = useState<PasswordDraft>({ current: '', next: '', confirm: '' });
   const [accountOpen, setAccountOpen] = useState(false);
-  const [voices, setVoices] = useState<{ id: string; name: string }[]>([]);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
 
@@ -36,12 +37,6 @@ export function SettingsScreen({ navigation }: Props) {
       };
     }, [])
   );
-
-  useEffect(() => {
-    listEnglishVoices().then(setVoices);
-  }, []);
-
-  const autoName = voices.find((v) => v.id === autoVoice())?.name ?? '偵測中…';
 
   const changes = useMemo(
     () => describeChanges(saved, draft, passwordDraft),
@@ -213,51 +208,31 @@ export function SettingsScreen({ navigation }: Props) {
 
         <Section title="練習">
           <SettingSwitch
-            title="答題後自動顯示詳細解釋"
-            meta="答完就展開範例句、中文翻譯與字根。"
-            value={draft.autoShowDetails}
-            onValueChange={(value) => updateDraft({ ...draft, autoShowDetails: value })}
-          />
-          <SettingSwitch
             title="答題後顯示其他選項答案"
             meta="選英文時會一起看到其他選項的中文意思。"
             value={draft.autoShowChoiceAnswers}
             onValueChange={(value) => updateDraft({ ...draft, autoShowChoiceAnswers: value })}
           />
-        </Section>
-
-        <Section title="發音">
-          <Text style={styles.voiceHint}>
-            點一下試聽，選你覺得最像真人的那個。名字有 Enhanced／Premium／Natural 的通常最自然。
-            {voices.length === 0 ? '\n這個瀏覽器沒有回報任何英文語音，改用 Safari 或 Edge 試試。' : ''}
-          </Text>
-          <VoiceRow
-            name="自動選擇"
-            meta={`程式自己挑，目前挑到：${autoName}`}
-            selected={draft.voiceId === null}
-            onPress={() => {
-              updateDraft({ ...draft, voiceId: null });
-              setPreferredVoice(null);
-              speakWord('The deluge washed out the bridge before dawn.');
-            }}
+          <SettingSwitch
+            title="出題時自動唸英文"
+            meta="「英選中」的題目一出現就唸一次，不用自己按喇叭。其他題型的答案是英文，所以不唸。"
+            value={draft.autoSpeakQuestion}
+            onValueChange={(value) => updateDraft({ ...draft, autoSpeakQuestion: value })}
           />
-          {voices.map((v) => (
-            <VoiceRow
-              key={v.id}
-              name={v.name}
-              selected={draft.voiceId === v.id}
-              onPress={() => {
-                updateDraft({ ...draft, voiceId: v.id });
-                setPreferredVoice(v.id);
-                speakWord('The deluge washed out the bridge before dawn.');
-              }}
-            />
-          ))}
+          <SettingSwitch
+            title="答題後自動唸"
+            meta="翻開解析就自動播，唸哪幾段自己勾。"
+            value={draft.autoSpeakAfterAnswer}
+            onValueChange={(value) => updateDraft({ ...draft, autoSpeakAfterAnswer: value })}
+          />
+          {draft.autoSpeakAfterAnswer && (
+            <SpeakParts draft={draft} onChange={updateDraft} />
+          )}
         </Section>
 
         <Section title="資料">
           <SettingLink title="學習統計" meta="查看盒子分布與已排除字數。" onPress={() => navigation.navigate('Stats')} />
-          <SettingLink title="太簡單的字" meta="管理被移出複習佇列的單字。" onPress={() => navigation.navigate('Excluded')} />
+          <SettingLink title="已熟悉字庫" meta="管理標成太簡單、被移出複習佇列的單字。" onPress={() => navigation.navigate('Excluded')} />
         </Section>
 
         <Section title="關於">
@@ -314,9 +289,12 @@ function describeChanges(saved: AppSettings, draft: AppSettings, passwordDraft: 
   if (passwordDraft.current || passwordDraft.next || passwordDraft.confirm) changes.push('帳號密碼將更新');
   if (saved.reviewNotifications !== draft.reviewNotifications) changes.push(`複習提醒：${draft.reviewNotifications ? '開啟' : '關閉'}`);
   if (saved.streakNotifications !== draft.streakNotifications) changes.push(`連續學習提醒：${draft.streakNotifications ? '開啟' : '關閉'}`);
-  if (saved.autoShowDetails !== draft.autoShowDetails) changes.push(`自動顯示詳細解釋：${draft.autoShowDetails ? '開啟' : '關閉'}`);
   if (saved.autoShowChoiceAnswers !== draft.autoShowChoiceAnswers) changes.push(`顯示其他選項答案：${draft.autoShowChoiceAnswers ? '開啟' : '關閉'}`);
-  if (saved.voiceId !== draft.voiceId) changes.push('發音語音已更換');
+  if (saved.autoSpeakQuestion !== draft.autoSpeakQuestion) changes.push(`出題時自動唸英文：${draft.autoSpeakQuestion ? '開啟' : '關閉'}`);
+  if (saved.autoSpeakAfterAnswer !== draft.autoSpeakAfterAnswer) changes.push(`答題後自動唸：${draft.autoSpeakAfterAnswer ? '開啟' : '關閉'}`);
+  const partsBefore = describeSpeakParts(saved);
+  const partsAfter = describeSpeakParts(draft);
+  if (draft.autoSpeakAfterAnswer && partsBefore !== partsAfter) changes.push(`答題後唸的內容：${partsAfter}`);
   return changes;
 }
 
@@ -337,6 +315,8 @@ function AccountEditor({
   onChange: (settings: AppSettings) => void;
   onPasswordChange: (draft: PasswordDraft) => void;
 }) {
+  const styles = useStyles(makeStyles);
+  const theme = useTheme();
   return (
     <Modal visible={visible} animationType="slide" presentationStyle="pageSheet" onRequestClose={onClose}>
       <ScrollView style={styles.modalContainer} contentContainerStyle={styles.modalContent}>
@@ -363,7 +343,7 @@ function AccountEditor({
             maxLength={24}
             style={styles.input}
             placeholder="輸入顯示名稱"
-            placeholderTextColor={colors.muted}
+            placeholderTextColor={theme.colors.muted}
           />
         </Field>
 
@@ -375,7 +355,7 @@ function AccountEditor({
             autoCapitalize="none"
             style={styles.input}
             placeholder="name@example.com"
-            placeholderTextColor={colors.muted}
+            placeholderTextColor={theme.colors.muted}
           />
         </Field>
 
@@ -386,7 +366,7 @@ function AccountEditor({
             secureTextEntry
             style={styles.input}
             placeholder="目前密碼"
-            placeholderTextColor={colors.muted}
+            placeholderTextColor={theme.colors.muted}
           />
           <TextInput
             value={passwordDraft.next}
@@ -394,7 +374,7 @@ function AccountEditor({
             secureTextEntry
             style={styles.input}
             placeholder="新密碼"
-            placeholderTextColor={colors.muted}
+            placeholderTextColor={theme.colors.muted}
           />
           <TextInput
             value={passwordDraft.confirm}
@@ -402,7 +382,7 @@ function AccountEditor({
             secureTextEntry
             style={styles.input}
             placeholder="再次輸入新密碼"
-            placeholderTextColor={colors.muted}
+            placeholderTextColor={theme.colors.muted}
           />
         </Field>
 
@@ -426,6 +406,7 @@ function AccountEditor({
 }
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
+  const styles = useStyles(makeStyles);
   return (
     <View style={styles.field}>
       <Text style={styles.fieldLabel}>{label}</Text>
@@ -435,6 +416,7 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
 }
 
 function NumberInput({ value, onChange, wide = false }: { value: number; onChange: (value: number) => void; wide?: boolean }) {
+  const styles = useStyles(makeStyles);
   return (
     <TextInput
       value={String(value)}
@@ -447,6 +429,7 @@ function NumberInput({ value, onChange, wide = false }: { value: number; onChang
 }
 
 function UnitToggle({ value, onChange }: { value: AppSettings['goalUnit']; onChange: (value: AppSettings['goalUnit']) => void }) {
+  const styles = useStyles(makeStyles);
   return (
     <View style={styles.unitToggle}>
       {(['week', 'day'] as const).map((unit) => (
@@ -462,31 +445,60 @@ function UnitToggle({ value, onChange }: { value: AppSettings['goalUnit']; onCha
   );
 }
 
+// The four segments of the reading after an answer, in the order they play.
+const SPEAK_PARTS = [
+  { key: 'speakAnswerWord', label: '英文單字' },
+  { key: 'speakAnswerMeaning', label: '中文意思' },
+  { key: 'speakAnswerExample', label: '英文例句' },
+  { key: 'speakAnswerExampleZh', label: '中文翻譯' },
+] as const;
+
+function describeSpeakParts(settings: AppSettings): string {
+  const on = SPEAK_PARTS.filter((part) => settings[part.key]).map((part) => part.label);
+  return on.length > 0 ? on.join('、') : '沒有勾任何一段，等於關閉';
+}
+
+function SpeakParts({ draft, onChange }: { draft: AppSettings; onChange: (next: AppSettings) => void }) {
+  const styles = useStyles(makeStyles);
+  return (
+    <View style={styles.partsRow}>
+      {SPEAK_PARTS.map((part) => {
+        const on = draft[part.key];
+        return (
+          <Pressable
+            key={part.key}
+            style={[styles.partPill, on && styles.partPillOn]}
+            onPress={() => {
+              const next = { ...draft, [part.key]: !on };
+              // The translation is read straight after the sentence it
+              // translates, so on its own it has nothing to follow and would
+              // silently play nothing. Ticking it brings the sentence along.
+              if (part.key === 'speakAnswerExampleZh' && !on) next.speakAnswerExample = true;
+              if (part.key === 'speakAnswerExample' && on) next.speakAnswerExampleZh = false;
+              onChange(next);
+            }}
+          >
+            <Text style={[styles.partMark, on && styles.partMarkOn]}>{on ? '✓' : ''}</Text>
+            <Text style={[styles.partText, on && styles.partTextOn]}>{part.label}</Text>
+          </Pressable>
+        );
+      })}
+    </View>
+  );
+}
+
 type SectionProps = {
   title: string;
   children: React.ReactNode;
 };
 
 function Section({ title, children }: SectionProps) {
+  const styles = useStyles(makeStyles);
   return (
     <View>
       <Text style={styles.sectionTitle}>{title}</Text>
       <View style={styles.panel}>{children}</View>
     </View>
-  );
-}
-
-type VoiceRowProps = { name: string; meta?: string; selected: boolean; onPress: () => void };
-
-function VoiceRow({ name, meta, selected, onPress }: VoiceRowProps) {
-  return (
-    <Pressable style={styles.row} onPress={onPress}>
-      <View style={styles.rowText}>
-        <Text style={styles.rowTitle}>{name}</Text>
-        {meta ? <Text style={styles.rowMeta}>{meta}</Text> : null}
-      </View>
-      <Text style={selected ? styles.voiceCheck : styles.voicePlay}>{selected ? '✓' : '▶'}</Text>
-    </Pressable>
   );
 }
 
@@ -498,6 +510,8 @@ type SwitchProps = {
 };
 
 function SettingSwitch({ title, meta, value, onValueChange }: SwitchProps) {
+  const styles = useStyles(makeStyles);
+  const theme = useTheme();
   return (
     <View style={styles.row}>
       <View style={styles.rowText}>
@@ -507,8 +521,13 @@ function SettingSwitch({ title, meta, value, onValueChange }: SwitchProps) {
       <Switch
         value={value}
         onValueChange={onValueChange}
-        trackColor={{ false: colors.line, true: colors.green }}
-        thumbColor={value ? colors.green : colors.surface}
+        // On was a green thumb on a green track: one green lozenge, and no way
+        // to read which end the knob was at. Every pastel in this palette
+        // carries its own ink, so the knob borrows it — a dark green dot on
+        // pale green says "on" by shape as well as by colour.
+        trackColor={{ false: theme.colors.line, true: theme.colors.green }}
+        thumbColor={value ? theme.colors.greenInk : theme.colors.surface}
+        ios_backgroundColor={theme.slabEdge.line}
       />
     </View>
   );
@@ -521,6 +540,7 @@ type LinkProps = {
 };
 
 function SettingLink({ title, meta, onPress }: LinkProps) {
+  const styles = useStyles(makeStyles);
   return (
     <Pressable style={styles.row} onPress={onPress}>
       <View style={styles.rowText}>
@@ -532,15 +552,15 @@ function SettingLink({ title, meta, onPress }: LinkProps) {
   );
 }
 
-const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: colors.page },
+const makeStyles = (t: Theme) => StyleSheet.create({
+  container: { flex: 1 },
   content: { ...centered, padding: 20, paddingBottom: 40, gap: 16 },
-  eyebrow: { color: colors.blueInk, fontSize: 14, fontWeight: '900' },
+  eyebrow: { color: t.colors.blueInk, fontSize: 14, fontWeight: '900' },
   accountCard: {
-    backgroundColor: colors.surface,
+    backgroundColor: t.glass.solid,
     borderRadius: 24,
     borderWidth: 1,
-    borderColor: colors.line,
+    borderColor: t.glass.edge,
     padding: 18,
     flexDirection: 'row',
     alignItems: 'center',
@@ -549,61 +569,92 @@ const styles = StyleSheet.create({
     width: 54,
     height: 54,
     borderRadius: 27,
-    backgroundColor: colors.tint,
+    backgroundColor: t.colors.tint,
     alignItems: 'center',
     justifyContent: 'center',
     marginRight: 14,
   },
-  avatarText: { color: colors.blueInk, fontSize: 26, fontWeight: '900' },
+  avatarText: { color: t.colors.blueInk, fontSize: 26, fontWeight: '900' },
   avatarImage: { width: 54, height: 54, borderRadius: 27 },
   accountText: { flex: 1 },
-  accountName: { color: colors.ink, fontSize: 18, fontWeight: '900' },
-  accountMeta: { color: colors.muted, fontSize: 13, fontWeight: '700', marginTop: 4 },
+  accountName: { color: t.colors.ink, fontSize: 18, fontWeight: '900' },
+  accountMeta: { color: t.colors.muted, fontSize: 13, fontWeight: '700', marginTop: 4 },
   iconButton: {
     width: 42,
     height: 42,
     borderRadius: 21,
-    backgroundColor: colors.inset,
+    backgroundColor: t.colors.inset,
     alignItems: 'center',
     justifyContent: 'center',
   },
   pencilIcon: { width: 23, height: 23, resizeMode: 'contain' },
-  voiceHint: { color: colors.muted, fontSize: 13, fontWeight: '700', lineHeight: 19, padding: 18, paddingBottom: 4 },
-  voiceCheck: { color: colors.greenInk, fontSize: 18, fontWeight: '900' },
-  voicePlay: { color: colors.blueInk, fontSize: 14, fontWeight: '900' },
-  sectionTitle: { color: colors.muted, fontSize: 13, fontWeight: '900', marginBottom: 8, marginLeft: 4 },
-  panel: { backgroundColor: colors.surface, borderRadius: 24, borderWidth: 1, borderColor: colors.line, overflow: 'hidden' },
+  sectionTitle: { color: t.colors.muted, fontSize: 13, fontWeight: '900', marginBottom: 8, marginLeft: 4 },
+  panel: { backgroundColor: t.glass.solid, borderRadius: 24, borderWidth: 1, borderColor: t.glass.edge, overflow: 'hidden' },
   goalBox: { padding: 18, gap: 14 },
   goalSentence: { flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', gap: 6 },
-  goalWord: { color: colors.ink, fontSize: 18, fontWeight: '900' },
+  goalWord: { color: t.colors.ink, fontSize: 18, fontWeight: '900' },
   inlineNumber: {
-    minWidth: 46,
+    // A width, not a minWidth: on web this renders as an <input>, and an
+    // <input> carries a browser-default width that a minWidth never overrides.
+    // Left as minWidth the two boxes grew to about 180px each and shoved
+    // "個單字" off the right edge of the phone.
+    width: 56,
     height: 36,
     borderRadius: 14,
-    backgroundColor: colors.inset,
-    color: colors.ink,
+    backgroundColor: t.colors.inset,
+    color: t.colors.ink,
     fontSize: 18,
     fontWeight: '900',
     textAlign: 'center',
     paddingHorizontal: 8,
     marginHorizontal: 4,
   },
-  inlineNumberWide: { minWidth: 62 },
+  inlineNumberWide: { width: 76 },
   unitToggle: {
     height: 36,
     borderRadius: 14,
-    backgroundColor: colors.inset,
+    backgroundColor: t.colors.inset,
     flexDirection: 'row',
     alignSelf: 'flex-start',
     marginHorizontal: 4,
     padding: 3,
   },
   unitPill: { minWidth: 38, borderRadius: 11, alignItems: 'center', justifyContent: 'center' },
-  unitPillActive: { backgroundColor: colors.blue },
-  unitText: { color: colors.muted, fontWeight: '900' },
-  unitTextActive: { color: colors.blueInk },
-  goalPreview: { backgroundColor: colors.blue, borderRadius: 18, paddingHorizontal: 14, paddingVertical: 12 },
-  goalPreviewText: { color: colors.blueInk, fontSize: 15, fontWeight: '900' },
+  unitPillActive: { backgroundColor: t.colors.blue },
+  unitText: { color: t.colors.muted, fontWeight: '900' },
+  unitTextActive: { color: t.colors.blueInk },
+  // Sits under the switch it belongs to, inside the same panel, so the four
+  // boxes read as part of that row rather than as a setting of their own.
+  partsRow: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 8,
+    paddingHorizontal: 18,
+    paddingBottom: 18,
+    marginTop: -4,
+    borderBottomWidth: 1,
+    borderBottomColor: t.glass.edge,
+  },
+  partPill: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    backgroundColor: t.colors.inset,
+    borderWidth: 1.5,
+    borderColor: t.slabEdge.line,
+    borderRadius: 14,
+    paddingVertical: 9,
+    paddingHorizontal: 12,
+  },
+  partPillOn: { backgroundColor: t.colors.green, borderColor: t.slabEdge.green },
+  // Holds its width whether or not there is a tick in it, so ticking a box
+  // does not shuffle the row.
+  partMark: { width: 13, fontSize: 13, fontWeight: '900', color: 'transparent' },
+  partMarkOn: { color: t.colors.greenInk },
+  partText: { color: t.colors.muted, fontSize: 14, fontWeight: '900' },
+  partTextOn: { color: t.colors.greenInk },
+  goalPreview: { backgroundColor: t.colors.blue, borderRadius: 18, paddingHorizontal: 14, paddingVertical: 12 },
+  goalPreviewText: { color: t.colors.blueInk, fontSize: 15, fontWeight: '900' },
   row: {
     minHeight: 84,
     paddingHorizontal: 18,
@@ -612,41 +663,41 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     borderBottomWidth: 1,
-    borderBottomColor: colors.line,
+    borderBottomColor: t.glass.edge,
   },
   rowText: { flex: 1, paddingRight: 16 },
-  rowTitle: { color: colors.ink, fontSize: 16, fontWeight: '900' },
-  rowMeta: { color: colors.muted, fontSize: 13, lineHeight: 18, fontWeight: '700', marginTop: 6 },
-  chevron: { color: colors.muted, fontSize: 30, fontWeight: '300' },
-  version: { color: colors.muted, fontSize: 14, fontWeight: '900' },
-  error: { color: colors.redInk, fontWeight: '900', lineHeight: 20 },
-  success: { color: colors.greenInk, fontWeight: '900', lineHeight: 20 },
+  rowTitle: { color: t.colors.ink, fontSize: 16, fontWeight: '900' },
+  rowMeta: { color: t.colors.muted, fontSize: 13, lineHeight: 18, fontWeight: '700', marginTop: 6 },
+  chevron: { color: t.colors.muted, fontSize: 30, fontWeight: '300' },
+  version: { color: t.colors.muted, fontSize: 14, fontWeight: '900' },
+  error: { color: t.colors.redInk, fontWeight: '900', lineHeight: 20 },
+  success: { color: t.colors.greenInk, fontWeight: '900', lineHeight: 20 },
   changesCard: {
-    backgroundColor: colors.surface,
+    backgroundColor: t.glass.solid,
     borderRadius: 24,
     borderWidth: 1,
-    borderColor: colors.line,
+    borderColor: t.glass.edge,
     padding: 18,
     gap: 8,
   },
-  changesTitle: { color: colors.ink, fontSize: 16, fontWeight: '900' },
-  changeItem: { color: colors.muted, fontSize: 13, fontWeight: '700', lineHeight: 19 },
+  changesTitle: { color: t.colors.ink, fontSize: 16, fontWeight: '900' },
+  changeItem: { color: t.colors.muted, fontSize: 13, fontWeight: '700', lineHeight: 19 },
   actions: { flexDirection: 'row', gap: 10, marginTop: 8 },
-  cancelButton: { flex: 1, backgroundColor: colors.red, borderRadius: 18, paddingVertical: 13, alignItems: 'center' },
-  cancelText: { color: colors.redInk, fontWeight: '900' },
-  saveButton: { flex: 1, backgroundColor: colors.blue, borderRadius: 18, paddingVertical: 13, alignItems: 'center' },
-  saveText: { color: colors.blueInk, fontWeight: '900' },
-  modalContainer: { flex: 1, backgroundColor: colors.page },
+  cancelButton: { flex: 1, backgroundColor: t.colors.red, borderRadius: 18, paddingVertical: 13, alignItems: 'center' },
+  cancelText: { color: t.colors.redInk, fontWeight: '900' },
+  saveButton: { flex: 1, backgroundColor: t.colors.blue, borderRadius: 18, paddingVertical: 13, alignItems: 'center' },
+  saveText: { color: t.colors.blueInk, fontWeight: '900' },
+  modalContainer: { flex: 1, backgroundColor: t.colors.page },
   modalContent: { padding: 20, paddingBottom: 40, gap: 16 },
   modalHeader: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
-  modalTitle: { color: colors.ink, fontSize: 22, fontWeight: '900' },
-  doneButton: { backgroundColor: colors.blue, borderRadius: 18, paddingHorizontal: 16, paddingVertical: 10 },
-  doneText: { color: colors.blueInk, fontWeight: '900' },
+  modalTitle: { color: t.colors.ink, fontSize: 22, fontWeight: '900' },
+  doneButton: { backgroundColor: t.colors.blue, borderRadius: 18, paddingHorizontal: 16, paddingVertical: 10 },
+  doneText: { color: t.colors.blueInk, fontWeight: '900' },
   avatarEditor: {
-    backgroundColor: colors.surface,
+    backgroundColor: t.glass.solid,
     borderRadius: 24,
     borderWidth: 1,
-    borderColor: colors.line,
+    borderColor: t.glass.edge,
     padding: 20,
     alignItems: 'center',
     gap: 10,
@@ -656,45 +707,45 @@ const styles = StyleSheet.create({
     width: 96,
     height: 96,
     borderRadius: 48,
-    backgroundColor: colors.tint,
-    color: colors.blueInk,
+    backgroundColor: t.colors.tint,
+    color: t.colors.blueInk,
     fontSize: 42,
     fontWeight: '900',
     textAlign: 'center',
     lineHeight: 96,
   },
-  avatarEditorMeta: { color: colors.blueInk, fontSize: 14, fontWeight: '900' },
+  avatarEditorMeta: { color: t.colors.blueInk, fontSize: 14, fontWeight: '900' },
   field: {
-    backgroundColor: colors.surface,
+    backgroundColor: t.glass.solid,
     borderRadius: 24,
     borderWidth: 1,
-    borderColor: colors.line,
+    borderColor: t.glass.edge,
     padding: 16,
     gap: 10,
   },
-  fieldLabel: { color: colors.muted, fontSize: 13, fontWeight: '900' },
+  fieldLabel: { color: t.colors.muted, fontSize: 13, fontWeight: '900' },
   input: {
     minHeight: 48,
-    backgroundColor: colors.inset,
+    backgroundColor: t.colors.inset,
     borderRadius: 16,
-    color: colors.ink,
+    color: t.colors.ink,
     fontSize: 16,
     fontWeight: '800',
     paddingHorizontal: 14,
   },
   googleCard: {
     minHeight: 84,
-    backgroundColor: colors.surface,
+    backgroundColor: t.glass.solid,
     borderRadius: 24,
     borderWidth: 1,
-    borderColor: colors.line,
+    borderColor: t.glass.edge,
     paddingHorizontal: 18,
     paddingVertical: 16,
     flexDirection: 'row',
     alignItems: 'center',
   },
-  googleButton: { backgroundColor: colors.blue, borderRadius: 18, paddingHorizontal: 16, paddingVertical: 10 },
-  googleButtonActive: { backgroundColor: colors.blue },
-  googleButtonText: { color: colors.blueInk, fontWeight: '900' },
-  googleButtonTextActive: { color: colors.blueInk },
+  googleButton: { backgroundColor: t.colors.blue, borderRadius: 18, paddingHorizontal: 16, paddingVertical: 10 },
+  googleButtonActive: { backgroundColor: t.colors.blue },
+  googleButtonText: { color: t.colors.blueInk, fontWeight: '900' },
+  googleButtonTextActive: { color: t.colors.blueInk },
 });

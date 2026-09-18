@@ -7,6 +7,7 @@ export type PracticeSettings = {
   order?: PracticeOrder;
   letters?: string[];
   wrongWords?: string[];
+  limit?: number;
 };
 
 export function buildPracticeQueue(
@@ -31,11 +32,13 @@ export function buildPracticeQueue(
     })
     .sort((a, b) => a.word.localeCompare(b.word));
 
-  if (settings.order !== 'shuffle') return queue;
-
-  for (let i = queue.length - 1; i > 0; i--) {
-    const j = Math.floor(random() * (i + 1));
-    [queue[i], queue[j]] = [queue[j], queue[i]];
+  // Shuffle before the cap, so "跳著背 20 個" draws 20 from the whole range
+  // rather than the first 20 in the alphabet.
+  if (settings.order === 'shuffle') {
+    for (let i = queue.length - 1; i > 0; i--) {
+      const j = Math.floor(random() * (i + 1));
+      [queue[i], queue[j]] = [queue[j], queue[i]];
+    }
   }
-  return queue;
+  return settings.limit ? queue.slice(0, settings.limit) : queue;
 }

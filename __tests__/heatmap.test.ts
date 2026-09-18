@@ -1,4 +1,5 @@
 import { colorForCount } from '../src/components/Heatmap';
+import { themeList } from '../src/theme';
 
 function luminance(hex: string): number {
   const n = parseInt(hex.slice(1), 16);
@@ -12,20 +13,20 @@ function luminance(hex: string): number {
 // Pinning the exact hex only broke on every palette change without catching
 // anything. What matters is that an empty day reads as empty: barely darker
 // than the card it sits on.
-test('an empty day is the lightest step and nearly disappears', () => {
-  const empty = luminance(colorForCount(0));
-  expect(empty).toBeGreaterThan(luminance(colorForCount(1)));
-  expect(empty).toBeGreaterThan(0.8); // white is 1.0
+describe.each(themeList.map((t) => [t.name, t.heat] as const))('%s heatmap ramp', (_name, heat) => {
+  test('an empty day is the lightest step and nearly disappears', () => {
+    const empty = luminance(colorForCount(0, heat));
+    expect(empty).toBeGreaterThan(luminance(colorForCount(1, heat)));
+    expect(empty).toBeGreaterThan(0.8); // white is 1.0
+  });
+
+  test('every step of the ramp is darker than the one before', () => {
+    const steps = [0, 1, 10, 20, 50].map((n) => colorForCount(n, heat));
+    expect(new Set(steps).size).toBe(5); // 五種不同深淺
+    const levels = steps.map(luminance);
+    for (let i = 1; i < levels.length; i++) {
+      expect(levels[i]).toBeLessThan(levels[i - 1]);
+    }
+  });
 });
 
-// The old version of this test only counted distinct colours, and so it kept
-// passing when a palette change made one step LIGHTER than the step below it.
-// A heatmap whose ramp does not descend is not a heatmap.
-test('every step of the ramp is darker than the one before', () => {
-  const steps = [0, 1, 10, 20, 50].map(colorForCount);
-  expect(new Set(steps).size).toBe(5); // 五種不同深淺
-  const levels = steps.map(luminance);
-  for (let i = 1; i < levels.length; i++) {
-    expect(levels[i]).toBeLessThan(levels[i - 1]);
-  }
-});

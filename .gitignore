@@ -45,3 +45,6 @@ __MACOSX/
 # Python bytecode from scripts/
 __pycache__/
 *.pyc
+
+# 發音試聽檔，不進版控
+tts-sample/

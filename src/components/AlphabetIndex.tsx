@@ -1,13 +1,17 @@
 import React, { useRef, useState } from 'react';
 import { View, Text, StyleSheet, GestureResponderEvent, LayoutChangeEvent } from 'react-native';
-import { colors } from '../theme';
+import type { Theme } from '../theme';
+import { useStyles, useTheme } from '../lib/useTheme';
 
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
 type Props = {
-  // Letter to the row index it starts at. A missing letter is dimmed and inert.
+  // Letter to the row index it starts at. Only used to tell which letters have
+  // any words at all: a missing letter is dimmed and inert.
   starts: Record<string, number>;
-  onJump: (index: number) => void;
+  // The letter currently being shown, so the rail stays marked after release.
+  selected: string | null;
+  onPick: (letter: string) => void;
 };
 
 /** Build the letter map once from any list already sorted A-Z. */
@@ -23,7 +27,8 @@ export function letterStarts<T>(rows: T[], wordOf: (row: T) => string): Record<s
 // A rail you can tap or drag a finger down, with the current letter shown in a
 // bubble beside your thumb — dragging is the point, since 26 tap targets down
 // the edge of a phone are each about 20pt tall.
-export function AlphabetIndex({ starts, onJump }: Props) {
+export function AlphabetIndex({ starts, selected, onPick }: Props) {
+  const styles = useStyles(makeStyles);
   const [active, setActive] = useState<{ letter: string; y: number } | null>(null);
   const heightRef = useRef(0);
 
@@ -34,8 +39,7 @@ export function AlphabetIndex({ starts, onJump }: Props) {
     const letter = ALPHABET[Math.min(ALPHABET.length - 1, Math.max(0, slot))];
     if (!letter || letter === active?.letter) return;
     setActive({ letter, y });
-    const at = starts[letter];
-    if (at !== undefined) onJump(at);
+    if (starts[letter] !== undefined) onPick(letter);
   }
 
   return (
@@ -62,7 +66,7 @@ export function AlphabetIndex({ starts, onJump }: Props) {
           style={
             starts[letter] === undefined
               ? styles.letterOff
-              : letter === active?.letter
+              : letter === (active?.letter ?? selected)
                 ? styles.letterOn
                 : styles.letter
           }
@@ -74,21 +78,21 @@ export function AlphabetIndex({ starts, onJump }: Props) {
   );
 }
 
-const styles = StyleSheet.create({
+const makeStyles = (t: Theme) => StyleSheet.create({
   // space-evenly, so a finger's position down the rail maps to a letter.
   strip: { width: 22, justifyContent: 'space-evenly', alignItems: 'center', paddingVertical: 6 },
-  letter: { color: colors.blueInk, fontSize: 10, fontWeight: '900' },
-  letterOn: { color: colors.blueInk, fontSize: 13, fontWeight: '900' },
-  letterOff: { color: colors.line, fontSize: 10, fontWeight: '900' },
+  letter: { color: t.colors.blueInk, fontSize: 10, fontWeight: '900' },
+  letterOn: { color: t.colors.blueInk, fontSize: 13, fontWeight: '900' },
+  letterOff: { color: t.colors.line, fontSize: 10, fontWeight: '900' },
   bubble: {
     position: 'absolute',
     right: 26,
     width: 44,
     height: 44,
     borderRadius: 22,
-    backgroundColor: colors.blueInk,
+    backgroundColor: t.colors.blueInk,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  bubbleText: { color: colors.surface, fontSize: 20, fontWeight: '900' },
+  bubbleText: { color: t.colors.surface, fontSize: 20, fontWeight: '900' },
 });
